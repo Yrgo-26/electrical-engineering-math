@@ -1,0 +1,37 @@
+# Ignore everything without an extension.
+*
+!*.*
+!*/
+
+# Don't ignore makefiles.
+!makefile
+!Makefile
+
+# Don't ignore license files.
+!LICENSE
+
+# Ignore .txt files.
+*.txt
+
+# Ignore CMake files other than CMakeLists.txt.
+*CMakeCache.txt
+*CMakeFiles
+*cmake_install.Makefile
+*cmake_install.cmake
+
+# Ignore Python cache.
+*__pycache__/
+
+# Ignore vscode directory.
+*vscode/
+*vs/
+
+# Ignore build output folders.
+*Debug/
+*Release/
+
+# Ignore Microchip Studio component-manager metadata (local/machine-specific).
+*.componentinfo.xml
+
+# Ignore solution files (force add per lecture with `git add -f`).
+*_solutions.md
