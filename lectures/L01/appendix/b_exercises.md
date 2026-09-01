@@ -12,9 +12,15 @@ Beräkna följande uttryck **utan** miniräknare:\
 
 ### 1.2 – Bråkräkning
 Beräkna och förenkla:\
-**a)** $\dfrac{1}{4} + \dfrac{1}{6}$\
-**b)** $\dfrac{3}{5} - \dfrac{1}{4}$\
-**c)** $\dfrac{2}{3} \times \dfrac{9}{4}$\
+**a)** $\dfrac{1}{4} + \dfrac{1}{6}$
+
+
+**b)** $\dfrac{3}{5} - \dfrac{1}{4}$
+
+
+**c)** $\dfrac{2}{3} \times \dfrac{9}{4}$
+
+
 **d)** $\dfrac{5}{6} \div \dfrac{5}{12}$
 
 ---
