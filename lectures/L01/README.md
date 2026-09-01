@@ -15,6 +15,7 @@
 * Känna till de olika taltyperna och deras egenskaper.
 * Kunna tillämpa räkneordning och grundläggande aritmetiska operationer.
 * Kunna utföra beräkningar med bråk, decimaltal och procent.
+* Kunna beräkna resistans, ström och spänning i enkla serie- och parallellkopplingar.
 
 ---
 

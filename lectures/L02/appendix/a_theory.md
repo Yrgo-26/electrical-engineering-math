@@ -172,7 +172,7 @@ P = U \cdot I = R \cdot I^2 = \frac{U^2}{R}
 Vid seriekoppling av motstånd $R_1$ och $R_2$ gäller:
 
 ```math
-R_{\text{tot}} = R_1 + R_2
+R_{\text{TOT}} = R_1 + R_2
 ```
 
 vilket är ett linjärt algebraiskt uttryck.

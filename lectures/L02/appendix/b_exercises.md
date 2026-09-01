@@ -5,10 +5,10 @@
 Tre motstånd $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$ och $R_3 = 2\,\Omega$ är parallellkopplade. Den totala resistansen ges av:
 
 ```math
-\frac{1}{R_{\text{tot}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}
+\frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}
 ```
 
-Beräkna $R_{\text{tot}}$.
+Beräkna $R_{\text{TOT}}$.
 
 ---
 

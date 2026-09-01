@@ -103,21 +103,72 @@ Division med ett bråk är detsamma som multiplikation med dess reciprok:
 ```
 
 ### 4.5 Parallellkopplade motstånd
-I elektroteknik uppstår bråkräkning naturligt vid beräkning av parallellkopplade motstånd. Den totala resistansen $R_{\text{tot}}$ för två parallellkopplade motstånd $R_1$ och $R_2$ ges av:
+I elektroteknik uppstår bråkräkning naturligt vid beräkning av parallellkopplade motstånd. Den totala resistansen $R_{\text{TOT}}$ för två parallellkopplade motstånd $R_1$ och $R_2$ ges av:
 
 ```math
-\frac{1}{R_{\text{tot}}} = \frac{1}{R_1} + \frac{1}{R_2}
+\frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}
 ```
 
 **Exempel:** $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$:
 
 ```math
-\frac{1}{R_{\text{tot}}} = \frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6} = \frac{1}{2}
+\frac{1}{R_{\text{TOT}}} = \frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6} = \frac{1}{2}
 ```
 
 ```math
-R_{\text{tot}} = 2\,\Omega
+R_{\text{TOT}} = 2\,\Omega
 ```
+
+---
+
+### 4.6 Serie- och parallellkoppling
+När flera motstånd sitter i samma krets kan de ersättas av ett enda motstånd, en så kallad **ersättningsresistans**.
+
+**Seriekoppling** – motstånd kopplade efter varandra. Ersättningsresistansen $R_{\text{s}}$ är summan av resistanserna:
+
+```math
+R_{\text{s}} = R_1 + R_2
+```
+
+**Parallellkoppling** – motstånd kopplade bredvid varandra, skrivs $R_1 // R_2$. Utöver formeln i avsnitt 4.5 kan parallellresistansen $R_{\text{p}}$ av *två* motstånd beräknas med produkt genom summa, vilket ofta går snabbare:
+
+```math
+R_{\text{p}} = R_1 // R_2 = \frac{R_1 \times R_2}{R_1 + R_2}
+```
+
+Parallellresistansen blir alltid mindre än det minsta av de ingående motstånden.
+
+**Ohms lag** knyter ihop spänning $U$, resistans $R$ och ström $I$:
+
+```math
+U = R \times I
+\qquad \Leftrightarrow \qquad
+I = \frac{U}{R}
+\qquad \Leftrightarrow \qquad
+R = \frac{U}{I}
+```
+
+> **Tips:** Räknas resistansen i k$\Omega$ och spänningen i V så fås strömmen direkt i mA. Då slipper man hålla reda på tiopotenser.
+
+**Exempel:** Kretsen nedan förenklas stegvis tills endast ett motstånd återstår. Först ersätts parallellkopplingen av $R_2$ och $R_3$ med $R_{\text{p}}$, därefter adderas $R_1$ till den totala resistansen $R_{\text{TOT}}$.
+
+![](./images/circuit_simplification.png)
+
+Med $R_1 = 2\,\text{k}\Omega$, $R_2 = 12\,\text{k}\Omega$, $R_3 = 6\,\text{k}\Omega$ och $U = 12\,\text{V}$:
+
+```math
+R_{\text{p}} = \frac{12 \times 6}{12 + 6} = \frac{72}{18} = 4\,\text{k}\Omega
+```
+
+```math
+R_{\text{TOT}} = R_1 + R_{\text{p}} = 2 + 4 = 6\,\text{k}\Omega
+```
+
+```math
+I = \frac{U}{R_{\text{TOT}}} = \frac{12}{6} = 2\,\text{mA}
+```
+
+Ordningen är avgörande: parallellkopplingen är en egen delberäkning som måste vara klar innan $R_1$ adderas, precis som parenteser beräknas först enligt räkneordningen.
 
 ---
 
@@ -163,6 +214,9 @@ x\% \text{ av } A = \frac{x}{100} \times A
 | Bråkaddition | Gemensam nämnare |
 | Bråkmultiplikation | Täljare $\times$ täljare, nämnare $\times$ nämnare |
 | Procent | $p\% = \frac{p}{100}$ |
-| Parallellresistans | $\frac{1}{R_{\text{tot}}} = \frac{1}{R_1} + \frac{1}{R_2}$ |
+| Parallellresistans | $\frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}$ |
+| Parallellresistans (två motstånd) | $R_{\text{p}} = \frac{R_1 \times R_2}{R_1 + R_2}$ |
+| Serieresistans | $R_{\text{s}} = R_1 + R_2$ |
+| Ohms lag | $U = R \times I$ |
 
 ---
