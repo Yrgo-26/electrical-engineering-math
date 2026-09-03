@@ -3,9 +3,15 @@
 ## Del 1 – Inledande uppgifter
 ### 1.1 – Beräkningar med räkneordning
 Beräkna följande uttryck **utan** miniräknare:\
-**a)** $3 + 2 \times 5$\
-**b)** $(3 + 2) \times 5$\
-**c)** $12 - 4 \times 2 + 1$\
+**a)** $3 + 2 \times 5$
+
+
+**b)** $(3 + 2) \times 5$
+
+
+**c)** $12 - 4 \times 2 + 1$
+
+
 **d)** $\dfrac{10 + 2}{3} \times 4 - 1$
 
 ---

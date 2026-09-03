@@ -148,7 +148,7 @@ I = \frac{U}{R}
 R = \frac{U}{I}
 ```
 
-> **Tips:** Räknas resistansen i k$\Omega$ och spänningen i V så fås strömmen direkt i mA. Då slipper man hålla reda på tiopotenser.
+> **Tips:** Räknas resistansen i $\Omega$ och spänningen i V så fås strömmen direkt i mA. Då slipper man hålla reda på tiopotenser.
 
 **Exempel:** Kretsen nedan förenklas stegvis tills endast ett motstånd återstår. Först ersätts parallellkopplingen av $R_2$ och $R_3$ med $R_{\text{p}}$, därefter adderas $R_1$ till den totala resistansen $R_{\text{TOT}}$.
 
