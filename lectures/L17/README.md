@@ -49,6 +49,6 @@ u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
 ---
 
 ## Nästa lektion
-* Laboration – Sinusrekonstruktion med DAC.
+* Laboration – Matematik i C med math.h.
 
 ---

@@ -14,14 +14,14 @@ Under kursens gång tillämpas matematiken bland annat på:
 * Ur- och urladdning av kondensatorer i RC-kretsar.
 * Växelspänningar: amplitud, frekvens, fas och sinusekvationer.
 * Impedansberäkningar med komplexa tal och fasoraddition.
-* Sinusrekonstruktion med en digital-till-analog-omvandlare (DAC), i det avslutande projektet [P01](./projects/P01/README.md).
+* Sampling av sinussignaler samt beräkning av derivator, integraler och komplexa tal i C, i den avslutande laborationen [L18](./lectures/L18/README.md).
 
 Efter genomförd kurs ska studenten kunna:
 * Lösa algebraiska uttryck, ekvationer och ekvationssystem som uppstår i eltekniska sammanhang.
 * Räkna med potenser, rötter, logaritmer och decibel.
 * Beräkna och tolka derivator och integraler för vanligt förekommande funktioner.
 * Räkna med komplexa tal och fasorer för att analysera växelströmskretsar.
-* Koppla matematiska modeller till mätningar på verklig hårdvara.
+* Implementera kursens matematik i C med `math.h` och `complex.h`.
 
 ---
 
@@ -32,13 +32,12 @@ ci/          Skript för kodformattering (clang-format).
 exam/        Tentameninformation och övningstentamen.
 info/        Kursinformation, schema och examination.
 lectures/    Föreläsningar, litteratur och övningsuppgifter.
-projects/    Projektbeskrivningar, krav och inlämningsinstruktioner.
 ```
 
 ---
 
 ## Kodformattering
-`ci/format.sh` formaterar C/C++-kod (t.ex. [P01](./projects/P01/README.md)s DAC-driver) med `clang-format`:
+`ci/format.sh` formaterar C/C++-kod (t.ex. koden till [L18](./lectures/L18/code/README.md)) med `clang-format`:
 
 ```bash
 ci/format.sh          # Formatera alla filer.
@@ -59,6 +58,6 @@ Formatteringen kontrolleras automatiskt via CI (se [.github/workflows/ci.yml](./
 ## Licens
 Kursmaterialet är licensierat under [CC BY 4.0](./LICENSE) – Erik Pihl.
 
-Källkoden i [P01](./projects/P01/code/) är licensierad separat under [MIT](./projects/P01/code/LICENSE), eftersom CC BY 4.0 inte är avsedd för mjukvara.
+Källkoden i [lectures/L18/code/](./lectures/L18/code/) är licensierad separat under [MIT](./lectures/L18/code/LICENSE), eftersom CC BY 4.0 inte är avsedd för mjukvara.
 
 ---

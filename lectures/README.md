@@ -17,7 +17,7 @@
 * [L15](./L15/README.md): Komplexa tal (del I).
 * [L16](./L16/README.md): Komplexa tal (del II).
 * [L17](./L17/README.md): Komplexa tal (del III).
-* [L18](./L18/README.md): Laboration – Sinusrekonstruktion med DAC.
+* [L18](./L18/README.md): Laboration – Matematik i C med math.h.
 * [L19](./L19/README.md): Repetition och tentamensförberedelse.
 * [L20](./L20/README.md): Tentamen.
 

@@ -28,7 +28,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 46 | 10/11 | L15 | Komplexa tal (del I)                          |
 | 46 | 12/11 | L16 | Komplexa tal (del II)                         |
 | 47 | 17/11 | L17 | Komplexa tal (del III)                        |
-| 48 | 24/11 | L18 | **Laboration** – Sinusrekonstruktion med DAC  |
+| 48 | 24/11 | L18 | **Laboration** – Matematik i C med math.h     |
 | 49 | 1/12  | L19 | Repetition och tentamensförberedelse          |
 | 50 | 8/12  | L20 | **Tentamen**                                  |
 
@@ -54,7 +54,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 46 | 10/11 | L15 | Komplexa tal (del I)                          |
 | 46 | 12/11 | L16 | Komplexa tal (del II)                         |
 | 47 | 19/11 | L17 | Komplexa tal (del III)                        |
-| 48 | 26/11 | L18 | **Laboration** – Sinusrekonstruktion med DAC  |
+| 48 | 26/11 | L18 | **Laboration** – Matematik i C med math.h     |
 | 49 | 3/12  | L19 | Repetition och tentamensförberedelse          |
 | 50 | 10/12 | L20 | **Tentamen**                                  |
 
@@ -64,7 +64,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 
 ### Upplägg
 * Två duggor (**Dugga 1–2**) under kursens gång.
-* En laboration (**L18**).
+* En laboration (**L18**), som bedöms **U/G** och redovisas i klassrummet med kod och beräkningar.
 * En skriftlig tentamen som kursavslut (**L20**).
 
 ### Poängfördelning
@@ -76,7 +76,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | Betyg | Gräns |
 |-------|-------|
 | IG | < 10,0 p |
-| G | ≥ 12,5 p |
+| G | ≥ 10,0 p |
 | VG | ≥ 17,5 p |
 
 För godkänt betyg krävs att alla kursens lärandemål är uppnådda.

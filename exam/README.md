@@ -20,7 +20,7 @@ Tentamen ger totalt **25 poäng**. Därtill kan upp till **1,0 bonuspoäng** erh
 | Betyg | Gräns |
 |-------|-------|
 | IG | < 10,0 p |
-| G | ≥ 12,5 p |
+| G | ≥ 10,0 p |
 | VG | ≥ 17,5 p |
 
 ---
