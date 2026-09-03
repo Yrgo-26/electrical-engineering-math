@@ -22,11 +22,25 @@
 * Läs igenom materialet i [bilaga A](./appendix/a_theory.md).
 
 ### Under lektionen
-* Hämta ut ditt rättade diagnostiska test från [L01](../L01/README.md) och gå igenom det du hade fel på – lösningsförslaget gås igenom i helklass.
+* Läs igenom ditt rättade diagnostiska test från [L01](../L01/README.md). Lösningsförslaget gås igenom i helklass. Se tabellen nedan för vad du bör repetera.
 * Närvara under genomgången.
 * Genomför lektionsuppgifterna i [bilaga B](./appendix/b_exercises.md):
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Lösningsförslag laddas upp efter lektionen.
+
+---
+
+## Repetition efter det diagnostiska testet
+Använd ditt rättade test för att se vilka moment du behöver repetera. Tabellen visar var respektive moment behandlas i kursen:
+
+| Moment | Repetera i |
+|--------|------------|
+| Räkneordning, negativa tal, bråk, decimaltal och procent | [L01, bilaga A](../L01/appendix/a_theory.md) |
+| Potenser och rötter | [L05](../L05/README.md) |
+| Enheter och prefix | [L01, bilaga A](../L01/appendix/a_theory.md) och [L05](../L05/README.md) |
+| Ekvationer och formelhantering | [bilaga A](./appendix/a_theory.md) och [L03](../L03/README.md) |
+
+Resultatet påverkar inte betyget, det visar bara var du står inför kursen. 
 
 ---
 
