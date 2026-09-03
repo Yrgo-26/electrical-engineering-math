@@ -30,7 +30,7 @@
 * Närvara under genomgången.
 * Genomför lektionsuppgifterna i [bilaga B](./appendix/b_exercises.md):
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
-    * Lösningsförslag laddas upp efter lektionen.
+    * Lösningsförslag finns [här](./appendix/c_solutions.md).
 
 ---
 
