@@ -30,8 +30,8 @@
 
 ## Utvärdering
 * Lös ekvationen $4(x - 2) = 2x + 8$ och kontrollera svaret.
-* Spänningen $U = 3{,}6\,\text{V}$ och motståndet $R = 120\,\Omega$. Beräkna strömmen $I$ via Ohms lag.
-* Klämspänningen för ett belastat batteri är $U = 9 - 0{,}5I$. Bestäm de strömmar som uppfyller $U \geq 6\,\text{V}$.
+* Spänningen $U = 3{,}6\thinspace\text{V}$ och motståndet $R = 120\thinspace\Omega$. Beräkna strömmen $I$ via Ohms lag.
+* Klämspänningen för ett belastat batteri är $U = 9 - 0{,}5I$. Bestäm de strömmar som uppfyller $U \geq 6\thinspace\text{V}$.
 
 ---
 

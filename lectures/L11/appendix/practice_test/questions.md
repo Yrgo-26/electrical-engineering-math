@@ -11,7 +11,7 @@ Alla uppgifter kräver lösningar med redovisat svar (inklusive enhet där det b
 
 ---
 ### Uppgift 1 (1,0 poäng)
-Du har två vektorer $\mathbf{u} = (1;\,2)$ samt $\mathbf{v} = (-3;\,4)$.
+Du har två vektorer $\mathbf{u} = (1;\thinspace 2)$ samt $\mathbf{v} = (-3;\thinspace 4)$.
 
 **a)** Rita upp vektorerna i ett koordinatsystem.\
 **b)** Beräkna vektorernas absolutbelopp $|\mathbf{u}|$ samt $|\mathbf{v}|$.\
@@ -40,21 +40,21 @@ där
 * $RC$ = kretsens tidskonstant i sekunder,
 * $t$ = tiden i sekunder.
 
-En kondensator med kapacitansen $470\,\mu\text{F}$ är ansluten till ett motstånd på $10\,\text{k}\Omega$. Den är initialt laddad till $12\,\text{V}$ och börjar urladdas vid $t = 0$.
+En kondensator med kapacitansen $470\thinspace\mu\text{F}$ är ansluten till ett motstånd på $10\thinspace\text{k}\Omega$. Den är initialt laddad till $12\thinspace\text{V}$ och börjar urladdas vid $t = 0$.
 
 **a)** Beräkna spänningen efter fem sekunder.\
-**b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 \leq t \leq 20\,\text{s}$.\
+**b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 \leq t \leq 20\thinspace\text{s}$.\
 **c)** Beräkna efter hur lång tid spänningen har sjunkit till hälften av sitt ursprungliga värde.
 
 ---
 ### Uppgift 4 (1,0 poäng)
-En växelspänning har amplituden $5\,\text{V}$, frekvensen $100\,\text{Hz}$ samt fasen $90°$.
+En växelspänning har amplituden $5\thinspace\text{V}$, frekvensen $100\thinspace\text{Hz}$ samt fasen $90°$.
 
 **a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.\
 **b)** Rita växelspänningens sinuskurva över en period $T$.
 
 ---
 ### Uppgift 5 (1,0 poäng)
-En ljudförstärkare har en förstärkning på $32\,\text{dB}$. Hur många gångers spänningsförstärkning motsvarar det?
+En ljudförstärkare har en förstärkning på $32\thinspace\text{dB}$. Hur många gångers spänningsförstärkning motsvarar det?
 
 ---

@@ -30,7 +30,7 @@
 
 ## Utvärdering
 * Lös systemet $x + 2y = 7$ och $3x - y = 7$ med valfri metod.
-* I en krets gäller KCL: $I_1 + I_2 = 4\,\text{A}$ och $I_1 = 3I_2$. Bestäm $I_1$ och $I_2$.
+* I en krets gäller KCL: $I_1 + I_2 = 4\thinspace\text{A}$ och $I_1 = 3I_2$. Bestäm $I_1$ och $I_2$.
 
 ---
 

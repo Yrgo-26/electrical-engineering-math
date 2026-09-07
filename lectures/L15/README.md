@@ -28,8 +28,8 @@
 ---
 
 ## Demonstration
-* Omvandling av spänning från rektangulär till polär form: $U = 3 + j4\,\text{V}$.
-* Omvandling från ström polär till rektangulär form: $I = 10\,\angle\,\dfrac{\pi}{4}\,\text{mA}$.
+* Omvandling av spänning från rektangulär till polär form: $U = 3 + j4\thinspace\text{V}$.
+* Omvandling från ström polär till rektangulär form: $I = 10\thinspace\angle\thinspace\dfrac{\pi}{4}\thinspace\text{mA}$.
 
 ---
 

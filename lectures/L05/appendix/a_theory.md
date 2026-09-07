@@ -83,7 +83,7 @@ a^{m/n} = \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m
 ---
 
 ## 4. Standardform (vetenskaplig notation)
-I elektroteknik förekommer extremt stora och extremt små tal: $R = 1\,000\,000\,\Omega$, $C = 0{,}000\,000\,001\,\text{F}$.
+I elektroteknik förekommer extremt stora och extremt små tal: $R = 1\thinspace 000\thinspace 000\thinspace\Omega$, $C = 0{,}000\thinspace 000\thinspace 001\thinspace\text{F}$.
 
 **Standardform** skriver talet som $a \times 10^n$ där $1 \leq a < 10$:
 
@@ -103,9 +103,9 @@ I elektroteknik förekommer extremt stora och extremt små tal: $R = 1\,000\,000
 | Nano | n | $10^{-9}$ |
 | Piko | p | $10^{-12}$ |
 
-**Exempel:** $4{,}7\,\text{k}\Omega = 4{,}7 \times 10^3\,\Omega = 4\,700\,\Omega$
+**Exempel:** $4{,}7\thinspace\text{k}\Omega = 4{,}7 \times 10^3\thinspace\Omega = 4\thinspace 700\thinspace\Omega$
 
-**Exempel:** $33\,\text{nF} = 33 \times 10^{-9}\,\text{F} = 3{,}3 \times 10^{-8}\,\text{F}$
+**Exempel:** $33\thinspace\text{nF} = 33 \times 10^{-9}\thinspace\text{F} = 3{,}3 \times 10^{-8}\thinspace\text{F}$
 
 ---
 
@@ -132,8 +132,8 @@ I elektroteknik förekommer extremt stora och extremt små tal: $R = 1\,000\,000
 
 ## 6. Värdesiffror och avrundning
 **Värdesiffror** är de siffror som bär meningsfull information i ett mätvärde.
-* $4\,700\,\Omega$ – kan ha 2, 3 eller 4 värdesiffror (oklart utan kontext)
-* $4{,}70 \times 10^3\,\Omega$ – har tydligt **3 värdesiffror**
+* $4\thinspace 700\thinspace\Omega$ – kan ha 2, 3 eller 4 värdesiffror (oklart utan kontext)
+* $4{,}70 \times 10^3\thinspace\Omega$ – har tydligt **3 värdesiffror**
 
 Resultatet av en beräkning bör normalt anges med lika många värdesiffror som det minst exakta indata.
 
@@ -148,7 +148,7 @@ Effekten dissiperad i ett motstånd $R$ vid spänningen $U$:
 P = \frac{U^2}{R}
 ```
 
-**Exempel:** $U = 6\,\text{V}$, $R = 50\,\Omega$:
+**Exempel:** $U = 6\thinspace\text{V}$, $R = 50\thinspace\Omega$:
 
 ```math
 P = \frac{6^2}{50} = \frac{36}{50} = 0{,}72\,\text{W}
@@ -157,10 +157,10 @@ P = \frac{6^2}{50} = \frac{36}{50} = 0{,}72\,\text{W}
 **Effekten vid given ström:**
 
 ```math
-P = I^2 R
+P = RI^2
 ```
 
-**Exempel:** $I = 20\,\text{mA} = 20 \times 10^{-3}\,\text{A}$, $R = 1\,\text{k}\Omega = 10^3\,\Omega$:
+**Exempel:** $I = 20\thinspace\text{mA} = 20 \times 10^{-3}\thinspace\text{A}$, $R = 1\thinspace\text{k}\Omega = 10^3\thinspace\Omega$:
 
 ```math
 P = (20 \times 10^{-3})^2 \times 10^3 = 400 \times 10^{-6} \times 10^3 = 0{,}4\,\text{W}

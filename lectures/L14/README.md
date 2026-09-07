@@ -43,7 +43,7 @@ där $q(0) = 0$. Även bestämning av den primitiva funktionen $I(t)$ till $i(t)
 ---
 
 ## Utvärdering
-* Beräkna $\displaystyle\int_0^2 (3x^2 + 1)\,dx$.
+* Beräkna $\displaystyle\int_0^2 (3x^2 + 1)\thinspace dx$.
 * Bestäm den primitiva funktionen $F(x)$ till $f(x) = 4x + e^x$ (ange integrationskonstanten $C$).
 
 ---

@@ -36,7 +36,7 @@
 
 ## Utvärdering
 * Till vilken talmängd hör $\sqrt{5}$? Motivera svaret kortfattat.
-* Beräkna parallellresistansen för $R_1 = 4\,\Omega$ och $R_2 = 12\,\Omega$.
+* Beräkna parallellresistansen för $R_1 = 4\thinspace\Omega$ och $R_2 = 12\thinspace\Omega$.
 
 ---
 

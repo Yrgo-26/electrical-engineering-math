@@ -11,7 +11,7 @@ f : x \mapsto f(x)
 
 Funktioner kan representeras som algebraiska uttryck, tabeller eller grafer.
 
-**Exempel:** $f(x) = 2x + 1$ ger $f(3) = 7$, $\,f(-1) = -1$.
+**Exempel:** $f(x) = 2x + 1$ ger $f(3) = 7$, $\thinspace f(-1) = -1$.
 
 ---
 
@@ -25,7 +25,7 @@ Funktioner kan representeras som algebraiska uttryck, tabeller eller grafer.
 | $f(x) = 2x + 3$ | $\mathbb{R}$ | $\mathbb{R}$ |
 | $f(x) = x^2$ | $\mathbb{R}$ | $[0, \infty)$ |
 | $f(x) = \sqrt{x}$ | $[0, \infty)$ | $[0, \infty)$ |
-| $f(x) = \dfrac{1}{x}$ | $\mathbb{R} \setminus \{0\}$ | $\mathbb{R} \setminus \{0\}$ |
+| $f(x) = \dfrac{1}{x}$ | $\mathbb{R} \setminus \lbrace 0\rbrace$ | $\mathbb{R} \setminus \lbrace 0\rbrace$ |
 
 ---
 
@@ -77,13 +77,13 @@ f(x) = 100x - 50, \quad 0 \leq x \leq 5\,\text{V}
 
 **a)** Bestäm definitionsmängd och värdemängd.
 
-**Lösning:** $D_f = [0, 5]\,\text{V}$
+**Lösning:** $D_f = [0, 5]\thinspace\text{V}$
 
 ```math
 f(0) = -50\,°\text{C}, \quad f(5) = 450\,°\text{C} \quad \Rightarrow \quad V_f = [-50, 450]\,°\text{C}
 ```
 
-**b)** Beräkna inspänningen när temperaturen är $30\,°\text{C}$.
+**b)** Beräkna inspänningen när temperaturen är $30\thinspace°\text{C}$.
 
 ```math
 100x - 50 = 30 \quad \Rightarrow \quad x = 0{,}8\,\text{V}
@@ -109,7 +109,7 @@ f(x) = 2x + 1
 ---
 
 ### Typexempel 3 – Exponentialfunktion och tillväxt
-En datamängd startar med $6 \times 10^6$ datapunkter och växer med $3\,\%$/år:
+En datamängd startar med $6 \times 10^6$ datapunkter och växer med $3\thinspace\char37$/år:
 
 ```math
 f(x) = 6 \times 10^6 \cdot 1{,}03^x

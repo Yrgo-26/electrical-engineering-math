@@ -131,22 +131,22 @@ x_1 \cdot x_2 = q \qquad \text{(produkt av rötterna)}
 
 ## 5. Tillämpning i elektroteknik
 ### Ström från effekt och resistans
-Effekten i ett motstånd $R$ ges av $P = I^2 R$. Givet $P$ och $R$ kan strömmen $I$ beräknas:
+Effekten i ett motstånd $R$ ges av $P = RI^2$. Givet $P$ och $R$ kan strömmen $I$ beräknas:
 
 ```math
-I^2 R = P \quad \Rightarrow \quad I^2 = \frac{P}{R} \quad \Rightarrow \quad I = \sqrt{\frac{P}{R}}
+RI^2 = P \quad \Rightarrow \quad I^2 = \frac{P}{R} \quad \Rightarrow \quad I = \sqrt{\frac{P}{R}}
 ```
 
 Det är en *ren* andragradsekvation (ingen linjär term).
 
-**Exempel:** $P = 8\,\text{W}$, $R = 50\,\Omega$:
+**Exempel:** $P = 8\thinspace\text{W}$, $R = 50\thinspace\Omega$:
 
 ```math
 I = \sqrt{\frac{8}{50}} = \sqrt{0{,}16} = 0{,}4\,\text{A}
 ```
 
 ### Resistans från seriekoppling
-Två motstånd $R_1$ och $R_2$ är seriekopplade med $R_1 + R_2 = 10\,\Omega$ och $R_1 \cdot R_2 = 24\,\Omega^2$. Använd Vietas formler – de är rötterna till:
+Två motstånd $R_1$ och $R_2$ är seriekopplade med $R_1 + R_2 = 10\thinspace\Omega$ och $R_1 \cdot R_2 = 24\thinspace\Omega^2$. Använd Vietas formler – de är rötterna till:
 
 ```math
 x^2 - 10x + 24 = 0 \quad \Rightarrow \quad x = \frac{10 \pm 2}{2}

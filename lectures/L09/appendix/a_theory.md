@@ -83,7 +83,7 @@ Omvandla följande vinklar till radianer: $45°$, $90°$, $270°$, $-60°$, $135
 ---
 
 ### Typexempel 2 – Bestäm egenskaper ur en graf
-En växelspänning har amplituden $|U| = 4\,\text{V}$, periodtiden $T = 40\,\text{ms}$ och toppvärdet nås vid $t = 15\,\text{ms}$.
+En växelspänning har amplituden $|U| = 4\thinspace\text{V}$, periodtiden $T = 40\thinspace\text{ms}$ och toppvärdet nås vid $t = 15\thinspace\text{ms}$.
 
 **Beräkna $\omega$:**
 
@@ -91,7 +91,7 @@ En växelspänning har amplituden $|U| = 4\,\text{V}$, periodtiden $T = 40\,\tex
 f = \frac{1}{T} = \frac{1}{0{,}04} = 25\,\text{Hz}, \quad \omega = 2\pi \cdot 25 = 50\pi\,\text{rad/s}
 ```
 
-**Beräkna $\delta$:** Utan fasförskjutning nås toppen vid $T/4 = 10\,\text{ms}$. Toppen nås vid $15\,\text{ms}$, alltså $5\,\text{ms}$ för sent → negativ fas:
+**Beräkna $\delta$:** Utan fasförskjutning nås toppen vid $T/4 = 10\thinspace\text{ms}$. Toppen nås vid $15\thinspace\text{ms}$, alltså $5\thinspace\text{ms}$ för sent → negativ fas:
 
 ```math
 \delta = -2\pi \cdot \frac{5\,\text{ms}}{40\,\text{ms}} = -\frac{\pi}{4}\,\text{rad}
@@ -106,7 +106,7 @@ u(t) = 4\sin\!\left(50\pi t - \frac{\pi}{4}\right)\,\text{V}
 ---
 
 ### Typexempel 3 – Skriv ekvation från givna parametrar
-En växelspänning har amplituden $4\,\text{V}$, frekvensen $50\,\text{Hz}$ och fasen $-30°$.
+En växelspänning har amplituden $4\thinspace\text{V}$, frekvensen $50\thinspace\text{Hz}$ och fasen $-30°$.
 
 **Lösning:**
 

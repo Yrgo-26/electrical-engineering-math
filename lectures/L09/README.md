@@ -27,7 +27,7 @@
 
 ## Utvärdering
 * Omvandla $150°$ till radianer och $\dfrac{5\pi}{6}$ till grader.
-* En växelspänning har amplituden $5\,\text{V}$, frekvensen $50\,\text{Hz}$ och fasen $\pi/4\,\text{rad}$. Skriv spänningens ekvation $u(t)$.
+* En växelspänning har amplituden $5\thinspace\text{V}$, frekvensen $50\thinspace\text{Hz}$ och fasen $\pi/4\thinspace\text{rad}$. Skriv spänningens ekvation $u(t)$.
 
 ---
 

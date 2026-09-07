@@ -15,7 +15,7 @@ Identifiera amplituden $|U|$ och fasvinkeln $\delta$ direkt ur tidsbeteckningen.
 
 **Omvandling fasor → sinussignal:**
 
-Skriv $u(t) = |U|\sin(\omega t + \delta)$ med fasorn $U = |U|\,\angle\,\delta$.
+Skriv $u(t) = |U|\sin(\omega t + \delta)$ med fasorn $U = |U|\thinspace\angle\thinspace\delta$.
 
 **OBS!** Alla fasorer i en beräkning måste ha **samma vinkelhastighet** $\omega$.
 
@@ -67,7 +67,7 @@ Kapacitans: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$ (fasvinkel −90
 ## 5. Typexempel
 
 ### Typexempel 1 – Fasoraddition
-Addera $u_1(t) = 2\sin(\omega t + 45°)\,\text{V}$ och $u_2(t) = 3\sin(\omega t - 60°)\,\text{V}$.
+Addera $u_1(t) = 2\sin(\omega t + 45°)\thinspace\text{V}$ och $u_2(t) = 3\sin(\omega t - 60°)\thinspace\text{V}$.
 
 **Steg 1:** Fasorer i polär form:
 
@@ -110,7 +110,7 @@ u_{\text{tot}}(t) = 3{,}15\sin(\omega t - 22{,}1°)\,\text{V}
 ---
 
 ### Typexempel 2 – Beräkna fas ur ekvation
-En växelspänning $u(t) = 6\sin(80\pi t + \delta)$ V. Vid $t = 15\,\text{ms}$ är $u = 3\,\text{V}$. Bestäm $\delta$.
+En växelspänning $u(t) = 6\sin(80\pi t + \delta)$ V. Vid $t = 15\thinspace\text{ms}$ är $u = 3\thinspace\text{V}$. Bestäm $\delta$.
 
 **Lösning:**
 
@@ -126,12 +126,12 @@ En växelspänning $u(t) = 6\sin(80\pi t + \delta)$ V. Vid $t = 15\,\text{ms}$ �
 \delta_2 = \pi - \arcsin(0{,}5) - 1{,}2\pi \approx -1{,}15\,\text{rad}
 ```
 
-Kontrollräkna båda rötterna ger $u(0{,}015) = 3\,\text{V}$ ✓
+Kontrollräkna båda rötterna ger $u(0{,}015) = 3\thinspace\text{V}$ ✓
 
 ---
 
 ### Typexempel 3 – Impedansberäkning
-En serie-RLC-krets har $R = 10\,\Omega$, $Z_L = j5\,\Omega$, $Z_C = -j3\,\Omega$ vid $\omega = 1000\,\text{rad/s}$.
+En serie-RLC-krets har $R = 10\thinspace\Omega$, $Z_L = j5\thinspace\Omega$, $Z_C = -j3\thinspace\Omega$ vid $\omega = 1000\thinspace\text{rad/s}$.
 
 **Totalimpedans:**
 
@@ -149,10 +149,10 @@ Z = R + Z_L + Z_C = 10 + j5 - j3 = 10 + j2\,\Omega
 
 | Begrepp | Beskrivning |
 |---------|-------------|
-| Fasor | $U = \|U\|\,\angle\,\delta$ representerar $u(t) = \|U\|\sin(\omega t + \delta)$ |
+| Fasor | $U = \|U\|\thinspace\angle\thinspace\delta$ representerar $u(t) = \|U\|\sin(\omega t + \delta)$ |
 | Fasoraddition | Konvertera till rektangulär, addera, konvertera tillbaka |
-| Multiplikation | $\|z_1\|\|z_2\|\,\angle\,(\delta_1 + \delta_2)$ |
-| Division | $(\|z_1\|/\|z_2\|)\,\angle\,(\delta_1 - \delta_2)$ |
+| Multiplikation | $\|z_1\|\|z_2\|\thinspace\angle\thinspace(\delta_1 + \delta_2)$ |
+| Division | $(\|z_1\|/\|z_2\|)\thinspace\angle\thinspace(\delta_1 - \delta_2)$ |
 | Impedans | $Z = U/I$ |
 
 ---

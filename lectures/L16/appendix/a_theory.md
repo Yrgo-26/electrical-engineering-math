@@ -32,7 +32,7 @@ e^{j\pi/2} = j, \quad e^{j0} = 1, \quad e^{-j\delta} = \cos\delta - j\sin\delta
 | Form | Notation | Kommentar |
 |------|---------|-----------|
 | Rektangulär | $x + jy$ | Bäst för addition/subtraktion |
-| Polär | $\|z\|\,\angle\,\delta$ | Tydlig geometrisk tolkning |
+| Polär | $\|z\|\thinspace\angle\thinspace\delta$ | Tydlig geometrisk tolkning |
 | Eulerform | $\|z\|e^{j\delta}$ | Bäst för multiplikation/division |
 
 **Multiplikation i polär form:**
@@ -98,7 +98,7 @@ a + b = (3-2) + j(4+4) = 1 + j8
 ---
 
 ### Typexempel 2 – Eulerform till rektangulär form
-Skriv $u(t) = 3e^{j(100\pi t - \pi/4)}\,\text{V}$ på rektangulär form vid $t = 0$.
+Skriv $u(t) = 3e^{j(100\pi t - \pi/4)}\thinspace\text{V}$ på rektangulär form vid $t = 0$.
 
 **Lösning:**
 
@@ -109,7 +109,7 @@ u(0) = 3e^{-j\pi/4} = 3\!\left(\cos\!\left(-\frac{\pi}{4}\right) + j\sin\!\left(
 ---
 
 ### Typexempel 3 – Fasor till tidsdomän
-Fasorn $I = 5 - j4\,\text{mA}$, $\omega = 100\pi\,\text{rad/s}$. Skriv $i(t)$ på Eulers form.
+Fasorn $I = 5 - j4\thinspace\text{mA}$, $\omega = 100\pi\thinspace\text{rad/s}$. Skriv $i(t)$ på Eulers form.
 
 **Lösning:**
 
@@ -133,8 +133,8 @@ i(t) = 6{,}40 \cdot e^{j(100\pi t - 0{,}675)}\,\text{mA}
 |---------|--------|
 | Eulers formel | $e^{j\delta} = \cos\delta + j\sin\delta$ |
 | Eulerform | $z = \|z\|e^{j\delta}$ |
-| Multiplikation | $z_1 z_2 = \|z_1\|\|z_2\|\,\angle\,(\delta_1+\delta_2)$ |
-| Division | $z_1/z_2 = (\|z_1\|/\|z_2\|)\,\angle\,(\delta_1-\delta_2)$ |
+| Multiplikation | $z_1 z_2 = \|z_1\|\|z_2\|\thinspace\angle\thinspace(\delta_1+\delta_2)$ |
+| Division | $z_1/z_2 = (\|z_1\|/\|z_2\|)\thinspace\angle\thinspace(\delta_1-\delta_2)$ |
 | Fasor → tidsdomän | $u(t) = \|U\|\sin(\omega t + \delta)$ |
 
 ---

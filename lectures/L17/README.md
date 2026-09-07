@@ -43,8 +43,8 @@ u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
 ---
 
 ## Utvärdering
-* En ström ges av $i(t) = 5\sin(100\pi t + \pi/3)\,\text{A}$. Ange motsvarande fasor $I$ i polär form.
-* Addera fasorerna $U_1 = 4\,\angle\,0$ och $U_2 = 3\,\angle\,\pi/2$. Ange summan i polär form.
+* En ström ges av $i(t) = 5\sin(100\pi t + \pi/3)\thinspace\text{A}$. Ange motsvarande fasor $I$ i polär form.
+* Addera fasorerna $U_1 = 4\thinspace\angle\thinspace 0$ och $U_2 = 3\thinspace\angle\thinspace\pi/2$. Ange summan i polär form.
 
 ---
 

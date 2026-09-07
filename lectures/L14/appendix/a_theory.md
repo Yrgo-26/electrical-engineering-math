@@ -94,7 +94,7 @@ Beräkna arean under $f(x) = x^2$ för $0 \leq x \leq 3$.
 ---
 
 ### Typexempel 3 – Laddning via integrering
-Strömmen $i(t) = 2t + 4$ A passerar under $0 \leq t \leq 2\,\text{s}$. Beräkna laddningen $q(t)$ med $q(0) = 0$.
+Strömmen $i(t) = 2t + 4$ A passerar under $0 \leq t \leq 2\thinspace\text{s}$. Beräkna laddningen $q(t)$ med $q(0) = 0$.
 
 **Lösning:**
 
@@ -102,7 +102,7 @@ Strömmen $i(t) = 2t + 4$ A passerar under $0 \leq t \leq 2\,\text{s}$. Beräkna
 q(t) = \int_0^t (2\tau + 4)\,d\tau = \left[\tau^2 + 4\tau\right]_0^t = t^2 + 4t
 ```
 
-**Primitiv funktion med startvillkor:** $I(t) = t^2 + 4t$, $\;I(0) = 0$ ✓
+**Primitiv funktion med startvillkor:** $I(t) = t^2 + 4t$, $\medspace I(0) = 0$ ✓
 
 ```math
 q(2) = 4 + 8 = 12\,\text{C}
@@ -111,7 +111,7 @@ q(2) = 4 + 8 = 12\,\text{C}
 ---
 
 ### Typexempel 4 – Bestämd integral med negativa värden
-Beräkna $\displaystyle\int_{-1}^{2} (x^2 - 1)\,dx$.
+Beräkna $\displaystyle\int_{-1}^{2} (x^2 - 1)\thinspace dx$.
 
 **Lösning:**
 
@@ -128,10 +128,10 @@ Beräkna $\displaystyle\int_{-1}^{2} (x^2 - 1)\,dx$.
 | Begrepp | Formel |
 |---------|--------|
 | Primitiv funktion | $F'(x) = f(x)$ |
-| Obestämd integral | $\int f(x)\,dx = F(x) + C$ |
-| Bestämd integral | $\int_a^b f(x)\,dx = F(b) - F(a)$ |
-| $\int x^n\,dx$ | $x^{n+1}/(n+1) + C$ |
-| $\int e^{kx}\,dx$ | $(1/k)e^{kx} + C$ |
-| Laddning | $q(t) = \int i(t)\,dt$ |
+| Obestämd integral | $\int f(x)\thinspace dx = F(x) + C$ |
+| Bestämd integral | $\int_a^b f(x)\thinspace dx = F(b) - F(a)$ |
+| $\int x^n\thinspace dx$ | $x^{n+1}/(n+1) + C$ |
+| $\int e^{kx}\thinspace dx$ | $(1/k)e^{kx} + C$ |
+| Laddning | $q(t) = \int i(t)\thinspace dt$ |
 
 ---
