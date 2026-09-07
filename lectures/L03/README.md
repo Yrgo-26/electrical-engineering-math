@@ -11,6 +11,7 @@
 * Kunna lösa linjära ekvationer algebraiskt.
 * Förstå och lösa olikheter.
 * Förstå och beräkna absolutbeloppet av ett tal eller uttryck.
+* Kunna ställa upp och lösa ekvationer och olikheter utifrån elektriska samband.
 
 ---
 
@@ -30,6 +31,7 @@
 ## Utvärdering
 * Lös ekvationen $4(x - 2) = 2x + 8$ och kontrollera svaret.
 * Spänningen $U = 3{,}6\,\text{V}$ och motståndet $R = 120\,\Omega$. Beräkna strömmen $I$ via Ohms lag.
+* Klämspänningen för ett belastat batteri är $U = 9 - 0{,}5I$. Bestäm de strömmar som uppfyller $U \geq 6\,\text{V}$.
 
 ---
 
