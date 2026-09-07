@@ -13,6 +13,7 @@
 * Förstå vad ett algebraiskt uttryck är och hur variabler används.
 * Kunna förenkla algebraiska uttryck.
 * Kunna multiplicera ut och faktorisera uttryck.
+* Kunna använda reglerna för att förenkla och snabba upp beräkningar i elektriska kretsar.
 
 ---
 
@@ -47,6 +48,7 @@ Resultatet påverkar inte betyget, det visar bara var du står inför kursen.
 ## Utvärdering
 * Faktorisera $9R^2 - 4$.
 * Förenkla $2(3I + 1) - (I - 5)$.
+* Ett värmeelement med $R = 20\,\Omega$ matas först med $U_1 = 52\,\text{V}$ och sedan med $U_2 = 48\,\text{V}$. Använd konjugatregeln för att beräkna effektskillnaden $P_1 - P_2 = \dfrac{U_1^2 - U_2^2}{R}$ utan miniräknare.
 
 ---
 
