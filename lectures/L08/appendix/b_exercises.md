@@ -5,8 +5,8 @@
 Avgör om följande samband definierar $y$ som en funktion av $x$. Motivera ditt svar.\
 **a)** $y = 3x - 2$\
 **b)** $x^2 + y^2 = 16$\
-**c)** $\{(1,2),\, (2,4),\, (3,4),\, (4,8)\}$\
-**d)** $\{(1,2),\, (1,5),\, (2,3)\}$
+**c)** $\lbrace(1,2),\thinspace (2,4),\thinspace (3,4),\thinspace (4,8)\rbrace$\
+**d)** $\lbrace(1,2),\thinspace (1,5),\thinspace (2,3)\rbrace$
 
 ---
 
@@ -19,16 +19,16 @@ Bestäm definitionsmängden $D_f$ och värdemängden $V_f$ för:\
 ---
 
 ### 1.3 – Linjär resistans hos en temperaturberoende resistor
-Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linjärt på temperaturen $T$ (i °C) enligt $R(T) = kT + m$. Vid $T = 0\,°\text{C}$ är $R = 100\,\Omega$, och vid $T = 50\,°\text{C}$ är $R = 175\,\Omega$.
+Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linjärt på temperaturen $T$ (i °C) enligt $R(T) = kT + m$. Vid $T = 0\thinspace°\text{C}$ är $R = 100\thinspace\Omega$, och vid $T = 50\thinspace°\text{C}$ är $R = 175\thinspace\Omega$.
 
 **a)** Bestäm $k$ och $m$.\
-**b)** Beräkna resistansen vid $T = 25\,°\text{C}$.
+**b)** Beräkna resistansen vid $T = 25\thinspace°\text{C}$.
 
 ---
 
 ## Del 2 – Funktionstyper och tillämpningar
 ### 2.1 – Exponentiell tillväxt av solcellsanläggningar
-Antalet installerade solcellsanläggningar i en kommun ökar med $8\,\%$ per år. Vid år $x=0$ fanns $400$ anläggningar, vilket ger:
+Antalet installerade solcellsanläggningar i en kommun ökar med $8\thinspace\char37$ per år. Vid år $x=0$ fanns $400$ anläggningar, vilket ger:
 
 ```math
 f(x) = 400 \cdot 1{,}08^x
@@ -40,7 +40,7 @@ f(x) = 400 \cdot 1{,}08^x
 ---
 
 ### 2.2 – Effekt som potensfunktion av strömmen
-Effekten $P$ (i $W$) som utvecklas i ett motstånd $R = 50\,\Omega$ beror på strömmen $I$ (i $A$) enligt:
+Effekten $P$ (i $W$) som utvecklas i ett motstånd $R = 50\thinspace\Omega$ beror på strömmen $I$ (i $A$) enligt:
 
 ```math
 P(I) = R \cdot I^2
@@ -48,7 +48,7 @@ P(I) = R \cdot I^2
 
 **a)** Vilken typ av funktion är $P(I)$?\
 **b)** Beräkna $P(0{,}5)$ och $P(2)$.\
-**c)** En säkring i kretsen begränsar strömmen till $0 \leq I \leq 3\,A$. Bestäm definitions- och värdemängd för $P(I)$ inom detta intervall.
+**c)** En säkring i kretsen begränsar strömmen till $0 \leq I \leq 3\thinspace A$. Bestäm definitions- och värdemängd för $P(I)$ inom detta intervall.
 
 ---
 
@@ -61,6 +61,6 @@ En spänning $U(t)$ mäts vid flera tidpunkter under en urladdning:
 
 **a)** Visa att sambandet mellan $t$ och $U(t)$ är linjärt utifrån tabellen.\
 **b)** Bestäm en formel $U(t) = kt + m$ utifrån tabellen.\
-**c)** Om mönstret i tabellen fortsatte, vid vilken tidpunkt $t$ skulle $U(t) = -3\,V$? Är detta ett rimligt värde för en urladdningsspänning? Motivera varför den linjära modellen inte kan gälla för alla $t \geq 0$.
+**c)** Om mönstret i tabellen fortsatte, vid vilken tidpunkt $t$ skulle $U(t) = -3\thinspace V$? Är detta ett rimligt värde för en urladdningsspänning? Motivera varför den linjära modellen inte kan gälla för alla $t \geq 0$.
 
 ---

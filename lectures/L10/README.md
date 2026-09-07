@@ -31,7 +31,7 @@
 
 ## Utvärdering
 * Lös $4^x = 64$.
-* En förstärkare har $G_{\text{dB}} = 40\,\text{dB}$. Beräkna den linjära spänningsförstärkningen $G_{\text{lin}}$.
+* En förstärkare har $G_{\text{dB}} = 40\thinspace\text{dB}$. Beräkna den linjära spänningsförstärkningen $G_{\text{lin}}$.
 
 ---
 

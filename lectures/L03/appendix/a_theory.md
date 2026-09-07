@@ -54,7 +54,7 @@ x = 4
 
 ---
 
-**Exempel 2 (elteknisk kontext):** En krets har spänningen $U = 12\,\text{V}$ och strömmen $I = 0{,}5\,\text{A}$. Beräkna motståndet $R$.
+**Exempel 2 (elteknisk kontext):** En krets har spänningen $U = 12\thinspace\text{V}$ och strömmen $I = 0{,}5\thinspace\text{A}$. Beräkna motståndet $R$.
 
 Ohms lag ger:
 
@@ -145,13 +145,13 @@ x \geq -4
 ```
 
 ### 5.2 Praktisk tillämpning – säkert driftområde
-En komponent tål maximalt $P_{\max} = 2\,\text{W}$ och effekten ges av $P = U \cdot I$ med $I = 0{,}5\,\text{A}$. Bestäm det tillåtna spänningsintervallet:
+En komponent tål maximalt $P_{\max} = 2\thinspace\text{W}$ och effekten ges av $P = U \cdot I$ med $I = 0{,}5\thinspace\text{A}$. Bestäm det tillåtna spänningsintervallet:
 
 ```math
 U \cdot 0{,}5 \leq 2 \quad \Rightarrow \quad U \leq 4\,\text{V}
 ```
 
-Spänningen måste hållas under $4\,\text{V}$ för att komponenten inte ska skadas.
+Spänningen måste hållas under $4\thinspace\text{V}$ för att komponenten inte ska skadas.
 
 ---
 

@@ -70,7 +70,7 @@ Omvänt:
 G_{\text{dB}} = 10 \log_{10}\!\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
 ```
 
-**Nivå i dBV** (decibel relativt $1\,\text{V}$):
+**Nivå i dBV** (decibel relativt $1\thinspace\text{V}$):
 
 ```math
 U_{\text{dBV}} = 20 \log_{10}\!\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right)
@@ -112,7 +112,7 @@ u(30) = U_0 \cdot a^{30} = 0{,}5 U_0
 a^{30} = 0{,}5 \quad \Rightarrow \quad a = 0{,}5^{1/30} \approx 0{,}977
 ```
 
-**När återstår $20\,\%$?**
+**När återstår $20\thinspace\char37$?**
 
 ```math
 0{,}977^t = 0{,}2 \quad \Rightarrow \quad t = \frac{\log 0{,}2}{\log 0{,}977} \approx 69{,}7\,\text{h}
@@ -121,7 +121,7 @@ a^{30} = 0{,}5 \quad \Rightarrow \quad a = 0{,}5^{1/30} \approx 0{,}977
 ---
 
 ### Typexempel 3 – Linjär spänningsförstärkning
-Två signaler har nivåerna $L_1 = 20\,\text{dB}$ och $L_2 = 46\,\text{dB}$.
+Två signaler har nivåerna $L_1 = 20\thinspace\text{dB}$ och $L_2 = 46\thinspace\text{dB}$.
 
 ```math
 G_{\text{dB}} = L_2 - L_1 = 26\,\text{dB}
@@ -134,7 +134,7 @@ G_{\text{lin}} = 10^{26/20} = 10^{1{,}3} \approx 20
 ---
 
 ### Typexempel 4 – dBV till volt
-En sinusspänning har amplituden $31{,}0\,\text{dBV}$.
+En sinusspänning har amplituden $31{,}0\thinspace\text{dBV}$.
 
 ```math
 U_{\text{RMS}} = 10^{31{,}0/20} \approx 35{,}5\,\text{V}

@@ -30,13 +30,13 @@
 
 ## Demonstration
 * Vektorer $a = (3, 4)$ samt $b = (-2, 4)$ som komplexa tal.
-* Omskrivning av $u(t) = 3e^{j(100\pi t - \frac{\pi}{4})}\,\text{V}$ till rektangulär form.
-* Omskrivning av fasor $I = 5 - j4\,\text{mA}$ till komplex ström $i(t)$ på Eulers form.
+* Omskrivning av $u(t) = 3e^{j(100\pi t - \frac{\pi}{4})}\thinspace\text{V}$ till rektangulär form.
+* Omskrivning av fasor $I = 5 - j4\thinspace\text{mA}$ till komplex ström $i(t)$ på Eulers form.
 
 ---
 
 ## Utvärdering
-* Skriv $Z = 10\,\angle\,\pi/6$ på rektangulär form.
+* Skriv $Z = 10\thinspace\angle\thinspace\pi/6$ på rektangulär form.
 * Vad är värdet av $e^{j\pi}$? Vad innebär detta geometriskt?
 
 ---

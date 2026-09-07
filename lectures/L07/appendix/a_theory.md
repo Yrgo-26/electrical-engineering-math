@@ -33,7 +33,7 @@ Till skillnad från ett skalärt tal bär vektorn information om riktning. Vekto
 ---
 
 ## 3. Absolutbelopp och vinkel
-**Absolutbeloppet** (längden) av $\mathbf{u} = (u_x;\, u_y)$:
+**Absolutbeloppet** (längden) av $\mathbf{u} = (u_x;\thinspace u_y)$:
 
 ```math
 |\mathbf{u}| = \sqrt{u_x^2 + u_y^2}
@@ -88,7 +88,7 @@ En negativ skalär byter riktning på vektorn. En motriktad enhetsvektor ges av 
 ## 6. Typexempel
 
 ### Typexempel 1 – Absolutbelopp och vinkel
-Vektorer $\mathbf{u} = (3;\, 3)$ och $\mathbf{v} = (-2;\, 3)$ är givna.
+Vektorer $\mathbf{u} = (3;\thinspace 3)$ och $\mathbf{v} = (-2;\thinspace 3)$ är givna.
 
 **a)** Beräkna $|\mathbf{u}|$ och $|\mathbf{v}|$.
 
@@ -135,7 +135,7 @@ v_v = \arctan\!\left(\frac{3}{-2}\right) + 180° \approx -56{,}3° + 180° = 123
 ---
 
 ### Typexempel 2 – Vektorberäkning
-Beräkna $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ och $|\mathbf{w}|$ för $\mathbf{u} = (3;\, 3)$, $\mathbf{v} = (-2;\, 3)$.
+Beräkna $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ och $|\mathbf{w}|$ för $\mathbf{u} = (3;\thinspace 3)$, $\mathbf{v} = (-2;\thinspace 3)$.
 
 **Lösning:**
 
@@ -150,7 +150,7 @@ Beräkna $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ och $|\mathbf{w}|$ för $\mathb
 ---
 
 ### Typexempel 3 – Motriktad vektor med given längd
-Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\, 3)$.
+Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\thinspace 3)$.
 
 **Lösning:**
 
@@ -168,7 +168,7 @@ Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\, 3)$.
 | Vinkel mot x-axeln | $v = \arctan(u_y/u_x)$ + kvadrantkorrigering |
 | Skalärprodukt | $\mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y$ |
 | Vinkel mellan vektorer | $\cos\alpha = \frac{\mathbf{u}\cdot\mathbf{v}}{\|\mathbf{u}\|\|\mathbf{v}\|}$ |
-| Addition | $(u_x + v_x;\; u_y + v_y)$ |
-| Skalärplikation | $(ku_x;\; ku_y)$ |
+| Addition | $(u_x + v_x;\medspace u_y + v_y)$ |
+| Skalärplikation | $(ku_x;\medspace ku_y)$ |
 
 ---

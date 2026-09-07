@@ -30,7 +30,7 @@
 
 ## Utvärdering
 * Förenkla $\dfrac{(3x^2)^3}{9x^4}$ med potensreglerna.
-* En kapacitans är $C = 220\,\text{nF}$. Ange värdet i farad på standardform.
+* En kapacitans är $C = 220\thinspace\text{nF}$. Ange värdet i farad på standardform.
 
 ---
 

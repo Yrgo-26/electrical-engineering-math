@@ -128,7 +128,7 @@ u(t) = L \cdot i'(t).
 ### 2.3 – Numerisk integrering
 Låt $f(x) = x^2$.
 
-**a)** Beräkna $\displaystyle\int_0^3 x^2\,dx$ analytiskt.\
+**a)** Beräkna $\displaystyle\int_0^3 x^2\thinspace dx$ analytiskt.\
 **b)** Skriv en funktion `integral()` som beräknar den bestämda integralen med trapetsmetoden:
 
 ```math
@@ -143,7 +143,7 @@ Låt $f(x) = x^2$.
 ### 2.4 – Laddning genom en ledare
 Strömmen ges av $i(t) = 3t + 2$ A.
 
-**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\,dt$ analytiskt.\
+**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\thinspace dt$ analytiskt.\
 **b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.\
 **c)** Varför blir det numeriska resultatet exakt i detta fall, men inte i uppgift 2.3?
 
@@ -161,7 +161,7 @@ Låt $z_1 = 4 + 3j$ och $z_2 = 2 - 5j$.
 ---
 
 ### 3.2 – Polär och rektangulär form
-Ett komplext tal ges på polär form som $z = 10\,\angle\,\dfrac{\pi}{6}$.
+Ett komplext tal ges på polär form som $z = 10\thinspace\angle\thinspace\dfrac{\pi}{6}$.
 
 **a)** Omvandla $z$ till rektangulär form för hand.\
 **b)** Skriv ett program som utför omvandlingen med `cexp()`, och omvandlar tillbaka med `cabs()` och `carg()`.\
@@ -214,7 +214,7 @@ U_1 = 10\,\angle\,0, \qquad U_2 = 6\,\angle\,\frac{\pi}{3}, \qquad U_3 = 4\,\ang
 
 **a)** Omvandla samtliga fasorer till rektangulär form för hand.\
 **b)** Beräkna summan $U = U_1 + U_2 + U_3$ på rektangulär form.\
-**c)** Ange summan på polär form, $|U|\,\angle\,\delta$, med $\delta$ i både radianer och grader.\
+**c)** Ange summan på polär form, $|U|\thinspace\angle\thinspace\delta$, med $\delta$ i både radianer och grader.\
 **d)** Skriv ett program som utför additionen med `complex.h` och skriver ut summan på både rektangulär och polär form.\
 **e)** Rita fasorerna och deras summa i det komplexa talplanet.
 

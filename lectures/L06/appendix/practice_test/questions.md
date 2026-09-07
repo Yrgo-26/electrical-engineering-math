@@ -22,7 +22,7 @@ Resistansen för två parallellkopplade resistorer $R_1$ och $R_2$ kan beräknas
 \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}
 ```
 
-Beräkna resistansen $R_2$ om $R_1 = 10\,\text{k}\Omega$ och parallellresistansen $R = 4{,}5\,\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
+Beräkna resistansen $R_2$ om $R_1 = 10\thinspace\text{k}\Omega$ och parallellresistansen $R = 4{,}5\thinspace\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
 
 **Notering:** $\Omega$ är enheten för resistans och utläses 'Ohm'.
 

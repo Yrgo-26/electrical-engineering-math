@@ -10,7 +10,7 @@ Förenkla (positiva exponenter i svaret):\
 ---
 
 ### 1.2 – Standardform i kretsberäkning
-En krets har $U = 3{,}3\,\text{V}$ och $R = 4{,}7\,\text{k}\Omega = 4{,}7 \times 10^3\,\Omega$.
+En krets har $U = 3{,}3\thinspace\text{V}$ och $R = 4{,}7\thinspace\text{k}\Omega = 4{,}7 \times 10^3\thinspace\Omega$.
 
 **a)** Beräkna strömmen $I = \dfrac{U}{R}$ och ange svaret i $\text{mA}$ på standardform.\
 **b)** Beräkna effekten $P = \dfrac{U^2}{R}$ och ange svaret i $\text{mW}$.
@@ -20,7 +20,7 @@ En krets har $U = 3{,}3\,\text{V}$ och $R = 4{,}7\,\text{k}\Omega = 4{,}7 \times
 ### 1.3 – Kvadratrot
 **a)** Beräkna $\sqrt{144}$.\
 **b)** Beräkna $\sqrt{0{,}0049}$.\
-**c)** En resistor dissiperar $P = 2\,\text{W}$ vid spänningen $U$, och $R = 200\,\Omega$. Beräkna $U$ med hjälp av $P = \dfrac{U^2}{R}$.
+**c)** En resistor dissiperar $P = 2\thinspace\text{W}$ vid spänningen $U$, och $R = 200\thinspace\Omega$. Beräkna $U$ med hjälp av $P = \dfrac{U^2}{R}$.
 
 ---
 

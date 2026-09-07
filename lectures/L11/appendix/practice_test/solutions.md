@@ -1,7 +1,7 @@
 # Lösningsförslag – Övningsdugga 2
 
 ### Uppgift 1 (1,0 poäng)
-$\mathbf{u} = (1;\,2)$, $\mathbf{v} = (-3;\,4)$.
+$\mathbf{u} = (1;\thinspace 2)$, $\mathbf{v} = (-3;\thinspace 4)$.
 
 ---
 ### Lösning
@@ -57,11 +57,11 @@ f(x) = \frac{(x+1)(x-2)}{x-2} = x + 1, \quad x \neq 2
 
 ---
 ### Uppgift 3 (1,0 poäng)
-Kondensator $C = 470\,\mu\text{F}$, $R = 10\,\text{k}\Omega$, $U_0 = 12\,\text{V}$.
+Kondensator $C = 470\thinspace\mu\text{F}$, $R = 10\thinspace\text{k}\Omega$, $U_0 = 12\thinspace\text{V}$.
 
 ---
 ### Lösning
-Tidskonstanten $RC = 470 \times 10^{-6} \cdot 10 \times 10^3 = 4{,}7\,\text{s}$.
+Tidskonstanten $RC = 470 \times 10^{-6} \cdot 10 \times 10^3 = 4{,}7\thinspace\text{s}$.
 
 ```math
 u(t) = 12e^{-t/4{,}7}\,\text{V}
@@ -73,15 +73,15 @@ u(t) = 12e^{-t/4{,}7}\,\text{V}
 u(5) = 12e^{-5/4{,}7} \approx 4{,}14\,\text{V}
 ```
 
-**b)** Definitionsmängd: $0 \leq t \leq 20\,\text{s}$.
+**b)** Definitionsmängd: $0 \leq t \leq 20\thinspace\text{s}$.
 
 ```math
 u(0) = 12\,\text{V}, \quad u(20) = 12e^{-20/4{,}7} \approx 0{,}17\,\text{V}
 ```
 
-Värdemängd: $0{,}17\,\text{V} \leq u(t) \leq 12\,\text{V}$
+Värdemängd: $0{,}17\thinspace\text{V} \leq u(t) \leq 12\thinspace\text{V}$
 
-**c)** Sätt $u(t) = 6\,\text{V}$:
+**c)** Sätt $u(t) = 6\thinspace\text{V}$:
 
 ```math
 12e^{-t/4{,}7} = 6 \quad \Rightarrow \quad e^{-t/4{,}7} = 0{,}5
@@ -95,23 +95,23 @@ Ta naturliga logaritmen i båda led:
 
 ---
 ### Uppgift 4 (1,0 poäng)
-Amplitud $5\,\text{V}$, frekvens $100\,\text{Hz}$, fas $90°$.
+Amplitud $5\thinspace\text{V}$, frekvens $100\thinspace\text{Hz}$, fas $90°$.
 
 ---
 ### Lösning
-**a)** Omvandla fasen: $\delta = 90° \cdot \dfrac{\pi}{180°} = \dfrac{\pi}{2}\,\text{rad}$
+**a)** Omvandla fasen: $\delta = 90° \cdot \dfrac{\pi}{180°} = \dfrac{\pi}{2}\thinspace\text{rad}$
 
-Vinkelhastigheten: $\omega = 2\pi f = 2\pi \cdot 100 = 200\pi\,\text{rad/s}$
+Vinkelhastigheten: $\omega = 2\pi f = 2\pi \cdot 100 = 200\pi\thinspace\text{rad/s}$
 
 ```math
 u(t) = 5\sin\!\left(200\pi t + \frac{\pi}{2}\right)\,\text{V}
 ```
 
-**b)** Periodtiden: $T = 1/f = 10\,\text{ms}$. Fasen $\pi/2$ innebär att kurvan är $T/4 = 2{,}5\,\text{ms}$ förskjuten till vänster (tidigt). Rita sinuskurvan med amplituden $5\,\text{V}$ och perioden $10\,\text{ms}$, med toppvärdet vid $t = 0$.
+**b)** Periodtiden: $T = 1/f = 10\thinspace\text{ms}$. Fasen $\pi/2$ innebär att kurvan är $T/4 = 2{,}5\thinspace\text{ms}$ förskjuten till vänster (tidigt). Rita sinuskurvan med amplituden $5\thinspace\text{V}$ och perioden $10\thinspace\text{ms}$, med toppvärdet vid $t = 0$.
 
 ---
 ### Uppgift 5 (1,0 poäng)
-Förstärkning $G_{\text{dB}} = 32\,\text{dB}$.
+Förstärkning $G_{\text{dB}} = 32\thinspace\text{dB}$.
 
 ---
 ### Lösning

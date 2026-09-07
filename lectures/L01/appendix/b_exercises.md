@@ -32,15 +32,15 @@ Beräkna och förenkla:\
 ---
 
 ### 1.3 – Procenträkning
-**a)** Beräkna $40\%$ av $250$.\
+**a)** Beräkna $40\char37$ av $250$.\
 **b)** Vilket procenttal är $18$ av $72$?\
-**c)** En resistor har nominellt värde $100\,\Omega$ med en tolerans på $\pm 5\,\%$. Ange det lägsta och det högsta tillåtna motståndet.
+**c)** En resistor har nominellt värde $100\thinspace\Omega$ med en tolerans på $\pm 5\thinspace\char37$. Ange det lägsta och det högsta tillåtna motståndet.
 
 ---
 
 ## Del 2 – Nytt stoff
 ### 2.1 – Parallellkopplade motstånd
-Två motstånd $R_1 = 12\,\Omega$ och $R_2 = 6\,\Omega$ är parallellkopplade.
+Två motstånd $R_1 = 12\thinspace\Omega$ och $R_2 = 6\thinspace\Omega$ är parallellkopplade.
 
 Sambandet för den totala resistansen $R_{\text{TOT}}$ ges av:
 
@@ -58,7 +58,7 @@ Kretsen nedan består av motståndet $R_1$ i serie med parallellkopplingen av $R
 
 ![](./images/circuit_series_parallel.png)
 
-Komponentvärdena är $R_1 = 4\,\text{k}\Omega$, $R_2 = 24\,\text{k}\Omega$ och $R_3 = 8\,\text{k}\Omega$.
+Komponentvärdena är $R_1 = 4\thinspace\text{k}\Omega$, $R_2 = 24\thinspace\text{k}\Omega$ och $R_3 = 8\thinspace\text{k}\Omega$.
 
 Parallellresistansen $R_{\text{p}} = R_2 // R_3$ kan beräknas på två sätt:
 
@@ -75,7 +75,7 @@ R_{\text{p}} = \frac{R_2 \times R_3}{R_2 + R_3}
 ---
 
 ### 2.3 – Ström och spänning i kretsen
-Kretsen i uppgift 2.2 matas med spänningen $U = 20\,\text{V}$. Ohms lag ger sambandet mellan spänning, resistans och ström:
+Kretsen i uppgift 2.2 matas med spänningen $U = 20\thinspace\text{V}$. Ohms lag ger sambandet mellan spänning, resistans och ström:
 
 ```math
 U = R \times I
@@ -91,17 +91,17 @@ U = R \times I
 ---
 
 ### 2.4 – Absolutbelopp
-En växelspänning varierar mellan $-8\,\text{V}$ och $+8\,\text{V}$.\
+En växelspänning varierar mellan $-8\thinspace\text{V}$ och $+8\thinspace\text{V}$.\
 **a)** Vad är amplituden $|U|$ hos spänningen?\
-**b)** Vid en viss tidpunkt är spänningen $u(t) = -5{,}3\,\text{V}$. Beräkna $|u(t)|$.
+**b)** Vid en viss tidpunkt är spänningen $u(t) = -5{,}3\thinspace\text{V}$. Beräkna $|u(t)|$.
 
 ---
 
 ### 2.5 – Verkningsgrad
-En batteridriven motor tar in $P_{\text{in}} = 24\,\text{W}$ och avger $P_{\text{ut}} = 18\,\text{W}$.
+En batteridriven motor tar in $P_{\text{in}} = 24\thinspace\text{W}$ och avger $P_{\text{ut}} = 18\thinspace\text{W}$.
 
 **a)** Beräkna motorns verkningsgrad $\eta$ i procent.\
-**b)** Om verkningsgraden förbättras till $90\,\%$ vid samma ineffekt – hur stor blir uteffekten?
+**b)** Om verkningsgraden förbättras till $90\thinspace\char37$ vid samma ineffekt – hur stor blir uteffekten?
 
 ---
 

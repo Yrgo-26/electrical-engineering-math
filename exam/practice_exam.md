@@ -29,7 +29,7 @@ Resistansen för fyra parallellkopplade resistorer $R_1$, $R_2$, $R_3$ och $R_4$
 \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}
 ```
 
-Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\,\text{k}\Omega$ och $R_3 = R_4 = 10\,\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
+Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\thinspace\text{k}\Omega$ och $R_3 = R_4 = 10\thinspace\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
 
 ---
 
@@ -97,13 +97,13 @@ f(x) = C \cdot a^x,
 
 där $C$ är ursprungspriset, $a$ är den årliga prisökningstakten och $x$ är antalet år som passerat sedan ursprungspriset fastställdes.
 
-Som exempel, under en given tidsperiod är den årliga prisökningen 5 % varje år, vilket innebär att en bostad som kostar $3\,000\,000\,\text{kr}$ idag efter $x$ år är värd $f(x)$ kr, där
+Som exempel, under en given tidsperiod är den årliga prisökningen 5 % varje år, vilket innebär att en bostad som kostar $3\thinspace 000\thinspace 000\thinspace\text{kr}$ idag efter $x$ år är värd $f(x)$ kr, där
 
 ```math
 f(x) = 3 \cdot 10^6 \cdot 1{,}05^x
 ```
 
-Anta att ursprungspriset för en bostad är $7\,500\,000\,\text{kr}$ samt att den årliga prisökningen är 2,5 %.
+Anta att ursprungspriset för en bostad är $7\thinspace 500\thinspace 000\thinspace\text{kr}$ samt att den årliga prisökningen är 2,5 %.
 
 **a)** Ange en funktion som beskriver bostadens pris $f(x)$ efter $x$ år.
 **b)** Beräkna bostadens värde efter 5 år.
@@ -135,7 +135,7 @@ där
 * $RC$ = kretsens tidskonstant i sekunder,
 * $t$ = tiden i sekunder.
 
-En kondensator med kapacitansen $680\,\mu F$ är ansluten till ett motstånd på $10\,\text{k}\Omega$. Den är initialt laddad till $10\,V$ och börjar urladdas vid tiden $t = 0$.
+En kondensator med kapacitansen $680\thinspace\mu F$ är ansluten till ett motstånd på $10\thinspace\text{k}\Omega$. Den är initialt laddad till $10\thinspace V$ och börjar urladdas vid tiden $t = 0$.
 
 **a)** Beräkna spänningen efter tre sekunder.
 **b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 - 10$ sekunder.
@@ -144,7 +144,7 @@ En kondensator med kapacitansen $680\,\mu F$ är ansluten till ett motstånd på
 ---
 
 ### Uppgift 10 (1,5 poäng)
-En växelspänning har amplituden $5\,V$, frekvensen $100\,Hz$ samt fasen 90°.
+En växelspänning har amplituden $5\thinspace V$, frekvensen $100\thinspace Hz$ samt fasen 90°.
 
 **a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.
 **b)** Rita växelspänningens sinuskurva över en period $T$.
@@ -152,7 +152,7 @@ En växelspänning har amplituden $5\,V$, frekvensen $100\,Hz$ samt fasen 90°.
 ---
 
 ### Uppgift 11 (1,0 poäng)
-En ljudförstärkare har en förstärkning på $54\,dB$. Hur många gångers spänningsförstärkning motsvarar det?
+En ljudförstärkare har en förstärkning på $54\thinspace dB$. Hur många gångers spänningsförstärkning motsvarar det?
 
 ---
 
@@ -186,8 +186,8 @@ där
 * $t$ = tiden i sekunder.
 
 **a)** Derivera funktionen och bestäm uttrycket för $u'(t)$.
-**b)** Beräkna $u'(t)$ vid tiden $t = 2\,s$, dvs. beräkna $u'(2)$.
-**c)** Beräkna om spänningsökningen/spänningsminskningen ökar eller minskar vid tiden $t = 2\,s$, dvs. beräkna $u'(2)$.
+**b)** Beräkna $u'(t)$ vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
+**c)** Beräkna om spänningsökningen/spänningsminskningen ökar eller minskar vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
 
 > **Notering:** Uppgift c) är formulerad som i originaltentamen, men frågan ("ökar eller minskar spänningsökningen") besvaras egentligen av den andra derivatan $u''(2)$, inte $u'(2)$. Se lösningsförslaget.
 
@@ -229,9 +229,9 @@ Strömmen $i(t)$ i en kondensator ges av följande funktion:
 i(t) = 0{,}5 e^{-0{,}1t}
 ```
 
-där $t$ är tiden i sekunder. Laddningen uppgår till $1\,C$ vid start, dvs. $q(0) = 1$.
+där $t$ är tiden i sekunder. Laddningen uppgår till $1\thinspace C$ vid start, dvs. $q(0) = 1$.
 
-**a)** Bestäm ett uttryck för den primitiva funktionen $I(t) = \int i(t)\,dt$, dvs. integrera utan att ange några gränser.
+**a)** Bestäm ett uttryck för den primitiva funktionen $I(t) = \int i(t)\thinspace dt$, dvs. integrera utan att ange några gränser.
 **b)** Bestäm ett uttryck för kondensatorns laddning $q(t)$ genom att integrera över intervallet $[0, t]$.
 **c)** Bestäm en formel för den totala laddningen $q_{tot}(t)$ i kondensatorn, inklusive startladdningen $q(0)$.
 **d)** Hur stor total laddning (inklusive startladdningen) har flödat in i kondensatorn efter 4 sekunder?
@@ -239,7 +239,7 @@ där $t$ är tiden i sekunder. Laddningen uppgår till $1\,C$ vid start, dvs. $q
 ---
 
 ### Uppgift 16 (2,0 poäng)
-En krets matas med spänningen $U = 3 - j4\,V$. Kretsen har impedansen $Z = 2 + j2\,\Omega$. Beräkna strömmen $I$ som flödar genom kretsen med "Ohms lag", dvs. Ohms lag anpassad för komplexa tal:
+En krets matas med spänningen $U = 3 - j4\thinspace V$. Kretsen har impedansen $Z = 2 + j2\thinspace\Omega$. Beräkna strömmen $I$ som flödar genom kretsen med "Ohms lag", dvs. Ohms lag anpassad för komplexa tal:
 
 ```math
 I = \frac{U}{Z}
@@ -258,7 +258,7 @@ I = 10 - j5\,mA
 
 **a)** Rita ut fasorn $I$ i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
 **b)** Uttryck fasorn $I$ på Eulers form, dvs. bestäm absolutbeloppet $|I|$ samt fasvinkeln $\delta$ så att $I = |I|e^{j\delta}$.
-**c)** Anta att strömmens frekvens $f = 10\,Hz$. Bestäm vinkelhastigheten $w$.
+**c)** Anta att strömmens frekvens $f = 10\thinspace Hz$. Bestäm vinkelhastigheten $w$.
 **d)** Skriv $i(t)$ som en tidsberoende funktion $i(t) = |I| \cdot e^{j(wt+\delta)}$.
 
 ---

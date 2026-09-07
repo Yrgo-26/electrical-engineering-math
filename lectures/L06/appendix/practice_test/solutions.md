@@ -1,7 +1,7 @@
 # Övningsdugga 1 – Lösningsförslag
 
 ### Uppgift 1 (1,0 poäng)
-$R_1 = 10\,\text{k}\Omega$, $R = 4{,}5\,\text{k}\Omega$
+$R_1 = 10\thinspace\text{k}\Omega$, $R = 4{,}5\thinspace\text{k}\Omega$
 
 ---
 

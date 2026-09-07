@@ -9,11 +9,11 @@ Matematiken är uppbyggd kring olika talmängder. Varje mängd är en utökning 
 |-------|----------|-------------|---------|
 | Naturliga tal | $\mathbb{N}$ | Positiva heltal och noll | $0, 1, 2, 3, \ldots$ |
 | Heltal | $\mathbb{Z}$ | Naturliga tal samt negativa tal | $\ldots, -2, -1, 0, 1, 2, \ldots$ |
-| Rationella tal | $\mathbb{Q}$ | Tal som kan skrivas som $\frac{p}{q}$, $q \neq 0$ | $\frac{1}{2},\, -\frac{3}{4},\, 0{,}75$ |
-| Irrationella tal | – | Tal som *inte* kan skrivas som $\frac{p}{q}$ | $\pi,\, \sqrt{2},\, e$ |
+| Rationella tal | $\mathbb{Q}$ | Tal som kan skrivas som $\frac{p}{q}$, $q \neq 0$ | $\frac{1}{2},\thinspace -\frac{3}{4},\thinspace 0{,}75$ |
+| Irrationella tal | – | Tal som *inte* kan skrivas som $\frac{p}{q}$ | $\pi,\thinspace \sqrt{2},\thinspace e$ |
 | Reella tal | $\mathbb{R}$ | Alla rationella och irrationella tal | Samtliga tal på tallinjen |
 
-I elektroteknik används alla dessa talmängder. Resistansvärden är ofta rationella ($R = 4{,}7\,\text{k}\Omega$), medan konstanter som $\pi$ förekommer i formler för växelströmssystem.
+I elektroteknik används alla dessa talmängder. Resistansvärden är ofta rationella ($R = 4{,}7\thinspace\text{k}\Omega$), medan konstanter som $\pi$ förekommer i formler för växelströmssystem.
 
 ---
 
@@ -109,7 +109,7 @@ I elektroteknik uppstår bråkräkning naturligt vid beräkning av parallellkopp
 \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}
 ```
 
-**Exempel:** $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$:
+**Exempel:** $R_1 = 6\thinspace\Omega$, $R_2 = 3\thinspace\Omega$:
 
 ```math
 \frac{1}{R_{\text{TOT}}} = \frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6} = \frac{1}{2}
@@ -154,7 +154,7 @@ R = \frac{U}{I}
 
 ![](./images/circuit_simplification.png)
 
-Med $R_1 = 2\,\text{k}\Omega$, $R_2 = 12\,\text{k}\Omega$, $R_3 = 6\,\text{k}\Omega$ och $U = 12\,\text{V}$:
+Med $R_1 = 2\thinspace\text{k}\Omega$, $R_2 = 12\thinspace\text{k}\Omega$, $R_3 = 6\thinspace\text{k}\Omega$ och $U = 12\thinspace\text{V}$:
 
 ```math
 R_{\text{p}} = \frac{12 \times 6}{12 + 6} = \frac{72}{18} = 4\,\text{k}\Omega
@@ -185,7 +185,7 @@ p\% = \frac{p}{100}
 x\% \text{ av } A = \frac{x}{100} \times A
 ```
 
-**Exempel:** Hur stor del av $200\,\text{V}$ är $30\%$?
+**Exempel:** Hur stor del av $200\thinspace\text{V}$ är $30\char37$?
 
 ```math
 \frac{30}{100} \times 200 = 60\,\text{V}
@@ -197,7 +197,7 @@ x\% \text{ av } A = \frac{x}{100} \times A
 \eta = \frac{P_{\text{ut}}}{P_{\text{in}}} \times 100\%
 ```
 
-**Exempel:** En transformator tar in $500\,\text{W}$ och levererar $470\,\text{W}$. Beräkna verkningsgraden:
+**Exempel:** En transformator tar in $500\thinspace\text{W}$ och levererar $470\thinspace\text{W}$. Beräkna verkningsgraden:
 
 ```math
 \eta = \frac{470}{500} \times 100\% = 94\%
@@ -213,7 +213,7 @@ x\% \text{ av } A = \frac{x}{100} \times A
 | Räkneordning | Parenteser → Potenser → $\times\div$ → $+-$ |
 | Bråkaddition | Gemensam nämnare |
 | Bråkmultiplikation | Täljare $\times$ täljare, nämnare $\times$ nämnare |
-| Procent | $p\% = \frac{p}{100}$ |
+| Procent | $p\char37 = \frac{p}{100}$ |
 | Parallellresistans | $\frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}$ |
 | Parallellresistans (två motstånd) | $R_{\text{p}} = \frac{R_1 \times R_2}{R_1 + R_2}$ |
 | Serieresistans | $R_{\text{s}} = R_1 + R_2$ |

@@ -101,7 +101,7 @@ Markera $z_1 = 3 + j4$ och $z_2 = -2 - j3$ i det komplexa talplanet och beräkna
 |z_1| = \sqrt{9 + 16} = 5, \quad \delta_1 = \arctan\!\left(\frac{4}{3}\right) \approx 53{,}1°
 ```
 
-Polär form: $z_1 = 5\,\angle\,53{,}1°$
+Polär form: $z_1 = 5\thinspace\angle\thinspace 53{,}1°$
 
 **Lösning $z_2 = -2 - j3$** (kvadrant III, lägg till 180°):
 
@@ -112,7 +112,7 @@ Polär form: $z_1 = 5\,\angle\,53{,}1°$
 ---
 
 ### Typexempel 2 – Konvertering: rektangulär → polär
-Spänning $U = 3 + j4\,\text{V}$. Bestäm absolutbelopp och fasvinkel.
+Spänning $U = 3 + j4\thinspace\text{V}$. Bestäm absolutbelopp och fasvinkel.
 
 **Lösning:**
 
@@ -120,12 +120,12 @@ Spänning $U = 3 + j4\,\text{V}$. Bestäm absolutbelopp och fasvinkel.
 |U| = \sqrt{3^2 + 4^2} = 5\,\text{V}, \quad \delta = \arctan\!\left(\frac{4}{3}\right) \approx 0{,}927\,\text{rad} \approx 53{,}1°
 ```
 
-Polär form: $U = 5\,\angle\,0{,}927\,\text{rad}$
+Polär form: $U = 5\thinspace\angle\thinspace 0{,}927\thinspace\text{rad}$
 
 ---
 
 ### Typexempel 3 – Konvertering: polär → rektangulär
-Ström $I = 10\,\angle\,\pi/4\,\text{mA}$. Bestäm rektangulär form.
+Ström $I = 10\thinspace\angle\thinspace\pi/4\thinspace\text{mA}$. Bestäm rektangulär form.
 
 **Lösning:**
 
@@ -150,8 +150,8 @@ I = (7{,}07 + j7{,}07)\,\text{mA}
 | Rektangulär form | $z = x + jy$ |
 | Absolutbelopp | $\|z\| = \sqrt{x^2 + y^2}$ |
 | Fasvinkel | $\delta = \arctan(y/x)$ + korrigering |
-| Polär form | $z = \|z\|\,\angle\,\delta$ |
-| Polär → rektangulär | $x = \|z\|\cos\delta$, $\;y = \|z\|\sin\delta$ |
+| Polär form | $z = \|z\|\thinspace\angle\thinspace\delta$ |
+| Polär → rektangulär | $x = \|z\|\cos\delta$, $\medspace y = \|z\|\sin\delta$ |
 | Addition | $(x_1+x_2) + j(y_1+y_2)$ |
 
 ---

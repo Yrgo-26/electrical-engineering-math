@@ -84,9 +84,9 @@
 ---
 
 ### 1.3 – Procenträkning
-**a)** $40\%$ av $250$\
+**a)** $40\char37$ av $250$\
 **b)** Vilket procenttal är $18$ av $72$?\
-**c)** Resistor $100\,\Omega$ med tolerans $\pm 5\%$
+**c)** Resistor $100\thinspace\Omega$ med tolerans $\pm 5\char37$
 
 ---
 
@@ -103,7 +103,7 @@
 \frac{18}{72} \times 100\% = 0{,}25 \times 100\% = 25\%
 ```
 
-**c)** $5\%$ av $100\,\Omega$ är $5\,\Omega$. Det tillåtna intervallet är:
+**c)** $5\char37$ av $100\thinspace\Omega$ är $5\thinspace\Omega$. Det tillåtna intervallet är:
 
 ```math
 100 - 5 = 95\,\Omega \quad \text{till} \quad 100 + 5 = 105\,\Omega
@@ -113,7 +113,7 @@
 
 ## Del 2 – Nytt stoff
 ### 2.1 – Parallellkopplade motstånd
-$R_1 = 12\,\Omega$, $R_2 = 6\,\Omega$
+$R_1 = 12\thinspace\Omega$, $R_2 = 6\thinspace\Omega$
 
 ---
 
@@ -133,7 +133,7 @@ R_{\text{TOT}} = 4\,\Omega
 ---
 
 ### 2.2 – Serie- och parallellkoppling
-$R_1 = 4\,\text{k}\Omega$ i serie med parallellkopplingen av $R_2 = 24\,\text{k}\Omega$ och $R_3 = 8\,\text{k}\Omega$.
+$R_1 = 4\thinspace\text{k}\Omega$ i serie med parallellkopplingen av $R_2 = 24\thinspace\text{k}\Omega$ och $R_3 = 8\thinspace\text{k}\Omega$.
 
 ---
 
@@ -168,12 +168,12 @@ R_{\text{TOT}} = R_1 + R_{\text{p}} = 4 + 6 = 10\,\text{k}\Omega
 R_{\text{TOT}} = R_1 + \left( \frac{R_2 \times R_3}{R_2 + R_3} \right)
 ```
 
-Additionen kan inte utföras förrän parentesens värde är känt – precis som att parenteser beräknas före addition i räkneordningen. Adderas alla tre resistanserna direkt fås $36\,\text{k}\Omega$, vilket är fel.
+Additionen kan inte utföras förrän parentesens värde är känt – precis som att parenteser beräknas före addition i räkneordningen. Adderas alla tre resistanserna direkt fås $36\thinspace\text{k}\Omega$, vilket är fel.
 
 ---
 
 ### 2.3 – Ström och spänning i kretsen
-$U = 20\,\text{V}$ över kretsen i uppgift 2.2, där $R_{\text{TOT}} = 10\,\text{k}\Omega$.
+$U = 20\thinspace\text{V}$ över kretsen i uppgift 2.2, där $R_{\text{TOT}} = 10\thinspace\text{k}\Omega$.
 
 ---
 
@@ -196,7 +196,7 @@ U_1 = R_1 \times I = 4 \times 2 = 8\,\text{V}
 U_{\text{p}} = U - U_1 = 20 - 8 = 12\,\text{V}
 ```
 
-Kontroll med $R_{\text{p}}$: $U_{\text{p}} = 6 \times 2 = 12\,\text{V}$.
+Kontroll med $R_{\text{p}}$: $U_{\text{p}} = 6 \times 2 = 12\thinspace\text{V}$.
 
 **d)** Båda motstånden har samma spänning $U_{\text{p}}$ över sig:
 
@@ -206,12 +206,12 @@ I_2 = \frac{U_{\text{p}}}{R_2} = \frac{12}{24} = 0{,}5\,\text{mA}
 I_3 = \frac{U_{\text{p}}}{R_3} = \frac{12}{8} = 1{,}5\,\text{mA}
 ```
 
-Kontroll: $I_2 + I_3 = 0{,}5 + 1{,}5 = 2\,\text{mA} = I$. Strömmen in i parallellkopplingen är alltså lika stor som summan av strömmarna ut ur den.
+Kontroll: $I_2 + I_3 = 0{,}5 + 1{,}5 = 2\thinspace\text{mA} = I$. Strömmen in i parallellkopplingen är alltså lika stor som summan av strömmarna ut ur den.
 
 ---
 
 ### 2.4 – Absolutbelopp
-Växelspänning varierar mellan $-8\,\text{V}$ och $+8\,\text{V}$.
+Växelspänning varierar mellan $-8\thinspace\text{V}$ och $+8\thinspace\text{V}$.
 
 ---
 
@@ -231,7 +231,7 @@ Växelspänning varierar mellan $-8\,\text{V}$ och $+8\,\text{V}$.
 ---
 
 ### 2.5 – Verkningsgrad
-$P_{\text{in}} = 24\,\text{W}$, $P_{\text{ut}} = 18\,\text{W}$
+$P_{\text{in}} = 24\thinspace\text{W}$, $P_{\text{ut}} = 18\thinspace\text{W}$
 
 ---
 
@@ -242,7 +242,7 @@ $P_{\text{in}} = 24\,\text{W}$, $P_{\text{ut}} = 18\,\text{W}$
 \eta = \frac{P_{\text{ut}}}{P_{\text{in}}} \times 100\% = \frac{18}{24} \times 100\% = 75\%
 ```
 
-**b)** Med $\eta = 90\%$ och $P_{\text{in}} = 24\,\text{W}$:
+**b)** Med $\eta = 90\char37$ och $P_{\text{in}} = 24\thinspace\text{W}$:
 
 ```math
 P_{\text{ut}} = 0{,}90 \times 24 = 21{,}6\,\text{W}

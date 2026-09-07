@@ -46,6 +46,6 @@ Energin mäts i $J$ $(Joule)$.
 **b)** Bestäm den primitiva funktionen $P(t)$ till $p(t)$.\
 **c)** Bestäm ett uttryck för energin i spolen $w(t)$ som en funktion av tiden.\
 **d)** Spolen är oladdad vid start, dvs. $w(0) = 0$. Bestäm integrationskonstanten $C$.\
-**e)** Bestäm hur mycket energi som har lagrats i spolen under de första $3$ sekunderna $(0{\le}\,t\,{\le}\,3)$.\
+**e)** Bestäm hur mycket energi som har lagrats i spolen under de första $3$ sekunderna $(0{\le}\thinspace t\thinspace{\le}\thinspace 3)$.\
 
 ---
