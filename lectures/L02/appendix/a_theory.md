@@ -117,7 +117,7 @@ Identifiera den gemensamma faktorn i alla termer och bryt ut den:
 ```
 
 ```math
-I^2 R - IR = IR(I - 1)
+RI^2 - RI = RI(I - 1)
 ```
 
 ### 6.2 Konjugatregeln bakåt

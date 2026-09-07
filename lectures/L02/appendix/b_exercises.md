@@ -2,7 +2,11 @@
 
 ## Del 1 – Repetitionsuppgifter
 ### 1.1 – Parallellkoppling av tre motstånd
-Tre motstånd $R_1 = 6\thinspace\Omega$, $R_2 = 3\thinspace\Omega$ och $R_3 = 2\thinspace\Omega$ är parallellkopplade. Den totala resistansen ges av:
+Tre motstånd $R_1 = 6\thinspace\Omega$, $R_2 = 3\thinspace\Omega$ och $R_3 = 2\thinspace\Omega$ är parallellkopplade.
+
+![](./images/1.1_circuit.png)
+
+Den totala resistansen ges av:
 
 ```math
 \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}
@@ -15,12 +19,16 @@ Beräkna $R_{\text{TOT}}$.
 ### 1.2 – Verkningsgrad och effekt
 En transformator med verkningsgraden $\eta = 92\thinspace\char37$ tar in $P_{\text{in}} = 500\thinspace\text{W}$.
 
+![](./images/1.2_circuit.png)
+
 **a)** Beräkna uteffekten $P_{\text{ut}}$.\
 **b)** Hur stor effekt $P_{\text{förl}}$ förloras som värme?
 
 ---
 
 ### 1.3 – Räkneordning i kretsformel
+![](./images/1.3_circuit.png)
+
 Beräkna spänningsdelaren $U_{\text{ut}}$ för nedanstående formel då $U_{\text{in}} = 12\thinspace\text{V}$, $R_1 = 8\thinspace\Omega$ och $R_2 = 4\thinspace\Omega$:
 
 ```math
@@ -51,7 +59,7 @@ Motståndet $R$ i kretsen nedan genomflyts av summan av de tre grenströmmarna $
 Spänningsfallet över $R$ ges därmed av:
 
 ```math
-U_R = R(I_1 + I_2 + I_3)
+U_R = RI = R(I_1 + I_2 + I_3)
 ```
 
 **a)** Multiplicera ut parentesen och ange varje term med enhet.\
@@ -63,7 +71,7 @@ U_R = R(I_1 + I_2 + I_3)
 ### 2.3 – Faktorisering
 Faktorisera följande uttryck:
 
-**a)** $6I + 9IR$
+**a)** $6I + 9RI$
 
 **b)** $P_1^2 - P_2^2$
 
@@ -78,7 +86,7 @@ Tre motstånd $R_1 = 120\thinspace\Omega$, $R_2 = 180\thinspace\Omega$ och $R_3 
 
 ![](./images/2.4_circuit.png)
 
-Effekten i respektive motstånd ges av $P_k = I^2 R_k$.
+Effekten i respektive motstånd ges av $P_k = R_k I^2$.
 
 **a)** Skriv ett uttryck för den totala effekten $P_{\text{TOT}} = P_1 + P_2 + P_3$ och bryt ut den gemensamma faktorn.
 
@@ -112,27 +120,27 @@ Genom ett motstånd $R = 10\thinspace\Omega$ flyter strömmen $I_0 = 2\thinspace
 
 ![](./images/2.6_circuit.png)
 
-Effekten ges av $P = I^2 R$.
+Effekten ges av $P = RI^2$.
 
 **a)** Multiplicera ut $P = R(I_0 + \Delta I)^2$ med kvadreringsregeln.
 
 **b)** Beräkna den nya effekten med det utmultiplicerade uttrycket.
 
-**c)** Hur stor är effektökningen $\Delta P$ jämfört med $P_0 = I_0^2 R$?
+**c)** Hur stor är effektökningen $\Delta P$ jämfört med $P_0 = RI_0^2$?
 
 **d)** Hur stort blir felet om man struntar i termen $R\thinspace\Delta I^2$? Ange felet i procent av $\Delta P$.
 
 ---
 
 ### 2.7 – Effektuttryck och Ohms lag
-Effekten som utvecklas i motståndet nedan kan skrivas $P = I^2 R$.
+Effekten som utvecklas i motståndet nedan kan skrivas $P = RI^2$.
 
 ![](./images/2.7_circuit.png)
 
-**a)** Visa att $P = I^2R$ kan faktoriseras till $P = I \cdot (IR)$ och identifiera vilken storhet $IR$ representerar.
+**a)** Visa att $P = RI^2$ kan faktoriseras till $P = (RI) \cdot I$ och identifiera vilken storhet $RI$ representerar.
 
-**b)** Sätt in $I = \dfrac{U}{R}$ i $P = I^2R$ och visa att uttrycket kan förenklas till $P = \dfrac{U^2}{R}$.
+**b)** Sätt in $I = \dfrac{U}{R}$ i $P = RI^2$ och visa att uttrycket kan förenklas till $P = \dfrac{U^2}{R}$.
 
-**c)** Ett motstånd $R = 6\thinspace\Omega$ matas med $U = 12\thinspace\text{V}$. Beräkna effekten med alla tre formerna $P = UI$, $P = I^2R$ och $P = \dfrac{U^2}{R}$ och kontrollera att de ger samma svar.
+**c)** Ett motstånd $R = 6\thinspace\Omega$ matas med $U = 12\thinspace\text{V}$. Beräkna effekten med alla tre formerna $P = UI$, $P = RI^2$ och $P = \dfrac{U^2}{R}$ och kontrollera att de ger samma svar.
 
 ---
