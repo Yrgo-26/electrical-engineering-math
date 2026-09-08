@@ -22,10 +22,13 @@
 
 ### Under lektionen
 * Närvara under genomgången.
-* Genomför lektionsuppgifterna i [bilaga B](./appendix/b_exercises.md):
+* Genomför lektionsuppgifterna i Del 1 och Del 2 i [bilaga B](./appendix/b_exercises.md):
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Lösningsförslag laddas upp efter lektionen.
 * Genomför [övningsdugga 1](./appendix/practice_test/questions.md) – lösningsförslag finns [här](./appendix/practice_test/solutions.md).
+
+### Efter lektionen
+* Extrauppgifterna i Del 3 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
 
 ---
 

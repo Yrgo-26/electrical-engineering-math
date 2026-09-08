@@ -53,7 +53,7 @@ Ingen hårdvara krävs – all kod skrivs och körs i webbläsaren.
 ### Under lektionen
 * Närvara under genomgången.
 * Genomför uppgifterna i [bilaga B](./appendix/b_exercises.md):
-    * Del 1–3 är obligatoriska. Del 4 är frivillig fördjupning.
+    * Del 1–3 är obligatoriska. Del 4 och del 5 är frivillig fördjupning.
     * Handberäkningarna ska redan vara gjorda. Under lektionen skrivs koden, och resultaten jämförs med era beräkningar.
     * Lösningsförslag finns i [bilaga C](./appendix/c_solutions.md).
 * Samla uppgifterna i ett OnlineGDB-projekt med en fil per uppgift, se [bilaga B](./appendix/b_exercises.md). Kopiera filerna till egen dator innan ni stänger fliken.

@@ -65,9 +65,12 @@ f(x) = 3\sin(2x) \quad \Rightarrow \quad f'(x) = 3 \cdot 2\cos(2x) = 6\cos(2x)
 ## 5. Typexempel
 
 ### Typexempel 1 – Derivata av vanliga funktioner
-Derivera:\
-**a)** $f(x) = 5e^{3x}$\
-**b)** $f(x) = \ln(4x)$\
+Derivera:
+
+**a)** $f(x) = 5e^{3x}$
+
+**b)** $f(x) = \ln(4x)$
+
 **c)** $f(x) = 2\cos(x) - 3\sin(x)$
 
 **Lösning:**

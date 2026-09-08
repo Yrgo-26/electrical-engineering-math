@@ -27,6 +27,9 @@
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Lösningsförslag laddas upp efter lektionen.
 
+### Efter lektionen
+* Extrauppgifterna i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
+
 ---
 
 ## Utvärdering
