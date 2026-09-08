@@ -17,7 +17,7 @@ Beräkna $R_{\text{TOT}}$.
 ---
 
 ### 1.2 – Verkningsgrad och effekt
-En transformator med verkningsgraden $\eta = 92\thinspace\char37$ tar in $P_{\text{in}} = 500\thinspace\text{W}$.
+En transformator med verkningsgraden n = $92$ och $P_{in}$ = $500$ W.
 
 ![](./images/1.2_circuit.png)
 
