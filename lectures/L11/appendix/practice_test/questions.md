@@ -13,9 +13,12 @@ Alla uppgifter kräver lösningar med redovisat svar (inklusive enhet där det b
 ### Uppgift 1 (1,0 poäng)
 Du har två vektorer $\mathbf{u} = (1;\thinspace 2)$ samt $\mathbf{v} = (-3;\thinspace 4)$.
 
-**a)** Rita upp vektorerna i ett koordinatsystem.\
-**b)** Beräkna vektorernas absolutbelopp $|\mathbf{u}|$ samt $|\mathbf{v}|$.\
-**c)** Beräkna vektorernas vinklar $v_u$ samt $v_v$.\
+**a)** Rita upp vektorerna i ett koordinatsystem.
+
+**b)** Beräkna vektorernas absolutbelopp $|\mathbf{u}|$ samt $|\mathbf{v}|$.
+
+**c)** Beräkna vektorernas vinklar $v_u$ samt $v_v$.
+
 **d)** Beräkna en tredje vektor $\mathbf{w} = 2\mathbf{u} - \mathbf{v}$.
 
 ---
@@ -42,15 +45,18 @@ där
 
 En kondensator med kapacitansen $470\thinspace\mu\text{F}$ är ansluten till ett motstånd på $10\thinspace\text{k}\Omega$. Den är initialt laddad till $12\thinspace\text{V}$ och börjar urladdas vid $t = 0$.
 
-**a)** Beräkna spänningen efter fem sekunder.\
-**b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 \leq t \leq 20\thinspace\text{s}$.\
+**a)** Beräkna spänningen efter fem sekunder.
+
+**b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 \leq t \leq 20\thinspace\text{s}$.
+
 **c)** Beräkna efter hur lång tid spänningen har sjunkit till hälften av sitt ursprungliga värde.
 
 ---
 ### Uppgift 4 (1,0 poäng)
 En växelspänning har amplituden $5\thinspace\text{V}$, frekvensen $100\thinspace\text{Hz}$ samt fasen $90°$.
 
-**a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.\
+**a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.
+
 **b)** Rita växelspänningens sinuskurva över en period $T$.
 
 ---

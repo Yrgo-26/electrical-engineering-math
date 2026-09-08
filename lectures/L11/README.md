@@ -17,6 +17,7 @@
 
 ### Innan lektionen
 * Repetera kursmaterialet för L07–L10 (bilaga A i respektive lektion).
+* Träna gärna på repetitionsuppgifterna i [bilaga B](./appendix/b_exercises.md). Lösningsförslag finns [här](./appendix/c_solutions.md).
 
 ### Under lektionen
 * Närvara under genomgången.

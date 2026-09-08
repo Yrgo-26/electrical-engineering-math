@@ -75,9 +75,12 @@ En **stationär punkt** uppfyller $f'(x_0) = 0$.
 ## 6. Typexempel
 
 ### Typexempel 1 – Derivera polynomfunktioner
-Derivera:\
-**a)** $f(x) = -2x^2 + 2x + 4$\
-**b)** $f(x) = 3x^3 - 6x^2 + \dfrac{3x}{4} - 5$\
+Derivera:
+
+**a)** $f(x) = -2x^2 + 2x + 4$
+
+**b)** $f(x) = 3x^3 - 6x^2 + \dfrac{3x}{4} - 5$
+
 **c)** $f(x) = -x^4 + x^3 + \dfrac{2x^2}{3} - 3x + 2$
 
 **Lösning:**

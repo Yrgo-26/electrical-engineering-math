@@ -69,9 +69,12 @@ Vid redovisningen räcker det då att trycka på **Run** en gång: samtliga uppg
 ### 1.1 – Resistans och effekt
 Två resistorer, $R_1 = 220\ \Omega$ och $R_2 = 330\ \Omega$, parallellkopplas över spänningen $U = 12$ V.
 
-**a)** Beräkna parallellresistansen $R_p$.\
-**b)** Beräkna strömmen $I$ och den utvecklade effekten $P = \dfrac{U^2}{R_p}$.\
-**c)** Skriv ett program som beräknar $R_p$, $I$ och $P$. Använd `pow()` för kvadreringen.\
+**a)** Beräkna parallellresistansen $R_p$.
+
+**b)** Beräkna strömmen $I$ och den utvecklade effekten $P = \dfrac{U^2}{R_p}$.
+
+**c)** Skriv ett program som beräknar $R_p$, $I$ och $P$. Använd `pow()` för kvadreringen.
+
 **d)** Utöka programmet så att det även beräknar den spänning som krävs för att effekten ska bli $2{,}0$ W, enligt $U = \sqrt{P R_p}$.
 
 ---
@@ -79,8 +82,10 @@ Två resistorer, $R_1 = 220\ \Omega$ och $R_2 = 330\ \Omega$, parallellkopplas �
 ### 1.2 – Decibel
 En förstärkare har inspänningen $U_{\text{in}} = 25$ mV och utspänningen $U_{\text{ut}} = 1{,}6$ V.
 
-**a)** Beräkna förstärkningen i dB.\
-**b)** Ett filter dämpar signalen med $-3$ dB. Beräkna kvoten $U_{\text{ut}}/U_{\text{in}}$ för filtret.\
+**a)** Beräkna förstärkningen i dB.
+
+**b)** Ett filter dämpar signalen med $-3$ dB. Beräkna kvoten $U_{\text{ut}}/U_{\text{in}}$ för filtret.
+
 **c)** Skriv ett program som beräknar båda värdena med `log10()` respektive `pow()`.
 
 ---
@@ -88,9 +93,12 @@ En förstärkare har inspänningen $U_{\text{in}} = 25$ mV och utspänningen $U_
 ### 1.3 – Vinklar och trigonometri
 En växelspänning ges av $u(t) = 325\sin(2\pi \cdot 50t)$ V.
 
-**a)** Beräkna $u(t)$ vid $t = 2{,}0$ ms.\
-**b)** Ange vinkeln $2\pi \cdot 50t$ i både radianer och grader vid denna tidpunkt.\
-**c)** Skriv ett program som beräknar $u(t)$ för $t = 0$, $2{,}0$ ms, $5{,}0$ ms och $10{,}0$ ms. Skriv ut tiden, vinkeln i grader och spänningen på varje rad.\
+**a)** Beräkna $u(t)$ vid $t = 2{,}0$ ms.
+
+**b)** Ange vinkeln $2\pi \cdot 50t$ i både radianer och grader vid denna tidpunkt.
+
+**c)** Skriv ett program som beräknar $u(t)$ för $t = 0$, $2{,}0$ ms, $5{,}0$ ms och $10{,}0$ ms. Skriv ut tiden, vinkeln i grader och spänningen på varje rad.
+
 **d)** Bestäm vinkeln för vektorn $\vec{v} = (-3, 4)$ med `atan2()`, i radianer och grader. Förklara varför `atan(4.0 / -3.0)` ger ett annat svar.
 
 ---
@@ -100,14 +108,16 @@ En växelspänning ges av $u(t) = 325\sin(2\pi \cdot 50t)$ V.
 ### 2.1 – Numerisk derivering
 Låt $f(x) = x^3 - 2x + 1$.
 
-**a)** Derivera $f(x)$ analytiskt och beräkna $f'(2)$.\
+**a)** Derivera $f(x)$ analytiskt och beräkna $f'(2)$.
+
 **b)** Skriv en funktion `derivative()` som beräknar derivatan numeriskt med centraldifferensen
 
 ```math
 f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}.
 ```
 
-**c)** Beräkna $f'(2)$ numeriskt med $h = 10^{-2}$, $h = 10^{-6}$ och $h = 10^{-12}$. Skriv ut det absoluta felet mot det analytiska värdet för varje $h$.\
+**c)** Beräkna $f'(2)$ numeriskt med $h = 10^{-2}$, $h = 10^{-6}$ och $h = 10^{-12}$. Skriv ut det absoluta felet mot det analytiska värdet för varje $h$.
+
 **d)** Vilket $h$ ger minst fel? Förklara varför både för stora och för små värden på $h$ ger sämre resultat.
 
 ---
@@ -119,8 +129,10 @@ Strömmen genom en spole ges av $i(t) = 5t^2$ A. Spolens induktans är $L = 0{,}
 u(t) = L \cdot i'(t).
 ```
 
-**a)** Bestäm $i'(t)$ analytiskt och därmed ett uttryck för $u(t)$.\
-**b)** Beräkna $u(3)$ för hand.\
+**a)** Bestäm $i'(t)$ analytiskt och därmed ett uttryck för $u(t)$.
+
+**b)** Beräkna $u(3)$ för hand.
+
 **c)** Skriv ett program som beräknar $u(3)$ genom att derivera $i(t)$ numeriskt, och jämför med handberäkningen.
 
 ---
@@ -128,14 +140,16 @@ u(t) = L \cdot i'(t).
 ### 2.3 – Numerisk integrering
 Låt $f(x) = x^2$.
 
-**a)** Beräkna $\displaystyle\int_0^3 x^2\thinspace dx$ analytiskt.\
+**a)** Beräkna $\displaystyle\int_0^3 x^2\thinspace dx$ analytiskt.
+
 **b)** Skriv en funktion `integral()` som beräknar den bestämda integralen med trapetsmetoden:
 
 ```math
 \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right], \qquad h = \frac{b - a}{n}.
 ```
 
-**c)** Beräkna integralen med $n = 10$, $n = 100$ och $n = 1000$. Skriv ut det absoluta felet för varje $n$.\
+**c)** Beräkna integralen med $n = 10$, $n = 100$ och $n = 1000$. Skriv ut det absoluta felet för varje $n$.
+
 **d)** Hur förändras felet när $n$ tiodubblas?
 
 ---
@@ -143,8 +157,10 @@ Låt $f(x) = x^2$.
 ### 2.4 – Laddning genom en ledare
 Strömmen ges av $i(t) = 3t + 2$ A.
 
-**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\thinspace dt$ analytiskt.\
-**b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.\
+**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\thinspace dt$ analytiskt.
+
+**b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
+
 **c)** Varför blir det numeriska resultatet exakt i detta fall, men inte i uppgift 2.3?
 
 ---
@@ -154,8 +170,10 @@ Strömmen ges av $i(t) = 3t + 2$ A.
 ### 3.1 – Räkning med komplexa tal
 Låt $z_1 = 4 + 3j$ och $z_2 = 2 - 5j$.
 
-**a)** Beräkna $z_1 + z_2$, $z_1 \cdot z_2$ och $\dfrac{z_1}{z_2}$ för hand.\
-**b)** Beräkna $|z_1|$ och $\arg(z_1)$ i radianer och grader.\
+**a)** Beräkna $z_1 + z_2$, $z_1 \cdot z_2$ och $\dfrac{z_1}{z_2}$ för hand.
+
+**b)** Beräkna $|z_1|$ och $\arg(z_1)$ i radianer och grader.
+
 **c)** Skriv ett program som utför samtliga beräkningar med `complex.h`. Skriv ut varje resultat på formen `a + bj` med hjälp av `creal()` och `cimag()`.
 
 ---
@@ -163,8 +181,10 @@ Låt $z_1 = 4 + 3j$ och $z_2 = 2 - 5j$.
 ### 3.2 – Polär och rektangulär form
 Ett komplext tal ges på polär form som $z = 10\thinspace\angle\thinspace\dfrac{\pi}{6}$.
 
-**a)** Omvandla $z$ till rektangulär form för hand.\
-**b)** Skriv ett program som utför omvandlingen med `cexp()`, och omvandlar tillbaka med `cabs()` och `carg()`.\
+**a)** Omvandla $z$ till rektangulär form för hand.
+
+**b)** Skriv ett program som utför omvandlingen med `cexp()`, och omvandlar tillbaka med `cabs()` och `carg()`.
+
 **c)** Kontrollera att du får tillbaka det ursprungliga talet. Varför bör resultaten jämföras med `fabs(a - b) < 1e-9` i stället för med `==`?
 
 ---
@@ -172,10 +192,14 @@ Ett komplext tal ges på polär form som $z = 10\thinspace\angle\thinspace\dfrac
 ### 3.3 – Impedans i en RLC-krets
 En seriekrets består av $R = 47\ \Omega$, $L = 100$ mH och $C = 10\ \mu$F. Kretsen matas med $U = 230$ V vid $f = 50$ Hz.
 
-**a)** Beräkna $\omega$, $X_L = \omega L$ och $X_C = \dfrac{1}{\omega C}$.\
-**b)** Ange den totala impedansen $Z = R + j(X_L - X_C)$ på rektangulär form.\
-**c)** Beräkna $|Z|$ och $\arg(Z)$ i grader. Är kretsen induktiv eller kapacitiv?\
-**d)** Beräkna strömmens belopp $|I| = \dfrac{|U|}{|Z|}$.\
+**a)** Beräkna $\omega$, $X_L = \omega L$ och $X_C = \dfrac{1}{\omega C}$.
+
+**b)** Ange den totala impedansen $Z = R + j(X_L - X_C)$ på rektangulär form.
+
+**c)** Beräkna $|Z|$ och $\arg(Z)$ i grader. Är kretsen induktiv eller kapacitiv?
+
+**d)** Beräkna strömmens belopp $|I| = \dfrac{|U|}{|Z|}$.
+
 **e)** Skriv ett program som beräknar allt ovanstående med `complex.h`. Låt $f$ vara en variabel, och kör programmet även för $f = 500$ Hz. Vad händer med kretsens karaktär?
 
 ---
@@ -185,8 +209,10 @@ En seriekrets består av $R = 47\ \Omega$, $L = 100$ mH och $C = 10\ \mu$F. Kret
 ### 4.1 – Sampling av en sinussignal
 En signal ges av $u(t) = 5\sin(2\pi \cdot 50t + \dfrac{\pi}{4})$ V och samplas med $f_s = 800$ Hz.
 
-**a)** Kontrollera att samplingsteoremet är uppfyllt.\
-**b)** Beräkna antalet sampel per period, $N = \dfrac{f_s}{f}$.\
+**a)** Kontrollera att samplingsteoremet är uppfyllt.
+
+**b)** Beräkna antalet sampel per period, $N = \dfrac{f_s}{f}$.
+
 **c)** Beräkna sampelvärdena $u_0$, $u_1$ och $u_2$ för hand enligt
 
 ```math
@@ -212,10 +238,14 @@ Tre spänningar med samma frekvens ges av fasorerna
 U_1 = 10\,\angle\,0, \qquad U_2 = 6\,\angle\,\frac{\pi}{3}, \qquad U_3 = 4\,\angle\,{-\frac{\pi}{2}}.
 ```
 
-**a)** Omvandla samtliga fasorer till rektangulär form för hand.\
-**b)** Beräkna summan $U = U_1 + U_2 + U_3$ på rektangulär form.\
-**c)** Ange summan på polär form, $|U|\thinspace\angle\thinspace\delta$, med $\delta$ i både radianer och grader.\
-**d)** Skriv ett program som utför additionen med `complex.h` och skriver ut summan på både rektangulär och polär form.\
+**a)** Omvandla samtliga fasorer till rektangulär form för hand.
+
+**b)** Beräkna summan $U = U_1 + U_2 + U_3$ på rektangulär form.
+
+**c)** Ange summan på polär form, $|U|\thinspace\angle\thinspace\delta$, med $\delta$ i både radianer och grader.
+
+**d)** Skriv ett program som utför additionen med `complex.h` och skriver ut summan på både rektangulär och polär form.
+
 **e)** Rita fasorerna och deras summa i det komplexa talplanet.
 
 ---
@@ -229,7 +259,108 @@ u(t) = u_1(t) + u_2(t) + u_3(t),
 
 där varje delsignal ges av motsvarande fasor i uppgift 4.2 och samtliga har frekvensen $f = 50$ Hz.
 
-**b)** Skriv ut sampelvärdena som CSV med $f_s = 1600$ Hz.\
+**b)** Skriv ut sampelvärdena som CSV med $f_s = 1600$ Hz.
+
 **c)** Kontrollera att det största sampelvärdet överensstämmer med det $|U|$ som beräknades i uppgift 4.2. Motivera eventuell avvikelse.
+
+---
+
+## Del 5 – Extrauppgifter (frivillig)
+Uppgifterna nedan är extra träning för den som vill fördjupa sig ytterligare. De påverkar inte bedömningen. Precis som i del 1–3 görs handberäkningen först och programmet därefter.
+
+### 5.1 – Avrundning och absolutbelopp
+Betrakta talen $-2{,}7$, $3{,}2$ och $5{,}5$.
+
+**a)** Ange för hand vad `floor()`, `ceil()` och `round()` ger för vart och ett av talen.
+
+**b)** Skriv ett program som skriver ut alla nio värdena i en tabell.
+
+**c)** Varför ger `round(-2.5)` värdet $-3$ och inte $-2$?
+
+**d)** Vad är skillnaden mellan `fabs()` och `abs()`, och vilken bör användas i denna kurs?
+
+---
+
+### 5.2 – Toleranskontroll av resistorer
+En resistor är märkt $4{,}7\ \text{k}\Omega \pm 5\ \char37$.
+
+**a)** Beräkna det tillåtna intervallet för hand.
+
+**b)** Skriv funktionen
+
+```c
+int within_tolerance(double nominal, double tol_percent, double measured);
+```
+
+som returnerar $1$ om det uppmätta värdet ligger inom toleransen, annars $0$.
+
+**c)** Testa funktionen med de uppmätta värdena $4600\ \Omega$, $4950\ \Omega$ och $4465\ \Omega$.
+
+**d)** Varför bör jämförelsen skrivas som `fabs(measured - nominal) <= nominal * tol_percent / 100.0` i stället för att jämföra mot två separata gränser?
+
+---
+
+### 5.3 – Serie- och parallellresistans
+**a)** Beräkna för hand $R_s$ och $R_p$ för $R_1 = 100\ \Omega$ och $R_2 = 400\ \Omega$.
+
+**b)** Skriv funktionerna `double series(double r1, double r2)` och `double parallel(double r1, double r2)`.
+
+**c)** Skriv ett program som skriver ut båda värdena.
+
+**d)** Utöka programmet med en funktion som beräknar parallellresistansen för $n$ motstånd i en array, via summan av $1/R$. Testa med $\lbrace 100, 400, 200 \rbrace\ \Omega$.
+
+---
+
+### 5.4 – Tabell över en RC-urladdning
+Spänningen ges av $u(t) = 12e^{-t/\tau}$ V, där $\tau = RC$ med $R = 10\ \text{k}\Omega$ och $C = 100\ \mu\text{F}$.
+
+**a)** Beräkna $\tau$ för hand.
+
+**b)** Beräkna $u(0)$, $u(1)$ och $u(2)$ för hand.
+
+**c)** Skriv ett program som med `exp()` skriver ut $u(t)$ för $t = 0$ till $5\ \text{s}$ i steg om $0{,}5\ \text{s}$.
+
+**d)** Efter hur många tidskonstanter är spänningen under $1\ \char37$ av startvärdet? Låt programmet leta upp svaret.
+
+---
+
+### 5.5 – Andragradsekvation med alla tre fallen
+**a)** Skriv ett program som löser $ax^2 + bx + c = 0$ med hjälp av diskriminanten.
+
+**b)** Programmet ska hantera de tre fallen $D > 0$, $D = 0$ och $D < 0$ separat.
+
+**c)** Testa med koefficienterna $(1, -5, 6)$, $(1, -4, 4)$ och $(1, 2, 5)$. Räkna ut de förväntade svaren för hand först.
+
+**d)** Skriv i fallet $D < 0$ ut rötterna på formen `a + bj` med hjälp av `sqrt(-D)`.
+
+---
+
+### 5.6 – Numerisk ekvationslösning med intervallhalvering
+Sök roten till $f(x) = e^{-x} - x$ i intervallet $[0, 1]$.
+
+**a)** Beräkna $f(0)$ och $f(1)$ för hand och visa att de har olika tecken.
+
+**b)** Skriv en funktion `bisect()` som upprepat halverar intervallet tills dess bredd understiger $10^{-9}$.
+
+**c)** Kör programmet. Vilket värde på roten fås?
+
+**d)** Varför krävs det att $f(a)$ och $f(b)$ har olika tecken för att metoden ska fungera?
+
+---
+
+### 5.7 – Effektivvärde genom numerisk integrering
+För en sinusspänning $u(t) = |U|\sin(\omega t)$ gäller
+
+```math
+U_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^T u(t)^2\,dt}.
+```
+
+**a)** Ange det teoretiska värdet på $U_{\text{RMS}}$ då $|U| = 325$ V.
+
+**b)** Skriv ett program som beräknar integralen numeriskt med trapetsmetoden och $n = 1000$ delintervall över en period.
+
+**c)** Jämför med det teoretiska värdet och skriv ut det relativa felet.
+
+**d)** Vad händer med felet om $n$ minskas till $10$? Förklara varför.
 
 ---
