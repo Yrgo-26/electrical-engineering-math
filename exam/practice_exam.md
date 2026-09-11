@@ -2,17 +2,17 @@
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
-* En hand- eller datorskriven formelsamling på A4-sida (båda sidor).
-* En handskriven A4-sida (båda sidor) med valfria anteckningar.
+* En hand- eller datorskriven formelsamling på ett A4-ark (båda sidor).
+* Ett handskrivet A4-ark (båda sidor) med valfria anteckningar.
 
 > **OBS!** Mobiltelefoner får inte användas under den tid som tentamen pågår och ska placeras på angiven plats.
 
 ## Poäng
-Totalt 25 poäng, varav upp till 1,5 bonuspoäng från dugga 1 – 3.
+Totalt 25 poäng. Därtill kan upp till 1,0 bonuspoäng erhållas från dugga 1–2.
 
 ## Betygsgränser
 * IG < 10 poäng
-* G >= 17,5 poäng
+* G >= 10 poäng
 * VG >= 17,5 poäng
 
 ## Övrigt
@@ -20,7 +20,7 @@ Alla uppgifter kräver lösningar/motiveringar med redovisat svar (inklusive enh
 
 ---
 
-## Del I - Aritmetik, algebra, ekvationer samt trigonometri
+## Del I – Aritmetik, algebra, ekvationer, trigonometri och logaritmer (L01–L10)
 
 ### Uppgift 1 (1,0 poäng)
 Resistansen för fyra parallellkopplade resistorer $R_1$, $R_2$, $R_3$ och $R_4$ kan beräknas med följande formel:
@@ -76,14 +76,15 @@ Lös följande ekvation:
 
 ---
 
-## Del II – Vektorer, funktioner trigonometri och decibel
-
 ### Uppgift 6 (1,0 poäng)
 Du har två vektorer $u = (3; 5)$ samt $v = (2; -4)$.
 
 **a)** Rita upp vektorerna i ett koordinatsystem.
+
 **b)** Beräkna vektorernas absolutbelopp $|u|$ samt $|v|$.
+
 **c)** Beräkna vektorernas vinklar $v_u$ samt $v_v$.
+
 **d)** Beräkna en tredje vektor $w = u - 2v$.
 
 ---
@@ -95,7 +96,7 @@ Bostadspriserna ökar över tid på grund av inflation och marknadstillväxt. Pr
 f(x) = C \cdot a^x,
 ```
 
-där $C$ är ursprungspriset, $a$ är den årliga prisökningstakten och $x$ är antalet år som passerat sedan ursprungspriset fastställdes.
+där $C$ är ursprungspriset, $a$ är den årliga förändringsfaktorn och $x$ är antalet år som passerat sedan ursprungspriset fastställdes.
 
 Som exempel, under en given tidsperiod är den årliga prisökningen 5 % varje år, vilket innebär att en bostad som kostar $3\thinspace 000\thinspace 000\thinspace\text{kr}$ idag efter $x$ år är värd $f(x)$ kr, där
 
@@ -106,8 +107,11 @@ f(x) = 3 \cdot 10^6 \cdot 1{,}05^x
 Anta att ursprungspriset för en bostad är $7\thinspace 500\thinspace 000\thinspace\text{kr}$ samt att den årliga prisökningen är 2,5 %.
 
 **a)** Ange en funktion som beskriver bostadens pris $f(x)$ efter $x$ år.
+
 **b)** Beräkna bostadens värde efter 5 år.
+
 **c)** Bestäm funktionens definitionsmängd och värdemängd för en tidsperiod på $0 - 30$ år.
+
 **d)** Efter hur många år har bostadens värde fördubblats?
 
 ---
@@ -138,7 +142,9 @@ där
 En kondensator med kapacitansen $680\thinspace\mu F$ är ansluten till ett motstånd på $10\thinspace\text{k}\Omega$. Den är initialt laddad till $10\thinspace V$ och börjar urladdas vid tiden $t = 0$.
 
 **a)** Beräkna spänningen efter tre sekunder.
+
 **b)** Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0 - 10$ sekunder.
+
 **c)** Beräkna efter hur lång tid spänningen har sjunkit till 40 % av sitt ursprungliga värde.
 
 ---
@@ -147,6 +153,7 @@ En kondensator med kapacitansen $680\thinspace\mu F$ är ansluten till ett motst
 En växelspänning har amplituden $5\thinspace V$, frekvensen $100\thinspace Hz$ samt fasen 90°.
 
 **a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.
+
 **b)** Rita växelspänningens sinuskurva över en period $T$.
 
 ---
@@ -156,7 +163,7 @@ En ljudförstärkare har en förstärkning på $54\thinspace dB$. Hur många gå
 
 ---
 
-## Del III – Derivata, integraler samt komplexa tal
+## Del II – Derivata, integraler och komplexa tal (L12–L17)
 
 ### Uppgift 12 (1,0 poäng)
 Betrakta följande funktion:
@@ -166,9 +173,13 @@ f(x) = x^2 - 4x + 3
 ```
 
 **a)** Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.
+
 **b)** Bestäm var funktionen är stationär, dvs. lös $f'(x) = 0$.
+
 **c)** Avgör med hjälp av den andra derivatan om punkten är ett maximum eller minimum.
+
 **d)** Beräkna funktionens minsta/största värde, dvs. bestäm $f(x)$ i punkten då funktionen är stationär.
+
 **e)** Rita grafen till $f(x)$ för intervallet $0 \leq x \leq 5$. Markera extrempunkten och eventuella skärningar med axlarna.
 
 ---
@@ -186,10 +197,10 @@ där
 * $t$ = tiden i sekunder.
 
 **a)** Derivera funktionen och bestäm uttrycket för $u'(t)$.
-**b)** Beräkna $u'(t)$ vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
-**c)** Beräkna om spänningsökningen/spänningsminskningen ökar eller minskar vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
 
-> **Notering:** Uppgift c) är formulerad som i originaltentamen, men frågan ("ökar eller minskar spänningsökningen") besvaras egentligen av den andra derivatan $u''(2)$, inte $u'(2)$. Se lösningsförslaget.
+**b)** Beräkna $u'(t)$ vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
+
+**c)** Beräkna om spänningsökningen/spänningsminskningen ökar eller minskar vid tiden $t = 2\thinspace s$, dvs. beräkna $u''(2)$.
 
 ---
 
@@ -229,11 +240,14 @@ Strömmen $i(t)$ i en kondensator ges av följande funktion:
 i(t) = 0{,}5 e^{-0{,}1t}
 ```
 
-där $t$ är tiden i sekunder. Laddningen uppgår till $1\thinspace C$ vid start, dvs. $q(0) = 1$.
+där $t$ är tiden i sekunder. Kondensatorn har redan laddningen $q_0 = 1\thinspace C$ vid start.
 
 **a)** Bestäm ett uttryck för den primitiva funktionen $I(t) = \int i(t)\thinspace dt$, dvs. integrera utan att ange några gränser.
+
 **b)** Bestäm ett uttryck för kondensatorns laddning $q(t)$ genom att integrera över intervallet $[0, t]$.
-**c)** Bestäm en formel för den totala laddningen $q_{tot}(t)$ i kondensatorn, inklusive startladdningen $q(0)$.
+
+**c)** Bestäm en formel för den totala laddningen $q_{tot}(t)$ i kondensatorn, inklusive startladdningen $q_0$.
+
 **d)** Hur stor total laddning (inklusive startladdningen) har flödat in i kondensatorn efter 4 sekunder?
 
 ---
@@ -257,8 +271,11 @@ I = 10 - j5\,mA
 ```
 
 **a)** Rita ut fasorn $I$ i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
+
 **b)** Uttryck fasorn $I$ på Eulers form, dvs. bestäm absolutbeloppet $|I|$ samt fasvinkeln $\delta$ så att $I = |I|e^{j\delta}$.
+
 **c)** Anta att strömmens frekvens $f = 10\thinspace Hz$. Bestäm vinkelhastigheten $w$.
+
 **d)** Skriv $i(t)$ som en tidsberoende funktion $i(t) = |I| \cdot e^{j(wt+\delta)}$.
 
 ---
@@ -267,10 +284,15 @@ I = 10 - j5\,mA
 Du har följande vektorer: $a = (2; 1)$, $b = (3; -4)$ samt $c = (-1; 3)$. I uppgifterna nedan ska varje vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
 
 **a)** Skriv vektorerna på komplex rektangulär form.
+
 **b)** Rita ut vektorerna i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
+
 **c)** Bestäm vektorernas längder, dvs. absolutbeloppet av respektive tal.
+
 **d)** Bestäm längden (absolutbeloppet) av $2a - 3c$, dvs. $|2a - 3c|$.
+
 **e)** Bestäm vektorernas vinklar.
+
 **f)** Bestäm en vektor $d$ med längden 7 som är motsatt riktad $a$.
 
 ---
@@ -290,15 +312,18 @@ u_2(t) = 5\sin(wt - 45°)\,V
 u_3(t) = 1{,}5\sin(wt + 36°)\,V
 ```
 
-Den totala spänningen i kretsen $U_{tot}$ beräknas enligt nedan:
+Den totala spänningen i kretsen $u_{tot}(t)$ beräknas enligt nedan:
 
 ```math
 u_{tot}(t) = u_1(t) + u_2(t) + u_3(t)
 ```
 
 **a)** Skriv om spänningarna $u_1(t)$, $u_2(t)$ samt $u_3(t)$ till fasorer $U_1$, $U_2$ samt $U_3$ i komplex rektangulär form.
+
 **b)** Beräkna fasorsumman $U_{tot} = U_1 + U_2 + U_3$.
+
 **c)** Rita ut fasorerna i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
+
 **d)** Omvandla tillbaka resultatet till en sinusformad spänning i tidsdomänen på följande form:
 
 ```math
