@@ -15,7 +15,7 @@ där
 
 En ljudförstärkare har en förstärkning på $26$ $dB$. Beräkna den motsvarande linjära spänningsförstärkningen.
 
-### 1.2 - Utefter i dBm samt mW
+### 1.2 - Uteffekt i dBm samt mW
 Sambandet mellan en given effekt i $W$ samt motsvarande effekt i $dBm$ ($dB$ i förhållande till $1$ $mW$) visas nedan:
 
 ```math
@@ -47,24 +47,28 @@ Beräkna antalet lika starka ljudkällor om ljudet från en ljudkälla är $68$ 
 ### 2.1 - Derivering av funktioner
 Derivera följande funktioner:
 
-**a)** $f(x) = -2x^2 + 2x + 4$
+**a)** $f(x) = -3x^2 + 5x + 2$
 
-**b)** $f(x) = 3x^3 - 6x^2 + \frac{3x}{4} - 5$
+**b)** $f(x) = 2x^3 - 5x^2 + \frac{2x}{3} - 4$
 
-**c)** $f(x) = -x^4 + x^3 + \frac{2x^2}{3} - 3x + 2$
+**c)** $f(x) = 2x^4 - x^3 + \frac{3x^2}{5} + 4x - 1$
 
 ### 2.2 – Analys av en parabel
 
 Betrakta följande funktion:
 
 ```math
-f(x) = -x^2 + 6x - 5
+f(x) = -x^2 + 8x - 7
 ```
 
-**a)** Derivera funktionen $f(x)$, dvs. bestäm uttrycket för $f'(x)$.  
-**b)** Bestäm var funktionen är stationär, dvs. lös ekvationen $f'(x) = 0$.  
-**c)** Avgör med hjälp av den andra derivatan om punkten är ett **maximum** eller **minimum**.  
-**d)** Beräkna funktionens största eller minsta värde.  
+**a)** Derivera funktionen $f(x)$, dvs. bestäm uttrycket för $f'(x)$.
+
+**b)** Bestäm var funktionen är stationär, dvs. lös ekvationen $f'(x) = 0$.
+
+**c)** Avgör med hjälp av den andra derivatan om punkten är ett **maximum** eller **minimum**.
+
+**d)** Beräkna funktionens största eller minsta värde.
+
 **e)** Rita upp grafen till $f(x)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att
 dina svar stämmer.
 
@@ -73,7 +77,7 @@ dina svar stämmer.
 Strömmen genom en viss RC-krets kan approximeras med följande polynomfunktion:
 
 ```math
-i(t) = -0,4t^3 + 2,4t^2 - 3t + 1,2
+i(t) = -0,2t^3 + 1,8t^2 - 3,6t + 2,5
 ```
 
 där  
@@ -86,7 +90,7 @@ där
 
 **c)** Bestäm med hjälp av den **andra derivatan** om respektive stationär punkt är ett **maximum** eller **minimum**.
 
-**d)** Beräkna den maximala och minimala strömmen $i(t)$ i kretsen.
+**d)** Beräkna strömmens maximi- och minimivärde, dvs. strömmen $i(t)$ i de stationära punkterna.
 
 **e)** Rita grafen till $i(t)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att
 dina svar stämmer.

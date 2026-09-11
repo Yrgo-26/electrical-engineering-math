@@ -1,7 +1,5 @@
 # Bilaga A – Funktioner (del I)
 
-![](./images/functions.png)
-
 ## 1. Vad är en funktion?
 En **funktion** $f$ är en regel som för varje tillåtet värde på $x$ ger exakt ett värde $f(x)$:
 

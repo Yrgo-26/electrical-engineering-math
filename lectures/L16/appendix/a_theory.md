@@ -1,7 +1,5 @@
 # Bilaga A – Komplexa tal (del II)
 
-![](./images/complex2.png)
-
 ## 1. Eulers formel
 **Eulers formel** kopplar samman komplexa exponenter och trigonometri:
 

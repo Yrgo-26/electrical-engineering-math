@@ -1,7 +1,5 @@
 # Bilaga A – Integraler
 
-![](./images/integral.png)
-
 ## 1. Primitiv funktion
 En **primitiv funktion** $F(x)$ till $f(x)$ uppfyller:
 
@@ -26,7 +24,7 @@ $C$ kallas **integrationskonstanten**.
 | $x^n$ ($n \neq -1$) | $\dfrac{x^{n+1}}{n+1} + C$ |
 | $e^x$ | $e^x + C$ |
 | $e^{kx}$ | $\dfrac{1}{k}e^{kx} + C$ |
-| $\dfrac{1}{x}$ | $\ln|x| + C$ |
+| $\dfrac{1}{x}$ | $\ln\|x\| + C$ |
 | $\sin(x)$ | $-\cos(x) + C$ |
 | $\cos(x)$ | $\sin(x) + C$ |
 | $\sin(kx)$ | $-\dfrac{1}{k}\cos(kx) + C$ |

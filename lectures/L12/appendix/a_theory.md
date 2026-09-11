@@ -1,7 +1,5 @@
 # Bilaga A – Derivata (del I)
 
-![](./images/derivative1.png)
-
 ## Varför derivata i elektroteknik?
 Derivatan beskriver hur snabbt en storhet förändras. I elektroteknik dyker den upp direkt i kretsteori:
 

@@ -1,6 +1,4 @@
-# Appendix A – Talsystem och grundläggande aritmetik
-
-![](./images/arithmetic.png)
+# Bilaga A – Talsystem och grundläggande aritmetik
 
 ## 1. Talmängder
 Matematiken är uppbyggd kring olika talmängder. Varje mängd är en utökning av den föregående.
@@ -57,7 +55,7 @@ När ett uttryck innehåller flera räkneoperationer gäller följande prioritet
 
 ## 4. Bråkräkning
 ### 4.1 Förenkling
-Ett bråk förenklas genom att dela täljare och nämnare med deras största gemensamma delare (GGD):
+Ett bråk förenklas genom att dela täljare och nämnare med deras största gemensamma delare (SGD):
 
 ```math
 \frac{12}{18} = \frac{12 \div 6}{18 \div 6} = \frac{2}{3}
@@ -148,7 +146,7 @@ I = \frac{U}{R}
 R = \frac{U}{I}
 ```
 
-> **Tips:** Räknas resistansen i $\Omega$ och spänningen i V så fås strömmen direkt i mA. Då slipper man hålla reda på tiopotenser.
+> **Tips:** Räknas resistansen i k$\Omega$ och spänningen i V så fås strömmen direkt i mA. Då slipper man hålla reda på tiopotenser.
 
 **Exempel:** Kretsen nedan förenklas stegvis tills endast ett motstånd återstår. Först ersätts parallellkopplingen av $R_2$ och $R_3$ med $R_{\text{p}}$, därefter adderas $R_1$ till den totala resistansen $R_{\text{TOT}}$.
 
@@ -185,7 +183,7 @@ p\% = \frac{p}{100}
 x\% \text{ av } A = \frac{x}{100} \times A
 ```
 
-**Exempel:** Hur stor del av $200\thinspace\text{V}$ är $30\char37$?
+**Exempel:** Hur mycket är $30\char37$ av $200\thinspace\text{V}$?
 
 ```math
 \frac{30}{100} \times 200 = 60\,\text{V}

@@ -35,7 +35,7 @@ En krets har $U = 3{,}3\thinspace\text{V}$ och $R = 4{,}7\thinspace\text{k}\Omeg
 Strömmen $I$ (i ampere) uppfyller:
 
 ```math
-I^2 \cdot 50 = 8
+50I^2 = 8
 ```
 
 **a)** Lös ekvationen för $I$.

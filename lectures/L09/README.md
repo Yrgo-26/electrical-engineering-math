@@ -7,7 +7,7 @@
 ---
 
 ## Mål med lektionen
-* Erhålla kunskap om olika trigonometriska funktioner och dess parametrar.
+* Erhålla kunskap om olika trigonometriska funktioner och deras parametrar.
 * Träna på att använda olika vinkelmått (radianer och grader).
 
 ---

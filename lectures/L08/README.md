@@ -8,7 +8,7 @@
 ---
 
 ## Mål med lektionen
-* Repetera viktiga begrepp från Grundskolan/Matematik 1.
+* Repetera viktiga begrepp från grundskolan/Matematik 1.
 * Förstå begreppet funktion.
 * Gå igenom och repetera vanliga funktioner.
 * Förstå hur vi kan använda funktioner och grafer för att lösa problem.

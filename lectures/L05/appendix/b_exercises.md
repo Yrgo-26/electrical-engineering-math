@@ -2,7 +2,7 @@
 
 ## Del 1 – Repetitionsuppgifter
 ### 1.1 – Ekvationssystem: spänning och ström
-Lös följande ekvationssystem:
+Lös följande ekvationssystem (strömmar i ampere):
 
 ```math
 \begin{cases}

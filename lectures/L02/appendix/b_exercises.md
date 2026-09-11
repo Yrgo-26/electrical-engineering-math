@@ -17,7 +17,7 @@ Beräkna $R_{\text{TOT}}$.
 ---
 
 ### 1.2 – Verkningsgrad och effekt
-En transformator med verkningsgraden $\eta$ = $92$ $\%$ och $P_{in}$ = $500$ W.
+En transformator har verkningsgraden $\eta = 92\thinspace\char37$ och ineffekten $P_{\text{in}} = 500\thinspace\text{W}$.
 
 ![](./images/1.2_circuit.png)
 
@@ -30,7 +30,7 @@ En transformator med verkningsgraden $\eta$ = $92$ $\%$ och $P_{in}$ = $500$ W.
 ### 1.3 – Räkneordning i kretsformel
 ![](./images/1.3_circuit.png)
 
-Beräkna spänningsdelaren $U_{\text{ut}}$ för nedanstående formel då $U_{\text{in}} = 12\thinspace\text{V}$, $R_1 = 8\thinspace\Omega$ och $R_2 = 4\thinspace\Omega$:
+Beräkna spänningsdelarens utspänning $U_{\text{ut}}$ med nedanstående formel då $U_{\text{in}} = 12\thinspace\text{V}$, $R_1 = 8\thinspace\Omega$ och $R_2 = 4\thinspace\Omega$:
 
 ```math
 U_{\text{ut}} = U_{\text{in}} \times \frac{R_2}{R_1 + R_2}

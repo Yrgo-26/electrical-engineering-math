@@ -120,7 +120,7 @@ Laborationen bedöms **U/G** och påverkar inte kursens betygspoäng. Den ingår
 | Del 1–3 genomförda och korrekt redovisade | G |
 | Del 1–3 ej genomförda eller ej redovisade | U |
 
-Del 4 är frivillig fördjupning och påverkar inte bedömningen.
+Del 4 och del 5 är frivillig fördjupning och påverkar inte bedömningen.
 
 ---
 

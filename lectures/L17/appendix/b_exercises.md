@@ -57,10 +57,10 @@ i_2(t) = 3{\sin (\omega t - 30^{\circ})}\,\,mA
 i_3(t) = 4{\sin (\omega t + 120^{\circ})}\,\,mA
 ```
 
-Den totala strömmen i kretsen $I_{tot}$ beräknas enligt nedan:
+Den totala strömmen i kretsen $i_{tot}(t)$ beräknas enligt nedan:
 
 ```math
-I_{tot}(t) = i_1(t) + i_2(t) + i_3(t)
+i_{tot}(t) = i_1(t) + i_2(t) + i_3(t)
 ```
 
 **a)** Skriv om strömmarna $i_1(t)$, $i_2(t)$ samt $i_3(t)$ till fasor $I_1$, $I_2$ samt $I_3$ i komplex rektangulär form.

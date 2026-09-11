@@ -25,16 +25,16 @@ där
 En servomotors vinkelposition (i grader) ges av
 
 ```math
-v(t)=-0,5t^2+4t,
+v(t)=-0{,}5t^2+4t,
 ```
 
 där $t$ = tiden i sekunder (definierad för $0≤t≤8$).
 
-**a)** Beräkna vinkeln $v$ vid $t = {0,2,4,6,8}$ s.
+**a)** Beräkna vinkeln $v$ vid $t = 0$, $2$, $4$, $6$ och $8$ s.
 
 **b)** Rita grafen och markera när servomotorn når sin maximala vinkel.
 
-**c)** Bestäm vid vilka tidpunkter vinkeln är $3,5°$.
+**c)** Bestäm vid vilka tidpunkter vinkeln är $3{,}5°$.
 
 ---
 
@@ -47,7 +47,7 @@ G(x)=\frac{x^2+x-12}{x^2-16}
 
 där
 * $G(x)$ = förstärkningsfaktorn,
-* $x$ = en dimensionslös förstärkningsfaktor.
+* $x$ = en dimensionslös variabel.
 
 **a)** Faktorisera både täljare och nämnare.
 
@@ -85,7 +85,7 @@ Omvandla följande vinklar till grader:
 
 **d)** $-1$
 
-**e)** $2,2$
+**e)** $2{,}2$
 
 ---
 
@@ -95,14 +95,14 @@ En växelspänning visas i figuren nedan.
 
 ![Sine wave](./images/2.3_sine_wave.png)
 
-**OBS!** Toppvärdet nås efter ca $8,33$ ms.
+**OBS!** Toppvärdet nås efter ca $8{,}33$ ms.
 
 Bestäm:
 * Spänningens amplitud $|U|$ i $V$.  
 * Spänningens frekvens $f$ i $Hz$.  
-* Spänningens vinkelhastighet $w$ i $rad/s$.  
+* Spänningens vinkelhastighet $\omega$ i $rad/s$.  
 * Spänningens fas $δ$ i $rad$.  
-* Spänningens ekvation på formen $u(t) = |U|sin(wt + δ)$.
+* Spänningens ekvation på formen $u(t) = |U|\sin(\omega t + δ)$.
 
 ---
 
@@ -113,15 +113,15 @@ Bestäm växelspänningens ekvation $u(t)$ med fasen i $rad$ och rita sinuskurva
 
 ---
 
-### 2.5 - Beräkning av en växelströms fas
+### 2.5 - Beräkning av en växelspännings fas
 
 Ekvationen för en växelspänning är:  
 
 ```math
-u(t) = 5sin(60πt + δ) V.
+u(t) = 5\sin(60πt + δ)\,\text{V}.
 ```
 
-Vid tiden $t = 10$ $ms$ gäller att $u(t)$ = $1,25$ $V$. Beräkna fasen $δ$.
+Vid tiden $t = 10$ $ms$ gäller att $u(t)$ = $1{,}25$ $V$. Beräkna fasen $δ$.
 
 ---
 

@@ -137,7 +137,7 @@ Funktionen $f(x) = \dfrac{x^2 - 9}{x - 3}$ är given.
 ---
 
 ### 3.2 – Egenskaper ur ekvationen
-En växelspänning ges av $u(t) = 6\sin\!\left(400\pi t - \dfrac{\pi}{3}\right)$ volt.
+En växelspänning ges av $u(t) = 6\sin\left(400\pi t - \dfrac{\pi}{3}\right)$ volt.
 
 **a)** Ange amplituden.
 
@@ -219,6 +219,8 @@ En förstärkare har $U_{\text{in}} = 20\thinspace\text{mV}$ och $U_{\text{ut}} 
 ---
 
 ### 4.4 – Effekt i dB och dBm
+Effektnivån i dBm anges relativt $1\thinspace\text{mW}$: $P_{\text{dBm}} = 10\log_{10}\left(\dfrac{P}{1\thinspace\text{mW}}\right)$.
+
 **a)** En förstärkare har $P_{\text{in}} = 2\thinspace\text{W}$ och $P_{\text{ut}} = 50\thinspace\text{W}$. Beräkna förstärkningen i dB.
 
 **b)** En sändare har uteffekten $20\thinspace\text{dBm}$. Ange effekten i mW.

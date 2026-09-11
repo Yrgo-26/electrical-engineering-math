@@ -74,7 +74,7 @@ Antag $U_{\text{in}} = 9\thinspace\text{V}$, $R_2 = 3\thinspace\Omega$ och $U_{\
 ---
 
 ### 2.4 – Tidskonstant i RC-krets
-Laddningstiden $\tau$ (tau) i en RC-krets är:
+Tidskonstanten $\tau$ (tau) i en RC-krets är:
 
 ```math
 \tau = R \cdot C
@@ -142,7 +142,7 @@ u_e = 0{,}4I - 2
 
 **b)** Regulatorn larmar när felspänningen har beloppet $1{,}2\thinspace\text{V}$. Lös ekvationen $|0{,}4I - 2| = 1{,}2$ som två fall och ange de två strömmar där larmet triggar.
 
-**c)** Vilket strömintervall uppfyller $|0{,}4I - 2| \leq 1{,}2$, dvs. när larmar regulatorn *inte*?
+**c)** Vilket strömintervall uppfyller $|0{,}4I - 2| < 1{,}2$, dvs. när larmar regulatorn *inte*?
 
 ---
 

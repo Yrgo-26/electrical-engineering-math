@@ -11,9 +11,9 @@ En krets har $R = 47\thinspace\Omega$ och $I = 200\thinspace\text{mA} = 0{,}2\th
 ---
 
 ### 1.2 – Linjär ekvation i RC-krets
-Laddningstiden $\tau$ i en RC-krets ges av $\tau = R \cdot C$.
+Tidskonstanten $\tau$ i en RC-krets ges av $\tau = R \cdot C$.
 
-Tidskonstanten $\tau = 20\thinspace\text{ms}$ och $C = 10\thinspace\mu\text{F}$.
+I kretsen är $\tau = 20\thinspace\text{ms}$ och $C = 10\thinspace\mu\text{F}$.
 
 **a)** Sätt upp ekvationen och lös för $R$.
 

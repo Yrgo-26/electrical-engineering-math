@@ -1,6 +1,4 @@
-# Appendix A – Potenser och rötter
-
-![](./images/powers_and_roots.png)
+# Bilaga A – Potenser och rötter
 
 ## 1. Potenser
 En **potens** är upprepad multiplikation av ett tal med sig självt:
@@ -163,7 +161,7 @@ P = RI^2
 **Exempel:** $I = 20\thinspace\text{mA} = 20 \times 10^{-3}\thinspace\text{A}$, $R = 1\thinspace\text{k}\Omega = 10^3\thinspace\Omega$:
 
 ```math
-P = (20 \times 10^{-3})^2 \times 10^3 = 400 \times 10^{-6} \times 10^3 = 0{,}4\,\text{W}
+P = 10^3 \times (20 \times 10^{-3})^2 = 10^3 \times 400 \times 10^{-6} = 0{,}4\,\text{W}
 ```
 
 ---

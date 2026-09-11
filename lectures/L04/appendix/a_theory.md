@@ -1,6 +1,4 @@
-# Appendix A – Ekvationssystem
-
-![](./images/equation_system.png)
+# Bilaga A – Ekvationssystem
 
 ## 1. Vad är ett ekvationssystem?
 Ett **linjärt ekvationssystem** består av flera ekvationer med flera obekanta som ska uppfyllas *samtidigt*. Det vanligaste är ett system med **två ekvationer och två obekanta**:
@@ -114,7 +112,7 @@ x = 7 - 2 \cdot 2 = 3
 Ekvationssystem är grundläggande för kretsteori. Med Kirchhoffs lagar kan ström- och spänningsfördelningen i en krets beräknas.
 
 ### Kirchhoffs spänningslag (KVL)
-> Summan av alla spänningar runt en sluten slynga är noll:
+> Summan av alla spänningar runt en sluten slinga är noll:
 
 ```math
 \sum U = 0
@@ -166,7 +164,7 @@ I_1 = 2{,}5 \cdot \frac{10}{11} = \frac{25}{11} \approx 2{,}27\,\text{A}
 | Substitutionsmetoden | En obekant enkelt kan uttryckas via den andra |
 | Additionsmetoden | Koefficienterna är heltal och eliminering är smidig |
 
-**Steg i båda metoder:**
+**Steg i båda metoderna:**
 1. Sätt upp systemet tydligt.
 2. Lös för en obekant.
 3. Beräkna den andra obekanten.

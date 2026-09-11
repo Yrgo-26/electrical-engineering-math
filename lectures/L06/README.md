@@ -34,7 +34,7 @@
 
 ## Utvärdering
 * Lös $2x^2 - 8x = 0$ med faktoriseringsmetoden.
-* Strömmen $I$ uppfyller $I^2 \cdot 8 = 2$. Beräkna $I$ och motivera ditt val av rot.
+* Strömmen $I$ uppfyller $8I^2 = 2$. Beräkna $I$ och motivera ditt val av rot.
 
 ---
 

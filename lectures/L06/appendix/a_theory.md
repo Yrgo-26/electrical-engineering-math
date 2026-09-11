@@ -1,6 +1,4 @@
-# Appendix A – Andragradsekvationer
-
-![](./images/quadratic_equations.png)
+# Bilaga A – Andragradsekvationer
 
 ## 1. Definition
 En **andragradsekvation** (kvadratisk ekvation) är en ekvation på formen:
@@ -165,7 +163,7 @@ R_1 = 6\,\Omega, \quad R_2 = 4\,\Omega
 | Faktorisering | Heltalsrötter kan identifieras snabbt |
 | PQ-formeln | $a = 1$ (normerad form) |
 | ABC-formeln | Generell tillämpning, $a \neq 1$ |
-| Kvadratkomplettering | Derivering av formler och förståelse av processen |
+| Kvadratkomplettering | Härledning av formler och förståelse av processen |
 
 ```math
 \boxed{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}
