@@ -4,13 +4,13 @@
 * Förändringshastighet och tangent.
 * Derivatans definition.
 * Derivata för potens- och polynomfunktioner.
-* Derivatans nollställe, maximi- och minipunkter.
+* Derivatans nollställe, maximi- och minimipunkter.
 * Genomgång av övningsdugga 2 (del I).
 
 ---
 
 ## Mål med lektionen
-* Förstå derivatans koppling till tangent, räta linjens ekvation, maximi- och minipunkter.
+* Förstå derivatans koppling till tangent, räta linjens ekvation, maximi- och minimipunkter.
 * Kunna derivera polynomfunktioner.
 
 ---
@@ -42,7 +42,7 @@
 
 ## Utvärdering
 * Derivera $f(x) = 4x^3 - 2x^2 + 7$.
-* Bestäm extrempunktens koordinater för $f(x) = -x^2 + 6x - 5$ och avgör om det är ett maximum eller minimum.
+* Bestäm extrempunktens koordinater för $f(x) = x^2 - 2x - 8$ och avgör om det är ett maximum eller minimum.
 
 ---
 

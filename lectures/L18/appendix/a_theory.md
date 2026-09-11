@@ -395,7 +395,7 @@ Filen kan sedan öppnas i ett kalkylprogram, eller matas in i en simulator som r
 
 ## 12. Typexempel
 
-### Typexempel 1 – Effekt och decibel
+### Typexempel 1 – Förstärkning och decibel
 En förstärkare har inspänningen $U_{\text{in}} = 0{,}5$ V och utspänningen $U_{\text{ut}} = 8{,}0$ V. Beräkna förstärkningen i dB.
 
 **Lösning:**
@@ -407,7 +407,7 @@ A_{\text{dB}} = 20\log_{10}\!\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) 
 I kod:
 
 ```c
-const double gain_db = 20.0 * log10(8.0 / 0.5); // 24.082 db.
+const double gain_db = 20.0 * log10(8.0 / 0.5); // 24.082 dB.
 ```
 
 ---

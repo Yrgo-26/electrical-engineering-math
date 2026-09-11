@@ -1,7 +1,5 @@
 # Bilaga A – Komplexa tal (del I)
 
-![](./images/complex1.png)
-
 ## 1. Inledning
 Komplexa tal behövs när vi vill lösa ekvationer som $x^2 = -1$. Vi inför den **imaginära enheten** $j$:
 

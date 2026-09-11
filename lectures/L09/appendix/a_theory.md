@@ -1,7 +1,5 @@
 # Bilaga A – Trigonometriska funktioner
 
-![](./images/trigonometry.png)
-
 ## 1. Vinkelmått: grader och radianer
 Vinklar kan anges i **grader** (°) eller **radianer** (rad).
 
@@ -44,7 +42,7 @@ u(t) = |U| \sin(\omega t + \delta)
 
 | Parameter | Symbol | Enhet | Beskrivning |
 |-----------|--------|-------|-------------|
-| Amplitud | $|U|$ | V | Toppvärdet |
+| Amplitud | $\|U\|$ | V | Toppvärdet |
 | Vinkelhastighet | $\omega$ | rad/s | $\omega = 2\pi f$ |
 | Frekvens | $f$ | Hz | Antal perioder per sekund |
 | Periodtid | $T$ | s | $T = 1/f$ |
@@ -56,7 +54,7 @@ u(t) = |U| \sin(\omega t + \delta)
 \omega = 2\pi f = \frac{2\pi}{T}
 ```
 
-**Fasförskjutning i tid:** En positiv fasvinkel $\delta$ innebär att spänningen är *tidigt* (förskjuten vänster i grafen). Negativ $\delta$ = försenad.
+**Fasförskjutning i tid:** En positiv fasvinkel $\delta$ innebär att spänningen är *tidig* (förskjuten åt vänster i grafen). Negativ $\delta$ = försenad.
 
 ---
 

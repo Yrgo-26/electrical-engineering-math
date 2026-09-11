@@ -1,6 +1,4 @@
-# Appendix A – Algebra
-
-![](./images/algebra.png)
+# Bilaga A – Algebra
 
 ## 1. Variabler och algebraiska uttryck
 En **variabel** är ett okänt tal representerat av en bokstav, t.ex. $x$, $R$, $U$, $I$.

@@ -25,7 +25,7 @@ En växelspänning visas i figuren nedan.
 
 ![Växelspänning med okända egenskaper](./images/1.3_sine_wave.png)
 
-Bestäm spänningens ekvation på formen $u(t)=|U|sin⁡(wt+δ)$.
+Bestäm spänningens ekvation på formen $u(t)=|U|sin⁡(\omega t+δ)$.
 
 ---
 
@@ -52,11 +52,11 @@ Vid tiden $t=15$ $ms$ gäller att $u(t) = 3$ $V$. Beräkna fasen $δ$.
 ### 2.1 - Logaritmiska ekvationer
 Lös följande logaritmiska ekvationer:
 
-**a)** $3^x = 81$
+**a)** $5^x = 125$
 
-**b)** $2^{x-1} = 64$
+**b)** $2^{x-3} = 128$
 
-**c)** $e^{x-2} = 150$
+**c)** $e^{x+1} = 120$
 
 ---
 
@@ -73,13 +73,13 @@ där
 * $a$ är förändringsfaktorn,
 * $t$ är antalet passerade timmar.
 
-Ett batteri tappar halva sin laddning på $30$ timmar. Beräkna efter hur lång tid endast $20$ % av laddningen återstår.
+Ett batteri tappar halva sin laddning på $40$ timmar. Beräkna efter hur lång tid endast $10$ % av laddningen återstår.
 
 ---
 
 ### 2.3 -  Linjär förstärkning
 
-Två signaler har spänningsnivåerna $L_1 = 20$ $dB$ och $L_2 = 46$ $dB$.
+Två signaler har spänningsnivåerna $L_1 = 15$ $dB$ och $L_2 = 49$ $dB$.
 
 Beräkna den linjära spänningsförstärkningen $G_{lin}$ mellan dessa två nivåer.  
 
@@ -107,7 +107,7 @@ där
 * $U_{RMS}$ = spänningens effektivvärde i $V$,
 * $U_{dBV}$ = spänningen i $dBV$.
 
-En sinusspänning har amplitud = $31,0$ $dBV$. Bestäm amplituden i $V$.
+En sinusspänning har nivån $17{,}0$ $dBV$. Bestäm amplituden i $V$.
 
 ---
 
@@ -177,7 +177,7 @@ Lös ekvationerna:
 ---
 
 ### 3.5 – Spänningsförstärkning i dB
-Använd $G_{\text{dB}} = 20\log_{10}\!\left(\dfrac{U_{\text{ut}}}{U_{\text{in}}}\right)$.
+Använd $G_{\text{dB}} = 20\log_{10}\left(\dfrac{U_{\text{ut}}}{U_{\text{in}}}\right)$.
 
 **a)** $U_{\text{in}} = 10\thinspace\text{mV}$ och $U_{\text{ut}} = 1\thinspace\text{V}$. Beräkna $G_{\text{dB}}$.
 
@@ -205,7 +205,7 @@ Använd $G_{\text{lin}} = 10^{G_{\text{dB}}/20}$.
 ---
 
 ### 3.7 – Effektförstärkning i dB
-Använd $G_{\text{dB}} = 10\log_{10}\!\left(\dfrac{P_{\text{ut}}}{P_{\text{in}}}\right)$.
+Använd $G_{\text{dB}} = 10\log_{10}\left(\dfrac{P_{\text{ut}}}{P_{\text{in}}}\right)$.
 
 **a)** $P_{\text{in}} = 1\thinspace\text{W}$ och $P_{\text{ut}} = 100\thinspace\text{W}$. Beräkna $G_{\text{dB}}$.
 
@@ -231,7 +231,7 @@ En signalkedja består av två förstärkarsteg med $G_1 = 12\thinspace\text{dB}
 ---
 
 ### 3.9 – Nivå i dBV
-Använd $U_{\text{dBV}} = 20\log_{10}\!\left(\dfrac{U_{\text{RMS}}}{1\thinspace\text{V}}\right)$.
+Använd $U_{\text{dBV}} = 20\log_{10}\left(\dfrac{U_{\text{RMS}}}{1\thinspace\text{V}}\right)$.
 
 **a)** $U_{\text{RMS}} = 1\thinspace\text{V}$. Beräkna nivån i dBV.
 

@@ -1,6 +1,4 @@
-# Appendix A – Linjära ekvationer och olikheter
-
-![](./images/equations.png)
+# Bilaga A – Linjära ekvationer och olikheter
 
 ## 1. Ekvationer
 En **ekvation** är ett påstående om att två uttryck är lika:
@@ -151,7 +149,7 @@ En komponent tål maximalt $P_{\max} = 2\thinspace\text{W}$ och effekten ges av 
 U \cdot 0{,}5 \leq 2 \quad \Rightarrow \quad U \leq 4\,\text{V}
 ```
 
-Spänningen måste hållas under $4\thinspace\text{V}$ för att komponenten inte ska skadas.
+Spänningen får vara högst $4\thinspace\text{V}$ för att komponenten inte ska skadas.
 
 ---
 

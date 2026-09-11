@@ -473,7 +473,7 @@ Varje term i den första parentesen multipliceras med varje term i den andra.
 a^2 + b^2 = 9 + 16 = 25
 ```
 
-Skillnaden är just den dubbla produkten $2ab = 2 \times 3 \times 4 = 24$, som $25 + 24 = 49$. Att "kvadrera term för term" är ett av de vanligaste algebrafelen.
+Skillnaden är just den dubbla produkten $2ab = 2 \times 3 \times 4 = 24$, eftersom $25 + 24 = 49$. Att "kvadrera term för term" är ett av de vanligaste algebrafelen.
 
 ---
 

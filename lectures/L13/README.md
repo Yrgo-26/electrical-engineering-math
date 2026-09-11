@@ -2,6 +2,7 @@
 
 ## Dagordning
 * Derivatan för trigonometriska funktioner, exponentialfunktioner samt logaritmfunktioner.
+* Produktregeln och kedjeregeln.
 * Genomgång av övningsdugga 2 (del II).
 * Genomförande av **dugga 2**.
 
@@ -9,6 +10,7 @@
 
 ## Mål med lektionen
 * Lära sig derivata för vanligt förekommande funktioner.
+* Kunna använda produktregeln och kedjeregeln.
 
 ---
 

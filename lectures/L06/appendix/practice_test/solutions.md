@@ -160,24 +160,31 @@ Räta linjens ekvation har formen $y = kx + m$. Vi skriver om den första ekvati
 ### Uppgift 5 (0,5 poäng)
 
 ```math
-\sin(v) = \frac{\sqrt{3}}{2}
+P = RI^2, \quad R = 4{,}7\,\text{k}\Omega, \quad I = 2{,}5\,\text{mA}
 ```
 
 ---
 
 ### Lösning
+Vi skriver prefixen som tiopotenser: $R = 4{,}7 \cdot 10^3\thinspace\Omega$ och $I = 2{,}5 \cdot 10^{-3}\thinspace\text{A}$. Strömmen kvadreras med potensreglerna, där $(10^{-3})^2 = 10^{-6}$:
 
 ```math
-v_1 = \sin^{-1}\left(\frac{\sqrt{3}}{2}\right) = 60°
+I^2 = (2{,}5 \cdot 10^{-3})^2 = 2{,}5^2 \cdot 10^{-6} = 6{,}25 \cdot 10^{-6}\,\text{A}^2
 ```
 
-För sinus gäller att $v_2 = 180° - v_1$, så lösningen i intervallet mellan 90° och 180° är:
+Insättning i effektformeln ger
 
 ```math
-v_2 = 180° - 60° = 120°
+P = RI^2 = 4{,}7 \cdot 10^3 \cdot 6{,}25 \cdot 10^{-6} = 29{,}375 \cdot 10^{-3}\,\text{W}.
 ```
 
-**Svar:** $v = 120°$
+Indata har två värdesiffror, så svaret avrundas till två värdesiffror och skrivs på standardform:
+
+```math
+P \approx 2{,}9 \cdot 10^{-2}\,\text{W}
+```
+
+**Svar:** $P \approx 2{,}9 \cdot 10^{-2}\thinspace\text{W}$, dvs. cirka $29\thinspace\text{mW}$.
 
 ---
 
@@ -228,7 +235,7 @@ x = \frac{-82 \pm \sqrt{6928}}{6} \approx \frac{-82 \pm 83{,}23}{6}
 x_1 \approx 0{,}21, \quad x_2 \approx -27{,}54
 ```
 
-**Kontroll ($x_1$):** VL $= 8(0{,}21+2)^2 - 5(0{,}21-3)^2 \approx -0{,}11$, HL $= 4-20(0{,}21) \approx -0{,}11$ ✓
+**Kontroll ($x_1$):** Med det oavrundade värdet $x_1 = 0{,}20577\ldots$ blir VL $= 8(x_1+2)^2 - 5(x_1-3)^2 \approx -0{,}115$ och HL $= 4-20x_1 \approx -0{,}115$ ✓ (med det avrundade $0{,}21$ blir kontrollen missvisande, eftersom termerna i VL nästan tar ut varandra)
 
 **Kontroll ($x_2$):** VL $= 8(-27{,}54+2)^2 - 5(-27{,}54-3)^2 \approx 554{,}8$, HL $= 4-20(-27{,}54) \approx 554{,}8$ ✓
 

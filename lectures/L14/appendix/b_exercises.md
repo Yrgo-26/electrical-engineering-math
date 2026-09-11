@@ -50,7 +50,7 @@ Energin mäts i $J$ $(Joule)$.
 
 **d)** Spolen är oladdad vid start, dvs. $w(0) = 0$. Bestäm integrationskonstanten $C$.
 
-**e)** Bestäm hur mycket energi som har lagrats i spolen under de första $3$ sekunderna $(0{\le}\thinspace t\thinspace{\le}\thinspace 3)$.\
+**e)** Bestäm hur mycket energi som har lagrats i spolen under de första $3$ sekunderna $(0{\le}\thinspace t\thinspace{\le}\thinspace 3)$.
 
 ---
 
@@ -60,32 +60,32 @@ Uppgifterna nedan är extra träning och görs med fördel på egen hand efter l
 ### 3.1 – Primitiva funktioner till polynom
 Bestäm den primitiva funktionen:
 
-**a)** $\displaystyle\int x^3\,dx$
+**a)** $\displaystyle\int x^3\thinspace dx$
 
-**b)** $\displaystyle\int 4x\,dx$
+**b)** $\displaystyle\int 4x\thinspace dx$
 
-**c)** $\displaystyle\int 5\,dx$
+**c)** $\displaystyle\int 5\thinspace dx$
 
-**d)** $\displaystyle\int (2x + 3)\,dx$
+**d)** $\displaystyle\int (2x + 3)\thinspace dx$
 
-**e)** $\displaystyle\int (x^2 - 4x + 1)\,dx$
+**e)** $\displaystyle\int (x^2 - 4x + 1)\thinspace dx$
 
 ---
 
 ### 3.2 – Primitiva funktioner till övriga standardfunktioner
 Bestäm den primitiva funktionen:
 
-**a)** $\displaystyle\int e^x\,dx$
+**a)** $\displaystyle\int e^x\thinspace dx$
 
-**b)** $\displaystyle\int e^{3x}\,dx$
+**b)** $\displaystyle\int e^{3x}\thinspace dx$
 
-**c)** $\displaystyle\int \frac{1}{x}\,dx$
+**c)** $\displaystyle\int \frac{1}{x}\thinspace dx$
 
-**d)** $\displaystyle\int \sin(x)\,dx$
+**d)** $\displaystyle\int \sin(x)\thinspace dx$
 
-**e)** $\displaystyle\int \cos(2x)\,dx$
+**e)** $\displaystyle\int \cos(2x)\thinspace dx$
 
-**f)** $\displaystyle\int \sin(4x)\,dx$
+**f)** $\displaystyle\int \sin(4x)\thinspace dx$
 
 ---
 
@@ -103,30 +103,30 @@ Bestäm den primitiva funktionen:
 ### 3.4 – Bestämda integraler: polynom
 Beräkna:
 
-**a)** $\displaystyle\int_0^2 3x^2\,dx$
+**a)** $\displaystyle\int_0^2 3x^2\thinspace dx$
 
-**b)** $\displaystyle\int_1^3 2x\,dx$
+**b)** $\displaystyle\int_1^3 2x\thinspace dx$
 
-**c)** $\displaystyle\int_0^4 (x + 1)\,dx$
+**c)** $\displaystyle\int_0^4 (x + 1)\thinspace dx$
 
-**d)** $\displaystyle\int_{-1}^{1} x^2\,dx$
+**d)** $\displaystyle\int_{-1}^{1} x^2\thinspace dx$
 
-**e)** $\displaystyle\int_0^3 (6 - 2x)\,dx$
+**e)** $\displaystyle\int_0^3 (6 - 2x)\thinspace dx$
 
 ---
 
 ### 3.5 – Bestämda integraler: övriga funktioner
 Beräkna:
 
-**a)** $\displaystyle\int_0^1 e^x\,dx$
+**a)** $\displaystyle\int_0^1 e^x\thinspace dx$
 
-**b)** $\displaystyle\int_0^{\pi} \sin(x)\,dx$
+**b)** $\displaystyle\int_0^{\pi} \sin(x)\thinspace dx$
 
-**c)** $\displaystyle\int_0^{\pi/2} \cos(x)\,dx$
+**c)** $\displaystyle\int_0^{\pi/2} \cos(x)\thinspace dx$
 
-**d)** $\displaystyle\int_1^{e} \frac{1}{x}\,dx$
+**d)** $\displaystyle\int_1^{e} \frac{1}{x}\thinspace dx$
 
-**e)** $\displaystyle\int_0^2 e^{-t}\,dt$
+**e)** $\displaystyle\int_0^2 e^{-t}\thinspace dt$
 
 ---
 
@@ -144,11 +144,11 @@ Beräkna:
 ### 3.7 – Negativa areor
 Funktionen $f(x) = x - 2$ är given.
 
-**a)** Beräkna $\displaystyle\int_0^2 (x-2)\,dx$.
+**a)** Beräkna $\displaystyle\int_0^2 (x-2)\thinspace dx$.
 
-**b)** Beräkna $\displaystyle\int_2^4 (x-2)\,dx$.
+**b)** Beräkna $\displaystyle\int_2^4 (x-2)\thinspace dx$.
 
-**c)** Beräkna $\displaystyle\int_0^4 (x-2)\,dx$.
+**c)** Beräkna $\displaystyle\int_0^4 (x-2)\thinspace dx$.
 
 **d)** Förklara varför integralen i **c)** blir noll trots att kurvan inte ligger på x-axeln.
 
@@ -191,7 +191,7 @@ Strömmen genom en ledare ges av $i(t) = 4t + 2$ ampere, och $q(0) = 0$.
 
 **d)** Hur stor laddning passerar mellan $t = 3\thinspace\text{s}$ och $t = 5\thinspace\text{s}$?
 
-**e)** Kontrollera svaret i **d)** genom att beräkna $\displaystyle\int_3^5 i(t)\,dt$.
+**e)** Kontrollera svaret i **d)** genom att beräkna $\displaystyle\int_3^5 i(t)\thinspace dt$.
 
 ---
 
@@ -200,22 +200,22 @@ Strömmen ges av $i(t) = 2\sin(100\pi t)$ ampere.
 
 **a)** Bestäm den primitiva funktionen till $i(t)$.
 
-**b)** Beräkna $\displaystyle\int_0^{0{,}01} i(t)\,dt$.
+**b)** Beräkna $\displaystyle\int_0^{0{,}01} i(t)\thinspace dt$.
 
-**c)** Beräkna $\displaystyle\int_0^{0{,}02} i(t)\,dt$.
+**c)** Beräkna $\displaystyle\int_0^{0{,}02} i(t)\thinspace dt$.
 
 **d)** Förklara resultatet i **c)**.
 
 ---
 
 ### 3.12 – Energi lagrad i en spole
-Strömmen genom en spole med $L = 0{,}4\thinspace\text{H}$ ges av $i(t) = 3t$ ampere. Effekten ges av $p(t) = L\,i(t)\,i'(t)$.
+Strömmen genom en spole med $L = 0{,}4\thinspace\text{H}$ ges av $i(t) = 3t$ ampere. Effekten ges av $p(t) = L\thinspace i(t)\thinspace i'(t)$.
 
 **a)** Bestäm $i'(t)$.
 
 **b)** Bestäm $p(t)$.
 
-**c)** Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+**c)** Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\thinspace d\tau$.
 
 **d)** Beräkna energin efter $2$ sekunder.
 
@@ -226,7 +226,7 @@ Strömmen genom en spole med $L = 0{,}4\thinspace\text{H}$ ges av $i(t) = 3t$ am
 ### 3.13 – Energi utvecklad i ett motstånd
 Effekten i ett motstånd ges av $p(t) = 5 + 2t$ watt för $0 \leq t \leq 10\thinspace\text{s}$.
 
-**a)** Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+**a)** Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\thinspace d\tau$.
 
 **b)** Beräkna den totala energin efter $10$ sekunder.
 
@@ -237,7 +237,7 @@ Effekten i ett motstånd ges av $p(t) = 5 + 2t$ watt för $0 \leq t \leq 10\thin
 ---
 
 ### 3.14 – Medelvärde av en funktion
-Medelvärdet av $f$ över intervallet $[a, b]$ ges av $\dfrac{1}{b-a}\displaystyle\int_a^b f(x)\,dx$.
+Medelvärdet av $f$ över intervallet $[a, b]$ ges av $\dfrac{1}{b-a}\displaystyle\int_a^b f(x)\thinspace dx$.
 
 **a)** Beräkna medelvärdet av $f(x) = x^2$ över $[0, 3]$.
 
@@ -250,15 +250,15 @@ Medelvärdet av $f$ över intervallet $[a, b]$ ges av $\dfrac{1}{b-a}\displaysty
 ---
 
 ### 3.15 – Integralens räkneregler
-Det är känt att $\displaystyle\int_0^2 f(x)\,dx = 5$ och $\displaystyle\int_0^2 g(x)\,dx = 3$. Beräkna:
+Det är känt att $\displaystyle\int_0^2 f(x)\thinspace dx = 5$ och $\displaystyle\int_0^2 g(x)\thinspace dx = 3$. Beräkna:
 
 **a)** $\displaystyle\int_0^2 \left[f(x) + g(x)\right]dx$
 
-**b)** $\displaystyle\int_0^2 2f(x)\,dx$
+**b)** $\displaystyle\int_0^2 2f(x)\thinspace dx$
 
 **c)** $\displaystyle\int_0^2 \left[3f(x) - 2g(x)\right]dx$
 
-**d)** $\displaystyle\int_2^0 f(x)\,dx$
+**d)** $\displaystyle\int_2^0 f(x)\thinspace dx$
 
 ---
 
@@ -269,16 +269,16 @@ Det är känt att $\displaystyle\int_0^2 f(x)\,dx = 5$ och $\displaystyle\int_0^
 
 **c)** Varför dyker det upp en konstant i **b)** som inte fanns i $F(x)$?
 
-**d)** Beräkna $\dfrac{d}{dx}\left[\displaystyle\int 5x^4\,dx\right]$.
+**d)** Beräkna $\dfrac{d}{dx}\left[\displaystyle\int 5x^4\thinspace dx\right]$.
 
 ---
 
 ### 3.17 – Bestäm en okänd gräns eller konstant
-**a)** Bestäm $a$ så att $\displaystyle\int_0^a 2x\,dx = 25$.
+**a)** Bestäm $a > 0$ så att $\displaystyle\int_0^a 2x\thinspace dx = 25$.
 
-**b)** Bestäm $a$ så att $\displaystyle\int_0^a 3\,dx = 12$.
+**b)** Bestäm $a$ så att $\displaystyle\int_0^a 3\thinspace dx = 12$.
 
-**c)** Bestäm $k$ så att $\displaystyle\int_0^2 kx\,dx = 10$.
+**c)** Bestäm $k$ så att $\displaystyle\int_0^2 kx\thinspace dx = 10$.
 
 **d)** En kondensator laddas med den konstanta strömmen $i = 0{,}5\thinspace\text{A}$. Efter hur lång tid har laddningen $2\thinspace\text{C}$ passerat?
 
@@ -287,16 +287,16 @@ Det är känt att $\displaystyle\int_0^2 f(x)\,dx = 5$ och $\displaystyle\int_0^
 ### 3.18 – Hitta felet
 Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta svaret.
 
-**a)** $\displaystyle\int x^2\,dx = 2x + C$
+**a)** $\displaystyle\int x^2\thinspace dx = 2x + C$
 
-**b)** $\displaystyle\int e^{2x}\,dx = 2e^{2x} + C$
+**b)** $\displaystyle\int e^{2x}\thinspace dx = 2e^{2x} + C$
 
-**c)** $\displaystyle\int \sin(x)\,dx = \cos(x) + C$
+**c)** $\displaystyle\int \sin(x)\thinspace dx = \cos(x) + C$
 
-**d)** $\displaystyle\int_1^2 3x^2\,dx = \left[x^3\right]_1^2 = 8$
+**d)** $\displaystyle\int_1^2 3x^2\thinspace dx = \left[x^3\right]_1^2 = 8$
 
 **e)** En bestämd integral behöver en integrationskonstant.
 
-**f)** $\displaystyle\int \frac{1}{x}\,dx = \ln x + C$ gäller för alla $x \neq 0$.
+**f)** $\displaystyle\int \frac{1}{x}\thinspace dx = \ln x + C$ gäller för alla $x \neq 0$.
 
 ---

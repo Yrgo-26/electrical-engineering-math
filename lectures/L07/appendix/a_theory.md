@@ -1,7 +1,5 @@
 # Bilaga A – Vektorer
 
-![](./images/vectors.png)
-
 ## 1. Koordinatsystem och sträckor
 Ett **koordinatsystem** (xy-plan) har en horisontell x-axel och en vertikal y-axel som möts i origo $(0, 0)$.
 
@@ -17,7 +15,7 @@ Vinkeln som sträckan bildar med positiv x-axel:
 \theta = \arctan\!\left(\frac{y_2 - y_1}{x_2 - x_1}\right)
 ```
 
-**OBS!** Kontrollera alltid vilket kvadrant punkten befinner sig i och korrigera vinkeln vid behov (+180° för kvadrant II och III).
+**OBS!** Kontrollera alltid vilken kvadrant punkten befinner sig i och korrigera vinkeln vid behov (+180° för kvadrant II och III).
 
 ---
 
@@ -76,7 +74,7 @@ där **skalärprodukten** är:
 \mathbf{u} \pm \mathbf{v} = (u_x \pm v_x;\; u_y \pm v_y)
 ```
 
-### Skalärplikation
+### Skalärmultiplikation
 ```math
 k\mathbf{u} = (k u_x;\; k u_y)
 ```
@@ -169,6 +167,6 @@ Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\thinspace
 | Skalärprodukt | $\mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y$ |
 | Vinkel mellan vektorer | $\cos\alpha = \frac{\mathbf{u}\cdot\mathbf{v}}{\|\mathbf{u}\|\|\mathbf{v}\|}$ |
 | Addition | $(u_x + v_x;\medspace u_y + v_y)$ |
-| Skalärplikation | $(ku_x;\medspace ku_y)$ |
+| Skalärmultiplikation | $(ku_x;\medspace ku_y)$ |
 
 ---

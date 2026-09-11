@@ -1,7 +1,5 @@
 # Bilaga A – Komplexa tal (del III)
 
-![](./images/complex3.png)
-
 ## 1. Sinussignaler och fasorer
 En sinusformad signal och dess fasor hänger samman via:
 
@@ -126,7 +124,7 @@ En växelspänning $u(t) = 6\sin(80\pi t + \delta)$ V. Vid $t = 15\thinspace\tex
 \delta_2 = \pi - \arcsin(0{,}5) - 1{,}2\pi \approx -1{,}15\,\text{rad}
 ```
 
-Kontrollräkna båda rötterna ger $u(0{,}015) = 3\thinspace\text{V}$ ✓
+Kontrollräkning av båda rötterna ger $u(0{,}015) = 3\thinspace\text{V}$ ✓
 
 ---
 

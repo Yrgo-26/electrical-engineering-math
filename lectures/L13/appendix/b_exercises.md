@@ -10,10 +10,14 @@ Betrakta följande funktion:
 f(x) = -0,5x^3 + 1,5x^2 + 4,5x - 3
 ```
 
-**a)** Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.  
-**b)** Bestäm var funktionen är stationär, dvs. lös ekvationen $f'(x) = 0$.  
-**c)** Avgör med hjälp av den andra derivatan om respektive stationär punkt är ett maximum eller minimum.  
-**d)** Beräkna funktionens största och minsta värde.  
+**a)** Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.
+
+**b)** Bestäm var funktionen är stationär, dvs. lös ekvationen $f'(x) = 0$.
+
+**c)** Avgör med hjälp av den andra derivatan om respektive stationär punkt är ett maximum eller minimum.
+
+**d)** Beräkna funktionens maximi- och minimivärde, dvs. funktionsvärdet i de stationära punkterna.
+
 **e)** Rita upp grafen för $f(x)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att
 dina svar stämmer.
 
@@ -37,7 +41,7 @@ där
 
 **c)** Avgör med hjälp av den andra derivatan om punkterna är maximi- eller minimipunkter.
 
-**d)** Beräkna spänningens största och minsta värde.
+**d)** Beräkna spänningens maximi- och minimivärde, dvs. spänningen i de stationära punkterna.
 
 **e)** Rita upp grafen för $u(t)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att
 dina svar stämmer.

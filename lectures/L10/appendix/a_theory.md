@@ -1,7 +1,5 @@
 # Bilaga A – Exponentialfunktioner, logaritmer samt decibel
 
-![](./images/expontential_logarithms_db.png)
-
 ## 1. Exponentialfunktioner och ekvationer
 En **exponentialfunktion** $f(x) = a^x$ ($a > 0$, $a \neq 1$) kan lösas för $x$ med hjälp av logaritmer.
 
@@ -115,8 +113,10 @@ a^{30} = 0{,}5 \quad \Rightarrow \quad a = 0{,}5^{1/30} \approx 0{,}977
 **När återstår $20\thinspace\char37$?**
 
 ```math
-0{,}977^t = 0{,}2 \quad \Rightarrow \quad t = \frac{\log 0{,}2}{\log 0{,}977} \approx 69{,}7\,\text{h}
+a^t = 0{,}2 \quad \Rightarrow \quad t = \frac{\log 0{,}2}{\log a} = \frac{\log 0{,}2}{\log 0{,}5^{1/30}} \approx 69{,}7\,\text{h}
 ```
+
+Räkna med det oavrundade värdet på $a$; med $0{,}977$ blir svaret $69{,}2\thinspace\text{h}$.
 
 ---
 
@@ -134,7 +134,7 @@ G_{\text{lin}} = 10^{26/20} = 10^{1{,}3} \approx 20
 ---
 
 ### Typexempel 4 – dBV till volt
-En sinusspänning har amplituden $31{,}0\thinspace\text{dBV}$.
+En sinusspänning har nivån $31{,}0\thinspace\text{dBV}$.
 
 ```math
 U_{\text{RMS}} = 10^{31{,}0/20} \approx 35{,}5\,\text{V}

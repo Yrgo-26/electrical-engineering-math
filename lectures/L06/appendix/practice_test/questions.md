@@ -1,4 +1,4 @@
-# Övningsdugga 1 – Aritmetik, algebra, ekvationer samt trigonometri
+# Övningsdugga 1 – Aritmetik, algebra, potenser och ekvationer
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
@@ -55,11 +55,13 @@ Ekvationerna i Uppgift 3 är exempel på räta linjens ekvation. Ange den först
 ---
 
 ### Uppgift 5 (0,5 poäng)
-Nedanstående ekvation har en lösning i intervallet mellan 90° och 180°. Hitta denna lösning och ange den i grader:
+Ett motstånd med resistansen $R = 4{,}7\thinspace\text{k}\Omega$ genomflyts av strömmen $I = 2{,}5\thinspace\text{mA}$. Beräkna effekten $P$ med hjälp av tiopotenser:
 
 ```math
-\sin(v) = \frac{\sqrt{3}}{2}
+P = RI^2
 ```
+
+Ange svaret i watt på standardform med två värdesiffror.
 
 ---
 
