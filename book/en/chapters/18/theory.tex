@@ -1,0 +1,528 @@
+% Sections 18.1 to 18.12, translated from sv/chapters/18/theory.tex.
+
+\section{The standard library \code{math.h}}
+\label{c18:sec:mathh}
+\file{math.h} is the part of C's standard library that contains mathematical functions. The
+functions work with floating-point numbers of type \code{double}.
+
+\begin{ccode}
+#include <math.h>
+#include <stdio.h>
+\end{ccode}
+
+\subsection{Development environment}
+\label{c18:sec:miljo}
+During the lesson you use OnlineGDB, a \code{gcc} compiler that runs directly in the web browser:
+\url{https://www.onlinegdb.com/online_c_compiler}. No installation is needed, and no account.
+\begin{enumerate}
+  \item Check that the language is set to \textbf{C} in the list at the top right.
+  \item Write the code in the editor.
+  \item Press \textbf{Run}. The program's output appears in the box below the editor.
+\end{enumerate}
+
+\begin{aside}
+\note[Note] The code is not saved automatically. Copy it to a file of your own before you close
+the tab.
+\end{aside}
+
+Programs that print sample values as CSV (\secref{c18:sec:csv}) are run in the usual way. Select
+the output in the output box, copy it and paste it into a spreadsheet program to plot the signal.
+
+\subsection{Compiling on your own computer (optional)}
+\label{c18:sec:egendator}
+If you would rather run the code locally, you can set up \textbf{WSL} (Windows Subsystem for
+Linux) with \code{gcc}. Nothing in the chapter requires it -- OnlineGDB is enough all the way --
+but the environment is used in later courses, so you can set it up now if you like. WSL runs a
+Linux distribution, here Ubuntu, in a terminal directly in Windows, without a virtual machine.
+The installation requires administrator rights and a restart.
+
+Open \textbf{Windows PowerShell} as administrator and run:
+\begin{shell}
+wsl --install
+wsl --set-default-version 2
+\end{shell}
+Restart the computer if the system asks you to. The command \code{wsl --status} should then show
+\code{Default Version: 2}. If Ubuntu was not installed, the latest LTS version is in the Microsoft
+Store. WSL requires Windows~11, or Windows~10 version 2004 (build 19041) or later, and
+virtualisation enabled in the computer's UEFI/BIOS. Without administrator rights, WSL cannot be
+installed; use OnlineGDB instead.
+
+Then start \textbf{Ubuntu} from the Windows search box. On the first start you choose a user name
+and a password; the password is not shown while you type it, which is normal. Update the system
+and install the development tools, including \code{gcc} and \code{make}:
+\begin{shell}
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install build-essential
+gcc --version
+\end{shell}
+The Windows files are reached from Ubuntu under \file{/mnt/c/}, but work is faster if the files
+are in the Linux home directory, \code{~}. \textbf{VS Code} with the \textbf{WSL} extension opens
+the files directly in the Ubuntu environment; \code{code .} in the terminal opens the current
+directory.
+
+\subsection{Linking with the maths library}
+\label{c18:sec:lankning}
+The functions in \file{math.h} and \file{complex.h} are in a separate maths library, \code{libm}.
+On your own computer the program must therefore be linked with the flag \code{-lm}, which is
+placed \textbf{last} on the command line, after the source files:
+\begin{shell}
+gcc main.c -o main -lm
+./main
+\end{shell}
+Without \code{-lm} the program compiles, but linking fails with error messages such as
+\code{undefined reference to 'sqrt'}. If you get that error in OnlineGDB, add \code{-lm} under
+\textbf{Extra Compiler Flags} in the settings (the gear icon).
+
+\subsection{Constants}
+\label{c18:sec:konstanter}
+\code{M_PI} ($\pi$) and \code{M_E} ($e$) are in \file{math.h} on most systems, but they are not
+part of the C standard and are therefore missing in strict standard mode (\code{-std=c11}).
+OnlineGDB uses \code{gcc}'s default mode, so \code{M_PI} works there, as it does with
+\code{-std=gnu11}. For the code to work everywhere, the constant can be defined directly in the
+program:
+\begin{ccode}
+#define PI 3.14159265358979323846
+\end{ccode}
+
+\section{Floating-point numbers in C: \code{float} and \code{double}}
+\label{c18:sec:flyttal}
+The integer types you have already used, such as \code{int}, \code{uint8_t} and \code{uint16_t},
+can only store whole numbers: \code{7 / 2} becomes \code{3}, not $3.5$. The mathematics in this
+course requires decimal numbers, and for those \textbf{floating-point numbers} are used.
+
+\textbf{Why are floating-point numbers avoided in microcontroller code?} An AVR microcontroller has
+no floating-point unit (FPU). Floating-point calculations must therefore be done in software,
+which is slow and takes a lot of memory. On AVR, \code{double} is moreover often only 32~bits,
+the same precision as \code{float}. An ordinary computer has an FPU and calculates with
+floating-point numbers at no extra cost -- which is why they are used freely in this chapter.
+
+\subsection{Types}
+\label{c18:sec:typer}
+\begin{booktable}{@{}p{4.5em}p{5em}p{12.5em}L@{}}
+  \thead{Type} & \thead{Size} & \thead{Approximate precision} & \thead{Use} \\
+  \midrule
+  \code{float} & 32 bits & about 7 significant figures & When memory is limited \\
+  \code{double} & 64 bits & about 15 significant figures & \textbf{The default in this course} \\
+\end{booktable}
+
+Every function in \file{math.h} takes and returns \code{double}. So use \code{double} throughout.
+
+\subsection{Literals}
+\label{c18:sec:litteraler}
+How a number is written decides which type it gets:
+\begin{ccode}
+int    a = 2;      // Integer.
+double b = 2.0;    // Floating point (double).
+float  c = 2.0f;   // Floating point (float).
+\end{ccode}
+
+\begin{aside}
+\note[Note] If two integers are divided, integer division is performed, whatever type the result
+is stored in:
+\begin{ccode}
+double x = 1 / 2;      // 0.0 - integer division!
+double y = 1.0 / 2.0;  // 0.5
+\end{ccode}
+\end{aside}
+
+\subsection{Printing}
+\label{c18:sec:utskrift}
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Type} & \thead{Format specifier} \\
+  \midrule
+  \code{int}, \code{uint8_t}, \code{uint16_t} & \code{\%d} \\
+  \code{float}, \code{double} & \code{\%f}, for example \code{\%.3f} for three decimals \\
+\end{narrowtable}
+
+\code{printf()} automatically converts \code{float} to \code{double}, so \code{\%f} works for
+both. Never use \code{\%d} for a floating-point number -- the output is then meaningless.
+
+\subsection{Converting between integers and floating-point numbers}
+\label{c18:sec:omvandling}
+Integers are converted to floating-point numbers automatically. In the other direction the number
+is \textbf{truncated}, not rounded:
+\begin{ccode}
+const double d = 7;           // 7.0
+const int    n = 3.9;         // 3, not 4!
+const int    m = round(3.9);  // 4
+\end{ccode}
+
+\subsection{Precision}
+\label{c18:sec:precision}
+Floating-point numbers are stored in binary and cannot represent every decimal number exactly.
+The expression \code{0.1 + 0.2} gives \code{0.30000000000000004}, not exactly \code{0.3}.
+
+Never compare floating-point numbers with \code{==}, therefore. Check instead that the difference
+is small enough:
+\begin{ccode}
+if (fabs(a - b) < 1e-9) { /* The numbers are considered equal. */ }
+\end{ccode}
+
+\section{Basic functions}
+\label{c18:sec:funktioner}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{8.5em}p{7.5em}L@{}}
+  \thead{Mathematics} & \thead{C function} & \thead{Comment} \\
+  \midrule
+  $\sqrt{x}$ & \code{sqrt(x)} & Square root, $x \geq 0$ \\
+  $x^y$ & \code{pow(x, y)} & Power \\
+  $e^x$ & \code{exp(x)} & Exponential function \\
+  $\ln x$ & \code{log(x)} & Natural logarithm, $x > 0$ \\
+  $\lg x$ & \code{log10(x)} & Base-10 logarithm, $x > 0$ \\
+  $\abs{x}$ & \code{fabs(x)} & Absolute value of a floating-point number \\
+  $\sqrt{x^2 + y^2}$ & \code{hypot(x, y)} & Magnitude of a vector \\
+  Remainder of a division & \code{fmod(x, y)} & Like \code{\%}, but for floating-point numbers \\
+  Rounding & \code{round(x)} & \code{floor(x)} down, \code{ceil(x)} up \\
+\end{booktable}
+
+\begin{aside}
+\note[Note] \code{\%} works only for integers. For floating-point numbers, \code{fmod()} is used.
+\end{aside}
+
+\begin{ccode}
+const double r = sqrt(pow(3.0, 2.0) + pow(4.0, 2.0)); // r = 5.0
+printf("r = %.2f\n", r);
+\end{ccode}
+
+\section{Trigonometric functions}
+\label{c18:sec:trig}
+\begin{narrowtable}{@{}lll@{}}
+  \thead{Mathematics} & \thead{C function} & \thead{Return value} \\
+  \midrule
+  $\sin(x)$ & \code{sin(x)} & -- \\
+  $\cos(x)$ & \code{cos(x)} & -- \\
+  $\tan(x)$ & \code{tan(x)} & -- \\
+  $\arcsin(x)$ & \code{asin(x)} & $[-\pi/2,\ \pi/2]$ \\
+  $\arccos(x)$ & \code{acos(x)} & $[0,\ \pi]$ \\
+  $\arctan(x)$ & \code{atan(x)} & $(-\pi/2,\ \pi/2)$ \\
+  $\arctan(y/x)$ & \code{atan2(y, x)} & $(-\pi,\ \pi]$ \\
+\end{narrowtable}
+
+\textbf{All the functions work in radians, never in degrees.} \code{sin(30)} is read as
+$\sin(30\,\text{rad})$ and gives $-0.988$, not $0.5$.
+
+\subsection{Converting between degrees and radians}
+\label{c18:sec:radianer}
+\[
+  \text{rad} = \text{degrees} \cdot \frac{\pi}{180}, \qquad
+  \text{degrees} = \text{rad} \cdot \frac{180}{\pi}
+\]
+\begin{ccode}
+const double deg = 30.0;
+const double rad = deg * PI / 180.0;
+printf("sin(30 degrees) = %.3f\n", sin(rad)); // 0.500
+\end{ccode}
+
+\subsection{\code{atan2} instead of \code{atan}}
+\label{c18:sec:atan2}
+\code{atan(y / x)} cannot tell quadrant 1 from quadrant 3, or quadrant 2 from quadrant 4, because
+the signs disappear in the division. \code{atan2(y, x)} takes $y$ and $x$ separately and therefore
+gives the right angle in all four quadrants. Always use \code{atan2()} when converting from
+rectangular to polar form (\kapref{15}).
+
+\section{Powers, logarithms and decibels}
+\label{c18:sec:decibel}
+From \kapref{10}, for voltage and power respectively:
+\[
+  A_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{out}}}{U_{\text{in}}}\right), \qquad
+  A_{\text{dB}} = 10\log_{10}\!\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right)
+\]
+\begin{ccode}
+const double gain_db = 20.0 * log10(u_out / u_in);
+\end{ccode}
+The way back from decibels to a ratio:
+\[
+  \frac{U_{\text{out}}}{U_{\text{in}}} = 10^{A_{\text{dB}}/20}
+\]
+\begin{ccode}
+const double ratio = pow(10.0, gain_db / 20.0);
+\end{ccode}
+Logarithms to other bases are calculated with the change-of-base rule
+$\log_b x = \frac{\ln x}{\ln b}$:
+\begin{ccode}
+const double log2_x = log(x) / log(2.0);
+\end{ccode}
+
+\section{Numerical differentiation}
+\label{c18:sec:derivering}
+The derivative is defined as the limit
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
+\]
+A computer cannot let $h \to 0$, but a small $h$ gives an approximate value. The \textbf{central
+difference} gives better accuracy than the formula above, because the errors on either side of
+$x$ cancel each other out:
+\[
+  f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+\]
+\begin{ccode}
+double derivative(double (*f)(double), const double x, const double h)
+{
+    return (f(x + h) - f(x - h)) / (2.0 * h);
+}
+\end{ccode}
+The call is made with a function pointer, that is, the name of the function to be
+differentiated:
+\begin{ccode}
+const double slope = derivative(square, 3.0, 1e-6);
+\end{ccode}
+
+\subsection{Choosing \texorpdfstring{$h$}{h}}
+\label{c18:sec:valh}
+\begin{itemize}
+  \item An $h$ that is too \textbf{large} gives a truncation error -- the approximation lies too
+    far from the limit.
+  \item An $h$ that is too \textbf{small} gives a rounding error -- $f(x + h)$ and $f(x - h)$
+    become so alike that the significant figures vanish in the subtraction.
+\end{itemize}
+For \code{double}, $h \approx 10^{-6}$ is a good compromise.
+
+\section{Numerical integration}
+\label{c18:sec:integrering}
+The definite integral corresponds to the area under the curve (\kapref{14}). If the interval
+$[a, b]$ is divided into $n$ equal parts of width $h = \frac{b - a}{n}$, the area can be
+approximated with the \textbf{trapezoidal rule}:
+\[
+  \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right]
+\]
+Each subinterval is thus approximated by a trapezium instead of a rectangle, which follows the
+curve considerably better. The accuracy increases with the number of subintervals $n$.
+\begin{ccode}
+double integral(double (*f)(double), const double a, const double b, const int n)
+{
+    const double h = (b - a) / n;
+    double sum     = (f(a) + f(b)) / 2.0;
+
+    for (int k = 1; k < n; ++k)
+    {
+        sum += f(a + k * h);
+    }
+    return sum * h;
+}
+\end{ccode}
+For a first-degree polynomial the trapezoidal rule gives an \textbf{exact} result, since the curve
+is then a straight line. For other functions there is an error, which decreases as $n$ increases.
+
+\section{Complex numbers with \code{complex.h}}
+\label{c18:sec:complex}
+Complex numbers (Chapters~\ref{c15:ch}--\ref{c17:ch}) are handled by \file{complex.h}, which is
+used together with \file{math.h}:
+\begin{ccode}
+#include <complex.h>
+#include <math.h>
+\end{ccode}
+The type is called \code{double complex} and the imaginary unit is called \code{I}:
+\begin{ccode}
+const double complex z = 3.0 + 4.0 * I;
+\end{ccode}
+
+\begin{aside}
+\note[Note] In electrical engineering the imaginary unit is written $j$, so that it is not
+confused with the current $i$. In C it is always called \code{I}.
+\end{aside}
+
+\subsection{Functions}
+\label{c18:sec:cfunktioner}
+\begin{booktable}{@{}p{7em}p{7.5em}L@{}}
+  \thead{Mathematics} & \thead{C function} & \thead{Description} \\
+  \midrule
+  $\text{Re}(z)$ & \code{creal(z)} & The real part \\
+  $\text{Im}(z)$ & \code{cimag(z)} & The imaginary part \\
+  $\abs{z}$ & \code{cabs(z)} & The magnitude \\
+  $\arg(z)$ & \code{carg(z)} & The argument in radians, $(-\pi,\ \pi]$ \\
+  $\bar{z}$ & \code{conj(z)} & The conjugate \\
+  $e^z$ & \code{cexp(z)} & The exponential function \\
+  $\sqrt{z}$ & \code{csqrt(z)} & The square root \\
+\end{booktable}
+
+The four arithmetic operations are written as usual, with \code{+}, \code{-}, \code{*} and
+\code{/}.
+
+\subsection{Rectangular and polar form}
+\label{c18:sec:polar}
+From rectangular to polar form:
+\begin{ccode}
+const double magnitude = cabs(z);        // |z|
+const double angle     = carg(z);        // arg(z) in radians
+\end{ccode}
+From polar to rectangular form, Euler's formula $z = r e^{j\theta}$ is used:
+\begin{ccode}
+const double complex z = r * cexp(I * theta);
+\end{ccode}
+
+\begin{aside}
+\note[Note] \code{printf()} cannot print a complex number directly. The real and imaginary parts
+are printed separately:
+\begin{ccode}
+printf("z = %.2f + %.2fj\n", creal(z), cimag(z));
+\end{ccode}
+\end{aside}
+
+\section{Impedance and phasors}
+\label{c18:sec:impedans}
+With complex numbers, impedances are calculated directly in code
+(Chapters~\ref{c16:ch}--\ref{c17:ch}). With the angular frequency $\omega = 2\pi f$:
+\[
+  Z_R = R, \qquad Z_L = j\omega L, \qquad Z_C = \frac{1}{j\omega C} = -\frac{j}{\omega C}
+\]
+\needspace{7\baselineskip}
+\begin{ccode}
+const double omega          = 2.0 * PI * f;
+const double complex z_r    = r;
+const double complex z_l    = I * omega * l;
+const double complex z_c    = -I / (omega * c);
+const double complex z_tot  = z_r + z_l; // Series connection.
+\end{ccode}
+A phasor $U = \abs{U} \angle \delta$ is written as a complex number in polar form. Phasors are
+then added with ordinary addition:
+\begin{ccode}
+const double complex u1 = a1 * cexp(I * d1);
+const double complex u2 = a2 * cexp(I * d2);
+const double complex u  = u1 + u2;
+\end{ccode}
+The amplitude and phase angle of the result are then given by \code{cabs()} and \code{carg()}
+respectively.
+
+\section{Sampling a sinusoidal signal}
+\label{c18:sec:sampling}
+A sinusoidal voltage is described by
+\[
+  u(t) = \abs{U} \sin(2\pi f t + \delta),
+\]
+where $\abs{U}$ is the amplitude in V, $f$ the frequency in Hz, $t$ the time in s and $\delta$ the
+phase angle in rad.
+
+In \textbf{sampling}, the signal's value is calculated at evenly spaced times. With the sampling
+frequency $f_s$, the number of samples per period is
+\[
+  N = \frac{f_s}{f},
+\]
+and the $k$th sample value ($k = 0, 1, \ldots, N-1$) is given by
+\[
+  u_k = \abs{U} \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+\]
+For the signal to be recoverable from its samples, the \textbf{sampling theorem} must be
+satisfied:
+\[
+  f_s > 2f
+\]
+\begin{ccode}
+for (int k = 0; k < n; ++k)
+{
+    const double u_k = amplitude * sin(2.0 * PI * k / n + delta);
+    printf("%d,%.6f\n", k, u_k);
+}
+\end{ccode}
+
+\subsection{Printing for further analysis}
+\label{c18:sec:csv}
+If the sample values are printed as \textbf{CSV} (comma-separated values), one line per sample,
+they can be read into another program to be plotted:
+\begin{console}
+k,u
+0,0.000000
+1,3.535534
+2,5.000000
+\end{console}
+In OnlineGDB, select the output in the output box and copy it into a spreadsheet program, where
+the signal can be plotted as a chart.
+
+If the program is run on your own computer, the output can instead be saved directly to a file
+by redirection in the terminal:
+\begin{shell}
+./samples > samples.csv
+\end{shell}
+The file can then be opened in a spreadsheet program, or fed into a simulator that plots the
+signal.
+
+\section{Common pitfalls}
+\label{c18:sec:fallgropar}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{10.5em}
+    >{\raggedright\arraybackslash}p{10em}L@{}}
+  \thead{Pitfall} & \thead{Consequence} & \thead{Remedy} \\
+  \midrule
+  Forgotten \code{-lm} & \code{undefined reference to 'sqrt'} & Put the flag last when compiling,
+    or under \emph{Extra Compiler Flags} in OnlineGDB \\
+  Degrees instead of radians & Completely wrong value from \code{sin()}, \code{cos()},
+    \code{tan()} & Multiply by $\pi/180$ \\
+  Integer division, e.g.\ \mbox{\code{1 / 2}} & Gives \code{0}, not \code{0.5} &
+    Write \mbox{\code{1.0 / 2.0}} \\
+  \code{atan(y / x)} for polar form & Wrong quadrant & Use \code{atan2(y, x)} \\
+  Comparing floating-point numbers with \code{==} & Rarely true & Compare with
+    \code{fabs(a - b) < 1e-9} \\
+  \code{sqrt()} or \code{log()} with an invalid argument & Gives \code{nan} and \code{-inf}
+    respectively & Check the argument first \\
+  \code{\%d} for a \code{double} & Undefined behaviour & Use \code{\%f}, for example
+    \code{\%.3f} \\
+\end{booktable}
+
+\section{Worked examples}
+\label{c18:sec:typexempel}
+
+\begin{exempel}[Gain and decibels]
+An amplifier has the input voltage $U_{\text{in}} = 0.5\,\text{V}$ and the output voltage
+$U_{\text{out}} = 8.0\,\text{V}$. Calculate the gain in dB.
+\[
+  A_{\text{dB}} = 20\log_{10}\!\left(\frac{8.0}{0.5}\right) = 20\log_{10}(16) \approx
+  24.1\,\text{dB}
+\]
+In code:
+
+\begin{ccode}
+const double gain_db = 20.0 * log10(8.0 / 0.5); // 24.082 dB.
+\end{ccode}
+\end{exempel}
+
+\begin{exempel}[Numerical differentiation]
+Differentiate $f(x) = x^2$ at the point $x = 3$ and compare with the analytical derivative.
+
+Analytically, $f'(x) = 2x$, so $f'(3) = 6$. Numerically, with $h = 10^{-6}$:
+\[
+  f'(3) \approx \frac{(3.000001)^2 - (2.999999)^2}{2 \cdot 10^{-6}} = 6.000000
+\]
+The deviation is of the order of $10^{-9}$ and is due to the finite precision of floating-point
+numbers.
+\end{exempel}
+
+\begin{exempel}[Numerical integration]
+The current $i(t) = 2t + 4\,\text{A}$ flows for $0 \leq t \leq 2\,\text{s}$. Calculate the charge
+$q$.
+
+Analytically (\kapref{14}):
+\[
+  q = \int_0^2 (2t + 4)\,dt = \Bigl[t^2 + 4t\Bigr]_0^2 = 4 + 8 = 12\,\text{C}
+\]
+The trapezoidal rule with $n = 4$ and $h = 0.5$:
+\[
+  q \approx 0.5\left[\frac{4 + 8}{2} + (5 + 6 + 7)\right] = 0.5 \cdot 24 = 12\,\text{C}
+\]
+The result is exact, because $i(t)$ is a straight line.
+\end{exempel}
+
+\begin{exempel}[Impedance of an RL circuit]
+A resistor $R = 100\,\Omega$ is connected in series with an inductor $L = 50\,\text{mH}$.
+Calculate the circuit's impedance at $f = 50\,\text{Hz}$.
+\begin{gather*}
+  \omega = 2\pi \cdot 50 \approx 314.16\,\text{rad/s} \\
+  Z = R + j\omega L = 100 + j15.71\,\Omega \\
+  \abs{Z} = \sqrt{100^2 + 15.71^2} \approx 101.23\,\Omega, \qquad
+  \arg(Z) = \arctan\!\left(\frac{15.71}{100}\right) \approx 0.156\,\text{rad} \approx
+  8.93^{\circ}
+\end{gather*}
+In code, the magnitude and the argument are calculated with \code{cabs(z)} and \code{carg(z)}
+respectively.
+\end{exempel}
+
+\begin{exempel}[Sample values]
+A signal $u(t) = 5\sin(2\pi \cdot 50t)\,\text{V}$ is sampled at $f_s = 400\,\text{Hz}$. Calculate
+the first three sample values.
+\begin{gather*}
+  N = \frac{400}{50} = 8 \text{ samples per period} \\
+  u_0 = 5\sin(0) = 0\,\text{V} \\
+  u_1 = 5\sin\!\left(\frac{2\pi}{8}\right) = 5\sin\!\left(\frac{\pi}{4}\right) \approx
+  3.54\,\text{V} \\
+  u_2 = 5\sin\!\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\!\left(\frac{\pi}{2}\right) =
+  5.00\,\text{V}
+\end{gather*}
+The sampling theorem is satisfied, since $400 > 2 \cdot 50$.
+\end{exempel}

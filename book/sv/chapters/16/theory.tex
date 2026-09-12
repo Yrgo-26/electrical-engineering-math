@@ -1,0 +1,91 @@
+% Sections 16.1 to 16.5, from lectures/L16/appendix/a_theory.md.
+
+\section{Eulers formel}
+\label{c16:sec:euler}
+\textbf{Eulers formel} kopplar samman komplexa exponenter och trigonometri:
+\[
+  e^{j\delta} = \cos\delta + j\sin\delta
+\]
+Det innebär att varje komplext tal kan skrivas på \textbf{Eulerform}:
+\[
+  z = \abs{z} \cdot e^{j\delta}
+\]
+Några viktiga specialfall är
+\begin{gather*}
+  e^{j\pi} = -1 \quad \text{(Eulers identitet)}, \\
+  e^{j\pi/2} = j, \qquad e^{j0} = 1, \qquad e^{-j\delta} = \cos\delta - j\sin\delta.
+\end{gather*}
+
+\section{Tre former av komplexa tal}
+\label{c16:sec:former}
+Ett komplext tal kan skrivas på tre sätt, och varje form har sina styrkor.
+
+\begin{booktable}{@{}p{7em}p{6em}L@{}}
+  \thead{Form} & \thead{Notation} & \thead{Kommentar} \\
+  \midrule
+  Rektangulär & $x + jy$ & Bäst för addition och subtraktion \\
+  Polär & $\abs{z}\,\angle\,\delta$ & Tydlig geometrisk tolkning \\
+  Eulerform & $\abs{z}e^{j\delta}$ & Bäst för multiplikation och division \\
+\end{booktable}
+
+\noindent\textbf{Multiplikation} i polär form:
+\[
+  z_1 \cdot z_2 = \abs{z_1}\abs{z_2}\,\angle\,(\delta_1 + \delta_2)
+\]
+\textbf{Division} i polär form:
+\[
+  \frac{z_1}{z_2} = \frac{\abs{z_1}}{\abs{z_2}}\,\angle\,(\delta_1 - \delta_2)
+\]
+
+\section{Fasor}
+\label{c16:sec:fasor}
+En \textbf{fasor} är ett komplext tal som representerar en sinusformad signal. En spänning
+$u(t) = \abs{U}\sin(\omega t + \delta)$ representeras av fasorn
+\[
+  U = \abs{U}\,\angle\,\delta = \abs{U}e^{j\delta}.
+\]
+Fasorer förenklar beräkningar med sinusvågor i elektriska kretsar: addition av sinusvågor
+reduceras till addition av komplexa tal.
+
+\section{Omskrivning mellan Eulerform och tidsdomän}
+\label{c16:sec:omskrivning}
+Från fasor till tidsdomän:
+\[
+  U = \abs{U}e^{j\delta} \quad \Rightarrow \quad u(t) = \abs{U}\sin(\omega t + \delta)
+\]
+Från tidsdomän till fasor:
+\[
+  u(t) = \abs{U}\sin(\omega t + \delta) \quad \Rightarrow \quad U = \abs{U}\,\angle\,\delta
+\]
+
+\needspace{12\baselineskip}
+\section{Typexempel}
+\label{c16:sec:typexempel}
+
+\begin{exempel}[Vektorer som komplexa tal]
+Vektorerna $\mathbf{a} = (3, 4)$ och $\mathbf{b} = (-2, 4)$ skrivs som komplexa tal och adderas:
+\begin{gather*}
+  a = 3 + j4, \qquad b = -2 + j4, \\
+  a + b = (3 - 2) + j(4 + 4) = 1 + j8, \\
+  \abs{a + b} = \sqrt{1 + 64} = \sqrt{65} \approx 8{,}06.
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Eulerform till rektangulär form]
+Skriv $u(t) = 3e^{j(100\pi t - \pi/4)}\,\text{V}$ på rektangulär form vid $t = 0$.
+\begin{align*}
+  u(0) &= 3e^{-j\pi/4}
+        = 3\left(\cos\left(-\frac{\pi}{4}\right) + j\sin\left(-\frac{\pi}{4}\right)\right) \\
+       &= 3\left(\frac{\sqrt{2}}{2} - j\frac{\sqrt{2}}{2}\right) \approx 2{,}12 - j2{,}12\,\text{V}
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[Fasor till tidsdomän]
+Fasorn $I = 5 - j4\,\text{mA}$ hör till vinkelhastigheten $\omega = 100\pi\,\text{rad/s}$.
+Skriv $i(t)$ på Eulers form.
+\begin{gather*}
+  \abs{I} = \sqrt{25 + 16} = \sqrt{41} \approx 6{,}40\,\text{mA}, \\
+  \delta = \arctan\left(\frac{-4}{5}\right) \approx -38{,}7^{\circ} \approx -0{,}675\,\text{rad}, \\
+  i(t) = 6{,}40 \cdot e^{j(100\pi t - 0{,}675)}\,\text{mA}.
+\end{gather*}
+\end{exempel}

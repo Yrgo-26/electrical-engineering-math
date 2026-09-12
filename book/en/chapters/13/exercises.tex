@@ -1,0 +1,250 @@
+% Section 13.8, translated from sv/chapters/13/exercises.tex.
+
+\section{Exercises}
+\label{c13:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson; most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L13}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Analysing a cubic function}
+Consider the function
+\[
+  f(x) = -0.5x^3 + 1.5x^2 + 4.5x - 3.
+\]
+\begin{parts}
+  \item Differentiate the function $f(x)$ and find the expression for $f'(x)$.
+  \item Find where the function is stationary, that is, solve the equation $f'(x) = 0$.
+  \item Use the second derivative to decide whether each stationary point is a maximum or a
+    minimum.
+  \item Calculate the maximum and minimum values of the function, that is, the function values at
+    the stationary points.
+  \item Plot the graph of $f(x)$ in GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, and
+    check that your answers are right.
+\end{parts}
+
+\uppgift{1.2}{Analysing the voltage across a capacitor}
+A capacitor in an RC circuit is charged and discharged repeatedly. The voltage across the
+capacitor can be described by the function
+\[
+  u(t) = -0.2t^3 + 1.2t^2 - 1.4625t + 3,
+\]
+where $u(t)$ is the voltage across the capacitor in V and $t$ the time in seconds,
+$0 \leq t \leq 6$.
+\begin{parts}
+  \item Differentiate the function and find the expression for the rate of change of the voltage
+    $u'(t)$.
+  \item Find the time (or times) at which the voltage is stationary, that is, when
+    $u'(t) = 0$.
+  \item Use the second derivative to decide whether the points are maximum or minimum points.
+  \item Calculate the maximum and minimum values of the voltage, that is, the voltage at the
+    stationary points.
+  \item Plot the graph of $u(t)$ in GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, and
+    check that your answers are right.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Current through an inductor}
+The current through an inductor varies over time according to the function
+\[
+  i(t) = 4\sin(50t),
+\]
+where $i(t)$ is the current through the inductor in A and $t$ the time in seconds.
+\begin{parts}
+  \item Differentiate the function and find the expression for $i'(t)$.
+  \item Find the time (or times) at which the current is stationary, that is, when
+    $i'(t) = 0$.
+  \item Use the second derivative to decide whether the points are maximum or minimum points.
+  \item Calculate the greatest and least values of the current. Consider whether this matches
+    what you expected.
+\end{parts}
+
+\uppgift{2.2}{Discharging a capacitor}
+The voltage across a capacitor that is discharging is given by the function
+\[
+  u(t) = 12e^{-0.4t},
+\]
+where $u(t)$ is the voltage across the capacitor in V and $t$ the time in seconds.
+\begin{parts}
+  \item Differentiate the function and find the expression for $u'(t)$.
+  \item Calculate the rate of change of the voltage at $t = 2\,\text{s}$.
+  \item State whether the rate of change of the voltage is increasing or decreasing at this
+    point, that is, find $u''(2)$.
+\end{parts}
+
+\uppgift{2.3}{Gain in dB}
+The logarithmic gain of an amplifier system is described by the function
+\[
+  G(x) = 10\log_{10}(2x + 1),
+\]
+where $G(x)$ is the gain in dB and $x$ the input level (a dimensionless factor).
+\begin{parts}
+  \item Calculate the value of $x$ for which the gain is $G(x) = 2\,\text{dB}$.
+  \item Calculate the rate of change of the gain $G'(x)$ at this point.
+\end{parts}
+
+\begin{aside}
+\note[Note] The rate of change $G'(x)$ states how fast the gain changes when the input $x$
+changes.
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Differentiating trigonometric functions}
+Differentiate.
+\begin{delar}(3)
+  \task $f(x) = \sin(3x)$
+  \task $f(x) = \cos(5x)$
+  \task $f(x) = 4\sin(x)$
+  \task $f(x) = -2\cos(2x)$
+  \task $f(x) = \sin(x) + \cos(x)$
+\end{delar}
+
+\uppgift{3.2}{Differentiating exponential functions}
+Differentiate.
+\begin{delar}(3)
+  \task $f(x) = e^{5x}$
+  \task $f(x) = 3e^{-2x}$
+  \task $f(x) = e^x + x^2$
+  \task $f(x) = 2^x$
+  \task $f(x) = 10e^{-x/4}$
+\end{delar}
+
+\uppgift{3.3}{Differentiating logarithmic functions}
+Differentiate.
+\begin{delar}(3)
+  \task $f(x) = \ln x$
+  \task $f(x) = \ln(7x)$
+  \task $f(x) = 3\ln x$
+  \task $f(x) = \log_{10} x$
+  \task $f(x) = \ln x + e^x$
+\end{delar}
+
+\uppgift{3.4}{Mixed differentiation}
+Differentiate.
+\begin{delar}(2)
+  \task $f(x) = 2e^{3x} - \sin(4x)$
+  \task $f(x) = x^2 + \ln(2x)$
+  \task $f(x) = 5\cos(x) - 3e^{-x}$
+  \task $f(x) = 4\sin(2x) + 4\cos(2x)$
+\end{delar}
+
+\uppgift{3.5}{The derivative at a point}
+Calculate the derivative at the given point.
+\begin{delar}(3)
+  \task $f(x) = e^{2x}$ at $x = 0$
+  \task $f(x) = \sin x$ at $x = \dfrac{\pi}{2}$
+  \task $f(x) = \ln x$ at $x = 2$
+  \task $f(x) = \cos(3x)$ at $x = 0$
+  \task $f(x) = 3e^{-x}$ at $x = 1$
+\end{delar}
+
+\uppgift{3.6}{Current through a capacitor}
+The voltage across a capacitor with $C = 47\,\mu\text{F}$ is given by $u(t) = 10\sin(100\pi t)$
+volts. The current is given by $i_C(t) = C\dfrac{du}{dt}$.
+\begin{parts}
+  \item Find $u'(t)$.
+  \item Find an expression for $i_C(t)$.
+  \item What is the amplitude of the current?
+  \item At what time is the current greatest for the first time?
+\end{parts}
+
+\uppgift{3.7}{Voltage across an inductor}
+The current through an inductor with $L = 25\,\text{mH}$ is given by $i(t) = 2\sin(200t)$
+amperes. The voltage is given by $u_L(t) = L\dfrac{di}{dt}$.
+\begin{parts}
+  \item Find $i'(t)$.
+  \item Find an expression for $u_L(t)$.
+  \item What is the amplitude of the voltage?
+  \item What is the phase difference between the voltage and the current?
+\end{parts}
+
+\uppgift{3.8}{Discharging a capacitor}
+The voltage is given by $u(t) = 20e^{-t/0.5}$ volts.
+\begin{parts}
+  \item Find $u'(t)$.
+  \item Calculate $u'(0)$.
+  \item Calculate $u'(0.5)$.
+  \item What does the sign of the derivative tell you?
+  \item Show that $u'(t) = -\dfrac{u(t)}{\tau}$ with $\tau = 0.5\,\text{s}$.
+\end{parts}
+
+\uppgift{3.9}{Stationary point of an exponential function}
+The function $f(x) = xe^{-2x}$ is given.
+\begin{parts}
+  \item Find $f'(x)$ with the product rule and factor out $e^{-2x}$.
+  \item Solve $f'(x) = 0$.
+  \item Use $f''(x)$ to decide whether the point is a maximum or a minimum.
+  \item Calculate the extreme value of the function.
+\end{parts}
+
+\uppgift{3.10}{Maximum power over time}
+The power in a component is given by $p(t) = 100te^{-t}$ watts for $t \geq 0$.
+\begin{parts}
+  \item Find $p'(t)$.
+  \item At what time is the power stationary?
+  \item Use $p''(t)$ to decide whether it is a maximum or a minimum.
+  \item Calculate the maximum power.
+\end{parts}
+
+\uppgift{3.11}{The derivative of a dB function}
+The gain is given by $G(x) = 20\log_{10}(x)$ dB.
+\begin{delar}(3)
+  \task Find $G'(x)$.
+  \task Calculate $G'(1)$.
+  \task Calculate $G'(10)$.
+  \task* Interpret the difference between the answers to \textbf{b)} and \textbf{c)}.
+\end{delar}
+
+\needspace{10\baselineskip}
+\uppgift{3.12}{Tangent to an exponential curve}
+The function $f(x) = e^{-x}$ is given. Consider the point where $x_0 = 0$.
+\begin{parts}
+  \item Calculate $f(0)$.
+  \item Calculate $f'(0)$.
+  \item Find the equation of the tangent.
+  \item Where does the tangent cross the $x$-axis? Compare with the time constant $\tau$ of a
+    discharge.
+\end{parts}
+
+\uppgift{3.13}{The derivative of an exponential discharge}
+The voltage is given by $u(t) = U_0e^{-t/\tau}$.
+\begin{parts}
+  \item Show that $u'(t) = -\dfrac{u(t)}{\tau}$.
+  \item What does this relationship mean physically?
+  \item Calculate $u'(0)$ and $u'(\tau)$ when $U_0 = 10\,\text{V}$ and $\tau = 2\,\text{s}$.
+  \item What fraction of the initial voltage remains after the time $\tau$?
+\end{parts}
+
+\uppgift{3.14}{True or false}
+Decide whether each statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item The derivative of $\sin x$ is $-\cos x$.
+  \item The derivative of $e^{3x}$ is $e^{3x}$.
+  \item The derivative of $\ln(5x)$ is $\dfrac{1}{5x}$.
+  \item The derivative of $\cos(2x)$ is $-2\sin(2x)$.
+  \item $e^x$ is its own derivative.
+  \item The derivative of a constant times a function is the constant times the derivative of the
+    function.
+\end{parts}
+
+\uppgift{3.15}{Find the error}
+Each line contains a common error. Explain the error and give the correct answer.
+\begin{delar}(2)
+  \task $\dfrac{d}{dx}\sin(3x) = \cos(3x)$
+  \task $\dfrac{d}{dx}e^{-2x} = -2e^{-2x-1}$
+  \task $\dfrac{d}{dx}\ln(3x) = \dfrac{1}{3x}$
+  \task $\dfrac{d}{dx}4\cos(x) = 4\sin(x)$
+  \task $\dfrac{d}{dx}2^x = x \cdot 2^{x-1}$
+\end{delar}

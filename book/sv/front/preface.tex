@@ -1,0 +1,127 @@
+% Preface: the README's Om kursen, the course material and aids from info/README.md, and how the
+% book is organised. No class, year or date: the book is meant to outlast them.
+
+\chapter{Förord}
+\markboth{Förord}{Förord}
+
+Den här boken innehåller den matematik som används inom elektroteknik. Den är satt från en kurs i
+elteknisk matematik, lektion för lektion, och behandlar:
+\begin{itemize}
+  \item Aritmetik, algebra samt linjära ekvationer och ekvationssystem.
+  \item Potenser, rötter, andragradsekvationer samt exponentialfunktioner och logaritmer,
+    inklusive decibel.
+  \item Vektorer, funktioner och trigonometriska funktioner.
+  \item Derivata och integraler, samt tillämpningar inom kretsteori.
+  \item Komplexa tal på rektangulär, polär och eulerform, samt fasorer för
+    växelströmsberäkningar.
+\end{itemize}
+
+\textbf{Matematiken används hela tiden på elektriska problem.} Redan i första kapitlet räknas
+bråk på parallellkopplade motstånd, och boken återkommer ständigt till kretsarna:
+\begin{itemize}
+  \item Parallell- och seriekopplade motstånd, spänningsdelare samt effektberäkningar.
+  \item Upp- och urladdning av kondensatorer i RC-kretsar.
+  \item Växelspänningar: amplitud, frekvens, fas och sinusekvationer.
+  \item Impedansberäkningar med komplexa tal och fasoraddition.
+  \item Sampling av sinussignaler samt beräkning av derivator, integraler och komplexa tal i C,
+    i laborationen i \kapref{18}.
+\end{itemize}
+
+\section*{Det här ska du kunna efter boken}
+När du har arbetat dig igenom boken ska du kunna:
+\begin{itemize}
+  \item Förenkla algebraiska uttryck och lösa ekvationer och ekvationssystem som uppstår i
+    eltekniska sammanhang.
+  \item Räkna med potenser, rötter, logaritmer och decibel.
+  \item Beräkna och tolka derivator och integraler för vanligt förekommande funktioner.
+  \item Räkna med komplexa tal och fasorer för att analysera växelströmskretsar.
+  \item Implementera kursens matematik i C med \file{math.h} och \file{complex.h}.
+\end{itemize}
+
+\section*{Vad du förväntas kunna}
+Boken förutsätter grundskolans matematik. Det mesta av den repeteras ändå i de första kapitlen:
+talmängder, räkneordning, bråk och procent i \kapref{1}, ekvationer i \kapref{3} och potenser i
+\kapref{5}. Känner du dig osäker på grunderna är det alltså bara att börja från början.
+
+Laborationen i \kapref{18} förutsätter dessutom grundläggande C-programmering: variabler,
+funktioner, \code{printf()} och loopar. Flyttalen, \file{math.h} och \file{complex.h} gås igenom
+i kapitlet.
+
+\section*{Hur boken är organiserad}
+Varje kapitel motsvarar en lektion i kursen, med samma nummer: kapitel~5 är lektion~5, och dess
+material finns i kursens repository under \file{lectures/L05}.
+
+\begin{booktable}{@{}p{5em}L@{}}
+  \thead{Kapitel} & \thead{Ämne} \\
+  \midrule
+  1 & Talsystem och grundläggande aritmetik \\
+  2 & Algebra \\
+  3 & Linjära ekvationer och olikheter \\
+  4 & Ekvationssystem \\
+  5 & Potenser och rötter \\
+  6 & Andragradsekvationer, med övningsdugga 1 \\
+  7 & Vektorer \\
+  8 & Funktioner \\
+  9 & Trigonometriska funktioner \\
+  10 & Exponentialfunktioner, logaritmer och decibel \\
+  11 & Repetition av kapitel 7--10, med övningsdugga 2 \\
+  12 & Derivata, del I \\
+  13 & Derivata, del II \\
+  14 & Integraler \\
+  15 & Komplexa tal, del I \\
+  16 & Komplexa tal, del II \\
+  17 & Komplexa tal, del III \\
+  18 & Matematik i C: laboration \\
+  19 & Repetition och tentamensförberedelse, med övningstentamen \\
+\end{booktable}
+
+Ett kapitel börjar med vad det innehåller och går sedan igenom teorin, med exempel som visar
+varje steg. Därefter kommer en sammanfattning med kapitlets formler, vad du ska kunna och några
+frågor under rubriken \emph{Testa dig själv}, och sist kapitlets uppgifter. Kapitel~11 och~19 har
+ingen ny teori; de repeterar och innehåller i stället en övningsdugga respektive en
+övningstentamen.
+
+\section*{Uppgifterna}
+Uppgifterna i varje kapitel är indelade i delar och numrerade som i kursen, så att uppgift~2.3 är
+den tredje uppgiften i del~2:
+
+\begin{booktable}{@{}p{5em}L@{}}
+  \thead{Del} & \thead{Vad den innehåller} \\
+  \midrule
+  Del 1 & Inledande uppgifter, eller repetition av föregående kapitel. \\
+  Del 2 & Nytt stoff: kapitlets egen teori, ofta tillämpad på en krets. \\
+  Del 3 & Extrauppgifter att träna vidare på efter lektionen. \\
+\end{booktable}
+
+I kursen räknas del~1 och del~2 under lektionen, först på egen hand och sedan gemensamt, medan
+del~3 är frivillig träning.
+
+\section*{Facit och lösningsförslag}
+\textbf{Svaren på samtliga uppgifter finns i facit längst bak i boken.} Varje uppgift har en liten
+etikett, \svarexempel, som anger på vilken sida dess svar står; i PDF-versionen är både
+etiketten och uppgiftens nummer i facit länkar mellan uppgift och svar.
+
+\textbf{Facit innehåller bara svaren, inte lösningarna.} Ett svar visar om du har räknat rätt,
+men inte hur man kommer fram till det. Fullständiga lösningsförslag publiceras i kursens
+repository efter respektive lektion, under \file{lectures/LNN/appendix/c_solutions.md}. Räkna
+alltid själv först, jämför sedan med facit, och läs lösningsförslaget när svaret inte stämmer
+eller när du vill se en annan väg fram.
+
+\section*{Hjälpmedel}
+En miniräknare, vilken som helst, används genom hela boken. Många uppgifter är ändå tänkta att
+räknas utan den, och de säger det. Laborationen i \kapref{18} kräver bara en webbläsare: koden
+skrivs och körs i en kompilator på webben, utan installation.
+
+\section*{Beteckningar}
+Boken följer svensk skrivpraxis och de beteckningar som är vanliga inom elektroteknik:
+\begin{itemize}
+  \item \textbf{Decimalkomma}: $4{,}7$, inte $4.7$. Undantaget är C-koden i \kapref{18}, där
+    decimaltecknet är en punkt.
+  \item \textbf{Enheter} skrivs med ett litet mellanrum efter talet: $4{,}7\,\text{k}\Omega$,
+    $50\,\text{Hz}$, $30\,\%$.
+  \item \textbf{Resistans skrivs före ström}, som i Ohms lag: $U = RI$ och $P = RI^2$.
+  \item \textbf{Parallellkoppling} skrivs $R_1 \parallell R_2$.
+  \item \textbf{Logaritmer}: $\log$ är tiologaritmen och $\ln$ den naturliga logaritmen.
+  \item \textbf{Den imaginära enheten} skrivs $j$, eftersom $i$ redan betecknar ström.
+  \item \textbf{Vinklar} anges i radianer om inget annat sägs; grader markeras med $^{\circ}$.
+\end{itemize}

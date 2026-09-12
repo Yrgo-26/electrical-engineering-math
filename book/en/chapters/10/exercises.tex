@@ -1,0 +1,224 @@
+% Section 10.7, translated from sv/chapters/10/exercises.tex.
+
+\section{Exercises}
+\label{c10:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~1 reviews the trigonometry of \kapref{9}, and
+Part~2 is the chapter's new material. Part~3 is extra exercises for further practice after the
+lesson.
+
+\facitnotis{L10}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Angles to radians}
+Convert the following angles to radians.
+\begin{delar}(4)
+  \task $15^{\circ}$
+  \task $-75^{\circ}$
+\end{delar}
+
+\uppgift{1.2}{Angles to degrees}
+Convert the following angles to degrees.
+\begin{delar}(4)
+  \task $-\pi/6$
+  \task $3\pi/2$
+\end{delar}
+
+\uppgift{1.3}{Determining the properties of an AC voltage}
+An AC voltage is shown in the figure below.
+
+\bild[0.75\linewidth]{lectures/L10/appendix/images/1.3_sine_wave.png}
+
+Find the voltage's equation in the form $u(t) = \abs{U}\sin(\omega t + \delta)$.
+
+\uppgift{1.4}{Equation and graph of an AC voltage}
+An AC voltage has the amplitude $4\,\text{V}$, the frequency $50\,\text{Hz}$ and the phase
+$-30^{\circ}$. Find the equation $u(t)$ of the AC voltage, with the phase in radians, and draw the
+sine curve over one period $T$.
+
+\uppgift{1.5}{Calculating the phase of an alternating current}
+The equation of a given AC voltage is
+\[
+  u(t) = 6\sin(80\pi t + \delta).
+\]
+At the time $t = 15\,\text{ms}$, $u(t) = 3\,\text{V}$. Calculate the phase $\delta$.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Logarithmic equations}
+Solve the following logarithmic equations.
+\begin{delar}(3)
+  \task $5^x = 125$
+  \task $2^{x-3} = 128$
+  \task $e^{x+1} = 120$
+\end{delar}
+
+\uppgift{2.2}{Half-life of the charge in a battery}
+The charge in a battery can be described by the corresponding voltage with the function
+\[
+  u(t) = U_0 \cdot a^t,
+\]
+where
+\begin{itemize}
+  \item $u(t)$ is the present charge,
+  \item $U_0$ is the original charge,
+  \item $a$ is the growth factor,
+  \item $t$ is the number of hours that have passed.
+\end{itemize}
+A battery loses half its charge in $40$ hours. Calculate after how long only $10\,\%$ of the
+charge remains.
+
+\uppgift{2.3}{Linear gain}
+Two signals have the voltage levels $L_1 = 15\,\text{dB}$ and $L_2 = 49\,\text{dB}$. Calculate the
+linear voltage gain $G_{\text{lin}}$ between these two levels. Use the formula
+\[
+  G_{\text{dB}} = 20\log_{10}(G_{\text{lin}})
+\]
+and remember that $G_{\text{dB}} = L_2 - L_1$.
+
+\uppgift{2.4}{Calculating an RMS value in dBV}
+The relationship between the RMS value of a voltage and the corresponding value in dBV (decibels
+relative to one volt) is
+\[
+  U_{\text{dBV}} = 20\log_{10}\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right),
+\]
+where $U_{\text{RMS}}$ is the RMS value of the voltage in V and $U_{\text{dBV}}$ the voltage in
+dBV. A sinusoidal voltage has the level $17.0\,\text{dBV}$. Find the amplitude in V.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson. Most of them can
+be done in your head or with pencil and paper.
+
+\uppgift{3.1}{Logarithms without a calculator}
+Calculate.
+\begin{delar}(6)
+  \task $\log 100$
+  \task $\log 1000$
+  \task $\log 1$
+  \task $\log 0.01$
+  \task $\ln e$
+  \task $\ln 1$
+\end{delar}
+
+\uppgift{3.2}{The laws of logarithms}
+Write as a single logarithm and simplify as far as possible.
+\begin{delar}(3)
+  \task $\log 3 + \log 4$
+  \task $\log 20 - \log 4$
+  \task $2\log 5$
+  \task $\log 2 + \log 5$
+  \task $3\log 2 - \log 4$
+\end{delar}
+
+\uppgift{3.3}{Exponential equations}
+Solve the equations.
+\begin{delar}(5)
+  \task $2^x = 32$
+  \task $10^x = 0.001$
+  \task $5^x = 100$
+  \task $e^x = 20$
+  \task $4^{x+1} = 64$
+\end{delar}
+
+\uppgift{3.4}{Logarithmic equations}
+Solve the equations.
+\begin{delar}(3)
+  \task $\log x = 2$
+  \task $\ln x = 0$
+  \task $\log(x + 5) = 1$
+  \task $2\log x = 4$
+  \task $\ln(2x) = 1$
+\end{delar}
+
+\uppgift{3.5}{Voltage gain in dB}
+Use
+\[
+  G_{\text{dB}} = 20\log_{10}\left(\frac{U_{\text{out}}}{U_{\text{in}}}\right).
+\]
+\begin{parts}
+  \item $U_{\text{in}} = 10\,\text{mV}$ and $U_{\text{out}} = 1\,\text{V}$. Calculate
+    $G_{\text{dB}}$.
+  \item $U_{\text{in}} = 2\,\text{V}$ and $U_{\text{out}} = 2\,\text{V}$. Calculate
+    $G_{\text{dB}}$.
+  \item $U_{\text{in}} = 5\,\text{V}$ and $U_{\text{out}} = 0.5\,\text{V}$. Calculate
+    $G_{\text{dB}}$.
+  \item What does a negative value of $G_{\text{dB}}$ mean?
+\end{parts}
+
+\uppgift{3.6}{From dB to linear gain}
+Use
+\[
+  G_{\text{lin}} = 10^{G_{\text{dB}}/20}.
+\]
+\begin{delar}(4)
+  \task $G_{\text{dB}} = 20\,\text{dB}$
+  \task $G_{\text{dB}} = 60\,\text{dB}$
+  \task $G_{\text{dB}} = 6\,\text{dB}$
+  \task $G_{\text{dB}} = -3\,\text{dB}$
+  \task* An amplifier with $G_{\text{dB}} = 26\,\text{dB}$ is fed with
+    $U_{\text{in}} = 50\,\text{mV}$. Calculate $U_{\text{out}}$.
+\end{delar}
+
+\uppgift{3.7}{Power gain in dB}
+Use
+\[
+  G_{\text{dB}} = 10\log_{10}\left(\frac{P_{\text{out}}}{P_{\text{in}}}\right).
+\]
+\begin{parts}
+  \item $P_{\text{in}} = 1\,\text{W}$ and $P_{\text{out}} = 100\,\text{W}$. Calculate
+    $G_{\text{dB}}$.
+  \item $P_{\text{in}} = 20\,\text{W}$ and $P_{\text{out}} = 10\,\text{W}$. Calculate
+    $G_{\text{dB}}$.
+  \item Why is the factor $10$ used for power but $20$ for voltage?
+  \item How many dB does a doubling of the power correspond to? And a doubling of the voltage?
+\end{parts}
+
+\uppgift{3.8}{Cascaded stages}
+A signal chain consists of two amplifier stages with $G_1 = 12\,\text{dB}$ and
+$G_2 = 18\,\text{dB}$, and a cable that attenuates $4\,\text{dB}$.
+\begin{parts}
+  \item Calculate the total gain in dB.
+  \item Calculate the total linear gain.
+  \item Calculate each stage linearly and check that the product agrees with b).
+  \item Why are decibels convenient to calculate with when stages are cascaded?
+\end{parts}
+
+\uppgift{3.9}{Level in dBV}
+Use
+\[
+  U_{\text{dBV}} = 20\log_{10}\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right).
+\]
+\begin{parts}
+  \item $U_{\text{RMS}} = 1\,\text{V}$. Calculate the level in dBV.
+  \item $U_{\text{RMS}} = 10\,\text{V}$. Calculate the level in dBV.
+  \item $U_{\text{RMS}} = 0.1\,\text{V}$. Calculate the level in dBV.
+  \item A signal is at $12\,\text{dBV}$. Calculate $U_{\text{RMS}}$.
+  \item Calculate the amplitude $\abs{U}$ of the signal in d).
+\end{parts}
+
+\uppgift{3.10}{Half-life and doubling time}
+A quantity is described by $f(t) = C \cdot a^t$.
+\begin{parts}
+  \item A battery loses $2\,\%$ of its charge per hour. Find the growth factor $a$.
+  \item After how many hours is half the charge left?
+  \item A set of measurement data grows by $10\,\%$ per day. After how many days has it doubled?
+  \item Show in general that the doubling time is given by $t = \dfrac{\log 2}{\log a}$.
+\end{parts}
+
+\uppgift{3.11}{Find the error}
+Each line contains a common mistake. Explain the mistake and give the correct answer.
+\begin{parts}
+  \item $\log(a + b) = \log a + \log b$
+  \item $\dfrac{\log 8}{\log 2} = \log 4$
+  \item $\log(a^n) = (\log a)^n$
+  \item $G_{\text{dB}} = 0$ means that the signal disappears completely.
+  \item $10^{\log x} = 10x$
+  \item $\ln 0 = 1$
+\end{parts}

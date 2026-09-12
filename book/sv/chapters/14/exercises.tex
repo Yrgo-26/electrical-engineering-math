@@ -1,0 +1,238 @@
+% Section 14.8, from lectures/L14/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c14:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L14}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Deriveringsregler}
+Derivera följande funktioner.
+\begin{delar}(3)
+  \task $f_1(x) = x^2 \cdot e^{4x}$
+  \task $f_2(x) = x^3 \cdot \ln 2x$
+  \task $f_3(x) = \dfrac{x^3}{\ln x^2}$
+\end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Energi lagrad i en spole}
+Strömmen genom en spole är tidsberoende och ges av funktionen
+\[
+  i(t) = 5t,
+\]
+där $t$ är tiden i sekunder. Strömmen mäts i ampere (A). Spolens induktans är
+$L = 0{,}20\,\text{H}$ (henry).
+
+Effektutvecklingen $p(t)$ i spolen ges av funktionen
+\[
+  p(t) = L \cdot i(t) \cdot i'(t),
+\]
+där
+\begin{itemize}
+  \item $p(t)$ är effektutvecklingen i watt (W),
+  \item $L$ är spolens induktans i henry (H),
+  \item $i(t)$ är strömmen genom spolen i ampere (A),
+  \item $i'(t)$ är strömförändringen genom spolen i A/s.
+\end{itemize}
+Energin $w(t)$ som lagras i spolen mellan tiden $0$ och tiden $t$ ges av funktionen
+\[
+  w(t) = \int_0^t p(t)\,dt
+\]
+och mäts i joule (J).
+\begin{parts}
+  \item Bestäm $p(t)$.
+  \item Bestäm den primitiva funktionen $P(t)$ till $p(t)$.
+  \item Bestäm ett uttryck för energin $w(t)$ i spolen som en funktion av tiden.
+  \item Spolen är oladdad vid start, det vill säga $w(0) = 0$. Bestäm integrationskonstanten $C$.
+  \item Bestäm hur mycket energi som har lagrats i spolen under de första $3$ sekunderna
+    (${0 \leq t \leq 3}$).
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Primitiva funktioner till polynom}
+Bestäm den primitiva funktionen.
+\begin{delar}(3)
+  \task $\displaystyle\int x^3\,dx$
+  \task $\displaystyle\int 4x\,dx$
+  \task $\displaystyle\int 5\,dx$
+  \task $\displaystyle\int (2x + 3)\,dx$
+  \task $\displaystyle\int (x^2 - 4x + 1)\,dx$
+\end{delar}
+
+\uppgift{3.2}{Primitiva funktioner till standardfunktioner}
+Bestäm den primitiva funktionen.
+\begin{delar}(3)
+  \task $\displaystyle\int e^x\,dx$
+  \task $\displaystyle\int e^{3x}\,dx$
+  \task $\displaystyle\int \frac{1}{x}\,dx$
+  \task $\displaystyle\int \sin(x)\,dx$
+  \task $\displaystyle\int \cos(2x)\,dx$
+  \task $\displaystyle\int \sin(4x)\,dx$
+\end{delar}
+
+\uppgift{3.3}{Kontrollera genom derivering}
+\begin{parts}
+  \item Visa att $F(x) = \dfrac{x^3}{3}$ är en primitiv funktion till $f(x) = x^2$.
+  \item Visa att $F(x) = -\dfrac{\cos(2x)}{2}$ är en primitiv funktion till $f(x) = \sin(2x)$.
+  \item Visa att $F(t) = -2e^{-t/2}$ är en primitiv funktion till $f(t) = e^{-t/2}$.
+  \item Varför är svaret på en obestämd integral aldrig entydigt?
+\end{parts}
+
+\uppgift{3.4}{Bestämda integraler: polynom}
+Beräkna.
+\begin{delar}(3)
+  \task $\displaystyle\int_0^2 3x^2\,dx$
+  \task $\displaystyle\int_1^3 2x\,dx$
+  \task $\displaystyle\int_0^4 (x + 1)\,dx$
+  \task $\displaystyle\int_{-1}^{1} x^2\,dx$
+  \task $\displaystyle\int_0^3 (6 - 2x)\,dx$
+\end{delar}
+
+\uppgift{3.5}{Bestämda integraler: övriga funktioner}
+Beräkna.
+\begin{delar}(3)
+  \task $\displaystyle\int_0^1 e^x\,dx$
+  \task $\displaystyle\int_0^{\pi} \sin(x)\,dx$
+  \task $\displaystyle\int_0^{\pi/2} \cos(x)\,dx$
+  \task $\displaystyle\int_1^{e} \frac{1}{x}\,dx$
+  \task $\displaystyle\int_0^2 e^{-t}\,dt$
+\end{delar}
+
+\uppgift{3.6}{Area under en kurva}
+\begin{parts}
+  \item Beräkna arean under $f(x) = x$ för $0 \leq x \leq 4$.
+  \item Kontrollera svaret i a) med formeln för en triangels area.
+  \item Beräkna arean under $f(x) = 3$ för $1 \leq x \leq 5$ och kontrollera med en rektangel.
+  \item Beräkna arean under $f(x) = x^2$ för $0 \leq x \leq 2$.
+\end{parts}
+
+\uppgift{3.7}{Negativa areor}
+Funktionen $f(x) = x - 2$ är given.
+\begin{delar}(3)
+  \task Beräkna $\displaystyle\int_0^2 (x - 2)\,dx$.
+  \task Beräkna $\displaystyle\int_2^4 (x - 2)\,dx$.
+  \task Beräkna $\displaystyle\int_0^4 (x - 2)\,dx$.
+  \task* Förklara varför integralen i c) blir noll trots att kurvan inte ligger på $x$-axeln.
+\end{delar}
+
+\uppgift{3.8}{Integrationskonstant med startvillkor}
+Det är känt att $f'(x) = 4x - 3$ och att $f(0) = 5$.
+\begin{parts}
+  \item Bestäm den allmänna primitiva funktionen.
+  \item Bestäm integrationskonstanten $C$.
+  \item Skriv upp $f(x)$.
+  \item Beräkna $f(2)$.
+\end{parts}
+
+\uppgift{3.9}{Spänning ur förändringshastighet}
+Spänningen över en kondensator ändras med $u'(t) = 6t\,\text{V/s}$, och vid start gäller
+$u(0) = 2\,\text{V}$.
+\begin{parts}
+  \item Bestäm den allmänna primitiva funktionen.
+  \item Bestäm integrationskonstanten.
+  \item Skriv upp $u(t)$.
+  \item Beräkna $u(4)$.
+\end{parts}
+
+\uppgift{3.10}{Laddning ur ström}
+Strömmen genom en ledare ges av $i(t) = 4t + 2$ ampere, och $q(0) = 0$.
+\begin{parts}
+  \item Bestäm ett uttryck för laddningen $q(t)$.
+  \item Beräkna $q(3)$.
+  \item Beräkna $q(5)$.
+  \item Hur stor laddning passerar mellan $t = 3\,\text{s}$ och $t = 5\,\text{s}$?
+  \item Kontrollera svaret i d) genom att beräkna $\displaystyle\int_3^5 i(t)\,dt$.
+\end{parts}
+
+\uppgift{3.11}{Laddning ur en sinusström}
+Strömmen ges av $i(t) = 2\sin(100\pi t)$ ampere.
+\begin{parts}
+  \item Bestäm den primitiva funktionen till $i(t)$.
+  \item Beräkna $\displaystyle\int_0^{0{,}01} i(t)\,dt$.
+  \item Beräkna $\displaystyle\int_0^{0{,}02} i(t)\,dt$.
+  \item Förklara resultatet i c).
+\end{parts}
+
+\uppgift{3.12}{Energi lagrad i en spole}
+Strömmen genom en spole med $L = 0{,}4\,\text{H}$ ges av $i(t) = 3t$ ampere. Effekten ges av
+sambandet $p(t) = L\,i(t)\,i'(t)$.
+\begin{parts}
+  \item Bestäm $i'(t)$.
+  \item Bestäm $p(t)$.
+  \item Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+  \item Beräkna energin efter $2$ sekunder.
+  \item Kontrollera svaret med formeln $w = \dfrac{Li^2}{2}$.
+\end{parts}
+
+\uppgift{3.13}{Energi utvecklad i ett motstånd}
+Effekten i ett motstånd ges av $p(t) = 5 + 2t$ watt för $0 \leq t \leq 10\,\text{s}$.
+\begin{parts}
+  \item Bestäm energin $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+  \item Beräkna den totala energin efter $10$ sekunder.
+  \item Hur mycket energi utvecklas under de sista $5$ sekunderna?
+  \item Beräkna medeleffekten under hela intervallet.
+\end{parts}
+
+\uppgift{3.14}{Medelvärde av en funktion}
+Medelvärdet av $f$ över intervallet $[a, b]$ ges av
+\[
+  \frac{1}{b - a}\int_a^b f(x)\,dx.
+\]
+\begin{parts}
+  \item Beräkna medelvärdet av $f(x) = x^2$ över $[0, 3]$.
+  \item Beräkna medelvärdet av $f(x) = 4$ över $[1, 5]$.
+  \item Beräkna medelvärdet av $i(t) = 10\sin(100\pi t)$ över en halv period,
+    $[0;\, 0{,}01]$.
+  \item Hur stor andel av amplituden är medelvärdet i c)?
+\end{parts}
+
+\uppgift{3.15}{Integralens räkneregler}
+Det är känt att $\displaystyle\int_0^2 f(x)\,dx = 5$ och $\displaystyle\int_0^2 g(x)\,dx = 3$.
+Beräkna:
+\begin{delar}(2)
+  \task $\displaystyle\int_0^2 \bigl[f(x) + g(x)\bigr]\,dx$
+  \task $\displaystyle\int_0^2 2f(x)\,dx$
+  \task $\displaystyle\int_0^2 \bigl[3f(x) - 2g(x)\bigr]\,dx$
+  \task $\displaystyle\int_2^0 f(x)\,dx$
+\end{delar}
+
+\uppgift{3.16}{Derivering och integrering som motsatser}
+\begin{parts}
+  \item Derivera $F(x) = x^3 - 2x$.
+  \item Integrera resultatet från a).
+  \item Varför dyker det upp en konstant i b) som inte fanns i $F(x)$?
+  \item Beräkna $\dfrac{d}{dx}\left[\displaystyle\int 5x^4\,dx\right]$.
+\end{parts}
+
+\uppgift{3.17}{Bestäm en okänd gräns eller konstant}
+\begin{parts}
+  \item Bestäm $a > 0$ så att $\displaystyle\int_0^a 2x\,dx = 25$.
+  \item Bestäm $a$ så att $\displaystyle\int_0^a 3\,dx = 12$.
+  \item Bestäm $k$ så att $\displaystyle\int_0^2 kx\,dx = 10$.
+  \item En kondensator laddas med den konstanta strömmen $i = 0{,}5\,\text{A}$. Efter hur lång tid
+    har laddningen $2\,\text{C}$ passerat?
+\end{parts}
+
+\uppgift{3.18}{Hitta felet}
+Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta svaret.
+\begin{delar}(2)
+  \task $\displaystyle\int x^2\,dx = 2x + C$
+  \task $\displaystyle\int e^{2x}\,dx = 2e^{2x} + C$
+  \task $\displaystyle\int \sin(x)\,dx = \cos(x) + C$
+  \task $\displaystyle\int_1^2 3x^2\,dx = \Bigl[x^3\Bigr]_1^2 = 8$
+  \task* En bestämd integral behöver en integrationskonstant.
+  \task* $\displaystyle\int \frac{1}{x}\,dx = \ln x + C$ gäller för alla $x \neq 0$.
+\end{delar}

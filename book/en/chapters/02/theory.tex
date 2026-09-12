@@ -1,0 +1,147 @@
+% Sections 2.1 to 2.7, translated from sv/chapters/02/theory.tex.
+
+\section{Variables and algebraic expressions}
+\label{c2:sec:variabler}
+A \textbf{variable} is an unknown number represented by a letter, for example $x$, $R$, $U$ or
+$I$.
+
+An \textbf{algebraic expression} is a combination of variables, constants and operations, for
+example
+\[
+  3x + 2y - 5, \qquad \frac{U}{R}, \qquad 2R_1 + R_2.
+\]
+
+\subsection{Terms, factors and coefficients}
+\label{c2:sec:termer}
+In the expression $5x^2 - 3x + 7$:
+\begin{itemize}
+  \item $5x^2$, $-3x$ and $7$ are \textbf{terms}. The terms are separated by $+$ or $-$.
+  \item $5$ is the \textbf{coefficient} of $x^2$ and $-3$ is the coefficient of $x$, while $7$ is
+    a \textbf{constant}.
+  \item In the product $5 \cdot x^2$, $5$ and $x^2$ are \textbf{factors}.
+\end{itemize}
+
+\section{Simplifying: collecting like terms}
+\label{c2:sec:forenkling}
+Terms with the \emph{same variable part} are called \textbf{like terms} and can be added:
+\[
+  3x + 5x = 8x, \qquad 4R - R = 3R, \qquad 2x^2 + 3x - x^2 + x = x^2 + 4x
+\]
+Terms with \emph{different} variable parts can\textbf{not} be simplified further:
+\[
+  3x + 2y \quad \text{(cannot be simplified further)}
+\]
+
+\section{The distributive law}
+\label{c2:sec:distributiv}
+The distributive law is used to expand brackets:
+\[
+  a(b + c) = ab + ac
+\]
+
+\begin{exempel}
+\begin{gather*}
+  3(2x + 4) = 6x + 12 \\
+  -2(R_1 + R_2 - 3) = -2R_1 - 2R_2 + 6
+\end{gather*}
+\end{exempel}
+
+The distributive law is used in reverse when factorising; see \secref{c2:sec:faktorsattning}.
+
+\section{The squaring rules}
+\label{c2:sec:kvadrering}
+The squaring rules are used a great deal in electrical engineering, for example in calculating
+power and impedance.
+
+\subsection{Square of a sum}
+\label{c2:sec:kvsumma}
+\[
+  (a + b)^2 = a^2 + 2ab + b^2
+\]
+
+\begin{exempel}
+\[
+  (R + 2)^2 = R^2 + 4R + 4
+\]
+\end{exempel}
+
+\subsection{Square of a difference}
+\label{c2:sec:kvdiff}
+\[
+  (a - b)^2 = a^2 - 2ab + b^2
+\]
+
+\begin{exempel}
+\[
+  (U - 3)^2 = U^2 - 6U + 9
+\]
+\end{exempel}
+
+\section{The difference of two squares}
+\label{c2:sec:konjugat}
+\[
+  (a + b)(a - b) = a^2 - b^2
+\]
+
+\begin{exempel}
+\begin{gather*}
+  (x + 5)(x - 5) = x^2 - 25 \\
+  (2R + 1)(2R - 1) = 4R^2 - 1
+\end{gather*}
+\end{exempel}
+
+\section{Factorisation}
+\label{c2:sec:faktorsattning}
+Factorisation means writing an expression as a \textbf{product of factors}, the reverse of
+expanding. There are several methods.
+
+\subsection{Common factor}
+\label{c2:sec:gemensam}
+Identify the factor that all the terms have in common and take it outside a bracket:
+\begin{gather*}
+  6x + 9 = 3(2x + 3) \\
+  4R_1^2 + 8R_1 = 4R_1(R_1 + 2) \\
+  RI^2 - RI = RI(I - 1)
+\end{gather*}
+
+\subsection{The difference of two squares in reverse}
+\label{c2:sec:konjbakat}
+An expression of the form $a^2 - b^2$ can be factorised:
+\[
+  a^2 - b^2 = (a + b)(a - b)
+\]
+
+\begin{exempel}
+\begin{gather*}
+  x^2 - 16 = (x + 4)(x - 4) \\
+  4U^2 - 9 = (2U + 3)(2U - 3)
+\end{gather*}
+\end{exempel}
+
+\subsection{The squaring rules in reverse}
+\label{c2:sec:kvbakat}
+Expressions of the form $a^2 + 2ab + b^2$ or $a^2 - 2ab + b^2$ can be factorised:
+\begin{gather*}
+  x^2 + 6x + 9 = (x + 3)^2 \\
+  R^2 - 4R + 4 = (R - 2)^2
+\end{gather*}
+
+\section{Application in electrical engineering}
+\label{c2:sec:tillampning}
+\textbf{Ohm's law} in algebraic form is
+\[
+  U = R \cdot I.
+\]
+The law can be rewritten depending on which quantity is sought:
+\[
+  R = \frac{U}{I}, \qquad I = \frac{U}{R}
+\]
+The \textbf{power formula} gives rise to algebraic expressions:
+\[
+  P = U \cdot I = R \cdot I^2 = \frac{U^2}{R}
+\]
+For the resistors $R_1$ and $R_2$ in series,
+\[
+  R_{\text{TOT}} = R_1 + R_2,
+\]
+which is a linear algebraic expression.

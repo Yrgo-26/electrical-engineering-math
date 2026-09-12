@@ -1,0 +1,109 @@
+% Sections 17.1 to 17.5, translated from sv/chapters/17/theory.tex.
+
+\section{Sinusoidal signals and phasors}
+\label{c17:sec:fasorer}
+A sinusoidal signal and its phasor are related by
+\[
+  u(t) = \abs{U}\sin(\omega t + \delta) \quad \longleftrightarrow \quad U = \abs{U}\,\angle\,\delta.
+\]
+
+\textbf{From sinusoidal signal to phasor:} read the amplitude $\abs{U}$ and the phase angle
+$\delta$ directly from the expression for $u(t)$.
+
+\textbf{From phasor to sinusoidal signal:} write $u(t) = \abs{U}\sin(\omega t + \delta)$ with the
+phasor $U = \abs{U}\,\angle\,\delta$.
+
+\begin{aside}
+\note[Note] All the phasors in a calculation must have the \textbf{same angular frequency}
+$\omega$.
+\end{aside}
+
+\section{Phasor addition}
+\label{c17:sec:fasoraddition}
+Sinusoidal signals are most easily added in the phasor plane:
+\begin{enumerate}
+  \item Convert each sinusoidal signal into a phasor in polar form.
+  \item Convert the phasors to rectangular form.
+  \item Add the real and imaginary parts.
+  \item Convert the sum back to polar form.
+  \item Write the sum as a sinusoidal signal.
+\end{enumerate}
+
+\section{Multiplication and division with phasors}
+\label{c17:sec:multiplikation}
+Multiplication in polar form:
+\[
+  U_1 \cdot U_2 = \abs{U_1}\abs{U_2}\,\angle\,(\delta_1 + \delta_2)
+\]
+Division in polar form:
+\[
+  \frac{U_1}{U_2} = \frac{\abs{U_1}}{\abs{U_2}}\,\angle\,(\delta_1 - \delta_2)
+\]
+These are used in impedance calculations, among other things: $U = Z \cdot I$.
+
+\section{Application: impedance}
+\label{c17:sec:impedans}
+A voltage $U$ and a current $I$, both complex, give the impedance $Z$:
+\[
+  Z = \frac{U}{I} = \frac{\abs{U}}{\abs{I}}\,\angle\,(\delta_U - \delta_I)
+\]
+For the three basic components:
+\begin{itemize}
+  \item Resistance: $Z_R = R$ (real, phase angle $0$).
+  \item Inductance: $Z_L = j\omega L$ (phase angle $+90^{\circ}$).
+  \item Capacitance: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$
+    (phase angle $-90^{\circ}$).
+\end{itemize}
+
+\needspace{12\baselineskip}
+\section{Worked examples}
+\label{c17:sec:typexempel}
+
+\begin{exempel}[Phasor addition]
+Add $u_1(t) = 2\sin(\omega t + 45^{\circ})\,\text{V}$ and
+$u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}$.
+
+\noindent\emph{Step 1:} the phasors in polar form:
+\[
+  U_1 = 2\,\angle\,45^{\circ}, \qquad U_2 = 3\,\angle\,{-60^{\circ}}
+\]
+\emph{Step 2:} convert to rectangular form:
+\begin{gather*}
+  U_1 = 2(\cos 45^{\circ} + j\sin 45^{\circ}) = \sqrt{2} + j\sqrt{2} \approx 1.414 + j1.414 \\
+  U_2 = 3(\cos(-60^{\circ}) + j\sin(-60^{\circ})) = 3(0.5 - j0.866) = 1.5 - j2.598
+\end{gather*}
+\emph{Step 3:} add:
+\[
+  U_{\text{tot}} = (1.414 + 1.5) + j(1.414 - 2.598) = 2.914 - j1.184
+\]
+\emph{Step 4:} convert to polar form:
+\begin{gather*}
+  \abs{U_{\text{tot}}} = \sqrt{2.914^2 + 1.184^2} \approx 3.15\,\text{V} \\
+  \delta_{\text{tot}} = \arctan\left(\frac{-1.184}{2.914}\right) \approx -22.1^{\circ}
+\end{gather*}
+\emph{Step 5:} back to the time domain:
+\[
+  u_{\text{tot}}(t) = 3.15\sin(\omega t - 22.1^{\circ})\,\text{V}
+\]
+\end{exempel}
+
+\begin{exempel}[Finding the phase from an equation]
+An AC voltage is given by $u(t) = 6\sin(80\pi t + \delta)\,\text{V}$. At $t = 15\,\text{ms}$,
+$u = 3\,\text{V}$. Find $\delta$.
+\begin{gather*}
+  6\sin(80\pi \cdot 0.015 + \delta) = 3 \quad \Rightarrow \quad \sin(1.2\pi + \delta) = 0.5 \\
+  \delta_1 = \arcsin(0.5) - 1.2\pi \approx 0.5236 - 3.7699 \approx -3.25\,\text{rad} \\
+  \delta_2 = \pi - \arcsin(0.5) - 1.2\pi \approx -1.15\,\text{rad}
+\end{gather*}
+Checking both roots gives $u(0.015) = 3\,\text{V}$.
+\end{exempel}
+
+\begin{exempel}[Calculating an impedance]
+A series RLC circuit has $R = 10\,\Omega$, $Z_L = j5\,\Omega$ and $Z_C = -j3\,\Omega$ at
+$\omega = 1000\,\text{rad/s}$. The total impedance is
+\begin{gather*}
+  Z = R + Z_L + Z_C = 10 + j5 - j3 = 10 + j2\,\Omega, \\
+  \abs{Z} = \sqrt{100 + 4} \approx 10.20\,\Omega, \qquad
+  \delta_Z = \arctan\left(\frac{2}{10}\right) \approx 11.3^{\circ}.
+\end{gather*}
+\end{exempel}

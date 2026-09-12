@@ -1,0 +1,280 @@
+% Section 19.2, from exam/practice_exam.md. The answers are in sv/back/facit/19.tex.
+
+\section{Övningstentamen}
+\label{c19:sec:ovningstentamen}
+Övningstentamen har samma hjälpmedel, poäng och betygsgränser som tentamen. Den är indelad i två
+delar som tentamen: del~I (kapitel~\ref{c1:ch}--\ref{c10:ch}) och del~II
+(kapitel~\ref{c12:ch}--\ref{c17:ch}).
+
+\begin{aside}
+\textbf{Så arbetar du med övningstentamen.} Skriv den på egen hand och under samma villkor som
+på tentamen: med bara de tillåtna hjälpmedlen, utan mobiltelefon och utan att titta i facit.
+Räkna varje uppgift så långt du kan innan du går vidare.
+
+\textbf{Facit och lösningsförslag.} Svaret på varje uppgift finns i facit längst bak i boken, och
+sidan står vid uppgiften. Svaret visar om du har räknat rätt, men inte hur. Fullständiga
+lösningsförslag publiceras i kursens repository, i \file{exam/practice_exam_solutions.md}.
+Räkna alltid själv först.
+\end{aside}
+
+\begin{booktable}{@{}p{7.2em}L@{}}
+  \thead{Hjälpmedel} & Skrivmaterial och valfri miniräknare. En hand- eller datorskriven
+    formelsamling på ett A4-ark (båda sidor) och ett handskrivet A4-ark (båda sidor) med valfria
+    anteckningar. \\
+  \thead{Poäng} & Totalt $25$ poäng. Därtill kan upp till $1{,}0$ bonuspoäng erhållas från
+    dugga~1--2. \\
+  \thead{Betygsgränser} & IG $< 10$ poäng, G $\geq 10$ poäng, VG $\geq 17{,}5$ poäng. \\
+  \thead{Redovisning} & Alla uppgifter kräver lösningar och motiveringar med redovisat svar,
+    inklusive enhet där det är aktuellt. Du måste alltså förklara hur du kom fram till dina
+    resultat. Lycka till! \\
+\end{booktable}
+
+\begin{aside}
+\note[Obs] Mobiltelefoner får inte användas under den tid som tentamen pågår och ska placeras på
+angiven plats.
+\end{aside}
+
+\prov{ot}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del I}{Aritmetik, algebra, ekvationer, trigonometri och logaritmer}
+
+\provuppgift{1}{1,0}
+Resistansen för fyra parallellkopplade resistorer $R_1$, $R_2$, $R_3$ och $R_4$ kan beräknas med
+formeln
+\[
+  \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}.
+\]
+Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\,\text{k}\Omega$ och
+$R_3 = R_4 = 10\,\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
+
+\provuppgift{2}{1,0}
+Förenkla följande uttryck så långt det går, utan att ta hänsyn till ogiltiga värden på $c$:
+\[
+  \frac{\dfrac{c^8 - 16c^4}{c^2}}{c(c^2 - 4)}
+\]
+
+\provuppgift{3}{1,0}
+Lös ekvationssystemet
+\[
+  \begin{cases}
+    4y = -6x - 6 \\
+    3y + 6x + 9 = 0
+  \end{cases}
+\]
+
+\provuppgift{4}{1,0}
+\begin{parts}
+  \item Ekvationerna i \hyperref[ot:u:3]{uppgift~3} är exempel på räta linjens ekvation. Ange den
+    första ekvationens lutning $k$ och dess $m$-värde $m$.
+  \item Ekvationen
+    \[
+      \sin(v) = -\frac{\sqrt{3}}{2}
+    \]
+    har en lösning i intervallet mellan $180^{\circ}$ och $270^{\circ}$. Hitta denna lösning och
+    ange den i grader.
+\end{parts}
+
+\provuppgift{5}{2,0}
+Lös ekvationen
+\[
+  (x + 2)^2 + 2(x - 2)^2 = 45 - 6x.
+\]
+
+\provuppgift{6}{1,0}
+Du har två vektorer $u = (3; 5)$ och $v = (2; -4)$.
+\begin{parts}
+  \item Rita upp vektorerna i ett koordinatsystem.
+  \item Beräkna vektorernas absolutbelopp $\abs{u}$ och $\abs{v}$.
+  \item Beräkna vektorernas vinklar $v_u$ och $v_v$.
+  \item Beräkna en tredje vektor $w = u - 2v$.
+\end{parts}
+
+\provuppgift{7}{1,0}
+Bostadspriserna ökar över tid på grund av inflation och marknadstillväxt. Priset $f(x)$ för en
+bostad kan beskrivas med exponentialfunktionen
+\[
+  f(x) = C \cdot a^x,
+\]
+där $C$ är ursprungspriset, $a$ är den årliga förändringsfaktorn och $x$ är antalet år som har
+passerat sedan ursprungspriset fastställdes.
+
+Är till exempel den årliga prisökningen $5\,\%$ under en viss tidsperiod, är en bostad som kostar
+$3\,000\,000\,\text{kr}$ i dag värd $f(x)$~kr efter $x$ år, där
+\[
+  f(x) = 3 \cdot 10^6 \cdot 1{,}05^x.
+\]
+Anta att ursprungspriset för en bostad är $7\,500\,000\,\text{kr}$ och att den årliga
+prisökningen är $2{,}5\,\%$.
+\begin{parts}
+  \item Ange en funktion som beskriver bostadens pris $f(x)$ efter $x$ år.
+  \item Beräkna bostadens värde efter $5$ år.
+  \item Bestäm funktionens definitionsmängd och värdemängd för en tidsperiod på $0$--$30$ år.
+  \item Efter hur många år har bostadens värde fördubblats?
+\end{parts}
+
+\provuppgift{8}{1,0}
+Förenkla följande rationella uttryck och ange vilka $x$-värden som uttrycket inte får anta:
+\[
+  f(x) = \frac{3(x^2 - x - 12)}{x^2 - 9}
+\]
+
+\provuppgift{9}{1,0}
+När en kondensator urladdas genom ett motstånd minskar spänningen över kondensatorn exponentiellt
+med tiden. Spänningen $u(t)$ kan beskrivas med funktionen
+\[
+  u(t) = U_0 e^{-t/(RC)},
+\]
+där
+\begin{itemize}
+  \item $u(t)$ är spänningen över kondensatorn vid tiden $t$,
+  \item $U_0$ är begynnelsespänningen i volt,
+  \item $RC$ är kretsens tidskonstant i sekunder,
+  \item $t$ är tiden i sekunder.
+\end{itemize}
+En kondensator med kapacitansen $680\,\upmu\text{F}$ är ansluten till ett motstånd på
+$10\,\text{k}\Omega$. Den är från början laddad till $10\,\text{V}$ och börjar urladdas vid tiden
+$t = 0$.
+\begin{parts}
+  \item Beräkna spänningen efter tre sekunder.
+  \item Bestäm funktionens definitionsmängd och värdemängd för tidsintervallet $0$--$10$
+    sekunder.
+  \item Beräkna efter hur lång tid spänningen har sjunkit till $40\,\%$ av sitt ursprungliga
+    värde.
+\end{parts}
+
+\provuppgift{10}{1,5}
+En växelspänning har amplituden $5\,\text{V}$, frekvensen $100\,\text{Hz}$ och fasen
+$90^{\circ}$.
+\begin{parts}
+  \item Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.
+  \item Rita växelspänningens sinuskurva över en period $T$.
+\end{parts}
+
+\provuppgift{11}{1,0}
+En ljudförstärkare har en förstärkning på $54\,\text{dB}$. Hur många gångers
+spänningsförstärkning motsvarar det?
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del II}{Derivata, integraler och komplexa tal}
+
+\provuppgift{12}{1,0}
+Betrakta funktionen
+\[
+  f(x) = x^2 - 4x + 3.
+\]
+\begin{parts}
+  \item Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.
+  \item Bestäm var funktionen är stationär, dvs.\ lös $f'(x) = 0$.
+  \item Avgör med hjälp av andraderivatan om punkten är ett maximum eller ett minimum.
+  \item Beräkna funktionens minsta eller största värde, dvs.\ bestäm $f(x)$ i den punkt där
+    funktionen är stationär.
+  \item Rita grafen till $f(x)$ för intervallet $0 \leq x \leq 5$. Markera extrempunkten och
+    eventuella skärningar med axlarna.
+\end{parts}
+
+\provuppgift{13}{1,0}
+Laddningen av en kondensator kan beskrivas med formeln
+\[
+  u(t) = 10\bigl(1 - e^{-0{,}5t}\bigr),
+\]
+där $u(t)$ är spänningsfallet över kondensatorn vid tiden $t$ och $t$ är tiden i sekunder.
+\begin{parts}
+  \item Derivera funktionen och bestäm uttrycket för $u'(t)$.
+  \item Beräkna $u'(t)$ vid tiden $t = 2\,\text{s}$, dvs.\ beräkna $u'(2)$.
+  \item Avgör om spänningsökningen ökar eller minskar vid tiden $t = 2\,\text{s}$, dvs.\ beräkna
+    $u''(2)$.
+\end{parts}
+
+\provuppgift{14}{1,5}
+Derivera följande funktioner.
+\begin{delar}(2)
+  \task $f(x) = e^{2x} \cdot \ln x^2$
+  \task $f(x) = \dfrac{3x^2}{\ln x}$
+  \task $u(t) = 5\cos\left(100\pi t + \dfrac{\pi}{4}\right)\,\text{V}$
+\end{delar}
+
+\provuppgift{15}{1,0}
+Laddningen $q(t)$ som passerar genom en ledare under tidsintervallet $(0, t)$ kan beräknas med
+\[
+  q(t) = \int_0^t i(t)\,dt = \bigl[I(t)\bigr]_0^t,
+\]
+där
+\begin{itemize}
+  \item $q(t)$ är laddningen genom ledaren i coulomb (C),
+  \item $i(t)$ är strömmen genom ledaren i ampere (A),
+  \item $I(t)$ är den primitiva funktionen (obestämda integralen) av $i(t)$.
+\end{itemize}
+Strömmen $i(t)$ i en kondensator ges av
+\[
+  i(t) = 0{,}5e^{-0{,}1t},
+\]
+där $t$ är tiden i sekunder. Kondensatorn har redan laddningen $q_0 = 1\,\text{C}$ vid start.
+\begin{parts}
+  \item Bestäm ett uttryck för den primitiva funktionen $I(t) = \int i(t)\,dt$, dvs.\ integrera
+    utan att ange några gränser.
+  \item Bestäm ett uttryck för kondensatorns laddning $q(t)$ genom att integrera över intervallet
+    $[0, t]$.
+  \item Bestäm en formel för den totala laddningen $q_{\text{tot}}(t)$ i kondensatorn, inklusive
+    startladdningen $q_0$.
+  \item Hur stor total laddning (inklusive startladdningen) har flödat in i kondensatorn efter
+    $4$ sekunder?
+\end{parts}
+
+\provuppgift{16}{2,0}
+En krets matas med spänningen $U = 3 - j4\,\text{V}$. Kretsen har impedansen
+$Z = 2 + j2\,\Omega$. Beräkna strömmen $I$ genom kretsen med ”Ohms lag”, det vill säga Ohms lag
+anpassad för komplexa tal:
+\[
+  I = \frac{U}{Z}
+\]
+Ange strömmen både på rektangulär och på polär form.
+
+\provuppgift{17}{2,0}
+En ström $i(t)$ i en växelströmskrets kan representeras av en fasor $I$, som på rektangulär form
+skrivs
+\[
+  I = 10 - j5\,\text{mA}.
+\]
+\begin{parts}
+  \item Rita ut fasorn $I$ i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Uttryck fasorn $I$ på Eulers form, dvs.\ bestäm absolutbeloppet $\abs{I}$ och fasvinkeln
+    $\delta$ så att $I = \abs{I}e^{j\delta}$.
+  \item Anta att strömmens frekvens är $f = 10\,\text{Hz}$. Bestäm vinkelhastigheten $w$.
+  \item Skriv $i(t)$ som en tidsberoende funktion $i(t) = \abs{I} \cdot e^{j(wt + \delta)}$.
+\end{parts}
+
+\provuppgift{18}{2,0}
+Du har vektorerna $a = (2; 1)$, $b = (3; -4)$ och $c = (-1; 3)$. I deluppgifterna nedan ska
+varje vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
+\begin{parts}
+  \item Skriv vektorerna på komplex rektangulär form.
+  \item Rita ut vektorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Bestäm vektorernas längder, dvs.\ absolutbeloppet av respektive tal.
+  \item Bestäm längden (absolutbeloppet) av $2a - 3c$, dvs.\ $\abs{2a - 3c}$.
+  \item Bestäm vektorernas vinklar.
+  \item Bestäm en vektor $d$ med längden $7$ som är motsatt riktad $a$.
+\end{parts}
+
+\provuppgift{19}{2,0}
+I en seriekoppling med tre komponenter mäts växelspänningen över respektive komponent till
+\begin{align*}
+  u_1(t) &= 2\sin(wt + 25^{\circ})\,\text{V}, \\
+  u_2(t) &= 5\sin(wt - 45^{\circ})\,\text{V}, \\
+  u_3(t) &= 1{,}5\sin(wt + 36^{\circ})\,\text{V}.
+\end{align*}
+Den totala spänningen i kretsen är
+\[
+  u_{\text{tot}}(t) = u_1(t) + u_2(t) + u_3(t).
+\]
+\begin{parts}
+  \item Skriv om spänningarna $u_1(t)$, $u_2(t)$ och $u_3(t)$ till fasorer $U_1$, $U_2$ och
+    $U_3$ på komplex rektangulär form.
+  \item Beräkna fasorsumman $U_{\text{tot}} = U_1 + U_2 + U_3$.
+  \item Rita ut fasorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Omvandla tillbaka resultatet till en sinusformad spänning i tidsdomänen på formen
+    $u_{\text{tot}}(t) = \abs{U_{\text{tot}}} \sin(wt + \delta_{\text{tot}})$.
+\end{parts}

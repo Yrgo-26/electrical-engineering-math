@@ -1,0 +1,240 @@
+% Section 14.8, translated from sv/chapters/14/exercises.tex.
+
+\section{Exercises}
+\label{c14:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L14}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Rules of differentiation}
+Differentiate the following functions.
+\begin{delar}(3)
+  \task $f_1(x) = x^2 \cdot e^{4x}$
+  \task $f_2(x) = x^3 \cdot \ln 2x$
+  \task $f_3(x) = \dfrac{x^3}{\ln x^2}$
+\end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Energy stored in an inductor}
+The current through an inductor depends on time and is given by the function
+\[
+  i(t) = 5t,
+\]
+where $t$ is the time in seconds. The current is measured in amperes (A). The inductance of the
+inductor is $L = 0.20\,\text{H}$ (henry).
+
+The power $p(t)$ developed in the inductor is given by the function
+\[
+  p(t) = L \cdot i(t) \cdot i'(t),
+\]
+where
+\begin{itemize}
+  \item $p(t)$ is the power developed in watts (W),
+  \item $L$ is the inductance of the inductor in henries (H),
+  \item $i(t)$ is the current through the inductor in amperes (A),
+  \item $i'(t)$ is the rate of change of the current through the inductor in A/s.
+\end{itemize}
+The energy $w(t)$ stored in the inductor between time $0$ and time $t$ is given by the function
+\[
+  w(t) = \int_0^t p(t)\,dt
+\]
+and is measured in joules (J).
+\begin{parts}
+  \item Find $p(t)$.
+  \item Find the antiderivative $P(t)$ of $p(t)$.
+  \item Find an expression for the energy $w(t)$ in the inductor as a function of time.
+  \item The inductor is uncharged at the start, that is, $w(0) = 0$. Find the constant of
+    integration $C$.
+  \item Find how much energy has been stored in the inductor during the first $3$ seconds
+    (${0 \leq t \leq 3}$).
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Antiderivatives of polynomials}
+Find the antiderivative.
+\begin{delar}(3)
+  \task $\displaystyle\int x^3\,dx$
+  \task $\displaystyle\int 4x\,dx$
+  \task $\displaystyle\int 5\,dx$
+  \task $\displaystyle\int (2x + 3)\,dx$
+  \task $\displaystyle\int (x^2 - 4x + 1)\,dx$
+\end{delar}
+
+\uppgift{3.2}{Antiderivatives of standard functions}
+Find the antiderivative.
+\begin{delar}(3)
+  \task $\displaystyle\int e^x\,dx$
+  \task $\displaystyle\int e^{3x}\,dx$
+  \task $\displaystyle\int \frac{1}{x}\,dx$
+  \task $\displaystyle\int \sin(x)\,dx$
+  \task $\displaystyle\int \cos(2x)\,dx$
+  \task $\displaystyle\int \sin(4x)\,dx$
+\end{delar}
+
+\uppgift{3.3}{Checking by differentiation}
+\begin{parts}
+  \item Show that $F(x) = \dfrac{x^3}{3}$ is an antiderivative of $f(x) = x^2$.
+  \item Show that $F(x) = -\dfrac{\cos(2x)}{2}$ is an antiderivative of $f(x) = \sin(2x)$.
+  \item Show that $F(t) = -2e^{-t/2}$ is an antiderivative of $f(t) = e^{-t/2}$.
+  \item Why is the answer to an indefinite integral never unique?
+\end{parts}
+
+\uppgift{3.4}{Definite integrals: polynomials}
+Calculate.
+\begin{delar}(3)
+  \task $\displaystyle\int_0^2 3x^2\,dx$
+  \task $\displaystyle\int_1^3 2x\,dx$
+  \task $\displaystyle\int_0^4 (x + 1)\,dx$
+  \task $\displaystyle\int_{-1}^{1} x^2\,dx$
+  \task $\displaystyle\int_0^3 (6 - 2x)\,dx$
+\end{delar}
+
+\uppgift{3.5}{Definite integrals: other functions}
+Calculate.
+\begin{delar}(3)
+  \task $\displaystyle\int_0^1 e^x\,dx$
+  \task $\displaystyle\int_0^{\pi} \sin(x)\,dx$
+  \task $\displaystyle\int_0^{\pi/2} \cos(x)\,dx$
+  \task $\displaystyle\int_1^{e} \frac{1}{x}\,dx$
+  \task $\displaystyle\int_0^2 e^{-t}\,dt$
+\end{delar}
+
+\uppgift{3.6}{Area under a curve}
+\begin{parts}
+  \item Calculate the area under $f(x) = x$ for $0 \leq x \leq 4$.
+  \item Check your answer to a) with the formula for the area of a triangle.
+  \item Calculate the area under $f(x) = 3$ for $1 \leq x \leq 5$ and check it with a rectangle.
+  \item Calculate the area under $f(x) = x^2$ for $0 \leq x \leq 2$.
+\end{parts}
+
+\uppgift{3.7}{Negative areas}
+The function $f(x) = x - 2$ is given.
+\begin{delar}(3)
+  \task Calculate $\displaystyle\int_0^2 (x - 2)\,dx$.
+  \task Calculate $\displaystyle\int_2^4 (x - 2)\,dx$.
+  \task Calculate $\displaystyle\int_0^4 (x - 2)\,dx$.
+  \task* Explain why the integral in c) is zero even though the curve does not lie on the
+    $x$-axis.
+\end{delar}
+
+\uppgift{3.8}{The constant of integration from an initial condition}
+It is known that $f'(x) = 4x - 3$ and that $f(0) = 5$.
+\begin{parts}
+  \item Find the general antiderivative.
+  \item Find the constant of integration $C$.
+  \item Write down $f(x)$.
+  \item Calculate $f(2)$.
+\end{parts}
+
+\uppgift{3.9}{Voltage from its rate of change}
+The voltage across a capacitor changes at the rate $u'(t) = 6t\,\text{V/s}$, and at the start
+$u(0) = 2\,\text{V}$.
+\begin{parts}
+  \item Find the general antiderivative.
+  \item Find the constant of integration.
+  \item Write down $u(t)$.
+  \item Calculate $u(4)$.
+\end{parts}
+
+\uppgift{3.10}{Charge from current}
+The current through a conductor is given by $i(t) = 4t + 2$ amperes, and $q(0) = 0$.
+\begin{parts}
+  \item Find an expression for the charge $q(t)$.
+  \item Calculate $q(3)$.
+  \item Calculate $q(5)$.
+  \item How much charge passes between $t = 3\,\text{s}$ and $t = 5\,\text{s}$?
+  \item Check your answer to d) by calculating $\displaystyle\int_3^5 i(t)\,dt$.
+\end{parts}
+
+\uppgift{3.11}{Charge from a sinusoidal current}
+The current is given by $i(t) = 2\sin(100\pi t)$ amperes.
+\begin{parts}
+  \item Find the antiderivative of $i(t)$.
+  \item Calculate $\displaystyle\int_0^{0.01} i(t)\,dt$.
+  \item Calculate $\displaystyle\int_0^{0.02} i(t)\,dt$.
+  \item Explain the result in c).
+\end{parts}
+
+\uppgift{3.12}{Energy stored in an inductor}
+The current through an inductor with $L = 0.4\,\text{H}$ is given by $i(t) = 3t$ amperes. The
+power is given by the relationship $p(t) = L\,i(t)\,i'(t)$.
+\begin{parts}
+  \item Find $i'(t)$.
+  \item Find $p(t)$.
+  \item Find the energy $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+  \item Calculate the energy after $2$ seconds.
+  \item Check your answer with the formula $w = \dfrac{Li^2}{2}$.
+\end{parts}
+
+\uppgift{3.13}{Energy dissipated in a resistor}
+The power in a resistor is given by $p(t) = 5 + 2t$ watts for $0 \leq t \leq 10\,\text{s}$.
+\begin{parts}
+  \item Find the energy $w(t) = \displaystyle\int_0^t p(\tau)\,d\tau$.
+  \item Calculate the total energy after $10$ seconds.
+  \item How much energy is dissipated during the last $5$ seconds?
+  \item Calculate the average power over the whole interval.
+\end{parts}
+
+\uppgift{3.14}{Mean value of a function}
+The mean value of $f$ over the interval $[a, b]$ is given by
+\[
+  \frac{1}{b - a}\int_a^b f(x)\,dx.
+\]
+\begin{parts}
+  \item Calculate the mean value of $f(x) = x^2$ over $[0, 3]$.
+  \item Calculate the mean value of $f(x) = 4$ over $[1, 5]$.
+  \item Calculate the mean value of $i(t) = 10\sin(100\pi t)$ over half a period,
+    $[0, 0.01]$.
+  \item What fraction of the amplitude is the mean value in c)?
+\end{parts}
+
+\uppgift{3.15}{Rules for integrals}
+It is known that $\displaystyle\int_0^2 f(x)\,dx = 5$ and $\displaystyle\int_0^2 g(x)\,dx = 3$.
+Calculate:
+\begin{delar}(2)
+  \task $\displaystyle\int_0^2 \bigl[f(x) + g(x)\bigr]\,dx$
+  \task $\displaystyle\int_0^2 2f(x)\,dx$
+  \task $\displaystyle\int_0^2 \bigl[3f(x) - 2g(x)\bigr]\,dx$
+  \task $\displaystyle\int_2^0 f(x)\,dx$
+\end{delar}
+
+\uppgift{3.16}{Differentiation and integration as opposites}
+\begin{parts}
+  \item Differentiate $F(x) = x^3 - 2x$.
+  \item Integrate the result from a).
+  \item Why does a constant appear in b) that was not in $F(x)$?
+  \item Calculate $\dfrac{d}{dx}\left[\displaystyle\int 5x^4\,dx\right]$.
+\end{parts}
+
+\uppgift{3.17}{Finding an unknown limit or constant}
+\begin{parts}
+  \item Find $a > 0$ such that $\displaystyle\int_0^a 2x\,dx = 25$.
+  \item Find $a$ such that $\displaystyle\int_0^a 3\,dx = 12$.
+  \item Find $k$ such that $\displaystyle\int_0^2 kx\,dx = 10$.
+  \item A capacitor is charged with the constant current $i = 0.5\,\text{A}$. After how long has a
+    charge of $2\,\text{C}$ passed?
+\end{parts}
+
+\uppgift{3.18}{Find the error}
+Each line contains a common error. Explain the error and give the correct answer.
+\begin{delar}(2)
+  \task $\displaystyle\int x^2\,dx = 2x + C$
+  \task $\displaystyle\int e^{2x}\,dx = 2e^{2x} + C$
+  \task $\displaystyle\int \sin(x)\,dx = \cos(x) + C$
+  \task $\displaystyle\int_1^2 3x^2\,dx = \Bigl[x^3\Bigr]_1^2 = 8$
+  \task* A definite integral needs a constant of integration.
+  \task* $\displaystyle\int \frac{1}{x}\,dx = \ln x + C$ holds for all $x \neq 0$.
+\end{delar}

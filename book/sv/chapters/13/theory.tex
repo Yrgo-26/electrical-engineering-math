@@ -1,0 +1,152 @@
+% Sections 13.1 to 13.6, from lectures/L13/appendix/a_theory.md.
+
+\section{Derivata för trigonometriska funktioner}
+\label{c13:sec:trig}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Funktion} & \thead{Derivata} \\
+  \midrule
+  $\sin(x)$ & $\cos(x)$ \\
+  $\cos(x)$ & $-\sin(x)$ \\
+  $\sin(kx)$ & $k\cos(kx)$ \\
+  $\cos(kx)$ & $-k\sin(kx)$ \\
+\end{narrowtable}
+
+\begin{exempel}
+\[
+  f(x) = 3\sin(2x) \quad \Rightarrow \quad f'(x) = 3 \cdot 2\cos(2x) = 6\cos(2x)
+\]
+\end{exempel}
+
+\section{Derivata för exponentialfunktioner}
+\label{c13:sec:exp}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Funktion} & \thead{Derivata} \\
+  \midrule
+  $e^x$ & $e^x$ \\
+  $e^{kx}$ & $ke^{kx}$ \\
+  $a^x$ & $a^x \ln a$ \\
+\end{narrowtable}
+
+\textbf{Härledning av $\frac{d}{dx}e^x = e^x$.} Med derivatans definition från
+\secref{c12:sec:definition} blir
+\[
+  \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} = e^x \cdot 1
+  = e^x.
+\]
+
+\section{Derivata för logaritmfunktioner}
+\label{c13:sec:log}
+
+{\renewcommand{\arraystretch}{2}%
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Funktion} & \thead{Derivata} \\
+  \midrule
+  $\ln(x)$ & $\dfrac{1}{x}$ \\
+  $\ln(kx)$ & $\dfrac{1}{x}$ \\
+  $\log_{10}(x)$ & $\dfrac{1}{x \ln 10}$ \\
+\end{narrowtable}}
+
+\begin{aside}
+\note[Obs] $\ln(kx) = \ln k + \ln x$, vars derivata är $1/x$: konstanten $\ln k$ försvinner.
+\end{aside}
+
+\section{Produktregeln och kedjeregeln}
+\label{c13:sec:regler}
+Tabellerna ovan ger derivatan av en enskild funktion. När två funktioner multipliceras med
+varandra, eller när en funktion sätts in i en annan, behövs två regler till.
+
+\subsection{Produktregeln}
+\label{c13:sec:produktregeln}
+Derivatan av en produkt $f(x) = g(x) \cdot h(x)$ är
+\[
+  f'(x) = g'(x) \cdot h(x) + g(x) \cdot h'(x).
+\]
+Derivera alltså en faktor i taget medan den andra står kvar, och addera de två termerna.
+
+\begin{exempel}
+$f(x) = x^2 \sin(x)$ med $g(x) = x^2$ och $h(x) = \sin(x)$ ger
+\[
+  f'(x) = 2x \cdot \sin(x) + x^2 \cdot \cos(x).
+\]
+\end{exempel}
+
+\subsection{Kedjeregeln}
+\label{c13:sec:kedjeregeln}
+En sammansatt funktion $f(x) = g(u(x))$ består av en \textbf{yttre funktion} $g$ och en
+\textbf{inre funktion} $u(x)$. Derivatan är den yttre funktionens derivata, beräknad i den inre
+funktionen, gånger den inre funktionens derivata:
+\[
+  f'(x) = g'(u(x)) \cdot u'(x).
+\]
+
+\begin{exempel}
+$f(x) = \ln(2x + 1)$ har den yttre funktionen $\ln u$ och den inre funktionen $u = 2x + 1$, med
+$u' = 2$:
+\[
+  f'(x) = \frac{1}{2x + 1} \cdot 2 = \frac{2}{2x + 1}.
+\]
+\end{exempel}
+
+Tabellraderna för $\sin(kx)$, $\cos(kx)$, $e^{kx}$ och $\ln(kx)$ ovan är specialfall av
+kedjeregeln, med den inre funktionen $u = kx$ och $u' = k$. Till exempel är
+\[
+  \frac{d}{dx}\sin(kx) = \cos(kx) \cdot k = k\cos(kx), \qquad
+  \frac{d}{dx}\ln(kx) = \frac{1}{kx} \cdot k = \frac{1}{x}.
+\]
+
+\section{Samlad derivatatabell}
+\label{c13:sec:tabell}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Funktion $f(x)$} & \thead{Derivata $f'(x)$} \\
+  \midrule
+  $x^n$ & $nx^{n-1}$ \\
+  $e^x$ & $e^x$ \\
+  $e^{kx}$ & $ke^{kx}$ \\
+  $\ln x$ & $1/x$ \\
+  $\sin x$ & $\cos x$ \\
+  $\cos x$ & $-\sin x$ \\
+  $\sin(kx)$ & $k\cos(kx)$ \\
+  $\cos(kx)$ & $-k\sin(kx)$ \\
+\end{narrowtable}
+
+\section{Typexempel}
+\label{c13:sec:typexempel}
+
+\begin{exempel}[Derivata av vanliga funktioner]
+Derivera \textbf{a)} $f(x) = 5e^{3x}$, \textbf{b)} $f(x) = \ln(4x)$ och
+\textbf{c)} $f(x) = 2\cos(x) - 3\sin(x)$.
+\begin{align*}
+  \textbf{a)}\quad f'(x) &= 5 \cdot 3e^{3x} = 15e^{3x} \\
+  \textbf{b)}\quad f'(x) &= 1/x \\
+  \textbf{c)}\quad f'(x) &= -2\sin(x) - 3\cos(x)
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[Beräkna derivata i en punkt]
+Strömmen $i(t) = I_0 e^{-t/\tau}$ ampere beskriver urladdningen av en kondensator. Beräkna
+$i'(0)$.
+\[
+  i'(t) = -\frac{I_0}{\tau} e^{-t/\tau} \quad \Rightarrow \quad i'(0) = -\frac{I_0}{\tau}
+\]
+$i'(0)$ är den momentana strömförändringshastigheten vid $t = 0$.
+\end{exempel}
+
+\begin{exempel}[Stationär punkt för exponentialfunktion]
+Bestäm extrempunkten för $f(x) = xe^{-x}$. Produktregeln (\secref{c13:sec:produktregeln})
+med $g(x) = x$ och $h(x) = e^{-x}$ ger
+\[
+  f'(x) = e^{-x} + x \cdot (-e^{-x}) = e^{-x}(1 - x)
+\]
+$f'(x) = 0$ ger $x = 1$, eftersom $e^{-x} \neq 0$. Andraderivatan är
+\[
+  f''(x) = -e^{-x}(1 - x) + e^{-x}(-1) = e^{-x}(x - 2),
+\]
+och
+\[
+  f''(1) = e^{-1}(1 - 2) = -e^{-1} < 0 \quad \Rightarrow \quad
+  \text{\textbf{maximum} i } (1, e^{-1}) \approx (1;\, 0{,}37).
+\]
+\end{exempel}

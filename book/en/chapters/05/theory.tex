@@ -1,0 +1,168 @@
+% Sections 5.1 to 5.7, translated from sv/chapters/05/theory.tex.
+
+\section{Powers}
+\label{c5:sec:potenser}
+A \textbf{power} is a number multiplied by itself repeatedly:
+\[
+  a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ factors}}
+\]
+Here $a$ is called the \textbf{base} and $n$ the \textbf{exponent}.
+
+\begin{exempel}
+\[
+  2^4 = 2 \times 2 \times 2 \times 2 = 16, \qquad 10^3 = 1\,000
+\]
+\end{exempel}
+
+\section{Laws of exponents}
+\label{c5:sec:potensregler}
+The following seven rules hold for all $a \neq 0$ and $b \neq 0$.
+
+\begingroup
+\renewcommand{\arraystretch}{1.7}
+\begin{narrowtable}{@{}cll@{}}
+  \thead{No.} & \thead{Rule} & \thead{Formula} \\
+  \midrule
+  1 & Product rule & $a^m \cdot a^n = a^{m+n}$ \\
+  2 & Quotient rule & $\dfrac{a^m}{a^n} = a^{m-n}$ \\
+  3 & Power of a power & $(a^m)^n = a^{m \cdot n}$ \\
+  4 & Power of a product & $(a \cdot b)^n = a^n \cdot b^n$ \\
+  5 & Power of a quotient & $\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ \\
+  6 & Zero exponent & $a^0 = 1$ \\
+  7 & Negative exponent & $a^{-n} = \dfrac{1}{a^n}$ \\
+\end{narrowtable}
+\endgroup
+
+\begin{exempel}[Rule 1]
+\[
+  10^3 \cdot 10^4 = 10^{3+4} = 10^7
+\]
+\end{exempel}
+
+\begin{exempel}[Rule 7]
+\[
+  10^{-3} = \frac{1}{10^3} = \frac{1}{1000} = 0.001
+\]
+\end{exempel}
+
+\section{Roots}
+\label{c5:sec:rotter}
+The \textbf{square root} of $a$ ($a \geq 0$) is the non-negative number whose square is $a$:
+\[
+  \sqrt{a} = a^{1/2} \quad \text{since} \quad \left(\sqrt{a}\right)^2 = a
+\]
+The \textbf{$n$th root} of $a$ is the number whose $n$th power is $a$:
+\[
+  \sqrt[n]{a} = a^{1/n}
+\]
+
+\subsection{Fractional exponents}
+\label{c5:sec:brakexponenter}
+Roots and powers are combined with fractional exponents:
+\[
+  a^{m/n} = \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m
+\]
+
+\begin{exempel}
+\[
+  8^{2/3} = \left(\sqrt[3]{8}\right)^2 = 2^2 = 4
+\]
+\end{exempel}
+
+\subsection{Rules for roots}
+\label{c5:sec:rotregler}
+\[
+  \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}, \qquad \sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}
+\]
+
+\begin{aside}
+\note[Note] $\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$. This is a common mistake!
+\end{aside}
+
+\section{Scientific notation (standard form)}
+\label{c5:sec:standardform}
+Electrical engineering involves extremely large and extremely small numbers, for example
+$R = 1\,000\,000\,\Omega$ and $C = 0.000\,000\,001\,\text{F}$.
+
+\textbf{Scientific notation} writes the number as $a \times 10^n$, where $1 \leq a < 10$:
+\[
+  1\,000\,000 = 1.0 \times 10^6, \qquad 0.000\,000\,001 = 1.0 \times 10^{-9}
+\]
+
+\subsection{SI prefixes}
+\label{c5:sec:siprefix}
+
+\begin{narrowtable}{@{}llc@{}}
+  \thead{Prefix} & \thead{Symbol} & \thead{Factor} \\
+  \midrule
+  Giga & G & $10^9$ \\
+  Mega & M & $10^6$ \\
+  Kilo & k & $10^3$ \\
+  Milli & m & $10^{-3}$ \\
+  Micro & $\mu$ & $10^{-6}$ \\
+  Nano & n & $10^{-9}$ \\
+  Pico & p & $10^{-12}$ \\
+\end{narrowtable}
+
+\begin{exempel}
+$4.7\,\text{k}\Omega = 4.7 \times 10^3\,\Omega = 4\,700\,\Omega$
+\end{exempel}
+
+\begin{exempel}
+$33\,\text{nF} = 33 \times 10^{-9}\,\text{F} = 3.3 \times 10^{-8}\,\text{F}$
+\end{exempel}
+
+\section{Calculating in scientific notation}
+\label{c5:sec:rakning}
+\textbf{Multiplication:}
+\[
+  (3 \times 10^4) \times (2 \times 10^3) = 6 \times 10^7
+\]
+\textbf{Division:}
+\[
+  \frac{6 \times 10^6}{2 \times 10^2} = 3 \times 10^4
+\]
+\textbf{Addition} (the terms must have the same exponent):
+\[
+  3.5 \times 10^3 + 2.0 \times 10^3 = 5.5 \times 10^3
+\]
+
+\section{Significant figures and rounding}
+\label{c5:sec:vardesiffror}
+\textbf{Significant figures} are the digits that carry meaningful information in a measured value.
+\begin{itemize}
+  \item $4\,700\,\Omega$ can have 2, 3 or 4 significant figures; there is no telling without
+    context.
+  \item $4.70 \times 10^3\,\Omega$ clearly has \textbf{3 significant figures}.
+\end{itemize}
+The result of a calculation should normally be given with as many significant figures as the
+least precise input.
+
+\textbf{Rounding rule:} If the digit after the rounding position is $5$ or more, round up;
+otherwise round down.
+
+\section{Application: electrical power}
+\label{c5:sec:effekt}
+The power dissipated in a resistor $R$ at the voltage $U$ is
+\[
+  P = \frac{U^2}{R}.
+\]
+
+\begin{exempel}
+With $U = 6\,\text{V}$ and $R = 50\,\Omega$,
+\[
+  P = \frac{6^2}{50} = \frac{36}{50} = 0.72\,\text{W}.
+\]
+\end{exempel}
+
+At a given current $I$, the power is
+\[
+  P = RI^2.
+\]
+
+\begin{exempel}
+With $I = 20\,\text{mA} = 20 \times 10^{-3}\,\text{A}$ and $R = 1\,\text{k}\Omega = 10^3\,\Omega$,
+\[
+  P = 10^3 \times (20 \times 10^{-3})^2 = 10^3 \times 400 \times 10^{-6} = 0.4\,\text{W}.
+\]
+\end{exempel}

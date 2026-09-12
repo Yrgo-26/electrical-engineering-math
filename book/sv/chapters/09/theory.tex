@@ -1,0 +1,112 @@
+% Sections 9.1 to 9.5, from lectures/L09/appendix/a_theory.md.
+
+\section{Vinkelmått: grader och radianer}
+\label{c9:sec:vinkelmatt}
+Vinklar kan anges i \textbf{grader} ($^{\circ}$) eller \textbf{radianer} (rad). Omvandlingsformlerna
+är
+\[
+  v_{\text{rad}} = v_{\text{grad}} \cdot \frac{\pi}{180^{\circ}}
+  \qquad \text{och} \qquad
+  v_{\text{grad}} = v_{\text{rad}} \cdot \frac{180^{\circ}}{\pi}.
+\]
+
+\begin{narrowtable}{@{}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}@{}}
+  \thead{Grader} & \thead{Radianer} \\
+  \midrule
+  $0^{\circ}$ & $0$ \\
+  $30^{\circ}$ & $\pi/6$ \\
+  $45^{\circ}$ & $\pi/4$ \\
+  $60^{\circ}$ & $\pi/3$ \\
+  $90^{\circ}$ & $\pi/2$ \\
+  $180^{\circ}$ & $\pi$ \\
+  $360^{\circ}$ & $2\pi$ \\
+\end{narrowtable}
+
+\section{Sinusfunktionen}
+\label{c9:sec:sinus}
+Sinusfunktionen $\sin(\theta)$ är definierad via enhetscirkeln och har följande egenskaper:
+\begin{itemize}
+  \item definitionsmängd: $\mathbb{R}$,
+  \item värdemängd: $[-1, 1]$,
+  \item period: $2\pi$, ett helt varv.
+\end{itemize}
+
+\section{Växelspänningsekvationen}
+\label{c9:sec:vaxelspanning}
+En sinusformad växelspänning beskrivs av
+\[
+  u(t) = \abs{U} \sin(\omega t + \delta).
+\]
+
+\begin{booktable}{@{}p{8em}p{4em}p{3.5em}L@{}}
+  \thead{Parameter} & \thead{Symbol} & \thead{Enhet} & \thead{Beskrivning} \\
+  \midrule
+  Amplitud & $\abs{U}$ & V & Toppvärdet \\
+  Vinkelhastighet & $\omega$ & rad/s & $\omega = 2\pi f$ \\
+  Frekvens & $f$ & Hz & Antal perioder per sekund \\
+  Periodtid & $T$ & s & $T = 1/f$ \\
+  Fasvinkel & $\delta$ & rad & Förskjutning i tid \\
+\end{booktable}
+
+Storheterna hänger ihop enligt
+\[
+  \omega = 2\pi f = \frac{2\pi}{T}.
+\]
+
+\textbf{Fasförskjutning i tid.} En positiv fasvinkel $\delta$ innebär att spänningen är tidig,
+alltså förskjuten åt vänster i grafen. En negativ $\delta$ innebär att den är försenad.
+
+\section{Avläsa egenskaper från en graf}
+\label{c9:sec:graf}
+Ur en sinusgraf kan man avläsa:
+\begin{itemize}
+  \item \textbf{amplituden} $\abs{U}$: avståndet från noll till toppvärdet,
+  \item \textbf{periodtiden} $T$: längden på ett komplett varv,
+  \item \textbf{frekvensen} $f = 1/T$,
+  \item \textbf{fasvinkeln} $\delta$: jämför topptidpunkten med $T/4$, eftersom toppen utan fas
+    hade nåtts vid $t = T/4$.
+\end{itemize}
+
+\section{Typexempel}
+\label{c9:sec:typexempel}
+
+\begin{exempel}[Vinkelomvandlingar]
+Omvandla följande vinklar till radianer: $45^{\circ}$, $90^{\circ}$, $270^{\circ}$, $-60^{\circ}$
+och $135^{\circ}$. Med formeln $v_{\text{rad}} = v_{\text{grad}} \cdot \pi/180^{\circ}$ blir
+\[
+  45^{\circ} \to \frac{\pi}{4}, \quad 90^{\circ} \to \frac{\pi}{2}, \quad
+  270^{\circ} \to \frac{3\pi}{2}, \quad -60^{\circ} \to -\frac{\pi}{3}, \quad
+  135^{\circ} \to \frac{3\pi}{4}.
+\]
+\end{exempel}
+
+\begin{exempel}[Bestäm egenskaper ur en graf]
+En växelspänning har amplituden $\abs{U} = 4\,\text{V}$ och periodtiden $T = 40\,\text{ms}$, och
+toppvärdet nås vid $t = 15\,\text{ms}$. \textbf{Vinkelhastigheten} blir
+\[
+  f = \frac{1}{T} = \frac{1}{0{,}04} = 25\,\text{Hz}, \qquad
+  \omega = 2\pi \cdot 25 = 50\pi\,\text{rad/s}.
+\]
+\textbf{Fasvinkeln.} Utan fasförskjutning nås toppen vid $T/4 = 10\,\text{ms}$. Toppen nås vid
+$15\,\text{ms}$, alltså $5\,\text{ms}$ för sent, vilket ger en negativ fas:
+\[
+  \delta = -2\pi \cdot \frac{5\,\text{ms}}{40\,\text{ms}} = -\frac{\pi}{4}\,\text{rad}
+\]
+\textbf{Ekvationen} blir
+\[
+  u(t) = 4\sin\!\left(50\pi t - \frac{\pi}{4}\right)\,\text{V}.
+\]
+\end{exempel}
+
+\begin{exempel}[Skriv ekvation från givna parametrar]
+En växelspänning har amplituden $4\,\text{V}$, frekvensen $50\,\text{Hz}$ och fasen
+$-30^{\circ}$. Då är
+\[
+  \delta = \frac{-30^{\circ} \cdot \pi}{180^{\circ}} = -\frac{\pi}{6}\,\text{rad}, \qquad
+  \omega = 2\pi \cdot 50 = 100\pi\,\text{rad/s},
+\]
+och ekvationen blir
+\[
+  u(t) = 4\sin\!\left(100\pi t - \frac{\pi}{6}\right)\,\text{V}.
+\]
+\end{exempel}

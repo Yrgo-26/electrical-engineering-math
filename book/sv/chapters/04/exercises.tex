@@ -1,0 +1,215 @@
+% Section 4.6, from lectures/L04/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c4:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L04}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Ohms lag: sök spänning}
+En krets har $R = 47\,\Omega$ och $I = 200\,\text{mA} = 0{,}2\,\text{A}$.
+\begin{parts}
+  \item Beräkna spänningen $U$.
+  \item Effekten i motståndet ges av $P = U \cdot I$. Beräkna effekten.
+\end{parts}
+
+\uppgift{1.2}{Linjär ekvation i RC-krets}
+Tidskonstanten $\tau$ i en RC-krets ges av $\tau = R \cdot C$. I kretsen är
+$\tau = 20\,\text{ms}$ och $C = 10\,\mu\text{F}$.
+\begin{parts}
+  \item Sätt upp ekvationen och lös ut $R$.
+  \item Ange $R$ i $\text{k}\Omega$.
+\end{parts}
+
+\uppgift{1.3}{Olikhet}
+En förstärkare levererar utspänningen $U_{\text{ut}} = 5 \cdot U_{\text{in}}$. Utspänningen får
+inte överstiga $15\,\text{V}$. Sätt upp och lös en olikhet för $U_{\text{in}}$.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Algebraiskt ekvationssystem}
+Lös ekvationssystemet
+\[
+  \begin{cases}
+    3x + y = 11 \\
+    x - 2y = -2
+  \end{cases}
+\]
+
+\uppgift{2.2}{Strömsystem med Kirchhoffs strömlag}
+I en nod gäller KCL: summan av inströmmarna är lika med summan av utströmmarna. En nod har
+inströmmarna $I_1$ och $I_2$ samt utströmmen $I_3 = 5\,\text{A}$. Dessutom vet vi att
+$I_1 = 2 I_2$.
+\begin{parts}
+  \item Sätt upp ett ekvationssystem för $I_1$ och $I_2$.
+  \item Lös systemet och ange strömmarnas värden.
+\end{parts}
+
+\uppgift{2.3}{Spänning och ström via KVL}
+En krets består av en spänningskälla $E = 12\,\text{V}$ och två motstånd $R_1$ och $R_2$ i serie.
+KVL ger $E = U_1 + U_2$, det vill säga $U_1 + U_2 = 12$. Dessutom är spänningsfallet över $R_2$
+tre gånger så stort som över $R_1$: $U_2 = 3 U_1$.
+\begin{parts}
+  \item Sätt upp ekvationssystemet.
+  \item Lös systemet och beräkna $U_1$ och $U_2$.
+  \item Strömmen är $I = 2\,\text{A}$. Beräkna $R_1$ och $R_2$ med Ohms lag.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Substitutionsmetoden}
+Lös systemen med substitutionsmetoden.
+\begin{delar}(3)
+  \task $\begin{cases} y = 2x + 1 \\ 3x + y = 11 \end{cases}$
+  \task $\begin{cases} x = 3y \\ x + 2y = 15 \end{cases}$
+  \task $\begin{cases} x + y = 10 \\ x - y = 4 \end{cases}$
+\end{delar}
+
+\uppgift{3.2}{Additionsmetoden}
+Lös systemen med additionsmetoden.
+\begin{delar}(4)
+  \task $\begin{cases} 2x + y = 7 \\ x - y = 2 \end{cases}$
+  \task $\begin{cases} 3x + 2y = 16 \\ x - 2y = 0 \end{cases}$
+  \task $\begin{cases} 5x + 3y = 21 \\ 2x - y = 4 \end{cases}$
+  \task $\begin{cases} 3x + 4y = 10 \\ 2x - 3y = 1 \end{cases}$
+\end{delar}
+
+\uppgift{3.3}{Antal lösningar}
+Avgör om systemet har exakt en lösning, ingen lösning eller oändligt många. Motivera med hur
+linjerna ligger.
+\begin{delar}[column-sep=0.4em](4)
+  \task $\begin{cases} x + y = 4 \\ 2x + 2y = 8 \end{cases}$
+  \task $\begin{cases} x + y = 4 \\ x + y = 6 \end{cases}$
+  \task $\begin{cases} x + y = 4 \\ x - y = 0 \end{cases}$
+  \task $\begin{cases} 2x - 4y = 6 \\ -x + 2y = -3 \end{cases}$
+\end{delar}
+
+\uppgift{3.4}{Grafisk tolkning}
+Betrakta systemet
+\[
+  \begin{cases}
+    y = 2x - 1 \\
+    y = -x + 5
+  \end{cases}
+\]
+\begin{parts}
+  \item Gör en värdetabell för båda linjerna med $x = 0, 1, 2, 3, 4$.
+  \item Vid vilket $x$ ger de båda uttrycken samma $y$? Avläs skärningspunkten ur tabellen.
+  \item Lös systemet algebraiskt och kontrollera avläsningen.
+  \item Hur skulle tabellen se ut om systemet saknade lösning?
+\end{parts}
+
+\uppgift{3.5}{System med bråk och decimaltal}
+Lös systemen.
+\begin{delar}(2)
+  \task $\begin{cases} 0{,}5x + y = 4 \\ x - y = 2 \end{cases}$
+  \task $\begin{cases} \dfrac{x}{2} + \dfrac{y}{3} = 4 \\ x - y = 3 \end{cases}$
+\end{delar}
+
+\begin{aside}
+\note[Tips] Multiplicera bort nämnarna innan du väljer metod.
+\end{aside}
+
+\uppgift{3.6}{KCL i en nod}
+I en nod flyter strömmarna $I_1$ och $I_2$ in, medan $I_3 = 12\,\text{A}$ flyter ut. Mätning visar
+dessutom att $I_1$ är $4\,\text{A}$ större än $I_2$.
+\begin{parts}
+  \item Sätt upp ett ekvationssystem för $I_1$ och $I_2$.
+  \item Lös systemet.
+  \item Kontrollera lösningen i båda ekvationerna.
+\end{parts}
+
+\uppgift{3.7}{Strömdelning i en parallellkoppling}
+Två motstånd $R_1$ och $R_2$ är parallellkopplade över spänningen $U = 24\,\text{V}$. Den totala
+strömmen är $I = 3\,\text{A}$, och grenströmmen genom $R_1$ är dubbelt så stor som den genom
+$R_2$.
+\begin{parts}
+  \item Sätt upp ett ekvationssystem för grenströmmarna $I_1$ och $I_2$.
+  \item Lös systemet.
+  \item Beräkna $R_1$ och $R_2$ med Ohms lag.
+  \item Kontrollera att parallellresistansen $R_1 \parallell R_2$ stämmer med $\dfrac{U}{I}$.
+\end{parts}
+
+\uppgift{3.8}{KVL i en seriekrets}
+En seriekrets med två motstånd matas med $E = 15\,\text{V}$. Spänningsfallen uppfyller KVL, och
+$U_1$ är $3\,\text{V}$ större än $U_2$.
+\begin{parts}
+  \item Sätt upp ekvationssystemet.
+  \item Lös systemet.
+  \item Strömmen är $I = 0{,}3\,\text{A}$. Beräkna $R_1$ och $R_2$.
+  \item Kontrollera att $R_1 + R_2 = \dfrac{E}{I}$.
+\end{parts}
+
+\uppgift{3.9}{Arbetspunkt: källa och last}
+En spänningskälla med inre resistans ger klämspänningen $U = 12 - 2I$, där $I$ är strömmen i
+ampere. Källan belastas med ett motstånd på $4\,\Omega$, vilket enligt Ohms lag ger $U = 4I$.
+\begin{parts}
+  \item Sätt upp ekvationssystemet för $U$ och $I$.
+  \item Lös systemet.
+  \item Kontrollera lösningen i båda ekvationerna.
+  \item Vad kallas den punkt där källans och lastens karaktäristik skär varandra?
+\end{parts}
+
+\uppgift{3.10}{Dimensionera en spänningsdelare}
+Två motstånd är seriekopplade och den totala resistansen är $R_1 + R_2 = 900\,\Omega$. När serien
+matas med $U = 9\,\text{V}$ blir spänningen över $R_1$ lika med $6\,\text{V}$.
+\begin{parts}
+  \item Använd spänningsdelningen $\dfrac{U_1}{U} = \dfrac{R_1}{R_1 + R_2}$ för att få en andra
+    ekvation.
+  \item Lös systemet och ange $R_1$ och $R_2$.
+  \item Kontrollera svaret med spänningsdelarformeln.
+\end{parts}
+
+\uppgift{3.11}{System med tre obekanta}
+I en krets gäller följande samband mellan tre grenströmmar (i ampere):
+\[
+  \begin{cases}
+    I_1 + I_2 + I_3 = 9 \\
+    I_1 - I_2 = 1 \\
+    I_3 = 4
+  \end{cases}
+\]
+\begin{parts}
+  \item Lös systemet.
+  \item Kontrollera lösningen i alla tre ekvationerna.
+  \item Varför är den tredje ekvationen särskilt bekväm att börja med?
+\end{parts}
+
+\uppgift{3.12}{Ställ upp systemet ur en text}
+Ett kretskort byggs med två resistortyper, A och B. Fem resistorer av typ A tillsammans med tre av
+typ B ger seriekopplat $4\,390\,\Omega$. Två av typ A tillsammans med fyra av typ B ger
+$3\,660\,\Omega$.
+\begin{parts}
+  \item Inför beteckningarna $R_A$ och $R_B$ och sätt upp ekvationssystemet.
+  \item Lös systemet.
+  \item Kontrollera svaret i båda ekvationerna.
+\end{parts}
+
+\uppgift{3.13}{Kontrollera en föreslagen lösning}
+Avgör \textbf{utan} att lösa systemet om det angivna talparet är en lösning.
+\begin{parts}
+  \item $(x, y) = (2, 3)$ till $x + y = 5$ och $2x - y = 1$.
+  \item $(x, y) = (1, 4)$ till $3x + y = 7$ och $x - y = -3$.
+  \item $(x, y) = (5, 1)$ till $x - 2y = 3$ och $x + y = 7$.
+  \item Varför räcker det inte att kontrollera i bara en av ekvationerna?
+\end{parts}
+
+\uppgift{3.14}{Blandade system}
+Lös med den metod du tycker passar bäst.
+\begin{delar}(3)
+  \task $\begin{cases} 4x - y = 5 \\ 2x + 3y = 13 \end{cases}$
+  \task $\begin{cases} x + 3y = 1 \\ 2x - y = 9 \end{cases}$
+  \task $\begin{cases} 6x + 2y = 10 \\ 3x - y = 7 \end{cases}$
+  \task* Motivera kort varför du valde respektive metod.
+\end{delar}

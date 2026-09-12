@@ -1,0 +1,208 @@
+% Sections 1.1 to 1.5, from lectures/L01/appendix/a_theory.md.
+
+\section{Talmängder}
+\label{c1:sec:talmangder}
+Matematiken är uppbyggd kring olika talmängder. Varje mängd är en utökning av den föregående.
+
+\begin{booktable}{@{}p{7.6em}p{4.6em}LL@{}}
+  \thead{Mängd} & \thead{Notation} & \thead{Beskrivning} & \thead{Exempel} \\
+  \midrule
+  Naturliga tal & $\mathbb{N}$ & Positiva heltal och noll & $0, 1, 2, 3, \ldots$ \\
+  Heltal & $\mathbb{Z}$ & Naturliga tal samt negativa tal & $\ldots, -2, -1, 0, 1, 2, \ldots$ \\
+  Rationella tal & $\mathbb{Q}$ & Tal som kan skrivas som $\frac{p}{q}$, där $p$ och $q$ är
+    heltal och $q \neq 0$ & $\frac{1}{2},\, -\frac{3}{4},\, 0{,}75$ \\
+  Irrationella tal & -- & Tal som \emph{inte} kan skrivas som $\frac{p}{q}$ &
+    $\pi,\, \sqrt{2},\, e$ \\
+  Reella tal & $\mathbb{R}$ & Alla rationella och irrationella tal & Samtliga tal på tallinjen \\
+\end{booktable}
+
+I elektroteknik används alla dessa talmängder. Resistansvärden är ofta rationella
+($R = 4{,}7\,\text{k}\Omega$), medan konstanter som $\pi$ förekommer i formler för
+växelströmssystem.
+
+\section{Tallinjen och absolutbelopp}
+\label{c1:sec:absolutbelopp}
+Alla reella tal kan placeras på en \textbf{tallinje}. Talets avstånd från origo (noll) kallas
+\textbf{absolutbelopp} och betecknas $\abs{a}$:
+\[
+  \abs{a} =
+  \begin{cases}
+    a & \text{om } a \geq 0 \\
+    -a & \text{om } a < 0
+  \end{cases}
+\]
+
+\begin{exempel}
+\[
+  \abs{5} = 5, \qquad \abs{-3} = 3, \qquad \abs{0} = 0
+\]
+\end{exempel}
+
+Absolutbeloppet är alltid icke-negativt: $\abs{a} \geq 0$.
+
+I elektroteknik används absolutbelopp bland annat för att ange amplituden hos en växelspänning,
+oavsett om spänningen är positiv eller negativ i stunden.
+
+\section{Räkneordning}
+\label{c1:sec:rakneordning}
+När ett uttryck innehåller flera räkneoperationer gäller följande prioritetsordning:
+\begin{enumerate}
+  \item \textbf{Parenteser}: räkna ut den innersta först och arbeta utåt.
+  \item \textbf{Potenser och rötter}: beräkna exponenter och rötter.
+  \item \textbf{Multiplikation och division}: från vänster till höger.
+  \item \textbf{Addition och subtraktion}: från vänster till höger.
+\end{enumerate}
+
+\begin{exempel}
+\[
+  3 + 2 \times 4^2 - (1 + 5) = 3 + 2 \times 16 - 6 = 3 + 32 - 6 = 29
+\]
+\end{exempel}
+
+\section{Bråkräkning}
+\label{c1:sec:brak}
+
+\subsection{Förenkling}
+\label{c1:sec:forenkling}
+Ett bråk förenklas genom att täljare och nämnare delas med sin största gemensamma delare (SGD):
+\[
+  \frac{12}{18} = \frac{12 \div 6}{18 \div 6} = \frac{2}{3}
+\]
+
+\subsection{Addition och subtraktion}
+\label{c1:sec:bradd}
+Bråk adderas och subtraheras med \textbf{gemensam nämnare}:
+\[
+  \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
+\]
+
+\begin{exempel}
+\[
+  \frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12}
+\]
+\end{exempel}
+
+\subsection{Multiplikation}
+\label{c1:sec:brmult}
+Täljare multipliceras med täljare, nämnare med nämnare:
+\[
+  \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
+\]
+
+\begin{exempel}
+\[
+  \frac{2}{3} \times \frac{3}{5} = \frac{6}{15} = \frac{2}{5}
+\]
+\end{exempel}
+
+\subsection{Division}
+\label{c1:sec:brdiv}
+Division med ett bråk är detsamma som multiplikation med bråkets inverterade värde, dess
+\emph{reciprok}:
+\[
+  \frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} = \frac{ad}{bc}
+\]
+
+\begin{exempel}
+\[
+  \frac{3}{4} \div \frac{3}{8} = \frac{3}{4} \times \frac{8}{3} = \frac{24}{12} = 2
+\]
+\end{exempel}
+
+\subsection{Parallellkopplade motstånd}
+\label{c1:sec:parallell}
+I elektroteknik uppstår bråkräkning naturligt vid beräkning av parallellkopplade motstånd. Den
+totala resistansen $R_{\text{TOT}}$ för två parallellkopplade motstånd $R_1$ och $R_2$ ges av
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}.
+\]
+
+\begin{exempel}
+Med $R_1 = 6\,\Omega$ och $R_2 = 3\,\Omega$ blir
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6}
+  = \frac{1}{2},
+\]
+alltså $R_{\text{TOT}} = 2\,\Omega$.
+\end{exempel}
+
+\subsection{Serie- och parallellkoppling}
+\label{c1:sec:serieparallell}
+När flera motstånd sitter i samma krets kan de ersättas av ett enda motstånd, en så kallad
+\textbf{ersättningsresistans}.
+
+\textbf{Seriekoppling} innebär att motstånden är kopplade efter varandra. Ersättningsresistansen
+$R_{\text{s}}$ är summan av resistanserna:
+\[
+  R_{\text{s}} = R_1 + R_2
+\]
+
+\textbf{Parallellkoppling} innebär att motstånden är kopplade bredvid varandra, vilket skrivs
+$R_1 \parallell R_2$. Utöver formeln i \secref{c1:sec:parallell} kan parallellresistansen
+$R_{\text{p}}$ av \emph{två} motstånd beräknas som produkt genom summa, vilket ofta går snabbare:
+\[
+  R_{\text{p}} = R_1 \parallell R_2 = \frac{R_1 \times R_2}{R_1 + R_2}
+\]
+Parallellresistansen blir alltid mindre än det minsta av de ingående motstånden.
+
+\textbf{Ohms lag} knyter ihop spänningen $U$, resistansen $R$ och strömmen $I$:
+\[
+  U = R \times I
+  \qquad \Leftrightarrow \qquad
+  I = \frac{U}{R}
+  \qquad \Leftrightarrow \qquad
+  R = \frac{U}{I}
+\]
+
+\begin{aside}
+\note[Tips] Räknas resistansen i k$\Omega$ och spänningen i V fås strömmen direkt i mA. Då slipper
+man hålla reda på tiopotenser.
+\end{aside}
+
+\begin{exempel}[Förenkla en krets]
+Kretsen nedan förenklas stegvis tills endast ett motstånd återstår. Först ersätts
+parallellkopplingen av $R_2$ och $R_3$ med $R_{\text{p}}$, därefter adderas $R_1$ till den totala
+resistansen $R_{\text{TOT}}$.
+
+\bild[\linewidth]{lectures/L01/appendix/images/circuit_simplification.png}
+
+Med $R_1 = 2\,\text{k}\Omega$, $R_2 = 12\,\text{k}\Omega$, $R_3 = 6\,\text{k}\Omega$ och
+$U = 12\,\text{V}$ blir
+\begin{gather*}
+  R_{\text{p}} = \frac{12 \times 6}{12 + 6} = \frac{72}{18} = 4\,\text{k}\Omega, \\
+  R_{\text{TOT}} = R_1 + R_{\text{p}} = 2 + 4 = 6\,\text{k}\Omega, \\
+  I = \frac{U}{R_{\text{TOT}}} = \frac{12}{6} = 2\,\text{mA}.
+\end{gather*}
+Ordningen är avgörande: parallellkopplingen är en egen delberäkning som måste vara klar innan
+$R_1$ adderas, precis som parenteser beräknas först enligt räkneordningen.
+\end{exempel}
+
+\section{Procent och proportion}
+\label{c1:sec:procent}
+\textbf{Procent} är ett annat sätt att uttrycka ett bråk med nämnaren 100:
+\[
+  p\,\% = \frac{p}{100}
+\]
+En procentandel av ett värde $A$ beräknas som
+\[
+  x\,\% \text{ av } A = \frac{x}{100} \times A.
+\]
+
+\begin{exempel}
+Hur mycket är $30\,\%$ av $200\,\text{V}$?
+\[
+  \frac{30}{100} \times 200 = 60\,\text{V}
+\]
+\end{exempel}
+
+\textbf{Verkningsgrad} (effektivitet) är ett vanligt procentmått i elektroteknik:
+\[
+  \eta = \frac{P_{\text{ut}}}{P_{\text{in}}} \times 100\,\%
+\]
+
+\begin{exempel}
+En transformator tar in $500\,\text{W}$ och levererar $470\,\text{W}$. Verkningsgraden är
+\[
+  \eta = \frac{470}{500} \times 100\,\% = 94\,\%.
+\]
+\end{exempel}

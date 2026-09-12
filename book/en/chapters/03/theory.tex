@@ -1,0 +1,141 @@
+% Sections 3.1 to 3.6, translated from sv/chapters/03/theory.tex.
+
+\section{Equations}
+\label{c3:sec:ekvationer}
+An \textbf{equation} is a statement that two expressions are equal:
+\[
+  \text{left-hand side} = \text{right-hand side}
+\]
+A \textbf{linear equation} in one unknown $x$ is an equation in which $x$ appears to at most the
+first power:
+\[
+  ax + b = c, \quad a \neq 0
+\]
+To \textbf{solve an equation} is to find the value or values of $x$ that satisfy it.
+
+\section{The principles for solving equations}
+\label{c3:sec:principer}
+The solution of an equation does not change if you perform the \emph{same} operation on both sides.
+
+\begin{booktable}{@{}p{12.5em}L@{}}
+  \thead{Principle} & \thead{Description} \\
+  \midrule
+  \textbf{Addition principle} & Add or subtract the same number on both sides \\
+  \textbf{Multiplication principle} & Multiply or divide both sides by the same number ($\neq 0$) \\
+\end{booktable}
+
+\textbf{Strategy:} Move every term with the unknown to one side and the constants to the other.
+
+\section{Solving linear equations step by step}
+\label{c3:sec:losa}
+
+\begin{exempel}
+Solve $3x - 5 = 7$.
+\begin{alignat*}{2}
+  3x - 5 &= 7 \\
+  3x &= 12 &\qquad& \text{add $5$ to both sides} \\
+  x &= 4 && \text{divide both sides by $3$}
+\end{alignat*}
+Check: $3 \cdot 4 - 5 = 12 - 5 = 7$, which is correct.
+\end{exempel}
+
+\begin{exempel}[Ohm's law]
+A circuit has the voltage $U = 12\,\text{V}$ and the current $I = 0.5\,\text{A}$. Calculate the
+resistance $R$. Ohm's law gives
+\[
+  U = R \cdot I \quad \Leftrightarrow \quad 12 = R \cdot 0.5.
+\]
+Divide by $0.5$:
+\[
+  R = \frac{12}{0.5} = 24\,\Omega
+\]
+\end{exempel}
+
+\begin{exempel}[With brackets]
+Solve $2(3x + 1) = 14$.
+\begin{alignat*}{2}
+  6x + 2 &= 14 &\qquad& \text{expand the brackets} \\
+  6x &= 12 && \text{subtract $2$} \\
+  x &= 2 && \text{divide by $6$}
+\end{alignat*}
+\end{exempel}
+
+\section{Proportions}
+\label{c3:sec:proportion}
+A proportion is an equation of the form
+\[
+  \frac{a}{b} = \frac{c}{d}
+\]
+and is solved by \textbf{cross-multiplication}, that is, by multiplying diagonally:
+\[
+  ad = bc
+\]
+
+\begin{exempel}
+Solve $\dfrac{x}{6} = \dfrac{4}{3}$.
+\[
+  3x = 24 \quad \Rightarrow \quad x = 8
+\]
+\end{exempel}
+
+\section{Inequalities}
+\label{c3:sec:olikheter}
+An \textbf{inequality} states that one expression is greater or less than another:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Symbol} & \thead{Read as} \\
+  \midrule
+  $a < b$ & $a$ is less than $b$ \\
+  $a > b$ & $a$ is greater than $b$ \\
+  $a \leq b$ & $a$ is less than or equal to $b$ \\
+  $a \geq b$ & $a$ is greater than or equal to $b$ \\
+\end{narrowtable}
+
+\subsection{Solving inequalities}
+\label{c3:sec:losaolikheter}
+Inequalities are solved exactly like equations, with one important exception:
+
+\begin{aside}
+\note[Note] If you multiply or divide by a \textbf{negative number}, the inequality sign reverses.
+\end{aside}
+
+\begin{exempel}
+Solve $2x + 3 > 9$.
+\[
+  2x > 6 \quad \Rightarrow \quad x > 3
+\]
+The solution is every $x$ greater than $3$, that is, $x \in (3, \infty)$.
+\end{exempel}
+
+\begin{exempel}[Negative number]
+Solve $-3x \leq 12$. Divide by $-3$; the sign reverses:
+\[
+  x \geq -4
+\]
+\end{exempel}
+
+\subsection{Practical application: safe operating area}
+\label{c3:sec:driftomrade}
+A component can take at most $P_{\max} = 2\,\text{W}$, and the power is given by $P = U \cdot I$
+with $I = 0.5\,\text{A}$. The permitted voltage range follows from
+\[
+  U \cdot 0.5 \leq 2 \quad \Rightarrow \quad U \leq 4\,\text{V}.
+\]
+The voltage can be at most $4\,\text{V}$ without damaging the component.
+
+\section{Absolute values in equations}
+\label{c3:sec:absolutbelopp}
+Equations with absolute values generally have two solutions. The equation $\abs{ax + b} = c$,
+with $c \geq 0$, gives
+\[
+  ax + b = c \quad \text{or} \quad ax + b = -c.
+\]
+
+\begin{exempel}
+Solve $\abs{2x - 3} = 5$.
+\begin{align*}
+  \text{Case 1:} &\quad 2x - 3 = 5 \quad \Rightarrow \quad x = 4 \\
+  \text{Case 2:} &\quad 2x - 3 = -5 \quad \Rightarrow \quad x = -1
+\end{align*}
+The solution is $x = 4$ or $x = -1$.
+\end{exempel}

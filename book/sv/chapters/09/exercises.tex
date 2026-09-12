@@ -1,0 +1,236 @@
+% Section 9.7, from lectures/L09/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c9:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L09}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Laddning av kondensator}
+En kondensator laddas i en RC-krets med spänningen
+\[
+  u_{\text{c}}(t) = 5\left(1 - e^{-t/2}\right),
+\]
+där $u_{\text{c}}(t)$ är spänningen över kondensatorn i volt och $t$ är tiden i sekunder,
+definierad för $0 \leq t \leq 10$.
+\begin{parts}
+  \item Beräkna kondensatorspänningen $u_{\text{c}}(t)$ vid $t = 0$.
+  \item Bestäm spänningens värdemängd.
+  \item Bestäm den tidpunkt $t$ då spänningen $u_{\text{c}}(t)$ över kondensatorn är
+    $4\,\text{V}$.
+\end{parts}
+
+\uppgift{1.2}{Rörelse i en servomotor}
+En servomotors vinkelposition (i grader) ges av
+\[
+  v(t) = -0{,}5t^2 + 4t,
+\]
+där $t$ är tiden i sekunder, definierad för $0 \leq t \leq 8$.
+\begin{parts}
+  \item Beräkna vinkeln $v$ vid $t = 0$, $2$, $4$, $6$ och $8\,\text{s}$.
+  \item Rita grafen och markera när servomotorn når sin maximala vinkel.
+  \item Bestäm vid vilka tidpunkter vinkeln är $3{,}5^{\circ}$.
+\end{parts}
+
+\uppgift{1.3}{Förstärkning i ett elektroniskt system}
+I ett förstärkarsystem beskrivs förstärkningen av den rationella funktionen
+\[
+  G(x) = \frac{x^2 + x - 12}{x^2 - 16},
+\]
+där $G(x)$ är förstärkningsfaktorn och $x$ en dimensionslös variabel.
+\begin{parts}
+  \item Faktorisera både täljare och nämnare.
+  \item Ange vilka värden på $x$ som inte är tillåtna.
+  \item Förenkla uttrycket så långt som möjligt.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Vinklar till radianer}
+Omvandla följande vinklar till radianer.
+\begin{delar}(5)
+  \task $-30^{\circ}$
+  \task $20^{\circ}$
+  \task $225^{\circ}$
+  \task $-45^{\circ}$
+  \task $300^{\circ}$
+\end{delar}
+
+\uppgift{2.2}{Vinklar till grader}
+Omvandla följande vinklar till grader.
+\begin{delar}(5)
+  \task $\pi/2$
+  \task $3\pi/4$
+  \task $-5\pi/6$
+  \task $-1$
+  \task $2{,}2$
+\end{delar}
+
+\uppgift{2.3}{Bestämning av en växelspännings egenskaper}
+En växelspänning visas i figuren nedan.
+
+\bild[\linewidth]{lectures/L09/appendix/images/2.3_sine_wave.png}
+
+\begin{aside}
+\note[Obs] Toppvärdet nås efter ca $8{,}33\,\text{ms}$.
+\end{aside}
+
+\noindent Bestäm
+\begin{itemize}
+  \item spänningens amplitud $\abs{U}$ i V,
+  \item spänningens frekvens $f$ i Hz,
+  \item spänningens vinkelhastighet $\omega$ i rad/s,
+  \item spänningens fas $\delta$ i rad,
+  \item spänningens ekvation på formen $u(t) = \abs{U}\sin(\omega t + \delta)$.
+\end{itemize}
+
+\uppgift{2.4}{Växelspänning med given fasförskjutning}
+En växelspänning har amplituden $3\,\text{V}$, frekvensen $25\,\text{Hz}$ och fasen $45^{\circ}$.
+Bestäm växelspänningens ekvation $u(t)$ med fasen i radianer och rita sinuskurvan över en
+period $T$.
+
+\uppgift{2.5}{Beräkning av en växelspännings fas}
+Ekvationen för en växelspänning är
+\[
+  u(t) = 5\sin(60\pi t + \delta)\,\text{V}.
+\]
+Vid tiden $t = 10\,\text{ms}$ gäller att $u(t) = 1{,}25\,\text{V}$. Beräkna fasen $\delta$.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Grader till radianer}
+Omvandla till radianer och ange svaret i exakt form.
+\begin{delar}(6)
+  \task $60^{\circ}$
+  \task $120^{\circ}$
+  \task $-90^{\circ}$
+  \task $210^{\circ}$
+  \task $15^{\circ}$
+  \task $360^{\circ}$
+\end{delar}
+
+\uppgift{3.2}{Radianer till grader}
+Omvandla till grader.
+\begin{delar}(6)
+  \task $\dfrac{\pi}{3}$
+  \task $\dfrac{5\pi}{4}$
+  \task $-\dfrac{\pi}{2}$
+  \task $\dfrac{7\pi}{6}$
+  \task $3\,\text{rad}$
+  \task $0{,}5\,\text{rad}$
+\end{delar}
+
+\uppgift{3.3}{Sinusvärden}
+Ange värdet i exakt form. Använd enhetscirkeln.
+\begin{delar}(6)
+  \task $\sin 0$
+  \task $\sin\dfrac{\pi}{2}$
+  \task $\sin \pi$
+  \task $\sin\dfrac{3\pi}{2}$
+  \task $\sin\dfrac{\pi}{6}$
+  \task $\sin\dfrac{\pi}{4}$
+\end{delar}
+
+\uppgift{3.4}{Frekvens, periodtid och vinkelhastighet}
+Fyll i de tomma rutorna med hjälp av $T = \dfrac{1}{f}$ och $\omega = 2\pi f$.
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{7em}}@{}}
+  \thead{$f$} & \thead{$T$} & \thead{$\omega$} \\
+  \midrule
+  $50\,\text{Hz}$ & & \\
+  & $1\,\text{ms}$ & \\
+  & & $400\pi\,\text{rad/s}$ \\
+  $400\,\text{Hz}$ & & \\
+\end{narrowtable}
+
+\uppgift{3.5}{Avläs egenskaper ur ekvationen}
+Ange amplitud, vinkelhastighet, frekvens, periodtid och fas för
+\begin{delar}(2)
+  \task $u(t) = 5\sin(100\pi t)$
+  \task $u(t) = 12\sin\!\left(200\pi t + \dfrac{\pi}{2}\right)$
+  \task $u(t) = 3\sin\!\left(50\pi t - \dfrac{\pi}{6}\right)$
+  \task $u(t) = 8\sin(2000\pi t)$
+\end{delar}
+
+\uppgift{3.6}{Skriv ekvationen}
+Skriv växelspänningens ekvation på formen $u(t) = \abs{U}\sin(\omega t + \delta)$ med fasen i
+radianer.
+\begin{delar}(2)
+  \task $\abs{U} = 10\,\text{V}$, $f = 50\,\text{Hz}$, $\delta = 0$
+  \task $\abs{U} = 6\,\text{V}$, $f = 100\,\text{Hz}$, $\delta = 90^{\circ}$
+  \task $\abs{U} = 2\,\text{V}$, $T = 5\,\text{ms}$, $\delta = -60^{\circ}$
+  \task $\abs{U} = 325\,\text{V}$, $f = 50\,\text{Hz}$, $\delta = \dfrac{\pi}{4}$
+\end{delar}
+
+\uppgift{3.7}{Momentanvärden}
+En växelspänning ges av $u(t) = 10\sin(100\pi t)$ volt.
+\begin{parts}
+  \item Beräkna $u(0)$.
+  \item Beräkna $u(5\,\text{ms})$.
+  \item Beräkna $u(10\,\text{ms})$.
+  \item Beräkna $u(15\,\text{ms})$.
+  \item Vid vilka tidpunkter under den första perioden är $u(t) = 0$?
+\end{parts}
+
+\uppgift{3.8}{Effektivvärde och effekt}
+För en sinusspänning gäller $U_{\text{RMS}} = \dfrac{\abs{U}}{\sqrt{2}}$.
+\begin{parts}
+  \item Beräkna $U_{\text{RMS}}$ för $u(t) = 12\sin(100\pi t)$.
+  \item En växelspänning har $U_{\text{RMS}} = 230\,\text{V}$ och $f = 50\,\text{Hz}$. Skriv
+    $u(t)$ med $\delta = 0$.
+  \item Spänningen i a) läggs över ett motstånd $R = 100\,\Omega$. Beräkna effekten.
+\end{parts}
+
+\uppgift{3.9}{Fasförskjutning i tid}
+En växelspänning har periodtiden $T = 20\,\text{ms}$.
+\begin{parts}
+  \item Hur många millisekunder motsvarar fasen $\delta = \dfrac{\pi}{2}$?
+  \item Hur många millisekunder motsvarar $\delta = \dfrac{\pi}{6}$?
+  \item En kurva når sitt toppvärde $2\,\text{ms}$ \textbf{tidigare} än en ofasad sinuskurva.
+    Beräkna $\delta$.
+  \item En annan kurva når toppen $5\,\text{ms}$ \textbf{senare}. Beräkna $\delta$.
+\end{parts}
+
+\uppgift{3.10}{Två spänningar med fasskillnad}
+Två växelspänningar ges av
+\[
+  u_1(t) = 4\sin(100\pi t) \qquad \text{och} \qquad
+  u_2(t) = 4\sin\!\left(100\pi t + \frac{\pi}{3}\right).
+\]
+\begin{parts}
+  \item Vilken spänning ligger före den andra, och med hur många grader?
+  \item Hur många millisekunder motsvarar fasskillnaden?
+  \item Beräkna $u_1$ och $u_2$ vid $t = 5\,\text{ms}$.
+  \item Har spänningarna samma amplitud och frekvens?
+\end{parts}
+
+\uppgift{3.11}{Lös en trigonometrisk ekvation}
+En växelspänning ges av $u(t) = 6\sin(100\pi t)$ volt.
+\begin{parts}
+  \item Vid vilken tidpunkt är $u(t) = 3\,\text{V}$ för första gången?
+  \item Ange nästa tidpunkt då $u(t) = 3\,\text{V}$.
+  \item Vid vilken tidpunkt nås toppvärdet första gången?
+  \item Varför har ekvationen $u(t) = 3$ oändligt många lösningar?
+\end{parts}
+
+\uppgift{3.12}{Sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item $\sin\theta$ kan anta värden större än $1$.
+  \item Om frekvensen fördubblas halveras periodtiden.
+  \item Vinkelhastigheten $\omega$ mäts i hertz.
+  \item En positiv fas $\delta$ förskjuter kurvan åt vänster, alltså tidigare i tiden.
+  \item $180^{\circ}$ motsvarar $\pi$ radianer.
+  \item Amplituden är avståndet mellan kurvans lägsta och högsta värde.
+\end{parts}

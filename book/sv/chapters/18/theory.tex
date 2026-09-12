@@ -1,0 +1,521 @@
+% Sections 18.1 to 18.12, from lectures/L18/appendix/a_theory.md. Section 18.1.2 is the local
+% set-up from lectures/L18/code/README.md, shortened.
+
+\section{Standardbiblioteket \code{math.h}}
+\label{c18:sec:mathh}
+\file{math.h} är den del av C:s standardbibliotek som innehåller matematiska funktioner.
+Funktionerna arbetar med flyttal av typen \code{double}.
+
+\begin{ccode}
+#include <math.h>
+#include <stdio.h>
+\end{ccode}
+
+\subsection{Utvecklingsmiljö}
+\label{c18:sec:miljo}
+Under lektionen används OnlineGDB, en \code{gcc}-kompilator som körs direkt i webbläsaren:
+\url{https://www.onlinegdb.com/online_c_compiler}. Ingen installation krävs, och inget konto
+behövs.
+\begin{enumerate}
+  \item Kontrollera att språket är inställt på \textbf{C} i listan uppe till höger.
+  \item Skriv koden i editorn.
+  \item Tryck på \textbf{Run}. Programmets utskrift hamnar i rutan under editorn.
+\end{enumerate}
+
+\begin{aside}
+\note[Obs] Koden sparas inte automatiskt. Kopiera den till en egen fil innan du stänger fliken.
+\end{aside}
+
+Program som skriver ut sampelvärden som CSV (\secref{c18:sec:csv}) körs på vanligt sätt. Markera
+utskriften i utdatarutan, kopiera den och klistra in den i ett kalkylprogram för att rita upp
+signalen.
+
+\subsection{Kompilering på egen dator (frivilligt)}
+\label{c18:sec:egendator}
+Den som hellre vill köra koden lokalt kan sätta upp \textbf{WSL} (Windows Subsystem for Linux)
+med \code{gcc}. Ingenting i kapitlet kräver det -- OnlineGDB räcker hela vägen -- men miljön
+används i senare kurser, så den som vill kan sätta upp den redan nu. WSL kör en
+Linux-distribution, här Ubuntu, i en terminal direkt i Windows, utan en virtuell maskin.
+Installationen kräver administratörsrättigheter och en omstart.
+
+Öppna \textbf{Windows PowerShell} som administratör och kör:
+\begin{shell}
+wsl --install
+wsl --set-default-version 2
+\end{shell}
+Starta om datorn om systemet begär det. Kommandot \code{wsl --status} ska sedan visa
+\code{Default Version: 2}. Installerades inte Ubuntu, finns den senaste LTS-versionen i Microsoft
+Store. WSL kräver Windows~11, eller Windows~10 version 2004 (build 19041) eller senare, och att
+virtualisering är aktiverad i datorns UEFI/BIOS. Saknas administratörsrättigheter går WSL inte att
+installera; använd då OnlineGDB.
+
+Starta sedan \textbf{Ubuntu} från Windows sökfält. Vid första uppstarten väljer du ett
+användarnamn och ett lösenord; lösenordet syns inte medan det skrivs in, vilket är normalt.
+Uppdatera systemet och installera utvecklingsverktygen, bland annat \code{gcc} och \code{make}:
+\begin{shell}
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install build-essential
+gcc --version
+\end{shell}
+Windows-filerna nås från Ubuntu under \file{/mnt/c/}, men arbetet går snabbare om filerna ligger i
+Linux-hemkatalogen, \code{~}. \textbf{VS Code} med tillägget \textbf{WSL} öppnar filerna direkt i
+Ubuntu-miljön; \code{code .} i terminalen öppnar aktuell katalog.
+
+\subsection{Länkning mot matematikbiblioteket}
+\label{c18:sec:lankning}
+Funktionerna i \file{math.h} och \file{complex.h} ligger i ett separat matematikbibliotek,
+\code{libm}. På egen dator måste programmet därför länkas med flaggan \code{-lm}, som placeras
+\textbf{sist} på kommandoraden, efter källkodsfilerna:
+\begin{shell}
+gcc main.c -o main -lm
+./main
+\end{shell}
+Utan \code{-lm} kompilerar programmet, men länkningen misslyckas med felmeddelanden av typen
+\code{undefined reference to 'sqrt'}. Får du det felet i OnlineGDB, lägg till \code{-lm} under
+\textbf{Extra Compiler Flags} i inställningarna (kugghjulet).
+
+\subsection{Konstanter}
+\label{c18:sec:konstanter}
+\code{M_PI} ($\pi$) och \code{M_E} ($e$) finns i \file{math.h} på de flesta system, men de ingår
+inte i C-standarden och saknas därför i strikt standardläge (\code{-std=c11}). OnlineGDB använder
+\code{gcc}:s standardläge, så \code{M_PI} fungerar där, liksom med \code{-std=gnu11}. För att
+koden ska fungera överallt kan konstanten definieras direkt i programmet:
+\begin{ccode}
+#define PI 3.14159265358979323846
+\end{ccode}
+
+\section{Flyttal i C: \code{float} och \code{double}}
+\label{c18:sec:flyttal}
+Heltalstyperna du redan har använt, som \code{int}, \code{uint8_t} och \code{uint16_t}, kan
+endast lagra hela tal: \code{7 / 2} blir \code{3}, inte $3{,}5$. Matematiken i den här kursen
+kräver decimaltal, och då används \textbf{flyttal}.
+
+\textbf{Varför undviks flyttal i mikrokontrollerkod?} En AVR-mikrokontroller saknar
+flyttalsenhet (FPU). Flyttalsberäkningar måste därför utföras i programvara, vilket är långsamt
+och tar stor plats i minnet. På AVR är \code{double} dessutom ofta bara 32~bitar, alltså samma
+precision som \code{float}. En vanlig dator har en FPU och räknar med flyttal utan extra kostnad
+-- därför används de fritt i det här kapitlet.
+
+\subsection{Typer}
+\label{c18:sec:typer}
+\begin{booktable}{@{}p{4.5em}p{5em}p{12.5em}L@{}}
+  \thead{Typ} & \thead{Storlek} & \thead{Ungefärlig precision} & \thead{Användning} \\
+  \midrule
+  \code{float} & 32 bitar & ca 7 signifikanta siffror & När minnet är begränsat \\
+  \code{double} & 64 bitar & ca 15 signifikanta siffror & \textbf{Standard i kursen} \\
+\end{booktable}
+
+Samtliga funktioner i \file{math.h} tar emot och returnerar \code{double}. Använd därför
+\code{double} genomgående.
+
+\subsection{Litteraler}
+\label{c18:sec:litteraler}
+Hur ett tal skrivs avgör vilken typ det får:
+\begin{ccode}
+int    a = 2;      // Heltal.
+double b = 2.0;    // Flyttal (double).
+float  c = 2.0f;   // Flyttal (float).
+\end{ccode}
+
+\begin{aside}
+\note[Obs] Divideras två heltal utförs heltalsdivision, oavsett vilken typ resultatet lagras i:
+\begin{ccode}
+double x = 1 / 2;      // 0.0 - heltalsdivision!
+double y = 1.0 / 2.0;  // 0.5
+\end{ccode}
+\end{aside}
+
+\subsection{Utskrift}
+\label{c18:sec:utskrift}
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Typ} & \thead{Formatspecificerare} \\
+  \midrule
+  \code{int}, \code{uint8_t}, \code{uint16_t} & \code{\%d} \\
+  \code{float}, \code{double} & \code{\%f}, exempelvis \code{\%.3f} för tre decimaler \\
+\end{narrowtable}
+
+\code{printf()} omvandlar automatiskt \code{float} till \code{double}, så \code{\%f} fungerar för
+båda. Använd aldrig \code{\%d} för ett flyttal -- utskriften blir då meningslös.
+
+\subsection{Omvandling mellan heltal och flyttal}
+\label{c18:sec:omvandling}
+Heltal omvandlas automatiskt till flyttal. Åt andra hållet \textbf{avkortas} talet, det avrundas
+inte:
+\begin{ccode}
+const double d = 7;           // 7.0
+const int    n = 3.9;         // 3, inte 4!
+const int    m = round(3.9);  // 4
+\end{ccode}
+
+\subsection{Precision}
+\label{c18:sec:precision}
+Flyttal lagras binärt och kan inte representera alla decimaltal exakt. Uttrycket \code{0.1 + 0.2}
+ger \code{0.30000000000000004}, inte exakt \code{0.3}.
+
+Jämför därför aldrig flyttal med \code{==}. Kontrollera i stället att skillnaden är tillräckligt
+liten:
+\begin{ccode}
+if (fabs(a - b) < 1e-9) { /* Talen betraktas som lika. */ }
+\end{ccode}
+
+\section{Grundläggande funktioner}
+\label{c18:sec:funktioner}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{8.5em}p{7.5em}L@{}}
+  \thead{Matematik} & \thead{C-funktion} & \thead{Kommentar} \\
+  \midrule
+  $\sqrt{x}$ & \code{sqrt(x)} & Kvadratrot, $x \geq 0$ \\
+  $x^y$ & \code{pow(x, y)} & Potens \\
+  $e^x$ & \code{exp(x)} & Exponentialfunktion \\
+  $\ln x$ & \code{log(x)} & Naturlig logaritm, $x > 0$ \\
+  $\lg x$ & \code{log10(x)} & Tiologaritm, $x > 0$ \\
+  $\abs{x}$ & \code{fabs(x)} & Absolutbelopp för flyttal \\
+  $\sqrt{x^2 + y^2}$ & \code{hypot(x, y)} & Belopp för en vektor \\
+  Rest vid division & \code{fmod(x, y)} & Motsvarar \code{\%} fast för flyttal \\
+  Avrundning & \code{round(x)} & \code{floor(x)} nedåt, \code{ceil(x)} uppåt \\
+\end{booktable}
+
+\begin{aside}
+\note[Obs] \code{\%} fungerar endast för heltal. För flyttal används \code{fmod()}.
+\end{aside}
+
+\begin{ccode}
+const double r = sqrt(pow(3.0, 2.0) + pow(4.0, 2.0)); // r = 5.0
+printf("r = %.2f\n", r);
+\end{ccode}
+
+\section{Trigonometriska funktioner}
+\label{c18:sec:trig}
+\begin{narrowtable}{@{}lll@{}}
+  \thead{Matematik} & \thead{C-funktion} & \thead{Returvärde} \\
+  \midrule
+  $\sin(x)$ & \code{sin(x)} & -- \\
+  $\cos(x)$ & \code{cos(x)} & -- \\
+  $\tan(x)$ & \code{tan(x)} & -- \\
+  $\arcsin(x)$ & \code{asin(x)} & $[-\pi/2,\ \pi/2]$ \\
+  $\arccos(x)$ & \code{acos(x)} & $[0,\ \pi]$ \\
+  $\arctan(x)$ & \code{atan(x)} & $(-\pi/2,\ \pi/2)$ \\
+  $\arctan(y/x)$ & \code{atan2(y, x)} & $(-\pi,\ \pi]$ \\
+\end{narrowtable}
+
+\textbf{Samtliga funktioner arbetar i radianer, aldrig i grader.} \code{sin(30)} tolkas som
+$\sin(30\,\text{rad})$ och ger $-0{,}988$, inte $0{,}5$.
+
+\subsection{Omvandling mellan grader och radianer}
+\label{c18:sec:radianer}
+\[
+  \text{rad} = \text{grader} \cdot \frac{\pi}{180}, \qquad
+  \text{grader} = \text{rad} \cdot \frac{180}{\pi}
+\]
+\begin{ccode}
+const double deg = 30.0;
+const double rad = deg * PI / 180.0;
+printf("sin(30 grader) = %.3f\n", sin(rad)); // 0.500
+\end{ccode}
+
+\subsection{\code{atan2} i stället för \code{atan}}
+\label{c18:sec:atan2}
+\code{atan(y / x)} kan inte skilja på kvadrant 1 och 3, eller på kvadrant 2 och 4, eftersom
+tecknen försvinner i divisionen. \code{atan2(y, x)} tar emot $y$ och $x$ var för sig och ger
+därför rätt vinkel i alla fyra kvadranter. Använd alltid \code{atan2()} vid omvandling från
+rektangulär till polär form (\kapref{15}).
+
+\section{Potenser, logaritmer och decibel}
+\label{c18:sec:decibel}
+Från \kapref{10} gäller för spänning respektive effekt:
+\[
+  A_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right), \qquad
+  A_{\text{dB}} = 10\log_{10}\!\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
+\]
+\begin{ccode}
+const double gain_db = 20.0 * log10(u_out / u_in);
+\end{ccode}
+Vägen tillbaka från decibel till förhållande:
+\[
+  \frac{U_{\text{ut}}}{U_{\text{in}}} = 10^{A_{\text{dB}}/20}
+\]
+\begin{ccode}
+const double ratio = pow(10.0, gain_db / 20.0);
+\end{ccode}
+Logaritmer med annan bas beräknas via basbytesregeln $\log_b x = \frac{\ln x}{\ln b}$:
+\begin{ccode}
+const double log2_x = log(x) / log(2.0);
+\end{ccode}
+
+\section{Numerisk derivering}
+\label{c18:sec:derivering}
+Derivatan definieras som gränsvärdet
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
+\]
+En dator kan inte låta $h \to 0$, men med ett litet $h$ fås ett approximativt värde.
+\textbf{Centraldifferensen} ger bättre noggrannhet än formeln ovan, eftersom felen på var sida om
+$x$ tar ut varandra:
+\[
+  f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+\]
+\begin{ccode}
+double derivative(double (*f)(double), const double x, const double h)
+{
+    return (f(x + h) - f(x - h)) / (2.0 * h);
+}
+\end{ccode}
+Anropet sker med en funktionspekare, det vill säga namnet på den funktion som ska deriveras:
+\begin{ccode}
+const double slope = derivative(square, 3.0, 1e-6);
+\end{ccode}
+
+\subsection{Val av \texorpdfstring{$h$}{h}}
+\label{c18:sec:valh}
+\begin{itemize}
+  \item Ett för \textbf{stort} $h$ ger ett metodfel -- approximationen ligger för långt från
+    gränsvärdet.
+  \item Ett för \textbf{litet} $h$ ger ett avrundningsfel -- $f(x + h)$ och $f(x - h)$ blir så
+    lika att de signifikanta siffrorna försvinner i subtraktionen.
+\end{itemize}
+För \code{double} är $h \approx 10^{-6}$ en bra kompromiss.
+
+\section{Numerisk integrering}
+\label{c18:sec:integrering}
+Den bestämda integralen motsvarar arean under kurvan (\kapref{14}). Delas intervallet $[a, b]$
+upp i $n$ lika delar med bredden $h = \frac{b - a}{n}$, kan arean approximeras med
+\textbf{trapetsmetoden}:
+\[
+  \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right]
+\]
+Varje delintervall approximeras alltså med ett trapets i stället för en rektangel, vilket följer
+kurvan betydligt bättre. Noggrannheten ökar med antalet delintervall $n$.
+\begin{ccode}
+double integral(double (*f)(double), const double a, const double b, const int n)
+{
+    const double h = (b - a) / n;
+    double sum     = (f(a) + f(b)) / 2.0;
+
+    for (int k = 1; k < n; ++k)
+    {
+        sum += f(a + k * h);
+    }
+    return sum * h;
+}
+\end{ccode}
+För ett förstagradspolynom ger trapetsmetoden ett \textbf{exakt} resultat, eftersom kurvan då är
+en rät linje. För övriga funktioner uppstår ett fel som minskar när $n$ ökar.
+
+\section{Komplexa tal med \code{complex.h}}
+\label{c18:sec:complex}
+Komplexa tal (kapitel~\ref{c15:ch}--\ref{c17:ch}) hanteras av \file{complex.h}, som används
+tillsammans med \file{math.h}:
+\begin{ccode}
+#include <complex.h>
+#include <math.h>
+\end{ccode}
+Typen heter \code{double complex} och den imaginära enheten heter \code{I}:
+\begin{ccode}
+const double complex z = 3.0 + 4.0 * I;
+\end{ccode}
+
+\begin{aside}
+\note[Obs] Inom elektrotekniken skrivs den imaginära enheten $j$ för att den inte ska förväxlas
+med strömmen $i$. I C heter den alltid \code{I}.
+\end{aside}
+
+\subsection{Funktioner}
+\label{c18:sec:cfunktioner}
+\begin{booktable}{@{}p{7em}p{7.5em}L@{}}
+  \thead{Matematik} & \thead{C-funktion} & \thead{Beskrivning} \\
+  \midrule
+  $\text{Re}(z)$ & \code{creal(z)} & Realdelen \\
+  $\text{Im}(z)$ & \code{cimag(z)} & Imaginärdelen \\
+  $\abs{z}$ & \code{cabs(z)} & Beloppet \\
+  $\arg(z)$ & \code{carg(z)} & Argumentet i radianer, $(-\pi,\ \pi]$ \\
+  $\bar{z}$ & \code{conj(z)} & Konjugatet \\
+  $e^z$ & \code{cexp(z)} & Exponentialfunktionen \\
+  $\sqrt{z}$ & \code{csqrt(z)} & Kvadratroten \\
+\end{booktable}
+
+De fyra räknesätten skrivs som vanligt med \code{+}, \code{-}, \code{*} och \code{/}.
+
+\subsection{Rektangulär och polär form}
+\label{c18:sec:polar}
+Från rektangulär till polär form:
+\begin{ccode}
+const double magnitude = cabs(z);        // |z|
+const double angle     = carg(z);        // arg(z) i radianer
+\end{ccode}
+Från polär till rektangulär form används Eulers formel $z = r e^{j\theta}$:
+\begin{ccode}
+const double complex z = r * cexp(I * theta);
+\end{ccode}
+
+\begin{aside}
+\note[Obs] \code{printf()} kan inte skriva ut ett komplext tal direkt. Real- och imaginärdel
+skrivs ut var för sig:
+\begin{ccode}
+printf("z = %.2f + %.2fj\n", creal(z), cimag(z));
+\end{ccode}
+\end{aside}
+
+\section{Impedans och fasorer}
+\label{c18:sec:impedans}
+Med komplexa tal beräknas impedanser direkt i kod (kapitel~\ref{c16:ch}--\ref{c17:ch}). Med
+vinkelfrekvensen $\omega = 2\pi f$ gäller:
+\[
+  Z_R = R, \qquad Z_L = j\omega L, \qquad Z_C = \frac{1}{j\omega C} = -\frac{j}{\omega C}
+\]
+\needspace{7\baselineskip}
+\begin{ccode}
+const double omega          = 2.0 * PI * f;
+const double complex z_r    = r;
+const double complex z_l    = I * omega * l;
+const double complex z_c    = -I / (omega * c);
+const double complex z_tot  = z_r + z_l; // Seriekoppling.
+\end{ccode}
+En fasor $U = \abs{U} \angle \delta$ skrivs som ett komplext tal på polär form. Addition av
+fasorer sker då med vanlig addition:
+\begin{ccode}
+const double complex u1 = a1 * cexp(I * d1);
+const double complex u2 = a2 * cexp(I * d2);
+const double complex u  = u1 + u2;
+\end{ccode}
+Resultatets amplitud och fasvinkel fås sedan med \code{cabs()} respektive \code{carg()}.
+
+\section{Sampling av en sinussignal}
+\label{c18:sec:sampling}
+En sinusformad spänning beskrivs av
+\[
+  u(t) = \abs{U} \sin(2\pi f t + \delta),
+\]
+där $\abs{U}$ är amplituden i V, $f$ frekvensen i Hz, $t$ tiden i s och $\delta$ fasvinkeln i
+rad.
+
+Vid \textbf{sampling} beräknas signalens värde vid jämnt fördelade tidpunkter. Med
+samplingsfrekvensen $f_s$ blir antalet sampel per period
+\[
+  N = \frac{f_s}{f},
+\]
+och det $k$:te sampelvärdet ($k = 0, 1, \ldots, N-1$) ges av
+\[
+  u_k = \abs{U} \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+\]
+För att signalen ska gå att återskapa ur sina sampel måste \textbf{samplingsteoremet} vara
+uppfyllt:
+\[
+  f_s > 2f
+\]
+\begin{ccode}
+for (int k = 0; k < n; ++k)
+{
+    const double u_k = amplitude * sin(2.0 * PI * k / n + delta);
+    printf("%d,%.6f\n", k, u_k);
+}
+\end{ccode}
+
+\subsection{Utskrift för vidare analys}
+\label{c18:sec:csv}
+Skrivs sampelvärdena ut som \textbf{CSV} (kommaseparerade värden), en rad per sampel, kan de
+läsas in i ett annat program för att ritas upp:
+\begin{console}
+k,u
+0,0.000000
+1,3.535534
+2,5.000000
+\end{console}
+I OnlineGDB markeras utskriften i utdatarutan och kopieras in i ett kalkylprogram, där signalen
+kan ritas upp som ett diagram.
+
+Körs programmet på egen dator kan utskriften i stället sparas direkt till en fil genom
+omdirigering i terminalen:
+\begin{shell}
+./samples > samples.csv
+\end{shell}
+Filen kan sedan öppnas i ett kalkylprogram, eller matas in i en simulator som ritar upp signalen.
+
+\section{Vanliga fallgropar}
+\label{c18:sec:fallgropar}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{10.5em}
+    >{\raggedright\arraybackslash}p{10em}L@{}}
+  \thead{Fallgrop} & \thead{Konsekvens} & \thead{Åtgärd} \\
+  \midrule
+  Glömd \code{-lm} & \code{undefined reference to 'sqrt'} & Lägg flaggan sist vid kompilering,
+    eller under \emph{Extra Compiler Flags} i OnlineGDB \\
+  Grader i stället för radianer & Helt fel värde från \code{sin()}, \code{cos()}, \code{tan()} &
+    Multiplicera med $\pi/180$ \\
+  Heltalsdivision, t.ex.\ \mbox{\code{1 / 2}} & Ger \code{0}, inte \code{0.5} &
+    Skriv \mbox{\code{1.0 / 2.0}} \\
+  \code{atan(y / x)} vid polär form & Fel kvadrant & Använd \code{atan2(y, x)} \\
+  Jämförelse med \code{==} mellan flyttal & Ger sällan sant & Jämför med
+    \code{fabs(a - b) < 1e-9} \\
+  \code{sqrt()} eller \code{log()} med otillåtet argument & Ger \code{nan} respektive \code{-inf}
+    & Kontrollera argumentet först \\
+  \code{\%d} för en \code{double} & Odefinierat beteende & Använd \code{\%f}, exempelvis
+    \code{\%.3f} \\
+\end{booktable}
+
+\section{Typexempel}
+\label{c18:sec:typexempel}
+
+\begin{exempel}[Förstärkning och decibel]
+En förstärkare har inspänningen $U_{\text{in}} = 0{,}5\,\text{V}$ och utspänningen
+$U_{\text{ut}} = 8{,}0\,\text{V}$. Beräkna förstärkningen i dB.
+\[
+  A_{\text{dB}} = 20\log_{10}\!\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) \approx
+  24{,}1\,\text{dB}
+\]
+I kod:
+
+\begin{ccode}
+const double gain_db = 20.0 * log10(8.0 / 0.5); // 24.082 dB.
+\end{ccode}
+\end{exempel}
+
+\begin{exempel}[Numerisk derivering]
+Derivera $f(x) = x^2$ i punkten $x = 3$ och jämför med den analytiska derivatan.
+
+Analytiskt gäller $f'(x) = 2x$, alltså $f'(3) = 6$. Numeriskt med $h = 10^{-6}$:
+\[
+  f'(3) \approx \frac{(3{,}000001)^2 - (2{,}999999)^2}{2 \cdot 10^{-6}} = 6{,}000000
+\]
+Avvikelsen ligger i storleksordningen $10^{-9}$ och beror på flyttalens ändliga precision.
+\end{exempel}
+
+\begin{exempel}[Numerisk integrering]
+Strömmen $i(t) = 2t + 4\,\text{A}$ passerar under $0 \leq t \leq 2\,\text{s}$. Beräkna
+laddningen $q$.
+
+Analytiskt (\kapref{14}):
+\[
+  q = \int_0^2 (2t + 4)\,dt = \Bigl[t^2 + 4t\Bigr]_0^2 = 4 + 8 = 12\,\text{C}
+\]
+Trapetsmetoden med $n = 4$ och $h = 0{,}5$:
+\[
+  q \approx 0{,}5\left[\frac{4 + 8}{2} + (5 + 6 + 7)\right] = 0{,}5 \cdot 24 = 12\,\text{C}
+\]
+Resultatet blir exakt, eftersom $i(t)$ är en rät linje.
+\end{exempel}
+
+\begin{exempel}[Impedans i en RL-krets]
+En resistor $R = 100\,\Omega$ är seriekopplad med en spole $L = 50\,\text{mH}$. Beräkna kretsens
+impedans vid $f = 50\,\text{Hz}$.
+\begin{gather*}
+  \omega = 2\pi \cdot 50 \approx 314{,}16\,\text{rad/s} \\
+  Z = R + j\omega L = 100 + j15{,}71\,\Omega \\
+  \abs{Z} = \sqrt{100^2 + 15{,}71^2} \approx 101{,}23\,\Omega, \qquad
+  \arg(Z) = \arctan\!\left(\frac{15{,}71}{100}\right) \approx 0{,}156\,\text{rad} \approx
+  8{,}93^{\circ}
+\end{gather*}
+I kod beräknas beloppet och argumentet med \code{cabs(z)} respektive \code{carg(z)}.
+\end{exempel}
+
+\begin{exempel}[Sampelvärden]
+En signal $u(t) = 5\sin(2\pi \cdot 50t)\,\text{V}$ samplas med $f_s = 400\,\text{Hz}$. Beräkna de
+tre första sampelvärdena.
+\begin{gather*}
+  N = \frac{400}{50} = 8 \text{ sampel per period} \\
+  u_0 = 5\sin(0) = 0\,\text{V} \\
+  u_1 = 5\sin\!\left(\frac{2\pi}{8}\right) = 5\sin\!\left(\frac{\pi}{4}\right) \approx
+  3{,}54\,\text{V} \\
+  u_2 = 5\sin\!\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\!\left(\frac{\pi}{2}\right) =
+  5{,}00\,\text{V}
+\end{gather*}
+Samplingsteoremet är uppfyllt, eftersom $400 > 2 \cdot 50$.
+\end{exempel}

@@ -1,0 +1,43 @@
+% Electrical Engineering Mathematics - the English edition of the book.
+%
+% Built with LuaLaTeX; see the Makefile (`make en`). Every file under en/ is the translation of the
+% file at the same path outside it and uses the same macros and labels, so the two editions can be
+% compared file by file. A chapter that is not translated yet is a \pendingchapter: it keeps its
+% number, so the chapters after it keep theirs, and a reference to it prints the number without a
+% link. Translating a chapter replaces its line with the \input, and adds its answers to
+% en/back/facit.tex.
+\documentclass[10pt, twoside, openright]{book}
+\usepackage[english]{mathbook}
+
+\begin{document}
+
+\frontmatter
+\input{en/front/title}
+\tableofcontents
+\input{en/front/preface}
+
+\mainmatter
+\input{en/chapters/01/chapter}
+\input{en/chapters/02/chapter}
+\input{en/chapters/03/chapter}
+\input{en/chapters/04/chapter}
+\input{en/chapters/05/chapter}
+\input{en/chapters/06/chapter}
+\input{en/chapters/07/chapter}
+\input{en/chapters/08/chapter}
+\input{en/chapters/09/chapter}
+\input{en/chapters/10/chapter}
+\input{en/chapters/11/chapter}
+\input{en/chapters/12/chapter}
+\input{en/chapters/13/chapter}
+\input{en/chapters/14/chapter}
+\input{en/chapters/15/chapter}
+\input{en/chapters/16/chapter}
+\input{en/chapters/17/chapter}
+\input{en/chapters/18/chapter}
+\input{en/chapters/19/chapter}
+
+\appendix
+\input{en/back/facit}
+
+\end{document}

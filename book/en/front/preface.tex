@@ -1,0 +1,130 @@
+% Preface, translated from sv/front/preface.tex. No class, year or date: the book is meant to
+% outlast them.
+
+\chapter{Preface}
+\markboth{Preface}{Preface}
+
+This book contains the mathematics used in electrical engineering. It is set from a course in
+electrical engineering mathematics, lesson by lesson, and covers:
+\begin{itemize}
+  \item Arithmetic, algebra, and linear equations and systems of equations.
+  \item Powers, roots, quadratic equations, and exponential functions and logarithms, including
+    decibels.
+  \item Vectors, functions and trigonometric functions.
+  \item Derivatives and integrals, with applications in circuit theory.
+  \item Complex numbers in rectangular, polar and Euler form, and phasors for AC calculations.
+\end{itemize}
+
+\textbf{The mathematics is applied to electrical problems throughout.} The first chapter already
+uses fractions on resistors in parallel, and the book keeps returning to circuits:
+\begin{itemize}
+  \item Resistors in series and in parallel, voltage dividers and power calculations.
+  \item Charging and discharging capacitors in RC circuits.
+  \item AC voltages: amplitude, frequency, phase and trigonometric equations.
+  \item Impedance calculations with complex numbers, and phasor addition.
+  \item Sampling sinusoidal signals, and computing derivatives, integrals and complex numbers in
+    C, in the lab in \kapref{18}.
+\end{itemize}
+
+\section*{What you will be able to do}
+Once you have worked through the book, you should be able to:
+\begin{itemize}
+  \item Simplify algebraic expressions and solve the equations and systems of equations that
+    arise in electrical engineering.
+  \item Calculate with powers, roots, logarithms and decibels.
+  \item Calculate and interpret derivatives and integrals of common functions.
+  \item Calculate with complex numbers and phasors to analyse AC circuits.
+  \item Implement the mathematics of the course in C with \file{math.h} and \file{complex.h}.
+\end{itemize}
+
+\section*{What you are expected to know}
+The book assumes compulsory-school mathematics, and even most of that is revised in the first
+chapters: number sets, the order of operations, fractions and percentages in \kapref{1},
+equations in \kapref{3} and powers in \kapref{5}. If you feel unsure of the basics, simply start
+from the beginning.
+
+The lab in \kapref{18} also assumes basic C programming: variables, functions, \code{printf()}
+and loops. Floating-point numbers, \file{math.h} and \file{complex.h} are covered in the chapter.
+
+\section*{How the book is organised}
+Each chapter corresponds to a lesson in the course and has the same number: Chapter~5 is
+lesson~5, and its material is in the course repository under \file{lectures/L05}.
+
+\begin{booktable}{@{}p{5em}L@{}}
+  \thead{Chapter} & \thead{Topic} \\
+  \midrule
+  1 & Number systems and basic arithmetic \\
+  2 & Algebra \\
+  3 & Linear equations and inequalities \\
+  4 & Systems of equations \\
+  5 & Powers and roots \\
+  6 & Quadratic equations, with practice test 1 \\
+  7 & Vectors \\
+  8 & Functions \\
+  9 & Trigonometric functions \\
+  10 & Exponential functions, logarithms and decibels \\
+  11 & Review of Chapters 7--10, with practice test 2 \\
+  12 & Derivatives, part I \\
+  13 & Derivatives, part II \\
+  14 & Integrals \\
+  15 & Complex numbers, part I \\
+  16 & Complex numbers, part II \\
+  17 & Complex numbers, part III \\
+  18 & Mathematics in C: lab \\
+  19 & Review and exam preparation, with practice exam \\
+\end{booktable}
+
+A chapter opens with what it contains and then goes through the theory, with examples that show
+every step. Then comes a summary with the chapter's formulas, what you should be able to do and a
+few questions under the heading \emph{Test yourself}, and last the chapter's exercises.
+Chapters~11 and~19 have no new theory; they review, and hold a practice test and a practice exam
+respectively.
+
+\section*{The exercises}
+The exercises in each chapter are divided into parts and numbered as in the course, so that
+Exercise~2.3 is the third exercise in Part~2:
+
+\begin{booktable}{@{}p{5em}L@{}}
+  \thead{Part} & \thead{What it contains} \\
+  \midrule
+  Part 1 & Introductory exercises, or review of the previous chapter. \\
+  Part 2 & New material: the chapter's own theory, often applied to a circuit. \\
+  Part 3 & Extra exercises for further practice after the lesson. \\
+\end{booktable}
+
+In the course, Parts~1 and~2 are done during the lesson, first on your own and then together,
+while Part~3 is optional practice.
+
+\section*{Answers and worked solutions}
+\textbf{The answers to all the exercises are in the answer key at the back of the book.} Every
+exercise has a small tag, \svarexempel, giving the page its answer is on; in the PDF, both the tag
+and the exercise's number in the answer key are links between the exercise and its answer.
+
+\textbf{The answer key holds only the answers, not the solutions.} An answer shows whether you
+got it right, but not how to get there. Full worked solutions, in Swedish, are published in the
+course repository after each lesson, under \file{lectures/LNN/appendix/c_solutions.md}. Always
+work an exercise yourself first, then compare with the answer key, and read the worked solution
+when your answer does not match or when you want to see another way.
+
+\section*{What you need}
+A calculator, any calculator, is used throughout the book. Many exercises are still meant to be
+done without one, and they say so. The lab in \kapref{18} needs nothing but a web browser: the
+code is written and run in an online compiler, with nothing to install.
+
+\section*{Notation}
+The book follows the notation common in electrical engineering, and that of the Swedish edition it
+is translated from:
+\begin{itemize}
+  \item \textbf{Decimal point}: $4.7$. The Swedish edition, the course material and the exams
+    write a decimal comma, $4{,}7$, for the same number.
+  \item \textbf{Units} are written with a small space after the number: $4.7\,\text{k}\Omega$,
+    $50\,\text{Hz}$, $30\,\%$.
+  \item \textbf{Voltage} is written $U$, as in international standards and in the Swedish course;
+    many English-language texts write $V$ instead. Subscripts are English: $U_{\text{out}}$ is
+    the output voltage.
+  \item \textbf{Resistance is written before current}, as in Ohm's law: $U = RI$ and $P = RI^2$.
+  \item \textbf{Parallel connection} is written $R_1 \parallell R_2$.
+  \item \textbf{Logarithms}: $\log$ is the base-10 logarithm and $\ln$ the natural logarithm.
+  \item \textbf{The imaginary unit} is written $j$, since $i$ already stands for current.
+  \item \textbf{Angles} are in radians unless otherwise stated; degrees are marked with $^{\circ}$.
+\end{itemize}

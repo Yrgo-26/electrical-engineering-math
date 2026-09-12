@@ -1,0 +1,265 @@
+% Section 3.8, translated from sv/chapters/03/exercises.tex.
+
+\section{Exercises}
+\label{c3:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L03}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Simplification}
+Simplify the following expressions.
+\begin{delar}(3)
+  \task $3(2R + 4) - 2(R - 1)$
+  \task $(U + 3)^2 - 9$
+  \task $\dfrac{6I^2 + 4I}{2I}$, assume $I \neq 0$
+\end{delar}
+
+\uppgift{1.2}{Factorisation}
+Factorise.
+\begin{delar}(3)
+  \task $R^2 - 25$
+  \task $3U^2 + 6U$
+  \task $I^2 - 8I + 16$
+\end{delar}
+
+% ------------------------------------------------------------------------------------------
+\needspace{16\baselineskip}
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Ohm's law: find the resistance}
+The voltage across a resistor is $U = 15\,\text{V}$ and the current is $I = 0.3\,\text{A}$.
+
+\bild[0.31\linewidth]{lectures/L03/appendix/images/2.1_circuit.png}
+
+Ohm's law states that $U = R \cdot I$.
+\begin{delar}(2)
+  \task Set up the equation and solve for $R$.
+  \task Check your answer.
+\end{delar}
+
+\uppgift{2.2}{Series circuit: an equation with brackets}
+Two resistors are connected in series. The circuit is supplied with $U = 24\,\text{V}$ and the
+current is $I = 0.4\,\text{A}$. One resistor is $R_2 = 40\,\Omega$; the other is unknown.
+
+\bild[0.41\linewidth]{lectures/L03/appendix/images/2.2_circuit.png}
+
+Ohm's law for the whole circuit gives
+\[
+  U = (R_1 + R_2) \cdot I.
+\]
+\begin{parts}
+  \item Substitute the values and solve the equation for $R_1$ \textbf{without} expanding the
+    brackets.
+  \item Solve the equation again, but expand the brackets first. Check that you get the same
+    answer.
+  \item Check the solution by calculating the current $I = \dfrac{U}{R_1 + R_2}$.
+\end{parts}
+
+\uppgift{2.3}{Voltage division}
+In a voltage divider, the output voltage is given by
+\[
+  U_{\text{out}} = \frac{R_2}{R_1 + R_2} \cdot U_{\text{in}}.
+\]
+
+\bild[0.44\linewidth]{lectures/L03/appendix/images/2.3_circuit_en.png}
+
+Assume that $U_{\text{in}} = 9\,\text{V}$, $R_2 = 3\,\Omega$ and $U_{\text{out}} = 3\,\text{V}$.
+\begin{parts}
+  \item Set up the equation for $U_{\text{out}}$ and solve for $R_1$.
+  \item Check your answer.
+\end{parts}
+
+\uppgift{2.4}{Time constant of an RC circuit}
+The time constant $\tau$ (tau) of an RC circuit is
+\[
+  \tau = R \cdot C.
+\]
+
+\bild[0.39\linewidth]{lectures/L03/appendix/images/2.4_circuit.png}
+
+The capacitor's capacitance is $C = 100\,\upmu\text{F} = 100 \times 10^{-6}\,\text{F}$ and the
+time constant is $\tau = 0.05\,\text{s}$. Calculate the resistance $R$.
+
+\needspace{16\baselineskip}
+\uppgift{2.5}{Safe operating area}
+The power dissipation of a transistor is calculated as $P = U_{\text{CE}} \cdot I_{\text{C}}$.
+
+\bild[0.4\linewidth]{lectures/L03/appendix/images/2.5_circuit_en.png}
+
+The transistor can take at most $P_{\max} = 500\,\text{mW}$, and the collector current is
+$I_{\text{C}} = 50\,\text{mA}$.
+\begin{parts}
+  \item Set up an inequality to find the largest permitted voltage drop $U_{\text{CE}}$.
+  \item Solve the inequality and give the largest permitted $U_{\text{CE}}$ in volts.
+\end{parts}
+
+\uppgift{2.6}{Loaded battery: an inequality where the sign reverses}
+A battery has the open-circuit voltage $E = 12\,\text{V}$ and the internal resistance
+$R_{\text{i}} = 0.8\,\Omega$. When the battery is loaded with the current $I$, the terminal
+voltage is
+\[
+  U = E - R_{\text{i}} \cdot I.
+\]
+
+\bild[0.43\linewidth]{lectures/L03/appendix/images/2.6_circuit.png}
+
+\begin{parts}
+  \item Calculate the terminal voltage $U$ when $I = 2\,\text{A}$.
+  \item The connected device needs at least $9\,\text{V}$ to work. Set up the inequality
+    $U \geq 9$ and solve it for $I$.
+    \begin{aside}
+    \note[Tip] Think about what happens to the inequality sign when you divide by a negative
+    number.
+    \end{aside}
+  \item Another battery has $E = 13\,\text{V}$ and $R_{\text{i}} = 1.0\,\Omega$. At what current
+    do the two batteries give the same terminal voltage? Set up an equation with the unknown on
+    both sides and solve it.
+  \item Which of the batteries gives the higher terminal voltage at $I = 8\,\text{A}$?
+\end{parts}
+
+\uppgift{2.7}{Absolute value in signal analysis}
+A signal can deviate positively or negatively from a reference voltage. The deviation $\delta$
+satisfies $\abs{\delta} \leq 0.5\,\text{V}$.
+\begin{parts}
+  \item Rewrite the absolute-value inequality as a double inequality without the absolute value.
+  \item If the reference voltage is $5\,\text{V}$, give the permitted range of the actual
+    voltage.
+\end{parts}
+
+\uppgift{2.8}{Current regulation: an absolute-value equation}
+A current regulator compares the measured current $I$ (in amperes) with its setpoint and gives
+the error voltage
+\[
+  u_{\text{e}} = 0.4I - 2.
+\]
+\begin{parts}
+  \item At what current is the error voltage zero, that is, what is the setpoint?
+  \item The regulator raises an alarm when the error voltage has the magnitude $1.2\,\text{V}$.
+    Solve the equation $\abs{0.4I - 2} = 1.2$ as two cases and give the two currents at which the
+    alarm is triggered.
+  \item Which range of currents satisfies $\abs{0.4I - 2} < 1.2$, that is, when does the
+    regulator \emph{not} raise an alarm?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Simple linear equations}
+Solve the equations.
+\begin{delar}(3)
+  \task $x + 7 = 12$
+  \task $5x = 45$
+  \task $3x - 4 = 11$
+  \task $\dfrac{x}{4} = 6$
+  \task $8 - 2x = 0$
+  \task $-3x = 18$
+\end{delar}
+
+\uppgift{3.2}{The unknown on both sides}
+Solve the equations and check your answers.
+\begin{delar}(3)
+  \task $5x - 3 = 2x + 9$
+  \task $7 - 2x = x + 1$
+  \task $4(x - 1) = 2(x + 3)$
+  \task $3(2x + 1) = 6x + 3$
+  \task $2(x + 4) = 2x + 5$
+\end{delar}
+
+\begin{aside}
+\note[Tip] Two of the equations behave differently from the others. Think about what that means.
+\end{aside}
+
+\uppgift{3.3}{Equations with fractions}
+Solve the equations.
+\begin{delar}(2)
+  \task $\dfrac{x}{3} + \dfrac{x}{6} = 3$
+  \task $\dfrac{2x - 1}{5} = 3$
+  \task $\dfrac{x}{2} - \dfrac{x}{5} = 3$
+  \task $\dfrac{12}{x} = 4$, assume $x \neq 0$
+\end{delar}
+
+\uppgift{3.4}{Proportions}
+\begin{parts}
+  \item Solve $\dfrac{x}{8} = \dfrac{3}{4}$.
+  \item Solve $\dfrac{5}{x} = \dfrac{2}{6}$.
+  \item In a voltage divider, $\dfrac{U_1}{U_2} = \dfrac{R_1}{R_2}$. Calculate $R_1$ when
+    $U_1 = 4\,\text{V}$, $U_2 = 8\,\text{V}$ and $R_2 = 2\,\text{k}\Omega$.
+  \item A resistor has $6\,\text{V}$ across it at the current $0.2\,\text{A}$. What voltage is
+    needed for the current $0.5\,\text{A}$? Set up a proportion and solve it.
+\end{parts}
+
+\uppgift{3.5}{Solving a formula for a variable}
+Solve for the variable given.
+\begin{delar}(2)
+  \task $U = RI$, solve for $I$.
+  \task $P = RI^2$, solve for $R$.
+  \task $R_{\text{TOT}} = R_1 + R_2$, solve for $R_2$.
+  \task $\tau = RC$, solve for $C$.
+  \task $U = E - R_{\text{i}}I$, solve for $R_{\text{i}}$.
+  \task $\eta = \dfrac{P_{\text{out}}}{P_{\text{in}}}$, solve for $P_{\text{in}}$.
+\end{delar}
+
+\uppgift{3.6}{Inequalities}
+Solve the inequalities and describe each solution as an interval on the number line.
+\begin{delar}(3)
+  \task $x + 3 < 8$
+  \task $2x - 1 \geq 7$
+  \task $-x > 4$
+  \task $-2x + 6 \leq 0$
+  \task $5 - 3x > 14$
+\end{delar}
+
+\uppgift{3.7}{Double inequalities}
+\begin{parts}
+  \item Solve $2 < x + 1 < 7$.
+  \item Solve $-3 \leq 2x - 1 \leq 5$.
+  \item A component is supplied with $U = 5\,\text{V}$ and can take at most
+    $P_{\max} = 0.25\,\text{W}$. Set up and solve an inequality for the permitted current $I$.
+  \item An input is read as a logic one when its voltage lies in the range
+    $2.0\,\text{V} \leq u \leq 3.3\,\text{V}$. The input voltage is $u = 0.5x$ volts. Which
+    values of $x$ give a logic one?
+\end{parts}
+
+\uppgift{3.8}{Absolute values in equations}
+Solve the equations.
+\begin{delar}(3)
+  \task $\abs{x} = 6$
+  \task $\abs{x - 3} = 5$
+  \task $\abs{2x + 1} = 7$
+  \task $\abs{x + 4} = 0$
+  \task $\abs{3x - 2} = -5$
+\end{delar}
+
+\uppgift{3.9}{Absolute values in inequalities and tolerances}
+\begin{parts}
+  \item Write $\abs{x - 5} \leq 2$ without the absolute value and solve the inequality.
+  \item Solve $\abs{2x - 6} < 4$.
+  \item A supply voltage is to be $5\,\text{V}$ with a tolerance of $\pm 2\,\%$. Write the
+    requirement as an absolute-value inequality and give the permitted voltage range.
+  \item A resistor is marked $1\,\text{k}\Omega \pm 1\,\%$ and measures $1\,015\,\Omega$. Does
+    the resistor meet the requirement ${\abs{R - 1000} \leq 10}$?
+\end{parts}
+
+\uppgift{3.10}{Temperature-dependent resistance}
+The resistance of a resistor varies with temperature as
+\[
+  R = R_0(1 + \alpha \cdot \Delta T).
+\]
+Here $R_0 = 100\,\Omega$ is the resistance at $20\,{}^{\circ}\text{C}$,
+$\alpha = 0.004\,{}^{\circ}\text{C}^{-1}$ and $\Delta T$ is the change in temperature from
+$20\,{}^{\circ}\text{C}$.
+\begin{parts}
+  \item Calculate $R$ at $70\,{}^{\circ}\text{C}$.
+  \item At what temperature is $R = 110\,\Omega$?
+  \item The circuit works as long as $R \leq 130\,\Omega$. What temperature range is permitted?
+  \item Solve the formula for $\Delta T$ in general.
+\end{parts}

@@ -1,0 +1,141 @@
+% Sections 4.1 to 4.4, translated from sv/chapters/04/theory.tex.
+
+\section{What is a system of equations?}
+\label{c4:sec:ekvationssystem}
+A \textbf{linear system of equations} consists of several equations in several unknowns that must
+be satisfied \emph{simultaneously}. The most common is a system of \textbf{two equations in two
+unknowns}:
+\[
+  \begin{cases}
+    a_1 x + b_1 y = c_1 \\
+    a_2 x + b_2 y = c_2
+  \end{cases}
+\]
+The \textbf{solution} is the pair $(x, y)$ that satisfies both equations. Graphically, it is the
+\textbf{point of intersection} of the two straight lines.
+
+\subsection{Number of solutions}
+\label{c4:sec:antal}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Situation} & \thead{Number of solutions} \\
+  \midrule
+  The lines intersect & Exactly one solution \\
+  The lines are parallel (but do not coincide) & No solution \\
+  The lines coincide & Infinitely many solutions \\
+\end{narrowtable}
+
+\section{The substitution method}
+\label{c4:sec:substitution}
+The substitution method works like this:
+\begin{enumerate}
+  \item Choose one equation and express one unknown in terms of the other.
+  \item Substitute the expression into the other equation.
+  \item Solve the resulting equation, which has one unknown.
+  \item Calculate the other unknown.
+  \item Check in \emph{both} of the original equations.
+\end{enumerate}
+
+\begin{exempel}
+Solve the system
+\[
+  \begin{cases}
+    x + 2y = 7 \\
+    3x - y = 7
+  \end{cases}
+\]
+\textbf{Step 1:} Equation (1) gives $x = 7 - 2y$.
+\par\noindent\textbf{Step 2:} Substitute into equation (2):
+\[
+  3(7 - 2y) - y = 7
+\]
+\textbf{Step 3:} Simplify and solve:
+\[
+  21 - 6y - y = 7 \quad \Rightarrow \quad 21 - 7y = 7 \quad \Rightarrow \quad y = 2
+\]
+\textbf{Step 4:} Calculate $x$:
+\[
+  x = 7 - 2 \cdot 2 = 3
+\]
+\textbf{Step 5:} Check: $3 + 4 = 7$~\checkmark{} and $9 - 2 = 7$~\checkmark
+\par\noindent The solution is $(x, y) = (3, 2)$.
+\end{exempel}
+
+\section{The elimination method (addition method)}
+\label{c4:sec:addition}
+\textbf{Idea:} Multiply the equations by suitable numbers so that one unknown gets coefficients
+that are \emph{equal but opposite}, then add the equations to eliminate that unknown.
+\begin{enumerate}
+  \item Multiply one or both equations by suitable constants.
+  \item Add the equations line by line, so that one unknown disappears.
+  \item Solve the remaining equation.
+  \item Calculate the eliminated unknown from one of the original equations.
+\end{enumerate}
+
+\begin{exempel}
+Solve the system
+\[
+  \begin{cases}
+    2x + 3y = 12 \\
+    4x - y = 10
+  \end{cases}
+\]
+\textbf{Step 1:} Multiply equation (2) by $3$:
+\[
+  \begin{cases}
+    2x + 3y = 12 \\
+    12x - 3y = 30
+  \end{cases}
+\]
+\textbf{Step 2:} Add the equations:
+\[
+  14x = 42 \quad \Rightarrow \quad x = 3
+\]
+\textbf{Step 3:} Substitute $x = 3$ into equation (1):
+\[
+  6 + 3y = 12 \quad \Rightarrow \quad y = 2
+\]
+The solution is $(x, y) = (3, 2)$.
+\end{exempel}
+
+\section{Application: Kirchhoff's laws}
+\label{c4:sec:kirchhoff}
+Systems of equations are fundamental to circuit theory. With Kirchhoff's laws, the distribution of
+currents and voltages in a circuit can be calculated.
+
+\subsection{Kirchhoff's voltage law (KVL)}
+\label{c4:sec:kvl}
+The sum of all the voltages around a closed loop is zero:
+\[
+  \sum U = 0
+\]
+
+\subsection{Kirchhoff's current law (KCL)}
+\label{c4:sec:kcl}
+The sum of the currents into a node is zero, that is, the currents in equal the currents out:
+\[
+  \sum I = 0
+\]
+
+\begin{exempel}
+Consider a circuit with two loops and the currents $I_1$ and $I_2$. KVL gives
+\[
+  \begin{cases}
+    10 = 2I_1 + 4(I_1 - I_2) \\
+    0 = 4(I_2 - I_1) + 6I_2
+  \end{cases}
+\]
+which simplifies to
+\[
+  \begin{cases}
+    6I_1 - 4I_2 = 10 \\
+    -4I_1 + 10I_2 = 0
+  \end{cases}
+\]
+Equation (2) gives $I_1 = 2.5 I_2$. Substituting this into equation (1) gives
+\begin{gather*}
+  6 \cdot 2.5 I_2 - 4I_2 = 10 \quad \Rightarrow \quad I_2 = \frac{10}{11} \approx 0.91\,\text{A},
+  \\
+  I_1 = 2.5 \cdot \frac{10}{11} = \frac{25}{11} \approx 2.27\,\text{A}.
+\end{gather*}
+\end{exempel}

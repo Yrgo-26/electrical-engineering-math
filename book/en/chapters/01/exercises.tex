@@ -1,0 +1,249 @@
+% Section 1.7, translated from sv/chapters/01/exercises.tex.
+
+\section{Exercises}
+\label{c1:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L01}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Introductory exercises}
+
+\uppgift{1.1}{Calculations with the order of operations}
+Calculate the following expressions \textbf{without} a calculator.
+\begin{delar}(4)
+  \task $3 + 2 \times 5$
+  \task $(3 + 2) \times 5$
+  \task $12 - 4 \times 2 + 1$
+  \task $\dfrac{10 + 2}{3} \times 4 - 1$
+\end{delar}
+
+\uppgift{1.2}{Fractions}
+Calculate and simplify.
+\begin{delar}(4)
+  \task $\dfrac{1}{4} + \dfrac{1}{6}$
+  \task $\dfrac{3}{5} - \dfrac{1}{4}$
+  \task $\dfrac{2}{3} \times \dfrac{9}{4}$
+  \task $\dfrac{5}{6} \div \dfrac{5}{12}$
+\end{delar}
+
+\uppgift{1.3}{Percentages}
+\begin{parts}
+  \item Calculate $40\,\%$ of $250$.
+  \item What percentage of $72$ is $18$?
+  \item A resistor has the nominal value $100\,\Omega$ with a tolerance of $\pm 5\,\%$. Give the
+    lowest and the highest permitted resistance.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Resistors in parallel}
+Two resistors $R_1 = 12\,\Omega$ and $R_2 = 6\,\Omega$ are connected in parallel. The total
+resistance $R_{\text{TOT}}$ is given by
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}.
+\]
+\begin{delar}(2)
+  \task Calculate $\dfrac{1}{R_{\text{TOT}}}$.
+  \task Calculate $R_{\text{TOT}}$.
+\end{delar}
+
+\uppgift{2.2}{Series and parallel connection}
+The circuit below consists of the resistor $R_1$ in series with the parallel connection of $R_2$
+and $R_3$.
+
+\bild[0.5\linewidth]{lectures/L01/appendix/images/circuit_series_parallel.png}
+
+The component values are $R_1 = 4\,\text{k}\Omega$, $R_2 = 24\,\text{k}\Omega$ and
+$R_3 = 8\,\text{k}\Omega$. The parallel resistance $R_{\text{p}} = R_2 \parallell R_3$ can be
+calculated in two ways:
+\[
+  \frac{1}{R_{\text{p}}} = \frac{1}{R_2} + \frac{1}{R_3}
+  \qquad \text{or} \qquad
+  R_{\text{p}} = \frac{R_2 \times R_3}{R_2 + R_3}
+\]
+\begin{parts}
+  \item Calculate $R_{\text{p}}$ with both formulas and check that they give the same answer.
+  \item Calculate the circuit's total resistance $R_{\text{TOT}} = R_1 + R_{\text{p}}$.
+  \item Why must the parallel connection be calculated before $R_1$ is added? Relate your answer
+    to the order of operations.
+\end{parts}
+
+\uppgift{2.3}{Current and voltage in the circuit}
+The circuit in \uppref{2.2} is supplied with the voltage $U = 20\,\text{V}$. Ohm's law relates
+voltage, resistance and current:
+\[
+  U = R \times I
+\]
+
+\begin{aside}
+\note[Tip] If you calculate with the resistance in k$\Omega$ and the voltage in V, you get the
+current directly in mA.
+\end{aside}
+
+\begin{parts}
+  \item Calculate the current $I$ that the voltage source delivers.
+  \item Calculate the voltage $U_1$ across $R_1$.
+  \item Calculate the voltage $U_{\text{p}}$ across the parallel connection.
+  \item Calculate the currents $I_2$ and $I_3$ through $R_2$ and $R_3$ respectively. Check that
+    $I_2 + I_3 = I$.
+\end{parts}
+
+\uppgift{2.4}{Absolute value}
+An AC voltage varies between $-8\,\text{V}$ and $+8\,\text{V}$.
+\begin{parts}
+  \item What is the amplitude $\abs{U}$ of the voltage?
+  \item At a certain instant, the voltage is $u(t) = -5.3\,\text{V}$. Calculate $\abs{u(t)}$.
+\end{parts}
+
+\uppgift{2.5}{Efficiency}
+A battery-powered motor takes in $P_{\text{in}} = 24\,\text{W}$ and delivers
+$P_{\text{out}} = 18\,\text{W}$.
+\begin{parts}
+  \item Calculate the motor's efficiency $\eta$ as a percentage.
+  \item If the efficiency is improved to $90\,\%$ at the same input power, what will the output
+    power be?
+\end{parts}
+
+\uppgift{2.6}{Number sets}
+Place each number in the \emph{smallest} number set it belongs to: $\mathbb{N}$, $\mathbb{Z}$,
+$\mathbb{Q}$, the irrational numbers or $\mathbb{R}$.
+\begin{delar}(6)
+  \task $7$
+  \task $-3$
+  \task $\dfrac{3}{4}$
+  \task $\sqrt{2}$
+  \task $0.25$
+  \task $\pi$
+\end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Order of operations with negative numbers}
+Calculate \textbf{without} a calculator.
+\begin{delar}(3)
+  \task $-3 + 5 \times (-2)$
+  \task $(-4)^2 - 4^2$
+  \task $\dfrac{-12}{-3} + 2 \times (-5)$
+  \task $8 - 2(3 - 7)$
+  \task $\dfrac{(-2)^3 + 10}{2}$
+\end{delar}
+
+\uppgift{3.2}{The number line and absolute value}
+\begin{parts}
+  \item Sort the numbers in order of size, smallest first: $-2.5$, $\abs{-3}$, $\dfrac{7}{2}$,
+    $-\abs{4}$, $0$.
+  \item Calculate $\abs{-7} - \abs{3}$.
+  \item Calculate $\abs{3 - 8}$ and $\abs{8 - 3}$. What does the result say about the distance
+    between two numbers?
+  \item Two measured values are $U_1 = 4.8\,\text{V}$ and $U_2 = 5.1\,\text{V}$. Write the size of
+    the difference with an absolute value and calculate it.
+\end{parts}
+
+\uppgift{3.3}{Fractions, decimals and percentages}
+Fill in the empty cells. Give the fractions in their simplest form.
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{6em}}@{}}
+  \thead{Fraction} & \thead{Decimal} & \thead{Percentage} \\
+  \midrule
+  $\dfrac{1}{4}$ & & \\
+  & $0.6$ & \\
+  & & $12.5\,\%$ \\
+  $\dfrac{3}{8}$ & & \\
+\end{narrowtable}
+
+\uppgift{3.4}{Fractions in several steps}
+Calculate and simplify.
+\begin{delar}(4)
+  \task $\dfrac{2}{3} + \dfrac{1}{6} - \dfrac{1}{2}$
+  \task $\dfrac{3}{4} \times \dfrac{8}{9} \div \dfrac{2}{3}$
+  \task $\dfrac{\frac{1}{2} + \frac{1}{3}}{\frac{5}{6}}$
+  \task $\dfrac{1}{\frac{1}{4} + \frac{1}{4}}$
+  \task* Which circuit calculation do you recognise in d)?
+\end{delar}
+
+\uppgift{3.5}{Percentage change}
+\begin{parts}
+  \item A voltage rises from $12\,\text{V}$ to $15\,\text{V}$. By how many per cent does it rise?
+  \item A current falls from $400\,\text{mA}$ to $340\,\text{mA}$. By how many per cent does it
+    fall?
+  \item A resistance first increases by $10\,\%$ and then decreases by $10\,\%$. Is it back at its
+    original value? Justify your answer.
+  \item A power of $60\,\text{W}$ is increased by $25\,\%$. What is the new power?
+\end{parts}
+
+\uppgift{3.6}{Tolerance and measurement deviation}
+\begin{parts}
+  \item A resistor is marked $4.7\,\text{k}\Omega \pm 10\,\%$. Give the lowest and the highest
+    permitted value.
+  \item The resistor measures $4.9\,\text{k}\Omega$. Is it within tolerance?
+  \item By how many per cent does the measured value deviate from the nominal value?
+  \item Another resistor is marked $220\,\Omega \pm 5\,\%$ and measures $208\,\Omega$. Does it
+    pass?
+\end{parts}
+
+\uppgift{3.7}{Number sets: true or false}
+Decide whether the statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item Every integer is also a rational number.
+  \item Every rational number is also an integer.
+  \item $\sqrt{9}$ is an irrational number.
+  \item The sum of two irrational numbers is always irrational.
+  \item The decimal $0.333\ldots$ is a rational number.
+  \item Every real number can be written as a fraction of two integers.
+\end{parts}
+
+\uppgift{3.8}{Equal resistors in parallel}
+\begin{parts}
+  \item Two resistors of $100\,\Omega$ each are connected in parallel. Calculate $R_{\text{p}}$.
+  \item Four resistors of $100\,\Omega$ each are connected in parallel. Calculate $R_{\text{p}}$.
+  \item Show in general that $n$ equal resistors $R$ in parallel give
+    $R_{\text{p}} = \dfrac{R}{n}$.
+  \item How many $100\,\Omega$ resistors must be connected in parallel to give $20\,\Omega$?
+\end{parts}
+
+\uppgift{3.9}{Find the unknown resistor}
+\begin{parts}
+  \item $R_1 = 30\,\Omega$ is connected in parallel with $R_2$ and gives $R_{\text{p}} =
+    12\,\Omega$. Calculate $R_2$.
+  \item $R_1 = 220\,\Omega$ is to be supplemented with a resistor in series so that
+    $R_{\text{TOT}} = 500\,\Omega$. Calculate that resistor.
+  \item Check in a) that $R_{\text{p}}$ is smaller than the smallest of the resistors in it.
+  \item Can a parallel connection of $R_1 = 30\,\Omega$ and some other resistor give
+    $R_{\text{p}} = 40\,\Omega$? Justify your answer.
+\end{parts}
+
+\uppgift{3.10}{Ohm's law: fill in the table}
+Fill in the empty cells using Ohm's law $U = R \times I$.
+
+\begin{aside}
+\note[Tip] With the resistance in k$\Omega$ and the voltage in V, the current comes out directly in
+mA.
+\end{aside}
+
+\begin{narrowtable}{@{}p{5em}p{5em}p{5em}@{}}
+  \thead{$U$} & \thead{$R$} & \thead{$I$} \\
+  \midrule
+  $12\,\text{V}$ & $4\,\text{k}\Omega$ & \\
+  & $2.2\,\text{k}\Omega$ & $5\,\text{mA}$ \\
+  $9\,\text{V}$ & & $3\,\text{mA}$ \\
+  $5\,\text{V}$ & $1\,\text{k}\Omega$ & \\
+\end{narrowtable}
+
+\uppgift{3.11}{Efficiency in two stages}
+A power supply consists of a transformer with the efficiency $\eta_1 = 95\,\%$ followed by a
+rectifier with the efficiency $\eta_2 = 80\,\%$. The input power is $P_{\text{in}} = 200\,\text{W}$.
+\begin{parts}
+  \item Calculate the power after the transformer.
+  \item Calculate the output power after the rectifier.
+  \item Calculate the total efficiency $\eta_{\text{TOT}}$.
+  \item How much power is lost as heat in total?
+\end{parts}

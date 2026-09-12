@@ -1,0 +1,40 @@
+% Chapter 12, typeset from lectures/L12: the README is the opener and the closing review, bilaga A
+% the sections, and bilaga B the exercises. Bilaga A's unnumbered opening, "Varför derivata i
+% elektroteknik?", is the first paragraph of the introduction. The answers are in
+% sv/back/facit/12.tex.
+
+\chapter{Derivata, del I}
+\label{c12:ch}
+
+{\large\itshape Hur snabbt en storhet ändras, tangentens lutning och kurvans toppar och dalar.\par}
+
+\begin{chapterbox}{I det här kapitlet}
+\begin{itemize}
+  \item Förändringshastighet och tangent.
+  \item Derivatans definition.
+  \item Derivata för potens- och polynomfunktioner.
+  \item Derivatans nollställen, maximi- och minimipunkter.
+\end{itemize}
+\end{chapterbox}
+
+Derivatan beskriver hur snabbt en storhet förändras. I elektroteknik dyker den upp direkt i
+kretsteorin:
+\[
+  i_C(t) = C\frac{du_C}{dt}, \qquad u_L(t) = L\frac{di_L}{dt}
+\]
+Strömmen genom en kondensator beror på hur snabbt spänningen över den förändras, och spänningen
+över en induktor beror på hur snabbt strömmen genom den förändras. Derivatan är alltså inte
+abstrakt matematik, utan det verktyg som beskriver transienta förlopp i RC- och RL-kretsar. Det
+här kapitlet bygger upp begreppet från ändringskvoten till tangentens lutning, ger
+deriveringsreglerna för polynom och visar hur derivatan hittar en funktions maximi- och
+minimipunkter. En kort introduktion till derivatan som begrepp finns i videon
+\url{https://www.youtube.com/watch?v=N2PpRnFqnqY}.
+
+\Secref{c12:sec:andringskvot} till \secref{c12:sec:typexempel} är kapitlets teori, med exempel.
+\Secref{c12:sec:sammanfattning} sammanfattar reglerna och vad du ska kunna efter kapitlet, och i
+\secref{c12:sec:uppgifter} finns uppgifterna. Del~1 av dem repeterar decibelräkningen från
+\kapref{10}, som också övningsduggan i \secref{c11:sec:ovningsdugga} prövar.
+
+\input{sv/chapters/12/theory}
+\input{sv/chapters/12/summary}
+\input{sv/chapters/12/exercises}

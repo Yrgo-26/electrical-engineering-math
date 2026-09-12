@@ -1,0 +1,240 @@
+% Section 17.7, translated from sv/chapters/17/exercises.tex.
+
+\section{Exercises}
+\label{c17:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson.
+
+\facitnotis{L17}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Vectors in the complex plane}
+You have the vectors $a = (2, 1)$, $b = (2, -1)$ and $c = (-3, 4)$. In the exercises below, each
+vector $(x, y)$ is to be read as a complex number $z = x + jy$.
+\begin{parts}
+  \item Write the vectors in complex rectangular form.
+  \item Draw the vectors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Find the lengths of the vectors, that is, the magnitude of each number.
+  \item Find the length (magnitude) of $a + b + c$, that is, $\abs{a + b + c}$.
+  \item Find the angles of the vectors.
+  \item Find a vector $d$ of length $8$ that points in the opposite direction to $c$.
+\end{parts}
+
+\uppgift{1.2}{Rectangular form to Euler form}
+A voltage $u(t)$ in an AC circuit can be represented by a phasor $U$, which in rectangular form
+is written
+\[
+  U = 3 - j6\,\text{V}.
+\]
+\begin{parts}
+  \item Draw the phasor $U$ in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Express the phasor $U$ in Euler form, that is, find the magnitude $\abs{U}$ and the phase
+    angle $\delta$ such that $U = \abs{U}e^{j\delta}$.
+  \item Assume that the frequency of the voltage is $f = 50\,\text{Hz}$. Find the angular
+    frequency $\omega$.
+  \item Write $u(t)$ as a function of time, $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\needspace{16\baselineskip}
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Adding three currents in an AC circuit}
+A node in an electric circuit is fed by three sinusoidal currents:
+\begin{align*}
+  i_1(t) &= 5\sin(\omega t + 30^{\circ})\,\text{mA}, \\
+  i_2(t) &= 3\sin(\omega t - 30^{\circ})\,\text{mA}, \\
+  i_3(t) &= 4\sin(\omega t + 120^{\circ})\,\text{mA}.
+\end{align*}
+The total current $i_{\text{tot}}(t)$ in the circuit is
+\[
+  i_{\text{tot}}(t) = i_1(t) + i_2(t) + i_3(t).
+\]
+\begin{parts}
+  \item Rewrite the currents $i_1(t)$, $i_2(t)$ and $i_3(t)$ as phasors $I_1$, $I_2$ and $I_3$ in
+    complex rectangular form.
+  \item Calculate the phasor sum $I_{\text{tot}} = I_1 + I_2 + I_3$.
+  \item Draw the phasors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Convert the result back into a sinusoidal current in the time domain, of the form
+    \[
+      i_{\text{tot}}(t) = \abs{I_{\text{tot}}}\sin(\omega t + \delta).
+    \]
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson. Most of them can
+be done in your head or with pencil and paper.
+
+\uppgift{3.1}{Phasor from a sinusoidal signal}
+Give the phasor in polar form.
+\begin{delar}(2)
+  \task $u(t) = 12\sin(\omega t + 60^{\circ})$
+  \task $u(t) = 5\sin(\omega t - 45^{\circ})$
+  \task $i(t) = 2\sin(\omega t)$
+  \task $i(t) = 7\sin(\omega t + 180^{\circ})$
+\end{delar}
+
+\uppgift{3.2}{Phasors in rectangular form}
+Write the phasors in rectangular form.
+\begin{delar}(4)
+  \task $10\,\angle\,0^{\circ}$
+  \task $4\,\angle\,90^{\circ}$
+  \task $6\,\angle\,30^{\circ}$
+  \task $5\,\angle\,{-53.1^{\circ}}$
+\end{delar}
+
+\uppgift{3.3}{Adding two voltages}
+Two voltages with the same frequency are $u_1(t) = 3\sin(\omega t)\,\text{V}$ and
+$u_2(t) = 4\sin(\omega t + 90^{\circ})\,\text{V}$.
+\begin{parts}
+  \item Give the phasors in polar form.
+  \item Write them in rectangular form.
+  \item Calculate the phasor sum and give it in polar form.
+  \item Write $u_{\text{tot}}(t)$.
+\end{parts}
+
+\uppgift{3.4}{Adding three phasors}
+Three voltages are given by $U_1 = 10\,\angle\,0^{\circ}\,\text{V}$,
+$U_2 = 5\,\angle\,90^{\circ}\,\text{V}$ and $U_3 = 5\,\angle\,{-90^{\circ}}\,\text{V}$.
+\begin{parts}
+  \item Write all of them in rectangular form.
+  \item Calculate the sum.
+  \item Give the sum in polar form.
+  \item Explain why $U_2$ and $U_3$ cancel.
+\end{parts}
+
+\uppgift{3.5}{Sum and difference of two phasors}
+Two voltages are given by $U_1 = 8\,\angle\,30^{\circ}\,\text{V}$ and
+$U_2 = 8\,\angle\,{-30^{\circ}}\,\text{V}$.
+\begin{parts}
+  \item Write both in rectangular form.
+  \item Calculate $U_1 + U_2$ and give the answer in polar form.
+  \item Calculate $U_1 - U_2$ and give the answer in polar form.
+  \item Comment on the results.
+\end{parts}
+
+\uppgift{3.6}{Multiplying and dividing phasors}
+Calculate.
+\begin{delar}(2)
+  \task $(5\,\angle\,20^{\circ})(4\,\angle\,40^{\circ})$
+  \task $\dfrac{20\,\angle\,100^{\circ}}{5\,\angle\,40^{\circ}}$
+  \task $(6\,\angle\,{-30^{\circ}})(2\,\angle\,{-30^{\circ}})$
+  \task $\dfrac{9\,\angle\,0^{\circ}}{3\,\angle\,90^{\circ}}$
+\end{delar}
+
+\uppgift{3.7}{Impedance of R, L and C}
+At $\omega = 2000\,\text{rad/s}$, $R = 100\,\Omega$, $L = 50\,\text{mH}$ and
+$C = 5\,\mu\text{F}$.
+\begin{parts}
+  \item Give $Z_R$ and its phase angle.
+  \item Calculate $Z_L = j\omega L$ and give its phase angle.
+  \item Calculate $Z_C = -\dfrac{j}{\omega C}$ and give its phase angle.
+  \item What do the phase angles mean for the current through each component?
+\end{parts}
+
+\uppgift{3.8}{Series RL circuit}
+A series circuit has $R = 40\,\Omega$ and $X_L = 30\,\Omega$.
+\begin{parts}
+  \item Give the impedance $Z$ in rectangular form.
+  \item Calculate $\abs{Z}$ and the phase angle.
+  \item The circuit is supplied with $U = 100\,\angle\,0^{\circ}\,\text{V}$. Calculate the current.
+  \item Does the current lead or lag the voltage?
+\end{parts}
+
+\uppgift{3.9}{Series RC circuit}
+A series circuit has $R = 60\,\Omega$ and $X_C = 80\,\Omega$.
+\begin{parts}
+  \item Give the impedance $Z$ in rectangular form.
+  \item Calculate $\abs{Z}$ and the phase angle.
+  \item The circuit is supplied with $U = 200\,\angle\,0^{\circ}\,\text{V}$. Calculate the current.
+  \item Does the current lead or lag the voltage?
+\end{parts}
+
+\uppgift{3.10}{Series RLC circuit}
+A series circuit has $R = 20\,\Omega$, $X_L = 60\,\Omega$ and $X_C = 45\,\Omega$.
+\begin{parts}
+  \item Give the impedance $Z$ in rectangular form.
+  \item Calculate $\abs{Z}$ and the phase angle.
+  \item The circuit is supplied with $U = 50\,\angle\,0^{\circ}\,\text{V}$. Calculate the current.
+  \item Is the circuit inductive or capacitive?
+\end{parts}
+
+\uppgift{3.11}{Resonance}
+A series circuit has $R = 10\,\Omega$, $L = 100\,\text{mH}$ and $C = 10\,\mu\text{F}$. Resonance
+occurs at $\omega_0 = \dfrac{1}{\sqrt{LC}}$.
+\begin{parts}
+  \item Calculate $\omega_0$.
+  \item Calculate the resonant frequency $f_0$.
+  \item Calculate $X_L$ and $X_C$ at $\omega_0$.
+  \item What impedance does the circuit have at resonance?
+\end{parts}
+
+\uppgift{3.12}{Voltage division in an AC circuit}
+A series circuit with $Z_R = 30\,\Omega$ and $Z_L = j40\,\Omega$ is supplied with
+$U = 100\,\angle\,0^{\circ}\,\text{V}$.
+\begin{parts}
+  \item Calculate $Z_{\text{tot}}$ and $\abs{Z_{\text{tot}}}$.
+  \item Calculate the current $I$.
+  \item Calculate the voltage $U_R$ across the resistor.
+  \item Calculate the voltage $U_L$ across the inductor.
+  \item Show that $U_R + U_L = U$ as phasors, even though $\abs{U_R} + \abs{U_L} \neq \abs{U}$.
+\end{parts}
+
+\uppgift{3.13}{Finding the phase from an equation}
+An AC voltage is given by $u(t) = 10\sin(100\pi t + \delta)\,\text{V}$. At $t = 5\,\text{ms}$,
+$u = 5\,\text{V}$.
+\begin{parts}
+  \item Set up the equation for $\delta$.
+  \item Solve the equation as two cases.
+  \item Check both solutions.
+\end{parts}
+
+\uppgift{3.14}{Impedances in parallel}
+The impedances $Z_1 = 10\,\Omega$ and $Z_2 = j10\,\Omega$ are connected in parallel.
+\begin{parts}
+  \item Calculate $Z = \dfrac{Z_1Z_2}{Z_1 + Z_2}$ in rectangular form.
+  \item Calculate $\abs{Z}$ and the phase angle.
+  \item Compare with the series connection of the same impedances.
+  \item What do the two phase angles have in common?
+\end{parts}
+
+\uppgift{3.15}{From the phasor domain to the time domain}
+The current $i(t) = 4\sin(500t - 30^{\circ})\,\text{A}$ flows through a circuit. The circuit's
+impedance is $Z = 25\,\angle\,60^{\circ}\,\Omega$.
+\begin{parts}
+  \item Give the phasor of the current.
+  \item Calculate the phasor of the voltage, $U = ZI$.
+  \item Write $u(t)$.
+  \item What is the phase difference of the voltage relative to the current?
+\end{parts}
+
+\uppgift{3.16}{Two currents at a node}
+A node is fed by $i_1(t) = 6\sin(\omega t + 45^{\circ})\,\text{mA}$ and
+$i_2(t) = 8\sin(\omega t - 45^{\circ})\,\text{mA}$.
+\begin{parts}
+  \item Give the phasors in polar form.
+  \item Write them in rectangular form.
+  \item Calculate the phasor sum and give it in polar form.
+  \item Write $i_{\text{tot}}(t)$.
+\end{parts}
+
+\uppgift{3.17}{True or false}
+Decide whether each statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item Phasors with different angular frequencies may be added.
+  \item An inductance has an impedance with the phase angle $+90^{\circ}$.
+  \item $\abs{Z} = R + X$
+  \item In a purely resistive circuit, current and voltage are in phase.
+  \item In a capacitive circuit, the current lags the voltage.
+  \item At resonance, the impedance of the circuit is purely resistive.
+\end{parts}

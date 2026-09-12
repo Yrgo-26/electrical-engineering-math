@@ -1,0 +1,118 @@
+% Sections 8.1 to 8.5, from lectures/L08/appendix/a_theory.md.
+
+\section{Vad är en funktion?}
+\label{c8:sec:funktion}
+En \textbf{funktion} $f$ är en regel som för varje tillåtet värde på $x$ ger exakt ett värde
+$f(x)$:
+\[
+  f : x \mapsto f(x)
+\]
+Funktioner kan representeras som algebraiska uttryck, tabeller eller grafer.
+
+\begin{exempel}
+$f(x) = 2x + 1$ ger $f(3) = 7$ och $f(-1) = -1$.
+\end{exempel}
+
+\section{Definitionsmängd och värdemängd}
+\label{c8:sec:mangder}
+\textbf{Definitionsmängden} $D_f$ är mängden av alla $x$-värden för vilka $f(x)$ är definierat.
+
+\textbf{Värdemängden} $V_f$ är mängden av alla möjliga funktionsvärden $f(x)$.
+
+\begin{narrowtable}{@{}p{7em}p{8.5em}p{8.5em}@{}}
+  \thead{Funktion} & \thead{Definitionsmängd} & \thead{Värdemängd} \\
+  \midrule
+  $f(x) = 2x + 3$ & $\mathbb{R}$ & $\mathbb{R}$ \\
+  $f(x) = x^2$ & $\mathbb{R}$ & $[0, \infty)$ \\
+  $f(x) = \sqrt{x}$ & $[0, \infty)$ & $[0, \infty)$ \\
+  $f(x) = \dfrac{1}{x}$ & $\mathbb{R} \setminus \{0\}$ & $\mathbb{R} \setminus \{0\}$ \\
+\end{narrowtable}
+
+\section{Vanliga funktionstyper}
+\label{c8:sec:funktionstyper}
+
+\subsection{Linjär funktion}
+\label{c8:sec:linjar}
+\[
+  f(x) = kx + m
+\]
+där $k$ är lutningen och $m$ är skärningspunkten med $y$-axeln.
+
+\subsection{Potensfunktion}
+\label{c8:sec:potens}
+\[
+  f(x) = x^n
+\]
+
+\subsection{Exponentialfunktion}
+\label{c8:sec:exponential}
+\[
+  f(x) = C \cdot a^x, \qquad a > 0,\ a \neq 1
+\]
+\begin{itemize}
+  \item $a > 1$: växande funktion.
+  \item $0 < a < 1$: avtagande funktion.
+  \item $f(0) = C$, startvärdet.
+\end{itemize}
+
+\subsection{Polynomfunktion}
+\label{c8:sec:polynom}
+\[
+  f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0
+\]
+
+\section{Att läsa en graf}
+\label{c8:sec:graf}
+Från en graf avläser man:
+\begin{itemize}
+  \item definitionsmängden, alltså vilka $x$-värden som finns,
+  \item värdemängden, alltså vilka $y$-värden som uppnås,
+  \item nollställena, de $x$ där $f(x) = 0$,
+  \item maximum- och minimumpunkterna.
+\end{itemize}
+
+\section{Typexempel}
+\label{c8:sec:typexempel}
+
+\begin{exempel}[Temperatursensor]
+En sensor ger temperaturen $f(x)$ (i $^{\circ}$C) som funktion av inspänningen $x$ (i V):
+\[
+  f(x) = 100x - 50, \qquad 0 \leq x \leq 5\,\text{V}
+\]
+\textbf{a)} Bestäm definitionsmängd och värdemängd. Definitionsmängden är
+$D_f = [0, 5]\,\text{V}$, och
+\[
+  f(0) = -50\,^{\circ}\text{C}, \quad f(5) = 450\,^{\circ}\text{C}
+  \quad \Rightarrow \quad V_f = [-50, 450]\,^{\circ}\text{C}.
+\]
+\textbf{b)} Beräkna inspänningen när temperaturen är $30\,^{\circ}\text{C}$.
+\[
+  100x - 50 = 30 \quad \Rightarrow \quad x = 0{,}8\,\text{V}
+\]
+\end{exempel}
+
+\begin{exempel}[Linjär funktion från två punkter]
+En linjär funktion passerar genom $(1, 3)$ och $(3, 7)$. Lutningen är
+\[
+  k = \frac{7 - 3}{3 - 1} = 2.
+\]
+Insättning av $(1, 3)$ ger $m = 3 - 2 \cdot 1 = 1$, alltså
+\[
+  f(x) = 2x + 1.
+\]
+\end{exempel}
+
+\begin{exempel}[Exponentialfunktion och tillväxt]
+En datamängd startar med $6 \times 10^6$ datapunkter och växer med $3\,\%$ per år:
+\[
+  f(x) = 6 \times 10^6 \cdot 1{,}03^x
+\]
+\textbf{a)} Beräkna $f(5)$.
+\[
+  f(5) = 6 \times 10^6 \cdot 1{,}03^5 \approx 6{,}96 \times 10^6
+\]
+\textbf{b)} När har datamängden fördubblats?
+\[
+  1{,}03^x = 2 \quad \Rightarrow \quad x = \frac{\log 2}{\log 1{,}03} \approx 23{,}5\,\text{år}
+\]
+\end{exempel}

@@ -1,0 +1,207 @@
+% Section 16.7, from lectures/L16/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c16:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen.
+
+\facitnotis{L16}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Rektangulär form till polär form}
+Omvandla strömmen $I = 3 + j4\,\text{mA}$ till polär form.
+
+\uppgift{1.2}{Polär form till rektangulär form}
+Omvandla spänningen $U = 2\,\angle\,\frac{\pi}{4}\,\text{V}$ till rektangulär form.
+
+\uppgift{1.3}{Beräkning av impedans}
+En krets matas med spänningen från \uppref{1.2}, och strömmen från \uppref{1.1} flyter genom
+kretsen. Beräkna kretsens impedans $Z$ med ”Ohms lag”
+\[
+  Z = \frac{U}{I},
+\]
+där $Z$ är kretsens impedans i $\Omega$, $U$ matningsspänningen i V och $I$ strömmen genom kretsen
+i mA. Svara både på polär och på rektangulär form.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Vektorer i det komplexa talplanet}
+Du har vektorerna $a = (4; 3)$, $b = (-3; 6)$ och $c = (-1; 10)$. I uppgifterna nedan ska varje
+vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
+\begin{parts}
+  \item Skriv vektorerna på komplex rektangulär form.
+  \item Rita ut vektorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Bestäm vektorernas längder, dvs.\ absolutbeloppet av respektive tal.
+  \item Bestäm längden (absolutbeloppet) av $b + 2c$, dvs.\ $\abs{b + 2c}$.
+  \item Bestäm vektorernas vinklar.
+  \item Bestäm en vektor $d$ med längden $10$ som är motsatt riktad mot $a$.
+\end{parts}
+
+\uppgift{2.2}{Rektangulär form till Eulers form}
+En spänning $u(t)$ i en växelströmskrets kan representeras av en fasor $U$, som på rektangulär
+form skrivs
+\[
+  U = -12 + j4\,\text{V}.
+\]
+\begin{parts}
+  \item Rita ut fasorn $U$ i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Uttryck fasorn $U$ på Eulers form, dvs.\ bestäm absolutbeloppet $\abs{U}$ och fasvinkeln
+    $\delta$ så att $U = \abs{U}e^{j\delta}$.
+  \item Anta att spänningens frekvens är $f = 100\,\text{Hz}$. Bestäm vinkelhastigheten $\omega$.
+  \item Skriv motsvarande komplexa tidsfunktion för spänningen på Eulers form, dvs.\
+    $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+\end{parts}
+\note[Notering] Fasorn $U$ utgör den komplexa spänningen $u(t)$ utan tidsberoendet.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen. De flesta går
+att räkna i huvudet eller med papper och penna.
+
+\uppgift{3.1}{Eulers formel}
+Skriv på rektangulär form.
+\begin{delar}(5)
+  \task $e^{j\pi/2}$
+  \task $e^{j\pi}$
+  \task $e^{j0}$
+  \task $e^{-j\pi/2}$
+  \task $e^{j2\pi}$
+\end{delar}
+
+\uppgift{3.2}{Eulerform till rektangulär form}
+Skriv på rektangulär form.
+\begin{delar}(4)
+  \task $z = 4e^{j0}$
+  \task $z = 5e^{j\pi/3}$
+  \task $z = 2e^{-j\pi/4}$
+  \task $z = 10e^{j2\pi/3}$
+\end{delar}
+
+\uppgift{3.3}{Rektangulär form till Eulerform}
+Skriv på Eulerform $\abs{z}e^{j\delta}$.
+\begin{delar}(4)
+  \task $z = 3 + j3$
+  \task $z = -2 + j2$
+  \task $z = -j6$
+  \task $z = -5$
+\end{delar}
+
+\uppgift{3.4}{Multiplikation och division i polär form}
+Beräkna med $z_1 = 4\,\angle\,30^{\circ}$ och $z_2 = 3\,\angle\,45^{\circ}$:
+\begin{delar}(3)
+  \task $z_1z_2$
+  \task $\dfrac{z_1}{z_2}$
+  \task $z_1^2$
+  \task* Varför är polär form bekvämare än rektangulär vid multiplikation?
+\end{delar}
+
+\uppgift{3.5}{Jämför metoderna}
+De komplexa talen $z_1 = 3 + j4$ och $z_2 = 1 + j$ är givna.
+\begin{parts}
+  \item Beräkna $z_1z_2$ på rektangulär form.
+  \item Skriv båda talen på polär form.
+  \item Multiplicera talen på polär form.
+  \item Kontrollera att svaren i a) och c) är samma tal.
+\end{parts}
+
+\uppgift{3.6}{Division i polär form}
+Beräkna.
+\begin{delar}(3)
+  \task $\dfrac{10\,\angle\,80^{\circ}}{2\,\angle\,20^{\circ}}$
+  \task $\dfrac{12\,\angle\,0^{\circ}}{4\,\angle\,90^{\circ}}$
+  \task $\dfrac{6\,\angle\,{-30^{\circ}}}{3\,\angle\,60^{\circ}}$
+  \task* Vad händer med fasvinkeln vid division med $j$?
+\end{delar}
+
+\uppgift{3.7}{Potenser av komplexa tal}
+Talet $z = 2\,\angle\,30^{\circ}$ är givet.
+\begin{parts}
+  \item Beräkna $z^2$.
+  \item Beräkna $z^3$ och skriv svaret även på rektangulär form.
+  \item Beräkna $z^4$.
+  \item Formulera den allmänna regeln för $z^n$ på polär form.
+\end{parts}
+
+\uppgift{3.8}{Fasor ur tidsfunktion}
+Ange fasorn på polär form.
+\begin{delar}(2)
+  \task $u(t) = 10\sin\left(100\pi t + \frac{\pi}{6}\right)$
+  \task $u(t) = 4\sin\left(200\pi t - \frac{\pi}{2}\right)$
+  \task* $i(t) = 6\sin(50t)$
+  \task* Vad krävs för att två fasorer ska få adderas?
+\end{delar}
+
+\uppgift{3.9}{Tidsfunktion ur fasor}
+Vinkelhastigheten är $\omega = 100\pi\,\text{rad/s}$. Skriv motsvarande tidsfunktion.
+\begin{delar}(4)
+  \task $U = 8\,\angle\,45^{\circ}\,\text{V}$
+  \task $U = 5\,\angle\,{-90^{\circ}}\,\text{V}$
+  \task $I = 3 + j4\,\text{mA}$
+  \task $I = -2 - j2\,\text{mA}$
+\end{delar}
+
+\uppgift{3.10}{Fasoraddition}
+Två spänningar med samma frekvens ges av $U_1 = 6\,\angle\,0^{\circ}\,\text{V}$ och
+$U_2 = 8\,\angle\,90^{\circ}\,\text{V}$.
+\begin{parts}
+  \item Skriv båda på rektangulär form.
+  \item Beräkna summan $U = U_1 + U_2$.
+  \item Ange summan på polär form.
+  \item Skriv $u(t)$ om $\omega = 100\pi\,\text{rad/s}$.
+\end{parts}
+
+\uppgift{3.11}{Impedans ur spänning och ström}
+En krets har $U = 20\,\angle\,60^{\circ}\,\text{V}$ och $I = 4\,\angle\,15^{\circ}\,\text{A}$.
+\begin{parts}
+  \item Beräkna impedansen $Z = \dfrac{U}{I}$ på polär form.
+  \item Skriv $Z$ på rektangulär form.
+  \item Är kretsen induktiv eller kapacitiv?
+  \item Hur stor är resistansen respektive reaktansen?
+\end{parts}
+
+\uppgift{3.12}{Impedans för spole och kondensator}
+Vid $\omega = 1000\,\text{rad/s}$ gäller $L = 20\,\text{mH}$ och $C = 50\,\mu\text{F}$.
+\begin{parts}
+  \item Beräkna $Z_L = j\omega L$.
+  \item Beräkna $Z_C = -\dfrac{j}{\omega C}$.
+  \item Ett motstånd $R = 15\,\Omega$ seriekopplas med båda. Beräkna den totala impedansen.
+  \item Vad kallas detta tillstånd?
+\end{parts}
+
+\uppgift{3.13}{Vektorer som komplexa tal}
+Vektorerna $\mathbf{a} = (5; 12)$ och $\mathbf{b} = (-8; 6)$ är givna.
+\begin{parts}
+  \item Skriv dem som komplexa tal.
+  \item Beräkna $\abs{a}$ och $\abs{b}$.
+  \item Beräkna $a + b$ och dess absolutbelopp.
+  \item Beräkna vektorernas vinklar.
+\end{parts}
+
+\uppgift{3.14}{Rotation med $j$}
+Talet $z = 3 + j4$ är givet.
+\begin{parts}
+  \item Beräkna $jz$.
+  \item Jämför $\abs{z}$ och $\abs{jz}$.
+  \item Jämför de båda talens fasvinklar.
+  \item Vad gör multiplikation med $j$ geometriskt?
+\end{parts}
+
+\uppgift{3.15}{Sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item $e^{j\delta}$ har alltid absolutbeloppet $1$.
+  \item $\abs{z_1z_2} = \abs{z_1} + \abs{z_2}$
+  \item Vid division subtraheras fasvinklarna.
+  \item En fasor innehåller information om signalens frekvens.
+  \item $e^{j\pi} + 1 = 0$
+  \item Multiplikation av komplexa tal är enklast på rektangulär form.
+\end{parts}

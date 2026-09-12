@@ -1,0 +1,281 @@
+% Section 19.2, translated from sv/chapters/19/practice_exam.tex. The answers are in
+% en/back/facit/19.tex.
+
+\section{Practice exam}
+\label{c19:sec:ovningstentamen}
+The practice exam has the same aids, points and grade thresholds as the exam. Like the exam, it is
+divided into two parts: Part~I (Chapters~\ref{c1:ch}--\ref{c10:ch}) and Part~II
+(Chapters~\ref{c12:ch}--\ref{c17:ch}).
+
+\begin{aside}
+\textbf{How to work with the practice exam.} Sit it on your own and under the same conditions as
+the exam: with only the permitted aids, without a mobile phone and without looking at the answer
+key. Work each question as far as you can before you move on.
+
+\textbf{Answers and worked solutions.} The answer to every question is in the answer key at the
+back of the book, and its page is given next to the question. An answer shows whether you got it
+right, but not how. Full worked solutions, in Swedish, are published in the course repository, in
+\file{exam/practice_exam_solutions.md}. Always try it yourself first.
+\end{aside}
+
+\begin{booktable}{@{}p{7.2em}L@{}}
+  \thead{Aids} & Writing materials and a calculator of any kind. A formula sheet on one A4 sheet
+    (both sides), handwritten or typed, and one handwritten A4 sheet (both sides) with notes of
+    your own choice. \\
+  \thead{Points} & $25$ points in total. On top of that, up to $1.0$ bonus point can be earned
+    from tests~1--2. \\
+  \thead{Grades} & IG $< 10$ points, G $\geq 10$ points, VG $\geq 17.5$ points. \\
+  \thead{Solutions} & Every question requires a solution and a justification with a stated
+    answer, including the unit where relevant. In other words, you must explain how you arrived
+    at your results. Good luck! \\
+\end{booktable}
+
+\begin{aside}
+\note[Note] Mobile phones may not be used while the exam is in progress and must be left in the
+place indicated.
+\end{aside}
+
+\prov{ot}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part I}{Arithmetic, algebra, equations, trigonometry and logarithms}
+
+\provuppgift{1}{1.0}
+The resistance of four resistors $R_1$, $R_2$, $R_3$ and $R_4$ connected in parallel can be
+calculated with the formula
+\[
+  \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}.
+\]
+Calculate the parallel resistance $R$ if $R_1 = R_2 = 2.2\,\text{k}\Omega$ and
+$R_3 = R_4 = 10\,\text{k}\Omega$. Give the answer in k$\Omega$ to one significant figure.
+
+\provuppgift{2}{1.0}
+Simplify the following expression as far as possible, without regard to invalid values of $c$:
+\[
+  \frac{\dfrac{c^8 - 16c^4}{c^2}}{c(c^2 - 4)}
+\]
+
+\provuppgift{3}{1.0}
+Solve the system of equations
+\[
+  \begin{cases}
+    4y = -6x - 6 \\
+    3y + 6x + 9 = 0
+  \end{cases}
+\]
+
+\provuppgift{4}{1.0}
+\begin{parts}
+  \item The equations in \hyperref[ot:u:3]{question~3} are examples of the equation of a straight
+    line. Give the first equation's slope $k$ and its intercept $m$.
+  \item The equation
+    \[
+      \sin(v) = -\frac{\sqrt{3}}{2}
+    \]
+    has a solution in the interval between $180^{\circ}$ and $270^{\circ}$. Find this solution and
+    give it in degrees.
+\end{parts}
+
+\provuppgift{5}{2.0}
+Solve the equation
+\[
+  (x + 2)^2 + 2(x - 2)^2 = 45 - 6x.
+\]
+
+\provuppgift{6}{1.0}
+You have two vectors $u = (3, 5)$ and $v = (2, -4)$.
+\begin{parts}
+  \item Draw the vectors in a coordinate system.
+  \item Calculate the magnitudes of the vectors, $\abs{u}$ and $\abs{v}$.
+  \item Calculate the angles of the vectors, $v_u$ and $v_v$.
+  \item Calculate a third vector $w = u - 2v$.
+\end{parts}
+
+\provuppgift{7}{1.0}
+House prices rise over time because of inflation and market growth. The price $f(x)$ of a home
+can be described by the exponential function
+\[
+  f(x) = C \cdot a^x,
+\]
+where $C$ is the original price, $a$ is the annual growth factor and $x$ is the number of years
+that have passed since the original price was set.
+
+If, for example, the annual price increase is $5\,\%$ over a certain period, a home that costs
+$3\,000\,000\,\text{kr}$ today is worth $f(x)$~kr after $x$ years, where
+\[
+  f(x) = 3 \cdot 10^6 \cdot 1.05^x.
+\]
+Assume that the original price of a home is $7\,500\,000\,\text{kr}$ and that the annual price
+increase is $2.5\,\%$.
+\begin{parts}
+  \item Give a function that describes the home's price $f(x)$ after $x$ years.
+  \item Calculate the home's value after $5$ years.
+  \item Find the function's domain and range for a period of $0$--$30$ years.
+  \item After how many years has the home's value doubled?
+\end{parts}
+
+\provuppgift{8}{1.0}
+Simplify the following rational expression and state which values of $x$ it is not defined for:
+\[
+  f(x) = \frac{3(x^2 - x - 12)}{x^2 - 9}
+\]
+
+\provuppgift{9}{1.0}
+When a capacitor discharges through a resistor, the voltage across the capacitor decreases
+exponentially with time. The voltage $u(t)$ can be described by the function
+\[
+  u(t) = U_0 e^{-t/(RC)},
+\]
+where
+\begin{itemize}
+  \item $u(t)$ is the voltage across the capacitor at time $t$,
+  \item $U_0$ is the initial voltage in volts,
+  \item $RC$ is the circuit's time constant in seconds,
+  \item $t$ is the time in seconds.
+\end{itemize}
+A capacitor with the capacitance $680\,\upmu\text{F}$ is connected to a $10\,\text{k}\Omega$
+resistor. It is initially charged to $10\,\text{V}$ and starts to discharge at time $t = 0$.
+\begin{parts}
+  \item Calculate the voltage after three seconds.
+  \item Find the function's domain and range for the time interval $0$--$10$ seconds.
+  \item Calculate how long it takes for the voltage to fall to $40\,\%$ of its original value.
+\end{parts}
+
+\provuppgift{10}{1.5}
+An AC voltage has the amplitude $5\,\text{V}$, the frequency $100\,\text{Hz}$ and the phase
+$90^{\circ}$.
+\begin{parts}
+  \item Find the equation $u(t)$ of the AC voltage. Give the phase in radians.
+  \item Draw the sine wave of the AC voltage over one period $T$.
+\end{parts}
+
+\provuppgift{11}{1.0}
+An audio amplifier has a gain of $54\,\text{dB}$. What voltage amplification factor does that
+correspond to?
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part II}{Derivatives, integrals and complex numbers}
+
+\provuppgift{12}{1.0}
+Consider the function
+\[
+  f(x) = x^2 - 4x + 3.
+\]
+\begin{parts}
+  \item Differentiate the function $f(x)$ and find the expression for $f'(x)$.
+  \item Find where the function is stationary, i.e.\ solve $f'(x) = 0$.
+  \item Use the second derivative to decide whether the point is a maximum or a minimum.
+  \item Calculate the smallest or largest value of the function, i.e.\ find $f(x)$ at the point
+    where the function is stationary.
+  \item Draw the graph of $f(x)$ for the interval $0 \leq x \leq 5$. Mark the turning point and
+    any points where the graph crosses the axes.
+\end{parts}
+
+\provuppgift{13}{1.0}
+The charging of a capacitor can be described by the formula
+\[
+  u(t) = 10\bigl(1 - e^{-0.5t}\bigr),
+\]
+where $u(t)$ is the voltage drop across the capacitor at time $t$ and $t$ is the time in seconds.
+\begin{parts}
+  \item Differentiate the function and find the expression for $u'(t)$.
+  \item Calculate $u'(t)$ at time $t = 2\,\text{s}$, i.e.\ calculate $u'(2)$.
+  \item Decide whether the rate of increase of the voltage is increasing or decreasing at time
+    $t = 2\,\text{s}$, i.e.\ calculate $u''(2)$.
+\end{parts}
+
+\provuppgift{14}{1.5}
+Differentiate the following functions.
+\begin{delar}(2)
+  \task $f(x) = e^{2x} \cdot \ln x^2$
+  \task $f(x) = \dfrac{3x^2}{\ln x}$
+  \task $u(t) = 5\cos\left(100\pi t + \dfrac{\pi}{4}\right)\,\text{V}$
+\end{delar}
+
+\provuppgift{15}{1.0}
+The charge $q(t)$ that passes through a conductor during the time interval $(0, t)$ can be
+calculated with
+\[
+  q(t) = \int_0^t i(t)\,dt = \bigl[I(t)\bigr]_0^t,
+\]
+where
+\begin{itemize}
+  \item $q(t)$ is the charge through the conductor in coulombs (C),
+  \item $i(t)$ is the current through the conductor in amperes (A),
+  \item $I(t)$ is the antiderivative (indefinite integral) of $i(t)$.
+\end{itemize}
+The current $i(t)$ in a capacitor is given by
+\[
+  i(t) = 0.5e^{-0.1t},
+\]
+where $t$ is the time in seconds. The capacitor already has the charge $q_0 = 1\,\text{C}$ at the
+start.
+\begin{parts}
+  \item Find an expression for the antiderivative $I(t) = \int i(t)\,dt$, i.e.\ integrate
+    without any limits.
+  \item Find an expression for the charge $q(t)$ of the capacitor by integrating over the interval
+    $[0, t]$.
+  \item Find a formula for the total charge $q_{\text{tot}}(t)$ in the capacitor, including the
+    initial charge $q_0$.
+  \item How much total charge (including the initial charge) has flowed into the capacitor after
+    $4$ seconds?
+\end{parts}
+
+\provuppgift{16}{2.0}
+A circuit is supplied with the voltage $U = 3 - j4\,\text{V}$. The circuit has the impedance
+$Z = 2 + j2\,\Omega$. Calculate the current $I$ through the circuit with “Ohm's law”, that is,
+Ohm's law adapted to complex numbers:
+\[
+  I = \frac{U}{Z}
+\]
+Give the current in both rectangular and polar form.
+
+\provuppgift{17}{2.0}
+A current $i(t)$ in an AC circuit can be represented by a phasor $I$, which in rectangular form
+is written
+\[
+  I = 10 - j5\,\text{mA}.
+\]
+\begin{parts}
+  \item Draw the phasor $I$ in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Express the phasor $I$ in Euler form, i.e.\ find the magnitude $\abs{I}$ and the phase
+    angle $\delta$ such that $I = \abs{I}e^{j\delta}$.
+  \item Assume that the frequency of the current is $f = 10\,\text{Hz}$. Find the angular
+    frequency $w$.
+  \item Write $i(t)$ as a function of time $i(t) = \abs{I} \cdot e^{j(wt + \delta)}$.
+\end{parts}
+
+\provuppgift{18}{2.0}
+You have the vectors $a = (2, 1)$, $b = (3, -4)$ and $c = (-1, 3)$. In the parts below, each
+vector $(x, y)$ is to be read as a complex number $z = x + jy$.
+\begin{parts}
+  \item Write the vectors in complex rectangular form.
+  \item Draw the vectors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Find the lengths of the vectors, i.e.\ the magnitude of each number.
+  \item Find the length (magnitude) of $2a - 3c$, i.e.\ $\abs{2a - 3c}$.
+  \item Find the angles of the vectors.
+  \item Find a vector $d$ with length $7$ that points in the opposite direction to $a$.
+\end{parts}
+
+\provuppgift{19}{2.0}
+In a series connection of three components, the AC voltage across each component is measured as
+\begin{align*}
+  u_1(t) &= 2\sin(wt + 25^{\circ})\,\text{V}, \\
+  u_2(t) &= 5\sin(wt - 45^{\circ})\,\text{V}, \\
+  u_3(t) &= 1.5\sin(wt + 36^{\circ})\,\text{V}.
+\end{align*}
+The total voltage in the circuit is
+\[
+  u_{\text{tot}}(t) = u_1(t) + u_2(t) + u_3(t).
+\]
+\begin{parts}
+  \item Rewrite the voltages $u_1(t)$, $u_2(t)$ and $u_3(t)$ as phasors $U_1$, $U_2$ and $U_3$ in
+    complex rectangular form.
+  \item Calculate the phasor sum $U_{\text{tot}} = U_1 + U_2 + U_3$.
+  \item Draw the phasors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Convert the result back to a sinusoidal voltage in the time domain, in the form
+    $u_{\text{tot}}(t) = \abs{U_{\text{tot}}} \sin(wt + \delta_{\text{tot}})$.
+\end{parts}

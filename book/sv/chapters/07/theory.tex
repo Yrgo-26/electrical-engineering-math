@@ -1,0 +1,129 @@
+% Sections 7.1 to 7.6, from lectures/L07/appendix/a_theory.md.
+
+\section{Koordinatsystem och sträckor}
+\label{c7:sec:koordinatsystem}
+Ett \textbf{koordinatsystem} ($xy$-plan) har en horisontell $x$-axel och en vertikal $y$-axel
+som möts i origo $(0, 0)$.
+
+Sträckan $d$ mellan två punkter $(x_1, y_1)$ och $(x_2, y_2)$ ges av Pythagoras sats:
+\[
+  d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
+Vinkeln som sträckan bildar med den positiva $x$-axeln är
+\[
+  \theta = \arctan\!\left(\frac{y_2 - y_1}{x_2 - x_1}\right).
+\]
+
+\begin{aside}
+\note[Obs] Kontrollera alltid vilken kvadrant punkten befinner sig i och korrigera vinkeln vid
+behov: $+180^{\circ}$ för kvadrant II och III.
+\end{aside}
+
+\section{Vektorer -- begrepp och notation}
+\label{c7:sec:begrepp}
+En \textbf{vektor} representerar en storhet med både storlek och riktning. I ett plan skrivs
+vektorn $\mathbf{u}$ med sina komponenter:
+\[
+  \mathbf{u} = (u_x;\, u_y)
+\]
+Till skillnad från ett skalärt tal bär vektorn information om riktning. Vektorer används inom
+elektroteknik för att representera spänningar och strömmar i AC-system.
+
+\section{Absolutbelopp och vinkel}
+\label{c7:sec:absolutbelopp}
+\textbf{Absolutbeloppet} (längden) av $\mathbf{u} = (u_x;\, u_y)$ är
+\[
+  \abs{\mathbf{u}} = \sqrt{u_x^2 + u_y^2}.
+\]
+\textbf{Vinkeln} $v_u$ mot den positiva $x$-axeln är
+\[
+  v_u = \arctan\!\left(\frac{u_y}{u_x}\right) + \text{kvadrantkorrigering},
+\]
+där kvadrantkorrigeringen ges av tabellen.
+
+\begin{narrowtable}{@{}cccl@{}}
+  \thead{Kvadrant} & $u_x$ & $u_y$ & \thead{Korrigering} \\
+  \midrule
+  I & $+$ & $+$ & ingen \\
+  II & $-$ & $+$ & $+180^{\circ}$ \\
+  III & $-$ & $-$ & $+180^{\circ}$ \\
+  IV & $+$ & $-$ & ingen (negativ vinkel) \\
+\end{narrowtable}
+
+\section{Vinkeln mellan två vektorer}
+\label{c7:sec:vinkel}
+Vinkeln $\alpha$ mellan $\mathbf{u}$ och $\mathbf{v}$ ges av
+\[
+  \cos \alpha = \frac{\mathbf{u} \cdot \mathbf{v}}{\abs{\mathbf{u}}\abs{\mathbf{v}}},
+\]
+där \textbf{skalärprodukten} är
+\[
+  \mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y.
+\]
+
+\section{Räkna med vektorer}
+\label{c7:sec:rakna}
+
+\subsection{Addition och subtraktion}
+\label{c7:sec:addition}
+\[
+  \mathbf{u} \pm \mathbf{v} = (u_x \pm v_x;\; u_y \pm v_y)
+\]
+
+\subsection{Skalärmultiplikation}
+\label{c7:sec:skalarmultiplikation}
+\[
+  k\mathbf{u} = (k u_x;\; k u_y)
+\]
+En negativ skalär byter riktning på vektorn. En motriktad enhetsvektor ges av
+$-\dfrac{\mathbf{u}}{\abs{\mathbf{u}}}$.
+
+\section{Typexempel}
+\label{c7:sec:typexempel}
+
+\begin{exempel}[Absolutbelopp och vinkel]
+Vektorerna $\mathbf{u} = (3;\, 3)$ och $\mathbf{v} = (-2;\, 3)$ är givna.
+
+\textbf{a)} Beräkna $\abs{\mathbf{u}}$ och $\abs{\mathbf{v}}$.
+\begin{gather*}
+  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2} \approx 4{,}24 \\
+  \abs{\mathbf{v}} = \sqrt{(-2)^2 + 3^2} = \sqrt{13} \approx 3{,}61
+\end{gather*}
+
+\textbf{b)} Beräkna vinklarna $v_u$ och $v_v$. Vektorn $\mathbf{u}$ ligger i kvadrant I:
+\[
+  v_u = \arctan\!\left(\frac{3}{3}\right) = 45^{\circ}
+\]
+Vektorn $\mathbf{v}$ ligger i kvadrant II, så $180^{\circ}$ läggs till:
+\[
+  v_v = \arctan\!\left(\frac{3}{-2}\right) + 180^{\circ} \approx -56{,}3^{\circ} + 180^{\circ}
+  = 123{,}7^{\circ}
+\]
+
+\textbf{c)} Beräkna vinkeln mellan $\mathbf{u}$ och $\mathbf{v}$.
+\begin{gather*}
+  \mathbf{u} \cdot \mathbf{v} = 3 \cdot (-2) + 3 \cdot 3 = 3 \\
+  \cos \alpha = \frac{3}{3\sqrt{2} \cdot \sqrt{13}} = \frac{3}{\sqrt{234}} \approx 0{,}196
+  \quad \Rightarrow \quad \alpha \approx 78{,}7^{\circ}
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Vektorberäkning]
+Beräkna $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ och $\abs{\mathbf{w}}$ för
+$\mathbf{u} = (3;\, 3)$ och $\mathbf{v} = (-2;\, 3)$.
+\begin{gather*}
+  \mathbf{w} = (3;\, 3) + 2(-2;\, 3) = (3 - 4;\; 3 + 6) = (-1;\, 9) \\
+  \abs{\mathbf{w}} = \sqrt{(-1)^2 + 9^2} = \sqrt{82} \approx 9{,}06
+\end{gather*}
+\end{exempel}
+
+% Keeps this example from starting at the foot of a page, where it is drawn over the running
+% head of the next.
+\needspace{8\baselineskip}
+\begin{exempel}[Motriktad vektor med given längd]
+Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\, 3)$.
+\[
+  \mathbf{w} = -\frac{5}{\abs{\mathbf{u}}}\,\mathbf{u} = -\frac{5}{3\sqrt{2}}(3;\, 3)
+  = \left(-\frac{5}{\sqrt{2}};\; -\frac{5}{\sqrt{2}}\right) \approx (-3{,}54;\; -3{,}54)
+\]
+\end{exempel}

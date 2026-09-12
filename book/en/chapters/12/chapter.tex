@@ -1,0 +1,39 @@
+% Chapter 12, translated from sv/chapters/12/chapter.tex. The answers are in en/back/facit/12.tex.
+
+\chapter{Derivatives, part I}
+\label{c12:ch}
+
+{\large\itshape How fast a quantity changes, the slope of the tangent, and the peaks and valleys of
+a curve.\par}
+
+\begin{chapterbox}{In this chapter}
+\begin{itemize}
+  \item Rate of change and the tangent.
+  \item The definition of the derivative.
+  \item The derivatives of power and polynomial functions.
+  \item Zeros of the derivative, maximum and minimum points.
+\end{itemize}
+\end{chapterbox}
+
+The derivative describes how fast a quantity changes. In electrical engineering it turns up
+directly in circuit theory:
+\[
+  i_C(t) = C\frac{du_C}{dt}, \qquad u_L(t) = L\frac{di_L}{dt}
+\]
+The current through a capacitor depends on how fast the voltage across it changes, and the voltage
+across an inductor depends on how fast the current through it changes. The derivative is therefore
+not abstract mathematics, but the tool that describes transients in RC and RL circuits. This
+chapter builds up the concept from the difference quotient to the slope of the tangent, gives the
+rules of differentiation for polynomials and shows how the derivative finds the maximum and minimum
+points of a function. A short introduction to the derivative as a concept is in the video
+\url{https://www.youtube.com/watch?v=N2PpRnFqnqY}.
+
+\Secref{c12:sec:andringskvot} to \secref{c12:sec:typexempel} are the chapter's theory, with
+examples. \Secref{c12:sec:sammanfattning} summarises the rules and what you should be able to do
+after the chapter, and \secref{c12:sec:uppgifter} holds the exercises. Part~1 of them reviews the
+decibel calculations from \kapref{10}, which the practice test in \secref{c11:sec:ovningsdugga}
+also covers.
+
+\input{en/chapters/12/theory}
+\input{en/chapters/12/summary}
+\input{en/chapters/12/exercises}

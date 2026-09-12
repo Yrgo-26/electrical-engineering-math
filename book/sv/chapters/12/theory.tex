@@ -1,0 +1,117 @@
+% Sections 12.1 to 12.6, from lectures/L12/appendix/a_theory.md. Its unnumbered opening, "Varför
+% derivata i elektroteknik?", is the introduction in chapter.tex.
+
+\section{Förändringshastighet och ändringskvot}
+\label{c12:sec:andringskvot}
+\textbf{Ändringskvoten} (medelhastigheten) av $f(x)$ över intervallet $[x, x + h]$ är
+\[
+  \frac{f(x + h) - f(x)}{h}.
+\]
+Geometriskt är detta lutningen av \textbf{sekanten} genom punkterna $(x, f(x))$ och
+$(x + h, f(x + h))$.
+
+\section{Derivatans definition}
+\label{c12:sec:definition}
+Derivatan $f'(x)$ är gränsvärdet av ändringskvoten när $h \to 0$:
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\]
+Geometriskt är $f'(x)$ \textbf{lutningen av tangenten} till kurvan $y = f(x)$ i punkten $x$.
+Derivatan kallas också \textbf{momentan förändringshastighet}.
+
+\section{Deriveringsregler för polynom}
+\label{c12:sec:regler}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Funktion} & \thead{Derivata} \\
+  \midrule
+  $f(x) = C$ (konstant) & $f'(x) = 0$ \\
+  $f(x) = x^n$ & $f'(x) = nx^{n-1}$ \\
+  $f(x) = Cx^n$ & $f'(x) = Cnx^{n-1}$ \\
+  $f(x) = u(x) + v(x)$ & $f'(x) = u'(x) + v'(x)$ \\
+\end{narrowtable}
+
+\begin{exempel}
+\[
+  f(x) = 3x^4 - 2x^2 + 5 \quad \Rightarrow \quad f'(x) = 12x^3 - 4x
+\]
+\end{exempel}
+
+\section{Tangentens ekvation}
+\label{c12:sec:tangent}
+Tangenten till $y = f(x)$ i punkten $(x_0, f(x_0))$ har ekvationen
+\[
+  y = f'(x_0)(x - x_0) + f(x_0).
+\]
+
+\section{Extrempunkter -- maximum och minimum}
+\label{c12:sec:extrempunkter}
+En \textbf{stationär punkt} uppfyller $f'(x_0) = 0$. Om den är ett maximum eller ett minimum
+avgörs med ett test med andra derivatan:
+\begin{itemize}
+  \item $f''(x_0) > 0$: \textbf{minimum} (kurvan är konkav uppåt),
+  \item $f''(x_0) < 0$: \textbf{maximum} (kurvan är konkav nedåt).
+\end{itemize}
+
+\section{Typexempel}
+\label{c12:sec:typexempel}
+
+\begin{exempel}[Derivera polynomfunktioner]
+Derivera
+\begin{align*}
+  \textbf{a)}\quad f(x) &= -2x^2 + 2x + 4, \\
+  \textbf{b)}\quad f(x) &= 3x^3 - 6x^2 + \frac{3x}{4} - 5, \\
+  \textbf{c)}\quad f(x) &= -x^4 + x^3 + \frac{2x^2}{3} - 3x + 2.
+\end{align*}
+Regeln för $Cx^n$ används term för term:
+\begin{align*}
+  \textbf{a)}\quad f'(x) &= -4x + 2 \\
+  \textbf{b)}\quad f'(x) &= 9x^2 - 12x + \frac{3}{4} \\
+  \textbf{c)}\quad f'(x) &= -4x^3 + 3x^2 + \frac{4x}{3} - 3
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[Analys av en parabel]
+Funktionen är $f(x) = -x^2 + 6x - 5$.
+\par\noindent\textbf{a)} Bestäm $f'(x)$.
+\[
+  f'(x) = -2x + 6
+\]
+\textbf{b)} Lös $f'(x) = 0$.
+\[
+  -2x + 6 = 0 \quad \Rightarrow \quad x = 3
+\]
+\textbf{c)} Avgör typ med $f''(x)$.
+\[
+  f''(x) = -2 < 0 \quad \Rightarrow \quad \text{maximum}
+\]
+\textbf{d)} Beräkna maxvärdet.
+\[
+  f(3) = -9 + 18 - 5 = 4
+\]
+Maximipunkten är $(3, 4)$.
+\end{exempel}
+
+\begin{exempel}[Strömförlopp i en RC-krets]
+Strömmen approximeras av $i(t) = -0{,}4t^3 + 2{,}4t^2 - 3t + 1{,}2$ ampere, med tiden $t$ i
+sekunder.
+\par\noindent\textbf{a)} Beräkna $i'(t)$.
+\[
+  i'(t) = -1{,}2t^2 + 4{,}8t - 3
+\]
+\textbf{b)} Lös $i'(t) = 0$ med PQ-formeln.
+\begin{gather*}
+  t^2 - 4t + 2{,}5 = 0 \quad \Rightarrow \quad t = 2 \pm \sqrt{1{,}5} \\
+  t_1 \approx 0{,}78\,\text{s}, \qquad t_2 \approx 3{,}22\,\text{s}
+\end{gather*}
+\textbf{c)} Andra derivatan är $i''(t) = -2{,}4t + 4{,}8$, och
+\begin{alignat*}{2}
+  i''(0{,}78) &\approx 2{,}9 > 0 &\qquad& \Rightarrow \quad \text{minimum vid } t_1, \\
+  i''(3{,}22) &\approx -2{,}9 < 0 && \Rightarrow \quad \text{maximum vid } t_2.
+\end{alignat*}
+\textbf{d)} Strömmen i de stationära punkterna är
+\[
+  i(0{,}78) \approx 0{,}13\,\text{A} \ \text{(minimum)}, \qquad
+  i(3{,}22) \approx 3{,}07\,\text{A} \ \text{(maximum)}.
+\]
+\end{exempel}

@@ -1,0 +1,224 @@
+% Section 12.8, translated from sv/chapters/12/exercises.tex.
+
+\section{Exercises}
+\label{c12:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson; most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L12}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Linear gain}
+The relationship between the linear gain and the gain measured in dB is
+\[
+  G_{\text{dB}} = 20\log_{10} G_{\text{lin}},
+\]
+where $G_{\text{dB}}$ is the gain in dB and $G_{\text{lin}}$ the linear gain. An audio amplifier
+has a gain of $26\,\text{dB}$. Calculate the corresponding linear voltage gain.
+
+\uppgift{1.2}{Output power in dBm and mW}
+The relationship between a power $P$ and the corresponding power in dBm (dB relative to
+$1\,\text{mW}$) is
+\[
+  P_{\text{dBm}} = 10\log_{10}\frac{P}{1\,\text{mW}},
+\]
+where $P$ is the power in mW and $P_{\text{dBm}}$ the corresponding power in dBm. A radio
+transmitter has an output power of $17\,\text{dBm}$. Give the output power in mW.
+
+\uppgift{1.3}{Sound level from multiple sound sources}
+For any number of equally loud sound sources, the total sound level can be calculated with
+\[
+  L_{\text{tot}} = L_{\text{single}} + 10\log_{10} n,
+\]
+where $L_{\text{tot}}$ is the total sound level, $L_{\text{single}}$ the sound level from one sound
+source and $n$ the number of sound sources. Calculate the number of equally loud sound sources if
+the sound from one source is $68\,\text{dB}$ and the total sound level is $72.8\,\text{dB}$.
+
+% ------------------------------------------------------------------------------------------
+\needspace{12\baselineskip}
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Differentiating functions}
+Differentiate the following functions.
+\begin{delar}(2)
+  \task $f(x) = -3x^2 + 5x + 2$
+  \task $f(x) = 2x^3 - 5x^2 + \dfrac{2x}{3} - 4$
+  \task* $f(x) = 2x^4 - x^3 + \dfrac{3x^2}{5} + 4x - 1$
+\end{delar}
+
+\uppgift{2.2}{Analysing a parabola}
+Consider the function
+\[
+  f(x) = -x^2 + 8x - 7.
+\]
+\begin{parts}
+  \item Differentiate the function $f(x)$, that is, find the expression for $f'(x)$.
+  \item Find where the function is stationary, that is, solve the equation $f'(x) = 0$.
+  \item Use the second derivative to decide whether the point is a \textbf{maximum} or a
+    \textbf{minimum}.
+  \item Calculate the greatest or least value of the function.
+  \item Plot the graph of $f(x)$ in GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, and
+    check that your answers are right.
+\end{parts}
+
+\uppgift{2.3}{Analysing the current in an RC circuit}
+The current through a certain RC circuit can be approximated by the polynomial function
+\[
+  i(t) = -0.2t^3 + 1.8t^2 - 3.6t + 2.5,
+\]
+where $i(t)$ is the current through the circuit in A and $t$ the time in seconds.
+\begin{parts}
+  \item Differentiate the function to find the expression for the change in the current (the
+    rate of change of the current) $i'(t)$.
+  \item Calculate the time (or times) at which the current is stationary, that is, when
+    $i'(t) = 0$.
+  \item Use the \textbf{second derivative} to decide whether each stationary point is a
+    \textbf{maximum} or a \textbf{minimum}.
+  \item Calculate the maximum and minimum values of the current, that is, the current $i(t)$ at
+    the stationary points.
+  \item Plot the graph of $i(t)$ in GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, and
+    check that your answers are right.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Differentiating polynomials}
+Differentiate the following functions.
+\begin{delar}(3)
+  \task $f(x) = x^5$
+  \task $f(x) = 4x^3$
+  \task $f(x) = 7$
+  \task $f(x) = 2x^2 - 5x + 1$
+  \task $f(x) = -3x^4 + x$
+  \task $f(x) = \dfrac{x^3}{3}$
+\end{delar}
+
+\uppgift{3.2}{Difference quotient and the definition of the derivative}
+The function $f(x) = x^2$ is given.
+\begin{parts}
+  \item Set up the difference quotient over the interval $[2,\, 2 + h]$ and simplify it.
+  \item What value does the quotient approach as $h \to 0$?
+  \item Check your answer with the rule $f'(x) = 2x$.
+  \item Calculate the difference quotient for $h = 0.1$ and $h = 0.01$.
+\end{parts}
+
+\uppgift{3.3}{The derivative at a point}
+The function $f(x) = x^3 - 3x$ is given.
+\begin{delar}(3)
+  \task Find $f'(x)$.
+  \task Calculate $f'(0)$.
+  \task Calculate $f'(2)$.
+  \task* At which points is the tangent horizontal?
+\end{delar}
+
+\uppgift{3.4}{The equation of the tangent}
+The function $f(x) = x^2 - 4x + 5$ is given. Consider the point where $x_0 = 3$.
+\begin{delar}(2)
+  \task Calculate $f(3)$.
+  \task Calculate $f'(3)$.
+  \task Find the equation of the tangent.
+  \task Where does the tangent cross the $x$-axis?
+\end{delar}
+
+\uppgift{3.5}{Stationary point of a parabola}
+The function $f(x) = x^2 - 6x + 8$ is given.
+\begin{parts}
+  \item Find $f'(x)$.
+  \item Solve $f'(x) = 0$.
+  \item Use $f''(x)$ to decide whether the point is a maximum or a minimum.
+  \item Calculate the extreme value of the function.
+\end{parts}
+
+\uppgift{3.6}{Stationary points of a cubic function}
+The function $f(x) = x^3 - 3x^2 - 9x + 5$ is given.
+\begin{parts}
+  \item Find $f'(x)$ and factorise the expression.
+  \item Find the $x$-values of the stationary points.
+  \item Use $f''(x)$ to decide which point is the maximum and which the minimum.
+  \item Calculate the function values at both points.
+\end{parts}
+
+\uppgift{3.7}{Increasing and decreasing}
+The function $f(x) = x^2 - 4x$ is given.
+\begin{delar}(2)
+  \task Find $f'(x)$.
+  \task For which $x$ is the function increasing?
+  \task For which $x$ is it decreasing?
+  \task What happens at $x = 2$?
+\end{delar}
+
+\uppgift{3.8}{The second derivative}
+Find $f'(x)$ and $f''(x)$.
+\begin{delar}(3)
+  \task $f(x) = x^4 - 2x^2$
+  \task $f(x) = 5x^3 + 2x$
+  \task $f(x) = -x^2 + 7x - 1$
+  \task* What does the sign of $f''(x)$ say about the shape of the curve?
+\end{delar}
+
+\uppgift{3.9}{Current through a capacitor}
+The current through a capacitor is given by $i_C(t) = C\dfrac{du}{dt}$. A capacitor with
+$C = 100\,\mu\text{F}$ has the voltage $u(t) = 4t^2 + 2t$ volts.
+\begin{parts}
+  \item Find $u'(t)$.
+  \item Find an expression for $i_C(t)$ in mA.
+  \item Calculate the current at $t = 1\,\text{s}$.
+  \item At what time is the current $2\,\text{mA}$?
+\end{parts}
+
+\uppgift{3.10}{Voltage across an inductor}
+The voltage across an inductor is given by $u_L(t) = L\dfrac{di}{dt}$. An inductor with
+$L = 0.5\,\text{H}$ carries the current $i(t) = 2t^2 - 4t + 3$ amperes.
+\begin{parts}
+  \item Find $i'(t)$.
+  \item Find an expression for $u_L(t)$.
+  \item At what time is $u_L = 0$?
+  \item What happens to the current at this time?
+\end{parts}
+
+\uppgift{3.11}{Maximum power}
+The power that a generator delivers to a load varies with the current as
+$P(I) = 24I - 3I^2$ watts.
+\begin{parts}
+  \item Find $P'(I)$.
+  \item At what current is the power stationary?
+  \item Use $P''(I)$ to decide whether it is a maximum or a minimum.
+  \item Calculate the maximum power.
+\end{parts}
+
+\uppgift{3.12}{Rate of change of a signal}
+A voltage is given by $u(t) = -2t^2 + 12t$ volts for $0 \leq t \leq 6\,\text{s}$.
+\begin{parts}
+  \item Find $u'(t)$.
+  \item At what time is the voltage greatest, and how large is it then?
+  \item How fast is the voltage changing at $t = 1\,\text{s}$?
+  \item At what time is the voltage decreasing by $4\,\text{V/s}$?
+\end{parts}
+
+\uppgift{3.13}{Interpreting the sign of the derivative}
+For a function $f$, $f'(1) = 3$, $f'(2) = 0$, $f'(3) = -2$ and $f''(2) = -5$.
+\begin{parts}
+  \item Is $f$ increasing or decreasing at $x = 1$?
+  \item Is $f$ increasing or decreasing at $x = 3$?
+  \item What type of point is $x = 2$?
+  \item Describe in words what the graph looks like around $x = 2$.
+\end{parts}
+
+\uppgift{3.14}{Find the error}
+Each line contains a common differentiation error. Explain the error and give the correct answer.
+\begin{delar}(2)
+  \task $f(x) = x^3 \quad \Rightarrow \quad f'(x) = 3x^2 \cdot x$
+  \task $f(x) = 5 \quad \Rightarrow \quad f'(x) = 5$
+  \task $f(x) = 4x \quad \Rightarrow \quad f'(x) = 4x$
+  \task $f(x) = 3x^2 + 2x \quad \Rightarrow \quad f'(x) = 6x + 2x$
+  \task* If $f'(x_0) = 0$, then $x_0$ is always a maximum point.
+  \task* $f''(x)$ is found by squaring $f'(x)$.
+\end{delar}

@@ -1,0 +1,108 @@
+% Sections 17.1 to 17.5, from lectures/L17/appendix/a_theory.md.
+
+\section{Sinussignaler och fasorer}
+\label{c17:sec:fasorer}
+En sinusformad signal och dess fasor hänger samman via
+\[
+  u(t) = \abs{U}\sin(\omega t + \delta) \quad \longleftrightarrow \quad U = \abs{U}\,\angle\,\delta.
+\]
+
+\textbf{Från sinussignal till fasor:} identifiera amplituden $\abs{U}$ och fasvinkeln $\delta$
+direkt ur tidsuttrycket.
+
+\textbf{Från fasor till sinussignal:} skriv $u(t) = \abs{U}\sin(\omega t + \delta)$ med fasorn
+$U = \abs{U}\,\angle\,\delta$.
+
+\begin{aside}
+\note[Obs] Alla fasorer i en beräkning måste ha \textbf{samma vinkelhastighet} $\omega$.
+\end{aside}
+
+\section{Fasoraddition}
+\label{c17:sec:fasoraddition}
+Addition av sinussignaler görs enklast i fasorplanet:
+\begin{enumerate}
+  \item Omvandla varje sinussignal till en fasor på polär form.
+  \item Konvertera fasorerna till rektangulär form.
+  \item Addera real- och imaginärdelarna.
+  \item Konvertera summan tillbaka till polär form.
+  \item Skriv summan som en sinussignal.
+\end{enumerate}
+
+\section{Multiplikation och division med fasorer}
+\label{c17:sec:multiplikation}
+Multiplikation i polär form:
+\[
+  U_1 \cdot U_2 = \abs{U_1}\abs{U_2}\,\angle\,(\delta_1 + \delta_2)
+\]
+Division i polär form:
+\[
+  \frac{U_1}{U_2} = \frac{\abs{U_1}}{\abs{U_2}}\,\angle\,(\delta_1 - \delta_2)
+\]
+Dessa används bland annat vid impedansberäkningar: $U = Z \cdot I$.
+
+\section{Tillämpning: impedans}
+\label{c17:sec:impedans}
+En spänning $U$ och en ström $I$, båda komplexa, ger impedansen $Z$:
+\[
+  Z = \frac{U}{I} = \frac{\abs{U}}{\abs{I}}\,\angle\,(\delta_U - \delta_I)
+\]
+För de tre grundkomponenterna gäller:
+\begin{itemize}
+  \item Resistans: $Z_R = R$ (reell, fasvinkel $0$).
+  \item Induktans: $Z_L = j\omega L$ (fasvinkel $+90^{\circ}$).
+  \item Kapacitans: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$
+    (fasvinkel $-90^{\circ}$).
+\end{itemize}
+
+\needspace{12\baselineskip}
+\section{Typexempel}
+\label{c17:sec:typexempel}
+
+\begin{exempel}[Fasoraddition]
+Addera $u_1(t) = 2\sin(\omega t + 45^{\circ})\,\text{V}$ och
+$u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}$.
+
+\noindent\emph{Steg 1:} fasorerna på polär form:
+\[
+  U_1 = 2\,\angle\,45^{\circ}, \qquad U_2 = 3\,\angle\,{-60^{\circ}}
+\]
+\emph{Steg 2:} konvertera till rektangulär form:
+\begin{gather*}
+  U_1 = 2(\cos 45^{\circ} + j\sin 45^{\circ}) = \sqrt{2} + j\sqrt{2} \approx 1{,}414 + j1{,}414 \\
+  U_2 = 3(\cos(-60^{\circ}) + j\sin(-60^{\circ})) = 3(0{,}5 - j0{,}866) = 1{,}5 - j2{,}598
+\end{gather*}
+\emph{Steg 3:} addera:
+\[
+  U_{\text{tot}} = (1{,}414 + 1{,}5) + j(1{,}414 - 2{,}598) = 2{,}914 - j1{,}184
+\]
+\emph{Steg 4:} konvertera till polär form:
+\begin{gather*}
+  \abs{U_{\text{tot}}} = \sqrt{2{,}914^2 + 1{,}184^2} \approx 3{,}15\,\text{V} \\
+  \delta_{\text{tot}} = \arctan\left(\frac{-1{,}184}{2{,}914}\right) \approx -22{,}1^{\circ}
+\end{gather*}
+\emph{Steg 5:} tillbaka till tidsdomänen:
+\[
+  u_{\text{tot}}(t) = 3{,}15\sin(\omega t - 22{,}1^{\circ})\,\text{V}
+\]
+\end{exempel}
+
+\begin{exempel}[Beräkna fasen ur en ekvation]
+En växelspänning ges av $u(t) = 6\sin(80\pi t + \delta)\,\text{V}$. Vid $t = 15\,\text{ms}$ är
+$u = 3\,\text{V}$. Bestäm $\delta$.
+\begin{gather*}
+  6\sin(80\pi \cdot 0{,}015 + \delta) = 3 \quad \Rightarrow \quad \sin(1{,}2\pi + \delta) = 0{,}5 \\
+  \delta_1 = \arcsin(0{,}5) - 1{,}2\pi \approx 0{,}5236 - 3{,}7699 \approx -3{,}25\,\text{rad} \\
+  \delta_2 = \pi - \arcsin(0{,}5) - 1{,}2\pi \approx -1{,}15\,\text{rad}
+\end{gather*}
+Kontrollräkning av båda rötterna ger $u(0{,}015) = 3\,\text{V}$.
+\end{exempel}
+
+\begin{exempel}[Impedansberäkning]
+En serie-RLC-krets har $R = 10\,\Omega$, $Z_L = j5\,\Omega$ och $Z_C = -j3\,\Omega$ vid
+$\omega = 1000\,\text{rad/s}$. Totalimpedansen blir
+\begin{gather*}
+  Z = R + Z_L + Z_C = 10 + j5 - j3 = 10 + j2\,\Omega, \\
+  \abs{Z} = \sqrt{100 + 4} \approx 10{,}20\,\Omega, \qquad
+  \delta_Z = \arctan\left(\frac{2}{10}\right) \approx 11{,}3^{\circ}.
+\end{gather*}
+\end{exempel}

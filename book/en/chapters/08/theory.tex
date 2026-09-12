@@ -1,0 +1,118 @@
+% Sections 8.1 to 8.5, translated from sv/chapters/08/theory.tex.
+
+\section{What is a function?}
+\label{c8:sec:funktion}
+A \textbf{function} $f$ is a rule that gives exactly one value $f(x)$ for every permitted value of
+$x$:
+\[
+  f : x \mapsto f(x)
+\]
+Functions can be represented as algebraic expressions, tables or graphs.
+
+\begin{exempel}
+$f(x) = 2x + 1$ gives $f(3) = 7$ and $f(-1) = -1$.
+\end{exempel}
+
+\section{Domain and range}
+\label{c8:sec:mangder}
+The \textbf{domain} $D_f$ is the set of all $x$-values for which $f(x)$ is defined.
+
+The \textbf{range} $V_f$ is the set of all possible function values $f(x)$.
+
+\begin{narrowtable}{@{}p{7em}p{8.5em}p{8.5em}@{}}
+  \thead{Function} & \thead{Domain} & \thead{Range} \\
+  \midrule
+  $f(x) = 2x + 3$ & $\mathbb{R}$ & $\mathbb{R}$ \\
+  $f(x) = x^2$ & $\mathbb{R}$ & $[0, \infty)$ \\
+  $f(x) = \sqrt{x}$ & $[0, \infty)$ & $[0, \infty)$ \\
+  $f(x) = \dfrac{1}{x}$ & $\mathbb{R} \setminus \{0\}$ & $\mathbb{R} \setminus \{0\}$ \\
+\end{narrowtable}
+
+\section{Common types of function}
+\label{c8:sec:funktionstyper}
+
+\subsection{Linear function}
+\label{c8:sec:linjar}
+\[
+  f(x) = kx + m
+\]
+where $k$ is the slope and $m$ is the $y$-intercept.
+
+\subsection{Power function}
+\label{c8:sec:potens}
+\[
+  f(x) = x^n
+\]
+
+\subsection{Exponential function}
+\label{c8:sec:exponential}
+\[
+  f(x) = C \cdot a^x, \qquad a > 0,\ a \neq 1
+\]
+\begin{itemize}
+  \item $a > 1$: an increasing function.
+  \item $0 < a < 1$: a decreasing function.
+  \item $f(0) = C$, the initial value.
+\end{itemize}
+
+\subsection{Polynomial function}
+\label{c8:sec:polynom}
+\[
+  f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0
+\]
+
+\section{Reading a graph}
+\label{c8:sec:graf}
+From a graph you can read:
+\begin{itemize}
+  \item the domain, that is, which $x$-values exist,
+  \item the range, that is, which $y$-values are reached,
+  \item the zeros, the $x$ where $f(x) = 0$,
+  \item the maximum and minimum points.
+\end{itemize}
+
+\section{Worked examples}
+\label{c8:sec:typexempel}
+
+\begin{exempel}[Temperature sensor]
+A sensor gives the temperature $f(x)$ (in $^{\circ}$C) as a function of the input voltage $x$ (in
+V):
+\[
+  f(x) = 100x - 50, \qquad 0 \leq x \leq 5\,\text{V}
+\]
+\textbf{a)} Find the domain and the range. The domain is $D_f = [0, 5]\,\text{V}$, and
+\[
+  f(0) = -50\,^{\circ}\text{C}, \quad f(5) = 450\,^{\circ}\text{C}
+  \quad \Rightarrow \quad V_f = [-50, 450]\,^{\circ}\text{C}.
+\]
+\textbf{b)} Calculate the input voltage when the temperature is $30\,^{\circ}\text{C}$.
+\[
+  100x - 50 = 30 \quad \Rightarrow \quad x = 0.8\,\text{V}
+\]
+\end{exempel}
+
+\begin{exempel}[A linear function from two points]
+A linear function passes through $(1, 3)$ and $(3, 7)$. The slope is
+\[
+  k = \frac{7 - 3}{3 - 1} = 2.
+\]
+Substituting $(1, 3)$ gives $m = 3 - 2 \cdot 1 = 1$, so
+\[
+  f(x) = 2x + 1.
+\]
+\end{exempel}
+
+\begin{exempel}[Exponential function and growth]
+A data set starts with $6 \times 10^6$ data points and grows by $3\,\%$ a year:
+\[
+  f(x) = 6 \times 10^6 \cdot 1.03^x
+\]
+\textbf{a)} Calculate $f(5)$.
+\[
+  f(5) = 6 \times 10^6 \cdot 1.03^5 \approx 6.96 \times 10^6
+\]
+\textbf{b)} When has the data set doubled?
+\[
+  1.03^x = 2 \quad \Rightarrow \quad x = \frac{\log 2}{\log 1.03} \approx 23.5\,\text{years}
+\]
+\end{exempel}

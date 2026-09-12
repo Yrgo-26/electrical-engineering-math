@@ -1,0 +1,514 @@
+% mathbook.sty - the design of "Elteknisk matematik" as a book, and of its English edition,
+% "Electrical Engineering Mathematics": \usepackage[english]{mathbook}.
+%
+% Every visual decision lives here, so the chapters describe content and nothing else. The design
+% is the one the course books share: Palatino on a 7.5 x 9.25 in page, one red accent, tinted code
+% blocks with a coloured edge. This book adds what a mathematics text needs on top of it: worked
+% examples, exercises in the lessons' own numbering, and answers at the back, each linked to the
+% other.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mathbook}[Elteknisk matematik book design]
+
+% ------------------------------------------------------------------------------------------
+% Page. 7.5 x 9.25 in, a common trim for technical texts.
+% ------------------------------------------------------------------------------------------
+\RequirePackage[
+  paperwidth=7.5in, paperheight=9.25in,
+  inner=0.85in, outer=1.15in, top=0.95in, bottom=1.0in,
+  headheight=14pt, headsep=18pt, footskip=30pt]{geometry}
+
+% ------------------------------------------------------------------------------------------
+% Language. The book is Swedish, or English with the option english: the captions (Kapitel,
+% Innehåll, Bilaga), the hyphenation, and the words the macros below print around the text.
+% ------------------------------------------------------------------------------------------
+\newif\ifmathbook@english
+\DeclareOption{english}{\mathbook@englishtrue}
+\ProcessOptions\relax
+
+\RequirePackage{babel}
+\ifmathbook@english
+  % British English. Its patterns come with texlive-lang-english; without them, the book is
+  % hyphenated with the US patterns every format has, which differ from the British in few words.
+  \babelprovide[import=en-GB, main, hyphenrules=british ukenglish english]{british}
+\else
+  % The Swedish patterns come with TeX Live's Swedish support (texlive-lang-european). A system
+  % that has the pattern file but did not build it into its format gets it loaded here, at run
+  % time, which LuaTeX allows; without either, the book still builds, hyphenated with the
+  % default patterns.
+  \ifdefined\l@swedish\else
+    \IfFileExists{hyph-sv.tex}{%
+      \newlanguage\l@swedish
+      \begingroup\language\l@swedish\input{hyph-sv.tex}\endgroup}{}
+  \fi
+  \babelprovide[import, main]{swedish}
+\fi
+
+% The words. The English edition keeps the Swedish macro names (\uppgift, \svar, exempel), so
+% that its sources line up with the Swedish ones; only what they print changes.
+\ifmathbook@english
+  \def\mb@kapitel{Chapter}         \def\mb@Kapitel{Chapter}
+  \def\mb@uppgift{Exercise}        \def\mb@Uppgift{Exercise}
+  \def\mb@exempel{example}         \def\mb@obs{Note}
+  \def\mb@svarsida{answer p.}      \def\mb@testadigsjalv{Test yourself}
+  \def\mb@provuppgift{Question}    \def\mb@poang{points}
+  \def\mb@titel{Electrical Engineering Mathematics}
+  \def\mb@pdflang{en-GB}           \def\mb@licens{Licensed under CC BY 4.0}
+\else
+  \def\mb@kapitel{kapitel}         \def\mb@Kapitel{Kapitel}
+  \def\mb@uppgift{uppgift}         \def\mb@Uppgift{Uppgift}
+  \def\mb@exempel{exempel}         \def\mb@obs{Obs}
+  \def\mb@svarsida{svar s.}        \def\mb@testadigsjalv{Testa dig själv}
+  \def\mb@provuppgift{Uppgift}     \def\mb@poang{poäng}
+  \def\mb@titel{Elteknisk matematik}
+  \def\mb@pdflang{sv-SE}           \def\mb@licens{Licensierad under CC BY 4.0}
+\fi
+
+% ------------------------------------------------------------------------------------------
+% Type. Palatino for text and mathematics, DejaVu Sans Mono for the C code in Chapter 18.
+% ------------------------------------------------------------------------------------------
+% mathtools, and amsmath under it, go before unicode-math, which redefines what they define.
+\RequirePackage{mathtools}
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}[Scale=MatchLowercase]
+% The face has no small capitals; code in a small-caps running head is set in it as it is.
+\setmonofont{DejaVu Sans Mono}[Scale=0.84, HyphenChar=None, WordSpace={1,0.4,0.15},
+  SmallCapsFont={DejaVu Sans Mono}, SmallCapsFeatures={Scale=0.84}]
+\setmathfont{TeX Gyre Pagella Math}
+\RequirePackage[protrusion=true, expansion=true, tracking=true]{microtype}
+\SetTracking{encoding=*, shape=sc}{40}
+% The lessons write a decimal comma as {,} in mathematics, so that it is not followed by the
+% space of a list separator; the English edition's decimal point needs nothing. A display may
+% break after a relation or a binary operator.
+\allowdisplaybreaks[1]
+
+% ------------------------------------------------------------------------------------------
+% Colour.
+% ------------------------------------------------------------------------------------------
+\RequirePackage[table]{xcolor}
+\definecolor{accent}{HTML}{C00000}
+\definecolor{accent2}{HTML}{0050B3}
+\definecolor{accent3}{HTML}{2E7D32}
+\definecolor{muted}{HTML}{767676}
+\definecolor{ink}{HTML}{3A3A3A}
+\definecolor{fillaccent}{HTML}{F4D7D7}
+\definecolor{fillaccent2}{HTML}{D6E4F5}
+\definecolor{fillaccent3}{HTML}{D9EDDA}
+\definecolor{fillmuted}{HTML}{E8E8E8}
+\definecolor{codebg}{HTML}{F6F5F2}
+\definecolor{rule}{HTML}{BBBBBB}
+
+% ------------------------------------------------------------------------------------------
+% Structure: chapter openers, section heads, running heads.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+
+\titleformat{\chapter}[display]
+  {\normalfont\raggedright}
+  {\color{accent}\large\scshape\lsstyle\MakeLowercase{\chaptertitlename}\enspace\thechapter}
+  {1.2ex}
+  {\fontsize{26}{30}\selectfont\bfseries}
+  [\vspace{1.4ex}{\color{rule}\titlerule[0.6pt]}]
+\titleformat{name=\chapter, numberless}[display]
+  {\normalfont\raggedright}
+  {}
+  {0pt}
+  {\fontsize{26}{30}\selectfont\bfseries}
+  [\vspace{1.4ex}{\color{rule}\titlerule[0.6pt]}]
+\titlespacing*{\chapter}{0pt}{0.35in}{0.3in}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\raggedright}
+  {\color{accent}\thesection}{0.7em}{}
+\titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{1.4ex plus .2ex}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\raggedright}
+  {\color{accent}\thesubsection}{0.7em}{}
+\titlespacing*{\subsection}{0pt}{2.6ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\itshape\raggedright}
+  {}{0em}{}
+\titlespacing*{\subsubsection}{0pt}{2ex plus .8ex minus .2ex}{0.6ex plus .2ex}
+
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries}
+  {}{0em}{}[.]
+\titlespacing*{\paragraph}{0pt}{1.4ex plus .5ex minus .2ex}{0.6em}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+% Contents: chapters bold with their number in the accent, sections indented beneath, and every
+% page number right-aligned in a box of its own, so a three-digit one never meets the leaders.
+\titlecontents{chapter}[0pt]
+  {\addvspace{1.4ex}\bfseries}
+  {\makebox[2em][l]{\color{accent}\thecontentslabel}}
+  {}
+  {\hfill\makebox[2.2em][r]{\contentspage}}
+\titlecontents{section}[2em]
+  {\addvspace{0.2ex}}
+  {\makebox[2.6em][l]{\thecontentslabel}}
+  {}
+  {\titlerule*[0.6pc]{.}\makebox[2.2em][r]{\contentspage}}
+
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace #1}}
+\fancyhead[LE]{\small\thepage\qquad\scshape\lsstyle\MakeLowercase{\leftmark}}
+\fancyhead[RO]{\small\scshape\lsstyle\MakeLowercase{\rightmark}\qquad\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}}
+\RequirePackage{emptypage}
+
+% ------------------------------------------------------------------------------------------
+% Text.
+% ------------------------------------------------------------------------------------------
+% Pages end where their text ends. The class default stretches every gap on a page to square
+% the bottom off, which a page with a figure pushed to the next one cannot survive.
+\raggedbottom
+% With a ragged bottom there is no reason to leave one line of a paragraph alone on a page.
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+% Swedish compounds are long, and a unit must stay with its number; a little emergency stretch
+% lets the paragraph builder loosen a line around one rather than push it into the margin.
+\setlength{\emergencystretch}{2.5em}
+\tolerance=1000
+\setlength{\parindent}{1.2em}
+\linespread{1.06}
+\RequirePackage[shortlabels]{enumitem}
+\setlist{itemsep=0.25ex, topsep=0.8ex, parsep=0pt}
+\setlist[itemize]{leftmargin=1.4em, label={\color{accent}\textbullet}}
+\setlist[itemize,2]{leftmargin=1.2em, label={\color{muted}\textendash}}
+\setlist[enumerate]{leftmargin=1.6em, label={\bfseries\arabic*.}}
+
+% Inline code, for the C of Chapter 18. \detokenize is what lets a name like adc_value or an
+% expression like 1.0 / 2.0 be written as it appears in the source, without escaping; mathbook.lua
+% undoes the two things \detokenize does to code (a doubled # and a space after \n). A literal %
+% or an unbalanced brace is written \%, \{ or \}. \file is for file names, which are long and
+% need to break at a slash. Robust, so it survives the trip through the contents and the running
+% heads.
+\directlua{dofile(kpse.find_file("mathbook.lua"))}
+\DeclareRobustCommand{\code}[1]{%
+  {\ttfamily\directlua{mathbook_code("\luaescapestring{\detokenize{#1}}")}}}
+% A running head is set in small capitals by lowercasing it; code in a heading keeps its case.
+\ExplSyntaxOn
+\tl_put_right:Nn \l_text_case_exclude_arg_tl { \code }
+\ExplSyntaxOff
+\RequirePackage{xurl}
+\urlstyle{tt}
+% xurl lets a URL break anywhere, which a long link needs; a file name breaks only at a slash or
+% a dot, so no name is ever split in half.
+\DeclareUrlCommand{\file}{\urlstyle{tt}\def\UrlBreaks{\do\/\do\.}\def\UrlBigBreaks{}}
+
+% Section references in the terse form the lessons use: "avsnitt 4.5" becomes "§1.4.5".
+\newcommand{\secref}[1]{\S\ref{#1}}
+\newcommand{\Secref}[1]{\S\ref{#1}}
+% "kapitel 5", linked, from the chapter's label cN:ch.
+\newcommand{\kapref}[1]{\mb@kapitel~\mb@kapnummer{#1}}
+\newcommand{\Kapref}[1]{\mb@Kapitel~\mb@kapnummer{#1}}
+% \pendingchapter{5}, where chapter 5 would be: an edition that does not have the chapter yet,
+% as the English one while it is being translated. The chapter keeps its number, so the chapters
+% after it keep theirs, and a reference to it prints the number without a link. The mark goes
+% through the .aux, so that a reference before the chapter's place, in the preface, knows too.
+\newcommand{\mb@pending}[1]{\expandafter\gdef\csname mb@pending@#1\endcsname{}}
+\newcommand{\pendingchapter}[1]{%
+  \stepcounter{chapter}\immediate\write\@auxout{\string\mb@pending{\number#1}}}
+% The number is printed as written: \number would read on past the \fi for more digits and
+% swallow the space after the reference.
+\newcommand{\mb@kapnummer}[1]{%
+  \ifcsname mb@pending@\number#1\endcsname#1\else\ref{c#1:ch}\fi}
+
+% A lead-in for the notes the lessons are full of: "Tips:", "Obs:", "Notering:".
+\newcommand{\note}[1][\mb@obs]{\textbf{#1:}\ }
+
+% ------------------------------------------------------------------------------------------
+% Mathematics.
+% ------------------------------------------------------------------------------------------
+% Parallel connection, R_1 // R_2, with the spacing of a binary operator. (\parallel is taken:
+% it is the symbol ∥.)
+\newcommand{\parallell}{\mathbin{/\mkern-5mu/}}
+% Absolute value. A bare |-3| sets the minus as a binary operator, | - 3|; \abs{-3} sets the bars
+% as delimiters, and \abs*{...} lets them grow around a fraction.
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+% ------------------------------------------------------------------------------------------
+% Tables. Rules only where they separate; never a vertical one.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\setlength{\aboverulesep}{0.5ex}
+\setlength{\belowrulesep}{0.5ex}
+% Tables of fractions need room above and below each row.
+\renewcommand{\arraystretch}{1.25}
+\newcommand{\thead}[1]{\textbf{#1}}
+% A table set in the flow of the text, full measure, one size down.
+\newenvironment{booktable}[1]
+  {\par\smallskip\noindent\small\tabularx{\linewidth}{#1}\toprule}
+  {\bottomrule\endtabularx\par\smallskip}
+% The same, at its natural width and centred, for tables of short cells.
+\newenvironment{narrowtable}[1]
+  {\par\smallskip\begin{center}\small\begin{tabular}{#1}\toprule}
+  {\bottomrule\end{tabular}\end{center}\par\smallskip}
+
+% \noindentnext: the next paragraph starts flush left, as it does after a display. Unlike
+% \@afterheading it only removes the indent: it does not forbid a page break before what follows,
+% which, after one example box, would keep a second one from breaking across pages and push it
+% onto the running head of the next.
+\newcommand{\noindentnext}{\par\everypar{{\setbox\z@\lastbox}\everypar{}}}
+
+% ------------------------------------------------------------------------------------------
+% Figures. The lessons' own images, typeset straight from lectures/, so the book and the course
+% cannot drift apart: the path is the one from the repository root.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{graphicx}
+\graphicspath{{../}}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc}
+\RequirePackage{float}
+\RequirePackage{caption}
+\captionsetup{font=small, labelfont={bf,color=accent}, labelsep=quad,
+  justification=centering, skip=6pt}
+% \bild[width]{lectures/LNN/appendix/images/NAME.png}: an image centred where it is written.
+% The text after it continues flush left, as it does after a display.
+\newcommand{\bild}[2][0.7\linewidth]{%
+  \par\addvspace{1ex}\needspace{4\baselineskip}%
+  {\centering\includegraphics[width=#1]{#2}\par}\addvspace{1ex}%
+  \noindentnext}
+
+% ------------------------------------------------------------------------------------------
+% Code, for Chapter 18. A tinted block with a coloured edge; the edge says which language it is.
+% Charcoal for C, blue for the shell, grey for what a program printed back.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{listings}
+\RequirePackage[most]{tcolorbox}
+
+\lstdefinestyle{base}{
+  basicstyle=\ttfamily\small,
+  columns=fixed,
+  keepspaces=true,
+  showstringspaces=false,
+  upquote=true,
+  tabsize=4,
+  breaklines=true,
+  breakatwhitespace=false,
+  % A wrapped line is marked at both ends. Boxed, because LuaTeX will not take colour or maths
+  % loose inside the discretionary a line break is made of.
+  prebreak={\mbox{\textcolor{muted}{\tiny$\hookleftarrow$}}},
+  postbreak={\mbox{\textcolor{muted}{\tiny$\hookrightarrow$}\space}},
+  aboveskip=0pt, belowskip=0pt,
+  commentstyle=\color{muted},
+  stringstyle=\color{accent2},
+  % The comments in the lessons' code are Swedish.
+  extendedchars=true,
+  literate={å}{{\aa}}1 {ä}{{\"a}}1 {ö}{{\"o}}1 {Å}{{\AA}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1
+    {é}{{\'e}}1 {Ω}{{$\Omega$}}1 {µ}{{$\mu$}}1 {°}{{$^\circ$}}1 {–}{{--}}1 {·}{{$\cdot$}}1,
+}
+\lstdefinestyle{c}{style=base, language=C,
+  keywordstyle=\color{accent2!85!black}\bfseries,
+  directivestyle=\color{accent}}
+\lstdefinestyle{shell}{style=base, language=bash,
+  keywordstyle={}, morekeywords={}, deletekeywords={test}}
+\lstdefinestyle{output}{style=base, language={}}
+
+\tcbset{
+  codeblock/.style={
+    enhanced, listing only, breakable,
+    colback=codebg, colframe=codebg, boxrule=0pt, arc=0pt, outer arc=0pt,
+    left=8pt, right=6pt, top=4pt, bottom=4pt,
+    before skip=1.2ex plus 2pt, after skip=1.4ex plus 2pt,
+    borderline west={2pt}{0pt}{#1}},
+}
+\newtcblisting{ccode}{codeblock=ink!80, listing options={style=c}}
+\newtcblisting{shell}{codeblock=accent2!70, listing options={style=shell}}
+\newtcblisting{console}{codeblock=muted!60, listing options={style=output}}
+
+% ------------------------------------------------------------------------------------------
+% Boxes in the text.
+% ------------------------------------------------------------------------------------------
+% An aside: a tip or a warning, something true that the surrounding text is not about. It is a
+% few lines at most, so it is never split across two pages.
+\newtcolorbox{aside}[1][]{
+  enhanced,
+  colback=fillaccent2!45, colframe=fillaccent2!45, boxrule=0pt, arc=0pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt,
+  borderline west={2.5pt}{0pt}{accent2},
+  before skip=2ex, after skip=2ex,
+  fontupper=\small,
+  #1}
+% The box that opens a chapter, listing what is in it.
+\newtcolorbox{chapterbox}[1]{
+  enhanced, breakable,
+  colback=white, colframe=rule, boxrule=0.5pt, arc=0pt,
+  left=10pt, right=10pt, top=8pt, bottom=6pt,
+  fonttitle=\small\scshape\lsstyle, coltitle=accent, colbacktitle=white,
+  attach boxed title to top left={xshift=8pt, yshift=-2.2mm},
+  boxed title style={boxrule=0pt, arc=0pt, left=3pt, right=3pt, top=0pt, bottom=0pt},
+  title={#1},
+  before skip=2ex, after skip=2.5ex,
+  fontupper=\small}
+% A worked example: the problem and its solution, set off by a green edge so that the eye can
+% find the examples on a page and skip them on a second reading. \begin{exempel}[Title]; the label
+% is run in, so the example's first sentence starts on its line.
+\newtcolorbox{exempel}[1][]{
+  enhanced, breakable,
+  colback=white, colframe=white, boxrule=0pt, arc=0pt,
+  left=9pt, right=0pt, top=2pt, bottom=2pt,
+  borderline west={2pt}{0pt}{accent3!75},
+  before skip=1.8ex plus 2pt, after skip=1.8ex plus 2pt,
+  after app={\noindentnext},
+  before upper={\noindent{\small\scshape\lsstyle\color{accent3!85!black}\mb@exempel}%
+    \ifx\relax#1\relax\else\enspace{\bfseries #1.}\fi\enspace\ignorespaces},
+  parbox=false}
+
+% ------------------------------------------------------------------------------------------
+% Every heading from here on ends with \@afterheading, so the paragraph after it starts flush
+% left, as it does after a \section.
+%
+% Exercises. The book keeps the lessons' numbering, so that "uppgift 2.3" in the classroom is
+% Uppgift 2.3 here: the first number is the part (del) of the exercise set, the second the
+% exercise in it. Every exercise carries a tag with the page of its answer in the Facit, and the
+% answer links back; both are references, so the build fails if either is missing.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{needspace}
+% \headingtag{tags}: the tags at the right end of a heading, at least 1.5em from its title; when
+% the title fills the line they move, flush right, to a line of their own. Ends the paragraph.
+\newcommand{\headingtag}[1]{{\unskip\nobreak\hfil\penalty50\hskip1.5em\hbox{}\nobreak\hfill
+  #1\parfillskip=0pt\finalhyphendemerits=0\par}}
+% \svartag{label}: "svar s. 231", linked to the answer.
+\newcommand{\svarbox}[1]{%
+  \tcbox[on line, colback=fillmuted, colframe=fillmuted, boxrule=0pt, arc=1.5pt,
+    left=3pt, right=3pt, top=1pt, bottom=1pt, boxsep=0pt]{\small\scshape\lsstyle #1}}
+\newcommand{\svartag}[1]{\hyperref[#1]{\svarbox{\mb@svarsida~\pageref*{#1}}}}
+% The same tag as an illustration, for the preface.
+\newcommand{\svarexempel}{\svarbox{\mb@svarsida~231}}
+% \kindtag[fill]{text}: a small tag, for the points of a question in a practice paper.
+\newcommand{\kindtag}[2][fillmuted]{%
+  \tcbox[on line, colback=#1, colframe=#1, boxrule=0pt, arc=1.5pt,
+    left=3pt, right=3pt, top=1pt, bottom=1pt, boxsep=0pt]{%
+    \small\scshape\lsstyle\MakeLowercase{#2}}}
+% \facitnotis{L01}: the paragraph that closes the note opening a chapter's exercises, the same in
+% every chapter: where the answers are, and where the worked solutions are published.
+\newcommand{\facitnotis}[1]{%
+  \ifmathbook@english
+  \textbf{Answers and worked solutions.} The answer to every exercise is in the answer key at the
+  back of the book, and its page is given next to the exercise. An answer shows whether you got it
+  right, but not how. Full worked solutions, in Swedish, are published in the course repository
+  after the lesson, in \file{lectures/#1/appendix/c_solutions.md}. Always try it yourself first.%
+  \else
+  \textbf{Facit och lösningsförslag.} Svaret på varje uppgift finns i facit längst bak i boken,
+  och sidan står vid uppgiften. Svaret visar om du har räknat rätt, men inte hur. Fullständiga
+  lösningsförslag publiceras i kursens repository efter lektionen, i
+  \file{lectures/#1/appendix/c_solutions.md}. Räkna alltid själv först.%
+  \fi}
+% \uppgiftsdel{Del 1}{Inledande uppgifter}: the heading a part of the exercises sits under. It
+% asks for room for itself and for the heading and first lines of the exercise after it, so that
+% it is never left alone at the foot of a page.
+\newcommand{\uppgiftsdel}[2]{%
+  \par\addvspace{4ex plus 1ex}\needspace{15\baselineskip}%
+  \noindent{\small\scshape\lsstyle\color{accent}\MakeLowercase{#1}}\par
+  \nopagebreak\vspace{0.3ex}%
+  \noindent{\Large\bfseries #2}\par
+  \nopagebreak\vspace{0.4ex}{\color{rule}\hrule height 0.4pt}\par\nopagebreak\vspace{0.6ex}%
+  \@afterindentfalse\@afterheading}
+% \uppgift{2.3}{Title}: one exercise, labelled cN:u:2.3 in chapter N.
+\newcommand{\uppgift}[2]{%
+  \par\addvspace{3ex plus 1ex}\needspace{6\baselineskip}%
+  \phantomsection\def\@currentlabel{#1}\label{c\thechapter:u:#1}%
+  \noindent{\large\bfseries{\color{accent}\mb@Uppgift~#1}\ifx\relax#2\relax\else\quad #2\fi}%
+  \headingtag{\svartag{c\thechapter:f:#1}}\nopagebreak\vspace{0.8ex}\@afterindentfalse
+  \@afterheading}
+% \uppref{2.2}: "uppgift 2.2" of the same chapter, linked; \uppref[5]{2.2} is one of Chapter 5.
+\newcommand{\uppref}[2][\thechapter]{\hyperref[c#1:u:#2]{\mb@uppgift~#2}}
+\newcommand{\Uppref}[2][\thechapter]{\hyperref[c#1:u:#2]{\mb@Uppgift~#2}}
+% The lettered parts of an exercise, a) to f), as the lessons letter them. parts for parts that
+% are sentences; delar(n), from tasks, for short ones (a calculation, a number) set in n columns:
+%   \begin{delar}(4) \task $3 + 2 \times 5$ \task $(3 + 2) \times 5$ ... \end{delar}
+\newenvironment{parts}
+  {\begin{enumerate}[label={\bfseries\alph*)}, leftmargin=1.8em, itemsep=0.9ex]}
+  {\end{enumerate}}
+\RequirePackage{tasks}
+\NewTasksEnvironment[label=\textbf{\alph*)}, label-width=1.2em, label-offset=0.5em,
+  item-indent=1.8em, column-sep=1em, before-skip=0.6ex, after-skip=0.6ex,
+  after-item-skip=1.4ex]{delar}[\task](2)
+% \testadigsjalv: the heading of a chapter's self-test questions, with the page of their answers.
+\newcommand{\testadigsjalv}{%
+  \par\addvspace{2.6ex plus 1ex}\needspace{6\baselineskip}%
+  \phantomsection\def\@currentlabel{\mb@testadigsjalv}\label{c\thechapter:u:T}%
+  \noindent{\large\bfseries \mb@testadigsjalv}\headingtag{\svartag{c\thechapter:f:T}}%
+  \nopagebreak\vspace{1.0ex}\@afterindentfalse\@afterheading}
+
+% ------------------------------------------------------------------------------------------
+% The practice papers. A question is numbered within its paper, carries its points in a tag, and
+% links to its answer like an exercise; \prov{od1} names the paper, so its questions are
+% labelled od1:u:N.
+% ------------------------------------------------------------------------------------------
+\newcommand{\provprefix}{}
+\newcommand{\prov}[1]{\renewcommand{\provprefix}{#1}}
+% \provuppgift{3}{1,0}: "Uppgift 3", worth 1,0 points.
+\newcommand{\provuppgift}[2]{%
+  \par\addvspace{3.5ex plus 1ex}\needspace{6\baselineskip}%
+  \phantomsection\def\@currentlabel{#1}\label{\provprefix:u:#1}%
+  \noindent{\large\bfseries{\color{accent}\mb@provuppgift~#1}}%
+  \headingtag{\svartag{\provprefix:f:#1}\enspace\kindtag[fillaccent2]{#2~\mb@poang}}%
+  \nopagebreak\vspace{0.8ex}\@afterindentfalse\@afterheading}
+
+% ------------------------------------------------------------------------------------------
+% The answers. The Facit is set in two columns, one block per chapter or paper:
+%   \facitavsnitt{c1}{Kapitel 1}{Talsystem och grundläggande aritmetik}
+%   \begin{facit}
+%   \svar{1.1} \sv{a} $13$ \sv{b} $25$
+%   \svar[Testa dig själv]{T} \sv{1} ...
+%   \end{facit}
+% \svar prints the exercise's own number, taken from its label, so an answer to an exercise that
+% does not exist is an undefined reference, as is an exercise without an answer.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{multicol}
+\setlength{\columnsep}{2em}
+\newcommand{\facitprefix}{}
+% \facitavsnitt{prefix}{Kapitel 1}{Title}: the heading of one chapter's or paper's answers.
+\newcommand{\facitavsnitt}[3]{%
+  \renewcommand{\facitprefix}{#1}%
+  \par\addvspace{4ex plus 1ex}\needspace{8\baselineskip}%
+  \phantomsection\bookmark[level=1, dest=\@currentHref]{#2. #3}%
+  \markright{#2\enspace #3}%
+  \noindent{\small\scshape\lsstyle\color{accent}\MakeLowercase{#2}}\par
+  \nopagebreak\vspace{0.2ex}%
+  \noindent{\large\bfseries #3}\par
+  \nopagebreak\vspace{0.4ex}{\color{rule}\hrule height 0.4pt}\par\nopagebreak\vspace{0.8ex}%
+  \@afterindentfalse\@afterheading}
+\newenvironment{facit}
+  {\begin{multicols}{2}\small\raggedright\setlength{\parindent}{0pt}%
+   \setlength{\parskip}{0pt}}
+  {\end{multicols}}
+% \svar{2.3} or \svar[Testa dig själv]{T}: the start of one exercise's answer.
+\newcommand{\svar}[2][]{%
+  \par\addvspace{0.9ex}\phantomsection\label{\facitprefix:f:#2}%
+  \hangindent=1.2em\hangafter=1\noindent
+  {\bfseries\color{accent}\ifx\relax#1\relax\ref{\facitprefix:u:#2}\else
+    \hyperref[\facitprefix:u:#2]{#1}\fi}\hskip 0.5em\relax\ignorespaces}
+% \sv{a}: the answer to part a), on the same line as the one before if it fits. Its space replaces
+% the one after the number, so a first part sits as close to the number as a whole answer does.
+\newcommand{\sv}[1]{\unskip\hskip 0.9em plus 0.4em minus 0.2em\textbf{#1)}~\ignorespaces}
+
+% ------------------------------------------------------------------------------------------
+% Links. Coloured on screen, quiet enough to print.
+% ------------------------------------------------------------------------------------------
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=accent2!80!black, urlcolor=accent2!80!black,
+  citecolor=accent2!80!black, pdfauthor={Erik Pihl},
+  pdftitle={\mb@titel}, pdflang={\mb@pdflang},
+  pdfsubject={\mb@licens}}
+\RequirePackage{bookmark}
+\pdfstringdefDisableCommands{\def\code#1{#1}\def\S{§}}
+
+\endinput

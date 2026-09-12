@@ -1,0 +1,115 @@
+% Sections 15.1 to 15.6, translated from sv/chapters/15/theory.tex.
+
+\section{Introduction}
+\label{c15:sec:inledning}
+Complex numbers are needed when we want to solve equations such as $x^2 = -1$. We introduce the
+\textbf{imaginary unit}~$j$:
+\[
+  j^2 = -1 \quad \Rightarrow \quad j = \sqrt{-1}
+\]
+In electrical engineering, $j$ is used instead of $i$, which is reserved for current.
+
+\section{Rectangular form}
+\label{c15:sec:rektangular}
+A complex number $z$ is written in \textbf{rectangular form} as
+\[
+  z = x + jy,
+\]
+where
+\begin{itemize}
+  \item $x = \operatorname{Re}(z)$ is the real part,
+  \item $y = \operatorname{Im}(z)$ is the imaginary part.
+\end{itemize}
+Complex numbers are drawn in the \textbf{complex plane}, with the Re axis horizontal and the Im axis
+vertical.
+
+\section{Magnitude and phase angle}
+\label{c15:sec:fasvinkel}
+The \textbf{magnitude}, or absolute value, is the distance from the origin:
+\[
+  \abs{z} = \sqrt{x^2 + y^2}
+\]
+The \textbf{phase angle} is the angle to the positive Re axis:
+\[
+  \delta = \arctan\left(\frac{y}{x}\right) + \text{quadrant correction}
+\]
+The correction depends on which quadrant the number lies in:
+
+\begin{narrowtable}{@{}l@{\hspace{2.5em}}c@{\hspace{2.5em}}c@{\hspace{2.5em}}l@{}}
+  \thead{Quadrant} & \thead{$x$} & \thead{$y$} & \thead{Correction} \\
+  \midrule
+  I & $+$ & $+$ & none \\
+  II & $-$ & $+$ & $+180^{\circ}$ \enspace ($+\pi$) \\
+  III & $-$ & $-$ & $+180^{\circ}$ \enspace ($+\pi$) \\
+  IV & $+$ & $-$ & none (negative $\delta$) \\
+\end{narrowtable}
+
+\section{Polar form}
+\label{c15:sec:polar}
+In \textbf{polar form}, a complex number is written with its magnitude and its phase angle:
+\[
+  z = \abs{z}\angle\delta
+\]
+The conversion from \textbf{rectangular to polar form} is given by
+\[
+  \abs{z} = \sqrt{x^2 + y^2}, \qquad \delta = \arctan(y/x) + \text{correction},
+\]
+and the conversion from \textbf{polar to rectangular form} by
+\[
+  x = \abs{z}\cos\delta, \qquad y = \abs{z}\sin\delta.
+\]
+
+\section{Operations in rectangular form}
+\label{c15:sec:rakneoperationer}
+\textbf{Addition and subtraction:} the real and imaginary parts are added or subtracted
+separately.
+\[
+  (x_1 + jy_1) \pm (x_2 + jy_2) = (x_1 \pm x_2) + j(y_1 \pm y_2)
+\]
+\textbf{Multiplication:} multiply out and use $j^2 = -1$.
+\[
+  (x_1 + jy_1)(x_2 + jy_2) = (x_1x_2 - y_1y_2) + j(x_1y_2 + x_2y_1)
+\]
+\textbf{Conjugate:} the conjugate of $z = x + jy$ is $\bar{z} = x - jy$. It is useful in
+division, since it makes the denominator real.
+
+\section{Worked examples}
+\label{c15:sec:typexempel}
+
+\begin{exempel}[Complex numbers in the complex plane]
+Mark $z_1 = 3 + j4$ and $z_2 = -2 - j3$ in the complex plane and calculate their magnitudes and
+phase angles.
+
+The number $z_1 = 3 + j4$ lies in quadrant I:
+\[
+  \abs{z_1} = \sqrt{9 + 16} = 5, \qquad
+  \delta_1 = \arctan\left(\frac{4}{3}\right) \approx 53.1^{\circ}
+\]
+In polar form, $z_1 = 5\angle 53.1^{\circ}$.
+
+The number $z_2 = -2 - j3$ lies in quadrant III, so $180^{\circ}$ is added:
+\begin{gather*}
+  \abs{z_2} = \sqrt{4 + 9} = \sqrt{13} \approx 3.61, \\
+  \delta_2 = \arctan\left(\frac{-3}{-2}\right) + 180^{\circ} \approx 56.3^{\circ} + 180^{\circ}
+    = 236.3^{\circ}
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Converting from rectangular to polar form]
+The voltage is $U = 3 + j4\,\text{V}$. Find its magnitude and phase angle.
+\[
+  \abs{U} = \sqrt{3^2 + 4^2} = 5\,\text{V}, \qquad
+  \delta = \arctan\left(\frac{4}{3}\right) \approx 0.927\,\text{rad} \approx 53.1^{\circ}
+\]
+In polar form, $U = 5\angle 0.927\,\text{rad}$.
+\end{exempel}
+
+\needspace{9\baselineskip}
+\begin{exempel}[Converting from polar to rectangular form]
+The current is $I = 10\angle\frac{\pi}{4}\,\text{mA}$. Find its rectangular form.
+\begin{gather*}
+  x = 10\cos\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7.07\,\text{mA} \\
+  y = 10\sin\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7.07\,\text{mA} \\
+  I = (7.07 + j7.07)\,\text{mA}
+\end{gather*}
+\end{exempel}

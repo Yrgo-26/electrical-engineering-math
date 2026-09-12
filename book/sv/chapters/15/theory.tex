@@ -1,0 +1,115 @@
+% Sections 15.1 to 15.6, from lectures/L15/appendix/a_theory.md.
+
+\section{Inledning}
+\label{c15:sec:inledning}
+Komplexa tal behövs när vi vill lösa ekvationer som $x^2 = -1$. Vi inför den \textbf{imaginära
+enheten}~$j$:
+\[
+  j^2 = -1 \quad \Rightarrow \quad j = \sqrt{-1}
+\]
+Inom elektroteknik används $j$ i stället för $i$, som är reserverat för ström.
+
+\section{Rektangulär form}
+\label{c15:sec:rektangular}
+Ett komplext tal $z$ skrivs på \textbf{rektangulär form} som
+\[
+  z = x + jy,
+\]
+där
+\begin{itemize}
+  \item $x = \operatorname{Re}(z)$ är den reella delen,
+  \item $y = \operatorname{Im}(z)$ är den imaginära delen.
+\end{itemize}
+Komplexa tal ritas i det \textbf{komplexa talplanet}, med Re-axeln horisontellt och Im-axeln
+vertikalt.
+
+\section{Absolutbelopp och fasvinkel}
+\label{c15:sec:fasvinkel}
+\textbf{Absolutbeloppet} är längden från origo:
+\[
+  \abs{z} = \sqrt{x^2 + y^2}
+\]
+\textbf{Fasvinkeln} är vinkeln mot den positiva Re-axeln:
+\[
+  \delta = \arctan\left(\frac{y}{x}\right) + \text{kvadrantkorrigering}
+\]
+Korrigeringen beror på i vilken kvadrant talet ligger:
+
+\begin{narrowtable}{@{}l@{\hspace{2.5em}}c@{\hspace{2.5em}}c@{\hspace{2.5em}}l@{}}
+  \thead{Kvadrant} & \thead{$x$} & \thead{$y$} & \thead{Korrigering} \\
+  \midrule
+  I & $+$ & $+$ & ingen \\
+  II & $-$ & $+$ & $+180^{\circ}$ \enspace ($+\pi$) \\
+  III & $-$ & $-$ & $+180^{\circ}$ \enspace ($+\pi$) \\
+  IV & $+$ & $-$ & ingen (negativ $\delta$) \\
+\end{narrowtable}
+
+\section{Polär form}
+\label{c15:sec:polar}
+På \textbf{polär form} skrivs ett komplext tal med sitt absolutbelopp och sin fasvinkel:
+\[
+  z = \abs{z}\angle\delta
+\]
+Omvandlingen från \textbf{rektangulär till polär form} ges av
+\[
+  \abs{z} = \sqrt{x^2 + y^2}, \qquad \delta = \arctan(y/x) + \text{korrigering},
+\]
+och omvandlingen från \textbf{polär till rektangulär form} av
+\[
+  x = \abs{z}\cos\delta, \qquad y = \abs{z}\sin\delta.
+\]
+
+\section{Räkneoperationer på rektangulär form}
+\label{c15:sec:rakneoperationer}
+\textbf{Addition och subtraktion:} real- och imaginärdelarna adderas eller subtraheras var
+för sig.
+\[
+  (x_1 + jy_1) \pm (x_2 + jy_2) = (x_1 \pm x_2) + j(y_1 \pm y_2)
+\]
+\textbf{Multiplikation:} multiplicera ut och använd att $j^2 = -1$.
+\[
+  (x_1 + jy_1)(x_2 + jy_2) = (x_1x_2 - y_1y_2) + j(x_1y_2 + x_2y_1)
+\]
+\textbf{Konjugat:} konjugatet till $z = x + jy$ är $\bar{z} = x - jy$. Det är nyttigt vid
+division, eftersom det gör nämnaren reell.
+
+\section{Typexempel}
+\label{c15:sec:typexempel}
+
+\begin{exempel}[Komplexa tal i talplanet]
+Markera $z_1 = 3 + j4$ och $z_2 = -2 - j3$ i det komplexa talplanet och beräkna absolutbelopp och
+fasvinkel.
+
+Talet $z_1 = 3 + j4$ ligger i kvadrant I:
+\[
+  \abs{z_1} = \sqrt{9 + 16} = 5, \qquad
+  \delta_1 = \arctan\left(\frac{4}{3}\right) \approx 53{,}1^{\circ}
+\]
+På polär form är $z_1 = 5\angle 53{,}1^{\circ}$.
+
+Talet $z_2 = -2 - j3$ ligger i kvadrant III, så $180^{\circ}$ läggs till:
+\begin{gather*}
+  \abs{z_2} = \sqrt{4 + 9} = \sqrt{13} \approx 3{,}61, \\
+  \delta_2 = \arctan\left(\frac{-3}{-2}\right) + 180^{\circ} \approx 56{,}3^{\circ} + 180^{\circ}
+    = 236{,}3^{\circ}
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Konvertering från rektangulär till polär form]
+Spänningen är $U = 3 + j4\,\text{V}$. Bestäm absolutbelopp och fasvinkel.
+\[
+  \abs{U} = \sqrt{3^2 + 4^2} = 5\,\text{V}, \qquad
+  \delta = \arctan\left(\frac{4}{3}\right) \approx 0{,}927\,\text{rad} \approx 53{,}1^{\circ}
+\]
+På polär form är $U = 5\angle 0{,}927\,\text{rad}$.
+\end{exempel}
+
+\needspace{9\baselineskip}
+\begin{exempel}[Konvertering från polär till rektangulär form]
+Strömmen är $I = 10\angle\frac{\pi}{4}\,\text{mA}$. Bestäm den rektangulära formen.
+\begin{gather*}
+  x = 10\cos\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA} \\
+  y = 10\sin\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA} \\
+  I = (7{,}07 + j7{,}07)\,\text{mA}
+\end{gather*}
+\end{exempel}

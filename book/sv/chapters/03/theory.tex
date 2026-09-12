@@ -1,0 +1,144 @@
+% Sections 3.1 to 3.6, from lectures/L03/appendix/a_theory.md.
+
+\section{Ekvationer}
+\label{c3:sec:ekvationer}
+En \textbf{ekvation} är ett påstående om att två uttryck är lika:
+\[
+  \text{vänsterled} = \text{högerled}
+\]
+En \textbf{linjär ekvation} i en obekant $x$ är en ekvation där $x$ förekommer med högst potensen
+1:
+\[
+  ax + b = c, \quad a \neq 0
+\]
+Att \textbf{lösa en ekvation} innebär att bestämma vilket eller vilka värden på $x$ som uppfyller
+ekvationen.
+
+\section{Ekvationsprinciperna}
+\label{c3:sec:principer}
+En ekvations lösning förändras inte om man utför \emph{samma} operation på båda led.
+
+\begin{booktable}{@{}p{12.5em}L@{}}
+  \thead{Princip} & \thead{Beskrivning} \\
+  \midrule
+  \textbf{Additionsprincipen} & Addera eller subtrahera samma tal i båda led \\
+  \textbf{Multiplikationsprincipen} & Multiplicera eller dividera med samma tal ($\neq 0$) i båda
+    led \\
+\end{booktable}
+
+\textbf{Strategi:} Flytta alla termer med obekant till ett led och konstanterna till det andra.
+
+\section{Lösa linjära ekvationer steg för steg}
+\label{c3:sec:losa}
+
+\begin{exempel}
+Lös $3x - 5 = 7$.
+\begin{alignat*}{2}
+  3x - 5 &= 7 \\
+  3x &= 12 &\qquad& \text{addera $5$ i båda led} \\
+  x &= 4 && \text{dividera med $3$ i båda led}
+\end{alignat*}
+Kontroll: $3 \cdot 4 - 5 = 12 - 5 = 7$, vilket stämmer.
+\end{exempel}
+
+\begin{exempel}[Ohms lag]
+En krets har spänningen $U = 12\,\text{V}$ och strömmen $I = 0{,}5\,\text{A}$. Beräkna motståndet
+$R$. Ohms lag ger
+\[
+  U = R \cdot I \quad \Leftrightarrow \quad 12 = R \cdot 0{,}5.
+\]
+Dividera med $0{,}5$:
+\[
+  R = \frac{12}{0{,}5} = 24\,\Omega
+\]
+\end{exempel}
+
+\begin{exempel}[Med parenteser]
+Lös $2(3x + 1) = 14$.
+\begin{alignat*}{2}
+  6x + 2 &= 14 &\qquad& \text{multiplicera ut parentesen} \\
+  6x &= 12 && \text{subtrahera $2$} \\
+  x &= 2 && \text{dividera med $6$}
+\end{alignat*}
+\end{exempel}
+
+\section{Proportionsekvationer}
+\label{c3:sec:proportion}
+En proportionsekvation har formen
+\[
+  \frac{a}{b} = \frac{c}{d}
+\]
+och löses genom \textbf{korsvis multiplikation}, det vill säga genom att multiplicera diagonalt:
+\[
+  ad = bc
+\]
+
+\begin{exempel}
+Lös $\dfrac{x}{6} = \dfrac{4}{3}$.
+\[
+  3x = 24 \quad \Rightarrow \quad x = 8
+\]
+\end{exempel}
+
+\section{Olikheter}
+\label{c3:sec:olikheter}
+En \textbf{olikhet} anger att ett uttryck är större eller mindre än ett annat:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Symbol} & \thead{Läses som} \\
+  \midrule
+  $a < b$ & $a$ är mindre än $b$ \\
+  $a > b$ & $a$ är större än $b$ \\
+  $a \leq b$ & $a$ är mindre än eller lika med $b$ \\
+  $a \geq b$ & $a$ är större än eller lika med $b$ \\
+\end{narrowtable}
+
+\subsection{Lösa olikheter}
+\label{c3:sec:losaolikheter}
+Olikheter löses precis som ekvationer, med ett viktigt undantag:
+
+\begin{aside}
+\note[Obs] Om man multiplicerar eller dividerar med ett \textbf{negativt tal} vänder
+olikhetstecknet.
+\end{aside}
+
+\begin{exempel}
+Lös $2x + 3 > 9$.
+\[
+  2x > 6 \quad \Rightarrow \quad x > 3
+\]
+Lösningen är alla $x$ som är större än $3$, det vill säga $x \in (3, \infty)$.
+\end{exempel}
+
+\begin{exempel}[Negativt tal]
+Lös $-3x \leq 12$. Dividera med $-3$; tecknet vänder:
+\[
+  x \geq -4
+\]
+\end{exempel}
+
+\subsection{Praktisk tillämpning: säkert driftområde}
+\label{c3:sec:driftomrade}
+En komponent tål högst $P_{\max} = 2\,\text{W}$, och effekten ges av $P = U \cdot I$ med
+$I = 0{,}5\,\text{A}$. Det tillåtna spänningsintervallet bestäms av
+\[
+  U \cdot 0{,}5 \leq 2 \quad \Rightarrow \quad U \leq 4\,\text{V}.
+\]
+Spänningen får vara högst $4\,\text{V}$ för att komponenten inte ska skadas.
+
+\section{Absolutbelopp i ekvationer}
+\label{c3:sec:absolutbelopp}
+Ekvationer med absolutbelopp har i allmänhet två lösningar. Ekvationen $\abs{ax + b} = c$, med
+$c \geq 0$, ger
+\[
+  ax + b = c \quad \text{eller} \quad ax + b = -c.
+\]
+
+\begin{exempel}
+Lös $\abs{2x - 3} = 5$.
+\begin{align*}
+  \text{Fall 1:} &\quad 2x - 3 = 5 \quad \Rightarrow \quad x = 4 \\
+  \text{Fall 2:} &\quad 2x - 3 = -5 \quad \Rightarrow \quad x = -1
+\end{align*}
+Lösningen är $x = 4$ eller $x = -1$.
+\end{exempel}
