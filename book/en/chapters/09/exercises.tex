@@ -1,0 +1,236 @@
+% Section 9.7, translated from sv/chapters/09/exercises.tex.
+
+\section{Exercises}
+\label{c9:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L09}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Charging a capacitor}
+A capacitor is charged in an RC circuit with the voltage
+\[
+  u_{\text{c}}(t) = 5\left(1 - e^{-t/2}\right),
+\]
+where $u_{\text{c}}(t)$ is the voltage across the capacitor in volts and $t$ is the time in
+seconds, defined for $0 \leq t \leq 10$.
+\begin{parts}
+  \item Calculate the capacitor voltage $u_{\text{c}}(t)$ at $t = 0$.
+  \item Find the range of the voltage.
+  \item Find the time $t$ at which the voltage $u_{\text{c}}(t)$ across the capacitor is
+    $4\,\text{V}$.
+\end{parts}
+
+\uppgift{1.2}{Motion of a servo motor}
+The angular position of a servo motor (in degrees) is given by
+\[
+  v(t) = -0.5t^2 + 4t,
+\]
+where $t$ is the time in seconds, defined for $0 \leq t \leq 8$.
+\begin{parts}
+  \item Calculate the angle $v$ at $t = 0$, $2$, $4$, $6$ and $8\,\text{s}$.
+  \item Draw the graph and mark when the servo motor reaches its maximum angle.
+  \item Find the times at which the angle is $3.5^{\circ}$.
+\end{parts}
+
+\uppgift{1.3}{Gain in an electronic system}
+In an amplifier system, the gain is described by the rational function
+\[
+  G(x) = \frac{x^2 + x - 12}{x^2 - 16},
+\]
+where $G(x)$ is the gain factor and $x$ a dimensionless variable.
+\begin{parts}
+  \item Factorise both the numerator and the denominator.
+  \item Give the values of $x$ that are not permitted.
+  \item Simplify the expression as far as possible.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Angles to radians}
+Convert the following angles to radians.
+\begin{delar}(5)
+  \task $-30^{\circ}$
+  \task $20^{\circ}$
+  \task $225^{\circ}$
+  \task $-45^{\circ}$
+  \task $300^{\circ}$
+\end{delar}
+
+\uppgift{2.2}{Angles to degrees}
+Convert the following angles to degrees.
+\begin{delar}(5)
+  \task $\pi/2$
+  \task $3\pi/4$
+  \task $-5\pi/6$
+  \task $-1$
+  \task $2.2$
+\end{delar}
+
+\uppgift{2.3}{Determining the properties of an AC voltage}
+An AC voltage is shown in the figure below.
+
+\bild[\linewidth]{lectures/L09/appendix/images/2.3_sine_wave.png}
+
+\begin{aside}
+\note[Note] The peak value is reached after about $8.33\,\text{ms}$.
+\end{aside}
+
+\noindent Find
+\begin{itemize}
+  \item the voltage's amplitude $\abs{U}$ in V,
+  \item the voltage's frequency $f$ in Hz,
+  \item the voltage's angular frequency $\omega$ in rad/s,
+  \item the voltage's phase $\delta$ in rad,
+  \item the voltage's equation in the form $u(t) = \abs{U}\sin(\omega t + \delta)$.
+\end{itemize}
+
+\uppgift{2.4}{An AC voltage with a given phase shift}
+An AC voltage has the amplitude $3\,\text{V}$, the frequency $25\,\text{Hz}$ and the phase
+$45^{\circ}$. Find the equation $u(t)$ of the AC voltage with the phase in radians, and draw the
+sine curve over one period $T$.
+
+\uppgift{2.5}{Calculating the phase of an AC voltage}
+The equation of an AC voltage is
+\[
+  u(t) = 5\sin(60\pi t + \delta)\,\text{V}.
+\]
+At the time $t = 10\,\text{ms}$, $u(t) = 1.25\,\text{V}$. Calculate the phase $\delta$.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Degrees to radians}
+Convert to radians and give the answer in exact form.
+\begin{delar}(6)
+  \task $60^{\circ}$
+  \task $120^{\circ}$
+  \task $-90^{\circ}$
+  \task $210^{\circ}$
+  \task $15^{\circ}$
+  \task $360^{\circ}$
+\end{delar}
+
+\uppgift{3.2}{Radians to degrees}
+Convert to degrees.
+\begin{delar}(6)
+  \task $\dfrac{\pi}{3}$
+  \task $\dfrac{5\pi}{4}$
+  \task $-\dfrac{\pi}{2}$
+  \task $\dfrac{7\pi}{6}$
+  \task $3\,\text{rad}$
+  \task $0.5\,\text{rad}$
+\end{delar}
+
+\uppgift{3.3}{Sine values}
+Give the value in exact form. Use the unit circle.
+\begin{delar}(6)
+  \task $\sin 0$
+  \task $\sin\dfrac{\pi}{2}$
+  \task $\sin \pi$
+  \task $\sin\dfrac{3\pi}{2}$
+  \task $\sin\dfrac{\pi}{6}$
+  \task $\sin\dfrac{\pi}{4}$
+\end{delar}
+
+\uppgift{3.4}{Frequency, period and angular frequency}
+Fill in the empty cells using $T = \dfrac{1}{f}$ and $\omega = 2\pi f$.
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{7em}}@{}}
+  \thead{$f$} & \thead{$T$} & \thead{$\omega$} \\
+  \midrule
+  $50\,\text{Hz}$ & & \\
+  & $1\,\text{ms}$ & \\
+  & & $400\pi\,\text{rad/s}$ \\
+  $400\,\text{Hz}$ & & \\
+\end{narrowtable}
+
+\uppgift{3.5}{Reading properties from the equation}
+Give the amplitude, angular frequency, frequency, period and phase of
+\begin{delar}(2)
+  \task $u(t) = 5\sin(100\pi t)$
+  \task $u(t) = 12\sin\!\left(200\pi t + \dfrac{\pi}{2}\right)$
+  \task $u(t) = 3\sin\!\left(50\pi t - \dfrac{\pi}{6}\right)$
+  \task $u(t) = 8\sin(2000\pi t)$
+\end{delar}
+
+\uppgift{3.6}{Writing the equation}
+Write the equation of the AC voltage in the form $u(t) = \abs{U}\sin(\omega t + \delta)$ with the
+phase in radians.
+\begin{delar}(2)
+  \task $\abs{U} = 10\,\text{V}$, $f = 50\,\text{Hz}$, $\delta = 0$
+  \task $\abs{U} = 6\,\text{V}$, $f = 100\,\text{Hz}$, $\delta = 90^{\circ}$
+  \task $\abs{U} = 2\,\text{V}$, $T = 5\,\text{ms}$, $\delta = -60^{\circ}$
+  \task $\abs{U} = 325\,\text{V}$, $f = 50\,\text{Hz}$, $\delta = \dfrac{\pi}{4}$
+\end{delar}
+
+\uppgift{3.7}{Instantaneous values}
+An AC voltage is given by $u(t) = 10\sin(100\pi t)$ volts.
+\begin{parts}
+  \item Calculate $u(0)$.
+  \item Calculate $u(5\,\text{ms})$.
+  \item Calculate $u(10\,\text{ms})$.
+  \item Calculate $u(15\,\text{ms})$.
+  \item At what times during the first period is $u(t) = 0$?
+\end{parts}
+
+\uppgift{3.8}{RMS value and power}
+For a sinusoidal voltage, $U_{\text{RMS}} = \dfrac{\abs{U}}{\sqrt{2}}$.
+\begin{parts}
+  \item Calculate $U_{\text{RMS}}$ for $u(t) = 12\sin(100\pi t)$.
+  \item An AC voltage has $U_{\text{RMS}} = 230\,\text{V}$ and $f = 50\,\text{Hz}$. Write $u(t)$
+    with $\delta = 0$.
+  \item The voltage in a) is applied across a resistor $R = 100\,\Omega$. Calculate the power.
+\end{parts}
+
+\uppgift{3.9}{Phase shift in time}
+An AC voltage has the period $T = 20\,\text{ms}$.
+\begin{parts}
+  \item How many milliseconds does the phase $\delta = \dfrac{\pi}{2}$ correspond to?
+  \item How many milliseconds does $\delta = \dfrac{\pi}{6}$ correspond to?
+  \item A curve reaches its peak value $2\,\text{ms}$ \textbf{earlier} than a sine curve with no
+    phase shift. Calculate $\delta$.
+  \item Another curve reaches its peak $5\,\text{ms}$ \textbf{later}. Calculate $\delta$.
+\end{parts}
+
+\uppgift{3.10}{Two voltages with a phase difference}
+Two AC voltages are given by
+\[
+  u_1(t) = 4\sin(100\pi t) \qquad \text{and} \qquad
+  u_2(t) = 4\sin\!\left(100\pi t + \frac{\pi}{3}\right).
+\]
+\begin{parts}
+  \item Which voltage leads the other, and by how many degrees?
+  \item How many milliseconds does the phase difference correspond to?
+  \item Calculate $u_1$ and $u_2$ at $t = 5\,\text{ms}$.
+  \item Do the voltages have the same amplitude and frequency?
+\end{parts}
+
+\uppgift{3.11}{Solving a trigonometric equation}
+An AC voltage is given by $u(t) = 6\sin(100\pi t)$ volts.
+\begin{parts}
+  \item At what time is $u(t) = 3\,\text{V}$ for the first time?
+  \item Give the next time at which $u(t) = 3\,\text{V}$.
+  \item At what time is the peak value first reached?
+  \item Why does the equation $u(t) = 3$ have infinitely many solutions?
+\end{parts}
+
+\uppgift{3.12}{True or false}
+Decide whether the statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item $\sin\theta$ can take values greater than $1$.
+  \item If the frequency is doubled, the period is halved.
+  \item The angular frequency $\omega$ is measured in hertz.
+  \item A positive phase $\delta$ shifts the curve to the left, that is, earlier in time.
+  \item $180^{\circ}$ corresponds to $\pi$ radians.
+  \item The amplitude is the distance between the lowest and the highest value of the curve.
+\end{parts}

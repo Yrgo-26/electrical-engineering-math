@@ -1,0 +1,110 @@
+% Sections 10.1 to 10.5, from lectures/L10/appendix/a_theory.md.
+
+\section{Exponentialfunktioner och ekvationer}
+\label{c10:sec:exponential}
+En ekvation med en \textbf{exponentialfunktion} $f(x) = a^x$ ($a > 0$, $a \neq 1$) kan lösas för
+$x$ med hjälp av logaritmer.
+
+\textbf{Att lösa $a^x = b$:} logaritmera båda led.
+\[
+  x \cdot \log a = \log b \quad \Rightarrow \quad x = \frac{\log b}{\log a}
+\]
+
+\section{Logaritmer}
+\label{c10:sec:logaritmer}
+\textbf{Tiologaritmen} $\log_{10}$, som vanligen skrivs $\log$, definieras av
+\[
+  \log_{10}(10^x) = x \quad \Leftrightarrow \quad 10^{\log x} = x.
+\]
+Den \textbf{naturliga logaritmen} $\ln$ har basen $e \approx 2{,}718$:
+\[
+  \ln(e^x) = x \quad \Leftrightarrow \quad e^{\ln x} = x
+\]
+
+\section{Logaritmlagar}
+\label{c10:sec:logaritmlagar}
+För logaritmer gäller följande räknelagar:
+\begin{gather*}
+  \log(ab) = \log a + \log b \\
+  \log\left(\frac{a}{b}\right) = \log a - \log b \\
+  \log(a^n) = n \cdot \log a
+\end{gather*}
+\textbf{Basbyte:}
+\[
+  \log_a b = \frac{\log b}{\log a} = \frac{\ln b}{\ln a}
+\]
+
+\section{Decibel (dB)}
+\label{c10:sec:decibel}
+Decibel används inom elektroteknik för att ange förstärkning och dämpning på en logaritmisk skala.
+
+\textbf{Spänningsförstärkning:}
+\[
+  G_{\text{dB}} = 20 \log_{10}\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)
+\]
+Omvänt:
+\[
+  \frac{U_{\text{ut}}}{U_{\text{in}}} = 10^{G_{\text{dB}}/20}
+\]
+\textbf{Effektförstärkning:}
+\[
+  G_{\text{dB}} = 10 \log_{10}\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
+\]
+\textbf{Nivå i dBV}, decibel relativt $1\,\text{V}$:
+\[
+  U_{\text{dBV}} = 20 \log_{10}\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right)
+\]
+
+\needspace{12\baselineskip}
+\section{Typexempel}
+\label{c10:sec:typexempel}
+
+\begin{exempel}[Lösa logaritmiska ekvationer]
+Lös \textbf{a)} $3^x = 81$, \textbf{b)} $2^{x-1} = 64$ och \textbf{c)} $e^{x-2} = 150$.
+
+\textbf{a)} $3^x = 3^4 \Rightarrow x = 4$. Alternativt är $x = \frac{\log 81}{\log 3} = 4$.
+
+\textbf{b)}
+\[
+  (x-1)\log 2 = \log 64 \quad \Rightarrow \quad x - 1 = \frac{\log 64}{\log 2} = 6
+  \quad \Rightarrow \quad x = 7
+\]
+
+\textbf{c)}
+\[
+  x - 2 = \ln 150 \approx 5{,}01 \quad \Rightarrow \quad x \approx 7{,}01
+\]
+\end{exempel}
+
+\begin{exempel}[Halveringstid för batteriladdning]
+Ett batteri tappar halva sin laddning på $30$ timmar:
+\[
+  u(30) = U_0 \cdot a^{30} = 0{,}5\,U_0
+\]
+\textbf{Beräkna förändringsfaktorn $a$:}
+\[
+  a^{30} = 0{,}5 \quad \Rightarrow \quad a = 0{,}5^{1/30} \approx 0{,}977
+\]
+\textbf{När återstår $20\,\%$?}
+\[
+  a^t = 0{,}2 \quad \Rightarrow \quad t = \frac{\log 0{,}2}{\log a}
+  = \frac{\log 0{,}2}{\log 0{,}5^{1/30}} \approx 69{,}7\,\text{h}
+\]
+Räkna med det oavrundade värdet på $a$; med $0{,}977$ blir svaret $69{,}2\,\text{h}$.
+\end{exempel}
+
+\begin{exempel}[Linjär spänningsförstärkning]
+Två signaler har nivåerna $L_1 = 20\,\text{dB}$ och $L_2 = 46\,\text{dB}$.
+\begin{gather*}
+  G_{\text{dB}} = L_2 - L_1 = 26\,\text{dB} \\
+  G_{\text{lin}} = 10^{26/20} = 10^{1{,}3} \approx 20
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[dBV till volt]
+En sinusspänning har nivån $31{,}0\,\text{dBV}$.
+\begin{gather*}
+  U_{\text{RMS}} = 10^{31{,}0/20} \approx 35{,}5\,\text{V} \\
+  \abs{U} = U_{\text{RMS}} \cdot \sqrt{2} \approx 35{,}5 \cdot 1{,}414 \approx 50{,}2\,\text{V}
+\end{gather*}
+\end{exempel}

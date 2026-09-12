@@ -1,0 +1,55 @@
+% Half-title, title and copyright pages, translated from sv/front/title.tex.
+%
+% \bookversion is the release the PDF was built for: `make en VERSION=...` passes it in. Without it
+% the title page carries no edition at all. The book is meant to be used for many years, so no page
+% of it names a year, a date or a class.
+\providecommand{\bookversion}{}
+
+\thispagestyle{empty}
+\vspace*{2.2in}
+\begin{flushright}
+  {\Large\bfseries Electrical Engineering Mathematics}
+\end{flushright}
+\cleardoublepage
+
+\thispagestyle{empty}
+\vspace*{1.1in}
+\begin{flushleft}
+  {\color{accent}\rule{0.9in}{2.5pt}}\par\vspace{1.4ex}
+  {\fontsize{32}{38}\selectfont\bfseries Electrical\\[0.15ex] Engineering\\[0.15ex] Mathematics\par}
+  \vspace{2.2ex}
+  {\Large\itshape From fractions and equations to derivatives,\\integrals and phasors\par}
+  \vspace{1.2in}
+  {\large Erik Pihl\par}
+  \vfill
+  \ifx\bookversion\empty\else{\small\color{muted}\bookversion\par}\fi
+\end{flushleft}
+\newpage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+{\small
+\noindent\textit{Electrical Engineering Mathematics}\\
+Text and figures: Erik Pihl.\\
+Translated from the Swedish edition, \textit{Elteknisk matematik}.
+
+\medskip
+\noindent The text and figures of this book, like the course material it is set from, are licensed
+under Creative Commons Attribution 4.0 International (CC BY 4.0). You may copy, redistribute and
+adapt the material for any purpose, even commercially, provided that you credit the author and
+the licence. The licence is at \url{https://creativecommons.org/licenses/by/4.0/}.
+
+\medskip
+\noindent The C code in Chapter~18 may also be used under the MIT License, which is the licence
+for all code in the course repository. The repository also holds the lesson material and the
+worked solutions to the exercises, in Swedish.
+
+\medskip
+\noindent Set in TeX Gyre Pagella and DejaVu Sans Mono with Lua\LaTeX.
+
+\ifx\bookversion\empty\else
+\medskip
+\noindent\textcolor{muted}{This edition: \bookversion.}
+\fi
+\par}
+\cleardoublepage

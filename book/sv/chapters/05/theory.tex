@@ -1,0 +1,169 @@
+% Sections 5.1 to 5.7, from lectures/L05/appendix/a_theory.md.
+
+\section{Potenser}
+\label{c5:sec:potenser}
+En \textbf{potens} är upprepad multiplikation av ett tal med sig självt:
+\[
+  a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ faktorer}}
+\]
+Här kallas $a$ \textbf{bas} och $n$ \textbf{exponent}.
+
+\begin{exempel}
+\[
+  2^4 = 2 \times 2 \times 2 \times 2 = 16, \qquad 10^3 = 1\,000
+\]
+\end{exempel}
+
+\section{Potensregler}
+\label{c5:sec:potensregler}
+Följande sju regler gäller för alla $a \neq 0$ och $b \neq 0$.
+
+\begingroup
+\renewcommand{\arraystretch}{1.7}
+\begin{narrowtable}{@{}cll@{}}
+  \thead{Nr} & \thead{Regel} & \thead{Formel} \\
+  \midrule
+  1 & Produktregeln & $a^m \cdot a^n = a^{m+n}$ \\
+  2 & Kvotregeln & $\dfrac{a^m}{a^n} = a^{m-n}$ \\
+  3 & Potens av potens & $(a^m)^n = a^{m \cdot n}$ \\
+  4 & Potens av produkt & $(a \cdot b)^n = a^n \cdot b^n$ \\
+  5 & Potens av kvot & $\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ \\
+  6 & Nollexponent & $a^0 = 1$ \\
+  7 & Negativ exponent & $a^{-n} = \dfrac{1}{a^n}$ \\
+\end{narrowtable}
+\endgroup
+
+\begin{exempel}[Regel 1]
+\[
+  10^3 \cdot 10^4 = 10^{3+4} = 10^7
+\]
+\end{exempel}
+
+\begin{exempel}[Regel 7]
+\[
+  10^{-3} = \frac{1}{10^3} = \frac{1}{1000} = 0{,}001
+\]
+\end{exempel}
+
+\section{Rötter}
+\label{c5:sec:rotter}
+\textbf{Kvadratroten} av $a$ ($a \geq 0$) är det icke-negativa tal vars kvadrat är $a$:
+\[
+  \sqrt{a} = a^{1/2} \quad \text{eftersom} \quad \left(\sqrt{a}\right)^2 = a
+\]
+\textbf{$n$:te roten} av $a$ är det tal vars $n$:te potens är $a$:
+\[
+  \sqrt[n]{a} = a^{1/n}
+\]
+
+\subsection{Bråkexponenter}
+\label{c5:sec:brakexponenter}
+Rötter och potenser kombineras med bråkexponenter:
+\[
+  a^{m/n} = \sqrt[n]{a^m} = \left(\sqrt[n]{a}\right)^m
+\]
+
+\begin{exempel}
+\[
+  8^{2/3} = \left(\sqrt[3]{8}\right)^2 = 2^2 = 4
+\]
+\end{exempel}
+
+\subsection{Räkneregler för rötter}
+\label{c5:sec:rotregler}
+\[
+  \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}, \qquad \sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}
+\]
+
+\begin{aside}
+\note[Obs] $\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$. Det är ett vanligt misstag!
+\end{aside}
+
+\section{Standardform (vetenskaplig notation)}
+\label{c5:sec:standardform}
+I elektroteknik förekommer extremt stora och extremt små tal, till exempel
+$R = 1\,000\,000\,\Omega$ och $C = 0{,}000\,000\,001\,\text{F}$.
+
+\textbf{Standardform} skriver talet som $a \times 10^n$, där $1 \leq a < 10$:
+\[
+  1\,000\,000 = 1{,}0 \times 10^6, \qquad 0{,}000\,000\,001 = 1{,}0 \times 10^{-9}
+\]
+
+\subsection{SI-prefix}
+\label{c5:sec:siprefix}
+
+\begin{narrowtable}{@{}llc@{}}
+  \thead{Prefix} & \thead{Symbol} & \thead{Faktor} \\
+  \midrule
+  Giga & G & $10^9$ \\
+  Mega & M & $10^6$ \\
+  Kilo & k & $10^3$ \\
+  Milli & m & $10^{-3}$ \\
+  Mikro & $\mu$ & $10^{-6}$ \\
+  Nano & n & $10^{-9}$ \\
+  Piko & p & $10^{-12}$ \\
+\end{narrowtable}
+
+\begin{exempel}
+$4{,}7\,\text{k}\Omega = 4{,}7 \times 10^3\,\Omega = 4\,700\,\Omega$
+\end{exempel}
+
+\begin{exempel}
+$33\,\text{nF} = 33 \times 10^{-9}\,\text{F} = 3{,}3 \times 10^{-8}\,\text{F}$
+\end{exempel}
+
+\section{Räkning med standardform}
+\label{c5:sec:rakning}
+\textbf{Multiplikation:}
+\[
+  (3 \times 10^4) \times (2 \times 10^3) = 6 \times 10^7
+\]
+\textbf{Division:}
+\[
+  \frac{6 \times 10^6}{2 \times 10^2} = 3 \times 10^4
+\]
+\textbf{Addition} (termerna måste ha samma exponent):
+\[
+  3{,}5 \times 10^3 + 2{,}0 \times 10^3 = 5{,}5 \times 10^3
+\]
+
+\section{Värdesiffror och avrundning}
+\label{c5:sec:vardesiffror}
+\textbf{Värdesiffror} är de siffror som bär meningsfull information i ett mätvärde.
+\begin{itemize}
+  \item $4\,700\,\Omega$ kan ha 2, 3 eller 4 värdesiffror; det går inte att avgöra utan
+    sammanhang.
+  \item $4{,}70 \times 10^3\,\Omega$ har tydligt \textbf{3 värdesiffror}.
+\end{itemize}
+Resultatet av en beräkning bör normalt anges med lika många värdesiffror som det minst exakta
+indata.
+
+\textbf{Avrundningsregel:} Om siffran efter avrundningspositionen är $5$ eller större avrundas
+uppåt, annars nedåt.
+
+\section{Tillämpning: effektberäkning}
+\label{c5:sec:effekt}
+Effekten som utvecklas i ett motstånd $R$ vid spänningen $U$ är
+\[
+  P = \frac{U^2}{R}.
+\]
+
+\begin{exempel}
+Med $U = 6\,\text{V}$ och $R = 50\,\Omega$ blir
+\[
+  P = \frac{6^2}{50} = \frac{36}{50} = 0{,}72\,\text{W}.
+\]
+\end{exempel}
+
+Vid en given ström $I$ är effekten
+\[
+  P = RI^2.
+\]
+
+\begin{exempel}
+Med $I = 20\,\text{mA} = 20 \times 10^{-3}\,\text{A}$ och $R = 1\,\text{k}\Omega = 10^3\,\Omega$
+blir
+\[
+  P = 10^3 \times (20 \times 10^{-3})^2 = 10^3 \times 400 \times 10^{-6} = 0{,}4\,\text{W}.
+\]
+\end{exempel}

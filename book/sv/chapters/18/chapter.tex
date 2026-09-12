@@ -1,0 +1,48 @@
+% Chapter 18, typeset from lectures/L18: the README is the opener, the closing review and the
+% requirements of the lab, bilaga A the sections, lectures/L18/code/README.md the development
+% environment, and bilaga B the exercises. The answers are in sv/back/facit/18.tex.
+
+\chapter{Matematik i C}
+\label{c18:ch}
+
+{\large\itshape Kursens matematik skriven som program: från handberäkning till kod som räknar
+likadant.\par}
+
+\begin{chapterbox}{I det här kapitlet}
+\begin{itemize}
+  \item Standardbiblioteket \file{math.h}: funktioner, konstanter och länkning med \code{-lm}.
+  \item Flyttal i C: \code{float} och \code{double}, samt skillnaden mot heltalstyperna du redan
+    har använt.
+  \item Potenser, rötter, logaritmer och decibel i kod.
+  \item Trigonometriska funktioner samt omvandling mellan grader och radianer.
+  \item Numerisk derivering och integrering.
+  \item Komplexa tal och fasorer med \file{complex.h}.
+  \item Sampling av en sinussignal -- från formel till talföljd.
+\end{itemize}
+\end{chapterbox}
+
+Det här kapitlet är en laboration. Den samlar matematiken från de tidigare kapitlen -- potenser,
+logaritmer och decibel, trigonometri, derivator, integraler och komplexa tal -- och låter en dator
+göra samma beräkningar. Varje uppgift löses i två steg: först för hand, sedan med ett program i C
+som använder standardbiblioteken \file{math.h} och \file{complex.h}, varefter resultaten jämförs.
+Koden skrivs och körs i webbläsaren, i kompilatorn OnlineGDB, så ingen installation behövs.
+Kapitlet förutsätter grundläggande C-programmering: variabler, funktioner, \code{printf()} och
+loopar. Flyttalen gås igenom i kapitlet.
+
+\Secref{c18:sec:mathh} till \secref{c18:sec:fallgropar} är teorin: hur varje del av matematiken
+skrivs i C och vilka fallgropar som finns, och \secref{c18:sec:typexempel} räknar fem typexempel.
+\Secref{c18:sec:sammanfattning} sammanfattar vad du ska kunna, och i \secref{c18:sec:uppgifter}
+finns laborationens uppgifter. Del~1--3 är obligatoriska, och del~4 och~5 är frivillig
+fördjupning.
+
+\begin{aside}
+\note[Förberedelser] Läs teorin och gör \textbf{handberäkningarna för samtliga uppgifter i
+del~1--3} innan lektionen. Lektionstiden räcker inte till både beräkning och programmering, och
+beräkningarna krävs för att bli godkänd. Öppna också
+\url{https://www.onlinegdb.com/online_c_compiler}, kontrollera att språket är inställt på
+\textbf{C} och tryck på \textbf{Run}: exempelprogrammet ska skriva ut \code{Hello World}.
+\end{aside}
+
+\input{sv/chapters/18/theory}
+\input{sv/chapters/18/summary}
+\input{sv/chapters/18/exercises}

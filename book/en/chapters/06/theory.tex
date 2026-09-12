@@ -1,0 +1,161 @@
+% Sections 6.1 to 6.5, translated from sv/chapters/06/theory.tex.
+
+\section{Definition}
+\label{c6:sec:definition}
+A \textbf{quadratic equation} (an equation of the second degree) is an equation of the form
+\[
+  ax^2 + bx + c = 0, \quad a \neq 0.
+\]
+The coefficients $a$, $b$ and $c$ are real numbers. The equation can have \textbf{0, 1 or 2 real
+roots}.
+
+\begin{exempel}
+$2x^2 - 3x - 5 = 0$ is a quadratic equation with $a = 2$, $b = -3$ and $c = -5$.
+\end{exempel}
+
+\section{The discriminant}
+\label{c6:sec:diskriminant}
+The \textbf{discriminant} $D$ decides the number of real roots:
+\[
+  D = b^2 - 4ac
+\]
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Condition} & \thead{Number of roots} \\
+  \midrule
+  $D > 0$ & Two distinct real roots \\
+  $D = 0$ & One double root (a root of multiplicity 2) \\
+  $D < 0$ & No real roots \\
+\end{narrowtable}
+
+\section{Methods of solution}
+\label{c6:sec:losningsmetoder}
+
+\subsection{The factorisation method}
+\label{c6:sec:faktorisering}
+If $ax^2 + bx + c$ can be factorised as $a(x - r_1)(x - r_2)$, the roots are $x = r_1$ and
+$x = r_2$.
+
+\begin{exempel}
+Solve $x^2 - 5x + 6 = 0$. Factorise:
+\[
+  (x - 2)(x - 3) = 0
+\]
+The roots are given by $x - 2 = 0$ or $x - 3 = 0$:
+\[
+  x_1 = 2, \quad x_2 = 3
+\]
+\end{exempel}
+
+\begin{exempel}[Difference of two squares]
+Solve $x^2 - 9 = 0$.
+\[
+  (x + 3)(x - 3) = 0 \quad \Rightarrow \quad x = -3 \text{ or } x = 3
+\]
+\end{exempel}
+
+\subsection{The PQ-formula}
+\label{c6:sec:pq}
+The PQ-formula, the name Swedish schools give the quadratic formula in this form, applies to
+equations in \emph{normalised} form $x^2 + px + q = 0$, that is, with $a = 1$:
+\[
+  x = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+\]
+
+\begin{exempel}
+Solve $x^2 - 4x + 3 = 0$. Here $p = -4$ and $q = 3$:
+\begin{gather*}
+  x = \frac{4}{2} \pm \sqrt{\left(\frac{4}{2}\right)^2 - 3} = 2 \pm \sqrt{4 - 3} = 2 \pm 1 \\*
+  x_1 = 3, \quad x_2 = 1
+\end{gather*}
+\end{exempel}
+
+\subsection{The ABC-formula (the quadratic formula)}
+\label{c6:sec:abc}
+The ABC-formula applies in general to $ax^2 + bx + c = 0$:
+\[
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+\begin{exempel}
+Solve $2x^2 + 5x - 3 = 0$. Here $a = 2$, $b = 5$ and $c = -3$:
+\[
+  D = 5^2 - 4 \cdot 2 \cdot (-3) = 25 + 24 = 49
+\]
+\[
+  x = \frac{-5 \pm \sqrt{49}}{4} = \frac{-5 \pm 7}{4}
+  \quad \Rightarrow \quad x_1 = 0.5, \quad x_2 = -3
+\]
+\end{exempel}
+
+\subsection{Completing the square}
+\label{c6:sec:kvadratkomplettering}
+Every quadratic equation can be written in the form $(x + k)^2 = m$ by ‘completing the square’.
+For $x^2 + bx + c = 0$ it goes like this:
+\begin{enumerate}
+  \item Move the constant: $x^2 + bx = -c$.
+  \item Add $\left(\frac{b}{2}\right)^2$ to both sides.
+  \item The left-hand side becomes a perfect square.
+\end{enumerate}
+
+\begin{exempel}
+Solve $x^2 + 6x + 5 = 0$.
+\[
+  x^2 + 6x = -5
+\]
+Add $\left(\frac{6}{2}\right)^2 = 9$:
+\[
+  x^2 + 6x + 9 = -5 + 9 = 4
+\]
+\[
+  (x + 3)^2 = 4 \quad \Rightarrow \quad x + 3 = \pm 2
+  \quad \Rightarrow \quad x_1 = -1, \quad x_2 = -5
+\]
+\end{exempel}
+
+\section{Vieta's formulas}
+\label{c6:sec:vieta}
+If $x_1$ and $x_2$ are the roots of $x^2 + px + q = 0$, then
+\begin{align*}
+  x_1 + x_2 &= -p \qquad \text{(the sum of the roots)}, \\
+  x_1 \cdot x_2 &= q \qquad \text{(the product of the roots)}.
+\end{align*}
+
+\begin{exempel}[Quick check]
+In \secref{c6:sec:pq}, $x^2 - 4x + 3 = 0$ gave the roots $x_1 = 3$ and $x_2 = 1$. Vieta's formulas
+confirm them:
+\[
+  3 + 1 = 4 = -(-4)\ \checkmark, \qquad 3 \cdot 1 = 3\ \checkmark
+\]
+\end{exempel}
+
+\section{Applications in electrical engineering}
+\label{c6:sec:tillampning}
+
+\subsection{Current from power and resistance}
+\label{c6:sec:strom}
+The power in a resistor $R$ is given by $P = RI^2$. Given $P$ and $R$, the current $I$ can be
+calculated:
+\[
+  RI^2 = P \quad \Rightarrow \quad I^2 = \frac{P}{R} \quad \Rightarrow \quad I = \sqrt{\frac{P}{R}}
+\]
+This is a \emph{pure} quadratic equation, with no linear term.
+
+\begin{exempel}
+With $P = 8\,\text{W}$ and $R = 50\,\Omega$,
+\[
+  I = \sqrt{\frac{8}{50}} = \sqrt{0.16} = 0.4\,\text{A}.
+\]
+\end{exempel}
+
+\subsection{Resistance from a series connection}
+\label{c6:sec:serie}
+Two resistors $R_1$ and $R_2$ are connected in series with $R_1 + R_2 = 10\,\Omega$ and
+$R_1 \cdot R_2 = 24\,\Omega^2$. By Vieta's formulas, they are the roots of
+\[
+  x^2 - 10x + 24 = 0 \quad \Rightarrow \quad x = \frac{10 \pm 2}{2},
+\]
+that is,
+\[
+  R_1 = 6\,\Omega, \quad R_2 = 4\,\Omega.
+\]

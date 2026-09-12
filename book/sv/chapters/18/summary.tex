@@ -1,0 +1,53 @@
+% Section 18.13. The lesson's bilaga A has no summary of its own: the table collects the formulas
+% of sections 18.3 to 18.10 with their C, and the rest is from lectures/L18/README.md: the
+% objectives, the evaluation questions and the next lesson.
+
+\section{Sammanfattning}
+\label{c18:sec:sammanfattning}
+
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{8.5em}p{12em}L@{}}
+  \thead{Begrepp} & \thead{Matematik} & \thead{I C} \\
+  \midrule
+  Rot, potens & $\sqrt{x}$, $x^y$ & \code{sqrt(x)}, \code{pow(x, y)} \\
+  Logaritmer & $\ln x$, $\lg x$ & \code{log(x)}, \code{log10(x)} \\
+  Decibel & $20\log_{10}(U_{\text{ut}}/U_{\text{in}})$ & \code{20.0 * log10(u_out / u_in)} \\
+  Grader till radianer & $\text{grader} \cdot \pi/180$ & \code{deg * PI / 180.0} \\
+  Vinkel i rätt kvadrant & $\arg(x + jy)$ & \code{atan2(y, x)} \\
+  Centraldifferens & $\bigl(f(x + h) - f(x - h)\bigr)/2h$ & \code{derivative(f, x, 1e-6)} \\
+  Trapetsmetoden & $\int_a^b f(x)\,dx$, $n$ delintervall & \code{integral(f, a, b, n)} \\
+  Komplext tal & $3 + 4j$ & \code{3.0 + 4.0 * I} \\
+  Belopp, argument & $\abs{z}$, $\arg(z)$ & \code{cabs(z)}, \code{carg(z)} \\
+  Polär form & $r e^{j\theta}$ & \code{r * cexp(I * theta)} \\
+  Sampel & $\abs{U}\sin(2\pi k/N + \delta)$, $N = f_s/f$ &
+    \code{amplitude * sin(2.0 * PI * k / n + delta)} \\
+\end{booktable}
+
+\needspace{6\baselineskip}
+\subsection*{Det här ska du kunna}
+Efter det här kapitlet ska du:
+\begin{itemize}
+  \item Förstå skillnaden mellan heltal och flyttal i C, och kunna välja rätt typ och
+    formatspecificerare.
+  \item Kunna använda \file{math.h} för att beräkna potenser, rötter, logaritmer och decibel.
+  \item Kunna räkna med vinklar i radianer och omvandla till och från grader.
+  \item Kunna beräkna en derivata numeriskt och jämföra med den analytiska derivatan.
+  \item Kunna beräkna en bestämd integral numeriskt med trapetsmetoden.
+  \item Kunna representera komplexa tal och fasorer med \file{complex.h} samt beräkna belopp och
+    argument.
+  \item Kunna beräkna sampelvärden för en sinussignal och skriva ut dem för vidare analys.
+\end{itemize}
+
+\testadigsjalv
+\begin{enumerate}
+  \item Vad blir resultatet av \code{1 / 2} i C, och varför?
+  \item Vad gör flaggan \code{-lm}, och vilket felmeddelande får man om matematikbiblioteket inte
+    länkas?
+  \item Varför ger \code{sin(30)} inte $0{,}5$?
+  \item Hur beräknas derivatan av $f(x)$ i punkten $x$ numeriskt, och vad styr noggrannheten?
+  \item Hur beräknas beloppet och argumentet för ett komplext tal i C?
+\end{enumerate}
+
+\needspace{6\baselineskip}
+\subsection*{Nästa kapitel}
+\Kapref{19} avslutar boken med en repetition av kursens innehåll och förberedelser inför
+tentamen.

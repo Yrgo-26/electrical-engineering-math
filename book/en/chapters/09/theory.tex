@@ -1,0 +1,113 @@
+% Sections 9.1 to 9.5, translated from sv/chapters/09/theory.tex.
+
+\section{Angle measure: degrees and radians}
+\label{c9:sec:vinkelmatt}
+Angles can be given in \textbf{degrees} ($^{\circ}$) or \textbf{radians} (rad). The conversion
+formulas are
+\[
+  v_{\text{rad}} = v_{\text{deg}} \cdot \frac{\pi}{180^{\circ}}
+  \qquad \text{and} \qquad
+  v_{\text{deg}} = v_{\text{rad}} \cdot \frac{180^{\circ}}{\pi}.
+\]
+
+\begin{narrowtable}{@{}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}@{}}
+  \thead{Degrees} & \thead{Radians} \\
+  \midrule
+  $0^{\circ}$ & $0$ \\
+  $30^{\circ}$ & $\pi/6$ \\
+  $45^{\circ}$ & $\pi/4$ \\
+  $60^{\circ}$ & $\pi/3$ \\
+  $90^{\circ}$ & $\pi/2$ \\
+  $180^{\circ}$ & $\pi$ \\
+  $360^{\circ}$ & $2\pi$ \\
+\end{narrowtable}
+
+\section{The sine function}
+\label{c9:sec:sinus}
+The sine function $\sin(\theta)$ is defined by the unit circle and has the following properties:
+\begin{itemize}
+  \item domain: $\mathbb{R}$,
+  \item range: $[-1, 1]$,
+  \item period: $2\pi$, one full turn.
+\end{itemize}
+
+\section{The AC voltage equation}
+\label{c9:sec:vaxelspanning}
+A sinusoidal AC voltage is described by
+\[
+  u(t) = \abs{U} \sin(\omega t + \delta).
+\]
+
+\begin{booktable}{@{}p{9em}p{4em}p{3.5em}L@{}}
+  \thead{Parameter} & \thead{Symbol} & \thead{Unit} & \thead{Description} \\
+  \midrule
+  Amplitude & $\abs{U}$ & V & The peak value \\
+  Angular frequency & $\omega$ & rad/s & $\omega = 2\pi f$ \\
+  Frequency & $f$ & Hz & Number of periods per second \\
+  Period & $T$ & s & $T = 1/f$ \\
+  Phase angle & $\delta$ & rad & Shift in time \\
+\end{booktable}
+
+The quantities are related by
+\[
+  \omega = 2\pi f = \frac{2\pi}{T}.
+\]
+
+\textbf{Phase shift in time.} A positive phase angle $\delta$ means that the voltage is early,
+that is, shifted to the left in the graph. A negative $\delta$ means that it is delayed.
+
+\section{Reading properties from a graph}
+\label{c9:sec:graf}
+From a sine graph you can read:
+\begin{itemize}
+  \item the \textbf{amplitude} $\abs{U}$: the distance from zero to the peak value,
+  \item the \textbf{period} $T$: the length of one complete cycle,
+  \item the \textbf{frequency} $f = 1/T$,
+  \item the \textbf{phase angle} $\delta$: compare the time of the peak with $T/4$, since with no
+    phase shift the peak would have come at $t = T/4$.
+\end{itemize}
+
+\section{Worked examples}
+\label{c9:sec:typexempel}
+
+\begin{exempel}[Angle conversions]
+Convert the following angles to radians: $45^{\circ}$, $90^{\circ}$, $270^{\circ}$, $-60^{\circ}$
+and $135^{\circ}$. With the formula $v_{\text{rad}} = v_{\text{deg}} \cdot \pi/180^{\circ}$, this
+gives
+\[
+  45^{\circ} \to \frac{\pi}{4}, \quad 90^{\circ} \to \frac{\pi}{2}, \quad
+  270^{\circ} \to \frac{3\pi}{2}, \quad -60^{\circ} \to -\frac{\pi}{3}, \quad
+  135^{\circ} \to \frac{3\pi}{4}.
+\]
+\end{exempel}
+
+\begin{exempel}[Finding the properties from a graph]
+An AC voltage has the amplitude $\abs{U} = 4\,\text{V}$ and the period $T = 40\,\text{ms}$, and the
+peak value is reached at $t = 15\,\text{ms}$. The \textbf{angular frequency} is
+\[
+  f = \frac{1}{T} = \frac{1}{0.04} = 25\,\text{Hz}, \qquad
+  \omega = 2\pi \cdot 25 = 50\pi\,\text{rad/s}.
+\]
+\textbf{The phase angle.} With no phase shift, the peak comes at $T/4 = 10\,\text{ms}$. It comes at
+$15\,\text{ms}$, that is, $5\,\text{ms}$ late, which gives a negative phase:
+\[
+  \delta = -2\pi \cdot \frac{5\,\text{ms}}{40\,\text{ms}} = -\frac{\pi}{4}\,\text{rad}
+\]
+\textbf{The equation} is
+\[
+  u(t) = 4\sin\!\left(50\pi t - \frac{\pi}{4}\right)\,\text{V}.
+\]
+\end{exempel}
+
+\begin{exempel}[Writing the equation from given parameters]
+An AC voltage has the amplitude $4\,\text{V}$, the frequency $50\,\text{Hz}$ and the phase
+$-30^{\circ}$. Then
+\[
+  \delta = \frac{-30^{\circ} \cdot \pi}{180^{\circ}} = -\frac{\pi}{6}\,\text{rad}, \qquad
+  \omega = 2\pi \cdot 50 = 100\pi\,\text{rad/s},
+\]
+and the equation is
+\[
+  u(t) = 4\sin\!\left(100\pi t - \frac{\pi}{6}\right)\,\text{V}.
+\]
+\end{exempel}

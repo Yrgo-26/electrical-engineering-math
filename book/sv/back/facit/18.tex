@@ -1,0 +1,147 @@
+% Answers to Chapter 18. lectures/L18/appendix/c_solutions.md has solutions only for del 5; the
+% answers to del 1-4 were computed for the book, by hand and by running the programs the
+% exercises ask for (gcc, double precision), and printed with three decimals as the exercises
+% ask. The self-test is from lectures/L18/README.md.
+
+\facitavsnitt{c18}{Kapitel 18}{Matematik i C}
+\begin{facit}
+
+\svar{1.1} \sv{a} $R_{\text{p}} = 132\,\Omega$
+\sv{b} $I \approx 90{,}9\,\text{mA}$, $P \approx 1{,}09\,\text{W}$
+\sv{c} $R_{\text{p}} = 132{,}000\,\Omega$, $I = 0{,}091\,\text{A}$, $P = 1{,}091\,\text{W}$
+\sv{d} $U \approx 16{,}248\,\text{V}$
+
+\svar{1.2} \sv{a} $20\log_{10} 64 \approx 36{,}12\,\text{dB}$ \sv{b} $10^{-3/20} \approx 0{,}708$
+\sv{c} $36{,}124\,\text{dB}$ och $0{,}708$
+
+\svar{1.3} \sv{a} $u \approx 191{,}03\,\text{V}$
+\sv{b} $0{,}2\pi \approx 0{,}628\,\text{rad} = 36^{\circ}$
+\sv{c} $t = 0$: $0^{\circ}$, $0{,}000\,\text{V}$;\enspace $2{,}0\,\text{ms}$: $36^{\circ}$,
+$191{,}030\,\text{V}$;\enspace $5{,}0\,\text{ms}$: $90^{\circ}$, $325{,}000\,\text{V}$;\enspace
+$10{,}0\,\text{ms}$: $180^{\circ}$, $0{,}000\,\text{V}$
+\sv{d} $2{,}214\,\text{rad} \approx 126{,}870^{\circ}$. \code{atan(4.0 / -3.0)} ger
+$-0{,}927\,\text{rad} \approx -53{,}130^{\circ}$: kvoten $-4/3$ visar inte vilken komponent som
+var negativ, så vinkeln hamnar i kvadrant 4 i stället för 2, $180^{\circ}$ fel.
+
+\svar{2.1} \sv{a} $f'(x) = 3x^2 - 2$, $f'(2) = 10$
+\sv{b} Med $x = 2$ ska funktionen ge ungefär $10$, se c).
+\sv{c} $h = 10^{-2}$: $10{,}0001$, fel $1{,}0 \cdot 10^{-4}$;\enspace $h = 10^{-6}$: fel omkring
+$5 \cdot 10^{-10}$;\enspace $h = 10^{-12}$: fel omkring $9 \cdot 10^{-4}$. De två sista felen är
+avrundningsfel och kan variera något med hur $f$ skrivs.
+\sv{d} $h = 10^{-6}$. Ett stort $h$ ger metodfel, eftersom approximationen ligger långt från
+gränsvärdet; ett litet $h$ ger avrundningsfel, eftersom $f(x + h)$ och $f(x - h)$ blir så lika
+att de signifikanta siffrorna försvinner i subtraktionen.
+
+\svar{2.2} \sv{a} $i'(t) = 10t$, $u(t) = 2t\,\text{V}$ \sv{b} $6\,\text{V}$
+\sv{c} $6{,}000\,\text{V}$, samma som för hand.
+
+\svar{2.3} \sv{a} $9$ \sv{b} Med $n = 10$ ska funktionen ge $9{,}045$, se c).
+\sv{c} $n = 10$: $9{,}045$, fel $4{,}5 \cdot 10^{-2}$;\enspace $n = 100$: $9{,}00045$, fel
+$4{,}5 \cdot 10^{-4}$;\enspace $n = 1000$: $9{,}0000045$, fel $4{,}5 \cdot 10^{-6}$
+\sv{d} Felet minskar med en faktor $100$: det är proportionellt mot $1/n^2$.
+
+\svar{2.4} \sv{a} $32\,\text{C}$ \sv{b} $32\,\text{C}$
+\sv{c} $i(t)$ är en rät linje, som trapetsens raka övre kant följer exakt; $x^2$ är krökt, så
+trapetsen hamnar ovanför kurvan.
+
+\svar{3.1} \sv{a} $z_1 + z_2 = 6 - 2j$, $z_1 z_2 = 23 - 14j$,
+$z_1/z_2 = (-7 + 26j)/29 \approx -0{,}241 + 0{,}897j$
+\sv{b} $\abs{z_1} = 5$, $\arg(z_1) \approx 0{,}644\,\text{rad} \approx 36{,}87^{\circ}$
+\sv{c} $6{,}000 - 2{,}000j$, $23{,}000 - 14{,}000j$, $-0{,}241 + 0{,}897j$; $5{,}000$,
+$0{,}644\,\text{rad}$, $36{,}870^{\circ}$
+
+\svar{3.2} \sv{a} $z = 5\sqrt{3} + 5j \approx 8{,}660 + 5{,}000j$
+\sv{b} $8{,}660 + 5{,}000j$, och tillbaka $\abs{z} = 10{,}000$,
+$\arg(z) = 0{,}524\,\text{rad} = 30{,}000^{\circ}$
+\sv{c} Ja, med tre decimaler. Flyttal avrundas i varje räknesteg, så talet som kommer tillbaka
+kan skilja sig från originalet i de sista binära siffrorna, och då ger \code{==} falskt.
+
+\svar{3.3} \sv{a} $\omega \approx 314{,}16\,\text{rad/s}$, $X_L \approx 31{,}42\,\Omega$,
+$X_C \approx 318{,}31\,\Omega$
+\sv{b} $Z \approx 47 - j286{,}89\,\Omega$
+\sv{c} $\abs{Z} \approx 290{,}72\,\Omega$, $\arg(Z) \approx -80{,}70^{\circ}$. Kapacitiv,
+eftersom $X_C > X_L$.
+\sv{d} $\abs{I} \approx 0{,}791\,\text{A}$
+\sv{e} $50\,\text{Hz}$: värdena ovan. $500\,\text{Hz}$: $X_L \approx 314{,}159\,\Omega$,
+$X_C \approx 31{,}831\,\Omega$, $Z \approx 47{,}000 + j282{,}328\,\Omega$,
+$\abs{Z} \approx 286{,}214\,\Omega$, $\arg(Z) \approx 80{,}548^{\circ}$,
+$\abs{I} \approx 0{,}804\,\text{A}$. Kretsen blir induktiv.
+
+\svar{4.1} \sv{a} Ja, $800\,\text{Hz} > 2 \cdot 50\,\text{Hz} = 100\,\text{Hz}$.
+\sv{b} $N = 16$
+\sv{c} $u_0 \approx 3{,}536\,\text{V}$, $u_1 \approx 4{,}619\,\text{V}$, $u_2 = 5{,}000\,\text{V}$
+\sv{d} $k = 0$--$15$: $3{,}536$; $4{,}619$; $5{,}000$; $4{,}619$; $3{,}536$; $1{,}913$; $0{,}000$;
+$-1{,}913$; $-3{,}536$; $-4{,}619$; $-5{,}000$; $-4{,}619$; $-3{,}536$; $-1{,}913$; $0{,}000$;
+$1{,}913$. Nollan vid $k = 14$ kan skrivas ut som \code{-0.000}.
+\sv{e} En hel sinusperiod med toppen $5\,\text{V}$ vid $k = 2$ och botten $-5\,\text{V}$ vid
+$k = 10$; sampel $16$ blir detsamma som sampel $0$.
+
+\svar{4.2} \sv{a} $U_1 = 10$, $U_2 = 3 + j5{,}196$, $U_3 = -j4$
+\sv{b} $U \approx 13 + j1{,}196$
+\sv{c} $U \approx 13{,}055\angle 0{,}0918$, alltså $\delta \approx 0{,}0918\,\text{rad}
+\approx 5{,}26^{\circ}$
+\sv{d} $13{,}000 + 1{,}196j$ och $13{,}055\angle 0{,}092\,\text{rad}$ ($5{,}257^{\circ}$)
+\sv{e} $U_1$ längs positiva reella axeln, $U_2$ med vinkeln $60^{\circ}$ och $U_3$ rakt nedåt.
+Lagda efter varandra slutar de i $13 + j1{,}196$, strax ovanför den reella axeln.
+
+\svar{4.3} \sv{a} $u(t) = 10\sin(\omega t) + 6\sin(\omega t + \pi/3) + 4\sin(\omega t - \pi/2)$ med
+$\omega = 2\pi \cdot 50\,\text{rad/s}$
+\sv{b} $32$ sampel per period, från $u_0 \approx 1{,}196$, $u_1 \approx 3{,}709$,
+$u_2 \approx 6{,}080$, \ldots
+\sv{c} Största sampelvärdet är $13{,}000$ (vid $k = 8$), mot $\abs{U} \approx 13{,}055$. Toppen
+ligger vid $\omega t \approx 84{,}7^{\circ}$, mellan två sampel ($78{,}75^{\circ}$ och
+$90^{\circ}$), så inget sampel träffar den exakt.
+
+\svar{5.1} \sv{a} $-2{,}7$: $-3$, $-2$, $-3$;\enspace $3{,}2$: $3$, $4$, $3$;\enspace $5{,}5$: $5$,
+$6$, $6$ (\code{floor}, \code{ceil}, \code{round})
+\sv{b} Samma nio värden.
+\sv{c} \code{round()} avrundar halvvägsfall bort från noll, inte uppåt.
+\sv{d} \code{fabs()} (\file{math.h}) är för \code{double}, \code{abs()} (\file{stdlib.h}) för
+\code{int} och avkortar ett flyttal, så \code{abs(-2.7)} ger $2$. Använd \code{fabs()}.
+
+\svar{5.2} \sv{a} $4465$--$4935\,\Omega$
+\sv{b} Se c).
+\sv{c} $4600\,\Omega$: inom ($1$);\enspace $4950\,\Omega$: utanför ($0$);\enspace
+$4465\,\Omega$: inom ($1$), precis på gränsen.
+\sv{d} Absolutbeloppet fångar avvikelsen åt båda hållen i ett enda villkor, med färre gränser att
+räkna ut och färre ställen där ett tecken kan bli fel.
+
+\svar{5.3} \sv{a} $R_{\text{s}} = 500\,\Omega$, $R_{\text{p}} = 80\,\Omega$
+\sv{b} Se c).
+\sv{c} $500{,}000\,\Omega$ och $80{,}000\,\Omega$
+\sv{d} $R_{\text{p}} \approx 57{,}143\,\Omega$
+
+\svar{5.4} \sv{a} $\tau = 1{,}0\,\text{s}$
+\sv{b} $12\,\text{V}$, $4{,}415\,\text{V}$, $1{,}624\,\text{V}$
+\sv{c} $t = 0$; $0{,}5$; \ldots; $5{,}0\,\text{s}$: $12{,}000$; $7{,}278$; $4{,}415$; $2{,}678$;
+$1{,}624$; $0{,}985$; $0{,}597$; $0{,}362$; $0{,}220$; $0{,}133$; $0{,}081\,\text{V}$
+\sv{d} $5$ tidskonstanter, eftersom villkoret är $t > \tau \ln 100 \approx 4{,}61\tau$.
+
+\svar{5.5} \sv{a} Se c) och d). \sv{b} Se c) och d).
+\sv{c} $(1, -5, 6)$: $D = 1$, $x_1 = 3$, $x_2 = 2$;\enspace $(1, -4, 4)$: $D = 0$, dubbelroten
+$x = 2$;\enspace $(1, 2, 5)$: $D = -16$, $x = -1 \pm 2j$
+\sv{d} $-1{,}000 + 2{,}000j$ och $-1{,}000 - 2{,}000j$
+
+\svar{5.6} \sv{a} $f(0) = 1 > 0$ och $f(1) = e^{-1} - 1 \approx -0{,}632 < 0$
+\sv{b} Se c).
+\sv{c} $x \approx 0{,}567143$
+\sv{d} En kontinuerlig funktion som byter tecken mellan $a$ och $b$ måste passera noll där
+(satsen om mellanliggande värden); teckenbytet visar i vilken halva roten ligger.
+
+\svar{5.7} \sv{a} $325/\sqrt{2} \approx 229{,}81\,\text{V}$
+\sv{b} $229{,}810\,\text{V}$
+\sv{c} Det relativa felet är i praktiken noll, av storleksordningen $10^{-14}\,\%$.
+\sv{d} Ingenting: $n = 10$ ger också $229{,}810\,\text{V}$. $u(t)^2$ är periodisk, och
+trapetsmetoden med jämnt fördelade punkter över en hel period är då exakt.
+
+\svar[Testa dig själv]{T} \sv{1} $0$, eftersom båda operanderna är heltal och heltalsdivision
+avkortar decimaldelen. \code{1.0 / 2.0} ger $0{,}5$.
+\sv{2} Den länkar in matematikbiblioteket \code{libm}. Utan den misslyckas länkningen med
+\code{undefined reference to 'sqrt'}.
+\sv{3} \code{sin()} räknar i radianer, så \code{sin(30)} är $\sin(30\,\text{rad}) \approx
+-0{,}988$. Omvandla först: $30 \cdot \pi/180$.
+\sv{4} Med centraldifferensen $\bigl(f(x + h) - f(x - h)\bigr)/2h$. Steget $h$ styr noggrannheten:
+för stort ger metodfel, för litet avrundningsfel; $h \approx 10^{-6}$ är en bra kompromiss.
+\sv{5} Med \code{cabs(z)} och \code{carg(z)}, där argumentet är i radianer.
+
+\end{facit}

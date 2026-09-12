@@ -1,0 +1,147 @@
+% Answers to Chapter 18, translated from sv/back/facit/18.tex.
+
+\facitavsnitt{c18}{Chapter 18}{Mathematics in C}
+\begin{facit}
+
+\svar{1.1} \sv{a} $R_{\text{p}} = 132\,\Omega$
+\sv{b} $I \approx 90.9\,\text{mA}$, $P \approx 1.09\,\text{W}$
+\sv{c} $R_{\text{p}} = 132.000\,\Omega$, $I = 0.091\,\text{A}$, $P = 1.091\,\text{W}$
+\sv{d} $U \approx 16.248\,\text{V}$
+
+\svar{1.2} \sv{a} $20\log_{10} 64 \approx 36.12\,\text{dB}$ \sv{b} $10^{-3/20} \approx 0.708$
+\sv{c} $36.124\,\text{dB}$ and $0.708$
+
+\svar{1.3} \sv{a} $u \approx 191.03\,\text{V}$
+\sv{b} $0.2\pi \approx 0.628\,\text{rad} = 36^{\circ}$
+\sv{c} $t = 0$: $0^{\circ}$, $0.000\,\text{V}$;\enspace $2.0\,\text{ms}$: $36^{\circ}$,
+$191.030\,\text{V}$;\enspace $5.0\,\text{ms}$: $90^{\circ}$, $325.000\,\text{V}$;\enspace
+$10.0\,\text{ms}$: $180^{\circ}$, $0.000\,\text{V}$
+\sv{d} $2.214\,\text{rad} \approx 126.870^{\circ}$. \code{atan(4.0 / -3.0)} gives
+$-0.927\,\text{rad} \approx -53.130^{\circ}$: the quotient $-4/3$ does not show which component
+was negative, so the angle lands in quadrant 4 instead of 2, $180^{\circ}$ out.
+
+\svar{2.1} \sv{a} $f'(x) = 3x^2 - 2$, $f'(2) = 10$
+\sv{b} With $x = 2$ the function should give about $10$; see c).
+\sv{c} $h = 10^{-2}$: $10.0001$, error $1.0 \cdot 10^{-4}$;\enspace $h = 10^{-6}$: error about
+$5 \cdot 10^{-10}$;\enspace $h = 10^{-12}$: error about $9 \cdot 10^{-4}$. The last two errors are
+rounding errors and can vary somewhat with how $f$ is written.
+\sv{d} $h = 10^{-6}$. A large $h$ gives a truncation error, since the approximation lies far from
+the limit; a small $h$ gives a rounding error, since $f(x + h)$ and $f(x - h)$ become so alike
+that the significant figures vanish in the subtraction.
+
+\svar{2.2} \sv{a} $i'(t) = 10t$, $u(t) = 2t\,\text{V}$ \sv{b} $6\,\text{V}$
+\sv{c} $6.000\,\text{V}$, the same as by hand.
+
+\svar{2.3} \sv{a} $9$ \sv{b} With $n = 10$ the function should give $9.045$; see c).
+\sv{c} $n = 10$: $9.045$, error $4.5 \cdot 10^{-2}$;\enspace $n = 100$: $9.00045$, error
+$4.5 \cdot 10^{-4}$;\enspace $n = 1000$: $9.0000045$, error $4.5 \cdot 10^{-6}$
+\sv{d} The error decreases by a factor of $100$: it is proportional to $1/n^2$.
+
+\svar{2.4} \sv{a} $32\,\text{C}$ \sv{b} $32\,\text{C}$
+\sv{c} $i(t)$ is a straight line, which the straight top edge of the trapezium follows exactly;
+$x^2$ is curved, so the trapezium ends up above the curve.
+
+\svar{3.1} \sv{a} $z_1 + z_2 = 6 - 2j$, $z_1 z_2 = 23 - 14j$,
+$z_1/z_2 = (-7 + 26j)/29 \approx -0.241 + 0.897j$
+\sv{b} $\abs{z_1} = 5$, $\arg(z_1) \approx 0.644\,\text{rad} \approx 36.87^{\circ}$
+\sv{c} $6.000 - 2.000j$, $23.000 - 14.000j$, $-0.241 + 0.897j$; $5.000$,
+$0.644\,\text{rad}$, $36.870^{\circ}$
+
+\svar{3.2} \sv{a} $z = 5\sqrt{3} + 5j \approx 8.660 + 5.000j$
+\sv{b} $8.660 + 5.000j$, and back $\abs{z} = 10.000$,
+$\arg(z) = 0.524\,\text{rad} = 30.000^{\circ}$
+\sv{c} Yes, to three decimals. Floating-point numbers are rounded at every step of a calculation,
+so the number that comes back can differ from the original in the last binary digits, and then
+\code{==} gives false.
+
+\svar{3.3} \sv{a} $\omega \approx 314.16\,\text{rad/s}$, $X_L \approx 31.42\,\Omega$,
+$X_C \approx 318.31\,\Omega$
+\sv{b} $Z \approx 47 - j286.89\,\Omega$
+\sv{c} $\abs{Z} \approx 290.72\,\Omega$, $\arg(Z) \approx -80.70^{\circ}$. Capacitive, since
+$X_C > X_L$.
+\sv{d} $\abs{I} \approx 0.791\,\text{A}$
+\sv{e} $50\,\text{Hz}$: the values above. $500\,\text{Hz}$: $X_L \approx 314.159\,\Omega$,
+$X_C \approx 31.831\,\Omega$, $Z \approx 47.000 + j282.328\,\Omega$,
+$\abs{Z} \approx 286.214\,\Omega$, $\arg(Z) \approx 80.548^{\circ}$,
+$\abs{I} \approx 0.804\,\text{A}$. The circuit becomes inductive.
+
+\svar{4.1} \sv{a} Yes, $800\,\text{Hz} > 2 \cdot 50\,\text{Hz} = 100\,\text{Hz}$.
+\sv{b} $N = 16$
+\sv{c} $u_0 \approx 3.536\,\text{V}$, $u_1 \approx 4.619\,\text{V}$, $u_2 = 5.000\,\text{V}$
+\sv{d} $k = 0$--$15$: $3.536$, $4.619$, $5.000$, $4.619$, $3.536$, $1.913$, $0.000$, $-1.913$,
+$-3.536$, $-4.619$, $-5.000$, $-4.619$, $-3.536$, $-1.913$, $0.000$, $1.913$. The zero at
+$k = 14$ may be printed as \code{-0.000}.
+\sv{e} One whole sine period, with the peak $5\,\text{V}$ at $k = 2$ and the trough $-5\,\text{V}$
+at $k = 10$; sample $16$ is the same as sample $0$.
+
+\svar{4.2} \sv{a} $U_1 = 10$, $U_2 = 3 + j5.196$, $U_3 = -j4$
+\sv{b} $U \approx 13 + j1.196$
+\sv{c} $U \approx 13.055\angle 0.0918$, so $\delta \approx 0.0918\,\text{rad}
+\approx 5.26^{\circ}$
+\sv{d} $13.000 + 1.196j$ and $13.055\angle 0.092\,\text{rad}$ ($5.257^{\circ}$)
+\sv{e} $U_1$ along the positive real axis, $U_2$ at the angle $60^{\circ}$ and $U_3$ straight
+down. Placed end to end, they finish at $13 + j1.196$, just above the real axis.
+
+\svar{4.3} \sv{a} $u(t) = 10\sin(\omega t) + 6\sin(\omega t + \pi/3) + 4\sin(\omega t - \pi/2)$
+with $\omega = 2\pi \cdot 50\,\text{rad/s}$
+\sv{b} $32$ samples per period, starting $u_0 \approx 1.196$, $u_1 \approx 3.709$,
+$u_2 \approx 6.080$, \ldots
+\sv{c} The largest sample value is $13.000$ (at $k = 8$), against $\abs{U} \approx 13.055$. The
+peak lies at $\omega t \approx 84.7^{\circ}$, between two samples ($78.75^{\circ}$ and
+$90^{\circ}$), so no sample hits it exactly.
+
+\svar{5.1} \sv{a} $-2.7$: $-3$, $-2$, $-3$;\enspace $3.2$: $3$, $4$, $3$;\enspace $5.5$: $5$,
+$6$, $6$ (\code{floor}, \code{ceil}, \code{round})
+\sv{b} The same nine values.
+\sv{c} \code{round()} rounds halfway cases away from zero, not upwards.
+\sv{d} \code{fabs()} (\file{math.h}) is for \code{double}, \code{abs()} (\file{stdlib.h}) for
+\code{int}, and it truncates a floating-point number, so \code{abs(-2.7)} gives $2$. Use
+\code{fabs()}.
+
+\svar{5.2} \sv{a} $4465$--$4935\,\Omega$
+\sv{b} See c).
+\sv{c} $4600\,\Omega$: within ($1$);\enspace $4950\,\Omega$: outside ($0$);\enspace
+$4465\,\Omega$: within ($1$), exactly on the limit.
+\sv{d} The absolute value catches the deviation in both directions in a single condition, with
+fewer limits to calculate and fewer places where a sign can go wrong.
+
+\svar{5.3} \sv{a} $R_{\text{s}} = 500\,\Omega$, $R_{\text{p}} = 80\,\Omega$
+\sv{b} See c).
+\sv{c} $500.000\,\Omega$ and $80.000\,\Omega$
+\sv{d} $R_{\text{p}} \approx 57.143\,\Omega$
+
+\svar{5.4} \sv{a} $\tau = 1.0\,\text{s}$
+\sv{b} $12\,\text{V}$, $4.415\,\text{V}$, $1.624\,\text{V}$
+\sv{c} $t = 0$, $0.5$, \ldots, $5.0\,\text{s}$: $12.000$, $7.278$, $4.415$, $2.678$, $1.624$,
+$0.985$, $0.597$, $0.362$, $0.220$, $0.133$, $0.081\,\text{V}$
+\sv{d} $5$ time constants, since the condition is $t > \tau \ln 100 \approx 4.61\tau$.
+
+\svar{5.5} \sv{a} See c) and d). \sv{b} See c) and d).
+\sv{c} $(1, -5, 6)$: $D = 1$, $x_1 = 3$, $x_2 = 2$;\enspace $(1, -4, 4)$: $D = 0$, the double
+root $x = 2$;\enspace $(1, 2, 5)$: $D = -16$, $x = -1 \pm 2j$
+\sv{d} $-1.000 + 2.000j$ and $-1.000 - 2.000j$
+
+\svar{5.6} \sv{a} $f(0) = 1 > 0$ and $f(1) = e^{-1} - 1 \approx -0.632 < 0$
+\sv{b} See c).
+\sv{c} $x \approx 0.567143$
+\sv{d} A continuous function that changes sign between $a$ and $b$ must pass through zero there
+(the intermediate value theorem); the change of sign shows which half the root is in.
+
+\svar{5.7} \sv{a} $325/\sqrt{2} \approx 229.81\,\text{V}$
+\sv{b} $229.810\,\text{V}$
+\sv{c} The relative error is practically zero, of the order of $10^{-14}\,\%$.
+\sv{d} Nothing: $n = 10$ also gives $229.810\,\text{V}$. $u(t)^2$ is periodic, and the
+trapezoidal rule with evenly spaced points over a whole period is then exact.
+
+\svar[Test yourself]{T} \sv{1} $0$, since both operands are integers and integer division
+truncates the decimal part. \code{1.0 / 2.0} gives $0.5$.
+\sv{2} It links in the maths library \code{libm}. Without it, linking fails with
+\code{undefined reference to 'sqrt'}.
+\sv{3} \code{sin()} works in radians, so \code{sin(30)} is $\sin(30\,\text{rad}) \approx
+-0.988$. Convert first: $30 \cdot \pi/180$.
+\sv{4} With the central difference $\bigl(f(x + h) - f(x - h)\bigr)/2h$. The step $h$ controls
+the accuracy: too large gives a truncation error, too small a rounding error; $h \approx 10^{-6}$
+is a good compromise.
+\sv{5} With \code{cabs(z)} and \code{carg(z)}, where the argument is in radians.
+
+\end{facit}

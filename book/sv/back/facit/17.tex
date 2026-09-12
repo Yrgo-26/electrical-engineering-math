@@ -1,0 +1,116 @@
+% Answers to Chapter 17, from lectures/L17/appendix/c_solutions.md; the self-test from
+% lectures/L17/README.md.
+
+\facitavsnitt{c17}{Kapitel 17}{Komplexa tal, del III}
+\begin{facit}
+
+\svar{1.1} \sv{a} $a = 2 + j1$, $b = 2 - j1$, $c = -3 + j4$
+\sv{b} Pilar från origo till $(2; 1)$, $(2; -1)$ och $(-3; 4)$: $a$ i första, $b$ i fjärde och
+$c$ i andra kvadranten.
+\sv{c} $\abs{a} = \abs{b} = \sqrt{5} \approx 2{,}24$, $\abs{c} = 5$
+\sv{d} $a + b + c = 1 + j4$, $\abs{a + b + c} = \sqrt{17} \approx 4{,}1$
+\sv{e} $\delta_a \approx 0{,}46\,\text{rad} \approx 26{,}6^{\circ}$,
+$\delta_b \approx -0{,}46\,\text{rad} \approx -26{,}6^{\circ}$ (eller $333{,}4^{\circ}$),
+$\delta_c \approx 2{,}2\,\text{rad} \approx 126{,}9^{\circ}$
+\sv{f} $d = 4{,}8 - j6{,}4$
+
+\svar{1.2} \sv{a} En pil från origo till $(3; -6)$, i fjärde kvadranten.
+\sv{b} $\abs{U} = \sqrt{45} \approx 6{,}7\,\text{V}$, $\delta \approx -1{,}1\,\text{rad} \approx
+-63{,}4^{\circ}$, alltså $U \approx 6{,}7\,e^{-j1{,}1}\,\text{V}$.
+\sv{c} $\omega = 100\pi \approx 314\,\text{rad/s}$
+\sv{d} $u(t) \approx 6{,}7\,e^{j(100\pi t - 1{,}1)}\,\text{V}$
+
+\svar{2.1} \sv{a} $I_1 \approx 4{,}3 + j2{,}5\,\text{mA}$, $I_2 \approx 2{,}6 - j1{,}5\,\text{mA}$,
+$I_3 \approx -2 + j3{,}5\,\text{mA}$
+\sv{b} $I_{\text{tot}} \approx 4{,}9 + j4{,}5\,\text{mA}$
+\sv{c} Pilar från origo: $I_1$ i första kvadranten ($30^{\circ}$), $I_2$ i fjärde
+($-30^{\circ}$), $I_3$ i andra ($120^{\circ}$) och $I_{\text{tot}}$ i första ($42^{\circ}$).
+\sv{d} $i_{\text{tot}}(t) \approx 6{,}6\sin(\omega t + 42{,}2^{\circ})\,\text{mA}$
+
+\svar{3.1} \sv{a} $12\,\angle\,60^{\circ}$ \sv{b} $5\,\angle\,{-45^{\circ}}$
+\sv{c} $2\,\angle\,0^{\circ}$ \sv{d} $7\,\angle\,180^{\circ}$, dvs.\ $-7$
+
+\svar{3.2} \sv{a} $10 + j0$ \sv{b} $0 + j4$ \sv{c} $\approx 5{,}20 + j3{,}00$
+\sv{d} $\approx 3 - j4$
+
+\svar{3.3} \sv{a} $U_1 = 3\,\angle\,0^{\circ}\,\text{V}$, $U_2 = 4\,\angle\,90^{\circ}\,\text{V}$
+\sv{b} $U_1 = 3 + j0$, $U_2 = 0 + j4$
+\sv{c} $3 + j4 \approx 5\,\angle\,53{,}1^{\circ}\,\text{V}$
+\sv{d} $u_{\text{tot}}(t) \approx 5\sin(\omega t + 53{,}1^{\circ})\,\text{V}$
+
+\svar{3.4} \sv{a} $U_1 = 10 + j0$, $U_2 = 0 + j5$, $U_3 = 0 - j5$ \sv{b} $10 + j0\,\text{V}$
+\sv{c} $10\,\angle\,0^{\circ}\,\text{V}$
+\sv{d} De är lika stora men motriktade (fasvinklarna skiljer sig med $180^{\circ}$), så
+imaginärdelarna $+j5$ och $-j5$ tar ut varandra.
+
+\svar{3.5} \sv{a} $U_1 \approx 6{,}93 + j4\,\text{V}$, $U_2 \approx 6{,}93 - j4\,\text{V}$
+\sv{b} $\approx 13{,}86\,\angle\,0^{\circ}\,\text{V}$ \sv{c} $j8 = 8\,\angle\,90^{\circ}\,\text{V}$
+\sv{d} Fasorerna är varandras konjugat, så summan blir rent reell och differensen rent imaginär.
+
+\svar{3.6} \sv{a} $20\,\angle\,60^{\circ}$ \sv{b} $4\,\angle\,60^{\circ}$
+\sv{c} $12\,\angle\,{-60^{\circ}}$ \sv{d} $3\,\angle\,{-90^{\circ}}$
+
+\svar{3.7} \sv{a} $Z_R = 100\,\Omega$, fasvinkeln $0^{\circ}$
+\sv{b} $Z_L = j100\,\Omega$, $+90^{\circ}$ \sv{c} $Z_C = -j100\,\Omega$, $-90^{\circ}$
+\sv{d} Motstånd: ström och spänning i fas. Spole: strömmen ligger $90^{\circ}$ efter spänningen.
+Kondensator: strömmen ligger $90^{\circ}$ före spänningen.
+
+\svar{3.8} \sv{a} $Z = 40 + j30\,\Omega$ \sv{b} $\abs{Z} = 50\,\Omega$, $\delta_Z \approx
+36{,}9^{\circ}$ \sv{c} $I \approx 2\,\angle\,{-36{,}9^{\circ}}\,\text{A}$
+\sv{d} Efter spänningen, som i en induktiv krets.
+
+\svar{3.9} \sv{a} $Z = 60 - j80\,\Omega$ \sv{b} $\abs{Z} = 100\,\Omega$, $\delta_Z \approx
+-53{,}1^{\circ}$ \sv{c} $I \approx 2\,\angle\,53{,}1^{\circ}\,\text{A}$
+\sv{d} Före spänningen, som i en kapacitiv krets.
+
+\svar{3.10} \sv{a} $Z = 20 + j15\,\Omega$ \sv{b} $\abs{Z} = 25\,\Omega$, $\delta_Z \approx
+36{,}9^{\circ}$ \sv{c} $I \approx 2\,\angle\,{-36{,}9^{\circ}}\,\text{A}$
+\sv{d} Induktiv, eftersom $X_L > X_C$ ger en positiv imaginärdel.
+
+\svar{3.11} \sv{a} $\omega_0 = 1000\,\text{rad/s}$ \sv{b} $f_0 \approx 159\,\text{Hz}$
+\sv{c} $X_L = X_C = 100\,\Omega$
+\sv{d} $Z = 10\,\Omega$, rent resistiv och lika med $R$.
+
+\svar{3.12} \sv{a} $Z_{\text{tot}} = 30 + j40\,\Omega$, $\abs{Z_{\text{tot}}} = 50\,\Omega$
+\sv{b} $I \approx 2\,\angle\,{-53{,}1^{\circ}}\,\text{A}$
+\sv{c} $U_R \approx 60\,\angle\,{-53{,}1^{\circ}}\,\text{V}$
+\sv{d} $U_L \approx 80\,\angle\,36{,}9^{\circ}\,\text{V}$
+\sv{e} $U_R = 36 - j48\,\text{V}$ och $U_L = 64 + j48\,\text{V}$ ger $100 + j0\,\text{V} = U$,
+medan beloppen ger $60 + 80 = 140\,\text{V}$: delspänningarna ligger $90^{\circ}$ isär.
+
+\svar{3.13} \sv{a} $10\sin(0{,}5\pi + \delta) = 5$, dvs.\ $\sin\left(\frac{\pi}{2} + \delta\right)
+= 0{,}5$
+\sv{b} $\delta_1 = -\frac{\pi}{3} \approx -1{,}05\,\text{rad}$, $\delta_2 = \frac{\pi}{3} \approx
+1{,}05\,\text{rad}$
+\sv{c} $10\sin\frac{\pi}{6} = 10\sin\frac{5\pi}{6} = 5\,\text{V}$, så båda stämmer.
+
+\svar{3.14} \sv{a} $Z = 5 + j5\,\Omega$
+\sv{b} $\abs{Z} = 5\sqrt{2} \approx 7{,}07\,\Omega$, $45^{\circ}$
+\sv{c} Serie: $10 + j10\,\Omega$ med $\abs{Z} = 10\sqrt{2} \approx 14{,}1\,\Omega$, dubbelt så
+stort belopp.
+\sv{d} Båda har fasvinkeln $45^{\circ}$.
+
+\svar{3.15} \sv{a} $I = 4\,\angle\,{-30^{\circ}}\,\text{A}$
+\sv{b} $U = 100\,\angle\,30^{\circ}\,\text{V}$
+\sv{c} $u(t) = 100\sin(500t + 30^{\circ})\,\text{V}$
+\sv{d} Spänningen ligger $60^{\circ}$ före strömmen, lika mycket som impedansens fasvinkel.
+
+\svar{3.16} \sv{a} $I_1 = 6\,\angle\,45^{\circ}\,\text{mA}$, $I_2 = 8\,\angle\,{-45^{\circ}}\,
+\text{mA}$
+\sv{b} $I_1 \approx 4{,}24 + j4{,}24\,\text{mA}$, $I_2 \approx 5{,}66 - j5{,}66\,\text{mA}$
+\sv{c} $I_{\text{tot}} \approx 9{,}90 - j1{,}41 \approx 10{,}0\,\angle\,{-8{,}1^{\circ}}\,
+\text{mA}$
+\sv{d} $i_{\text{tot}}(t) \approx 10{,}0\sin(\omega t - 8{,}1^{\circ})\,\text{mA}$
+
+\svar{3.17} \sv{a} Falskt: alla fasorer i en beräkning måste ha samma vinkelhastighet.
+\sv{b} Sant: $Z_L = j\omega L$ är rent imaginär och positiv.
+\sv{c} Falskt: $\abs{Z} = \sqrt{R^2 + X^2}$.
+\sv{d} Sant: impedansen har fasvinkeln $0^{\circ}$.
+\sv{e} Falskt: strömmen ligger före spänningen.
+\sv{f} Sant: $X_L = X_C$, reaktanserna tar ut varandra och $Z = R$.
+
+\svar[Testa dig själv]{T} \sv{1} $I = 5\,\angle\,\frac{\pi}{3}\,\text{A}$, dvs.\
+$5\,\angle\,60^{\circ}\,\text{A}$
+\sv{2} $U_1 + U_2 = 4 + j3 \approx 5\,\angle\,0{,}64$ (vinkeln i radianer, $\approx 36{,}9^{\circ}$)
+
+\end{facit}

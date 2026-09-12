@@ -1,0 +1,41 @@
+% Elteknisk matematik - the book.
+%
+% Built with LuaLaTeX; see the Makefile. The design is in mathbook.sty, the front matter in
+% sv/front/, each chapter in sv/chapters/NN/, typeset from lesson LNN of lectures/, and the
+% answers in sv/back/facit/, one file per chapter. The worked solutions are not printed; they are
+% published in the repository after each lesson.
+\documentclass[10pt, twoside, openright]{book}
+\usepackage{mathbook}
+
+\begin{document}
+
+\frontmatter
+\input{sv/front/title}
+\tableofcontents
+\input{sv/front/preface}
+
+\mainmatter
+\input{sv/chapters/01/chapter}
+\input{sv/chapters/02/chapter}
+\input{sv/chapters/03/chapter}
+\input{sv/chapters/04/chapter}
+\input{sv/chapters/05/chapter}
+\input{sv/chapters/06/chapter}
+\input{sv/chapters/07/chapter}
+\input{sv/chapters/08/chapter}
+\input{sv/chapters/09/chapter}
+\input{sv/chapters/10/chapter}
+\input{sv/chapters/11/chapter}
+\input{sv/chapters/12/chapter}
+\input{sv/chapters/13/chapter}
+\input{sv/chapters/14/chapter}
+\input{sv/chapters/15/chapter}
+\input{sv/chapters/16/chapter}
+\input{sv/chapters/17/chapter}
+\input{sv/chapters/18/chapter}
+\input{sv/chapters/19/chapter}
+
+\appendix
+\input{sv/back/facit}
+
+\end{document}

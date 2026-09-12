@@ -1,0 +1,141 @@
+% Sections 4.1 to 4.4, from lectures/L04/appendix/a_theory.md.
+
+\section{Vad är ett ekvationssystem?}
+\label{c4:sec:ekvationssystem}
+Ett \textbf{linjärt ekvationssystem} består av flera ekvationer med flera obekanta som ska
+uppfyllas \emph{samtidigt}. Det vanligaste är ett system med \textbf{två ekvationer och två
+obekanta}:
+\[
+  \begin{cases}
+    a_1 x + b_1 y = c_1 \\
+    a_2 x + b_2 y = c_2
+  \end{cases}
+\]
+\textbf{Lösningen} är det par $(x, y)$ som uppfyller båda ekvationerna. Grafiskt är det
+\textbf{skärningspunkten} mellan de två räta linjerna.
+
+\subsection{Antal lösningar}
+\label{c4:sec:antal}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Situation} & \thead{Antal lösningar} \\
+  \midrule
+  Linjerna skär varandra & Exakt en lösning \\
+  Linjerna är parallella (men ej sammanfallande) & Ingen lösning \\
+  Linjerna sammanfaller & Oändligt många lösningar \\
+\end{narrowtable}
+
+\section{Substitutionsmetoden}
+\label{c4:sec:substitution}
+Substitutionsmetoden går till så här:
+\begin{enumerate}
+  \item Välj en ekvation och uttryck en obekant med hjälp av den andra.
+  \item Substituera (sätt in) uttrycket i den andra ekvationen.
+  \item Lös den resulterande ekvationen, som har en obekant.
+  \item Beräkna den andra obekanta.
+  \item Kontrollräkna i \emph{båda} de ursprungliga ekvationerna.
+\end{enumerate}
+
+\begin{exempel}
+Lös systemet
+\[
+  \begin{cases}
+    x + 2y = 7 \\
+    3x - y = 7
+  \end{cases}
+\]
+\textbf{Steg 1:} Ur ekvation (1) fås $x = 7 - 2y$.
+\par\noindent\textbf{Steg 2:} Sätt in i ekvation (2):
+\[
+  3(7 - 2y) - y = 7
+\]
+\textbf{Steg 3:} Förenkla och lös:
+\[
+  21 - 6y - y = 7 \quad \Rightarrow \quad 21 - 7y = 7 \quad \Rightarrow \quad y = 2
+\]
+\textbf{Steg 4:} Beräkna $x$:
+\[
+  x = 7 - 2 \cdot 2 = 3
+\]
+\textbf{Steg 5:} Kontroll: $3 + 4 = 7$~\checkmark{} och $9 - 2 = 7$~\checkmark
+\par\noindent Lösningen är $(x, y) = (3, 2)$.
+\end{exempel}
+
+\section{Additionsmetoden (eliminationsmetoden)}
+\label{c4:sec:addition}
+\textbf{Idé:} Multiplicera ekvationerna med lämpliga tal så att en obekant får \emph{lika stora men
+motsatta} koefficienter, och addera sedan ekvationerna för att eliminera den obekanten.
+\begin{enumerate}
+  \item Multiplicera en eller båda ekvationerna med lämpliga konstanter.
+  \item Addera ekvationerna rad för rad, så att en obekant försvinner.
+  \item Lös den kvarstående ekvationen.
+  \item Beräkna den eliminerade obekanten med en av de ursprungliga ekvationerna.
+\end{enumerate}
+
+\begin{exempel}
+Lös systemet
+\[
+  \begin{cases}
+    2x + 3y = 12 \\
+    4x - y = 10
+  \end{cases}
+\]
+\textbf{Steg 1:} Multiplicera ekvation (2) med $3$:
+\[
+  \begin{cases}
+    2x + 3y = 12 \\
+    12x - 3y = 30
+  \end{cases}
+\]
+\textbf{Steg 2:} Addera ekvationerna:
+\[
+  14x = 42 \quad \Rightarrow \quad x = 3
+\]
+\textbf{Steg 3:} Sätt in $x = 3$ i ekvation (1):
+\[
+  6 + 3y = 12 \quad \Rightarrow \quad y = 2
+\]
+Lösningen är $(x, y) = (3, 2)$.
+\end{exempel}
+
+\section{Tillämpning: Kirchhoffs lagar}
+\label{c4:sec:kirchhoff}
+Ekvationssystem är grundläggande för kretsteori. Med Kirchhoffs lagar kan ström- och
+spänningsfördelningen i en krets beräknas.
+
+\subsection{Kirchhoffs spänningslag (KVL)}
+\label{c4:sec:kvl}
+Summan av alla spänningar runt en sluten slinga är noll:
+\[
+  \sum U = 0
+\]
+
+\subsection{Kirchhoffs strömlag (KCL)}
+\label{c4:sec:kcl}
+Summan av strömmarna in i en nod är noll, det vill säga strömmarna in är lika med strömmarna ut:
+\[
+  \sum I = 0
+\]
+
+\begin{exempel}
+Betrakta en krets med två slingor och strömmarna $I_1$ och $I_2$. KVL ger
+\[
+  \begin{cases}
+    10 = 2I_1 + 4(I_1 - I_2) \\
+    0 = 4(I_2 - I_1) + 6I_2
+  \end{cases}
+\]
+vilket förenklas till
+\[
+  \begin{cases}
+    6I_1 - 4I_2 = 10 \\
+    -4I_1 + 10I_2 = 0
+  \end{cases}
+\]
+Ur ekvation (2) fås $I_1 = 2{,}5 I_2$. Insatt i ekvation (1) ger det
+\begin{gather*}
+  6 \cdot 2{,}5 I_2 - 4I_2 = 10 \quad \Rightarrow \quad I_2 = \frac{10}{11} \approx 0{,}91\,\text{A},
+  \\
+  I_1 = 2{,}5 \cdot \frac{10}{11} = \frac{25}{11} \approx 2{,}27\,\text{A}.
+\end{gather*}
+\end{exempel}

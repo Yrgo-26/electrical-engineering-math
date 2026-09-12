@@ -1,0 +1,130 @@
+% Sections 7.1 to 7.6, translated from sv/chapters/07/theory.tex.
+
+\section{Coordinate systems and distances}
+\label{c7:sec:koordinatsystem}
+A \textbf{coordinate system} (the $xy$-plane) has a horizontal $x$-axis and a vertical $y$-axis
+that meet at the origin $(0, 0)$.
+
+The distance $d$ between two points $(x_1, y_1)$ and $(x_2, y_2)$ is given by Pythagoras'
+theorem:
+\[
+  d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
+The angle that the line segment makes with the positive $x$-axis is
+\[
+  \theta = \arctan\!\left(\frac{y_2 - y_1}{x_2 - x_1}\right).
+\]
+
+\begin{aside}
+\note[Note] Always check which quadrant the point is in and correct the angle if needed:
+$+180^{\circ}$ for quadrants II and III.
+\end{aside}
+
+\section{Vectors -- concepts and notation}
+\label{c7:sec:begrepp}
+A \textbf{vector} represents a quantity with both magnitude and direction. In a plane, the vector
+$\mathbf{u}$ is written with its components:
+\[
+  \mathbf{u} = (u_x, u_y)
+\]
+Unlike a scalar, a vector carries information about direction. In electrical engineering, vectors
+are used to represent voltages and currents in AC systems.
+
+\section{Magnitude and angle}
+\label{c7:sec:absolutbelopp}
+The \textbf{magnitude} (length) of $\mathbf{u} = (u_x, u_y)$ is
+\[
+  \abs{\mathbf{u}} = \sqrt{u_x^2 + u_y^2}.
+\]
+The \textbf{angle} $v_u$ with the positive $x$-axis is
+\[
+  v_u = \arctan\!\left(\frac{u_y}{u_x}\right) + \text{quadrant correction},
+\]
+where the quadrant correction is given by the table.
+
+\begin{narrowtable}{@{}cccl@{}}
+  \thead{Quadrant} & $u_x$ & $u_y$ & \thead{Correction} \\
+  \midrule
+  I & $+$ & $+$ & none \\
+  II & $-$ & $+$ & $+180^{\circ}$ \\
+  III & $-$ & $-$ & $+180^{\circ}$ \\
+  IV & $+$ & $-$ & none (negative angle) \\
+\end{narrowtable}
+
+\section{The angle between two vectors}
+\label{c7:sec:vinkel}
+The angle $\alpha$ between $\mathbf{u}$ and $\mathbf{v}$ is given by
+\[
+  \cos \alpha = \frac{\mathbf{u} \cdot \mathbf{v}}{\abs{\mathbf{u}}\abs{\mathbf{v}}},
+\]
+where the \textbf{scalar product} is
+\[
+  \mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y.
+\]
+
+\section{Calculating with vectors}
+\label{c7:sec:rakna}
+
+\subsection{Addition and subtraction}
+\label{c7:sec:addition}
+\[
+  \mathbf{u} \pm \mathbf{v} = (u_x \pm v_x,\; u_y \pm v_y)
+\]
+
+\subsection{Scalar multiplication}
+\label{c7:sec:skalarmultiplikation}
+\[
+  k\mathbf{u} = (k u_x,\; k u_y)
+\]
+A negative scalar reverses the direction of the vector. A unit vector in the opposite direction
+is given by $-\dfrac{\mathbf{u}}{\abs{\mathbf{u}}}$.
+
+\section{Worked examples}
+\label{c7:sec:typexempel}
+
+\begin{exempel}[Magnitude and angle]
+The vectors $\mathbf{u} = (3, 3)$ and $\mathbf{v} = (-2, 3)$ are given.
+
+\textbf{a)} Calculate $\abs{\mathbf{u}}$ and $\abs{\mathbf{v}}$.
+\begin{gather*}
+  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2} \approx 4.24 \\
+  \abs{\mathbf{v}} = \sqrt{(-2)^2 + 3^2} = \sqrt{13} \approx 3.61
+\end{gather*}
+
+\textbf{b)} Calculate the angles $v_u$ and $v_v$. The vector $\mathbf{u}$ lies in quadrant I:
+\[
+  v_u = \arctan\!\left(\frac{3}{3}\right) = 45^{\circ}
+\]
+The vector $\mathbf{v}$ lies in quadrant II, so $180^{\circ}$ is added:
+\[
+  v_v = \arctan\!\left(\frac{3}{-2}\right) + 180^{\circ} \approx -56.3^{\circ} + 180^{\circ}
+  = 123.7^{\circ}
+\]
+
+\textbf{c)} Calculate the angle between $\mathbf{u}$ and $\mathbf{v}$.
+\begin{gather*}
+  \mathbf{u} \cdot \mathbf{v} = 3 \cdot (-2) + 3 \cdot 3 = 3 \\
+  \cos \alpha = \frac{3}{3\sqrt{2} \cdot \sqrt{13}} = \frac{3}{\sqrt{234}} \approx 0.196
+  \quad \Rightarrow \quad \alpha \approx 78.7^{\circ}
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Vector calculation]
+Calculate $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ and $\abs{\mathbf{w}}$ for
+$\mathbf{u} = (3, 3)$ and $\mathbf{v} = (-2, 3)$.
+\begin{gather*}
+  \mathbf{w} = (3, 3) + 2(-2, 3) = (3 - 4,\; 3 + 6) = (-1, 9) \\
+  \abs{\mathbf{w}} = \sqrt{(-1)^2 + 9^2} = \sqrt{82} \approx 9.06
+\end{gather*}
+\end{exempel}
+
+% Keeps this example from starting at the foot of a page, where it is drawn over the running
+% head of the next.
+\needspace{8\baselineskip}
+\begin{exempel}[An opposite vector of given length]
+Find a vector of length $5$ in the opposite direction to $\mathbf{u} = (3, 3)$.
+\[
+  \mathbf{w} = -\frac{5}{\abs{\mathbf{u}}}\,\mathbf{u} = -\frac{5}{3\sqrt{2}}(3, 3)
+  = \left(-\frac{5}{\sqrt{2}},\; -\frac{5}{\sqrt{2}}\right) \approx (-3.54,\; -3.54)
+\]
+\end{exempel}

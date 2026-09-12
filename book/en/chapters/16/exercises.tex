@@ -1,0 +1,209 @@
+% Section 16.7, translated from sv/chapters/16/exercises.tex.
+
+\section{Exercises}
+\label{c16:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson.
+
+\facitnotis{L16}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Rectangular form to polar form}
+Convert the current $I = 3 + j4\,\text{mA}$ to polar form.
+
+\uppgift{1.2}{Polar form to rectangular form}
+Convert the voltage $U = 2\,\angle\,\frac{\pi}{4}\,\text{V}$ to rectangular form.
+
+\uppgift{1.3}{Calculating an impedance}
+A circuit is supplied with the voltage from \uppref{1.2}, and the current from \uppref{1.1} flows
+through the circuit. Calculate the circuit's impedance $Z$ with “Ohm's law”
+\[
+  Z = \frac{U}{I},
+\]
+where $Z$ is the circuit's impedance in $\Omega$, $U$ the supply voltage in V and $I$ the current
+through the circuit in mA. Give the answer in both polar and rectangular form.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Vectors in the complex plane}
+You have the vectors $a = (4, 3)$, $b = (-3, 6)$ and $c = (-1, 10)$. In the exercises below, each
+vector $(x, y)$ is to be read as a complex number $z = x + jy$.
+\begin{parts}
+  \item Write the vectors in complex rectangular form.
+  \item Draw the vectors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Find the lengths of the vectors, that is, the magnitude of each number.
+  \item Find the length (magnitude) of $b + 2c$, that is, $\abs{b + 2c}$.
+  \item Find the angles of the vectors.
+  \item Find a vector $d$ of length $10$ that points in the opposite direction to $a$.
+\end{parts}
+
+\uppgift{2.2}{Rectangular form to Euler form}
+A voltage $u(t)$ in an AC circuit can be represented by a phasor $U$, which in rectangular form
+is written
+\[
+  U = -12 + j4\,\text{V}.
+\]
+\begin{parts}
+  \item Draw the phasor $U$ in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Express the phasor $U$ in Euler form, that is, find the magnitude $\abs{U}$ and the phase
+    angle $\delta$ such that $U = \abs{U}e^{j\delta}$.
+  \item Assume that the frequency of the voltage is $f = 100\,\text{Hz}$. Find the angular
+    frequency $\omega$.
+  \item Write the corresponding complex function of time for the voltage in Euler form, that is,
+    $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+\end{parts}
+\note[Note] The phasor $U$ is the complex voltage $u(t)$ without its time dependence.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson. Most of them can
+be done in your head or with pencil and paper.
+
+\uppgift{3.1}{Euler's formula}
+Write in rectangular form.
+\begin{delar}(5)
+  \task $e^{j\pi/2}$
+  \task $e^{j\pi}$
+  \task $e^{j0}$
+  \task $e^{-j\pi/2}$
+  \task $e^{j2\pi}$
+\end{delar}
+
+\uppgift{3.2}{Euler form to rectangular form}
+Write in rectangular form.
+\begin{delar}(4)
+  \task $z = 4e^{j0}$
+  \task $z = 5e^{j\pi/3}$
+  \task $z = 2e^{-j\pi/4}$
+  \task $z = 10e^{j2\pi/3}$
+\end{delar}
+
+\uppgift{3.3}{Rectangular form to Euler form}
+Write in Euler form $\abs{z}e^{j\delta}$.
+\begin{delar}(4)
+  \task $z = 3 + j3$
+  \task $z = -2 + j2$
+  \task $z = -j6$
+  \task $z = -5$
+\end{delar}
+
+\uppgift{3.4}{Multiplication and division in polar form}
+Calculate with $z_1 = 4\,\angle\,30^{\circ}$ and $z_2 = 3\,\angle\,45^{\circ}$:
+\begin{delar}(3)
+  \task $z_1z_2$
+  \task $\dfrac{z_1}{z_2}$
+  \task $z_1^2$
+  \task* Why is polar form more convenient than rectangular form for multiplication?
+\end{delar}
+
+\uppgift{3.5}{Comparing the methods}
+The complex numbers $z_1 = 3 + j4$ and $z_2 = 1 + j$ are given.
+\begin{parts}
+  \item Calculate $z_1z_2$ in rectangular form.
+  \item Write both numbers in polar form.
+  \item Multiply the numbers in polar form.
+  \item Check that the answers to a) and c) are the same number.
+\end{parts}
+
+\uppgift{3.6}{Division in polar form}
+Calculate.
+\begin{delar}(3)
+  \task $\dfrac{10\,\angle\,80^{\circ}}{2\,\angle\,20^{\circ}}$
+  \task $\dfrac{12\,\angle\,0^{\circ}}{4\,\angle\,90^{\circ}}$
+  \task $\dfrac{6\,\angle\,{-30^{\circ}}}{3\,\angle\,60^{\circ}}$
+  \task* What happens to the phase angle when you divide by $j$?
+\end{delar}
+
+\uppgift{3.7}{Powers of complex numbers}
+The number $z = 2\,\angle\,30^{\circ}$ is given.
+\begin{parts}
+  \item Calculate $z^2$.
+  \item Calculate $z^3$, and write the answer in rectangular form as well.
+  \item Calculate $z^4$.
+  \item State the general rule for $z^n$ in polar form.
+\end{parts}
+
+\uppgift{3.8}{Phasor from a function of time}
+Give the phasor in polar form.
+\begin{delar}(2)
+  \task $u(t) = 10\sin\left(100\pi t + \frac{\pi}{6}\right)$
+  \task $u(t) = 4\sin\left(200\pi t - \frac{\pi}{2}\right)$
+  \task* $i(t) = 6\sin(50t)$
+  \task* What is required for two phasors to be added?
+\end{delar}
+
+\uppgift{3.9}{Function of time from a phasor}
+The angular frequency is $\omega = 100\pi\,\text{rad/s}$. Write the corresponding function of time.
+\begin{delar}(4)
+  \task $U = 8\,\angle\,45^{\circ}\,\text{V}$
+  \task $U = 5\,\angle\,{-90^{\circ}}\,\text{V}$
+  \task $I = 3 + j4\,\text{mA}$
+  \task $I = -2 - j2\,\text{mA}$
+\end{delar}
+
+\uppgift{3.10}{Phasor addition}
+Two voltages with the same frequency are given by $U_1 = 6\,\angle\,0^{\circ}\,\text{V}$ and
+$U_2 = 8\,\angle\,90^{\circ}\,\text{V}$.
+\begin{parts}
+  \item Write both in rectangular form.
+  \item Calculate the sum $U = U_1 + U_2$.
+  \item Give the sum in polar form.
+  \item Write $u(t)$ if $\omega = 100\pi\,\text{rad/s}$.
+\end{parts}
+
+\uppgift{3.11}{Impedance from voltage and current}
+A circuit has $U = 20\,\angle\,60^{\circ}\,\text{V}$ and $I = 4\,\angle\,15^{\circ}\,\text{A}$.
+\begin{parts}
+  \item Calculate the impedance $Z = \dfrac{U}{I}$ in polar form.
+  \item Write $Z$ in rectangular form.
+  \item Is the circuit inductive or capacitive?
+  \item What are the resistance and the reactance?
+\end{parts}
+
+\uppgift{3.12}{Impedance of an inductor and a capacitor}
+At $\omega = 1000\,\text{rad/s}$, $L = 20\,\text{mH}$ and $C = 50\,\mu\text{F}$.
+\begin{parts}
+  \item Calculate $Z_L = j\omega L$.
+  \item Calculate $Z_C = -\dfrac{j}{\omega C}$.
+  \item A resistor $R = 15\,\Omega$ is connected in series with both. Calculate the total
+    impedance.
+  \item What is this condition called?
+\end{parts}
+
+\uppgift{3.13}{Vectors as complex numbers}
+The vectors $\mathbf{a} = (5, 12)$ and $\mathbf{b} = (-8, 6)$ are given.
+\begin{parts}
+  \item Write them as complex numbers.
+  \item Calculate $\abs{a}$ and $\abs{b}$.
+  \item Calculate $a + b$ and its magnitude.
+  \item Calculate the angles of the vectors.
+\end{parts}
+
+\uppgift{3.14}{Rotation by $j$}
+The number $z = 3 + j4$ is given.
+\begin{parts}
+  \item Calculate $jz$.
+  \item Compare $\abs{z}$ and $\abs{jz}$.
+  \item Compare the phase angles of the two numbers.
+  \item What does multiplication by $j$ do geometrically?
+\end{parts}
+
+\uppgift{3.15}{True or false}
+Decide whether each statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item $e^{j\delta}$ always has the magnitude $1$.
+  \item $\abs{z_1z_2} = \abs{z_1} + \abs{z_2}$
+  \item In division, the phase angles are subtracted.
+  \item A phasor contains information about the frequency of the signal.
+  \item $e^{j\pi} + 1 = 0$
+  \item Multiplying complex numbers is easiest in rectangular form.
+\end{parts}

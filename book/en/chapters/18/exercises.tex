@@ -1,0 +1,364 @@
+% Section 18.14, translated from sv/chapters/18/exercises.tex.
+
+\section{Exercises}
+\label{c18:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Each exercise is solved in two steps. First you calculate
+\textbf{by hand} and write down the intermediate steps; this is done \textbf{before the lesson}.
+Then, during the lesson, you write \textbf{a C program} that does the same calculation, and
+compare the results. Parts~1--3 are compulsory and are assessed U/G, the Swedish fail and pass.
+Parts~4 and~5 are optional further study for those who have time, and do not affect the
+assessment.
+
+\facitnotis{L18}
+\end{aside}
+
+\begin{aside}
+\note[Note] The hand calculations for Parts~1--3 must be done before the lesson and brought to it.
+The lesson time is not enough for both calculating and programming.
+\end{aside}
+
+The code is written and run in OnlineGDB, \url{https://www.onlinegdb.com/online_c_compiler}, as in
+\secref{c18:sec:miljo}. Check that the language is set to \textbf{C} and press \textbf{Run}. The
+error message \code{undefined reference to 'sqrt'} means that the maths library is missing; add
+\code{-lm} under \textbf{Extra Compiler Flags} in the settings (the gear icon). Print
+floating-point numbers with three decimals, for example \code{printf("R = \%.3f ohm\n", r);}.
+
+\subsection*{How to work: one file per exercise}
+All the exercises are collected in \textbf{one and the same OnlineGDB project}, with one file per
+exercise:
+\begin{console}
+assignment1_1.c   assignment2_1.c   assignment3_1.c
+assignment1_2.c   assignment2_2.c   assignment3_2.c
+assignment1_3.c   assignment2_3.c   assignment3_3.c
+                  assignment2_4.c   main.c
+\end{console}
+New files are created with the \textbf{New file} button in the toolbar, or with \code{Ctrl + M}.
+
+OnlineGDB compiles and links all the files in the project together. Therefore only \textbf{one}
+file may contain \code{main()}. Instead, each exercise is written as a function of its own, with
+the same name as the file:
+\begin{ccode}
+/* assignment1_1.c */
+#include <stdio.h>
+
+void assignment1_1(void)
+{
+    printf("--- Exercise 1.1 ---\n");
+    /* Your code here. */
+}
+\end{ccode}
+In \file{main.c} the exercises are declared at the top and then called in turn. Add one line per
+exercise as you finish it -- a function that is declared but does not exist gives a linker error:
+\begin{ccode}
+/* main.c */
+void assignment1_1(void);
+void assignment1_2(void);
+
+int main(void)
+{
+    assignment1_1();
+    assignment1_2();
+    return 0;
+}
+\end{ccode}
+At the presentation it is then enough to press \textbf{Run} once: all the exercises run and print
+their results in order.
+
+\begin{aside}
+\note[Note] The project is not saved automatically. Copy the files to your own computer before you
+close the tab.
+\end{aside}
+
+\subsection*{Presentation and assessment}
+The exercises are presented to the teacher during the lesson:
+\begin{itemize}
+  \item \textbf{The hand calculations} for each exercise, done before the lesson and brought to
+    it, handwritten or digital and with clear steps.
+  \item \textbf{The code}: the OnlineGDB project with one file per exercise, which must be
+    runnable and commented. All the exercises must run with a single press of \textbf{Run}.
+  \item A \textbf{comparison} between the hand-calculated and the computed result, with an
+    explanation of any discrepancies.
+\end{itemize}
+The lab is assessed U/G and does not affect the points towards the course grade. It is part of the
+requirement that all the course's learning outcomes are achieved for a pass grade in the course.
+
+\begin{narrowtable}{@{}lc@{}}
+  \thead{Requirement} & \thead{Assessment} \\
+  \midrule
+  Parts 1--3 completed and correctly presented & G \\
+  Parts 1--3 not completed or not presented & U \\
+\end{narrowtable}
+
+Parts~4 and~5 are optional further study and do not affect the assessment.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Basics of \code{math.h}}
+
+\uppgift{1.1}{Resistance and power}
+Two resistors, $R_1 = 220\,\Omega$ and $R_2 = 330\,\Omega$, are connected in parallel across the
+voltage $U = 12\,\text{V}$.
+\begin{parts}
+  \item Calculate the parallel resistance $R_{\text{p}}$.
+  \item Calculate the current $I$ and the power dissipated, $P = \dfrac{U^2}{R_{\text{p}}}$.
+  \item Write a program that calculates $R_{\text{p}}$, $I$ and $P$. Use \code{pow()} for the
+    squaring.
+  \item Extend the program so that it also calculates the voltage needed for the power to be
+    $2.0\,\text{W}$, from $U = \sqrt{P R_{\text{p}}}$.
+\end{parts}
+
+\uppgift{1.2}{Decibels}
+An amplifier has the input voltage $U_{\text{in}} = 25\,\text{mV}$ and the output voltage
+$U_{\text{out}} = 1.6\,\text{V}$.
+\begin{parts}
+  \item Calculate the gain in dB.
+  \item A filter attenuates the signal by $-3\,\text{dB}$. Calculate the ratio
+    $U_{\text{out}}/U_{\text{in}}$ for the filter.
+  \item Write a program that calculates both values with \code{log10()} and \code{pow()}
+    respectively.
+\end{parts}
+
+\uppgift{1.3}{Angles and trigonometry}
+An AC voltage is given by $u(t) = 325\sin(2\pi \cdot 50t)\,\text{V}$.
+\begin{parts}
+  \item Calculate $u(t)$ at $t = 2.0\,\text{ms}$.
+  \item Give the angle $2\pi \cdot 50t$ in both radians and degrees at this time.
+  \item Write a program that calculates $u(t)$ for $t = 0$, $2.0\,\text{ms}$, $5.0\,\text{ms}$
+    and $10.0\,\text{ms}$. Print the time, the angle in degrees and the voltage on each line.
+  \item Find the angle of the vector $\vec{v} = (-3, 4)$ with \code{atan2()}, in radians and
+    degrees. Explain why \code{atan(4.0 / -3.0)} gives a different answer.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{Derivatives and integrals}
+
+\uppgift{2.1}{Numerical differentiation}
+Let $f(x) = x^3 - 2x + 1$.
+\begin{parts}
+  \item Differentiate $f(x)$ analytically and calculate $f'(2)$.
+  \item Write a function \code{derivative()} that calculates the derivative numerically with the
+    central difference
+    \[
+      f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}.
+    \]
+  \item Calculate $f'(2)$ numerically with $h = 10^{-2}$, $h = 10^{-6}$ and $h = 10^{-12}$. Print
+    the absolute error against the analytical value for each $h$.
+  \item Which $h$ gives the smallest error? Explain why values of $h$ that are too large and too
+    small both give worse results.
+\end{parts}
+
+\uppgift{2.2}{Voltage across an inductor}
+The current through an inductor is given by $i(t) = 5t^2\,\text{A}$. The inductor's inductance is
+$L = 0.20\,\text{H}$. The voltage across the inductor is given by
+\[
+  u(t) = L \cdot i'(t).
+\]
+\begin{parts}
+  \item Find $i'(t)$ analytically, and hence an expression for $u(t)$.
+  \item Calculate $u(3)$ by hand.
+  \item Write a program that calculates $u(3)$ by differentiating $i(t)$ numerically, and compare
+    with the hand calculation.
+\end{parts}
+
+\uppgift{2.3}{Numerical integration}
+Let $f(x) = x^2$.
+\begin{parts}
+  \item Calculate $\int_0^3 x^2\,dx$ analytically.
+  \item Write a function \code{integral()} that calculates the definite integral with the
+    trapezoidal rule:
+    \[
+      \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right],
+      \qquad h = \frac{b - a}{n}.
+    \]
+  \item Calculate the integral with $n = 10$, $n = 100$ and $n = 1000$. Print the absolute error
+    for each $n$.
+  \item How does the error change when $n$ is multiplied by ten?
+\end{parts}
+
+\uppgift{2.4}{Charge through a conductor}
+The current is given by $i(t) = 3t + 2\,\text{A}$.
+\begin{parts}
+  \item Calculate the charge $q = \int_0^4 i(t)\,dt$ analytically.
+  \item Calculate the same charge numerically with the trapezoidal rule and $n = 4$.
+  \item Why is the numerical result exact in this case, but not in \uppref{2.3}?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Complex numbers and phasors}
+
+\uppgift{3.1}{Calculating with complex numbers}
+Let $z_1 = 4 + 3j$ and $z_2 = 2 - 5j$.
+\begin{parts}
+  \item Calculate $z_1 + z_2$, $z_1 \cdot z_2$ and $\dfrac{z_1}{z_2}$ by hand.
+  \item Calculate $\abs{z_1}$ and $\arg(z_1)$ in radians and degrees.
+  \item Write a program that does all the calculations with \file{complex.h}. Print each result in
+    the form \code{a + bj} using \code{creal()} and \code{cimag()}.
+\end{parts}
+
+\uppgift{3.2}{Polar and rectangular form}
+A complex number is given in polar form as $z = 10\angle\frac{\pi}{6}$.
+\begin{parts}
+  \item Convert $z$ to rectangular form by hand.
+  \item Write a program that does the conversion with \code{cexp()}, and converts back with
+    \code{cabs()} and \code{carg()}.
+  \item Check that you get the original number back. Why should the results be compared with
+    \code{fabs(a - b) < 1e-9} rather than with \code{==}?
+\end{parts}
+
+\uppgift{3.3}{Impedance of an RLC circuit}
+A series circuit consists of $R = 47\,\Omega$, $L = 100\,\text{mH}$ and $C = 10\,\upmu\text{F}$.
+The circuit is supplied with $U = 230\,\text{V}$ at $f = 50\,\text{Hz}$.
+\begin{parts}
+  \item Calculate $\omega$, $X_L = \omega L$ and $X_C = \dfrac{1}{\omega C}$.
+  \item Give the total impedance $Z = R + j(X_L - X_C)$ in rectangular form.
+  \item Calculate $\abs{Z}$ and $\arg(Z)$ in degrees. Is the circuit inductive or capacitive?
+  \item Calculate the magnitude of the current, $\abs{I} = \dfrac{\abs{U}}{\abs{Z}}$.
+  \item Write a program that calculates all of the above with \file{complex.h}. Let $f$ be a
+    variable, and run the program for $f = 500\,\text{Hz}$ as well. What happens to the character
+    of the circuit?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Further study (optional)}
+
+\uppgift{4.1}{Sampling a sinusoidal signal}
+A signal is given by $u(t) = 5\sin\bigl(2\pi \cdot 50t + \frac{\pi}{4}\bigr)\,\text{V}$ and is
+sampled at $f_s = 800\,\text{Hz}$.
+\begin{parts}
+  \item Check that the sampling theorem is satisfied.
+  \item Calculate the number of samples per period, $N = \dfrac{f_s}{f}$.
+  \item Calculate the sample values $u_0$, $u_1$ and $u_2$ by hand from
+    \[
+      u_k = \abs{U} \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+    \]
+  \item Write a program that calculates and prints all $N$ sample values for one period, as CSV
+    with one line per sample:
+\begin{console}
+k,u
+0,3.536
+1,4.619
+\end{console}
+  \item Copy the output into a spreadsheet program and plot $u_k$ as a function of $k$. Check
+    that the curve is sinusoidal and that the values repeat after $N$ samples.
+\end{parts}
+
+\uppgift{4.2}{Adding phasors}
+Three voltages with the same frequency are given by the phasors
+\[
+  U_1 = 10\angle 0, \qquad U_2 = 6\angle\frac{\pi}{3}, \qquad U_3 = 4\angle{-\frac{\pi}{2}}.
+\]
+\begin{parts}
+  \item Convert all the phasors to rectangular form by hand.
+  \item Calculate the sum $U = U_1 + U_2 + U_3$ in rectangular form.
+  \item Give the sum in polar form, $\abs{U}\angle\delta$, with $\delta$ in both radians and
+    degrees.
+  \item Write a program that does the addition with \file{complex.h} and prints the sum in both
+    rectangular and polar form.
+  \item Draw the phasors and their sum in the complex plane.
+\end{parts}
+
+\uppgift{4.3}{The composite signal}
+\begin{parts}
+  \item Write a program that samples the composite signal
+    \[
+      u(t) = u_1(t) + u_2(t) + u_3(t),
+    \]
+    where each component signal is given by the corresponding phasor in \uppref{4.2} and all of
+    them have the frequency $f = 50\,\text{Hz}$.
+  \item Print the sample values as CSV with $f_s = 1600\,\text{Hz}$.
+  \item Check that the largest sample value agrees with the $\abs{U}$ calculated in
+    \uppref{4.2}. Explain any discrepancy.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 5}{Extra exercises (optional)}
+The exercises below are extra practice for those who want to go further. They do not affect the
+assessment. As in Parts~1--3, the hand calculation comes first and the program after.
+
+\uppgift{5.1}{Rounding and absolute value}
+Consider the numbers $-2.7$, $3.2$ and $5.5$.
+\begin{parts}
+  \item Give by hand what \code{floor()}, \code{ceil()} and \code{round()} return for each of the
+    numbers.
+  \item Write a program that prints all nine values in a table.
+  \item Why does \code{round(-2.5)} give $-3$ and not $-2$?
+  \item What is the difference between \code{fabs()} and \code{abs()}, and which should be used in
+    this course?
+\end{parts}
+
+\uppgift{5.2}{Tolerance check of resistors}
+A resistor is marked $4.7\,\text{k}\Omega \pm 5\,\%$.
+\begin{parts}
+  \item Calculate the permitted range by hand.
+  \item Write the function
+\begin{ccode}
+int within_tolerance(double nominal, double tol_percent, double measured);
+\end{ccode}
+    which returns $1$ if the measured value is within the tolerance, and $0$ otherwise.
+  \item Test the function with the measured values $4600\,\Omega$, $4950\,\Omega$ and
+    $4465\,\Omega$.
+  \item Why should the comparison be written as
+\begin{ccode}
+fabs(measured - nominal) <= nominal * tol_percent / 100.0
+\end{ccode}
+    rather than as a comparison with two separate limits?
+\end{parts}
+
+\uppgift{5.3}{Series and parallel resistance}
+\begin{parts}
+  \item Calculate $R_{\text{s}}$ and $R_{\text{p}}$ by hand for $R_1 = 100\,\Omega$ and
+    $R_2 = 400\,\Omega$.
+  \item Write the functions
+\begin{ccode}
+double series(double r1, double r2)
+double parallel(double r1, double r2)
+\end{ccode}
+  \item Write a program that prints both values.
+  \item Extend the program with a function that calculates the parallel resistance of $n$
+    resistors in an array, via the sum of $1/R$. Test with $\{100, 400, 200\}\,\Omega$.
+\end{parts}
+
+\uppgift{5.4}{Table of an RC discharge}
+The voltage is given by $u(t) = 12e^{-t/\tau}\,\text{V}$, where $\tau = RC$ with
+$R = 10\,\text{k}\Omega$ and $C = 100\,\upmu\text{F}$.
+\begin{parts}
+  \item Calculate $\tau$ by hand.
+  \item Calculate $u(0)$, $u(1)$ and $u(2)$ by hand.
+  \item Write a program that uses \code{exp()} to print $u(t)$ for $t = 0$ to $5\,\text{s}$ in
+    steps of $0.5\,\text{s}$.
+  \item After how many time constants is the voltage below $1\,\%$ of its initial value? Let the
+    program find the answer.
+\end{parts}
+
+\uppgift{5.5}{A quadratic equation with all three cases}
+\begin{parts}
+  \item Write a program that solves $ax^2 + bx + c = 0$ using the discriminant.
+  \item The program must handle the three cases $D > 0$, $D = 0$ and $D < 0$ separately.
+  \item Test with the coefficients $(1, -5, 6)$, $(1, -4, 4)$ and $(1, 2, 5)$. Work out the
+    expected answers by hand first.
+  \item In the case $D < 0$, print the roots in the form \code{a + bj} using \code{sqrt(-D)}.
+\end{parts}
+
+\uppgift{5.6}{Solving an equation numerically by bisection}
+Find the root of $f(x) = e^{-x} - x$ in the interval $[0, 1]$.
+\begin{parts}
+  \item Calculate $f(0)$ and $f(1)$ by hand and show that they have opposite signs.
+  \item Write a function \code{bisect()} that repeatedly halves the interval until its width is
+    less than $10^{-9}$.
+  \item Run the program. What value of the root do you get?
+  \item Why must $f(a)$ and $f(b)$ have opposite signs for the method to work?
+\end{parts}
+
+\uppgift{5.7}{RMS value by numerical integration}
+For a sinusoidal voltage $u(t) = \abs{U}\sin(\omega t)$,
+\[
+  U_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^T u(t)^2\,dt}.
+\]
+\begin{parts}
+  \item Give the theoretical value of $U_{\text{RMS}}$ when $\abs{U} = 325\,\text{V}$.
+  \item Write a program that calculates the integral numerically with the trapezoidal rule and
+    $n = 1000$ subintervals over one period.
+  \item Compare with the theoretical value and print the relative error.
+  \item What happens to the error if $n$ is reduced to $10$? Explain why.
+\end{parts}

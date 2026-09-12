@@ -1,0 +1,53 @@
+% Half-title, title and copyright pages.
+%
+% \bookversion is the release the PDF was built for: `make VERSION=v1.1.0` passes it in, and the
+% release workflow passes the tag. Without it the title page carries no edition at all. The book
+% is meant to be used for many years, so no page of it names a year, a date or a class.
+\providecommand{\bookversion}{}
+
+\thispagestyle{empty}
+\vspace*{2.2in}
+\begin{flushright}
+  {\Large\bfseries Elteknisk matematik}
+\end{flushright}
+\cleardoublepage
+
+\thispagestyle{empty}
+\vspace*{1.1in}
+\begin{flushleft}
+  {\color{accent}\rule{0.9in}{2.5pt}}\par\vspace{1.4ex}
+  {\fontsize{32}{38}\selectfont\bfseries Elteknisk\\[0.15ex] matematik\par}
+  \vspace{2.2ex}
+  {\Large\itshape Från bråk och ekvationer till derivator,\\integraler och fasorer\par}
+  \vspace{1.2in}
+  {\large Erik Pihl\par}
+  \vfill
+  \ifx\bookversion\empty\else{\small\color{muted}\bookversion\par}\fi
+\end{flushleft}
+\newpage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+{\small
+\noindent\textit{Elteknisk matematik}\\
+Text och figurer: Erik Pihl.
+
+\medskip
+\noindent Bokens text och figurer, liksom kursmaterialet den är satt från, är licensierade under
+Creative Commons Erkännande 4.0 Internationell (CC BY 4.0). Du får kopiera, sprida och bearbeta
+materialet i vilket syfte som helst, även kommersiellt, förutsatt att du anger upphovsperson och
+licens. Licensen finns på \url{https://creativecommons.org/licenses/by/4.0/deed.sv}.
+
+\medskip
+\noindent C-koden i kapitel~18 får även användas under MIT-licensen, som är licensen för all kod i
+kursens repository. Där finns också lektionsmaterialet och lösningsförslagen till uppgifterna.
+
+\medskip
+\noindent Satt med TeX Gyre Pagella och DejaVu Sans Mono i Lua\LaTeX.
+
+\ifx\bookversion\empty\else
+\medskip
+\noindent\textcolor{muted}{Denna utgåva: \bookversion.}
+\fi
+\par}
+\cleardoublepage

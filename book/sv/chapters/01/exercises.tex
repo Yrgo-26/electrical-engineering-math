@@ -1,0 +1,245 @@
+% Section 1.7, from lectures/L01/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c1:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L01}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Inledande uppgifter}
+
+\uppgift{1.1}{Beräkningar med räkneordning}
+Beräkna följande uttryck \textbf{utan} miniräknare.
+\begin{delar}(4)
+  \task $3 + 2 \times 5$
+  \task $(3 + 2) \times 5$
+  \task $12 - 4 \times 2 + 1$
+  \task $\dfrac{10 + 2}{3} \times 4 - 1$
+\end{delar}
+
+\uppgift{1.2}{Bråkräkning}
+Beräkna och förenkla.
+\begin{delar}(4)
+  \task $\dfrac{1}{4} + \dfrac{1}{6}$
+  \task $\dfrac{3}{5} - \dfrac{1}{4}$
+  \task $\dfrac{2}{3} \times \dfrac{9}{4}$
+  \task $\dfrac{5}{6} \div \dfrac{5}{12}$
+\end{delar}
+
+\uppgift{1.3}{Procenträkning}
+\begin{parts}
+  \item Beräkna $40\,\%$ av $250$.
+  \item Vilket procenttal är $18$ av $72$?
+  \item En resistor har det nominella värdet $100\,\Omega$ med en tolerans på $\pm 5\,\%$. Ange det
+    lägsta och det högsta tillåtna motståndet.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Parallellkopplade motstånd}
+Två motstånd $R_1 = 12\,\Omega$ och $R_2 = 6\,\Omega$ är parallellkopplade. Sambandet för den
+totala resistansen $R_{\text{TOT}}$ ges av
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}.
+\]
+\begin{delar}(2)
+  \task Beräkna $\dfrac{1}{R_{\text{TOT}}}$.
+  \task Beräkna $R_{\text{TOT}}$.
+\end{delar}
+
+\uppgift{2.2}{Serie- och parallellkoppling}
+Kretsen nedan består av motståndet $R_1$ i serie med parallellkopplingen av $R_2$ och $R_3$.
+
+\bild[0.5\linewidth]{lectures/L01/appendix/images/circuit_series_parallel.png}
+
+Komponentvärdena är $R_1 = 4\,\text{k}\Omega$, $R_2 = 24\,\text{k}\Omega$ och
+$R_3 = 8\,\text{k}\Omega$. Parallellresistansen $R_{\text{p}} = R_2 \parallell R_3$ kan beräknas på
+två sätt:
+\[
+  \frac{1}{R_{\text{p}}} = \frac{1}{R_2} + \frac{1}{R_3}
+  \qquad \text{eller} \qquad
+  R_{\text{p}} = \frac{R_2 \times R_3}{R_2 + R_3}
+\]
+\begin{parts}
+  \item Beräkna $R_{\text{p}}$ med båda formlerna och kontrollera att de ger samma svar.
+  \item Beräkna kretsens totala resistans $R_{\text{TOT}} = R_1 + R_{\text{p}}$.
+  \item Varför måste parallellkopplingen beräknas innan $R_1$ adderas? Koppla svaret till
+    räkneordningen.
+\end{parts}
+
+\uppgift{2.3}{Ström och spänning i kretsen}
+Kretsen i \uppref{2.2} matas med spänningen $U = 20\,\text{V}$. Ohms lag ger sambandet mellan
+spänning, resistans och ström:
+\[
+  U = R \times I
+\]
+
+\begin{aside}
+\note[Tips] Räknar du med resistansen i k$\Omega$ och spänningen i V får du strömmen direkt i mA.
+\end{aside}
+
+\begin{parts}
+  \item Beräkna strömmen $I$ som spänningskällan levererar.
+  \item Beräkna spänningen $U_1$ över $R_1$.
+  \item Beräkna spänningen $U_{\text{p}}$ över parallellkopplingen.
+  \item Beräkna strömmarna $I_2$ och $I_3$ genom $R_2$ respektive $R_3$. Kontrollera att
+    $I_2 + I_3 = I$.
+\end{parts}
+
+\uppgift{2.4}{Absolutbelopp}
+En växelspänning varierar mellan $-8\,\text{V}$ och $+8\,\text{V}$.
+\begin{parts}
+  \item Vad är amplituden $\abs{U}$ hos spänningen?
+  \item Vid en viss tidpunkt är spänningen $u(t) = -5{,}3\,\text{V}$. Beräkna $\abs{u(t)}$.
+\end{parts}
+
+\uppgift{2.5}{Verkningsgrad}
+En batteridriven motor tar in $P_{\text{in}} = 24\,\text{W}$ och avger
+$P_{\text{ut}} = 18\,\text{W}$.
+\begin{parts}
+  \item Beräkna motorns verkningsgrad $\eta$ i procent.
+  \item Om verkningsgraden förbättras till $90\,\%$ vid samma ineffekt, hur stor blir då
+    uteffekten?
+\end{parts}
+
+\uppgift{2.6}{Talmängder}
+Placera varje tal i den \emph{minsta} talmängd det tillhör: $\mathbb{N}$, $\mathbb{Z}$,
+$\mathbb{Q}$, de irrationella talen eller $\mathbb{R}$.
+\begin{delar}(6)
+  \task $7$
+  \task $-3$
+  \task $\dfrac{3}{4}$
+  \task $\sqrt{2}$
+  \task $0{,}25$
+  \task $\pi$
+\end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Räkneordning med negativa tal}
+Beräkna \textbf{utan} miniräknare.
+\begin{delar}(3)
+  \task $-3 + 5 \times (-2)$
+  \task $(-4)^2 - 4^2$
+  \task $\dfrac{-12}{-3} + 2 \times (-5)$
+  \task $8 - 2(3 - 7)$
+  \task $\dfrac{(-2)^3 + 10}{2}$
+\end{delar}
+
+\uppgift{3.2}{Tallinjen och absolutbelopp}
+\begin{parts}
+  \item Sortera talen i storleksordning, det minsta först: $-2{,}5$, $\abs{-3}$, $\dfrac{7}{2}$,
+    $-\abs{4}$, $0$.
+  \item Beräkna $\abs{-7} - \abs{3}$.
+  \item Beräkna $\abs{3 - 8}$ och $\abs{8 - 3}$. Vad säger resultatet om avståndet mellan två tal?
+  \item Två mätvärden är $U_1 = 4{,}8\,\text{V}$ och $U_2 = 5{,}1\,\text{V}$. Skriv skillnadens
+    storlek med absolutbelopp och beräkna den.
+\end{parts}
+
+\uppgift{3.3}{Bråk, decimaltal och procent}
+Fyll i de tomma rutorna. Bråken ska anges i enklaste form.
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{6em}}@{}}
+  \thead{Bråk} & \thead{Decimaltal} & \thead{Procent} \\
+  \midrule
+  $\dfrac{1}{4}$ & & \\
+  & $0{,}6$ & \\
+  & & $12{,}5\,\%$ \\
+  $\dfrac{3}{8}$ & & \\
+\end{narrowtable}
+
+\uppgift{3.4}{Bråkuttryck i flera steg}
+Beräkna och förenkla.
+\begin{delar}(4)
+  \task $\dfrac{2}{3} + \dfrac{1}{6} - \dfrac{1}{2}$
+  \task $\dfrac{3}{4} \times \dfrac{8}{9} \div \dfrac{2}{3}$
+  \task $\dfrac{\frac{1}{2} + \frac{1}{3}}{\frac{5}{6}}$
+  \task $\dfrac{1}{\frac{1}{4} + \frac{1}{4}}$
+  \task* Vilken kretsberäkning känner du igen i d)?
+\end{delar}
+
+\uppgift{3.5}{Procentuell förändring}
+\begin{parts}
+  \item En spänning ökar från $12\,\text{V}$ till $15\,\text{V}$. Hur många procent är ökningen?
+  \item En ström minskar från $400\,\text{mA}$ till $340\,\text{mA}$. Hur många procent är
+    minskningen?
+  \item Ett motstånd ökar först med $10\,\%$ och minskar sedan med $10\,\%$. Är det tillbaka på
+    sitt ursprungsvärde? Motivera.
+  \item En effekt på $60\,\text{W}$ ökas med $25\,\%$. Hur stor blir den nya effekten?
+\end{parts}
+
+\uppgift{3.6}{Tolerans och mätavvikelse}
+\begin{parts}
+  \item En resistor är märkt $4{,}7\,\text{k}\Omega \pm 10\,\%$. Ange det lägsta och det högsta
+    tillåtna värdet.
+  \item Resistorn mäts till $4{,}9\,\text{k}\Omega$. Ligger den inom toleransen?
+  \item Hur många procent avviker det uppmätta värdet från det nominella?
+  \item En annan resistor är märkt $220\,\Omega \pm 5\,\%$ och mäts till $208\,\Omega$. Är den
+    godkänd?
+\end{parts}
+
+\uppgift{3.7}{Talmängder: sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item Varje heltal är också ett rationellt tal.
+  \item Varje rationellt tal är också ett heltal.
+  \item $\sqrt{9}$ är ett irrationellt tal.
+  \item Summan av två irrationella tal är alltid irrationell.
+  \item Decimaltalet $0{,}333\ldots$ är ett rationellt tal.
+  \item Varje reellt tal kan skrivas som ett bråk mellan två heltal.
+\end{parts}
+
+\uppgift{3.8}{Lika stora motstånd i parallell}
+\begin{parts}
+  \item Två motstånd på vardera $100\,\Omega$ parallellkopplas. Beräkna $R_{\text{p}}$.
+  \item Fyra motstånd på vardera $100\,\Omega$ parallellkopplas. Beräkna $R_{\text{p}}$.
+  \item Visa allmänt att $n$ stycken lika stora motstånd $R$ i parallell ger
+    $R_{\text{p}} = \dfrac{R}{n}$.
+  \item Hur många $100\,\Omega$-motstånd behöver parallellkopplas för att ge $20\,\Omega$?
+\end{parts}
+
+\uppgift{3.9}{Sök det okända motståndet}
+\begin{parts}
+  \item $R_1 = 30\,\Omega$ parallellkopplas med $R_2$ och ger $R_{\text{p}} = 12\,\Omega$. Beräkna
+    $R_2$.
+  \item $R_1 = 220\,\Omega$ ska kompletteras med ett motstånd i serie så att
+    $R_{\text{TOT}} = 500\,\Omega$. Beräkna det motståndet.
+  \item Kontrollera i a) att $R_{\text{p}}$ är mindre än det minsta ingående motståndet.
+  \item Kan en parallellkoppling av $R_1 = 30\,\Omega$ och något annat motstånd ge
+    $R_{\text{p}} = 40\,\Omega$? Motivera.
+\end{parts}
+
+\uppgift{3.10}{Ohms lag: fyll i tabellen}
+Fyll i de tomma rutorna med hjälp av Ohms lag $U = R \times I$.
+
+\begin{aside}
+\note[Tips] Med resistansen i k$\Omega$ och spänningen i V fås strömmen direkt i mA.
+\end{aside}
+
+\begin{narrowtable}{@{}p{5em}p{5em}p{5em}@{}}
+  \thead{$U$} & \thead{$R$} & \thead{$I$} \\
+  \midrule
+  $12\,\text{V}$ & $4\,\text{k}\Omega$ & \\
+  & $2{,}2\,\text{k}\Omega$ & $5\,\text{mA}$ \\
+  $9\,\text{V}$ & & $3\,\text{mA}$ \\
+  $5\,\text{V}$ & $1\,\text{k}\Omega$ & \\
+\end{narrowtable}
+
+\uppgift{3.11}{Verkningsgrad i två steg}
+En strömförsörjning består av en transformator med verkningsgraden $\eta_1 = 95\,\%$ följd av en
+likriktare med verkningsgraden $\eta_2 = 80\,\%$. Ineffekten är $P_{\text{in}} = 200\,\text{W}$.
+\begin{parts}
+  \item Beräkna effekten efter transformatorn.
+  \item Beräkna uteffekten efter likriktaren.
+  \item Beräkna den totala verkningsgraden $\eta_{\text{TOT}}$.
+  \item Hur stor effekt går totalt förlorad som värme?
+\end{parts}

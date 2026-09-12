@@ -1,0 +1,263 @@
+% Section 2.9, from lectures/L02/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c2:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L02}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Parallellkoppling av tre motstånd}
+Tre motstånd $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$ och $R_3 = 2\,\Omega$ är parallellkopplade.
+
+\bild[0.52\linewidth]{lectures/L02/appendix/images/1.1_circuit.png}
+
+Beräkna den totala resistansen $R_{\text{TOT}}$, som ges av
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}.
+\]
+
+\uppgift{1.2}{Verkningsgrad och effekt}
+En transformator har verkningsgraden $\eta = 92\,\%$ och ineffekten $P_{\text{in}} = 500\,\text{W}$.
+
+\bild[0.4\linewidth]{lectures/L02/appendix/images/1.2_circuit.png}
+
+\begin{parts}
+  \item Beräkna uteffekten $P_{\text{ut}}$.
+  \item Hur stor effekt $P_{\text{förl}}$ förloras som värme?
+\end{parts}
+
+\needspace{18\baselineskip}
+\uppgift{1.3}{Räkneordning i kretsformel}
+Beräkna spänningsdelarens utspänning $U_{\text{ut}}$ med formeln nedan då
+$U_{\text{in}} = 12\,\text{V}$, $R_1 = 8\,\Omega$ och $R_2 = 4\,\Omega$.
+
+\bild[0.44\linewidth]{lectures/L02/appendix/images/1.3_circuit.png}
+
+\[
+  U_{\text{ut}} = U_{\text{in}} \times \frac{R_2}{R_1 + R_2}
+\]
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Förenkling av algebraiska uttryck}
+Förenkla följande uttryck.
+\begin{delar}(2)
+  \task $5I_1 + 3I_2 - 2I_1 + 7I_2$
+  \task $4R_1 - 3R_2 + R_1 + 5R_2 - 2R_1$
+  \task $3I^2 - 2I + 4I^2 + 5I - 1$
+  \startnewitemline
+  \task* Sätt in $I = 2$ i både det ursprungliga och det förenklade uttrycket i c) och kontrollera
+    att de ger samma värde.
+\end{delar}
+
+\needspace{24\baselineskip}
+\uppgift{2.2}{Distributivlagen i kretsar}
+Motståndet $R$ i kretsen nedan genomflyts av summan av de tre grenströmmarna $I_1$, $I_2$ och
+$I_3$.
+
+\bild[0.7\linewidth]{lectures/L02/appendix/images/2.2_circuit.png}
+
+Spänningsfallet över $R$ ges därmed av
+\[
+  U_R = RI = R(I_1 + I_2 + I_3).
+\]
+\begin{parts}
+  \item Multiplicera ut parentesen och ange varje term med enhet.
+  \item Beräkna $U_R$ med den ursprungliga formen då $R = 100\,\Omega$, $I_1 = 20\,\text{mA}$,
+    $I_2 = 30\,\text{mA}$ och $I_3 = 50\,\text{mA}$.
+  \item Beräkna $U_R$ en gång till med det utmultiplicerade uttrycket och kontrollera att svaren
+    stämmer överens.
+\end{parts}
+
+\uppgift{2.3}{Faktorisering}
+Faktorisera följande uttryck.
+\begin{delar}(4)
+  \task $6I + 9RI$
+  \task $P_1^2 - P_2^2$
+  \task $U^2 - 10U + 25$
+  \task $4R^2 - 1$
+\end{delar}
+
+\uppgift{2.4}{Gemensam faktor: total effekt i en seriekrets}
+Tre motstånd $R_1 = 120\,\Omega$, $R_2 = 180\,\Omega$ och $R_3 = 200\,\Omega$ är seriekopplade och
+genomflyts därmed av samma ström $I = 50\,\text{mA}$.
+
+\bild[0.52\linewidth]{lectures/L02/appendix/images/2.4_circuit.png}
+
+Effekten i respektive motstånd ges av $P_k = R_k I^2$.
+\begin{parts}
+  \item Skriv ett uttryck för den totala effekten $P_{\text{TOT}} = P_1 + P_2 + P_3$ och bryt ut den
+    gemensamma faktorn.
+  \item Beräkna $P_{\text{TOT}}$ med det faktoriserade uttrycket.
+  \item Beräkna $P_1$, $P_2$ och $P_3$ var för sig och kontrollera att summan blir densamma. Vilken
+    väg krävde minst räknearbete?
+\end{parts}
+
+\uppgift{2.5}{Konjugatregeln: skillnad i effekt}
+Ett värmeelement med resistansen $R$ matas först med spänningen $U_1$ och sedan med $U_2$.
+
+\bild[0.35\linewidth]{lectures/L02/appendix/images/2.5_circuit.png}
+
+Effekten ges av $P = \dfrac{U^2}{R}$.
+\begin{parts}
+  \item Visa att effektskillnaden kan skrivas
+    \[
+      P_1 - P_2 = \frac{(U_1 + U_2)(U_1 - U_2)}{R}.
+    \]
+  \item Beräkna $P_1 - P_2$ \textbf{utan} miniräknare då $U_1 = 24\,\text{V}$,
+    $U_2 = 20\,\text{V}$ och $R = 8\,\Omega$.
+  \item Kontrollera svaret genom att beräkna $P_1$ och $P_2$ var för sig.
+\end{parts}
+
+\uppgift{2.6}{Kvadreringsregeln: effekt vid en strömändring}
+Genom ett motstånd $R = 10\,\Omega$ flyter strömmen $I_0 = 2\,\text{A}$. Strömmen ökar med
+$\Delta I = 0{,}1\,\text{A}$, så att den nya strömmen blir $I_0 + \Delta I$.
+
+\bild[0.35\linewidth]{lectures/L02/appendix/images/2.6_circuit.png}
+
+Effekten ges av $P = RI^2$.
+\begin{parts}
+  \item Multiplicera ut $P = R(I_0 + \Delta I)^2$ med kvadreringsregeln.
+  \item Beräkna den nya effekten med det utmultiplicerade uttrycket.
+  \item Hur stor är effektökningen $\Delta P$ jämfört med $P_0 = RI_0^2$?
+  \item Hur stort blir felet om man struntar i termen $R\,\Delta I^2$? Ange felet i procent av
+    $\Delta P$.
+\end{parts}
+
+\needspace{22\baselineskip}
+\uppgift{2.7}{Effektuttryck och Ohms lag}
+Effekten som utvecklas i motståndet nedan kan skrivas $P = RI^2$.
+
+\bild[0.31\linewidth]{lectures/L02/appendix/images/2.7_circuit.png}
+
+\begin{parts}
+  \item Visa att $P = RI^2$ kan faktoriseras till $P = (RI) \cdot I$ och identifiera vilken storhet
+    $RI$ representerar.
+  \item Sätt in $I = \dfrac{U}{R}$ i $P = RI^2$ och visa att uttrycket kan förenklas till
+    $P = \dfrac{U^2}{R}$.
+  \item Ett motstånd $R = 6\,\Omega$ matas med $U = 12\,\text{V}$. Beräkna effekten med alla tre
+    formerna $P = UI$, $P = RI^2$ och $P = \dfrac{U^2}{R}$ och kontrollera att de ger samma svar.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Termer, faktorer och koefficienter}
+Betrakta uttrycket $7R^2 - 4R + 9$.
+\begin{parts}
+  \item Hur många termer består uttrycket av?
+  \item Ange koefficienten till $R^2$ respektive till $R$.
+  \item Ange konstanttermen.
+  \item Vilka faktorer ingår i termen $7R^2$?
+  \item Beräkna uttryckets värde för $R = 2$.
+\end{parts}
+
+\uppgift{3.2}{Förenkling med parenteser}
+Förenkla.
+\begin{delar}(2)
+  \task $2(3I + 4) - 3(I - 2)$
+  \task $-(U - 5) + 2(U + 1)$
+  \task $5R_1 - \left[2R_1 - (R_1 + 3)\right]$
+  \task $3(2P - 1) - 2(3P - 4)$
+\end{delar}
+
+\uppgift{3.3}{Multiplicera ut}
+Multiplicera ut och förenkla.
+\begin{delar}(3)
+  \task $(R + 3)(R + 5)$
+  \task $(2I - 1)(I + 4)$
+  \task $(U + 2)(U - 2)$
+  \task $(3R - 2)(3R - 2)$
+  \task $2I(I + 3) - I(2I - 1)$
+\end{delar}
+
+\uppgift{3.4}{Kvadreringsreglerna}
+Utveckla.
+\begin{delar}(4)
+  \task $(I + 4)^2$
+  \task $(R - 6)^2$
+  \task $(2U + 3)^2$
+  \task $(5 - I)^2$
+  \task* Visa med $a = 3$ och $b = 4$ att $(a + b)^2 \neq a^2 + b^2$.
+\end{delar}
+
+\uppgift{3.5}{Konjugatregeln som huvudräkningstrick}
+Använd $(a + b)(a - b) = a^2 - b^2$ och räkna \textbf{utan} miniräknare.
+\begin{delar}(4)
+  \task $102 \times 98$
+  \task $45 \times 35$
+  \task $2{,}1 \times 1{,}9$
+  \task $51^2 - 49^2$
+  \task* Spänningen över ett motstånd $R = 5\,\Omega$ ändras från $U_1 = 25\,\text{V}$ till
+    $U_2 = 15\,\text{V}$. Beräkna $P_1 - P_2 = \dfrac{U_1^2 - U_2^2}{R}$ utan att kvadrera något
+    tal.
+\end{delar}
+
+\uppgift{3.6}{Faktorisera}
+Faktorisera så långt som möjligt.
+\begin{delar}(3)
+  \task $8R + 12$
+  \task $RI^2 + RI$
+  \task $U^2 - 49$
+  \task $I^2 + 12I + 36$
+  \task $9R^2 - 16$
+  \task $2U^2 - 8$
+\end{delar}
+
+\uppgift{3.7}{Förkorta algebraiska bråk}
+Faktorisera och förkorta. Antag att nämnaren inte är noll.
+\begin{delar}(3)
+  \task $\dfrac{6RI}{3R}$
+  \task $\dfrac{R^2 - 9}{R + 3}$
+  \task $\dfrac{2U^2 + 4U}{2U}$
+  \task $\dfrac{I^2 - 10I + 25}{I - 5}$
+  \task $\dfrac{4R^2 - 1}{2R - 1}$
+\end{delar}
+
+\needspace{9\baselineskip}
+\uppgift{3.8}{Insättning i effektformlerna}
+Ett motstånd $R = 8\,\Omega$ genomflyts av strömmen $I = 1{,}5\,\text{A}$.
+\begin{parts}
+  \item Beräkna spänningen $U = RI$.
+  \item Beräkna effekten med $P = RI^2$.
+  \item Beräkna effekten med $P = \dfrac{U^2}{R}$ och kontrollera att svaret stämmer.
+  \item Strömmen fördubblas. Med vilken faktor ändras effekten? Motivera algebraiskt.
+\end{parts}
+
+\needspace{13\baselineskip}
+\uppgift{3.9}{Spänningsdelarens algebra}
+För två seriekopplade motstånd gäller
+\[
+  U_1 = U_{\text{in}} \times \frac{R_1}{R_1 + R_2}
+  \qquad \text{och} \qquad
+  U_2 = U_{\text{in}} \times \frac{R_2}{R_1 + R_2}.
+\]
+\begin{parts}
+  \item Visa algebraiskt att $U_1 + U_2 = U_{\text{in}}$.
+  \item Visa att $\dfrac{U_1}{U_2} = \dfrac{R_1}{R_2}$.
+  \item Vad blir $U_1$ om $R_1 = R_2$?
+  \item Beräkna $U_1$ och $U_2$ då $U_{\text{in}} = 15\,\text{V}$, $R_1 = 1\,\text{k}\Omega$ och
+    $R_2 = 4\,\text{k}\Omega$.
+\end{parts}
+
+\uppgift{3.10}{Hitta felet}
+Varje likhet nedan innehåller ett vanligt algebrafel. Förklara vad som är fel och skriv det
+korrekta högerledet.
+\begin{delar}(3)
+  \task $(R + 2)^2 = R^2 + 4$
+  \task $3(I - 2) = 3I - 2$
+  \task $\dfrac{R + 4}{4} = R$
+  \task $-(U - 3) = -U - 3$
+  \task $2R \times 3R = 6R$
+  \task $(2I)^2 = 2I^2$
+\end{delar}

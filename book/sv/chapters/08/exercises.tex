@@ -1,0 +1,244 @@
+% Section 8.7, from lectures/L08/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c8:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L08}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Funktionsbegrepp, definitions- och värdemängd}
+
+\uppgift{1.1}{Är sambandet en funktion?}
+Avgör om följande samband definierar $y$ som en funktion av $x$. Motivera ditt svar.
+\begin{delar}(2)
+  \task $y = 3x - 2$
+  \task $x^2 + y^2 = 16$
+  \task $\{(1,2),\ (2,4),\ (3,4),\ (4,8)\}$
+  \task $\{(1,2),\ (1,5),\ (2,3)\}$
+\end{delar}
+
+\uppgift{1.2}{Definitions- och värdemängd}
+Bestäm definitionsmängden $D_f$ och värdemängden $V_f$ för
+\begin{delar}(3)
+  \task $f(x) = \dfrac{1}{x - 3}$
+  \task $g(x) = \sqrt{x + 4}$
+  \task $h(x) = -x^2 + 2$
+\end{delar}
+
+\uppgift{1.3}{Linjär resistans hos en temperaturberoende resistor}
+Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linjärt på temperaturen
+$T$ (i $^{\circ}$C) enligt $R(T) = kT + m$. Vid $T = 0\,^{\circ}\text{C}$ är $R = 100\,\Omega$, och
+vid $T = 50\,^{\circ}\text{C}$ är $R = 175\,\Omega$.
+\begin{parts}
+  \item Bestäm $k$ och $m$.
+  \item Beräkna resistansen vid $T = 25\,^{\circ}\text{C}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Funktionstyper och tillämpningar}
+
+\uppgift{2.1}{Exponentiell tillväxt av solcellsanläggningar}
+Antalet installerade solcellsanläggningar i en kommun ökar med $8\,\%$ per år. Vid år $x = 0$
+fanns $400$ anläggningar, vilket ger
+\[
+  f(x) = 400 \cdot 1{,}08^x.
+\]
+\begin{parts}
+  \item Beräkna $f(10)$ och tolka svaret.
+  \item Efter hur många år har antalet anläggningar fördubblats?
+\end{parts}
+
+\uppgift{2.2}{Effekt som potensfunktion av strömmen}
+Effekten $P$ (i W) som utvecklas i ett motstånd $R = 50\,\Omega$ beror på strömmen $I$ (i A)
+enligt
+\[
+  P(I) = R \cdot I^2.
+\]
+\begin{parts}
+  \item Vilken typ av funktion är $P(I)$?
+  \item Beräkna $P(0{,}5)$ och $P(2)$.
+  \item En säkring i kretsen begränsar strömmen till $0 \leq I \leq 3\,\text{A}$. Bestäm
+    definitions- och värdemängd för $P(I)$ inom detta intervall.
+\end{parts}
+
+\uppgift{2.3}{Tolkning av mätvärden}
+En spänning $U(t)$ mäts vid flera tidpunkter under en urladdning:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
+  $t$ (s) & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $U(t)$ (V) & $12$ & $9$ & $6$ & $3$ & $0$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Visa utifrån tabellen att sambandet mellan $t$ och $U(t)$ är linjärt.
+  \item Bestäm en formel $U(t) = kt + m$ utifrån tabellen.
+  \item Om mönstret i tabellen fortsatte, vid vilken tidpunkt $t$ skulle $U(t) = -3\,\text{V}$?
+    Är detta ett rimligt värde för en urladdningsspänning? Motivera varför den linjära modellen
+    inte kan gälla för alla $t \geq 0$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Beräkna funktionsvärden}
+Funktionerna $f(x) = 3x - 5$, $g(x) = x^2 + 2$ och $h(x) = \dfrac{6}{x}$ är givna. Beräkna
+\begin{delar}(6)
+  \task $f(4)$
+  \task $f(-2)$
+  \task $g(0)$
+  \task $g(-3)$
+  \task $h(3)$
+  \task $h(-2)$
+\end{delar}
+
+\uppgift{3.2}{Lös ekvationen $f(x) = c$}
+Samma funktioner som i \uppref{3.1}.
+\begin{parts}
+  \item Bestäm $x$ så att $f(x) = 10$.
+  \item Bestäm nollstället till $f$.
+  \item Bestäm $x$ så att $g(x) = 11$.
+  \item Har $g$ något nollställe? Motivera.
+  \item Bestäm $x$ så att $h(x) = 0{,}5$.
+\end{parts}
+
+\uppgift{3.3}{Definitionsmängd}
+Bestäm definitionsmängden $D_f$.
+\begin{delar}(3)
+  \task $f(x) = 5x + 1$
+  \task $f(x) = \dfrac{1}{x + 2}$
+  \task $f(x) = \sqrt{x - 3}$
+  \task $f(x) = \dfrac{x}{x^2 - 9}$
+  \task $f(x) = \sqrt{9 - x}$
+\end{delar}
+
+\uppgift{3.4}{Värdemängd}
+Bestäm värdemängden $V_f$.
+\begin{delar}(2)
+  \task $f(x) = x^2 + 1$, $D_f = \mathbb{R}$
+  \task $f(x) = -x^2$, $D_f = \mathbb{R}$
+  \task $f(x) = \abs{x}$, $D_f = \mathbb{R}$
+  \task $f(x) = 2x - 3$, $D_f = [0, 5]$
+  \task $f(x) = \sqrt{x}$, $D_f = [0, \infty)$
+\end{delar}
+
+\uppgift{3.5}{Linjär funktion ur två punkter}
+Bestäm $f(x) = kx + m$ för den linje som går genom punkterna
+\begin{delar}(2)
+  \task $(0, 4)$ och $(2, 10)$
+  \task $(1, 5)$ och $(4, 14)$
+  \task $(-2, 7)$ och $(2, -1)$
+  \task $(0, -3)$ och $(5, -3)$
+\end{delar}
+
+\uppgift{3.6}{Tolkning av $k$ och $m$}
+\begin{parts}
+  \item Vad betyder $k$ grafiskt i $f(x) = kx + m$?
+  \item Vad betyder $m$ grafiskt?
+  \item Är $f(x) = -4x + 12$ växande eller avtagande? Motivera.
+  \item Bestäm nollstället till $f(x) = -4x + 12$.
+  \item Klämspänningen för ett belastat batteri är $U(I) = 12 - 2I$. Vad representerar $k = -2$
+    respektive $m = 12$ fysikaliskt?
+\end{parts}
+
+\uppgift{3.7}{Potensfunktioner}
+Funktionerna $f(x) = x^2$ och $g(x) = x^3$ är givna.
+\begin{parts}
+  \item Beräkna $f(-3)$ och $g(-3)$.
+  \item Varför gäller $f(-x) = f(x)$ men $g(-x) = -g(x)$?
+  \item Bestäm $V_f$ och $V_g$ då $D = \mathbb{R}$.
+  \item Effekten i ett motstånd ges av $P(I) = 10I^2$. Hur många gånger större blir effekten om
+    strömmen tredubblas?
+\end{parts}
+
+\uppgift{3.8}{Exponentialfunktioner}
+\begin{parts}
+  \item $f(x) = 5 \cdot 2^x$. Beräkna $f(0)$, $f(1)$ och $f(3)$.
+  \item $g(x) = 100 \cdot 0{,}5^x$. Beräkna $g(0)$, $g(1)$ och $g(3)$.
+  \item Vilken av funktionerna är växande respektive avtagande? Vad är det som avgör?
+  \item Vad är $C$ i respektive funktion, och vilken betydelse har det?
+\end{parts}
+
+\uppgift{3.9}{Förändringsfaktor}
+\begin{parts}
+  \item En storhet ökar med $5\,\%$ per år. Vilken är förändringsfaktorn $a$?
+  \item En storhet minskar med $20\,\%$ per år. Vilken är $a$?
+  \item En signal dämpas till $70\,\%$ av sitt värde för varje steg den passerar.
+    Startamplituden är $2\,\text{V}$. Skriv en funktion för amplituden efter $n$ steg.
+  \item Beräkna amplituden efter $3$ steg.
+  \item Efter hur många steg understiger amplituden $1\,\text{V}$?
+\end{parts}
+
+\uppgift{3.10}{Linjärt eller exponentiellt?}
+Två storheter har mätts upp:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
+  $x$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $f(x)$ & $3$ & $5$ & $7$ & $9$ & $11$ \\
+  $g(x)$ & $3$ & $6$ & $12$ & $24$ & $48$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Vilken av funktionerna är linjär? Motivera utifrån tabellen.
+  \item Vilken är exponentiell? Motivera.
+  \item Bestäm en formel för $f(x)$.
+  \item Bestäm en formel för $g(x)$.
+  \item Beräkna $f(10)$ och $g(10)$.
+\end{parts}
+
+\uppgift{3.11}{Nollställen}
+Bestäm nollställena.
+\begin{delar}(3)
+  \task $f(x) = 4x - 12$
+  \task $f(x) = x^2 - 25$
+  \task $f(x) = x^2 - 5x + 6$
+  \task $f(x) = x^2 + 4$
+  \task $f(x) = x(x - 4)$
+\end{delar}
+
+\uppgift{3.12}{Spänningsdelare som funktion}
+En spänningsdelare består av $R_1 = 1\,\text{k}\Omega$ och en potentiometer med resistansen $x$
+(i k$\Omega$). Utspänningen ges av
+\[
+  U(x) = 12 \cdot \frac{x}{1 + x}\,\text{V}, \qquad 0 \leq x \leq 9.
+\]
+\begin{parts}
+  \item Beräkna $U(0)$, $U(1)$ och $U(9)$.
+  \item Bestäm värdemängden $V_U$ för det angivna intervallet.
+  \item Vid vilket $x$ blir $U = 8\,\text{V}$?
+  \item Kan $U$ någonsin nå $12\,\text{V}$? Motivera.
+\end{parts}
+
+\uppgift{3.13}{Urladdning av en kondensator}
+Spänningen över en urladdande kondensator ges av
+\[
+  u(t) = 10 \cdot e^{-t/2}\,\text{V}, \qquad t \geq 0,
+\]
+där $t$ anges i sekunder.
+\begin{parts}
+  \item Beräkna $u(0)$.
+  \item Beräkna $u(2)$ och $u(4)$.
+  \item Är funktionen växande eller avtagande?
+  \item Bestäm värdemängden $V_u$ för $t \geq 0$.
+  \item Blir $u(t)$ någonsin exakt noll? Motivera.
+\end{parts}
+
+% Kept whole on one page: its last part was left alone at the top of the next.
+\needspace{10\baselineskip}
+\uppgift{3.14}{Sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item $f(x) = x^2$ har värdemängden $\mathbb{R}$.
+  \item $f(x) = \dfrac{1}{x}$ är definierad för alla $x$.
+  \item Att $f(2) = 5$ betyder att $f$ har ett nollställe vid $x = 2$.
+  \item Sambandet $x^2 + y^2 = 25$ definierar $y$ som en funktion av $x$.
+  \item Funktionen $f(x) = 3 \cdot 2^x$ har startvärdet $2$.
+\end{parts}

@@ -1,0 +1,246 @@
+% Section 13.8, from lectures/L13/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c13:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen; de flesta av dem går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L13}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Analys av en kubisk funktion}
+Betrakta funktionen
+\[
+  f(x) = -0{,}5x^3 + 1{,}5x^2 + 4{,}5x - 3.
+\]
+\begin{parts}
+  \item Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.
+  \item Bestäm var funktionen är stationär, det vill säga lös ekvationen $f'(x) = 0$.
+  \item Avgör med hjälp av andra derivatan om respektive stationär punkt är ett maximum eller
+    ett minimum.
+  \item Beräkna funktionens maximi- och minimivärde, det vill säga funktionsvärdet i de
+    stationära punkterna.
+  \item Rita grafen till $f(x)$ i GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, och
+    kontrollera att dina svar stämmer.
+\end{parts}
+
+\uppgift{1.2}{Analys av spänning över en kondensator}
+En kondensator i en RC-krets laddas och urladdas upprepade gånger. Spänningen över kondensatorn
+kan beskrivas med funktionen
+\[
+  u(t) = -0{,}2t^3 + 1{,}2t^2 - 1{,}4625t + 3,
+\]
+där $u(t)$ är spänningen över kondensatorn i V och $t$ tiden i sekunder, $0 \leq t \leq 6$.
+\begin{parts}
+  \item Derivera funktionen och bestäm uttrycket för spänningens förändringshastighet $u'(t)$.
+  \item Bestäm den tidpunkt (eller de tidpunkter) då spänningen är stationär, det vill säga när
+    $u'(t) = 0$.
+  \item Avgör med hjälp av andra derivatan om punkterna är maximi- eller minimipunkter.
+  \item Beräkna spänningens maximi- och minimivärde, det vill säga spänningen i de stationära
+    punkterna.
+  \item Rita grafen till $u(t)$ i GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, och
+    kontrollera att dina svar stämmer.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Ström genom en spole}
+Strömmen genom en spole varierar över tiden enligt funktionen
+\[
+  i(t) = 4\sin(50t),
+\]
+där $i(t)$ är strömmen genom spolen i A och $t$ tiden i sekunder.
+\begin{parts}
+  \item Derivera funktionen och bestäm uttrycket för $i'(t)$.
+  \item Bestäm den tidpunkt (eller de tidpunkter) då strömmen är stationär, det vill säga när
+    $i'(t) = 0$.
+  \item Avgör med hjälp av andra derivatan om punkterna är maximi- eller minimipunkter.
+  \item Beräkna strömmens största och minsta värde. Fundera på om detta stämmer med dina
+    förväntningar.
+\end{parts}
+
+\uppgift{2.2}{Urladdning av kondensator}
+Spänningen över en kondensator som laddas ur ges av funktionen
+\[
+  u(t) = 12e^{-0{,}4t},
+\]
+där $u(t)$ är spänningen över kondensatorn i V och $t$ tiden i sekunder.
+\begin{parts}
+  \item Derivera funktionen och bestäm uttrycket för $u'(t)$.
+  \item Beräkna spänningens förändringshastighet vid $t = 2\,\text{s}$.
+  \item Ange om spänningsförändringen ökar eller minskar i denna punkt, det vill säga bestäm
+    $u''(2)$.
+\end{parts}
+
+\uppgift{2.3}{Förstärkning i dB}
+Den logaritmiska förstärkningen i ett förstärkarsystem beskrivs av funktionen
+\[
+  G(x) = 10\log_{10}(2x + 1),
+\]
+där $G(x)$ är förstärkningen i dB och $x$ insignalsnivån (en dimensionslös faktor).
+\begin{parts}
+  \item Beräkna för vilket värde på $x$ som förstärkningen $G(x) = 2\,\text{dB}$.
+  \item Beräkna förstärkningens förändringshastighet $G'(x)$ i denna punkt.
+\end{parts}
+
+\begin{aside}
+\note[Notering] Förändringshastigheten $G'(x)$ anger hur snabbt förstärkningen ändras när
+insignalen $x$ ändras.
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Derivera trigonometriska funktioner}
+Derivera.
+\begin{delar}(3)
+  \task $f(x) = \sin(3x)$
+  \task $f(x) = \cos(5x)$
+  \task $f(x) = 4\sin(x)$
+  \task $f(x) = -2\cos(2x)$
+  \task $f(x) = \sin(x) + \cos(x)$
+\end{delar}
+
+\uppgift{3.2}{Derivera exponentialfunktioner}
+Derivera.
+\begin{delar}(3)
+  \task $f(x) = e^{5x}$
+  \task $f(x) = 3e^{-2x}$
+  \task $f(x) = e^x + x^2$
+  \task $f(x) = 2^x$
+  \task $f(x) = 10e^{-x/4}$
+\end{delar}
+
+\uppgift{3.3}{Derivera logaritmfunktioner}
+Derivera.
+\begin{delar}(3)
+  \task $f(x) = \ln x$
+  \task $f(x) = \ln(7x)$
+  \task $f(x) = 3\ln x$
+  \task $f(x) = \log_{10} x$
+  \task $f(x) = \ln x + e^x$
+\end{delar}
+
+\uppgift{3.4}{Blandad derivering}
+Derivera.
+\begin{delar}(2)
+  \task $f(x) = 2e^{3x} - \sin(4x)$
+  \task $f(x) = x^2 + \ln(2x)$
+  \task $f(x) = 5\cos(x) - 3e^{-x}$
+  \task $f(x) = 4\sin(2x) + 4\cos(2x)$
+\end{delar}
+
+\uppgift{3.5}{Derivatan i en punkt}
+Beräkna derivatan i den angivna punkten.
+\begin{delar}(3)
+  \task $f(x) = e^{2x}$ vid $x = 0$
+  \task $f(x) = \sin x$ vid $x = \dfrac{\pi}{2}$
+  \task $f(x) = \ln x$ vid $x = 2$
+  \task $f(x) = \cos(3x)$ vid $x = 0$
+  \task $f(x) = 3e^{-x}$ vid $x = 1$
+\end{delar}
+
+\uppgift{3.6}{Ström genom en kondensator}
+Spänningen över en kondensator med $C = 47\,\mu\text{F}$ ges av $u(t) = 10\sin(100\pi t)$ volt.
+Strömmen ges av $i_C(t) = C\dfrac{du}{dt}$.
+\begin{parts}
+  \item Bestäm $u'(t)$.
+  \item Bestäm ett uttryck för $i_C(t)$.
+  \item Hur stor är strömmens amplitud?
+  \item Vid vilken tidpunkt är strömmen störst för första gången?
+\end{parts}
+
+\uppgift{3.7}{Spänning över en spole}
+Strömmen genom en spole med $L = 25\,\text{mH}$ ges av $i(t) = 2\sin(200t)$ ampere. Spänningen
+ges av $u_L(t) = L\dfrac{di}{dt}$.
+\begin{parts}
+  \item Bestäm $i'(t)$.
+  \item Bestäm ett uttryck för $u_L(t)$.
+  \item Hur stor är spänningens amplitud?
+  \item Vilken fasskillnad har spänningen jämfört med strömmen?
+\end{parts}
+
+\uppgift{3.8}{Urladdning av en kondensator}
+Spänningen ges av $u(t) = 20e^{-t/0{,}5}$ volt.
+\begin{parts}
+  \item Bestäm $u'(t)$.
+  \item Beräkna $u'(0)$.
+  \item Beräkna $u'(0{,}5)$.
+  \item Vad säger tecknet på derivatan?
+  \item Visa att $u'(t) = -\dfrac{u(t)}{\tau}$ med $\tau = 0{,}5\,\text{s}$.
+\end{parts}
+
+\uppgift{3.9}{Stationär punkt för en exponentialfunktion}
+Funktionen $f(x) = xe^{-2x}$ är given.
+\begin{parts}
+  \item Bestäm $f'(x)$ med produktregeln och bryt ut $e^{-2x}$.
+  \item Lös $f'(x) = 0$.
+  \item Avgör med $f''(x)$ om punkten är ett maximum eller ett minimum.
+  \item Beräkna funktionens extremvärde.
+\end{parts}
+
+\uppgift{3.10}{Maximal effekt i tiden}
+Effekten i en komponent ges av $p(t) = 100te^{-t}$ watt för $t \geq 0$.
+\begin{parts}
+  \item Bestäm $p'(t)$.
+  \item Vid vilken tidpunkt är effekten stationär?
+  \item Avgör med $p''(t)$ om det är ett maximum eller ett minimum.
+  \item Beräkna den maximala effekten.
+\end{parts}
+
+\uppgift{3.11}{Derivatan av en dB-funktion}
+Förstärkningen ges av $G(x) = 20\log_{10}(x)$ dB.
+\begin{delar}(3)
+  \task Bestäm $G'(x)$.
+  \task Beräkna $G'(1)$.
+  \task Beräkna $G'(10)$.
+  \task* Tolka skillnaden mellan svaren i \textbf{b)} och \textbf{c)}.
+\end{delar}
+
+\needspace{10\baselineskip}
+\uppgift{3.12}{Tangent till en exponentialkurva}
+Funktionen $f(x) = e^{-x}$ är given. Betrakta punkten där $x_0 = 0$.
+\begin{parts}
+  \item Beräkna $f(0)$.
+  \item Beräkna $f'(0)$.
+  \item Bestäm tangentens ekvation.
+  \item Var skär tangenten $x$-axeln? Jämför med tidskonstanten $\tau$ i en urladdning.
+\end{parts}
+
+\uppgift{3.13}{Derivatan hos en exponentiell urladdning}
+Spänningen ges av $u(t) = U_0e^{-t/\tau}$.
+\begin{parts}
+  \item Visa att $u'(t) = -\dfrac{u(t)}{\tau}$.
+  \item Vad betyder detta samband fysikaliskt?
+  \item Beräkna $u'(0)$ och $u'(\tau)$ då $U_0 = 10\,\text{V}$ och $\tau = 2\,\text{s}$.
+  \item Hur stor andel av startspänningen återstår efter tiden $\tau$?
+\end{parts}
+
+\uppgift{3.14}{Sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item Derivatan av $\sin x$ är $-\cos x$.
+  \item Derivatan av $e^{3x}$ är $e^{3x}$.
+  \item Derivatan av $\ln(5x)$ är $\dfrac{1}{5x}$.
+  \item Derivatan av $\cos(2x)$ är $-2\sin(2x)$.
+  \item $e^x$ är sin egen derivata.
+  \item Derivatan av en konstant gånger en funktion är konstanten gånger funktionens derivata.
+\end{parts}
+
+\uppgift{3.15}{Hitta felet}
+Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta svaret.
+\begin{delar}(2)
+  \task $\dfrac{d}{dx}\sin(3x) = \cos(3x)$
+  \task $\dfrac{d}{dx}e^{-2x} = -2e^{-2x-1}$
+  \task $\dfrac{d}{dx}\ln(3x) = \dfrac{1}{3x}$
+  \task $\dfrac{d}{dx}4\cos(x) = 4\sin(x)$
+  \task $\dfrac{d}{dx}2^x = x \cdot 2^{x-1}$
+\end{delar}

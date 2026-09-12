@@ -1,0 +1,204 @@
+% Section 15.8, translated from sv/chapters/15/exercises.tex.
+
+\section{Exercises}
+\label{c15:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L15}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Recovering a function of time from its derivative}
+A sensor voltage $u(t)$ in a measuring circuit is not known directly, but its derivative has been
+measured as
+\[
+  u'(t) = (6t - 4)\,\text{V/s}.
+\]
+The initial voltage is also known to be $u(0) = 2\,\text{V}$.
+\begin{parts}
+  \item Find an expression for $u(t)$.
+  \item Find the voltage after $3$ seconds.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Rectangular $\rightarrow$ polar form}
+Convert the voltage $U = 5 - j2\,\text{V}$ to polar form.
+
+\uppgift{2.2}{Polar $\rightarrow$ rectangular form}
+Convert the current $I = 5\angle\frac{\pi}{6}\,\text{mA}$ to rectangular form.
+
+\uppgift{2.3}{Calculating an impedance}
+A circuit is supplied with the voltage from \uppref{2.1}, and the current from \uppref{2.2} flows
+through the circuit. Calculate the circuit's impedance $Z$ with “Ohm's law”:
+\[
+  Z = \frac{U}{I},
+\]
+where
+\begin{itemize}
+  \item $Z$ is the circuit's impedance in $\Omega$,
+  \item $U$ is the supply voltage in V,
+  \item $I$ is the current through the circuit in mA.
+\end{itemize}
+Give the answer in both polar and rectangular form.
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{The imaginary unit}
+Calculate.
+\begin{delar}(5)
+  \task $j^2$
+  \task $j^3$
+  \task $j^4$
+  \task $j^5$
+  \task $\dfrac{1}{j}$
+  \task* Solve the equation $x^2 = -25$.
+\end{delar}
+
+\uppgift{3.2}{Real and imaginary parts}
+The complex numbers $z_1 = 4 - j3$, $z_2 = -2 + j5$, $z_3 = j6$ and $z_4 = -7$ are given.
+\begin{parts}
+  \item Give $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ for each of the numbers.
+  \item Which number is purely imaginary?
+  \item Which number is purely real?
+\end{parts}
+
+\uppgift{3.3}{Addition and subtraction}
+Calculate with $z_1 = 3 + j2$ and $z_2 = -1 + j5$:
+\begin{delar}(4)
+  \task $z_1 + z_2$
+  \task $z_1 - z_2$
+  \task $2z_1 + 3z_2$
+  \task $z_2 - 2z_1$
+\end{delar}
+
+\uppgift{3.4}{Multiplication}
+Calculate and write the answer in rectangular form.
+\begin{delar}(4)
+  \task $(2 + j3)(1 + j4)$
+  \task $(3 - j2)(3 + j2)$
+  \task $j(5 - j2)$
+  \task $(1 + j)^2$
+\end{delar}
+
+\uppgift{3.5}{Conjugates}
+\begin{parts}
+  \item Give the conjugate of $5 + j2$.
+  \item Give the conjugate of $-3 - j7$.
+  \item Calculate $z\bar{z}$ for $z = 4 + j3$.
+  \item Show in general that $z\bar{z} = \abs{z}^2$.
+\end{parts}
+
+\uppgift{3.6}{Division}
+Calculate and write the answer in rectangular form.
+\begin{delar}(3)
+  \task $\dfrac{4 + j2}{1 - j}$
+  \task $\dfrac{6 + j8}{j}$
+  \task $\dfrac{10}{3 + j4}$
+  \task* Why do you multiply by the conjugate of the denominator when dividing?
+\end{delar}
+
+\uppgift{3.7}{Magnitude}
+Calculate.
+\begin{delar}(5)
+  \task $\abs{3 + j4}$
+  \task $\abs{-5 + j12}$
+  \task $\abs{j7}$
+  \task $\abs{-8}$
+  \task $\abs{1 - j}$
+\end{delar}
+
+\uppgift{3.8}{Phase angle with quadrant correction}
+Find the phase angle. State which quadrant the number lies in.
+\begin{delar}(5)
+  \task $4 + j4$
+  \task $-4 + j4$
+  \task $-4 - j4$
+  \task $4 - j4$
+  \task $3 + j4$
+\end{delar}
+
+\uppgift{3.9}{Rectangular to polar form}
+Write in polar form.
+\begin{delar}(4)
+  \task $z = 6 + j8$
+  \task $z = -3 + j4$
+  \task $z = -1 - j1$
+  \task $z = -j5$
+\end{delar}
+
+\uppgift{3.10}{Polar to rectangular form}
+Write in rectangular form.
+\begin{delar}(3)
+  \task $z = 10\angle 30^{\circ}$
+  \task $z = 4\angle 90^{\circ}$
+  \task $z = 6\angle 180^{\circ}$
+  \task $z = 2\angle{-60^{\circ}}$
+  \task $z = 8\angle\dfrac{\pi}{4}$
+\end{delar}
+
+\uppgift{3.11}{A voltage as a complex number}
+A voltage is given by $U = 12 + j5\,\text{V}$.
+\begin{parts}
+  \item Calculate $\abs{U}$.
+  \item Calculate the phase angle $\delta$.
+  \item Write $U$ in polar form.
+  \item What does the phase angle represent physically?
+\end{parts}
+
+\uppgift{3.12}{Impedance in rectangular form}
+A series circuit has $Z_R = 30\,\Omega$ and $Z_L = j40\,\Omega$.
+\begin{parts}
+  \item Find the total impedance $Z$ in rectangular form.
+  \item Calculate $\abs{Z}$.
+  \item Calculate the phase angle of the impedance.
+  \item Is the circuit inductive or capacitive?
+\end{parts}
+
+\uppgift{3.13}{Ohm's law with complex numbers}
+A circuit with the impedance $Z = 3 + j4\,\Omega$ is supplied with the voltage $U = 10\,\text{V}$
+(purely real).
+\begin{parts}
+  \item Calculate $\abs{U}$ and $\abs{Z}$.
+  \item Calculate the current $I = \dfrac{U}{Z}$ in rectangular form.
+  \item Calculate $\abs{I}$ and check it against $\dfrac{\abs{U}}{\abs{Z}}$.
+  \item Calculate the phase angle of the current and interpret the result.
+\end{parts}
+
+\uppgift{3.14}{Quadratic equations with complex roots}
+Solve the equations.
+\begin{delar}(3)
+  \task $x^2 + 9 = 0$
+  \task $x^2 + 4x + 13 = 0$
+  \task $x^2 - 2x + 5 = 0$
+  \task* What is always true of the two roots when the discriminant is negative?
+\end{delar}
+
+\uppgift{3.15}{Series and parallel impedance}
+Two impedances $Z_1 = 4 + j3\,\Omega$ and $Z_2 = 4 - j3\,\Omega$ are given.
+\begin{parts}
+  \item Calculate the series connection $Z_1 + Z_2$ and comment on the result.
+  \item Calculate $\abs{Z_1}$ and $\abs{Z_2}$.
+  \item Calculate the product $Z_1Z_2$.
+  \item Calculate the parallel connection $\dfrac{Z_1Z_2}{Z_1 + Z_2}$.
+\end{parts}
+
+\uppgift{3.16}{True or false}
+Decide whether each statement is true or false, and justify your answer briefly.
+\begin{parts}
+  \item $j^2 = 1$
+  \item The magnitude $\abs{z}$ can be negative.
+  \item A purely imaginary number has the phase angle $90^{\circ}$ or $-90^{\circ}$.
+  \item The product $(a + jb)(a - jb)$ is always real.
+  \item The calculator's $\arctan$ always gives the right phase angle directly.
+  \item Adding complex numbers is easiest in polar form.
+\end{parts}

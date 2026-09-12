@@ -1,0 +1,92 @@
+% Sections 16.1 to 16.5, translated from sv/chapters/16/theory.tex.
+
+\section{Euler's formula}
+\label{c16:sec:euler}
+\textbf{Euler's formula} connects complex exponents and trigonometry:
+\[
+  e^{j\delta} = \cos\delta + j\sin\delta
+\]
+This means that every complex number can be written in \textbf{Euler form}:
+\[
+  z = \abs{z} \cdot e^{j\delta}
+\]
+Some important special cases are
+\begin{gather*}
+  e^{j\pi} = -1 \quad \text{(Euler's identity)}, \\
+  e^{j\pi/2} = j, \qquad e^{j0} = 1, \qquad e^{-j\delta} = \cos\delta - j\sin\delta.
+\end{gather*}
+
+\section{Three forms of complex numbers}
+\label{c16:sec:former}
+A complex number can be written in three ways, and each form has its strengths.
+
+\begin{booktable}{@{}p{7em}p{6em}L@{}}
+  \thead{Form} & \thead{Notation} & \thead{Comment} \\
+  \midrule
+  Rectangular & $x + jy$ & Best for addition and subtraction \\
+  Polar & $\abs{z}\,\angle\,\delta$ & Clear geometric interpretation \\
+  Euler form & $\abs{z}e^{j\delta}$ & Best for multiplication and division \\
+\end{booktable}
+
+\noindent\textbf{Multiplication} in polar form:
+\[
+  z_1 \cdot z_2 = \abs{z_1}\abs{z_2}\,\angle\,(\delta_1 + \delta_2)
+\]
+\textbf{Division} in polar form:
+\[
+  \frac{z_1}{z_2} = \frac{\abs{z_1}}{\abs{z_2}}\,\angle\,(\delta_1 - \delta_2)
+\]
+
+\section{Phasors}
+\label{c16:sec:fasor}
+A \textbf{phasor} is a complex number that represents a sinusoidal signal. A voltage
+$u(t) = \abs{U}\sin(\omega t + \delta)$ is represented by the phasor
+\[
+  U = \abs{U}\,\angle\,\delta = \abs{U}e^{j\delta}.
+\]
+Phasors simplify calculations with sine waves in electric circuits: adding sine waves reduces to
+adding complex numbers.
+
+\section{Converting between Euler form and the time domain}
+\label{c16:sec:omskrivning}
+From phasor to time domain:
+\[
+  U = \abs{U}e^{j\delta} \quad \Rightarrow \quad u(t) = \abs{U}\sin(\omega t + \delta)
+\]
+From time domain to phasor:
+\[
+  u(t) = \abs{U}\sin(\omega t + \delta) \quad \Rightarrow \quad U = \abs{U}\,\angle\,\delta
+\]
+
+\needspace{12\baselineskip}
+\section{Worked examples}
+\label{c16:sec:typexempel}
+
+\begin{exempel}[Vectors as complex numbers]
+The vectors $\mathbf{a} = (3, 4)$ and $\mathbf{b} = (-2, 4)$ are written as complex numbers and
+added:
+\begin{gather*}
+  a = 3 + j4, \qquad b = -2 + j4, \\
+  a + b = (3 - 2) + j(4 + 4) = 1 + j8, \\
+  \abs{a + b} = \sqrt{1 + 64} = \sqrt{65} \approx 8.06.
+\end{gather*}
+\end{exempel}
+
+\begin{exempel}[Euler form to rectangular form]
+Write $u(t) = 3e^{j(100\pi t - \pi/4)}\,\text{V}$ in rectangular form at $t = 0$.
+\begin{align*}
+  u(0) &= 3e^{-j\pi/4}
+        = 3\left(\cos\left(-\frac{\pi}{4}\right) + j\sin\left(-\frac{\pi}{4}\right)\right) \\
+       &= 3\left(\frac{\sqrt{2}}{2} - j\frac{\sqrt{2}}{2}\right) \approx 2.12 - j2.12\,\text{V}
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[Phasor to time domain]
+The phasor $I = 5 - j4\,\text{mA}$ belongs to the angular frequency $\omega = 100\pi\,\text{rad/s}$.
+Write $i(t)$ in Euler form.
+\begin{gather*}
+  \abs{I} = \sqrt{25 + 16} = \sqrt{41} \approx 6.40\,\text{mA}, \\
+  \delta = \arctan\left(\frac{-4}{5}\right) \approx -38.7^{\circ} \approx -0.675\,\text{rad}, \\
+  i(t) = 6.40 \cdot e^{j(100\pi t - 0.675)}\,\text{mA}.
+\end{gather*}
+\end{exempel}

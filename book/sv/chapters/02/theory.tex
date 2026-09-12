@@ -1,0 +1,147 @@
+% Sections 2.1 to 2.7, from lectures/L02/appendix/a_theory.md.
+
+\section{Variabler och algebraiska uttryck}
+\label{c2:sec:variabler}
+En \textbf{variabel} är ett okänt tal som representeras av en bokstav, till exempel $x$, $R$, $U$
+eller $I$.
+
+Ett \textbf{algebraiskt uttryck} är en kombination av variabler, konstanter och räkneoperationer,
+till exempel
+\[
+  3x + 2y - 5, \qquad \frac{U}{R}, \qquad 2R_1 + R_2.
+\]
+
+\subsection{Termer, faktorer och koefficienter}
+\label{c2:sec:termer}
+I uttrycket $5x^2 - 3x + 7$ gäller följande:
+\begin{itemize}
+  \item $5x^2$, $-3x$ och $7$ är \textbf{termer}. Termerna skiljs åt av $+$ eller $-$.
+  \item $5$ är \textbf{koefficienten} till $x^2$ och $-3$ är koefficienten till $x$, medan $7$ är
+    en \textbf{konstant}.
+  \item I produkten $5 \cdot x^2$ är $5$ och $x^2$ \textbf{faktorer}.
+\end{itemize}
+
+\section{Förenkling: sammanfatta liknande termer}
+\label{c2:sec:forenkling}
+Termer med \emph{samma variabeldel} kallas \textbf{likartade} och kan summeras:
+\[
+  3x + 5x = 8x, \qquad 4R - R = 3R, \qquad 2x^2 + 3x - x^2 + x = x^2 + 4x
+\]
+Termer med \emph{olika} variabeldel kan \textbf{inte} förenklas vidare:
+\[
+  3x + 2y \quad \text{(kan inte förenklas ytterligare)}
+\]
+
+\section{Distributivlagen}
+\label{c2:sec:distributiv}
+Distributivlagen används för att multiplicera ut parenteser:
+\[
+  a(b + c) = ab + ac
+\]
+
+\begin{exempel}
+\begin{gather*}
+  3(2x + 4) = 6x + 12 \\
+  -2(R_1 + R_2 - 3) = -2R_1 - 2R_2 + 6
+\end{gather*}
+\end{exempel}
+
+Distributivlagen används omvänt vid faktorsättning, se \secref{c2:sec:faktorsattning}.
+
+\section{Kvadreringsregler}
+\label{c2:sec:kvadrering}
+Kvadreringsreglerna används mycket i elektroteknik, till exempel vid beräkning av effekt och
+impedans.
+
+\subsection{Kvadrat av summa}
+\label{c2:sec:kvsumma}
+\[
+  (a + b)^2 = a^2 + 2ab + b^2
+\]
+
+\begin{exempel}
+\[
+  (R + 2)^2 = R^2 + 4R + 4
+\]
+\end{exempel}
+
+\subsection{Kvadrat av differens}
+\label{c2:sec:kvdiff}
+\[
+  (a - b)^2 = a^2 - 2ab + b^2
+\]
+
+\begin{exempel}
+\[
+  (U - 3)^2 = U^2 - 6U + 9
+\]
+\end{exempel}
+
+\section{Konjugatregeln}
+\label{c2:sec:konjugat}
+\[
+  (a + b)(a - b) = a^2 - b^2
+\]
+
+\begin{exempel}
+\begin{gather*}
+  (x + 5)(x - 5) = x^2 - 25 \\
+  (2R + 1)(2R - 1) = 4R^2 - 1
+\end{gather*}
+\end{exempel}
+
+\section{Faktorsättning}
+\label{c2:sec:faktorsattning}
+Faktorsättning är att skriva ett uttryck som en \textbf{produkt av faktorer}, det omvända mot att
+multiplicera ut. Det finns flera metoder.
+
+\subsection{Gemensam faktor}
+\label{c2:sec:gemensam}
+Identifiera den faktor som är gemensam för alla termer och bryt ut den:
+\begin{gather*}
+  6x + 9 = 3(2x + 3) \\
+  4R_1^2 + 8R_1 = 4R_1(R_1 + 2) \\
+  RI^2 - RI = RI(I - 1)
+\end{gather*}
+
+\subsection{Konjugatregeln bakåt}
+\label{c2:sec:konjbakat}
+Ett uttryck på formen $a^2 - b^2$ kan faktoriseras:
+\[
+  a^2 - b^2 = (a + b)(a - b)
+\]
+
+\begin{exempel}
+\begin{gather*}
+  x^2 - 16 = (x + 4)(x - 4) \\
+  4U^2 - 9 = (2U + 3)(2U - 3)
+\end{gather*}
+\end{exempel}
+
+\subsection{Kvadreringsreglerna bakåt}
+\label{c2:sec:kvbakat}
+Uttryck på formen $a^2 + 2ab + b^2$ eller $a^2 - 2ab + b^2$ kan faktoriseras:
+\begin{gather*}
+  x^2 + 6x + 9 = (x + 3)^2 \\
+  R^2 - 4R + 4 = (R - 2)^2
+\end{gather*}
+
+\section{Tillämpning i elektroteknik}
+\label{c2:sec:tillampning}
+\textbf{Ohms lag} på algebraisk form är
+\[
+  U = R \cdot I.
+\]
+Lagen kan skrivas om beroende på vilken storhet som söks:
+\[
+  R = \frac{U}{I}, \qquad I = \frac{U}{R}
+\]
+\textbf{Effektformeln} ger upphov till algebraiska uttryck:
+\[
+  P = U \cdot I = R \cdot I^2 = \frac{U^2}{R}
+\]
+Vid seriekoppling av motstånden $R_1$ och $R_2$ gäller
+\[
+  R_{\text{TOT}} = R_1 + R_2,
+\]
+vilket är ett linjärt algebraiskt uttryck.

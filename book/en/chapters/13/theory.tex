@@ -1,0 +1,152 @@
+% Sections 13.1 to 13.6, translated from sv/chapters/13/theory.tex.
+
+\section{Derivatives of trigonometric functions}
+\label{c13:sec:trig}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Function} & \thead{Derivative} \\
+  \midrule
+  $\sin(x)$ & $\cos(x)$ \\
+  $\cos(x)$ & $-\sin(x)$ \\
+  $\sin(kx)$ & $k\cos(kx)$ \\
+  $\cos(kx)$ & $-k\sin(kx)$ \\
+\end{narrowtable}
+
+\begin{exempel}
+\[
+  f(x) = 3\sin(2x) \quad \Rightarrow \quad f'(x) = 3 \cdot 2\cos(2x) = 6\cos(2x)
+\]
+\end{exempel}
+
+\section{Derivatives of exponential functions}
+\label{c13:sec:exp}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Function} & \thead{Derivative} \\
+  \midrule
+  $e^x$ & $e^x$ \\
+  $e^{kx}$ & $ke^{kx}$ \\
+  $a^x$ & $a^x \ln a$ \\
+\end{narrowtable}
+
+\textbf{Derivation of $\frac{d}{dx}e^x = e^x$.} With the definition of the derivative from
+\secref{c12:sec:definition},
+\[
+  \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} = e^x \cdot 1
+  = e^x.
+\]
+
+\section{Derivatives of logarithmic functions}
+\label{c13:sec:log}
+
+{\renewcommand{\arraystretch}{2}%
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Function} & \thead{Derivative} \\
+  \midrule
+  $\ln(x)$ & $\dfrac{1}{x}$ \\
+  $\ln(kx)$ & $\dfrac{1}{x}$ \\
+  $\log_{10}(x)$ & $\dfrac{1}{x \ln 10}$ \\
+\end{narrowtable}}
+
+\begin{aside}
+\note[Note] $\ln(kx) = \ln k + \ln x$, whose derivative is $1/x$: the constant $\ln k$ disappears.
+\end{aside}
+
+\section{The product rule and the chain rule}
+\label{c13:sec:regler}
+The tables above give the derivative of a single function. When two functions are multiplied
+together, or when one function is substituted into another, two more rules are needed.
+
+\subsection{The product rule}
+\label{c13:sec:produktregeln}
+The derivative of a product $f(x) = g(x) \cdot h(x)$ is
+\[
+  f'(x) = g'(x) \cdot h(x) + g(x) \cdot h'(x).
+\]
+So differentiate one factor at a time while the other stays as it is, and add the two terms.
+
+\begin{exempel}
+$f(x) = x^2 \sin(x)$ with $g(x) = x^2$ and $h(x) = \sin(x)$ gives
+\[
+  f'(x) = 2x \cdot \sin(x) + x^2 \cdot \cos(x).
+\]
+\end{exempel}
+
+\subsection{The chain rule}
+\label{c13:sec:kedjeregeln}
+A composite function $f(x) = g(u(x))$ consists of an \textbf{outer function} $g$ and an
+\textbf{inner function} $u(x)$. Its derivative is the derivative of the outer function, evaluated
+at the inner function, times the derivative of the inner function:
+\[
+  f'(x) = g'(u(x)) \cdot u'(x).
+\]
+
+\begin{exempel}
+$f(x) = \ln(2x + 1)$ has the outer function $\ln u$ and the inner function $u = 2x + 1$, with
+$u' = 2$:
+\[
+  f'(x) = \frac{1}{2x + 1} \cdot 2 = \frac{2}{2x + 1}.
+\]
+\end{exempel}
+
+The table rows for $\sin(kx)$, $\cos(kx)$, $e^{kx}$ and $\ln(kx)$ above are special cases of the
+chain rule, with the inner function $u = kx$ and $u' = k$. For example,
+\[
+  \frac{d}{dx}\sin(kx) = \cos(kx) \cdot k = k\cos(kx), \qquad
+  \frac{d}{dx}\ln(kx) = \frac{1}{kx} \cdot k = \frac{1}{x}.
+\]
+
+\section{Table of derivatives}
+\label{c13:sec:tabell}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Function $f(x)$} & \thead{Derivative $f'(x)$} \\
+  \midrule
+  $x^n$ & $nx^{n-1}$ \\
+  $e^x$ & $e^x$ \\
+  $e^{kx}$ & $ke^{kx}$ \\
+  $\ln x$ & $1/x$ \\
+  $\sin x$ & $\cos x$ \\
+  $\cos x$ & $-\sin x$ \\
+  $\sin(kx)$ & $k\cos(kx)$ \\
+  $\cos(kx)$ & $-k\sin(kx)$ \\
+\end{narrowtable}
+
+\section{Worked examples}
+\label{c13:sec:typexempel}
+
+\begin{exempel}[Derivatives of common functions]
+Differentiate \textbf{a)} $f(x) = 5e^{3x}$, \textbf{b)} $f(x) = \ln(4x)$ and
+\textbf{c)} $f(x) = 2\cos(x) - 3\sin(x)$.
+\begin{align*}
+  \textbf{a)}\quad f'(x) &= 5 \cdot 3e^{3x} = 15e^{3x} \\
+  \textbf{b)}\quad f'(x) &= 1/x \\
+  \textbf{c)}\quad f'(x) &= -2\sin(x) - 3\cos(x)
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[The derivative at a point]
+The current $i(t) = I_0 e^{-t/\tau}$ amperes describes the discharge of a capacitor. Calculate
+$i'(0)$.
+\[
+  i'(t) = -\frac{I_0}{\tau} e^{-t/\tau} \quad \Rightarrow \quad i'(0) = -\frac{I_0}{\tau}
+\]
+$i'(0)$ is the instantaneous rate of change of the current at $t = 0$.
+\end{exempel}
+
+\begin{exempel}[Stationary point of an exponential function]
+Find the turning point of $f(x) = xe^{-x}$. The product rule (\secref{c13:sec:produktregeln})
+with $g(x) = x$ and $h(x) = e^{-x}$ gives
+\[
+  f'(x) = e^{-x} + x \cdot (-e^{-x}) = e^{-x}(1 - x)
+\]
+$f'(x) = 0$ gives $x = 1$, since $e^{-x} \neq 0$. The second derivative is
+\[
+  f''(x) = -e^{-x}(1 - x) + e^{-x}(-1) = e^{-x}(x - 2),
+\]
+and
+\[
+  f''(1) = e^{-1}(1 - 2) = -e^{-1} < 0 \quad \Rightarrow \quad
+  \text{\textbf{maximum} at } (1, e^{-1}) \approx (1, 0.37).
+\]
+\end{exempel}

@@ -1,0 +1,244 @@
+% Section 8.7, translated from sv/chapters/08/exercises.tex.
+
+\section{Exercises}
+\label{c8:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L08}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{The concept of a function, domain and range}
+
+\uppgift{1.1}{Is the relationship a function?}
+Decide whether the following relationships define $y$ as a function of $x$. Justify your answer.
+\begin{delar}(2)
+  \task $y = 3x - 2$
+  \task $x^2 + y^2 = 16$
+  \task $\{(1,2),\ (2,4),\ (3,4),\ (4,8)\}$
+  \task $\{(1,2),\ (1,5),\ (2,3)\}$
+\end{delar}
+
+\uppgift{1.2}{Domain and range}
+Find the domain $D_f$ and the range $V_f$ of
+\begin{delar}(3)
+  \task $f(x) = \dfrac{1}{x - 3}$
+  \task $g(x) = \sqrt{x + 4}$
+  \task $h(x) = -x^2 + 2$
+\end{delar}
+
+\uppgift{1.3}{Linear resistance of a temperature-dependent resistor}
+The resistance $R$ (in $\Omega$) of a certain temperature-dependent resistor depends linearly on
+the temperature $T$ (in $^{\circ}$C) as $R(T) = kT + m$. At $T = 0\,^{\circ}\text{C}$,
+$R = 100\,\Omega$, and at $T = 50\,^{\circ}\text{C}$, $R = 175\,\Omega$.
+\begin{parts}
+  \item Find $k$ and $m$.
+  \item Calculate the resistance at $T = 25\,^{\circ}\text{C}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{Types of function and applications}
+
+\uppgift{2.1}{Exponential growth of solar power installations}
+The number of solar power installations in a municipality increases by $8\,\%$ a year. In year
+$x = 0$ there were $400$ installations, which gives
+\[
+  f(x) = 400 \cdot 1.08^x.
+\]
+\begin{parts}
+  \item Calculate $f(10)$ and interpret the answer.
+  \item After how many years has the number of installations doubled?
+\end{parts}
+
+\uppgift{2.2}{Power as a power function of the current}
+The power $P$ (in W) developed in a resistor $R = 50\,\Omega$ depends on the current $I$ (in A)
+as
+\[
+  P(I) = R \cdot I^2.
+\]
+\begin{parts}
+  \item What type of function is $P(I)$?
+  \item Calculate $P(0.5)$ and $P(2)$.
+  \item A fuse in the circuit limits the current to $0 \leq I \leq 3\,\text{A}$. Find the domain
+    and range of $P(I)$ in this interval.
+\end{parts}
+
+\uppgift{2.3}{Interpreting measurements}
+A voltage $U(t)$ is measured at several times during a discharge:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
+  $t$ (s) & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $U(t)$ (V) & $12$ & $9$ & $6$ & $3$ & $0$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Show from the table that the relationship between $t$ and $U(t)$ is linear.
+  \item Find a formula $U(t) = kt + m$ from the table.
+  \item If the pattern in the table continued, at what time $t$ would $U(t) = -3\,\text{V}$? Is
+    this a reasonable value for a discharge voltage? Explain why the linear model cannot hold for
+    all $t \geq 0$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Calculating function values}
+The functions $f(x) = 3x - 5$, $g(x) = x^2 + 2$ and $h(x) = \dfrac{6}{x}$ are given. Calculate
+\begin{delar}(6)
+  \task $f(4)$
+  \task $f(-2)$
+  \task $g(0)$
+  \task $g(-3)$
+  \task $h(3)$
+  \task $h(-2)$
+\end{delar}
+
+\uppgift{3.2}{Solving the equation $f(x) = c$}
+The same functions as in \uppref{3.1}.
+\begin{parts}
+  \item Find $x$ such that $f(x) = 10$.
+  \item Find the zero of $f$.
+  \item Find $x$ such that $g(x) = 11$.
+  \item Does $g$ have a zero? Justify your answer.
+  \item Find $x$ such that $h(x) = 0.5$.
+\end{parts}
+
+\uppgift{3.3}{Domain}
+Find the domain $D_f$.
+\begin{delar}(3)
+  \task $f(x) = 5x + 1$
+  \task $f(x) = \dfrac{1}{x + 2}$
+  \task $f(x) = \sqrt{x - 3}$
+  \task $f(x) = \dfrac{x}{x^2 - 9}$
+  \task $f(x) = \sqrt{9 - x}$
+\end{delar}
+
+\uppgift{3.4}{Range}
+Find the range $V_f$.
+\begin{delar}(2)
+  \task $f(x) = x^2 + 1$, $D_f = \mathbb{R}$
+  \task $f(x) = -x^2$, $D_f = \mathbb{R}$
+  \task $f(x) = \abs{x}$, $D_f = \mathbb{R}$
+  \task $f(x) = 2x - 3$, $D_f = [0, 5]$
+  \task $f(x) = \sqrt{x}$, $D_f = [0, \infty)$
+\end{delar}
+
+\uppgift{3.5}{A linear function from two points}
+Find $f(x) = kx + m$ for the line through the points
+\begin{delar}(2)
+  \task $(0, 4)$ and $(2, 10)$
+  \task $(1, 5)$ and $(4, 14)$
+  \task $(-2, 7)$ and $(2, -1)$
+  \task $(0, -3)$ and $(5, -3)$
+\end{delar}
+
+\uppgift{3.6}{Interpreting $k$ and $m$}
+\begin{parts}
+  \item What does $k$ mean graphically in $f(x) = kx + m$?
+  \item What does $m$ mean graphically?
+  \item Is $f(x) = -4x + 12$ increasing or decreasing? Justify your answer.
+  \item Find the zero of $f(x) = -4x + 12$.
+  \item The terminal voltage of a loaded battery is $U(I) = 12 - 2I$. What do $k = -2$ and
+    $m = 12$ represent physically?
+\end{parts}
+
+\uppgift{3.7}{Power functions}
+The functions $f(x) = x^2$ and $g(x) = x^3$ are given.
+\begin{parts}
+  \item Calculate $f(-3)$ and $g(-3)$.
+  \item Why does $f(-x) = f(x)$ hold, but $g(-x) = -g(x)$?
+  \item Find $V_f$ and $V_g$ when $D = \mathbb{R}$.
+  \item The power in a resistor is given by $P(I) = 10I^2$. How many times greater does the power
+    become if the current is tripled?
+\end{parts}
+
+\uppgift{3.8}{Exponential functions}
+\begin{parts}
+  \item $f(x) = 5 \cdot 2^x$. Calculate $f(0)$, $f(1)$ and $f(3)$.
+  \item $g(x) = 100 \cdot 0.5^x$. Calculate $g(0)$, $g(1)$ and $g(3)$.
+  \item Which of the functions is increasing and which is decreasing? What decides it?
+  \item What is $C$ in each function, and what does it signify?
+\end{parts}
+
+\uppgift{3.9}{Growth factor}
+\begin{parts}
+  \item A quantity increases by $5\,\%$ a year. What is the growth factor $a$?
+  \item A quantity decreases by $20\,\%$ a year. What is $a$?
+  \item A signal is attenuated to $70\,\%$ of its value at each stage it passes. The initial
+    amplitude is $2\,\text{V}$. Write a function for the amplitude after $n$ stages.
+  \item Calculate the amplitude after $3$ stages.
+  \item After how many stages does the amplitude fall below $1\,\text{V}$?
+\end{parts}
+
+\uppgift{3.10}{Linear or exponential?}
+Two quantities have been measured:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
+  $x$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $f(x)$ & $3$ & $5$ & $7$ & $9$ & $11$ \\
+  $g(x)$ & $3$ & $6$ & $12$ & $24$ & $48$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Which of the functions is linear? Justify your answer from the table.
+  \item Which is exponential? Justify your answer.
+  \item Find a formula for $f(x)$.
+  \item Find a formula for $g(x)$.
+  \item Calculate $f(10)$ and $g(10)$.
+\end{parts}
+
+\uppgift{3.11}{Zeros}
+Find the zeros.
+\begin{delar}(3)
+  \task $f(x) = 4x - 12$
+  \task $f(x) = x^2 - 25$
+  \task $f(x) = x^2 - 5x + 6$
+  \task $f(x) = x^2 + 4$
+  \task $f(x) = x(x - 4)$
+\end{delar}
+
+\uppgift{3.12}{A voltage divider as a function}
+A voltage divider consists of $R_1 = 1\,\text{k}\Omega$ and a potentiometer with the resistance
+$x$ (in k$\Omega$). The output voltage is given by
+\[
+  U(x) = 12 \cdot \frac{x}{1 + x}\,\text{V}, \qquad 0 \leq x \leq 9.
+\]
+\begin{parts}
+  \item Calculate $U(0)$, $U(1)$ and $U(9)$.
+  \item Find the range $V_U$ for the given interval.
+  \item At what $x$ does $U$ become $8\,\text{V}$?
+  \item Can $U$ ever reach $12\,\text{V}$? Justify your answer.
+\end{parts}
+
+\uppgift{3.13}{Discharging a capacitor}
+The voltage across a discharging capacitor is given by
+\[
+  u(t) = 10 \cdot e^{-t/2}\,\text{V}, \qquad t \geq 0,
+\]
+where $t$ is in seconds.
+\begin{parts}
+  \item Calculate $u(0)$.
+  \item Calculate $u(2)$ and $u(4)$.
+  \item Is the function increasing or decreasing?
+  \item Find the range $V_u$ for $t \geq 0$.
+  \item Does $u(t)$ ever become exactly zero? Justify your answer.
+\end{parts}
+
+% Kept whole on one page: its last part was left alone at the top of the next.
+\needspace{10\baselineskip}
+\uppgift{3.14}{True or false}
+Decide whether the statement is true or false and justify your answer briefly.
+\begin{parts}
+  \item $f(x) = x^2$ has the range $\mathbb{R}$.
+  \item $f(x) = \dfrac{1}{x}$ is defined for all $x$.
+  \item That $f(2) = 5$ means that $f$ has a zero at $x = 2$.
+  \item The relationship $x^2 + y^2 = 25$ defines $y$ as a function of $x$.
+  \item The function $f(x) = 3 \cdot 2^x$ has the initial value $2$.
+\end{parts}

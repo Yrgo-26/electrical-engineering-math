@@ -1,0 +1,267 @@
+% Section 2.9, translated from sv/chapters/02/exercises.tex.
+
+\section{Exercises}
+\label{c2:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} Parts~1 and~2 are done during the lesson: first on your
+own, a few minutes per exercise, then together. Part~3 is extra exercises for further practice
+after the lesson. Most of them can be done in your head or with pencil and paper.
+
+\facitnotis{L02}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Review exercises}
+
+\uppgift{1.1}{Three resistors in parallel}
+Three resistors $R_1 = 6\,\Omega$, $R_2 = 3\,\Omega$ and $R_3 = 2\,\Omega$ are connected in
+parallel.
+
+\bild[0.52\linewidth]{lectures/L02/appendix/images/1.1_circuit.png}
+
+Calculate the total resistance $R_{\text{TOT}}$, which is given by
+\[
+  \frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}.
+\]
+
+\uppgift{1.2}{Efficiency and power}
+A transformer has the efficiency $\eta = 92\,\%$ and the input power $P_{\text{in}} =
+500\,\text{W}$.
+
+\bild[0.4\linewidth]{lectures/L02/appendix/images/1.2_circuit_en.png}
+
+\begin{parts}
+  \item Calculate the output power $P_{\text{out}}$.
+  \item How much power $P_{\text{loss}}$ is lost as heat?
+\end{parts}
+
+\needspace{18\baselineskip}
+\uppgift{1.3}{Order of operations in a circuit formula}
+Calculate the output voltage $U_{\text{out}}$ of the voltage divider with the formula below when
+$U_{\text{in}} = 12\,\text{V}$, $R_1 = 8\,\Omega$ and $R_2 = 4\,\Omega$.
+
+\bild[0.44\linewidth]{lectures/L02/appendix/images/1.3_circuit_en.png}
+
+\[
+  U_{\text{out}} = U_{\text{in}} \times \frac{R_2}{R_1 + R_2}
+\]
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Simplifying algebraic expressions}
+Simplify the following expressions.
+\begin{delar}(2)
+  \task $5I_1 + 3I_2 - 2I_1 + 7I_2$
+  \task $4R_1 - 3R_2 + R_1 + 5R_2 - 2R_1$
+  \task $3I^2 - 2I + 4I^2 + 5I - 1$
+  \startnewitemline
+  \task* Substitute $I = 2$ into both the original and the simplified expression in c) and check
+    that they give the same value.
+\end{delar}
+
+\needspace{24\baselineskip}
+\uppgift{2.2}{The distributive law in circuits}
+The resistor $R$ in the circuit below carries the sum of the three branch currents $I_1$, $I_2$
+and $I_3$.
+
+\bild[0.7\linewidth]{lectures/L02/appendix/images/2.2_circuit.png}
+
+The voltage drop across $R$ is therefore given by
+\[
+  U_R = RI = R(I_1 + I_2 + I_3).
+\]
+\begin{parts}
+  \item Expand the brackets and give each term with its unit.
+  \item Calculate $U_R$ with the original form when $R = 100\,\Omega$, $I_1 = 20\,\text{mA}$,
+    $I_2 = 30\,\text{mA}$ and $I_3 = 50\,\text{mA}$.
+  \item Calculate $U_R$ once more with the expanded expression and check that the answers agree.
+\end{parts}
+
+\uppgift{2.3}{Factorisation}
+Factorise the following expressions.
+\begin{delar}(4)
+  \task $6I + 9RI$
+  \task $P_1^2 - P_2^2$
+  \task $U^2 - 10U + 25$
+  \task $4R^2 - 1$
+\end{delar}
+
+\uppgift{2.4}{Common factor: total power in a series circuit}
+Three resistors $R_1 = 120\,\Omega$, $R_2 = 180\,\Omega$ and $R_3 = 200\,\Omega$ are connected in
+series and so carry the same current $I = 50\,\text{mA}$.
+
+\bild[0.52\linewidth]{lectures/L02/appendix/images/2.4_circuit.png}
+
+The power in each resistor is given by $P_k = R_k I^2$.
+\begin{parts}
+  \item Write an expression for the total power $P_{\text{TOT}} = P_1 + P_2 + P_3$ and take out
+    the common factor.
+  \item Calculate $P_{\text{TOT}}$ with the factorised expression.
+  \item Calculate $P_1$, $P_2$ and $P_3$ separately and check that the sum is the same. Which way
+    took the least work?
+\end{parts}
+
+\uppgift{2.5}{The difference of two squares: difference in power}
+A heating element with the resistance $R$ is supplied first with the voltage $U_1$ and then with
+$U_2$.
+
+\bild[0.35\linewidth]{lectures/L02/appendix/images/2.5_circuit.png}
+
+The power is given by $P = \dfrac{U^2}{R}$.
+\begin{parts}
+  \item Show that the difference in power can be written
+    \[
+      P_1 - P_2 = \frac{(U_1 + U_2)(U_1 - U_2)}{R}.
+    \]
+  \item Calculate $P_1 - P_2$ \textbf{without} a calculator when $U_1 = 24\,\text{V}$,
+    $U_2 = 20\,\text{V}$ and $R = 8\,\Omega$.
+  \item Check your answer by calculating $P_1$ and $P_2$ separately.
+\end{parts}
+
+\uppgift{2.6}{The squaring rule: power after a change in current}
+The current $I_0 = 2\,\text{A}$ flows through a resistor $R = 10\,\Omega$. The current increases by
+$\Delta I = 0.1\,\text{A}$, so that the new current is $I_0 + \Delta I$.
+
+\bild[0.35\linewidth]{lectures/L02/appendix/images/2.6_circuit.png}
+
+The power is given by $P = RI^2$.
+\begin{parts}
+  \item Expand $P = R(I_0 + \Delta I)^2$ with the squaring rule.
+  \item Calculate the new power with the expanded expression.
+  \item How large is the increase in power $\Delta P$ compared with $P_0 = RI_0^2$?
+  \item How large is the error if you ignore the term $R\,\Delta I^2$? Give the error as a
+    percentage of $\Delta P$.
+\end{parts}
+
+\needspace{22\baselineskip}
+\uppgift{2.7}{Power expressions and Ohm's law}
+The power dissipated in the resistor below can be written $P = RI^2$.
+
+\bild[0.31\linewidth]{lectures/L02/appendix/images/2.7_circuit.png}
+
+\begin{parts}
+  \item Show that $P = RI^2$ can be factorised as $P = (RI) \cdot I$, and identify which quantity
+    $RI$ represents.
+  \item Substitute $I = \dfrac{U}{R}$ into $P = RI^2$ and show that the expression simplifies to
+    $P = \dfrac{U^2}{R}$.
+  \item A resistor $R = 6\,\Omega$ is supplied with $U = 12\,\text{V}$. Calculate the power with
+    all three forms $P = UI$, $P = RI^2$ and $P = \dfrac{U^2}{R}$, and check that they give the
+    same answer.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Extra exercises}
+The exercises below are extra practice, best done on your own after the lesson.
+
+\uppgift{3.1}{Terms, factors and coefficients}
+Consider the expression $7R^2 - 4R + 9$.
+\begin{parts}
+  \item How many terms does the expression consist of?
+  \item Give the coefficient of $R^2$ and of $R$.
+  \item Give the constant term.
+  \item Which factors make up the term $7R^2$?
+  \item Calculate the value of the expression for $R = 2$.
+\end{parts}
+
+\uppgift{3.2}{Simplifying with brackets}
+Simplify.
+\begin{delar}(2)
+  \task $2(3I + 4) - 3(I - 2)$
+  \task $-(U - 5) + 2(U + 1)$
+  \task $5R_1 - \left[2R_1 - (R_1 + 3)\right]$
+  \task $3(2P - 1) - 2(3P - 4)$
+\end{delar}
+
+\uppgift{3.3}{Expanding}
+Expand and simplify.
+\begin{delar}(3)
+  \task $(R + 3)(R + 5)$
+  \task $(2I - 1)(I + 4)$
+  \task $(U + 2)(U - 2)$
+  \task $(3R - 2)(3R - 2)$
+  \task $2I(I + 3) - I(2I - 1)$
+\end{delar}
+
+\uppgift{3.4}{The squaring rules}
+Expand.
+\begin{delar}(4)
+  \task $(I + 4)^2$
+  \task $(R - 6)^2$
+  \task $(2U + 3)^2$
+  \task $(5 - I)^2$
+  \task* Show with $a = 3$ and $b = 4$ that $(a + b)^2 \neq a^2 + b^2$.
+\end{delar}
+
+\uppgift{3.5}{The difference of two squares as a mental-arithmetic trick}
+Use $(a + b)(a - b) = a^2 - b^2$ and calculate \textbf{without} a calculator.
+\begin{delar}(4)
+  \task $102 \times 98$
+  \task $45 \times 35$
+  \task $2.1 \times 1.9$
+  \task $51^2 - 49^2$
+  \task* The voltage across a resistor $R = 5\,\Omega$ changes from $U_1 = 25\,\text{V}$ to
+    $U_2 = 15\,\text{V}$. Calculate $P_1 - P_2 = \dfrac{U_1^2 - U_2^2}{R}$ without squaring any
+    number.
+\end{delar}
+
+\uppgift{3.6}{Factorise}
+Factorise as far as possible.
+\begin{delar}(3)
+  \task $8R + 12$
+  \task $RI^2 + RI$
+  \task $U^2 - 49$
+  \task $I^2 + 12I + 36$
+  \task $9R^2 - 16$
+  \task $2U^2 - 8$
+\end{delar}
+
+\uppgift{3.7}{Simplifying algebraic fractions}
+Factorise and cancel. Assume that the denominator is not zero.
+\begin{delar}(3)
+  \task $\dfrac{6RI}{3R}$
+  \task $\dfrac{R^2 - 9}{R + 3}$
+  \task $\dfrac{2U^2 + 4U}{2U}$
+  \task $\dfrac{I^2 - 10I + 25}{I - 5}$
+  \task $\dfrac{4R^2 - 1}{2R - 1}$
+\end{delar}
+
+\needspace{9\baselineskip}
+\uppgift{3.8}{Substituting into the power formulas}
+A resistor $R = 8\,\Omega$ carries the current $I = 1.5\,\text{A}$.
+\begin{parts}
+  \item Calculate the voltage $U = RI$.
+  \item Calculate the power with $P = RI^2$.
+  \item Calculate the power with $P = \dfrac{U^2}{R}$ and check that the answer agrees.
+  \item The current doubles. By what factor does the power change? Justify your answer
+    algebraically.
+\end{parts}
+
+\needspace{13\baselineskip}
+\uppgift{3.9}{The algebra of the voltage divider}
+For two resistors in series,
+\[
+  U_1 = U_{\text{in}} \times \frac{R_1}{R_1 + R_2}
+  \qquad \text{and} \qquad
+  U_2 = U_{\text{in}} \times \frac{R_2}{R_1 + R_2}.
+\]
+\begin{parts}
+  \item Show algebraically that $U_1 + U_2 = U_{\text{in}}$.
+  \item Show that $\dfrac{U_1}{U_2} = \dfrac{R_1}{R_2}$.
+  \item What is $U_1$ if $R_1 = R_2$?
+  \item Calculate $U_1$ and $U_2$ when $U_{\text{in}} = 15\,\text{V}$, $R_1 = 1\,\text{k}\Omega$ and
+    $R_2 = 4\,\text{k}\Omega$.
+\end{parts}
+
+\uppgift{3.10}{Find the error}
+Each equality below contains a common algebra mistake. Explain what is wrong and write the correct
+right-hand side.
+\begin{delar}(3)
+  \task $(R + 2)^2 = R^2 + 4$
+  \task $3(I - 2) = 3I - 2$
+  \task $\dfrac{R + 4}{4} = R$
+  \task $-(U - 3) = -U - 3$
+  \task $2R \times 3R = 6R$
+  \task $(2I)^2 = 2I^2$
+\end{delar}

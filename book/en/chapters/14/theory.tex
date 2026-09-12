@@ -1,0 +1,102 @@
+% Sections 14.1 to 14.6, translated from sv/chapters/14/theory.tex.
+
+\section{Antiderivatives}
+\label{c14:sec:primitiv}
+An \textbf{antiderivative} $F(x)$ of $f(x)$ satisfies
+\[
+  F'(x) = f(x).
+\]
+There are infinitely many antiderivatives, and they differ by a constant $C$:
+\[
+  \int f(x)\,dx = F(x) + C
+\]
+$C$ is called the \textbf{constant of integration}.
+
+\section{Basic rules of integration}
+\label{c14:sec:regler}
+The table shows the antiderivatives of the most common functions.
+
+{\renewcommand{\arraystretch}{1.9}%
+\begin{narrowtable}{@{}l@{\hspace{3em}}l@{}}
+  \thead{Function $f(x)$} & \thead{Antiderivative $F(x)$} \\
+  \midrule
+  $x^n$ \enspace ($n \neq -1$) & $\dfrac{x^{n+1}}{n+1} + C$ \\
+  $e^x$ & $e^x + C$ \\
+  $e^{kx}$ & $\dfrac{1}{k}e^{kx} + C$ \\
+  $\dfrac{1}{x}$ & $\ln\abs{x} + C$ \\
+  $\sin(x)$ & $-\cos(x) + C$ \\
+  $\cos(x)$ & $\sin(x) + C$ \\
+  $\sin(kx)$ & $-\dfrac{1}{k}\cos(kx) + C$ \\
+  $\cos(kx)$ & $\dfrac{1}{k}\sin(kx) + C$ \\
+\end{narrowtable}}
+
+The \textbf{linearity property} also holds:
+\[
+  \int \bigl[af(x) + bg(x)\bigr]\,dx = a\int f(x)\,dx + b\int g(x)\,dx
+\]
+
+\section{Definite integrals and area}
+\label{c14:sec:bestamd}
+The \textbf{definite integral} gives the area under the curve $y = f(x)$ from $a$ to $b$:
+\[
+  \int_a^b f(x)\,dx = F(b) - F(a)
+\]
+
+\begin{aside}
+\note[Note] If $f(x) < 0$ in parts of the interval, those parts contribute negative area.
+\end{aside}
+
+\section{The constant of integration and initial conditions}
+\label{c14:sec:startvillkor}
+For an antiderivative with a known initial condition $F(x_0) = y_0$, $C$ is given by
+\[
+  C = y_0 - F_{\text{without }C}(x_0),
+\]
+where $F_{\text{without }C}$ is the antiderivative written without the constant.
+
+\section{Application: charge from current}
+\label{c14:sec:laddning}
+The charge $q(t)$ is given by the integral of the current $i(t)$:
+\[
+  q(t) = \int_0^t i(\tau)\,d\tau + q(0)
+\]
+
+\section{Worked examples}
+\label{c14:sec:typexempel}
+
+\begin{exempel}[Calculating an area]
+Calculate the area under $f(x) = 2x + 1$ for $0 \leq x \leq 2$.
+\[
+  \int_0^2 (2x + 1)\,dx = \Bigl[x^2 + x\Bigr]_0^2 = (4 + 2) - 0 = 6
+\]
+\end{exempel}
+
+\begin{exempel}[Area under a parabola]
+Calculate the area under $f(x) = x^2$ for $0 \leq x \leq 3$.
+\[
+  \int_0^3 x^2\,dx = \left[\frac{x^3}{3}\right]_0^3 = \frac{27}{3} - 0 = 9
+\]
+\end{exempel}
+
+\begin{exempel}[Charge by integration]
+During the time $0 \leq t \leq 2\,\text{s}$, the current $i(t) = (2t + 4)\,\text{A}$ flows.
+Calculate the charge $q(t)$ with $q(0) = 0$.
+\[
+  q(t) = \int_0^t (2\tau + 4)\,d\tau = \Bigl[\tau^2 + 4\tau\Bigr]_0^t = t^2 + 4t
+\]
+The antiderivative $I(t) = t^2 + 4t$ satisfies the initial condition, since $I(0) = 0$. After two
+seconds, the charge is
+\[
+  q(2) = 4 + 8 = 12\,\text{C}.
+\]
+\end{exempel}
+
+\begin{exempel}[A definite integral with negative values]
+Calculate $\displaystyle\int_{-1}^{2} (x^2 - 1)\,dx$.
+\begin{align*}
+  \left[\frac{x^3}{3} - x\right]_{-1}^{2}
+    &= \left(\frac{8}{3} - 2\right) - \left(-\frac{1}{3} + 1\right) \\
+    &= \frac{8}{3} - 2 + \frac{1}{3} - 1 = 3 - 3 = 0
+\end{align*}
+The positive and negative areas cancel out.
+\end{exempel}

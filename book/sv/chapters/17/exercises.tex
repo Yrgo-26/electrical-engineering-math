@@ -1,0 +1,239 @@
+% Section 17.7, from lectures/L17/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c17:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen.
+
+\facitnotis{L17}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Vektorer i det komplexa talplanet}
+Du har vektorerna $a = (2; 1)$, $b = (2; -1)$ och $c = (-3; 4)$. I uppgifterna nedan ska varje
+vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
+\begin{parts}
+  \item Skriv vektorerna på komplex rektangulär form.
+  \item Rita ut vektorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Bestäm vektorernas längder, dvs.\ absolutbeloppet av respektive tal.
+  \item Bestäm längden (absolutbeloppet) av $a + b + c$, dvs.\ $\abs{a + b + c}$.
+  \item Bestäm vektorernas vinklar.
+  \item Bestäm en vektor $d$ med längden $8$ som är motsatt riktad mot $c$.
+\end{parts}
+
+\uppgift{1.2}{Rektangulär form till Eulers form}
+En spänning $u(t)$ i en växelströmskrets kan representeras av en fasor $U$, som på rektangulär
+form skrivs
+\[
+  U = 3 - j6\,\text{V}.
+\]
+\begin{parts}
+  \item Rita ut fasorn $U$ i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Uttryck fasorn $U$ på Eulers form, dvs.\ bestäm absolutbeloppet $\abs{U}$ och fasvinkeln
+    $\delta$ så att $U = \abs{U}e^{j\delta}$.
+  \item Anta att spänningens frekvens är $f = 50\,\text{Hz}$. Bestäm vinkelhastigheten $\omega$.
+  \item Skriv $u(t)$ som en tidsberoende funktion $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\needspace{16\baselineskip}
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Addition av tre strömmar i en AC-krets}
+En nod i en elektrisk krets matas med tre sinusformade strömmar:
+\begin{align*}
+  i_1(t) &= 5\sin(\omega t + 30^{\circ})\,\text{mA}, \\
+  i_2(t) &= 3\sin(\omega t - 30^{\circ})\,\text{mA}, \\
+  i_3(t) &= 4\sin(\omega t + 120^{\circ})\,\text{mA}.
+\end{align*}
+Den totala strömmen $i_{\text{tot}}(t)$ i kretsen är
+\[
+  i_{\text{tot}}(t) = i_1(t) + i_2(t) + i_3(t).
+\]
+\begin{parts}
+  \item Skriv om strömmarna $i_1(t)$, $i_2(t)$ och $i_3(t)$ till fasorer $I_1$, $I_2$ och $I_3$ på
+    komplex rektangulär form.
+  \item Beräkna fasorsumman $I_{\text{tot}} = I_1 + I_2 + I_3$.
+  \item Rita ut fasorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Omvandla tillbaka resultatet till en sinusformad ström i tidsdomänen på formen
+    \[
+      i_{\text{tot}}(t) = \abs{I_{\text{tot}}}\sin(\omega t + \delta).
+    \]
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen. De flesta går
+att räkna i huvudet eller med papper och penna.
+
+\uppgift{3.1}{Fasor ur sinussignal}
+Ange fasorn på polär form.
+\begin{delar}(2)
+  \task $u(t) = 12\sin(\omega t + 60^{\circ})$
+  \task $u(t) = 5\sin(\omega t - 45^{\circ})$
+  \task $i(t) = 2\sin(\omega t)$
+  \task $i(t) = 7\sin(\omega t + 180^{\circ})$
+\end{delar}
+
+\uppgift{3.2}{Fasor på rektangulär form}
+Skriv fasorerna på rektangulär form.
+\begin{delar}(4)
+  \task $10\,\angle\,0^{\circ}$
+  \task $4\,\angle\,90^{\circ}$
+  \task $6\,\angle\,30^{\circ}$
+  \task $5\,\angle\,{-53{,}1^{\circ}}$
+\end{delar}
+
+\uppgift{3.3}{Addition av två spänningar}
+Två spänningar med samma frekvens är $u_1(t) = 3\sin(\omega t)\,\text{V}$ och
+$u_2(t) = 4\sin(\omega t + 90^{\circ})\,\text{V}$.
+\begin{parts}
+  \item Ange fasorerna på polär form.
+  \item Skriv dem på rektangulär form.
+  \item Beräkna fasorsumman och ange den på polär form.
+  \item Skriv $u_{\text{tot}}(t)$.
+\end{parts}
+
+\uppgift{3.4}{Addition av tre fasorer}
+Tre spänningar ges av $U_1 = 10\,\angle\,0^{\circ}\,\text{V}$,
+$U_2 = 5\,\angle\,90^{\circ}\,\text{V}$ och $U_3 = 5\,\angle\,{-90^{\circ}}\,\text{V}$.
+\begin{parts}
+  \item Skriv samtliga på rektangulär form.
+  \item Beräkna summan.
+  \item Ange summan på polär form.
+  \item Förklara varför $U_2$ och $U_3$ tar ut varandra.
+\end{parts}
+
+\uppgift{3.5}{Summa och differens av två fasorer}
+Två spänningar ges av $U_1 = 8\,\angle\,30^{\circ}\,\text{V}$ och
+$U_2 = 8\,\angle\,{-30^{\circ}}\,\text{V}$.
+\begin{parts}
+  \item Skriv båda på rektangulär form.
+  \item Beräkna $U_1 + U_2$ och ange svaret på polär form.
+  \item Beräkna $U_1 - U_2$ och ange svaret på polär form.
+  \item Kommentera resultaten.
+\end{parts}
+
+\uppgift{3.6}{Multiplikation och division av fasorer}
+Beräkna.
+\begin{delar}(2)
+  \task $(5\,\angle\,20^{\circ})(4\,\angle\,40^{\circ})$
+  \task $\dfrac{20\,\angle\,100^{\circ}}{5\,\angle\,40^{\circ}}$
+  \task $(6\,\angle\,{-30^{\circ}})(2\,\angle\,{-30^{\circ}})$
+  \task $\dfrac{9\,\angle\,0^{\circ}}{3\,\angle\,90^{\circ}}$
+\end{delar}
+
+\uppgift{3.7}{Impedans för R, L och C}
+Vid $\omega = 2000\,\text{rad/s}$ gäller $R = 100\,\Omega$, $L = 50\,\text{mH}$ och
+$C = 5\,\mu\text{F}$.
+\begin{parts}
+  \item Ange $Z_R$ och dess fasvinkel.
+  \item Beräkna $Z_L = j\omega L$ och ange fasvinkeln.
+  \item Beräkna $Z_C = -\dfrac{j}{\omega C}$ och ange fasvinkeln.
+  \item Vad innebär fasvinklarna för strömmen genom respektive komponent?
+\end{parts}
+
+\uppgift{3.8}{Serie-RL-krets}
+En seriekrets har $R = 40\,\Omega$ och $X_L = 30\,\Omega$.
+\begin{parts}
+  \item Ange impedansen $Z$ på rektangulär form.
+  \item Beräkna $\abs{Z}$ och fasvinkeln.
+  \item Kretsen matas med $U = 100\,\angle\,0^{\circ}\,\text{V}$. Beräkna strömmen.
+  \item Ligger strömmen före eller efter spänningen?
+\end{parts}
+
+\uppgift{3.9}{Serie-RC-krets}
+En seriekrets har $R = 60\,\Omega$ och $X_C = 80\,\Omega$.
+\begin{parts}
+  \item Ange impedansen $Z$ på rektangulär form.
+  \item Beräkna $\abs{Z}$ och fasvinkeln.
+  \item Kretsen matas med $U = 200\,\angle\,0^{\circ}\,\text{V}$. Beräkna strömmen.
+  \item Ligger strömmen före eller efter spänningen?
+\end{parts}
+
+\uppgift{3.10}{Serie-RLC-krets}
+En seriekrets har $R = 20\,\Omega$, $X_L = 60\,\Omega$ och $X_C = 45\,\Omega$.
+\begin{parts}
+  \item Ange impedansen $Z$ på rektangulär form.
+  \item Beräkna $\abs{Z}$ och fasvinkeln.
+  \item Kretsen matas med $U = 50\,\angle\,0^{\circ}\,\text{V}$. Beräkna strömmen.
+  \item Är kretsen induktiv eller kapacitiv?
+\end{parts}
+
+\uppgift{3.11}{Resonans}
+En seriekrets har $R = 10\,\Omega$, $L = 100\,\text{mH}$ och $C = 10\,\mu\text{F}$. Resonans
+inträffar vid $\omega_0 = \dfrac{1}{\sqrt{LC}}$.
+\begin{parts}
+  \item Beräkna $\omega_0$.
+  \item Beräkna resonansfrekvensen $f_0$.
+  \item Beräkna $X_L$ och $X_C$ vid $\omega_0$.
+  \item Vilken impedans har kretsen vid resonans?
+\end{parts}
+
+\uppgift{3.12}{Spänningsdelning i en AC-krets}
+En seriekrets med $Z_R = 30\,\Omega$ och $Z_L = j40\,\Omega$ matas med
+$U = 100\,\angle\,0^{\circ}\,\text{V}$.
+\begin{parts}
+  \item Beräkna $Z_{\text{tot}}$ och $\abs{Z_{\text{tot}}}$.
+  \item Beräkna strömmen $I$.
+  \item Beräkna spänningen $U_R$ över motståndet.
+  \item Beräkna spänningen $U_L$ över spolen.
+  \item Visa att $U_R + U_L = U$ som fasorer, trots att $\abs{U_R} + \abs{U_L} \neq \abs{U}$.
+\end{parts}
+
+\uppgift{3.13}{Beräkna fasen ur en ekvation}
+En växelspänning ges av $u(t) = 10\sin(100\pi t + \delta)\,\text{V}$. Vid $t = 5\,\text{ms}$ är
+$u = 5\,\text{V}$.
+\begin{parts}
+  \item Ställ upp ekvationen för $\delta$.
+  \item Lös ekvationen som två fall.
+  \item Kontrollera båda lösningarna.
+\end{parts}
+
+\uppgift{3.14}{Parallellkopplade impedanser}
+Impedanserna $Z_1 = 10\,\Omega$ och $Z_2 = j10\,\Omega$ är parallellkopplade.
+\begin{parts}
+  \item Beräkna $Z = \dfrac{Z_1Z_2}{Z_1 + Z_2}$ på rektangulär form.
+  \item Beräkna $\abs{Z}$ och fasvinkeln.
+  \item Jämför med seriekopplingen av samma impedanser.
+  \item Vad är gemensamt för de två fasvinklarna?
+\end{parts}
+
+\uppgift{3.15}{Från fasordomän till tidsdomän}
+En krets genomflyts av strömmen $i(t) = 4\sin(500t - 30^{\circ})\,\text{A}$. Kretsens impedans
+är $Z = 25\,\angle\,60^{\circ}\,\Omega$.
+\begin{parts}
+  \item Ange strömmens fasor.
+  \item Beräkna spänningens fasor $U = ZI$.
+  \item Skriv $u(t)$.
+  \item Vilken fasskillnad har spänningen relativt strömmen?
+\end{parts}
+
+\uppgift{3.16}{Två strömmar i en nod}
+En nod matas med $i_1(t) = 6\sin(\omega t + 45^{\circ})\,\text{mA}$ och
+$i_2(t) = 8\sin(\omega t - 45^{\circ})\,\text{mA}$.
+\begin{parts}
+  \item Ange fasorerna på polär form.
+  \item Skriv dem på rektangulär form.
+  \item Beräkna fasorsumman och ange den på polär form.
+  \item Skriv $i_{\text{tot}}(t)$.
+\end{parts}
+
+\uppgift{3.17}{Sant eller falskt}
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
+\begin{parts}
+  \item Fasorer med olika vinkelhastighet får adderas.
+  \item En induktans har impedansen med fasvinkeln $+90^{\circ}$.
+  \item $\abs{Z} = R + X$
+  \item I en rent resistiv krets är ström och spänning i fas.
+  \item I en kapacitiv krets ligger strömmen efter spänningen.
+  \item Vid resonans är kretsens impedans rent resistiv.
+\end{parts}

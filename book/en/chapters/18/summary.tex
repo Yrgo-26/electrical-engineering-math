@@ -1,0 +1,51 @@
+% Section 18.13, translated from sv/chapters/18/summary.tex.
+
+\section{Summary}
+\label{c18:sec:sammanfattning}
+
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{8.5em}p{12em}L@{}}
+  \thead{Concept} & \thead{Mathematics} & \thead{In C} \\
+  \midrule
+  Root, power & $\sqrt{x}$, $x^y$ & \code{sqrt(x)}, \code{pow(x, y)} \\
+  Logarithms & $\ln x$, $\lg x$ & \code{log(x)}, \code{log10(x)} \\
+  Decibels & $20\log_{10}(U_{\text{out}}/U_{\text{in}})$ & \code{20.0 * log10(u_out / u_in)} \\
+  Degrees to radians & $\text{degrees} \cdot \pi/180$ & \code{deg * PI / 180.0} \\
+  Angle in the right quadrant & $\arg(x + jy)$ & \code{atan2(y, x)} \\
+  Central difference & $\bigl(f(x + h) - f(x - h)\bigr)/2h$ & \code{derivative(f, x, 1e-6)} \\
+  Trapezoidal rule & $\int_a^b f(x)\,dx$, $n$ subintervals & \code{integral(f, a, b, n)} \\
+  Complex number & $3 + 4j$ & \code{3.0 + 4.0 * I} \\
+  Magnitude, argument & $\abs{z}$, $\arg(z)$ & \code{cabs(z)}, \code{carg(z)} \\
+  Polar form & $r e^{j\theta}$ & \code{r * cexp(I * theta)} \\
+  Sample & $\abs{U}\sin(2\pi k/N + \delta)$, $N = f_s/f$ &
+    \code{amplitude * sin(2.0 * PI * k / n + delta)} \\
+\end{booktable}
+
+\needspace{6\baselineskip}
+\subsection*{What you should be able to do}
+After this chapter, you should be able to:
+\begin{itemize}
+  \item Understand the difference between integers and floating-point numbers in C, and choose the
+    right type and format specifier.
+  \item Use \file{math.h} to calculate powers, roots, logarithms and decibels.
+  \item Calculate with angles in radians and convert to and from degrees.
+  \item Calculate a derivative numerically and compare it with the analytical derivative.
+  \item Calculate a definite integral numerically with the trapezoidal rule.
+  \item Represent complex numbers and phasors with \file{complex.h}, and calculate magnitude and
+    argument.
+  \item Calculate sample values of a sinusoidal signal and print them for further analysis.
+\end{itemize}
+
+\testadigsjalv
+\begin{enumerate}
+  \item What is the result of \code{1 / 2} in C, and why?
+  \item What does the flag \code{-lm} do, and what error message do you get if the maths library
+    is not linked?
+  \item Why does \code{sin(30)} not give $0.5$?
+  \item How is the derivative of $f(x)$ at the point $x$ calculated numerically, and what controls
+    the accuracy?
+  \item How are the magnitude and the argument of a complex number calculated in C?
+\end{enumerate}
+
+\needspace{6\baselineskip}
+\subsection*{Next chapter}
+\Kapref{19} closes the book with a review of the course and preparation for the exam.

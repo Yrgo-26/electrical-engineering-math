@@ -1,0 +1,203 @@
+% Section 11.2, translated from sv/chapters/11/exercises.tex.
+
+\section{Exercises}
+\label{c11:sec:uppgifter}
+
+\begin{aside}
+\textbf{How to work with the exercises.} The exercises review Chapters~\ref{c7:ch}--\ref{c10:ch}
+before the practice test and are best done on your own, one part for each chapter. Start with the
+parts you feel least sure of.
+
+\facitnotis{L11}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 1}{Vectors}
+These exercises review \kapref{7}.
+
+\uppgift{1.1}{Calculating with vectors}
+The vectors $\mathbf{u} = (2, 5)$ and $\mathbf{v} = (-3, 1)$ are given. Find:
+\begin{delar}(4)
+  \task $\mathbf{u} + \mathbf{v}$
+  \task $\mathbf{u} - \mathbf{v}$
+  \task $3\mathbf{u}$
+  \task $2\mathbf{u} - 3\mathbf{v}$
+\end{delar}
+
+\uppgift{1.2}{Magnitude and angle}
+\begin{parts}
+  \item Calculate $\abs{(8, 6)}$.
+  \item Calculate $\abs{(-5, -12)}$.
+  \item Find the angle to the positive $x$-axis for $(8, 6)$.
+  \item Find the angle for $(-5, -12)$. Remember the quadrant correction.
+\end{parts}
+
+\uppgift{1.3}{Scalar product}
+\begin{parts}
+  \item Calculate $\mathbf{u} \cdot \mathbf{v}$ for $\mathbf{u} = (3, 1)$ and
+    $\mathbf{v} = (2, -6)$.
+  \item What does the result say about the vectors?
+  \item Calculate the angle between $\mathbf{u} = (1, 2)$ and $\mathbf{v} = (3, 1)$.
+\end{parts}
+
+\uppgift{1.4}{Unit vector and a given length}
+The vector $\mathbf{v} = (-8, 6)$ is given.
+\begin{parts}
+  \item Find the unit vector in the direction of $\mathbf{v}$.
+  \item Find a vector of length $25$ in the same direction as $\mathbf{v}$.
+  \item Find a vector of length $5$ in the opposite direction to $\mathbf{v}$.
+\end{parts}
+
+\uppgift{1.5}{Voltages as phasors}
+The voltages across a resistor and a capacitor in series are
+$\mathbf{U}_R = (9, 0)\,\text{V}$ and $\mathbf{U}_C = (0, -12)\,\text{V}$.
+\begin{parts}
+  \item Calculate the total voltage $\mathbf{U} = \mathbf{U}_R + \mathbf{U}_C$.
+  \item Calculate $\abs{\mathbf{U}}$.
+  \item Calculate the angle to the positive $x$-axis.
+  \item Why is $\abs{\mathbf{U}}$ not equal to $9 + 12 = 21\,\text{V}$?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{Functions}
+These exercises review \kapref{8}.
+
+\uppgift{2.1}{Domain and range}
+Find the domain $D_f$ and the range $V_f$ of:
+\begin{delar}(3)
+  \task $f(x) = \sqrt{x - 2}$
+  \task $f(x) = \dfrac{1}{x + 1}$
+  \task $f(x) = -x^2 + 4$
+\end{delar}
+
+\uppgift{2.2}{A linear model of a thermistor}
+The resistance of a thermistor depends linearly on the temperature as $R(T) = kT + m$.
+Measurements give $R(0^{\circ}\text{C}) = 200\,\Omega$ and $R(40^{\circ}\text{C}) = 120\,\Omega$.
+\begin{parts}
+  \item Find $k$ and $m$.
+  \item Calculate $R$ at $25^{\circ}\text{C}$.
+  \item At what temperature is $R = 100\,\Omega$?
+  \item Is the function increasing or decreasing?
+\end{parts}
+
+\uppgift{2.3}{An exponential model}
+The number of faults in a system decreases by $15\,\%$ per month. At the start there are $80$
+faults.
+\begin{parts}
+  \item Write a function $f(x)$ for the number of faults after $x$ months.
+  \item Calculate the number of faults after $6$ months.
+  \item After how many months are there fewer than $20$ faults?
+\end{parts}
+
+\uppgift{2.4}{Power as a power function}
+The power in a resistor is given by $P(I) = 25I^2$ watts for $0 \leq I \leq 2\,\text{A}$.
+\begin{parts}
+  \item Calculate $P(0.4)$.
+  \item Calculate $P(2)$.
+  \item Find $V_P$ for the given interval.
+  \item At what current is $P = 36\,\text{W}$?
+\end{parts}
+
+\uppgift{2.5}{A rational function}
+The function $f(x) = \dfrac{x^2 - 9}{x - 3}$ is given.
+\begin{parts}
+  \item Factorise the numerator.
+  \item Which values of $x$ are not permitted?
+  \item Simplify the expression.
+  \item Find the zero of the function.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 3}{Trigonometry}
+These exercises review \kapref{9}.
+
+\uppgift{3.1}{Angle measure}
+\begin{delar}(2)
+  \task Convert $135^{\circ}$ to radians.
+  \task Convert $-120^{\circ}$ to radians.
+  \task Convert $\dfrac{5\pi}{6}$ to degrees.
+  \task Convert $2\,\text{rad}$ to degrees.
+\end{delar}
+
+\uppgift{3.2}{Properties from the equation}
+An AC voltage is given by $u(t) = 6\sin\left(400\pi t - \dfrac{\pi}{3}\right)$ volts.
+\begin{parts}
+  \item Give the amplitude.
+  \item Give the angular frequency and the frequency.
+  \item Give the period.
+  \item How many milliseconds does the phase correspond to, and is the curve early or late?
+\end{parts}
+
+\uppgift{3.3}{Writing the equation}
+An AC voltage has the amplitude $12\,\text{V}$, the period $T = 2\,\text{ms}$ and the phase
+$30^{\circ}$. Find $u(t)$ in the form $\abs{U}\sin(\omega t + \delta)$ with the phase in radians.
+
+\uppgift{3.4}{Instantaneous value, RMS value and power}
+An AC voltage is given by $u(t) = 8\sin(100\pi t)$ volts.
+\begin{parts}
+  \item Calculate $u(5\,\text{ms})$.
+  \item Calculate $U_{\text{RMS}}$.
+  \item The voltage is applied across a resistor $R = 50\,\Omega$. Calculate the power.
+\end{parts}
+
+\uppgift{3.5}{A trigonometric equation}
+An AC voltage is given by $u(t) = 10\sin(200\pi t)$ volts.
+\begin{parts}
+  \item At what time is $u(t) = 5\,\text{V}$ for the first time?
+  \item Give the next time at which $u(t) = 5\,\text{V}$.
+  \item At what time is the peak value first reached?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Logarithms and decibels}
+These exercises review \kapref{10}.
+
+\uppgift{4.1}{Exponential and logarithmic equations}
+Solve the equations.
+\begin{delar}(4)
+  \task $2^x = 128$
+  \task $10^x = 500$
+  \task $e^{2x} = 5$
+  \task $\log(x - 1) = 2$
+\end{delar}
+
+\uppgift{4.2}{The laws of logarithms}
+Calculate or simplify.
+\begin{delar}(4)
+  \task $\log 4 + \log 25$
+  \task $\log 500 - \log 5$
+  \task $3\log 2$
+  \task $\ln e^3$
+\end{delar}
+
+\uppgift{4.3}{Gain in dB}
+An amplifier has $U_{\text{in}} = 20\,\text{mV}$ and $U_{\text{out}} = 2\,\text{V}$.
+\begin{parts}
+  \item Calculate the gain in dB.
+  \item After the amplifier comes a filter that attenuates $12\,\text{dB}$. Calculate the total
+    gain in~dB.
+  \item Calculate the total linear gain.
+  \item Calculate the output voltage after the filter.
+\end{parts}
+
+\uppgift{4.4}{Power in dB and dBm}
+The power level in dBm is given relative to $1\,\text{mW}$:
+\[
+  P_{\text{dBm}} = 10\log_{10}\left(\frac{P}{1\,\text{mW}}\right)
+\]
+\begin{parts}
+  \item An amplifier has $P_{\text{in}} = 2\,\text{W}$ and $P_{\text{out}} = 50\,\text{W}$.
+    Calculate the gain in dB.
+  \item A transmitter has the output power $20\,\text{dBm}$. Give the power in mW.
+  \item How many dBm does $1\,\text{W}$ correspond to?
+\end{parts}
+
+\uppgift{4.5}{Discharging a capacitor}
+The voltage is given by $u(t) = 12e^{-t/(RC)}$ volts with $R = 22\,\text{k}\Omega$ and
+$C = 100\,\mu\text{F}$.
+\begin{parts}
+  \item Calculate the time constant $\tau = RC$.
+  \item Calculate the voltage after $3$ seconds.
+  \item After how long has the voltage halved?
+  \item After how long is the voltage down to $1\,\text{V}$?
+\end{parts}

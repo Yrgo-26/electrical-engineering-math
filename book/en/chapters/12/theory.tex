@@ -1,0 +1,117 @@
+% Sections 12.1 to 12.6, translated from sv/chapters/12/theory.tex.
+
+\section{Rate of change and the difference quotient}
+\label{c12:sec:andringskvot}
+The \textbf{difference quotient} (the average rate of change) of $f(x)$ over the interval
+$[x, x + h]$ is
+\[
+  \frac{f(x + h) - f(x)}{h}.
+\]
+Geometrically, this is the slope of the \textbf{secant} through the points $(x, f(x))$ and
+$(x + h, f(x + h))$.
+
+\section{The definition of the derivative}
+\label{c12:sec:definition}
+The derivative $f'(x)$ is the limit of the difference quotient as $h \to 0$:
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\]
+Geometrically, $f'(x)$ is the \textbf{slope of the tangent} to the curve $y = f(x)$ at the point
+$x$. The derivative is also called the \textbf{instantaneous rate of change}.
+
+\section{Rules of differentiation for polynomials}
+\label{c12:sec:regler}
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Function} & \thead{Derivative} \\
+  \midrule
+  $f(x) = C$ (constant) & $f'(x) = 0$ \\
+  $f(x) = x^n$ & $f'(x) = nx^{n-1}$ \\
+  $f(x) = Cx^n$ & $f'(x) = Cnx^{n-1}$ \\
+  $f(x) = u(x) + v(x)$ & $f'(x) = u'(x) + v'(x)$ \\
+\end{narrowtable}
+
+\begin{exempel}
+\[
+  f(x) = 3x^4 - 2x^2 + 5 \quad \Rightarrow \quad f'(x) = 12x^3 - 4x
+\]
+\end{exempel}
+
+\section{The equation of the tangent}
+\label{c12:sec:tangent}
+The tangent to $y = f(x)$ at the point $(x_0, f(x_0))$ has the equation
+\[
+  y = f'(x_0)(x - x_0) + f(x_0).
+\]
+
+\section{Turning points -- maximum and minimum}
+\label{c12:sec:extrempunkter}
+A \textbf{stationary point} satisfies $f'(x_0) = 0$. Whether it is a maximum or a minimum is
+decided with the second-derivative test:
+\begin{itemize}
+  \item $f''(x_0) > 0$: \textbf{minimum} (the curve is concave up),
+  \item $f''(x_0) < 0$: \textbf{maximum} (the curve is concave down).
+\end{itemize}
+
+\section{Worked examples}
+\label{c12:sec:typexempel}
+
+\begin{exempel}[Differentiating polynomial functions]
+Differentiate
+\begin{align*}
+  \textbf{a)}\quad f(x) &= -2x^2 + 2x + 4, \\
+  \textbf{b)}\quad f(x) &= 3x^3 - 6x^2 + \frac{3x}{4} - 5, \\
+  \textbf{c)}\quad f(x) &= -x^4 + x^3 + \frac{2x^2}{3} - 3x + 2.
+\end{align*}
+The rule for $Cx^n$ is applied term by term:
+\begin{align*}
+  \textbf{a)}\quad f'(x) &= -4x + 2 \\
+  \textbf{b)}\quad f'(x) &= 9x^2 - 12x + \frac{3}{4} \\
+  \textbf{c)}\quad f'(x) &= -4x^3 + 3x^2 + \frac{4x}{3} - 3
+\end{align*}
+\end{exempel}
+
+\begin{exempel}[Analysing a parabola]
+The function is $f(x) = -x^2 + 6x - 5$.
+\par\noindent\textbf{a)} Find $f'(x)$.
+\[
+  f'(x) = -2x + 6
+\]
+\textbf{b)} Solve $f'(x) = 0$.
+\[
+  -2x + 6 = 0 \quad \Rightarrow \quad x = 3
+\]
+\textbf{c)} Determine the type with $f''(x)$.
+\[
+  f''(x) = -2 < 0 \quad \Rightarrow \quad \text{maximum}
+\]
+\textbf{d)} Calculate the maximum value.
+\[
+  f(3) = -9 + 18 - 5 = 4
+\]
+The maximum point is $(3, 4)$.
+\end{exempel}
+
+\begin{exempel}[Current in an RC circuit]
+The current is approximated by $i(t) = -0.4t^3 + 2.4t^2 - 3t + 1.2$ amperes, with the time $t$ in
+seconds.
+\par\noindent\textbf{a)} Calculate $i'(t)$.
+\[
+  i'(t) = -1.2t^2 + 4.8t - 3
+\]
+\textbf{b)} Solve $i'(t) = 0$ with the PQ-formula.
+\begin{gather*}
+  t^2 - 4t + 2.5 = 0 \quad \Rightarrow \quad t = 2 \pm \sqrt{1.5} \\
+  t_1 \approx 0.78\,\text{s}, \qquad t_2 \approx 3.22\,\text{s}
+\end{gather*}
+\textbf{c)} The second derivative is $i''(t) = -2.4t + 4.8$, and
+\begin{alignat*}{2}
+  i''(0.78) &\approx 2.9 > 0 &\qquad& \Rightarrow \quad \text{minimum at } t_1, \\
+  i''(3.22) &\approx -2.9 < 0 && \Rightarrow \quad \text{maximum at } t_2.
+\end{alignat*}
+\textbf{d)} The current at the stationary points is
+\[
+  i(0.78) \approx 0.13\,\text{A} \ \text{(minimum)}, \qquad
+  i(3.22) \approx 3.07\,\text{A} \ \text{(maximum)}.
+\]
+\end{exempel}

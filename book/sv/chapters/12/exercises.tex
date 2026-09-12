@@ -1,0 +1,225 @@
+% Section 12.8, from lectures/L12/appendix/b_exercises.md.
+
+\section{Uppgifter}
+\label{c12:sec:uppgifter}
+
+\begin{aside}
+\textbf{Så arbetar du med uppgifterna.} Del~1 och del~2 räknas under lektionen: först på egen
+hand, några minuter per uppgift, sedan gemensamt. Del~3 är extrauppgifter att träna vidare på
+efter lektionen; de flesta av dem går att räkna i huvudet eller med papper och penna.
+
+\facitnotis{L12}
+\end{aside}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
+
+\uppgift{1.1}{Linjär förstärkning}
+Sambandet mellan den linjära förstärkningen och förstärkningen mätt i dB är
+\[
+  G_{\text{dB}} = 20\log_{10} G_{\text{lin}},
+\]
+där $G_{\text{dB}}$ är förstärkningen i dB och $G_{\text{lin}}$ den linjära förstärkningen. En
+ljudförstärkare har en förstärkning på $26\,\text{dB}$. Beräkna motsvarande linjära
+spänningsförstärkning.
+
+\uppgift{1.2}{Uteffekt i dBm samt mW}
+Sambandet mellan en effekt $P$ och motsvarande effekt i dBm (dB i förhållande till
+$1\,\text{mW}$) är
+\[
+  P_{\text{dBm}} = 10\log_{10}\frac{P}{1\,\text{mW}},
+\]
+där $P$ är effekten i mW och $P_{\text{dBm}}$ motsvarande effekt i dBm. En radiosändare har en
+uteffekt på $17\,\text{dBm}$. Ange uteffekten i mW.
+
+\uppgift{1.3}{Ljudnivå från multipla ljudkällor}
+För ett godtyckligt antal lika starka ljudkällor kan den totala ljudnivån beräknas med
+\[
+  L_{\text{tot}} = L_{\text{enkel}} + 10\log_{10} n,
+\]
+där $L_{\text{tot}}$ är den totala ljudnivån, $L_{\text{enkel}}$ ljudnivån från en ljudkälla och
+$n$ antalet ljudkällor. Beräkna antalet lika starka ljudkällor om ljudet från en ljudkälla är
+$68\,\text{dB}$ och den totala ljudnivån uppgår till $72{,}8\,\text{dB}$.
+
+% ------------------------------------------------------------------------------------------
+\needspace{12\baselineskip}
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Derivering av funktioner}
+Derivera följande funktioner.
+\begin{delar}(2)
+  \task $f(x) = -3x^2 + 5x + 2$
+  \task $f(x) = 2x^3 - 5x^2 + \dfrac{2x}{3} - 4$
+  \task* $f(x) = 2x^4 - x^3 + \dfrac{3x^2}{5} + 4x - 1$
+\end{delar}
+
+\uppgift{2.2}{Analys av en parabel}
+Betrakta funktionen
+\[
+  f(x) = -x^2 + 8x - 7.
+\]
+\begin{parts}
+  \item Derivera funktionen $f(x)$, det vill säga bestäm uttrycket för $f'(x)$.
+  \item Bestäm var funktionen är stationär, det vill säga lös ekvationen $f'(x) = 0$.
+  \item Avgör med hjälp av andra derivatan om punkten är ett \textbf{maximum} eller ett
+    \textbf{minimum}.
+  \item Beräkna funktionens största eller minsta värde.
+  \item Rita grafen till $f(x)$ i GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, och
+    kontrollera att dina svar stämmer.
+\end{parts}
+
+\uppgift{2.3}{Analys av strömförlopp i en RC-krets}
+Strömmen genom en viss RC-krets kan approximeras med polynomfunktionen
+\[
+  i(t) = -0{,}2t^3 + 1{,}8t^2 - 3{,}6t + 2{,}5,
+\]
+där $i(t)$ är strömmen genom kretsen i A och $t$ tiden i sekunder.
+\begin{parts}
+  \item Derivera funktionen för att bestämma uttrycket för strömmens förändring
+    (strömändringshastigheten) $i'(t)$.
+  \item Beräkna den tidpunkt (eller de tidpunkter) då strömmen är stationär, det vill säga när
+    $i'(t) = 0$.
+  \item Bestäm med hjälp av \textbf{andra derivatan} om respektive stationär punkt är ett
+    \textbf{maximum} eller ett \textbf{minimum}.
+  \item Beräkna strömmens maximi- och minimivärde, det vill säga strömmen $i(t)$ i de
+    stationära punkterna.
+  \item Rita grafen till $i(t)$ i GeoGebra, \url{https://www.geogebra.org/graphing?lang=en}, och
+    kontrollera att dina svar stämmer.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 3}{Extrauppgifter}
+Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen.
+
+\uppgift{3.1}{Derivera polynom}
+Derivera följande funktioner.
+\begin{delar}(3)
+  \task $f(x) = x^5$
+  \task $f(x) = 4x^3$
+  \task $f(x) = 7$
+  \task $f(x) = 2x^2 - 5x + 1$
+  \task $f(x) = -3x^4 + x$
+  \task $f(x) = \dfrac{x^3}{3}$
+\end{delar}
+
+\uppgift{3.2}{Ändringskvot och derivatans definition}
+Funktionen $f(x) = x^2$ är given.
+\begin{parts}
+  \item Ställ upp ändringskvoten över intervallet $[2,\, 2 + h]$ och förenkla den.
+  \item Vilket värde närmar sig kvoten när $h \to 0$?
+  \item Kontrollera svaret med deriveringsregeln $f'(x) = 2x$.
+  \item Beräkna ändringskvoten för $h = 0{,}1$ och $h = 0{,}01$.
+\end{parts}
+
+\uppgift{3.3}{Derivatan i en punkt}
+Funktionen $f(x) = x^3 - 3x$ är given.
+\begin{delar}(3)
+  \task Bestäm $f'(x)$.
+  \task Beräkna $f'(0)$.
+  \task Beräkna $f'(2)$.
+  \task* I vilka punkter är tangenten vågrät?
+\end{delar}
+
+\uppgift{3.4}{Tangentens ekvation}
+Funktionen $f(x) = x^2 - 4x + 5$ är given. Betrakta punkten där $x_0 = 3$.
+\begin{delar}(2)
+  \task Beräkna $f(3)$.
+  \task Beräkna $f'(3)$.
+  \task Bestäm tangentens ekvation.
+  \task Var skär tangenten $x$-axeln?
+\end{delar}
+
+\uppgift{3.5}{Stationär punkt hos en parabel}
+Funktionen $f(x) = x^2 - 6x + 8$ är given.
+\begin{parts}
+  \item Bestäm $f'(x)$.
+  \item Lös $f'(x) = 0$.
+  \item Avgör med $f''(x)$ om punkten är ett maximum eller ett minimum.
+  \item Beräkna funktionens extremvärde.
+\end{parts}
+
+\uppgift{3.6}{Stationära punkter hos en tredjegradsfunktion}
+Funktionen $f(x) = x^3 - 3x^2 - 9x + 5$ är given.
+\begin{parts}
+  \item Bestäm $f'(x)$ och faktorisera uttrycket.
+  \item Bestäm de stationära punkternas $x$-värden.
+  \item Avgör med $f''(x)$ vilken punkt som är maximum respektive minimum.
+  \item Beräkna funktionsvärdena i båda punkterna.
+\end{parts}
+
+\uppgift{3.7}{Växande och avtagande}
+Funktionen $f(x) = x^2 - 4x$ är given.
+\begin{delar}(2)
+  \task Bestäm $f'(x)$.
+  \task För vilka $x$ är funktionen växande?
+  \task För vilka $x$ är den avtagande?
+  \task Vad händer vid $x = 2$?
+\end{delar}
+
+\uppgift{3.8}{Andra derivatan}
+Bestäm $f'(x)$ och $f''(x)$.
+\begin{delar}(3)
+  \task $f(x) = x^4 - 2x^2$
+  \task $f(x) = 5x^3 + 2x$
+  \task $f(x) = -x^2 + 7x - 1$
+  \task* Vad säger tecknet på $f''(x)$ om kurvans form?
+\end{delar}
+
+\uppgift{3.9}{Ström genom en kondensator}
+Strömmen genom en kondensator ges av $i_C(t) = C\dfrac{du}{dt}$. En kondensator med
+$C = 100\,\mu\text{F}$ har spänningen $u(t) = 4t^2 + 2t$ volt.
+\begin{parts}
+  \item Bestäm $u'(t)$.
+  \item Bestäm ett uttryck för $i_C(t)$ i mA.
+  \item Beräkna strömmen vid $t = 1\,\text{s}$.
+  \item Vid vilken tidpunkt är strömmen $2\,\text{mA}$?
+\end{parts}
+
+\uppgift{3.10}{Spänning över en spole}
+Spänningen över en spole ges av $u_L(t) = L\dfrac{di}{dt}$. En spole med $L = 0{,}5\,\text{H}$
+genomflyts av strömmen $i(t) = 2t^2 - 4t + 3$ ampere.
+\begin{parts}
+  \item Bestäm $i'(t)$.
+  \item Bestäm ett uttryck för $u_L(t)$.
+  \item Vid vilken tidpunkt är $u_L = 0$?
+  \item Vad händer med strömmen vid denna tidpunkt?
+\end{parts}
+
+\uppgift{3.11}{Maximal effekt}
+Effekten som en generator levererar till en last varierar med strömmen enligt
+$P(I) = 24I - 3I^2$ watt.
+\begin{parts}
+  \item Bestäm $P'(I)$.
+  \item Vid vilken ström är effekten stationär?
+  \item Avgör med $P''(I)$ om det är ett maximum eller ett minimum.
+  \item Beräkna den maximala effekten.
+\end{parts}
+
+\uppgift{3.12}{Förändringshastighet i en signal}
+En spänning ges av $u(t) = -2t^2 + 12t$ volt för $0 \leq t \leq 6\,\text{s}$.
+\begin{parts}
+  \item Bestäm $u'(t)$.
+  \item Vid vilken tidpunkt är spänningen störst, och hur stor är den då?
+  \item Hur snabbt ändras spänningen vid $t = 1\,\text{s}$?
+  \item Vid vilken tidpunkt minskar spänningen med $4\,\text{V/s}$?
+\end{parts}
+
+\uppgift{3.13}{Tolkning av derivatans tecken}
+För en funktion $f$ gäller att $f'(1) = 3$, $f'(2) = 0$, $f'(3) = -2$ och $f''(2) = -5$.
+\begin{parts}
+  \item Är $f$ växande eller avtagande vid $x = 1$?
+  \item Är $f$ växande eller avtagande vid $x = 3$?
+  \item Vilken typ av punkt är $x = 2$?
+  \item Beskriv med ord hur grafen ser ut kring $x = 2$.
+\end{parts}
+
+\uppgift{3.14}{Hitta felet}
+Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det korrekta svaret.
+\begin{delar}(2)
+  \task $f(x) = x^3 \quad \Rightarrow \quad f'(x) = 3x^2 \cdot x$
+  \task $f(x) = 5 \quad \Rightarrow \quad f'(x) = 5$
+  \task $f(x) = 4x \quad \Rightarrow \quad f'(x) = 4x$
+  \task $f(x) = 3x^2 + 2x \quad \Rightarrow \quad f'(x) = 6x + 2x$
+  \task* Om $f'(x_0) = 0$ är $x_0$ alltid en maximipunkt.
+  \task* $f''(x)$ fås genom att kvadrera $f'(x)$.
+\end{delar}
