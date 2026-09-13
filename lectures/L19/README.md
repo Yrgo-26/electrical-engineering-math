@@ -15,7 +15,7 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Gå igenom [övningstentamen](../../exam/practice_exam.md) och försök lösa uppgifterna på egen hand.
+* Gå igenom [övningstentamen](../../exam/practice_exam.md), eller avsnitt 19.2 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)), och försök lösa uppgifterna på egen hand.
 
 ### Under lektionen
 * Närvara under genomgången.

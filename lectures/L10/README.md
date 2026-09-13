@@ -19,7 +19,7 @@
 ### Innan lektionen
 * Vänligen läs följande litteratur:
     * [Decibel](https://sv.wikipedia.org/wiki/Decibel)
-* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 10 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Närvara under genomgången.

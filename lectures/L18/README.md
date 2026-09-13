@@ -44,7 +44,7 @@ Ingen hårdvara krävs – all kod skrivs och körs i webbläsaren.
 ## Instruktioner
 
 ### Innan lektionen
-* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 18 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 * **Genomför handberäkningarna för samtliga uppgifter i del 1–3** i [bilaga B](./appendix/b_exercises.md), och ta med dem till lektionen.
 * Öppna <https://www.onlinegdb.com/online_c_compiler>, kontrollera att språket är inställt på **C** och tryck på **Run**. Exempelprogrammet ska skriva ut `Hello World`.
 

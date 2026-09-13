@@ -19,7 +19,7 @@
 
 ### Innan lektionen
 * Vänligen se följande [video](https://www.youtube.com/watch?v=N2PpRnFqnqY) för att få lite information om derivatan som koncept.
-* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 12 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Närvara under genomgången.

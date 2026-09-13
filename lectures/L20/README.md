@@ -14,7 +14,7 @@
 ## Instruktioner
 
 ### Innan tentamen
-* Läs igenom [tentamensinformationen](../../exam/README.md).
+* Läs igenom [tentamensinformationen](../../exam/README.md) eller avsnitt 19.1 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 * Repetera kursens centrala moment enligt [L19](../L19/README.md).
 * Förbered en formelsamling på ett A4-ark (båda sidor) samt ett handskrivet A4-ark (båda sidor) med egna anteckningar.
 

@@ -20,7 +20,7 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Läs igenom materialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom materialet i [bilaga A](./appendix/a_theory.md) eller kapitel 2 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Läs igenom ditt rättade diagnostiska test från [L01](../L01/README.md). Lösningsförslaget gås igenom i helklass. Se tabellen nedan för vad du bör repetera.
