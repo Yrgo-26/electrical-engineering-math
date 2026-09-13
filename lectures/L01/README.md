@@ -22,7 +22,7 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Läs igenom materialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom materialet i [bilaga A](./appendix/a_theory.md) eller kapitel 1 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Genomför det diagnostiska testet individuellt utan miniräknare (cirka 15 minuter). Testet delas ut på papper vid lektionens start och lämnas in när tiden är slut.

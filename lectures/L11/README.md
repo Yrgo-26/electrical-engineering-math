@@ -16,8 +16,8 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Repetera kursmaterialet för L07–L10 (bilaga A i respektive lektion).
-* Träna gärna på repetitionsuppgifterna i [bilaga B](./appendix/b_exercises.md). Lösningsförslag finns [här](./appendix/c_solutions.md).
+* Repetera kursmaterialet för L07–L10 (bilaga A i respektive lektion) eller kapitel 7–10 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
+* Träna gärna på repetitionsuppgifterna i [bilaga B](./appendix/b_exercises.md) eller avsnitt 11.2 i boken. Lösningsförslag finns [här](./appendix/c_solutions.md).
 
 ### Under lektionen
 * Närvara under genomgången.

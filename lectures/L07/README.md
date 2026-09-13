@@ -17,8 +17,8 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Repetera kursmaterialet för L01–L06 inför **dugga 1**.
-* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md).
+* Repetera kursmaterialet för L01–L06, eller kapitel 1–6 i boken, inför **dugga 1**.
+* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 7 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Genomför **dugga 1** (täcker L01–L06).

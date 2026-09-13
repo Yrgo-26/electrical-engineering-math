@@ -17,7 +17,7 @@
 
 ### Innan lektionen
 * Vänligen se följande [video](https://www.youtube.com/watch?v=__Uw1SXPW7s) för att få lite information om integraler som koncept.
-* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md).
+* Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 14 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 
 ### Under lektionen
 * Närvara under genomgången.

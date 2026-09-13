@@ -1,5 +1,7 @@
 # Föreläsningar
 
+Varje lektion L01–L19 motsvaras av kapitlet med samma nummer i boken ([svenska](../book/elteknisk-matematik.pdf) eller [engelska](../book/electrical-engineering-mathematics.pdf)), och informationen inför tentamen i L20 finns i avsnitt 19.1.
+
 * [L01](./L01/README.md): Kursintroduktion och talsystem.
 * [L02](./L02/README.md): Algebra.
 * [L03](./L03/README.md): Linjära ekvationer och olikheter.
