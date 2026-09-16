@@ -11,11 +11,11 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 
 | Vecka | Datum | Lektion | Ämne |
 |----|-------|-----|-----------------------------------------------|
-| 36 | 1/9   | L01 | Kursintroduktion och talsystem                |
+| 36 | 1/9   | L01 | Talmängder och grundläggande aritmetik        |
 | 37 | 8/9   | L02 | Algebra                                       |
 | 38 | 15/9  | L03 | Linjära ekvationer och olikheter              |
 | 39 | 22/9  | L04 | Ekvationssystem                               |
-| 40 | 29/9  | L05 | Potenser och rötter                           |
+| 40 | 29/9  | L05 | Potenser, rötter och talsystem                |
 | 41 | 6/10  | L06 | Andragradsekvationer                          |
 | 42 | 13/10 | L07 | Vektorer – **Dugga 1**                        |
 | 42 | 15/10 | L08 | Funktioner                                    |
@@ -37,11 +37,11 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 
 | Vecka | Datum | Lektion | Ämne |
 |----|-------|-----|-----------------------------------------------|
-| 36 | 3/9   | L01 | Kursintroduktion och talsystem                |
+| 36 | 3/9   | L01 | Talmängder och grundläggande aritmetik        |
 | 37 | 10/9  | L02 | Algebra                                       |
 | 38 | 17/9  | L03 | Linjära ekvationer och olikheter              |
 | 39 | 24/9  | L04 | Ekvationssystem                               |
-| 40 | 1/10  | L05 | Potenser och rötter                           |
+| 40 | 1/10  | L05 | Potenser, rötter och talsystem                |
 | 41 | 8/10  | L06 | Andragradsekvationer                          |
 | 42 | 13/10 | L07 | Vektorer – **Dugga 1**                        |
 | 42 | 15/10 | L08 | Funktioner                                    |

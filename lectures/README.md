@@ -2,11 +2,11 @@
 
 Varje lektion L01–L19 motsvaras av kapitlet med samma nummer i boken ([svenska](../book/elteknisk-matematik.pdf) eller [engelska](../book/electrical-engineering-mathematics.pdf)), och informationen inför tentamen i L20 finns i avsnitt 19.1.
 
-* [L01](./L01/README.md): Kursintroduktion och talsystem.
+* [L01](./L01/README.md): Talmängder och grundläggande aritmetik.
 * [L02](./L02/README.md): Algebra.
 * [L03](./L03/README.md): Linjära ekvationer och olikheter.
 * [L04](./L04/README.md): Ekvationssystem.
-* [L05](./L05/README.md): Potenser och rötter.
+* [L05](./L05/README.md): Potenser, rötter och talsystem.
 * [L06](./L06/README.md): Andragradsekvationer.
 * [L07](./L07/README.md): Vektorer.
 * [L08](./L08/README.md): Funktioner.

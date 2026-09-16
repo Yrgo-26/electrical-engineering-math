@@ -4,7 +4,7 @@ Kursrepo för `Elteknisk matematik` med klasserna Ee26 samt Eh26, ht26.
 ## Om kursen
 Kursen behandlar den matematik som används inom elektroteknik, med fokus på:
 * Aritmetik, algebra samt linjära ekvationer och ekvationssystem.
-* Potenser, rötter, andragradsekvationer samt exponentialfunktioner och logaritmer (inklusive decibel).
+* Potenser, rötter, binära och hexadecimala tal, andragradsekvationer samt exponentialfunktioner och logaritmer (inklusive decibel).
 * Vektorer, funktioner och trigonometriska funktioner.
 * Derivata och integraler, samt tillämpningar inom kretsteori.
 * Komplexa tal på rektangulär, polär och Eulerform, samt fasorer för växelströmsberäkningar.
