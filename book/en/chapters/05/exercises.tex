@@ -1,4 +1,4 @@
-% Section 5.9, translated from sv/chapters/05/exercises.tex.
+% Section 5.10, translated from sv/chapters/05/exercises.tex.
 
 \section{Exercises}
 \label{c5:sec:uppgifter}
@@ -63,17 +63,21 @@ Calculate the power $P$ dissipated in a resistor using $P = \dfrac{U^2}{R}$ and 
   \item $I = 40\,\text{mA}$ and $R = 50\,\Omega$. Calculate $P$ in mW.
 \end{parts}
 
-\uppgift{2.4}{RMS value of a sine voltage}
-The relationship between the amplitude $\abs{U}$ and the RMS value $U_{\text{RMS}}$ of a sine
-voltage is
-\[
-  U_{\text{RMS}} = \frac{\abs{U}}{\sqrt{2}}.
-\]
+\uppgift{2.4}{From binary and hexadecimal to decimal}
+Convert to decimal form.
+\begin{delar}(4)
+  \task $1010_2$
+  \task $11001_2$
+  \task $\mathrm{3A}_{16}$
+  \task \code{0xC8}
+\end{delar}
+
+\uppgift{2.5}{From decimal to binary and hexadecimal}
 \begin{parts}
-  \item A sine voltage has the amplitude $\abs{U} = 325\,\text{V}$ (mains voltage). Calculate
-    $U_{\text{RMS}}$.
-  \item A measured RMS voltage is $U_{\text{RMS}} = 12\,\text{V}$. Calculate the amplitude
-    $\abs{U}$.
+  \item Convert $22$ to binary.
+  \item Convert $100$ to binary.
+  \item Write the binary number from b) in hexadecimal by splitting the bits into groups of four.
+  \item Write \code{0x5A} in binary.
 \end{parts}
 
 % ------------------------------------------------------------------------------------------
@@ -220,3 +224,47 @@ Each line contains a common mistake with powers. Explain the mistake and write t
   \task $\sqrt{9 + 16} = 3 + 4$
   \task $a^{-2} = -a^2$
 \end{delar}
+
+\uppgift{3.15}{Binary numbers}
+Convert the binary numbers in a)--c) to decimal and the decimal numbers in d)--f) to binary.
+\begin{delar}(3)
+  \task $111_2$
+  \task $10000_2$
+  \task $101010_2$
+  \task $37$
+  \task $64$
+  \task $255$
+\end{delar}
+
+\uppgift{3.16}{Hexadecimal numbers}
+Convert the numbers in a)--c) to decimal and the numbers in d)--f) to hexadecimal.
+\begin{delar}(3)
+  \task $\mathrm{1F}_{16}$
+  \task \code{0x80}
+  \task $\mathrm{ABC}_{16}$
+  \task $175$
+  \task $4\,096$
+  \task $1\,000$
+\end{delar}
+
+\uppgift{3.17}{Between binary and hexadecimal}
+Write the binary numbers in a)--c) in hexadecimal and the hexadecimal numbers in d)--f) in binary.
+\begin{delar}(3)
+  \task $1001\,1110_2$
+  \task $1111\,0000_2$
+  \task $101011_2$
+  \task \code{0x3C}
+  \task \code{0xA5}
+  \task \code{0x7F}
+\end{delar}
+
+\uppgift{3.18}{Bits, bytes and registers}
+The bits in a binary number are numbered from the right, starting at $0$.
+\begin{parts}
+  \item How many different values can be stored with $4$ bits? What is the largest value?
+  \item An ADC (analogue-to-digital converter) with a resolution of $10$ bits converts a voltage to
+    an integer. How many different values can it give, and what is the largest?
+  \item An 8-bit register has the value \code{0x24}. Which bits are ones?
+  \item In an 8-bit register, bit~$0$ and bit~$7$ are to be ones and the other bits zeros. Give the
+    value of the register in binary, hexadecimal and decimal.
+\end{parts}

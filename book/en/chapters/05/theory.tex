@@ -1,4 +1,4 @@
-% Sections 5.1 to 5.7, translated from sv/chapters/05/theory.tex.
+% Sections 5.1 to 5.8, translated from sv/chapters/05/theory.tex.
 
 \section{Powers}
 \label{c5:sec:potenser}
@@ -166,3 +166,130 @@ With $I = 20\,\text{mA} = 20 \times 10^{-3}\,\text{A}$ and $R = 1\,\text{k}\Omeg
   P = 10^3 \times (20 \times 10^{-3})^2 = 10^3 \times 400 \times 10^{-6} = 0.4\,\text{W}.
 \]
 \end{exempel}
+
+\section{Binary and hexadecimal numbers}
+\label{c5:sec:binart}
+Our everyday number system is a \textbf{positional number system} with base $10$: the value of a
+digit depends on where in the number it stands, and each position corresponds to a power of ten.
+The rightmost position has the value $10^0 = 1$:
+\[
+  4\,703 = 4 \cdot 10^3 + 7 \cdot 10^2 + 0 \cdot 10^1 + 3 \cdot 10^0
+\]
+The same idea works with any base. In digital electronics and programming, the \textbf{binary}
+and \textbf{hexadecimal} number systems are used as well as the decimal one. The table shows the
+number $45$ in all three:
+
+\begin{narrowtable}{@{}lcll@{\hspace{2em}}l@{}}
+  \thead{Number system} & \thead{Base} & \thead{Digits} & \thead{Written} & \thead{In C} \\
+  \midrule
+  Decimal & $10$ & 0--9 & $45$ & \code{45} \\
+  Binary & $2$ & 0 and 1 & $101101_2$ & \code{0b101101} \\
+  Hexadecimal & $16$ & 0--9 and A--F & $\mathrm{2D}_{16}$ & \code{0x2D} \\
+\end{narrowtable}
+
+The hexadecimal digits A--F stand for $10$--$15$. The small number after a number gives its base;
+without one, the number is decimal.
+
+A binary digit is called a \textbf{bit}, and eight bits are called a \textbf{byte}. With $n$ bits,
+$2^n$ different values can be stored, from $0$ to $2^n - 1$. A byte can therefore hold $2^8 = 256$
+different values, $0$--$255$.
+
+\subsection{From binary or hexadecimal to decimal}
+\label{c5:sec:tilldecimalt}
+Multiply each digit by the value of its position and add. The positions are numbered from the
+right, starting at $0$, so position $n$ has the value $2^n$ in a binary number and $16^n$ in a
+hexadecimal number:
+
+\begin{narrowtable}{@{}lcccccccc@{}}
+  \thead{Position $n$} & $7$ & $6$ & $5$ & $4$ & $3$ & $2$ & $1$ & $0$ \\
+  \midrule
+  $2^n$ & $128$ & $64$ & $32$ & $16$ & $8$ & $4$ & $2$ & $1$ \\
+\end{narrowtable}
+
+For hexadecimal numbers, $16^0 = 1$, $16^1 = 16$, $16^2 = 256$ and $16^3 = 4\,096$ are usually
+enough.
+
+\begin{exempel}
+\[
+  1011_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 8 + 0 + 2 + 1 = 11
+\]
+\end{exempel}
+
+\begin{exempel}
+F stands for $15$:
+\[
+  \mathrm{2F}_{16} = 2 \cdot 16^1 + 15 \cdot 16^0 = 32 + 15 = 47
+\]
+\end{exempel}
+
+\subsection{From decimal to binary or hexadecimal}
+\label{c5:sec:frandecimalt}
+Divide the number by the base repeatedly and note the remainder each time, until the quotient is
+$0$. The remainders, read \textbf{from bottom to top}, are the number in the new base.
+
+\begin{exempel}[From decimal to binary]
+Convert $13$ to binary.
+
+\begin{narrowtable}{@{}ccc@{}}
+  \thead{Division} & \thead{Quotient} & \thead{Remainder} \\
+  \midrule
+  $13 / 2$ & $6$ & $1$ \\
+  $6 / 2$ & $3$ & $0$ \\
+  $3 / 2$ & $1$ & $1$ \\
+  $1 / 2$ & $0$ & $1$ \\
+\end{narrowtable}
+
+The remainders from bottom to top give $13 = 1101_2$. Check: $8 + 4 + 0 + 1 = 13$~\checkmark
+\end{exempel}
+
+\begin{exempel}[From decimal to hexadecimal]
+Convert $470$ to hexadecimal. A remainder between $10$ and $15$ is written as a letter.
+
+\begin{narrowtable}{@{}ccc@{}}
+  \thead{Division} & \thead{Quotient} & \thead{Remainder} \\
+  \midrule
+  $470 / 16$ & $29$ & $6$ \\
+  $29 / 16$ & $1$ & $13 = \mathrm{D}$ \\
+  $1 / 16$ & $0$ & $1$ \\
+\end{narrowtable}
+
+The remainders from bottom to top give $470 = \mathrm{1D6}_{16}$. Check:
+$1 \cdot 256 + 13 \cdot 16 + 6 = 470$~\checkmark
+\end{exempel}
+
+\begin{aside}
+\note[Tip] A calculator gives the quotient as a decimal number. $470 / 16 = 29.375$ means the
+quotient $29$ and the remainder $0.375 \cdot 16 = 6$.
+\end{aside}
+
+\subsection{Between binary and hexadecimal}
+\label{c5:sec:binarthex}
+Since $16 = 2^4$, each hexadecimal digit corresponds to exactly four bits:
+
+\begin{narrowtable}{@{}cc@{\hspace{2em}}cc@{\hspace{2em}}cc@{\hspace{2em}}cc@{}}
+  \thead{Hex} & \thead{Binary} & \thead{Hex} & \thead{Binary} &
+  \thead{Hex} & \thead{Binary} & \thead{Hex} & \thead{Binary} \\
+  \midrule
+  $0$ & $0000$ & $4$ & $0100$ & $8$ & $1000$ & $\mathrm{C}$ & $1100$ \\
+  $1$ & $0001$ & $5$ & $0101$ & $9$ & $1001$ & $\mathrm{D}$ & $1101$ \\
+  $2$ & $0010$ & $6$ & $0110$ & $\mathrm{A}$ & $1010$ & $\mathrm{E}$ & $1110$ \\
+  $3$ & $0011$ & $7$ & $0111$ & $\mathrm{B}$ & $1011$ & $\mathrm{F}$ & $1111$ \\
+\end{narrowtable}
+
+\textbf{From binary to hexadecimal:} split the bits into groups of four, \textbf{from the right},
+pad with zeros on the left if needed, and replace each group with its hexadecimal digit:
+\[
+  1011\,0110_2 = \underbrace{1011}_{\mathrm{B}}\;\underbrace{0110}_{6} = \mathrm{B6}_{16}
+\]
+\textbf{From hexadecimal to binary:} replace each digit with its four bits:
+\[
+  \mathrm{4D}_{16} = \underbrace{0100}_{4}\;\underbrace{1101}_{\mathrm{D}} = 0100\,1101_2
+\]
+A byte therefore corresponds to exactly two hexadecimal digits, from \code{0x00} to \code{0xFF}.
+This is why, for example, the contents of a microcontroller's registers are often written in
+hexadecimal: \code{0xB6} is easier to read than \code{0b10110110}.
+
+\begin{aside}
+\note[Note] In computing, kilo is sometimes used for $2^{10} = 1\,024$ instead of $1\,000$. The
+unambiguous name is \textbf{kibi} (Ki): $1\,\text{KiB} = 1\,024$~bytes.
+\end{aside}

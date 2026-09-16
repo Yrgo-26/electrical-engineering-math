@@ -1,4 +1,4 @@
-% Section 5.9, from lectures/L05/appendix/b_exercises.md.
+% Section 5.10, from lectures/L05/appendix/b_exercises.md.
 
 \section{Uppgifter}
 \label{c5:sec:uppgifter}
@@ -64,16 +64,21 @@ $P = RI^2$.
   \item $I = 40\,\text{mA}$ och $R = 50\,\Omega$. Beräkna $P$ i mW.
 \end{parts}
 
-\uppgift{2.4}{RMS-värde för sinusspänning}
-Sambandet mellan amplituden $\abs{U}$ och effektivvärdet (RMS-värdet) $U_{\text{RMS}}$ för en
-sinusspänning är
-\[
-  U_{\text{RMS}} = \frac{\abs{U}}{\sqrt{2}}.
-\]
+\uppgift{2.4}{Från binärt och hexadecimalt till decimalt}
+Omvandla till decimal form.
+\begin{delar}(4)
+  \task $1010_2$
+  \task $11001_2$
+  \task $\mathrm{3A}_{16}$
+  \task \code{0xC8}
+\end{delar}
+
+\uppgift{2.5}{Från decimalt till binärt och hexadecimalt}
 \begin{parts}
-  \item En sinusspänning har amplituden $\abs{U} = 325\,\text{V}$ (nätspänning). Beräkna
-    $U_{\text{RMS}}$.
-  \item En uppmätt RMS-spänning är $U_{\text{RMS}} = 12\,\text{V}$. Beräkna amplituden $\abs{U}$.
+  \item Omvandla $22$ till binär form.
+  \item Omvandla $100$ till binär form.
+  \item Skriv binärtalet från b) hexadecimalt genom att dela in bitarna i grupper om fyra.
+  \item Skriv \code{0x5A} i binär form.
 \end{parts}
 
 % ------------------------------------------------------------------------------------------
@@ -218,3 +223,47 @@ Varje rad innehåller ett vanligt potensfel. Förklara felet och skriv det korre
   \task $\sqrt{9 + 16} = 3 + 4$
   \task $a^{-2} = -a^2$
 \end{delar}
+
+\uppgift{3.15}{Binära tal}
+Omvandla binärtalen i a)--c) till decimal form och decimaltalen i d)--f) till binär form.
+\begin{delar}(3)
+  \task $111_2$
+  \task $10000_2$
+  \task $101010_2$
+  \task $37$
+  \task $64$
+  \task $255$
+\end{delar}
+
+\uppgift{3.16}{Hexadecimala tal}
+Omvandla talen i a)--c) till decimal form och talen i d)--f) till hexadecimal form.
+\begin{delar}(3)
+  \task $\mathrm{1F}_{16}$
+  \task \code{0x80}
+  \task $\mathrm{ABC}_{16}$
+  \task $175$
+  \task $4\,096$
+  \task $1\,000$
+\end{delar}
+
+\uppgift{3.17}{Mellan binärt och hexadecimalt}
+Skriv binärtalen i a)--c) hexadecimalt och de hexadecimala talen i d)--f) binärt.
+\begin{delar}(3)
+  \task $1001\,1110_2$
+  \task $1111\,0000_2$
+  \task $101011_2$
+  \task \code{0x3C}
+  \task \code{0xA5}
+  \task \code{0x7F}
+\end{delar}
+
+\uppgift{3.18}{Bitar, byte och register}
+Bitarna i ett binärtal numreras från höger med början på $0$.
+\begin{parts}
+  \item Hur många olika värden kan lagras med $4$ bitar? Vilket är det största värdet?
+  \item En AD-omvandlare (analog-digitalomvandlare) med $10$ bitars upplösning omvandlar en
+    spänning till ett heltal. Hur många olika värden kan den ge, och vilket är det största?
+  \item Ett 8-bitars register har värdet \code{0x24}. Vilka bitar är ettor?
+  \item I ett 8-bitars register ska bit~$0$ och bit~$7$ vara ettor och övriga bitar nollor. Ange
+    registrets värde binärt, hexadecimalt och decimalt.
+\end{parts}
