@@ -65,16 +65,27 @@ Beräkna effekten $P$ som dissiperas i ett motstånd med hjälp av $P = \dfrac{U
 
 ---
 
-### 2.4 – RMS-värde för sinusspänning
-Sambandet mellan amplituden $|U|$ och effektivvärdet (RMS-värdet) $U_{\text{RMS}}$ för en sinusspänning är:
+### 2.4 – Från binärt och hexadecimalt till decimalt
+Omvandla till decimal form:
 
-```math
-U_{\text{RMS}} = \frac{|U|}{\sqrt{2}}
-```
+**a)** $1010_2$
 
-**a)** En sinusspänning har amplituden $|U| = 325\thinspace\text{V}$ (nätspänning). Beräkna $U_{\text{RMS}}$.
+**b)** $11001_2$
 
-**b)** En mätt RMS-spänning är $U_{\text{RMS}} = 12\thinspace\text{V}$. Beräkna amplituden $|U|$.
+**c)** $\mathrm{3A}_{16}$
+
+**d)** `0xC8`
+
+---
+
+### 2.5 – Från decimalt till binärt och hexadecimalt
+**a)** Omvandla $22$ till binär form.
+
+**b)** Omvandla $100$ till binär form.
+
+**c)** Skriv binärtalet från **b)** hexadecimalt genom att dela in bitarna i grupper om fyra.
+
+**d)** Skriv `0x5A` i binär form.
 
 ---
 
@@ -278,5 +289,75 @@ Varje rad innehåller ett vanligt potensfel. Förklara felet och skriv det korre
 **e)** $\sqrt{9 + 16} = 3 + 4$
 
 **f)** $a^{-2} = -a^2$
+
+---
+
+### 3.15 – Binära tal
+Omvandla binärtalen till decimal form:
+
+**a)** $111_2$
+
+**b)** $10000_2$
+
+**c)** $101010_2$
+
+Omvandla decimaltalen till binär form:
+
+**d)** $37$
+
+**e)** $64$
+
+**f)** $255$
+
+---
+
+### 3.16 – Hexadecimala tal
+Omvandla till decimal form:
+
+**a)** $\mathrm{1F}_{16}$
+
+**b)** `0x80`
+
+**c)** $\mathrm{ABC}_{16}$
+
+Omvandla till hexadecimal form:
+
+**d)** $175$
+
+**e)** $4\thinspace 096$
+
+**f)** $1\thinspace 000$
+
+---
+
+### 3.17 – Mellan binärt och hexadecimalt
+Skriv binärtalen hexadecimalt:
+
+**a)** $1001\thinspace 1110_2$
+
+**b)** $1111\thinspace 0000_2$
+
+**c)** $101011_2$
+
+Skriv de hexadecimala talen binärt:
+
+**d)** `0x3C`
+
+**e)** `0xA5`
+
+**f)** `0x7F`
+
+---
+
+### 3.18 – Bitar, byte och register
+Bitarna i ett binärtal numreras från höger med början på $0$.
+
+**a)** Hur många olika värden kan lagras med $4$ bitar? Vilket är det största värdet?
+
+**b)** En AD-omvandlare (analog-digitalomvandlare) med $10$ bitars upplösning omvandlar en spänning till ett heltal. Hur många olika värden kan den ge, och vilket är det största?
+
+**c)** Ett 8-bitars register har värdet `0x24`. Vilka bitar är ettor?
+
+**d)** I ett 8-bitars register ska bit $0$ och bit $7$ vara ettor och övriga bitar nollor. Ange registrets värde binärt, hexadecimalt och decimalt.
 
 ---

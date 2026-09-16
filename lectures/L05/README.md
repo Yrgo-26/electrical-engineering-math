@@ -1,10 +1,11 @@
-# L05 – Potenser och rötter
+# L05 – Potenser, rötter och talsystem
 
 ## Dagordning
 * Potenser och potensregler.
 * Kvadratrötter och n:te rötter.
 * Standardform (vetenskaplig notation).
 * Värdesiffror och avrundning.
+* Binära och hexadecimala tal.
 
 ---
 
@@ -12,6 +13,7 @@
 * Känna till och kunna tillämpa potensreglerna.
 * Kunna beräkna och förenkla uttryck med rötter.
 * Kunna skriva tal på standardform och hantera värdesiffror.
+* Kunna omvandla tal mellan decimal, binär och hexadecimal form.
 
 ---
 
@@ -34,6 +36,7 @@
 ## Utvärdering
 * Förenkla $\dfrac{(3x^2)^3}{9x^4}$ med potensreglerna.
 * En kapacitans är $C = 220\thinspace\text{nF}$. Ange värdet i farad på standardform.
+* Omvandla $1101\thinspace 0010_2$ till hexadecimal och decimal form.
 
 ---
 

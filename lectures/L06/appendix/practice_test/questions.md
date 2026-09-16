@@ -1,4 +1,4 @@
-# Övningsdugga 1 – Aritmetik, algebra, potenser och ekvationer
+# Övningsdugga 1 – Aritmetik, algebra, potenser, talsystem och ekvationer
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
@@ -50,7 +50,7 @@ Lös nedanstående ekvationssystem. Svara exakt i bråkform.
 ---
 
 ### Uppgift 4 (0,5 poäng)
-Ekvationerna i Uppgift 3 är exempel på räta linjens ekvation. Ange den första ekvationens lutning $k$ samt m-värdet $m$.
+Ett 8-bitars register i en mikrokontroller har värdet `0x9C`. Skriv värdet binärt och decimalt.
 
 ---
 

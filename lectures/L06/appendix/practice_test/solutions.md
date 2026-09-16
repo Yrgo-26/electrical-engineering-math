@@ -142,18 +142,26 @@ x = -\frac{17}{7}, \quad y = -\frac{19}{7}
 ---
 
 ### Uppgift 4 (0,5 poäng)
-Ekvationerna i Uppgift 3 är exempel på räta linjens ekvation. Ange den första ekvationens lutning $k$ samt m-värdet $m$.
+Ett 8-bitars register har värdet `0x9C`. Skriv värdet binärt och decimalt.
 
 ---
 
 ### Lösning
-Räta linjens ekvation har formen $y = kx + m$. Vi skriver om den första ekvationen $4y - 2x + 6 = 0$:
+Prefixet `0x` betyder att talet är hexadecimalt. Varje hexadecimal siffra motsvarar fyra bitar, $9 = 1001$ och $\mathrm{C} = 1100$:
 
 ```math
-4y = 2x - 6 \quad \Rightarrow \quad y = \frac{2x-6}{4} = 0{,}5x - 1{,}5
+\mathrm{9C}_{16} = 1001\,1100_2
 ```
 
-**Svar:** $k = 0{,}5, \quad m = -1{,}5$
+Decimalt, där C betyder $12$:
+
+```math
+\mathrm{9C}_{16} = 9 \cdot 16^1 + 12 \cdot 16^0 = 144 + 12 = 156
+```
+
+**Kontroll:** $1001\thinspace 1100_2 = 128 + 16 + 8 + 4 = 156$ ✓
+
+**Svar:** $1001\thinspace 1100_2$ och $156$
 
 ---
 

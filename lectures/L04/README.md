@@ -40,5 +40,6 @@
 ## Nästa lektion
 * Potenser och rötter.
 * Standardform och värdesiffror.
+* Binära och hexadecimala tal.
 
 ---
