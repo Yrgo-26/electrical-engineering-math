@@ -1,4 +1,4 @@
-# Bilaga A – Talsystem och grundläggande aritmetik
+# Bilaga A – Talmängder och grundläggande aritmetik
 
 ## 1. Talmängder
 Matematiken är uppbyggd kring olika talmängder. Varje mängd är en utökning av den föregående.

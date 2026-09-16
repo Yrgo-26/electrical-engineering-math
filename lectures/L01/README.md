@@ -1,9 +1,9 @@
-# L01 – Kursintroduktion och talsystem
+# L01 – Talmängder och grundläggande aritmetik
 
 ## Dagordning
 * Presentation av kursen och dess upplägg.
 * Diagnostiskt test av förkunskaper (påverkar inte betyget).
-* Talsystem: naturliga tal, heltal, rationella tal och reella tal.
+* Talmängder: naturliga tal, heltal, rationella tal och reella tal.
 * Grundläggande aritmetik och räkneordning.
 * Bråk, decimaltal och procent.
 
