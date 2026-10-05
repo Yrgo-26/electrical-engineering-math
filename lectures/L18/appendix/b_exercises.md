@@ -190,7 +190,7 @@ Ett komplext tal ges på polär form som $z = 10\thinspace\angle\thinspace\dfrac
 ---
 
 ### 3.3 – Impedans i en RLC-krets
-En seriekrets består av $R = 47\ \Omega$, $L = 100$ mH och $C = 10\ \mu$F. Kretsen matas med $U = 230$ V vid $f = 50$ Hz.
+En seriekrets består av $R = 47\thinspace\Omega$, $L = 100\thinspace\text{mH}$ och $C = 10\thinspace\mu\text{F}$. Kretsen matas med $U = 230\thinspace\text{V}$ vid $f = 50\thinspace\text{Hz}$.
 
 **a)** Beräkna $\omega$, $X_L = \omega L$ och $X_C = \dfrac{1}{\omega C}$.
 

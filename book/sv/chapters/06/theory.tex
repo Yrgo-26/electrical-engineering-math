@@ -1,4 +1,4 @@
-% Sections 6.1 to 6.5, from lectures/L06/appendix/a_theory.md.
+% Sections 6.1 to 6.4, from lectures/L06/appendix/a_theory.md.
 
 \section{Definition}
 \label{c6:sec:definition}
@@ -12,21 +12,6 @@ rötter}.
 \begin{exempel}
 $2x^2 - 3x - 5 = 0$ är en andragradsekvation med $a = 2$, $b = -3$ och $c = -5$.
 \end{exempel}
-
-\section{Diskriminant}
-\label{c6:sec:diskriminant}
-\textbf{Diskriminanten} $D$ avgör antalet reella rötter:
-\[
-  D = b^2 - 4ac
-\]
-
-\begin{narrowtable}{@{}ll@{}}
-  \thead{Villkor} & \thead{Antal rötter} \\
-  \midrule
-  $D > 0$ & Två skilda reella rötter \\
-  $D = 0$ & En dubbelrot (en rot med multipliciteten 2) \\
-  $D < 0$ & Inga reella rötter \\
-\end{narrowtable}
 
 \section{Lösningsmetoder}
 \label{c6:sec:losningsmetoder}
@@ -70,22 +55,44 @@ Lös $x^2 - 4x + 3 = 0$. Här är $p = -4$ och $q = 3$:
 \end{gather*}
 \end{exempel}
 
-\subsection{ABC-formeln (kvadratiska formeln)}
-\label{c6:sec:abc}
-ABC-formeln gäller generellt för $ax^2 + bx + c = 0$:
+Uttrycket under rottecknet kallas \textbf{diskriminanten} och avgör antalet reella rötter: är det
+positivt finns två rötter, är det noll sammanfaller de till en dubbelrot, och är det negativt
+saknas reella rötter.
+
+PQ-formeln kan också användas genom att flytta över allt utom $x^2$ till högerledet, så att
+ekvationen står på formen $x^2 = px + q$. Då sätts $p$ och $q$ in i formeln med de tecken de har i
+högerledet:
 \[
-  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  x^2 = px + q \quad \Rightarrow \quad x = \frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 + q}
 \]
 
+\begin{exempel}[Alternativ form]
+Lös $x^2 + 2x + 2 = 26$. Flytta över allt utom $x^2$ till högerledet:
+\[
+  x^2 = -2x + 24
+\]
+Här är $p = -2$ och $q = 24$:
+\begin{gather*}
+  x = \frac{-2}{2} \pm \sqrt{\left(\frac{-2}{2}\right)^2 + 24} = -1 \pm \sqrt{1 + 24} = -1 \pm 5 \\*
+  x_1 = 4, \quad x_2 = -6
+\end{gather*}
+\end{exempel}
+
+De två formerna ger samma räkning; $p$ och $q$ har bara motsatta tecken. Välj den form du föredrar
+och håll dig till den.
+
+Om $a \neq 1$ divideras först alla termer med $a$, så att ekvationen blir normerad.
+
 \begin{exempel}
-Lös $2x^2 + 5x - 3 = 0$. Här är $a = 2$, $b = 5$ och $c = -3$:
+Lös $2x^2 + 5x - 3 = 0$. Dividera med $2$:
 \[
-  D = 5^2 - 4 \cdot 2 \cdot (-3) = 25 + 24 = 49
+  x^2 + 2{,}5x - 1{,}5 = 0
 \]
-\[
-  x = \frac{-5 \pm \sqrt{49}}{4} = \frac{-5 \pm 7}{4}
-  \quad \Rightarrow \quad x_1 = 0{,}5, \quad x_2 = -3
-\]
+Här är $p = 2{,}5$ och $q = -1{,}5$:
+\begin{gather*}
+  x = -1{,}25 \pm \sqrt{1{,}25^2 + 1{,}5} = -1{,}25 \pm \sqrt{3{,}0625} = -1{,}25 \pm 1{,}75 \\*
+  x_1 = 0{,}5, \quad x_2 = -3
+\end{gather*}
 \end{exempel}
 
 \subsection{Kvadratkomplettering}
@@ -113,22 +120,6 @@ Lägg till $\left(\frac{6}{2}\right)^2 = 9$:
 \]
 \end{exempel}
 
-\section{Vietas formler}
-\label{c6:sec:vieta}
-Om $x_1$ och $x_2$ är rötterna till $x^2 + px + q = 0$ gäller
-\begin{align*}
-  x_1 + x_2 &= -p \qquad \text{(summan av rötterna)}, \\
-  x_1 \cdot x_2 &= q \qquad \text{(produkten av rötterna)}.
-\end{align*}
-
-\begin{exempel}[Snabbkontroll]
-I \secref{c6:sec:pq} gav $x^2 - 4x + 3 = 0$ rötterna $x_1 = 3$ och $x_2 = 1$. Vietas formler
-bekräftar dem:
-\[
-  3 + 1 = 4 = -(-4)\ \checkmark, \qquad 3 \cdot 1 = 3\ \checkmark
-\]
-\end{exempel}
-
 \section{Tillämpning i elektroteknik}
 \label{c6:sec:tillampning}
 
@@ -150,11 +141,34 @@ Med $P = 8\,\text{W}$ och $R = 50\,\Omega$ blir
 \subsection{Resistans från seriekoppling}
 \label{c6:sec:serie}
 Två motstånd $R_1$ och $R_2$ är seriekopplade med $R_1 + R_2 = 10\,\Omega$ och
-$R_1 \cdot R_2 = 24\,\Omega^2$. Enligt Vietas formler är de rötterna till
+$R_1 \cdot R_2 = 24\,\Omega^2$. Lös ut $R_2 = 10 - R_1$ ur den första ekvationen och sätt in i
+den andra:
 \[
-  x^2 - 10x + 24 = 0 \quad \Rightarrow \quad x = \frac{10 \pm 2}{2},
+  R_1(10 - R_1) = 24 \quad \Rightarrow \quad R_1^2 - 10R_1 + 24 = 0
 \]
-alltså
+PQ-formeln ger
+\[
+  R_1 = 5 \pm \sqrt{25 - 24} = 5 \pm 1.
+\]
+Roten $R_1 = 6\,\Omega$ ger $R_2 = 10 - 6 = 4\,\Omega$. Den andra roten, $R_1 = 4\,\Omega$, ger
+samma par i omvänd ordning, alltså
 \[
   R_1 = 6\,\Omega, \quad R_2 = 4\,\Omega.
 \]
+
+\section{Extra: ABC-formeln}
+\label{c6:sec:abc}
+ABC-formeln (kvadratiska formeln) är ett alternativ till PQ-formeln som ingår som överkurs. Den ger
+samma rötter, men kan användas direkt på $ax^2 + bx + c = 0$ utan att ekvationen först normeras:
+\[
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+\begin{exempel}
+Lös $2x^2 + 5x - 3 = 0$. Här är $a = 2$, $b = 5$ och $c = -3$:
+\[
+  x = \frac{-5 \pm \sqrt{5^2 - 4 \cdot 2 \cdot (-3)}}{2 \cdot 2} = \frac{-5 \pm \sqrt{49}}{4}
+  = \frac{-5 \pm 7}{4} \quad \Rightarrow \quad x_1 = 0{,}5, \quad x_2 = -3
+\]
+Rötterna är desamma som PQ-formeln gav för samma ekvation i \secref{c6:sec:pq}.
+\end{exempel}

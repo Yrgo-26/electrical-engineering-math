@@ -12,6 +12,14 @@
 
 \svar{1.3} \sv{a} $12$ \sv{b} $0{,}07$ \sv{c} $20\,\text{V}$
 
+\svar{1.4} \sv{a} $0100\,0100_2 = \mathrm{44}_{16}$ \sv{b} $0000\,0100_2 = \mathrm{04}_{16}$
+\sv{c} $x = 0100\,0000_2 = \mathrm{40}_{16}$, och \code{PORTD} blir
+$0100\,0100_2 = \mathrm{44}_{16}$.
+\sv{d} $R = 300\,\Omega$ ger exakt $10\,\text{mA}$; närmaste E12-värden är $330\,\Omega$
+($I \approx 9{,}1\,\text{mA}$) och $270\,\Omega$ ($I \approx 11{,}1\,\text{mA}$).
+\sv{e} Cirka $45\,\text{mW}$ per krets med $330\,\Omega$ (cirka $56\,\text{mW}$ med
+$270\,\Omega$).
+
 \svar{2.1} \sv{a} $I = \pm 0{,}4\,\text{A}$
 \sv{b} Den negativa roten anger bara att strömmen går åt andra hållet; effekten $RI^2$ är
 densamma, så strömmens storlek är $I = 0{,}4\,\text{A}$.
@@ -34,33 +42,30 @@ densamma, så strömmens storlek är $I = 0{,}4\,\text{A}$.
 
 \svar{3.4} \sv{a} $x_1 = 3$, $x_2 = 2$ \sv{b} $x_1 = 1$, $x_2 = -5$ \sv{c} $x_1 = 3$, $x_2 = 1$
 
-\svar{3.5} \sv{a} $D = 16$, två reella rötter \sv{b} $D = 0$, en dubbelrot
-\sv{c} $D = -11$, inga reella rötter \sv{d} $D = 0$, en dubbelrot
-\sv{e} $D = 16$, två reella rötter
+\svar{3.5} Uttrycket under rottecknet, $\left(\frac{p}{2}\right)^2 - q$, blir:
+\sv{a} $4 > 0$, två reella rötter \sv{b} $0$, en dubbelrot
+\sv{c} $-2{,}75 < 0$, inga reella rötter \sv{d} $0$, en dubbelrot
+\sv{e} $\frac{4}{9} > 0$, två reella rötter
 
 \svar{3.6} \sv{a} $x_1 = 1$, $x_2 = -5$ \sv{b} $x_1 = 7$, $x_2 = 3$
 \sv{c} $x = -3 \pm \sqrt{5}$, alltså $x_1 \approx -0{,}76$ och $x_2 \approx -5{,}24$
 
-\svar{3.7} \sv{a} $p = -2$, $q = -8$: $x^2 - 2x - 8 = 0$
-\sv{b} $x = 1 \pm 3$, alltså $4$ och $-2$.
-\sv{c} $4 + 5 = 9 = -p$ och $4 \cdot 5 = 20 = q$, så rötterna stämmer.
-\sv{d} Ja: $x^2 - 6x + 9 = 0$, med $D = 0$.
-
-\svar{3.8} \sv{a} $0{,}5\,\text{A}$ \sv{b} $30\,\text{mA}$ \sv{c} Cirka $33\,\text{mA}$
+\svar{3.7} \sv{a} $0{,}5\,\text{A}$ \sv{b} $30\,\text{mA}$ \sv{c} Cirka $33\,\text{mA}$
 \sv{d} Den negativa roten betyder bara motsatt strömriktning; effekten blir densamma eftersom $I$
 kvadreras, och det är strömmens storlek som efterfrågas.
 
-\svar{3.9} \sv{a} $10\,\text{V}$ \sv{b} Cirka $15{,}8\,\text{V}$ \sv{c} $52{,}9\,\Omega$
+\svar{3.8} \sv{a} $10\,\text{V}$ \sv{b} Cirka $15{,}8\,\text{V}$ \sv{c} $52{,}9\,\Omega$
 
-\svar{3.10} \sv{a} $12\,\Omega$ och $8\,\Omega$ \sv{b} $8\,\Omega$ och $7\,\Omega$
-\sv{c} Nej. $x^2 - 10x + 30 = 0$ har $D = -20 < 0$ och alltså inga reella rötter.
+\svar{3.9} \sv{a} $12\,\Omega$ och $8\,\Omega$ \sv{b} $8\,\Omega$ och $7\,\Omega$
+\sv{c} Nej. För $R_1^2 - 10R_1 + 30 = 0$ blir uttrycket under rottecknet $25 - 30 = -5 < 0$,
+så reella rötter saknas.
 
-\svar{3.11} \sv{a} Produkt genom summa ger $R_1 R_2 = (R_1 \parallell R_2)(R_1 + R_2)
+\svar{3.10} \sv{a} Produkt genom summa ger $R_1 R_2 = (R_1 \parallell R_2)(R_1 + R_2)
 = 2{,}4 \times 10 = 24\,\Omega^2$.
-\sv{b} $x^2 - 10x + 24 = 0$ ger $6\,\Omega$ och $4\,\Omega$.
+\sv{b} $R_1^2 - 10R_1 + 24 = 0$ ger $6\,\Omega$ och $4\,\Omega$.
 \sv{c} $6 + 4 = 10\,\Omega$ och $\frac{6 \times 4}{6 + 4} = 2{,}4\,\Omega$.
 
-\svar{3.12} \sv{a} $P = R\left(\frac{12}{4 + R}\right)^2 = 8$ ger $18R = (4 + R)^2$, alltså
+\svar{3.11} \sv{a} $P = R\left(\frac{12}{4 + R}\right)^2 = 8$ ger $18R = (4 + R)^2$, alltså
 $R^2 - 10R + 16 = 0$.
 \sv{b} $R = 2\,\Omega$ eller $R = 8\,\Omega$
 \sv{c} $R = 2\,\Omega$: $I = 2\,\text{A}$ och $P = 8\,\text{W}$. $R = 8\,\Omega$: $I = 1\,\text{A}$
@@ -68,7 +73,8 @@ och $P = 8\,\text{W}$.
 \sv{d} $I = 1{,}5\,\text{A}$ och $P = 9\,\text{W}$, mer än de två lösningarnas $8\,\text{W}$:
 effekten i $R$ är störst när $R = R_1$ (effektanpassning).
 
-\svar{3.13} \sv{a} Falskt: det beror på diskriminanten, som kan ge två, en eller ingen reell rot.
+\svar{3.12} \sv{a} Falskt: uttrycket under rottecknet i PQ-formeln kan ge två, en eller ingen
+reell rot.
 \sv{b} Falskt: även $x = -4$ är en lösning.
 \sv{c} Falskt: ekvationen måste först normeras, $x^2 + 2x - 3 = 0$.
 \sv{d} Sant: rottermen blir noll, och båda rötterna blir $-\frac{p}{2}$.

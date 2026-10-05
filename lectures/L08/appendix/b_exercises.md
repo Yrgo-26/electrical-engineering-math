@@ -242,7 +242,7 @@ Bestäm nollställena:
 ---
 
 ### 3.12 – Spänningsdelare som funktion
-En spänningsdelare består av $R_1 = 1\thinspace\text{k}\Omega$ och en potentiometer med resistansen $x$ (i k$\Omega$). Utspänningen ges av:
+En spänningsdelare består av $R_1 = 1\thinspace\text{k}\Omega$ och en potentiometer med resistansen $x$ (i $\text{k}\Omega$). Utspänningen ges av:
 
 ```math
 U(x) = 12 \cdot \frac{x}{1 + x}\,\text{V}, \qquad 0 \leq x \leq 9

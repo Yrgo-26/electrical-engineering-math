@@ -82,7 +82,7 @@ Kretsen i uppgift 2.2 matas med spänningen $U = 20\thinspace\text{V}$. Ohms lag
 U = R \times I
 ```
 
-> **Tips:** Räknar du med resistansen i k$\Omega$ och spänningen i V så får du strömmen direkt i mA.
+> **Tips:** Räknar du med resistansen i $\text{k}\Omega$ och spänningen i V så får du strömmen direkt i mA.
 
 **a)** Beräkna strömmen $I$ som spänningskällan levererar.
 
@@ -249,7 +249,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ### 3.10 – Ohms lag: fyll i tabellen
 Fyll i de tomma rutorna med hjälp av Ohms lag $U = R \times I$.
 
-> **Tips:** Med resistansen i k$\Omega$ och spänningen i V fås strömmen direkt i mA.
+> **Tips:** Med resistansen i $\text{k}\Omega$ och spänningen i V fås strömmen direkt i mA.
 
 | $U$ | $R$ | $I$ |
 |-----|-----|-----|

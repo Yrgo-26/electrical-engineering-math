@@ -30,6 +30,38 @@ En krets har $U = 3{,}3\thinspace\text{V}$ och $R = 4{,}7\thinspace\text{k}\Omeg
 
 ---
 
+### 1.4 – Lysdioder på en mikrokontroller
+En mikrokontroller (MCU) har åtta digitala pinnar D0–D7. Två röda lysdioder, LED1 och LED2, är anslutna till D2 respektive D6 via var sin resistor till jord:
+
+![](./images/1.4_circuit.png)
+
+Pinnarna styrs med två 8-bitarsregister, där varje bit hör till en pinne: bit 0 (längst till höger) hör till D0, bit 1 till D1 och så vidare upp till bit 7, som hör till D7:
+
+| Register | Bit = 1 | Bit = 0 |
+|----------|---------|---------|
+| `DDRD` | Pinnen är en utgång | Pinnen är en ingång |
+| `PORTD` | Utgången är hög ($5{,}0\thinspace\text{V}$) | Utgången är låg ($0\thinspace\text{V}$) |
+
+Båda registren har värdet `0x00` från start.
+
+**a)** Lysdiodernas pinnar ska konfigureras som utgångar. Vilket värde ska skrivas till `DDRD` för att bitarna D2 och D6 ska bli $1$? Ange värdet binärt och hexadecimalt.
+
+**b)** LED1 ska tändas. Vilket värde ska skrivas till `PORTD` för att biten D2 ska bli $1$? Ange värdet binärt och hexadecimalt.
+
+**c)** Nu ska även LED2 tändas, **utan** att LED1 släcks. I C görs det med `PORTD |= x`, vilket här fungerar som $\text{PORTD} = \text{PORTD} + x$ i matematiken. Vilket värde ska $x$ ha, och vilket värde får `PORTD` efteråt? Ange värdena binärt och hexadecimalt.
+
+**d)** Matningsspänningen är $V_{CC} = 5{,}0\thinspace\text{V}$ och en röd lysdiod har framspänningen $U_F = 2{,}0\thinspace\text{V}$, så spänningen över resistorn är $V_{CC} - U_F$ när lysdioden lyser. Dimensionera resistorerna så att strömmen genom respektive lysdiod blir ca $10\thinspace\text{mA}$. Välj ett värde ur E12-serien:
+
+```math
+10 \quad 12 \quad 15 \quad 18 \quad 22 \quad 27 \quad 33 \quad 39 \quad 47 \quad 56 \quad 68 \quad 82
+```
+
+Värdena kan multipliceras med valfri tiopotens, till exempel $47\thinspace\Omega$, $470\thinspace\Omega$ och $4{,}7\thinspace\text{k}\Omega$.
+
+**e)** Beräkna effektförbrukningen i respektive lysdiodkrets (resistor och lysdiod tillsammans) när lysdioden är tänd, med resistorvärdet från d).
+
+---
+
 ## Del 2 – Nytt stoff
 ### 2.1 – Ren andragradsekvation
 Strömmen $I$ (i ampere) uppfyller:
@@ -55,8 +87,8 @@ Lös följande ekvationer med PQ-formeln:
 
 ---
 
-### 2.3 – Andragradsekvation med ABC-formeln
-Lös med ABC-formeln:
+### 2.3 – Icke normerad andragradsekvation
+Dividera först så att koefficienten framför $x^2$ blir $1$ och lös sedan med PQ-formeln:
 
 **a)** $2x^2 - 7x + 3 = 0$
 
@@ -71,7 +103,7 @@ Två seriekopplade motstånd $R_1$ och $R_2$ uppfyller:
 R_1 + R_2 = 13\,\Omega \qquad \text{och} \qquad R_1 \cdot R_2 = 36\,\Omega^2
 ```
 
-**a)** Använd Vietas formler för att sätta upp en andragradsekvation med $R_1$ som obekant.
+**a)** Lös ut $R_2$ ur den första ekvationen och sätt in i den andra, så att du får en andragradsekvation med $R_1$ som obekant.
 
 **b)** Lös ekvationen och ange båda motståndsvärden.
 
@@ -134,8 +166,8 @@ Ekvationerna nedan är inte normerade. Dividera först så att $a = 1$ och lös 
 
 ---
 
-### 3.5 – Diskriminanten
-Beräkna diskriminanten $D = b^2 - 4ac$ och ange antalet reella rötter **utan** att lösa ekvationen:
+### 3.5 – Antal reella rötter
+Ange antalet reella rötter **utan** att lösa ekvationen fullständigt, genom att undersöka tecknet på uttrycket under rottecknet i PQ-formeln. Normera först vid behov:
 
 **a)** $x^2 - 6x + 5 = 0$
 
@@ -160,18 +192,7 @@ Lös genom kvadratkomplettering:
 
 ---
 
-### 3.7 – Vietas formler
-**a)** En normerad andragradsekvation har rötterna $x_1 = 4$ och $x_2 = -2$. Bestäm $p$ och $q$ samt skriv upp ekvationen.
-
-**b)** Kontrollera svaret i **a)** med PQ-formeln.
-
-**c)** Använd Vietas formler för att snabbkontrollera att $x_1 = 4$ och $x_2 = 5$ är rötter till $x^2 - 9x + 20 = 0$.
-
-**d)** Kan en normerad andragradsekvation ha den dubbla roten $x = 3$? Skriv i så fall upp den.
-
----
-
-### 3.8 – Ström ur effekt
+### 3.7 – Ström ur effekt
 Effekten i ett motstånd ges av $P = RI^2$.
 
 **a)** $P = 12{,}5\thinspace\text{W}$ och $R = 50\thinspace\Omega$. Beräkna $I$.
@@ -184,7 +205,7 @@ Effekten i ett motstånd ges av $P = RI^2$.
 
 ---
 
-### 3.9 – Spänning ur effekt
+### 3.8 – Spänning ur effekt
 Effekten kan också skrivas $P = \dfrac{U^2}{R}$.
 
 **a)** $P = 5\thinspace\text{W}$ och $R = 20\thinspace\Omega$. Beräkna $U$.
@@ -195,16 +216,16 @@ Effekten kan också skrivas $P = \dfrac{U^2}{R}$.
 
 ---
 
-### 3.10 – Två motstånd ur summa och produkt
+### 3.9 – Två motstånd ur summa och produkt
 **a)** Två motstånd uppfyller $R_1 + R_2 = 20\thinspace\Omega$ och $R_1 R_2 = 96\thinspace\Omega^2$. Bestäm motstånden.
 
 **b)** Två motstånd uppfyller $R_1 + R_2 = 15\thinspace\Omega$ och $R_1 R_2 = 56\thinspace\Omega^2$. Bestäm motstånden.
 
-**c)** Kan två motstånd ha summan $10\thinspace\Omega$ och produkten $30\thinspace\Omega^2$? Motivera med diskriminanten.
+**c)** Kan två motstånd ha summan $10\thinspace\Omega$ och produkten $30\thinspace\Omega^2$? Motivera med hjälp av PQ-formeln.
 
 ---
 
-### 3.11 – Serie- och parallellresistans samtidigt
+### 3.10 – Serie- och parallellresistans samtidigt
 Två motstånd ger tillsammans $10\thinspace\Omega$ seriekopplade och $2{,}4\thinspace\Omega$ parallellkopplade.
 
 **a)** Visa att $R_1 R_2 = 24\thinspace\Omega^2$.
@@ -215,7 +236,7 @@ Två motstånd ger tillsammans $10\thinspace\Omega$ seriekopplade och $2{,}4\thi
 
 ---
 
-### 3.12 – Effekt i en belastning
+### 3.11 – Effekt i en belastning
 Ett okänt motstånd $R$ är seriekopplat med $R_1 = 4\thinspace\Omega$ och matas med $E = 12\thinspace\text{V}$. Effekten som utvecklas i $R$ ska bli $P = 8\thinspace\text{W}$.
 
 Strömmen i kretsen är $I = \dfrac{E}{R_1 + R}$ och effekten i $R$ är $P = RI^2$.
@@ -230,7 +251,7 @@ Strömmen i kretsen är $I = \dfrac{E}{R_1 + R}$ och effekten i $R$ är $P = RI^
 
 ---
 
-### 3.13 – Sant eller falskt
+### 3.12 – Sant eller falskt
 Avgör om påståendet är sant eller falskt och motivera kortfattat:
 
 **a)** Varje andragradsekvation har två reella rötter.
@@ -239,7 +260,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 
 **c)** PQ-formeln kan användas direkt på $2x^2 + 4x - 6 = 0$.
 
-**d)** Om $D = 0$ sammanfaller de båda rötterna.
+**d)** Om uttrycket under rottecknet i PQ-formeln är noll sammanfaller de båda rötterna.
 
 **e)** Om en produkt av två faktorer är noll måste minst en av faktorerna vara noll.
 

@@ -29,7 +29,7 @@ Resistansen för fyra parallellkopplade resistorer $R_1$, $R_2$, $R_3$ och $R_4$
 \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}
 ```
 
-Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\thinspace\text{k}\Omega$ och $R_3 = R_4 = 10\thinspace\text{k}\Omega$. Ange svaret i k$\Omega$ med en värdesiffra.
+Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\thinspace\text{k}\Omega$ och $R_3 = R_4 = 10\thinspace\text{k}\Omega$. Ange svaret i $\text{k}\Omega$ med en värdesiffra.
 
 ---
 
