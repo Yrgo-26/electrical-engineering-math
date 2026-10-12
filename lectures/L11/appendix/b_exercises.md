@@ -29,12 +29,12 @@ Vektorerna $\mathbf{u} = (2;\thinspace 5)$ och $\mathbf{v} = (-3;\thinspace 1)$ 
 
 ---
 
-### 1.3 – Skalärprodukt
-**a)** Beräkna $\mathbf{u} \cdot \mathbf{v}$ för $\mathbf{u} = (3;\thinspace 1)$ och $\mathbf{v} = (2;\thinspace -6)$.
+### 1.3 – Vinkeln mellan två vektorer
+**a)** Beräkna vinklarna mot positiv x-axel för $\mathbf{u} = (1;\thinspace 2)$ och $\mathbf{v} = (3;\thinspace 1)$.
 
-**b)** Vad säger resultatet om vektorerna?
+**b)** Beräkna vinkeln mellan $\mathbf{u}$ och $\mathbf{v}$ i **a)**.
 
-**c)** Beräkna vinkeln mellan $\mathbf{u} = (1;\thinspace 2)$ och $\mathbf{v} = (3;\thinspace 1)$.
+**c)** Är $\mathbf{u} = (3;\thinspace 1)$ och $\mathbf{v} = (2;\thinspace -6)$ vinkelräta? Motivera med vektorernas vinklar.
 
 ---
 

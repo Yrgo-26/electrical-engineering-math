@@ -52,14 +52,14 @@ där kvadrantkorrigeringen ges av tabellen.
 
 \section{Vinkeln mellan två vektorer}
 \label{c7:sec:vinkel}
-Vinkeln $\alpha$ mellan $\mathbf{u}$ och $\mathbf{v}$ ges av
+Vinkeln $\alpha$ mellan $\mathbf{u}$ och $\mathbf{v}$ är skillnaden mellan vektorernas vinklar mot
+den positiva $x$-axeln. Beräkna därför först $v_u$ och $v_v$ var för sig och därefter differensen:
 \[
-  \cos \alpha = \frac{\mathbf{u} \cdot \mathbf{v}}{\abs{\mathbf{u}}\abs{\mathbf{v}}},
+  \alpha = v_v - v_u
 \]
-där \textbf{skalärprodukten} är
-\[
-  \mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y.
-\]
+Vinkeln mellan två vektorer anges som ett värde mellan $0^{\circ}$ och $180^{\circ}$. Blir
+differensen negativ byter du tecken på den, och blir den större än $180^{\circ}$ drar du den från
+$360^{\circ}$.
 
 \section{Räkna med vektorer}
 \label{c7:sec:rakna}
@@ -70,60 +70,220 @@ där \textbf{skalärprodukten} är
   \mathbf{u} \pm \mathbf{v} = (u_x \pm v_x;\; u_y \pm v_y)
 \]
 
-\subsection{Skalärmultiplikation}
-\label{c7:sec:skalarmultiplikation}
+\subsection{Multiplikation med ett tal}
+\label{c7:sec:multiplikation}
+När en vektor multipliceras med ett tal $k$ multipliceras båda komponenterna med talet:
 \[
-  k\mathbf{u} = (k u_x;\; k u_y)
+  k\mathbf{u} = (k \cdot u_x;\; k \cdot u_y)
 \]
-En negativ skalär byter riktning på vektorn. En motriktad enhetsvektor ges av
-$-\dfrac{\mathbf{u}}{\abs{\mathbf{u}}}$.
+Exempelvis gäller för $\mathbf{U} = (3;\, 4)$ att
+\[
+  2\mathbf{U} = (2 \cdot 3;\; 2 \cdot 4) = (6;\, 8).
+\]
+Ett negativt tal byter dessutom riktning på vektorn.
 
 \section{Typexempel}
 \label{c7:sec:typexempel}
 
-\begin{exempel}[Absolutbelopp och vinkel]
-Vektorerna $\mathbf{u} = (3;\, 3)$ och $\mathbf{v} = (-2;\, 3)$ är givna.
+\begin{exempel}[Vektorer i ett koordinatsystem]
+Två vektorer $\mathbf{u}$ samt $\mathbf{v}$ visas i nedanstående figur.
 
-\textbf{a)} Beräkna $\abs{\mathbf{u}}$ och $\abs{\mathbf{v}}$.
-\begin{gather*}
-  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2} \approx 4{,}24 \\
-  \abs{\mathbf{v}} = \sqrt{(-2)^2 + 3^2} = \sqrt{13} \approx 3{,}61
-\end{gather*}
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_1.png}
 
-\textbf{b)} Beräkna vinklarna $v_u$ och $v_v$. Vektorn $\mathbf{u}$ ligger i kvadrant I:
+\begin{parts}
+  \item Ta reda på vektorernas koordinater.
+  \item Beräkna vektorernas absolutbelopp $\abs{\mathbf{u}}$ samt $\abs{\mathbf{v}}$.
+  \item Beräkna vektorernas vinklar $v_u$ samt $v_v$.
+  \item Beräkna vinkeln mellan vektorer $\mathbf{u}$ samt $\mathbf{v}$.
+  \item Beräkna en tredje vektor $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$.
+  \item Bestäm en vektor med längden $5$ som är motsatt riktad $\mathbf{u}$.
+\end{parts}
+
+\textbf{a)} Genom att kolla i figuren ser vi att vektor $\mathbf{u}$ har $x$-koordinaten $3$
+samt $y$-koordinaten $3$. Därmed gäller att
 \[
-  v_u = \arctan\!\left(\frac{3}{3}\right) = 45^{\circ}
+  \mathbf{u} = (3;\, 3)
 \]
-Vektorn $\mathbf{v}$ ligger i kvadrant II, så $180^{\circ}$ läggs till:
+Vi ser också att vektor $\mathbf{v}$ har $x$-koordinaten $-2$ samt $y$-koordinaten $3$. Därmed
+gäller att
 \[
-  v_v = \arctan\!\left(\frac{3}{-2}\right) + 180^{\circ} \approx -56{,}3^{\circ} + 180^{\circ}
-  = 123{,}7^{\circ}
+  \mathbf{v} = (-2;\, 3)
 \]
 
-\textbf{c)} Beräkna vinkeln mellan $\mathbf{u}$ och $\mathbf{v}$.
-\begin{gather*}
-  \mathbf{u} \cdot \mathbf{v} = 3 \cdot (-2) + 3 \cdot 3 = 3 \\
-  \cos \alpha = \frac{3}{3\sqrt{2} \cdot \sqrt{13}} = \frac{3}{\sqrt{234}} \approx 0{,}196
-  \quad \Rightarrow \quad \alpha \approx 78{,}7^{\circ}
-\end{gather*}
-\end{exempel}
+\textbf{b)} Vektorernas absolutbelopp är lika med deras respektive hypotenusa och beräknas
+därmed enkelt med Pythagoras sats.
 
-\begin{exempel}[Vektorberäkning]
-Beräkna $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ och $\abs{\mathbf{w}}$ för
-$\mathbf{u} = (3;\, 3)$ och $\mathbf{v} = (-2;\, 3)$.
-\begin{gather*}
-  \mathbf{w} = (3;\, 3) + 2(-2;\, 3) = (3 - 4;\; 3 + 6) = (-1;\, 9) \\
-  \abs{\mathbf{w}} = \sqrt{(-1)^2 + 9^2} = \sqrt{82} \approx 9{,}06
-\end{gather*}
-\end{exempel}
+Detta kan visualiseras genom att rita ut respektive vektor som en triangel, se figuren nedan.
 
-% Keeps this example from starting at the foot of a page, where it is drawn over the running
-% head of the next.
-\needspace{8\baselineskip}
-\begin{exempel}[Motriktad vektor med given längd]
-Bestäm en vektor med längden $5$ som är motriktad $\mathbf{u} = (3;\, 3)$.
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_2.png}
+
+Vektorernas absolutbelopp $\abs{\mathbf{u}}$ samt $\abs{\mathbf{v}}$ beräknas enligt nedan:
+\begin{gather*}
+  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} \approx 4{,}24 \\
+  \abs{\mathbf{v}} = \sqrt{3^2 + (-2)^2} = \sqrt{13} \approx 3{,}61
+\end{gather*}
+
+\textbf{c)} För att beräkna vektorernas vinklar kan vi använda oss utav tangens. Återigen ser vi
+vektorerna som trianglar.
+
+För vektor $\mathbf{u} = (3;\, 3)$ gäller att både motstående samt närliggande katet är lika
+med $3$. Därmed gäller att
 \[
-  \mathbf{w} = -\frac{5}{\abs{\mathbf{u}}}\,\mathbf{u} = -\frac{5}{3\sqrt{2}}(3;\, 3)
-  = \left(-\frac{5}{\sqrt{2}};\; -\frac{5}{\sqrt{2}}\right) \approx (-3{,}54;\; -3{,}54)
+  \tan(v_u) = \frac{3}{3} = 1,
+\]
+vilket kan transformeras till
+\[
+  v_u = \arctan(1) = 45^{\circ}
+\]
+För vektor $\mathbf{v}$, som har ett negativt $x$-värde, kan motsvarande triangel ritas ut såsom
+visas i ovanstående figur. Notera att vi i detta fall har markerat en vinkel $v_x$, som är den
+supplementära vinkeln till $v_v$:
+\[
+  v_v + v_x = 180^{\circ},
+\]
+vilket innebär att
+\[
+  v_v = 180^{\circ} - v_x
+\]
+Om vi beräknar vinkel $v_x$ kan vi därmed enkelt beräkna vinkel $v_v$. Vinkel $v_x$ beräknas
+enkelt med tangens, då motsvarande triangel har en motstående katet som är lika med $3$ samt en
+närliggande katet som är lika med $2$. Därmed gäller att
+\[
+  \tan(v_x) = \frac{3}{2} = 1{,}5 \quad \Rightarrow \quad
+  v_x = \arctan(1{,}5) \approx 56{,}3^{\circ}
+\]
+Vi kan sedan enkelt beräkna vinkel $v_v$:
+\[
+  v_v = 180^{\circ} - v_x = 180^{\circ} - 56{,}3^{\circ} = 123{,}7^{\circ}
+\]
+
+\textbf{d)} För att beräkna vinkeln $\alpha$ mellan $\mathbf{v}$ samt $\mathbf{u}$ beräknar vi
+differensen mellan deras respektive vinklar $v_v$ samt $v_u$:
+\[
+  \alpha = v_v - v_u
+\]
+Vi sätter in värden i formeln och ser då att vinkeln mellan vektorerna är ca $78{,}7^{\circ}$, då
+\[
+  \alpha = v_v - v_u = 123{,}7^{\circ} - 45^{\circ} \approx 78{,}7^{\circ}
+\]
+
+\textbf{e)} Vi beräknar vektor $\mathbf{w}$ algebraiskt genom att sätta in värdena av vektorer
+$\mathbf{u} = (3;\, 3)$ samt $\mathbf{v} = (-2;\, 3)$ i given formel:
+\[
+  \mathbf{w} = \mathbf{u} + 2\mathbf{v} = (3;\, 3) + 2(-2;\, 3),
+\]
+där
+\[
+  2(-2;\, 3) = (2 \cdot (-2);\; 2 \cdot 3) = (-4;\, 6)
+\]
+Därmed gäller att
+\[
+  \mathbf{w} = (3;\, 3) + (-4;\, 6)
+\]
+För att slutföra beräkningen summerar vi ihop $x$- och $y$-värdena och ser då att
+$\mathbf{w} = (-1;\, 9)$, då
+\[
+  \mathbf{w} = (3 - 4;\; 3 + 6) = (-1;\, 9)
+\]
+
+\textbf{f)} Vi kan rita ut en vektor motsatt riktad $\mathbf{u}$ med längden $5$. Låt oss kalla
+denna vektor $\mathbf{a}$. Att vektorn är motriktad innebär att den är vänd $180^{\circ}$,
+alltså ett halvt varv från $\mathbf{u}$. För dess vinkel $v_a$ gäller därmed att
+\[
+  v_a = v_u + 180^{\circ}
+\]
+Eftersom vinkel $v_u$ tidigare beräknades till $45^{\circ}$ gäller att vektor $\mathbf{a}$:s
+vinkel $v_a$ är lika med $225^{\circ}$, då
+\[
+  v_a = 45^{\circ} + 180^{\circ} = 225^{\circ}
+\]
+För en given vektor gäller att dess längd är lika med dess absolutbelopp. Därmed gäller att
+absolutbeloppet $\abs{\mathbf{a}}$ av vektorn $\mathbf{a}$ är lika med $5$:
+\[
+  \abs{\mathbf{a}} = 5
+\]
+Vi kan sedan beräkna vektor $\mathbf{a}$ via två metoder, grafiskt eller algebraiskt.
+
+\textbf{Metod 1 -- Grafisk lösning.} Som vi såg tidigare gäller att vektorn kan ritas ut som en
+triangel, där dess hypotenusa är lika med dess absolutbelopp. Eftersom denna vektor är vänd ett
+halvt varv från vektor $\mathbf{u}$ kan vi rita vektor $\mathbf{a}$ som en triangel med vinkel
+$45^{\circ}$ sett från $180^{\circ}$, dvs. vänt ett halvt varv.
+
+Med denna information kan vi rita ut vektor $\mathbf{a}$ såsom visas nedan.
+
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_3.png}
+
+Vi kan beräkna absolutbeloppet $\abs{x_a}$ av vektor $\mathbf{a}$:s närliggande katet $x_a$ med
+cosinus:
+\[
+  \cos 45^{\circ} = \frac{\abs{x_a}}{5},
+\]
+vilket innebär att
+\[
+  \abs{x_a} = 5 \cdot \cos 45^{\circ} \approx 3{,}54
+\]
+Eftersom $x_a$ är placerad till vänster om origo är $x_a$ negativ. Därmed gäller att
+\[
+  x_a \approx -3{,}54
+\]
+Vi kan också beräkna absolutbeloppet $\abs{y_a}$ av vektor $\mathbf{a}$:s motstående katet
+$y_a$ med sinus:
+\[
+  \sin 45^{\circ} = \frac{\abs{y_a}}{5},
+\]
+vilket innebär att
+\[
+  \abs{y_a} = 5 \cdot \sin 45^{\circ} \approx 3{,}54
+\]
+Eftersom $y_a$ är placerad under origo är $y_a$ negativ. Därmed gäller att
+\[
+  y_a \approx -3{,}54
+\]
+Via beräknade värden kan sedan vektor $\mathbf{a}$ bestämmas:
+\[
+  \mathbf{a} \approx (-3{,}54;\; -3{,}54)
+\]
+
+\textbf{Metod 2 -- Algebraisk lösning.} Vi såg tidigare att vektor $\mathbf{a}$:s vinkel $v_a$
+är lika med $225^{\circ}$, då denna är vänd ett halvt varv ($180^{\circ}$) från vektor
+$\mathbf{u}$, vars vinkel $v_u$ tidigare har beräknats till $45^{\circ}$:
+\[
+  v_a = v_u + 180^{\circ} = 45^{\circ} + 180^{\circ} = 225^{\circ}
+\]
+Vektorns absolutbelopp $\abs{\mathbf{a}}$, som är lika med dess längd, specificerades också till
+$5$ i uppgiftsbeskrivningen:
+\[
+  \abs{\mathbf{a}} = 5
+\]
+Vi kan enkelt beräkna vektorns $x$- och $y$-värde via cosinus samt sinus. Vi börjar med att
+beräkna vektorns $x$-värde $x_a$:
+\[
+  \cos v_a = \frac{x_a}{\abs{\mathbf{a}}},
+\]
+vilket är ekvivalent med att
+\[
+  x_a = \abs{\mathbf{a}} \cdot \cos v_a
+\]
+Genom att sätta in värden i ovanstående formel ser vi att vektorns $x$-värde $x_a$ är lika med
+$-3{,}54$, då
+\[
+  x_a = 5 \cdot \cos 225^{\circ} \approx -3{,}54
+\]
+Vi kan sedan beräkna vektor $\mathbf{a}$:s $y$-värde $y_a$ med sinus:
+\[
+  \sin v_a = \frac{y_a}{\abs{\mathbf{a}}},
+\]
+vilket är ekvivalent med att
+\[
+  y_a = \abs{\mathbf{a}} \cdot \sin v_a
+\]
+Genom att sätta in värden i ovanstående formel ser vi att även vektor $\mathbf{a}$:s $y$-värde
+$y_a$ är lika med $-3{,}54$, då
+\[
+  y_a = 5 \cdot \sin 225^{\circ} \approx -3{,}54
+\]
+Därmed gäller att
+\[
+  \mathbf{a} \approx (-3{,}54;\; -3{,}54)
 \]
 \end{exempel}

@@ -53,14 +53,15 @@ where the quadrant correction is given by the table.
 
 \section{The angle between two vectors}
 \label{c7:sec:vinkel}
-The angle $\alpha$ between $\mathbf{u}$ and $\mathbf{v}$ is given by
+The angle $\alpha$ between $\mathbf{u}$ and $\mathbf{v}$ is the difference between the vectors'
+angles with the positive $x$-axis. So first calculate $v_u$ and $v_v$ separately, and then the
+difference:
 \[
-  \cos \alpha = \frac{\mathbf{u} \cdot \mathbf{v}}{\abs{\mathbf{u}}\abs{\mathbf{v}}},
+  \alpha = v_v - v_u
 \]
-where the \textbf{scalar product} is
-\[
-  \mathbf{u} \cdot \mathbf{v} = u_x v_x + u_y v_y.
-\]
+The angle between two vectors is given as a value between $0^{\circ}$ and $180^{\circ}$. If the
+difference is negative, change its sign, and if it is greater than $180^{\circ}$, subtract it
+from $360^{\circ}$.
 
 \section{Calculating with vectors}
 \label{c7:sec:rakna}
@@ -71,60 +72,221 @@ where the \textbf{scalar product} is
   \mathbf{u} \pm \mathbf{v} = (u_x \pm v_x,\; u_y \pm v_y)
 \]
 
-\subsection{Scalar multiplication}
-\label{c7:sec:skalarmultiplikation}
+\subsection{Multiplication by a number}
+\label{c7:sec:multiplikation}
+When a vector is multiplied by a number $k$, both components are multiplied by the number:
 \[
-  k\mathbf{u} = (k u_x,\; k u_y)
+  k\mathbf{u} = (k \cdot u_x,\; k \cdot u_y)
 \]
-A negative scalar reverses the direction of the vector. A unit vector in the opposite direction
-is given by $-\dfrac{\mathbf{u}}{\abs{\mathbf{u}}}$.
+For example, for $\mathbf{U} = (3, 4)$,
+\[
+  2\mathbf{U} = (2 \cdot 3,\; 2 \cdot 4) = (6, 8).
+\]
+A negative number also reverses the direction of the vector.
 
-\section{Worked examples}
+\section{Worked example}
 \label{c7:sec:typexempel}
 
-\begin{exempel}[Magnitude and angle]
-The vectors $\mathbf{u} = (3, 3)$ and $\mathbf{v} = (-2, 3)$ are given.
+\begin{exempel}[Vectors in a coordinate system]
+Two vectors $\mathbf{u}$ and $\mathbf{v}$ are shown in the figure below.
 
-\textbf{a)} Calculate $\abs{\mathbf{u}}$ and $\abs{\mathbf{v}}$.
-\begin{gather*}
-  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} = 3\sqrt{2} \approx 4.24 \\
-  \abs{\mathbf{v}} = \sqrt{(-2)^2 + 3^2} = \sqrt{13} \approx 3.61
-\end{gather*}
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_1.png}
 
-\textbf{b)} Calculate the angles $v_u$ and $v_v$. The vector $\mathbf{u}$ lies in quadrant I:
+\begin{parts}
+  \item Find the coordinates of the vectors.
+  \item Calculate the magnitudes $\abs{\mathbf{u}}$ and $\abs{\mathbf{v}}$ of the vectors.
+  \item Calculate the angles $v_u$ and $v_v$ of the vectors.
+  \item Calculate the angle between the vectors $\mathbf{u}$ and $\mathbf{v}$.
+  \item Calculate a third vector $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$.
+  \item Determine a vector of length $5$ that points in the opposite direction to $\mathbf{u}$.
+\end{parts}
+
+\textbf{a)} Looking at the figure, we see that the vector $\mathbf{u}$ has the $x$-coordinate
+$3$ and the $y$-coordinate $3$. So
 \[
-  v_u = \arctan\!\left(\frac{3}{3}\right) = 45^{\circ}
+  \mathbf{u} = (3, 3)
 \]
-The vector $\mathbf{v}$ lies in quadrant II, so $180^{\circ}$ is added:
+We also see that the vector $\mathbf{v}$ has the $x$-coordinate $-2$ and the $y$-coordinate $3$.
+So
 \[
-  v_v = \arctan\!\left(\frac{3}{-2}\right) + 180^{\circ} \approx -56.3^{\circ} + 180^{\circ}
-  = 123.7^{\circ}
+  \mathbf{v} = (-2, 3)
 \]
 
-\textbf{c)} Calculate the angle between $\mathbf{u}$ and $\mathbf{v}$.
-\begin{gather*}
-  \mathbf{u} \cdot \mathbf{v} = 3 \cdot (-2) + 3 \cdot 3 = 3 \\
-  \cos \alpha = \frac{3}{3\sqrt{2} \cdot \sqrt{13}} = \frac{3}{\sqrt{234}} \approx 0.196
-  \quad \Rightarrow \quad \alpha \approx 78.7^{\circ}
-\end{gather*}
-\end{exempel}
+\textbf{b)} The magnitude of each vector equals its hypotenuse and is therefore easily
+calculated with Pythagoras' theorem.
 
-\begin{exempel}[Vector calculation]
-Calculate $\mathbf{w} = \mathbf{u} + 2\mathbf{v}$ and $\abs{\mathbf{w}}$ for
-$\mathbf{u} = (3, 3)$ and $\mathbf{v} = (-2, 3)$.
-\begin{gather*}
-  \mathbf{w} = (3, 3) + 2(-2, 3) = (3 - 4,\; 3 + 6) = (-1, 9) \\
-  \abs{\mathbf{w}} = \sqrt{(-1)^2 + 9^2} = \sqrt{82} \approx 9.06
-\end{gather*}
-\end{exempel}
+This can be visualised by drawing each vector as a triangle, see the figure below.
 
-% Keeps this example from starting at the foot of a page, where it is drawn over the running
-% head of the next.
-\needspace{8\baselineskip}
-\begin{exempel}[An opposite vector of given length]
-Find a vector of length $5$ in the opposite direction to $\mathbf{u} = (3, 3)$.
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_2.png}
+
+The magnitudes $\abs{\mathbf{u}}$ and $\abs{\mathbf{v}}$ are calculated as follows:
+\begin{gather*}
+  \abs{\mathbf{u}} = \sqrt{3^2 + 3^2} = \sqrt{18} \approx 4.24 \\
+  \abs{\mathbf{v}} = \sqrt{3^2 + (-2)^2} = \sqrt{13} \approx 3.61
+\end{gather*}
+
+\textbf{c)} To calculate the angles of the vectors we can use the tangent. Once again we see
+the vectors as triangles.
+
+For the vector $\mathbf{u} = (3, 3)$, the opposite and the adjacent side are both equal to $3$.
+So
 \[
-  \mathbf{w} = -\frac{5}{\abs{\mathbf{u}}}\,\mathbf{u} = -\frac{5}{3\sqrt{2}}(3, 3)
-  = \left(-\frac{5}{\sqrt{2}},\; -\frac{5}{\sqrt{2}}\right) \approx (-3.54,\; -3.54)
+  \tan(v_u) = \frac{3}{3} = 1,
+\]
+which can be transformed into
+\[
+  v_u = \arctan(1) = 45^{\circ}
+\]
+For the vector $\mathbf{v}$, which has a negative $x$-value, the corresponding triangle can be
+drawn as shown in the figure above. Note that in this case we have marked an angle $v_x$, which
+is the supplementary angle of $v_v$:
+\[
+  v_v + v_x = 180^{\circ},
+\]
+which means that
+\[
+  v_v = 180^{\circ} - v_x
+\]
+If we calculate the angle $v_x$, we can therefore easily calculate the angle $v_v$. The angle
+$v_x$ is easily calculated with the tangent, since the corresponding triangle has an opposite
+side equal to $3$ and an adjacent side equal to $2$. So
+\[
+  \tan(v_x) = \frac{3}{2} = 1.5 \quad \Rightarrow \quad
+  v_x = \arctan(1.5) \approx 56.3^{\circ}
+\]
+We can then easily calculate the angle $v_v$:
+\[
+  v_v = 180^{\circ} - v_x = 180^{\circ} - 56.3^{\circ} = 123.7^{\circ}
+\]
+
+\textbf{d)} To calculate the angle $\alpha$ between $\mathbf{v}$ and $\mathbf{u}$, we calculate
+the difference between their respective angles $v_v$ and $v_u$:
+\[
+  \alpha = v_v - v_u
+\]
+We insert the values into the formula and see that the angle between the vectors is about
+$78.7^{\circ}$, since
+\[
+  \alpha = v_v - v_u = 123.7^{\circ} - 45^{\circ} \approx 78.7^{\circ}
+\]
+
+\textbf{e)} We calculate the vector $\mathbf{w}$ algebraically by inserting the values of the
+vectors $\mathbf{u} = (3, 3)$ and $\mathbf{v} = (-2, 3)$ into the given formula:
+\[
+  \mathbf{w} = \mathbf{u} + 2\mathbf{v} = (3, 3) + 2(-2, 3),
+\]
+where
+\[
+  2(-2, 3) = (2 \cdot (-2),\; 2 \cdot 3) = (-4, 6)
+\]
+So
+\[
+  \mathbf{w} = (3, 3) + (-4, 6)
+\]
+To complete the calculation we add the $x$- and $y$-values and see that
+$\mathbf{w} = (-1, 9)$, since
+\[
+  \mathbf{w} = (3 - 4,\; 3 + 6) = (-1, 9)
+\]
+
+\textbf{f)} We can draw a vector of length $5$ in the opposite direction to $\mathbf{u}$. Let us
+call this vector $\mathbf{a}$. That the vector points the opposite way means that it is turned
+$180^{\circ}$, that is half a turn, from $\mathbf{u}$. For its angle $v_a$ we therefore have
+\[
+  v_a = v_u + 180^{\circ}
+\]
+Since the angle $v_u$ was calculated earlier to be $45^{\circ}$, the angle $v_a$ of the vector
+$\mathbf{a}$ is $225^{\circ}$, since
+\[
+  v_a = 45^{\circ} + 180^{\circ} = 225^{\circ}
+\]
+The length of a given vector equals its magnitude. So the magnitude $\abs{\mathbf{a}}$ of the
+vector $\mathbf{a}$ is $5$:
+\[
+  \abs{\mathbf{a}} = 5
+\]
+We can then calculate the vector $\mathbf{a}$ by two methods, graphically or algebraically.
+
+\textbf{Method 1 -- Graphical solution.} As we saw earlier, the vector can be drawn as a
+triangle whose hypotenuse equals its magnitude. Since this vector is turned half a turn from
+the vector $\mathbf{u}$, we can draw the vector $\mathbf{a}$ as a triangle with the angle
+$45^{\circ}$ seen from $180^{\circ}$, that is, turned half a turn.
+
+With this information we can draw the vector $\mathbf{a}$ as shown below.
+
+\bild[0.4\linewidth]{lectures/L07/appendix/images/example1_3.png}
+
+We can calculate the magnitude $\abs{x_a}$ of the adjacent side $x_a$ of the vector
+$\mathbf{a}$ with the cosine:
+\[
+  \cos 45^{\circ} = \frac{\abs{x_a}}{5},
+\]
+which means that
+\[
+  \abs{x_a} = 5 \cdot \cos 45^{\circ} \approx 3.54
+\]
+Since $x_a$ lies to the left of the origin, $x_a$ is negative. So
+\[
+  x_a \approx -3.54
+\]
+We can also calculate the magnitude $\abs{y_a}$ of the opposite side $y_a$ of the vector
+$\mathbf{a}$ with the sine:
+\[
+  \sin 45^{\circ} = \frac{\abs{y_a}}{5},
+\]
+which means that
+\[
+  \abs{y_a} = 5 \cdot \sin 45^{\circ} \approx 3.54
+\]
+Since $y_a$ lies below the origin, $y_a$ is negative. So
+\[
+  y_a \approx -3.54
+\]
+From the calculated values the vector $\mathbf{a}$ can then be determined:
+\[
+  \mathbf{a} \approx (-3.54,\; -3.54)
+\]
+
+\textbf{Method 2 -- Algebraic solution.} We saw earlier that the angle $v_a$ of the vector
+$\mathbf{a}$ is $225^{\circ}$, since it is turned half a turn ($180^{\circ}$) from the vector
+$\mathbf{u}$, whose angle $v_u$ was calculated earlier to be $45^{\circ}$:
+\[
+  v_a = v_u + 180^{\circ} = 45^{\circ} + 180^{\circ} = 225^{\circ}
+\]
+The magnitude $\abs{\mathbf{a}}$ of the vector, which equals its length, was also specified as
+$5$ in the problem:
+\[
+  \abs{\mathbf{a}} = 5
+\]
+We can easily calculate the $x$- and $y$-values of the vector with the cosine and sine. We
+begin by calculating the $x$-value $x_a$ of the vector:
+\[
+  \cos v_a = \frac{x_a}{\abs{\mathbf{a}}},
+\]
+which is equivalent to
+\[
+  x_a = \abs{\mathbf{a}} \cdot \cos v_a
+\]
+By inserting values into the formula above we see that the $x$-value $x_a$ of the vector is
+$-3.54$, since
+\[
+  x_a = 5 \cdot \cos 225^{\circ} \approx -3.54
+\]
+We can then calculate the $y$-value $y_a$ of the vector $\mathbf{a}$ with the sine:
+\[
+  \sin v_a = \frac{y_a}{\abs{\mathbf{a}}},
+\]
+which is equivalent to
+\[
+  y_a = \abs{\mathbf{a}} \cdot \sin v_a
+\]
+By inserting values into the formula above we see that the $y$-value $y_a$ of the vector
+$\mathbf{a}$ is also $-3.54$, since
+\[
+  y_a = 5 \cdot \sin 225^{\circ} \approx -3.54
+\]
+So
+\[
+  \mathbf{a} \approx (-3.54,\; -3.54)
 \]
 \end{exempel}
