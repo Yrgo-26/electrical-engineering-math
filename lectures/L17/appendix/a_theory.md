@@ -147,10 +147,10 @@ Z = R + Z_L + Z_C = 10 + j5 - j3 = 10 + j2\,\Omega
 
 | Begrepp | Beskrivning |
 |---------|-------------|
-| Fasor | $U = \|U\|\thinspace\angle\thinspace\delta$ representerar $u(t) = \|U\|\sin(\omega t + \delta)$ |
+| Fasor | $U = \lvert U\rvert\thinspace\angle\thinspace\delta$ representerar $u(t) = \lvert U\rvert\sin(\omega t + \delta)$ |
 | Fasoraddition | Konvertera till rektangulär, addera, konvertera tillbaka |
-| Multiplikation | $\|z_1\|\|z_2\|\thinspace\angle\thinspace(\delta_1 + \delta_2)$ |
-| Division | $(\|z_1\|/\|z_2\|)\thinspace\angle\thinspace(\delta_1 - \delta_2)$ |
+| Multiplikation | $\lvert z_1\rvert\lvert z_2\rvert\thinspace\angle\thinspace(\delta_1 + \delta_2)$ |
+| Division | $(\lvert z_1\rvert/\lvert z_2\rvert)\thinspace\angle\thinspace(\delta_1 - \delta_2)$ |
 | Impedans | $Z = U/I$ |
 
 ---

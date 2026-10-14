@@ -146,10 +146,10 @@ I = (7{,}07 + j7{,}07)\,\text{mA}
 | Begrepp | Formel |
 |---------|--------|
 | Rektangulär form | $z = x + jy$ |
-| Absolutbelopp | $\|z\| = \sqrt{x^2 + y^2}$ |
+| Absolutbelopp | $\lvert z\rvert = \sqrt{x^2 + y^2}$ |
 | Fasvinkel | $\delta = \arctan(y/x)$ + korrigering |
-| Polär form | $z = \|z\|\thinspace\angle\thinspace\delta$ |
-| Polär → rektangulär | $x = \|z\|\cos\delta$, $\medspace y = \|z\|\sin\delta$ |
+| Polär form | $z = \lvert z\rvert\thinspace\angle\thinspace\delta$ |
+| Polär → rektangulär | $x = \lvert z\rvert\cos\delta$, $\thinspace y = \lvert z\rvert\sin\delta$ |
 | Addition | $(x_1+x_2) + j(y_1+y_2)$ |
 
 ---

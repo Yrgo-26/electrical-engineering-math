@@ -207,7 +207,7 @@ x\% \text{ av } A = \frac{x}{100} \times A
 
 | Begrepp | Definition/Formel |
 |---------|-------------------|
-| Absolutbelopp | $\|a\| \geq 0$, avstånd till noll |
+| Absolutbelopp | $\lvert a\rvert \geq 0$, avstånd till noll |
 | Räkneordning | Parenteser → Potenser → $\times\div$ → $+-$ |
 | Bråkaddition | Gemensam nämnare |
 | Bråkmultiplikation | Täljare $\times$ täljare, nämnare $\times$ nämnare |

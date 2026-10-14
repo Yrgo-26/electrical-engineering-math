@@ -179,6 +179,6 @@ Fall 2: $2x - 3 = -5 \Rightarrow x = -1$
 | Linjär ekvation | Isolera obekant via additions- och multiplikationsprincipen |
 | Proportionsekvation | Korsvis multiplikation: $\frac{a}{b} = \frac{c}{d} \Rightarrow ad = bc$ |
 | Olikhet | Samma regler som ekvation, MEN tecknet vänder vid multiplikation/division med negativt tal |
-| Absolutbelopp | $\|ax+b\| = c \Rightarrow$ två fall: $ax+b=c$ eller $ax+b=-c$ |
+| Absolutbelopp | $\lvert ax+b\rvert = c \Rightarrow$ två fall: $ax+b=c$ eller $ax+b=-c$ |
 
 ---

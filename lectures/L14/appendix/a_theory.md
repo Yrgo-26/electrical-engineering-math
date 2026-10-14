@@ -24,7 +24,7 @@ $C$ kallas **integrationskonstanten**.
 | $x^n$ ($n \neq -1$) | $\dfrac{x^{n+1}}{n+1} + C$ |
 | $e^x$ | $e^x + C$ |
 | $e^{kx}$ | $\dfrac{1}{k}e^{kx} + C$ |
-| $\dfrac{1}{x}$ | $\ln\|x\| + C$ |
+| $\dfrac{1}{x}$ | $\ln\lvert x\rvert + C$ |
 | $\sin(x)$ | $-\cos(x) + C$ |
 | $\cos(x)$ | $\sin(x) + C$ |
 | $\sin(kx)$ | $-\dfrac{1}{k}\cos(kx) + C$ |
@@ -100,7 +100,7 @@ Strömmen $i(t) = 2t + 4$ A passerar under $0 \leq t \leq 2\thinspace\text{s}$. 
 q(t) = \int_0^t (2\tau + 4)\,d\tau = \left[\tau^2 + 4\tau\right]_0^t = t^2 + 4t
 ```
 
-**Primitiv funktion med startvillkor:** $I(t) = t^2 + 4t$, $\medspace I(0) = 0$ ✓
+**Primitiv funktion med startvillkor:** $I(t) = t^2 + 4t$, $\thinspace I(0) = 0$ ✓
 
 ```math
 q(2) = 4 + 8 = 12\,\text{C}

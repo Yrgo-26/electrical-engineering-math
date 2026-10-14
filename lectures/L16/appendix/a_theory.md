@@ -30,8 +30,8 @@ e^{j\pi/2} = j, \quad e^{j0} = 1, \quad e^{-j\delta} = \cos\delta - j\sin\delta
 | Form | Notation | Kommentar |
 |------|---------|-----------|
 | Rektangulär | $x + jy$ | Bäst för addition/subtraktion |
-| Polär | $\|z\|\thinspace\angle\thinspace\delta$ | Tydlig geometrisk tolkning |
-| Eulerform | $\|z\|e^{j\delta}$ | Bäst för multiplikation/division |
+| Polär | $\lvert z\rvert\thinspace\angle\thinspace\delta$ | Tydlig geometrisk tolkning |
+| Eulerform | $\lvert z\rverte^{j\delta}$ | Bäst för multiplikation/division |
 
 **Multiplikation i polär form:**
 
@@ -130,9 +130,9 @@ i(t) = 6{,}40 \cdot e^{j(100\pi t - 0{,}675)}\,\text{mA}
 | Begrepp | Formel |
 |---------|--------|
 | Eulers formel | $e^{j\delta} = \cos\delta + j\sin\delta$ |
-| Eulerform | $z = \|z\|e^{j\delta}$ |
-| Multiplikation | $z_1 z_2 = \|z_1\|\|z_2\|\thinspace\angle\thinspace(\delta_1+\delta_2)$ |
-| Division | $z_1/z_2 = (\|z_1\|/\|z_2\|)\thinspace\angle\thinspace(\delta_1-\delta_2)$ |
-| Fasor → tidsdomän | $u(t) = \|U\|\sin(\omega t + \delta)$ |
+| Eulerform | $z = \lvert z\rverte^{j\delta}$ |
+| Multiplikation | $z_1 z_2 = \lvert z_1\rvert\lvert z_2\rvert\thinspace\angle\thinspace(\delta_1+\delta_2)$ |
+| Division | $z_1/z_2 = (\lvert z_1\rvert/\lvert z_2\rvert)\thinspace\angle\thinspace(\delta_1-\delta_2)$ |
+| Fasor → tidsdomän | $u(t) = \lvert U\rvert\sin(\omega t + \delta)$ |
 
 ---

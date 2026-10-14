@@ -352,10 +352,10 @@ Därmed gäller att
 
 | Begrepp | Formel |
 |---------|--------|
-| Absolutbelopp | $\|\mathbf{u}\| = \sqrt{u_x^2 + u_y^2}$ |
+| Absolutbelopp | $\lvert \mathbf{u}\rvert = \sqrt{u_x^2 + u_y^2}$ |
 | Vinkel mot x-axeln | $v = \arctan(u_y/u_x)$ + kvadrantkorrigering |
 | Vinkel mellan vektorer | $\alpha = v_v - v_u$ |
-| Addition | $(u_x + v_x;\medspace u_y + v_y)$ |
-| Multiplikation med ett tal | $k\mathbf{u} = (ku_x;\medspace ku_y)$ |
+| Addition | $(u_x + v_x;\thinspace u_y + v_y)$ |
+| Multiplikation med ett tal | $k\mathbf{u} = (ku_x;\thinspace ku_y)$ |
 
 ---

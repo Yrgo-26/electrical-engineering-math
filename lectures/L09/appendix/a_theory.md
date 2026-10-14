@@ -42,7 +42,7 @@ u(t) = |U| \sin(\omega t + \delta)
 
 | Parameter | Symbol | Enhet | Beskrivning |
 |-----------|--------|-------|-------------|
-| Amplitud | $\|U\|$ | V | Toppvärdet |
+| Amplitud | $\lvert U\rvert$ | V | Toppvärdet |
 | Vinkelhastighet | $\omega$ | rad/s | $\omega = 2\pi f$ |
 | Frekvens | $f$ | Hz | Antal perioder per sekund |
 | Periodtid | $T$ | s | $T = 1/f$ |
@@ -125,6 +125,6 @@ u(t) = 4\sin\!\left(100\pi t - \frac{\pi}{6}\right)\,\text{V}
 | Grader till radianer | $v_{\text{rad}} = v_{\text{grad}} \cdot \pi/180°$ |
 | Vinkelhastighet | $\omega = 2\pi f = 2\pi/T$ |
 | Periodtid | $T = 1/f$ |
-| Växelspänningsekvation | $u(t) = \|U\|\sin(\omega t + \delta)$ |
+| Växelspänningsekvation | $u(t) = \lvert U\rvert\sin(\omega t + \delta)$ |
 
 ---
