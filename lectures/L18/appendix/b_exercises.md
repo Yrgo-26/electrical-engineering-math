@@ -282,7 +282,7 @@ Betrakta talen $-2{,}7$, $3{,}2$ och $5{,}5$.
 ---
 
 ### 5.2 – Toleranskontroll av resistorer
-En resistor är märkt $4{,}7\ \text{k}\Omega \pm 5\ \char37$.
+En resistor är märkt $4{,}7\ \text{k}\Omega$ ±5 %.
 
 **a)** Beräkna det tillåtna intervallet för hand.
 
@@ -320,7 +320,7 @@ Spänningen ges av $u(t) = 12e^{-t/\tau}$ V, där $\tau = RC$ med $R = 10\ \text
 
 **c)** Skriv ett program som med `exp()` skriver ut $u(t)$ för $t = 0$ till $5\ \text{s}$ i steg om $0{,}5\ \text{s}$.
 
-**d)** Efter hur många tidskonstanter är spänningen under $1\ \char37$ av startvärdet? Låt programmet leta upp svaret.
+**d)** Efter hur många tidskonstanter är spänningen under 1 % av startvärdet? Låt programmet leta upp svaret.
 
 ---
 

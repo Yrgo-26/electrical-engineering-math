@@ -270,9 +270,9 @@ Lös ekvationerna:
 
 **b)** Lös $|2x - 6| < 4$.
 
-**c)** En matningsspänning ska vara $5\thinspace\text{V}$ med toleransen $\pm 2\thinspace\char37$. Skriv kravet som en absolutbeloppsolikhet och ange det tillåtna spänningsintervallet.
+**c)** En matningsspänning ska vara $5\thinspace\text{V}$ med toleransen ±2 %. Skriv kravet som en absolutbeloppsolikhet och ange det tillåtna spänningsintervallet.
 
-**d)** En resistor är märkt $1\thinspace\text{k}\Omega \pm 1\thinspace\char37$ och mäts till $1\thinspace 015\thinspace\Omega$. Uppfyller den kravet $|R - 1000| \leq 10$?
+**d)** En resistor är märkt $1\thinspace\text{k}\Omega$ ±1 % och mäts till $1\thinspace 015\thinspace\Omega$. Uppfyller den kravet $|R - 1000| \leq 10$?
 
 ---
 

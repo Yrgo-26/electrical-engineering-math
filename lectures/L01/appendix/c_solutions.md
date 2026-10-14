@@ -78,11 +78,11 @@
 ---
 
 ### 1.3 – Procenträkning
-**a)** $40\char37$ av $250$
+**a)** 40 % av $250$
 
 **b)** Vilket procenttal är $18$ av $72$?
 
-**c)** Resistor $100\thinspace\Omega$ med tolerans $\pm 5\char37$
+**c)** Resistor $100\thinspace\Omega$ med tolerans ±5 %
 
 ---
 
@@ -99,7 +99,7 @@
 \frac{18}{72} \times 100\% = 0{,}25 \times 100\% = 25\%
 ```
 
-**c)** $5\char37$ av $100\thinspace\Omega$ är $5\thinspace\Omega$. Det tillåtna intervallet är:
+**c)** 5 % av $100\thinspace\Omega$ är $5\thinspace\Omega$. Det tillåtna intervallet är:
 
 ```math
 100 - 5 = 95\,\Omega \quad \text{till} \quad 100 + 5 = 105\,\Omega
@@ -238,7 +238,7 @@ $P_{\text{in}} = 24\thinspace\text{W}$, $P_{\text{ut}} = 18\thinspace\text{W}$
 \eta = \frac{P_{\text{ut}}}{P_{\text{in}}} \times 100\% = \frac{18}{24} \times 100\% = 75\%
 ```
 
-**b)** Med $\eta = 90\char37$ och $P_{\text{in}} = 24\thinspace\text{W}$:
+**b)** Med $\eta = 90$ % och $P_{\text{in}} = 24\thinspace\text{W}$:
 
 ```math
 P_{\text{ut}} = 0{,}90 \times 24 = 21{,}6\,\text{W}
@@ -351,14 +351,14 @@ Båda ger $5$. Absolutbeloppet av en differens är **avståndet** mellan talen p
 ---
 
 ### Lösning
-Ett bråk görs om till decimaltal genom division, och till procent genom multiplikation med $100\thinspace\char37$.
+Ett bråk görs om till decimaltal genom division, och till procent genom multiplikation med 100 %.
 
 | Bråk | Decimaltal | Procent |
 |------|------------|---------|
-| $\dfrac{1}{4}$ | $0{,}25$ | $25\thinspace\char37$ |
-| $\dfrac{3}{5}$ | $0{,}6$ | $60\thinspace\char37$ |
-| $\dfrac{1}{8}$ | $0{,}125$ | $12{,}5\thinspace\char37$ |
-| $\dfrac{3}{8}$ | $0{,}375$ | $37{,}5\thinspace\char37$ |
+| $\dfrac{1}{4}$ | $0{,}25$ | 25 % |
+| $\dfrac{3}{5}$ | $0{,}6$ | 60 % |
+| $\dfrac{1}{8}$ | $0{,}125$ | 12,5 % |
+| $\dfrac{3}{8}$ | $0{,}375$ | 37,5 % |
 
 Exempel på uträkningarna:
 
@@ -437,13 +437,13 @@ En procentuell förändring beräknas alltid som $\dfrac{\text{förändring}}{\t
 \frac{400 - 340}{400} \times 100\% = \frac{60}{400} \times 100\% = 15\%
 ```
 
-**c)** Nej. En ökning med $10\char37$ är multiplikation med $1{,}10$ och en minskning med $10\char37$ är multiplikation med $0{,}90$:
+**c)** Nej. En ökning med 10 % är multiplikation med $1{,}10$ och en minskning med 10 % är multiplikation med $0{,}90$:
 
 ```math
 1{,}10 \times 0{,}90 = 0{,}99
 ```
 
-Slutvärdet är $99\char37$ av ursprungsvärdet, alltså $1\char37$ lägre. Orsaken är att minskningen räknas på det *nya*, större värdet.
+Slutvärdet är 99 % av ursprungsvärdet, alltså 1 % lägre. Orsaken är att minskningen räknas på det *nya*, större värdet.
 
 **d)**
 
@@ -454,12 +454,12 @@ P = 1{,}25 \times 60 = 75\,\text{W}
 ---
 
 ### 3.6 – Tolerans och mätavvikelse
-$4{,}7\thinspace\text{k}\Omega \pm 10\thinspace\char37$ respektive $220\thinspace\Omega \pm 5\thinspace\char37$
+$4{,}7\thinspace\text{k}\Omega$ ±10 % respektive $220\thinspace\Omega$ ±5 %
 
 ---
 
 ### Lösning
-**a)** $10\char37$ av $4{,}7\thinspace\text{k}\Omega$ är $0{,}47\thinspace\text{k}\Omega$:
+**a)** 10 % av $4{,}7\thinspace\text{k}\Omega$ är $0{,}47\thinspace\text{k}\Omega$:
 
 ```math
 4{,}7 - 0{,}47 = 4{,}23\,\text{k}\Omega
@@ -475,7 +475,7 @@ $4{,}7\thinspace\text{k}\Omega \pm 10\thinspace\char37$ respektive $220\thinspac
 \frac{4{,}9 - 4{,}7}{4{,}7} \times 100\% = \frac{0{,}2}{4{,}7} \times 100\% \approx 4{,}3\%
 ```
 
-**d)** $5\char37$ av $220\thinspace\Omega$ är $11\thinspace\Omega$, så det tillåtna intervallet är $209$–$231\thinspace\Omega$. Det uppmätta värdet $208\thinspace\Omega$ ligger **utanför** intervallet – resistorn är alltså inte godkänd. Avvikelsen är:
+**d)** 5 % av $220\thinspace\Omega$ är $11\thinspace\Omega$, så det tillåtna intervallet är $209$–$231\thinspace\Omega$. Det uppmätta värdet $208\thinspace\Omega$ ligger **utanför** intervallet – resistorn är alltså inte godkänd. Avvikelsen är:
 
 ```math
 \frac{220 - 208}{220} \times 100\% = \frac{12}{220} \times 100\% \approx 5{,}5\%
@@ -592,7 +592,7 @@ Eftersom resistansen räknas i k$\Omega$ och spänningen i V fås strömmen dire
 ---
 
 ### 3.11 – Verkningsgrad i två steg
-$\eta_1 = 95\thinspace\char37$, $\eta_2 = 80\thinspace\char37$, $P_{\text{in}} = 200\thinspace\text{W}$
+$\eta_1 = 95$ %, $\eta_2 = 80$ %, $P_{\text{in}} = 200\thinspace\text{W}$
 
 ---
 

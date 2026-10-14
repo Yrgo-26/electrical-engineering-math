@@ -17,7 +17,7 @@ Beräkna $R_{\text{TOT}}$.
 ---
 
 ### 1.2 – Verkningsgrad och effekt
-En transformator har verkningsgraden $\eta = 92\thinspace\char37$ och ineffekten $P_{\text{in}} = 500\thinspace\text{W}$.
+En transformator har verkningsgraden $\eta = 92$ % och ineffekten $P_{\text{in}} = 500\thinspace\text{W}$.
 
 ![](./images/1.2_circuit.png)
 

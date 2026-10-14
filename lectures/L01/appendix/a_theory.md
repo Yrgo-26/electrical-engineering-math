@@ -183,7 +183,7 @@ p\% = \frac{p}{100}
 x\% \text{ av } A = \frac{x}{100} \times A
 ```
 
-**Exempel:** Hur mycket är $30\char37$ av $200\thinspace\text{V}$?
+**Exempel:** Hur mycket är 30 % av $200\thinspace\text{V}$?
 
 ```math
 \frac{30}{100} \times 200 = 60\,\text{V}
@@ -211,7 +211,7 @@ x\% \text{ av } A = \frac{x}{100} \times A
 | Räkneordning | Parenteser → Potenser → $\times\div$ → $+-$ |
 | Bråkaddition | Gemensam nämnare |
 | Bråkmultiplikation | Täljare $\times$ täljare, nämnare $\times$ nämnare |
-| Procent | $p\char37 = \frac{p}{100}$ |
+| Procent | $p$ % $= \frac{p}{100}$ |
 | Parallellresistans | $\frac{1}{R_{\text{TOT}}} = \frac{1}{R_1} + \frac{1}{R_2}$ |
 | Parallellresistans (två motstånd) | $R_{\text{p}} = \frac{R_1 \times R_2}{R_1 + R_2}$ |
 | Serieresistans | $R_{\text{s}} = R_1 + R_2$ |

@@ -110,7 +110,7 @@ u(30) = U_0 \cdot a^{30} = 0{,}5 U_0
 a^{30} = 0{,}5 \quad \Rightarrow \quad a = 0{,}5^{1/30} \approx 0{,}977
 ```
 
-**När återstår $20\thinspace\char37$?**
+**När återstår 20 %?**
 
 ```math
 a^t = 0{,}2 \quad \Rightarrow \quad t = \frac{\log 0{,}2}{\log a} = \frac{\log 0{,}2}{\log 0{,}5^{1/30}} \approx 69{,}7\,\text{h}

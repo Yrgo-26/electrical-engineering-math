@@ -88,7 +88,7 @@ Resistansen hos en termistor beror linjärt på temperaturen enligt $R(T) = kT +
 ---
 
 ### 2.3 – Exponentiell modell
-Antalet fel i ett system minskar med $15\thinspace\char37$ per månad. Vid start finns $80$ fel.
+Antalet fel i ett system minskar med 15 % per månad. Vid start finns $80$ fel.
 
 **a)** Skriv en funktion $f(x)$ för antalet fel efter $x$ månader.
 

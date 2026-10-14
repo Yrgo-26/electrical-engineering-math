@@ -25,7 +25,7 @@ R_{\text{TOT}} = 1\,\Omega
 ---
 
 ### 1.2 – Verkningsgrad och effekt
-$\eta = 92\thinspace\char37$, $P_{\text{in}} = 500\thinspace\text{W}$
+$\eta = 92$ %, $P_{\text{in}} = 500\thinspace\text{W}$
 
 ---
 
@@ -278,7 +278,7 @@ P = 10 \times \left(2^2 + 2 \times 2 \times 0{,}1 + 0{,}1^2\right) = 10 \times (
 \frac{0{,}1}{4{,}1} \approx 0{,}024 = 2{,}4\,\%
 ```
 
-En strömändring på $5\thinspace\char37$ ger alltså en effektändring på drygt $10\thinspace\char37$, och den kvadratiska termen $R\thinspace\Delta I^2$ är liten så länge $\Delta I \ll I_0$. Det är därför man ofta kan räkna med enbart den linjära termen vid små ändringar.
+En strömändring på 5 % ger alltså en effektändring på drygt 10 %, och den kvadratiska termen $R\thinspace\Delta I^2$ är liten så länge $\Delta I \ll I_0$. Det är därför man ofta kan räkna med enbart den linjära termen vid små ändringar.
 
 ---
 

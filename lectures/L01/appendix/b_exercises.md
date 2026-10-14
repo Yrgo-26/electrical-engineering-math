@@ -28,11 +28,11 @@ Beräkna och förenkla:
 ---
 
 ### 1.3 – Procenträkning
-**a)** Beräkna $40\char37$ av $250$.
+**a)** Beräkna 40 % av $250$.
 
 **b)** Vilket procenttal är $18$ av $72$?
 
-**c)** En resistor har nominellt värde $100\thinspace\Omega$ med en tolerans på $\pm 5\thinspace\char37$. Ange det lägsta och det högsta tillåtna motståndet.
+**c)** En resistor har nominellt värde $100\thinspace\Omega$ med en tolerans på ±5 %. Ange det lägsta och det högsta tillåtna motståndet.
 
 ---
 
@@ -108,7 +108,7 @@ En batteridriven motor tar in $P_{\text{in}} = 24\thinspace\text{W}$ och avger $
 
 **a)** Beräkna motorns verkningsgrad $\eta$ i procent.
 
-**b)** Om verkningsgraden förbättras till $90\thinspace\char37$ vid samma ineffekt – hur stor blir uteffekten?
+**b)** Om verkningsgraden förbättras till 90 % vid samma ineffekt – hur stor blir uteffekten?
 
 ---
 
@@ -165,7 +165,7 @@ Fyll i de tomma rutorna. Bråken ska anges i enklaste form.
 |------|------------|---------|
 | $\dfrac{1}{4}$ | | |
 | | $0{,}6$ | |
-| | | $12{,}5\thinspace\char37$ |
+| | | 12,5 % |
 | $\dfrac{3}{8}$ | | |
 
 ---
@@ -190,20 +190,20 @@ Beräkna och förenkla:
 
 **b)** En ström minskar från $400\thinspace\text{mA}$ till $340\thinspace\text{mA}$. Hur många procent är minskningen?
 
-**c)** Ett motstånd ökar först med $10\thinspace\char37$ och minskar sedan med $10\thinspace\char37$. Är det tillbaka på sitt ursprungsvärde? Motivera.
+**c)** Ett motstånd ökar först med 10 % och minskar sedan med 10 %. Är det tillbaka på sitt ursprungsvärde? Motivera.
 
-**d)** En effekt på $60\thinspace\text{W}$ ökas med $25\thinspace\char37$. Hur stor blir den nya effekten?
+**d)** En effekt på $60\thinspace\text{W}$ ökas med 25 %. Hur stor blir den nya effekten?
 
 ---
 
 ### 3.6 – Tolerans och mätavvikelse
-**a)** En resistor är märkt $4{,}7\thinspace\text{k}\Omega \pm 10\thinspace\char37$. Ange det lägsta och det högsta tillåtna värdet.
+**a)** En resistor är märkt $4{,}7\thinspace\text{k}\Omega$ ±10 %. Ange det lägsta och det högsta tillåtna värdet.
 
 **b)** Resistorn mäts till $4{,}9\thinspace\text{k}\Omega$. Ligger den inom toleransen?
 
 **c)** Hur många procent avviker det uppmätta värdet från det nominella?
 
-**d)** En annan resistor är märkt $220\thinspace\Omega \pm 5\thinspace\char37$ och mäts till $208\thinspace\Omega$. Är den godkänd?
+**d)** En annan resistor är märkt $220\thinspace\Omega$ ±5 % och mäts till $208\thinspace\Omega$. Är den godkänd?
 
 ---
 
@@ -261,7 +261,7 @@ Fyll i de tomma rutorna med hjälp av Ohms lag $U = R \times I$.
 ---
 
 ### 3.11 – Verkningsgrad i två steg
-En strömförsörjning består av en transformator med verkningsgraden $\eta_1 = 95\thinspace\char37$ följd av en likriktare med verkningsgraden $\eta_2 = 80\thinspace\char37$. Ineffekten är $P_{\text{in}} = 200\thinspace\text{W}$.
+En strömförsörjning består av en transformator med verkningsgraden $\eta_1 = 95$ % följd av en likriktare med verkningsgraden $\eta_2 = 80$ %. Ineffekten är $P_{\text{in}} = 200\thinspace\text{W}$.
 
 **a)** Beräkna effekten efter transformatorn.
 

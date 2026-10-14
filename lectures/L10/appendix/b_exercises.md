@@ -248,11 +248,11 @@ Använd $U_{\text{dBV}} = 20\log_{10}\left(\dfrac{U_{\text{RMS}}}{1\thinspace\te
 ### 3.10 – Halverings- och fördubblingstid
 En storhet beskrivs av $f(t) = C \cdot a^t$.
 
-**a)** Ett batteri tappar $2\thinspace\char37$ av sin laddning per timme. Bestäm förändringsfaktorn $a$.
+**a)** Ett batteri tappar 2 % av sin laddning per timme. Bestäm förändringsfaktorn $a$.
 
 **b)** Efter hur många timmar återstår hälften av laddningen?
 
-**c)** En mätdatamängd växer med $10\thinspace\char37$ per dygn. Efter hur många dygn har den fördubblats?
+**c)** En mätdatamängd växer med 10 % per dygn. Efter hur många dygn har den fördubblats?
 
 **d)** Visa allmänt att fördubblingstiden ges av $t = \dfrac{\log 2}{\log a}$.
 

@@ -14,22 +14,26 @@ after the lesson. Most of them can be done in your head or with pencil and paper
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 1}{The concept of a function, domain and range}
 
-\uppgift{1.1}{Is the relationship a function?}
-Decide whether the following relationships define $y$ as a function of $x$. Justify your answer.
-\begin{delar}(2)
-  \task $y = 3x - 2$
-  \task $x^2 + y^2 = 16$
-  \task $\{(1,2),\ (2,4),\ (3,4),\ (4,8)\}$
-  \task $\{(1,2),\ (1,5),\ (2,3)\}$
-\end{delar}
+\uppgift{1.1}{Is the relation a function?}
+Decide whether the current $I$ is a function of the voltage $U$. Justify your answer.
+\begin{parts}
+  \item $I = \dfrac{U}{10}$ (Ohm's law for a $10\,\Omega$ resistor)
+  \item The measured pairs $(U, I)$ with $U$ in V and $I$ in mA: $\lbrace(2, 100),\ (4, 200),\ (6,
+    250),\ (8, 250)\rbrace$
+  \item The measured pairs $(U, I)$ with $U$ in V and $I$ in mA: $\lbrace(1, 2),\ (1, 5),\ (2,
+    3)\rbrace$
+\end{parts}
 
 \uppgift{1.2}{Domain and range}
-Find the domain $D_f$ and the range $V_f$ of
-\begin{delar}(3)
-  \task $f(x) = \dfrac{1}{x - 3}$
-  \task $g(x) = \sqrt{x + 4}$
-  \task $h(x) = -x^2 + 2$
-\end{delar}
+Find the domain and the range.
+\begin{parts}
+  \item The temperature sensor \code{TMP36} gives the output voltage $U(T) = 0.01T + 0.5$ (in V) at
+    the temperature $T$ (in \textdegree C). The sensor works for $-40 \leq T \leq 125$.
+  \item The voltage across a $100\,\Omega$ resistor that develops the power $P$ (in W) is $U(P) =
+    \sqrt{100P}$.
+  \item The power in a $10\,\Omega$ resistor is $P(U) = \dfrac{U^2}{10}$, where the voltage can be
+    $-20 \leq U \leq 20$ (in V).
+\end{parts}
 
 \uppgift{1.3}{Linear resistance of a temperature-dependent resistor}
 The resistance $R$ (in $\Omega$) of a certain temperature-dependent resistor depends linearly on
@@ -43,15 +47,16 @@ $R = 100\,\Omega$, and at $T = 50\,^{\circ}\text{C}$, $R = 175\,\Omega$.
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 2}{Types of function and applications}
 
-\uppgift{2.1}{Exponential growth of solar power installations}
-The number of solar power installations in a municipality increases by $8\,\%$ a year. In year
-$x = 0$ there were $400$ installations, which gives
+\uppgift{2.1}{An ageing battery}
+A new lithium-ion battery has the capacity $4000\,\text{mAh}$ and loses $3\,\%$ of its capacity a
+year. After $x$ years the capacity is
 \[
-  f(x) = 400 \cdot 1.08^x.
+  C(x) = 4000 \cdot 0.97^x\,\text{mAh}.
 \]
 \begin{parts}
-  \item Calculate $f(10)$ and interpret the answer.
-  \item After how many years has the number of installations doubled?
+  \item Calculate $C(10)$ and interpret the answer.
+  \item A battery is usually considered worn out when its capacity has dropped to $80\,\%$. After how
+    many years does that happen?
 \end{parts}
 
 \uppgift{2.2}{Power as a power function of the current}
@@ -89,95 +94,105 @@ A voltage $U(t)$ is measured at several times during a discharge:
 The exercises below are extra practice, best done on your own after the lesson.
 
 \uppgift{3.1}{Calculating function values}
-The functions $f(x) = 3x - 5$, $g(x) = x^2 + 2$ and $h(x) = \dfrac{6}{x}$ are given. Calculate
-\begin{delar}(6)
-  \task $f(4)$
-  \task $f(-2)$
-  \task $g(0)$
-  \task $g(-3)$
-  \task $h(3)$
-  \task $h(-2)$
+A battery has the terminal voltage $U(I) = 12 - 2I$ (in V), a resistor develops the power $P(I) =
+5I^2$ (in W), and the current through a load is $I(R) = \dfrac{24}{R}$ (in A). Calculate:
+\begin{delar}(3)
+  \task $U(1)$
+  \task $U(4)$
+  \task $P(0)$
+  \task $P(3)$
+  \task $I(8)$
+  \task $I(12)$
 \end{delar}
 
 \uppgift{3.2}{Solving the equation $f(x) = c$}
-The same functions as in \uppref{3.1}.
+The same functions as in exercise~3.1.
 \begin{parts}
-  \item Find $x$ such that $f(x) = 10$.
-  \item Find the zero of $f$.
-  \item Find $x$ such that $g(x) = 11$.
-  \item Does $g$ have a zero? Justify your answer.
-  \item Find $x$ such that $h(x) = 0.5$.
+  \item At what current is the terminal voltage $9\,\text{V}$?
+  \item Find the zero of $U(I)$. What does it mean for the battery?
+  \item At what current does the resistor develop $20\,\text{W}$?
+  \item Can $P(I)$ be negative? Justify your answer.
+  \item Which resistance gives the current $0.5\,\text{A}$?
 \end{parts}
 
 \uppgift{3.3}{Domain}
-Find the domain $D_f$.
-\begin{delar}(3)
-  \task $f(x) = 5x + 1$
-  \task $f(x) = \dfrac{1}{x + 2}$
-  \task $f(x) = \sqrt{x - 3}$
-  \task $f(x) = \dfrac{x}{x^2 - 9}$
-  \task $f(x) = \sqrt{9 - x}$
+Find the mathematical domain. Then state which values are physically reasonable.
+\begin{delar}(2)
+  \task $I(R) = \dfrac{10}{R}$
+  \task $I(R) = \dfrac{12}{R + 2}$
+  \task $U(P) = \sqrt{50P}$
+  \task $X(f) = \dfrac{1000}{f}$
 \end{delar}
 
 \uppgift{3.4}{Range}
-Find the range $V_f$.
-\begin{delar}(2)
-  \task $f(x) = x^2 + 1$, $D_f = \mathbb{R}$
-  \task $f(x) = -x^2$, $D_f = \mathbb{R}$
-  \task $f(x) = \abs{x}$, $D_f = \mathbb{R}$
-  \task $f(x) = 2x - 3$, $D_f = [0, 5]$
-  \task $f(x) = \sqrt{x}$, $D_f = [0, \infty)$
-\end{delar}
+Find the range.
+\begin{parts}
+  \item $P(I) = 10I^2$ (in W) for $0 \leq I \leq 2$ (in A)
+  \item $U(I) = 12 - 2I$ (in V) for $0 \leq I \leq 6$ (in A)
+  \item A rectifier gives the output voltage $u_{\text{out}} = \abs{u_{\text{in}}}$ for $-10 \leq
+    u_{\text{in}} \leq 10$ (in V).
+  \item $T(U) = 100U - 50$ (in \textdegree C) for $0.1 \leq U \leq 1.75$ (in V)
+\end{parts}
 
 \uppgift{3.5}{A linear function from two points}
-Find $f(x) = kx + m$ for the line through the points
-\begin{delar}(2)
-  \task $(0, 4)$ and $(2, 10)$
-  \task $(1, 5)$ and $(4, 14)$
-  \task $(-2, 7)$ and $(2, -1)$
-  \task $(0, -3)$ and $(5, -3)$
-\end{delar}
+Find the linear function.
+\begin{parts}
+  \item A battery has the terminal voltage $9\,\text{V}$ at $0\,\text{A}$ and $8\,\text{V}$ at
+    $2\,\text{A}$. Find $U(I)$.
+  \item A temperature sensor gives $0.5\,\text{V}$ at $0\,^{\circ}\text{C}$ and $1.5\,\text{V}$ at
+    $100\,^{\circ}\text{C}$. Find $U(T)$.
+  \item A Pt100 element has the resistance $100\,\Omega$ at $0\,^{\circ}\text{C}$ and
+    $138.5\,\Omega$ at $100\,^{\circ}\text{C}$. Find $R(T)$.
+  \item A charging current is $2\,\text{A}$ at $t = 0\,\text{s}$ and $2\,\text{A}$ at $t =
+    5\,\text{s}$. Find $I(t)$.
+\end{parts}
 
 \uppgift{3.6}{Interpreting $k$ and $m$}
+A loaded battery has the terminal voltage $U(I) = 12 - 0.5I$ (in V), where $I$ is the current in
+A.
 \begin{parts}
-  \item What does $k$ mean graphically in $f(x) = kx + m$?
+  \item What does $k$ mean graphically?
   \item What does $m$ mean graphically?
-  \item Is $f(x) = -4x + 12$ increasing or decreasing? Justify your answer.
-  \item Find the zero of $f(x) = -4x + 12$.
-  \item The terminal voltage of a loaded battery is $U(I) = 12 - 2I$. What do $k = -2$ and
-    $m = 12$ represent physically?
+  \item Is $U(I)$ increasing or decreasing? Justify your answer.
+  \item Find the zero of $U(I)$.
+  \item What do $k = -0.5$ and $m = 12$ represent physically?
 \end{parts}
 
 \uppgift{3.7}{Power functions}
-The functions $f(x) = x^2$ and $g(x) = x^3$ are given.
+The power in a $10\,\Omega$ resistor is $P(I) = 10I^2$ (in W).
 \begin{parts}
-  \item Calculate $f(-3)$ and $g(-3)$.
-  \item Why does $f(-x) = f(x)$ hold, but $g(-x) = -g(x)$?
-  \item Find $V_f$ and $V_g$ when $D = \mathbb{R}$.
-  \item The power in a resistor is given by $P(I) = 10I^2$. How many times greater does the power
-    become if the current is tripled?
+  \item Calculate $P(3)$ and $P(-3)$. Why is the power the same when the current changes direction?
+  \item How many times larger does the power become if the current is tripled?
+  \item How does the power change if the current is halved?
+  \item The power can also be written $P(U) = \dfrac{U^2}{10}$. Calculate $P(5)$ and $P(10)$. How does
+    the power change when the voltage is doubled?
 \end{parts}
 
 \uppgift{3.8}{Exponential functions}
+An amplifier chain doubles the signal in each stage, so that $u(n) = 5 \cdot 2^n$ (in mV) after
+$n$ stages. An attenuator instead halves the signal in each stage, so that $g(n) = 100 \cdot
+0.5^n$ (in mV).
 \begin{parts}
-  \item $f(x) = 5 \cdot 2^x$. Calculate $f(0)$, $f(1)$ and $f(3)$.
-  \item $g(x) = 100 \cdot 0.5^x$. Calculate $g(0)$, $g(1)$ and $g(3)$.
+  \item Calculate $u(0)$, $u(1)$ and $u(3)$.
+  \item Calculate $g(0)$, $g(1)$ and $g(3)$.
   \item Which of the functions is increasing and which is decreasing? What decides it?
-  \item What is $C$ in each function, and what does it signify?
+  \item What is $C$ in each function, and what does it mean?
 \end{parts}
 
 \uppgift{3.9}{Growth factor}
 \begin{parts}
-  \item A quantity increases by $5\,\%$ a year. What is the growth factor $a$?
-  \item A quantity decreases by $20\,\%$ a year. What is $a$?
-  \item A signal is attenuated to $70\,\%$ of its value at each stage it passes. The initial
+  \item The price of electricity increases by $5\,\%$ a year. What is the growth factor $a$?
+  \item The capacity of a battery decreases by $20\,\%$ a year. What is $a$?
+  \item A signal is attenuated to $70\,\%$ of its value for each stage it passes. The initial
     amplitude is $2\,\text{V}$. Write a function for the amplitude after $n$ stages.
   \item Calculate the amplitude after $3$ stages.
-  \item After how many stages does the amplitude fall below $1\,\text{V}$?
+  \item After how many stages is the amplitude below $1\,\text{V}$?
 \end{parts}
 
 \uppgift{3.10}{Linear or exponential?}
-Two quantities have been measured:
+Two quantities have been measured once a year: $f(x)$ is the number of charging points in a
+municipality (in hundreds) and $g(x)$ is the number of connected sensors in a network (in
+thousands), where $x$ is the number of years.
 
 \begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
   $x$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
@@ -195,14 +210,13 @@ Two quantities have been measured:
 \end{parts}
 
 \uppgift{3.11}{Zeros}
-Find the zeros.
-\begin{delar}(3)
-  \task $f(x) = 4x - 12$
-  \task $f(x) = x^2 - 25$
-  \task $f(x) = x^2 - 5x + 6$
-  \task $f(x) = x^2 + 4$
-  \task $f(x) = x(x - 4)$
-\end{delar}
+Find the zeros and interpret them.
+\begin{parts}
+  \item The terminal voltage $U(I) = 12 - 4I$ (in V) of a battery, where $I$ is the current in A.
+  \item The power $P(I) = 12I - 2I^2$ (in W) that the same kind of battery, with the internal
+    resistance $2\,\Omega$, delivers to a load.
+  \item The voltage $U(t) = 6 - 0.5t$ (in V) during a discharge, where $t$ is the time in s.
+\end{parts}
 
 \uppgift{3.12}{A voltage divider as a function}
 A voltage divider consists of $R_1 = 1\,\text{k}\Omega$ and a potentiometer with the resistance
@@ -234,11 +248,12 @@ where $t$ is in seconds.
 % Kept whole on one page: its last part was left alone at the top of the next.
 \needspace{10\baselineskip}
 \uppgift{3.14}{True or false}
-Decide whether the statement is true or false and justify your answer briefly.
+Decide whether the statement is true or false, and justify your answer briefly.
 \begin{parts}
-  \item $f(x) = x^2$ has the range $\mathbb{R}$.
-  \item $f(x) = \dfrac{1}{x}$ is defined for all $x$.
-  \item That $f(2) = 5$ means that $f$ has a zero at $x = 2$.
-  \item The relationship $x^2 + y^2 = 25$ defines $y$ as a function of $x$.
-  \item The function $f(x) = 3 \cdot 2^x$ has the initial value $2$.
+  \item The power $P(I) = RI^2$ is negative if the current is negative.
+  \item The current $I(R) = \dfrac{12}{R}$ is defined for all $R$.
+  \item That $U(2) = 5$ means that $U$ has a zero at $I = 2\,\text{A}$.
+  \item If the same voltage $U$ has been measured with two different currents $I$, then $I$ is not a
+    function of $U$.
+  \item The voltage $u(t) = 3 \cdot 2^t$ (in V) has the initial value $3\,\text{V}$.
 \end{parts}

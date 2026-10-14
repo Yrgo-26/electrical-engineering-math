@@ -705,7 +705,7 @@ Ekvationen har alltså **en enda** lösning.
 -4 < 2x - 6 < 4 \quad \Rightarrow \quad 2 < 2x < 10 \quad \Rightarrow \quad 1 < x < 5
 ```
 
-**c)** $2\char37$ av $5\thinspace\text{V}$ är $0{,}1\thinspace\text{V}$, så kravet är:
+**c)** 2 % av $5\thinspace\text{V}$ är $0{,}1\thinspace\text{V}$, så kravet är:
 
 ```math
 |u - 5| \leq 0{,}1 \quad \Rightarrow \quad 4{,}9\,\text{V} \leq u \leq 5{,}1\,\text{V}
@@ -717,7 +717,7 @@ Ekvationen har alltså **en enda** lösning.
 |1015 - 1000| = 15 > 10
 ```
 
-Resistorn ligger utanför toleransen $\pm 1\char37$, som motsvarar intervallet $990$–$1010\thinspace\Omega$.
+Resistorn ligger utanför toleransen ±1 %, som motsvarar intervallet $990$–$1010\thinspace\Omega$.
 
 ---
 
