@@ -67,7 +67,7 @@ Från en graf avläser man:
 ## 5. Typexempel
 
 ### Typexempel 1 – Temperatursensor
-En sensor ger temperaturen $f(x)$ (°C) som funktion av inspänningen $x$ (V):
+Temperatursensorn `TMP36` ger temperaturen $f(x)$ (°C) som funktion av inspänningen $x$ (V):
 
 ```math
 f(x) = 100x - 50, \quad 0 \leq x \leq 5\,\text{V}
@@ -90,7 +90,7 @@ f(0) = -50\,°\text{C}, \quad f(5) = 450\,°\text{C} \quad \Rightarrow \quad V_f
 ---
 
 ### Typexempel 2 – Linjär funktion från två punkter
-En linjär funktion passerar genom $(1, 3)$ och $(3, 7)$.
+En linjär funktion passerar genom $(1, 3)$ och $(3, 7)$. Bestäm funktionens ekvation $f(x) = kx + m$.
 
 **Lösning:**
 
@@ -107,7 +107,7 @@ f(x) = 2x + 1
 ---
 
 ### Typexempel 3 – Exponentialfunktion och tillväxt
-En datamängd startar med $6 \times 10^6$ datapunkter och växer med $3\thinspace\char37$/år:
+En datamängd startar med $6 \times 10^6$ datapunkter och växer med 3 % per år:
 
 ```math
 f(x) = 6 \times 10^6 \cdot 1{,}03^x

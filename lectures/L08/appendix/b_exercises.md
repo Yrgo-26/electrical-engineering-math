@@ -2,26 +2,24 @@
 
 ## Del 1 – Funktionsbegrepp, definitions- och värdemängd
 ### 1.1 – Är sambandet en funktion?
-Avgör om följande samband definierar $y$ som en funktion av $x$. Motivera ditt svar.
+Avgör om strömmen $I$ är en funktion av spänningen $U$. Motivera ditt svar.
 
-**a)** $y = 3x - 2$
+**a)** $I = \dfrac{U}{10}$ (Ohms lag för ett $10\thinspace\Omega$-motstånd)
 
-**b)** $x^2 + y^2 = 16$
+**b)** Mätparen $(U, I)$ med $U$ i V och $I$ i mA: $\lbrace(2, 100),\ (4, 200),\ (6, 250),\ (8, 250)\rbrace$
 
-**c)** $\lbrace(1,2),\thinspace (2,4),\thinspace (3,4),\thinspace (4,8)\rbrace$
-
-**d)** $\lbrace(1,2),\thinspace (1,5),\thinspace (2,3)\rbrace$
+**c)** Mätparen $(U, I)$ med $U$ i V och $I$ i mA: $\lbrace(1, 2),\ (1, 5),\ (2, 3)\rbrace$
 
 ---
 
 ### 1.2 – Definitions- och värdemängd
-Bestäm definitionsmängden $D_f$ och värdemängden $V_f$ för:
+Bestäm definitionsmängden och värdemängden.
 
-**a)** $f(x) = \dfrac{1}{x-3}$
+**a)** Temperatursensorn `TMP36` ger utspänningen $U(T) = 0{,}01T + 0{,}5$ (i V) vid temperaturen $T$ (i °C). Sensorn fungerar för $-40 \leq T \leq 125$.
 
-**b)** $g(x) = \sqrt{x+4}$
+**b)** Spänningen över ett $100\thinspace\Omega$-motstånd som utvecklar effekten $P$ (i W) är $U(P) = \sqrt{100P}$.
 
-**c)** $h(x) = -x^2 + 2$
+**c)** Effekten i ett $10\thinspace\Omega$-motstånd är $P(U) = \dfrac{U^2}{10}$, där spänningen kan vara $-20 \leq U \leq 20$ (i V).
 
 ---
 
@@ -35,16 +33,16 @@ Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linj�
 ---
 
 ## Del 2 – Funktionstyper och tillämpningar
-### 2.1 – Exponentiell tillväxt av solcellsanläggningar
-Antalet installerade solcellsanläggningar i en kommun ökar med $8\thinspace\char37$ per år. Vid år $x=0$ fanns $400$ anläggningar, vilket ger:
+### 2.1 – Ett batteri som åldras
+Ett nytt litiumjonbatteri har kapaciteten $4000\thinspace\text{mAh}$ och förlorar 3 % av kapaciteten per år. Efter $x$ år är kapaciteten
 
 ```math
-f(x) = 400 \cdot 1{,}08^x
+C(x) = 4000 \cdot 0{,}97^x\,\text{mAh}
 ```
 
-**a)** Beräkna $f(10)$ och tolka svaret.
+**a)** Beräkna $C(10)$ och tolka svaret.
 
-**b)** Efter hur många år har antalet anläggningar fördubblats?
+**b)** Ett batteri brukar räknas som uttjänt när kapaciteten har sjunkit till 80 %. Efter hur många år händer det?
 
 ---
 
@@ -82,110 +80,110 @@ En spänning $U(t)$ mäts vid flera tidpunkter under en urladdning:
 Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
 
 ### 3.1 – Beräkna funktionsvärden
-Funktionerna $f(x) = 3x - 5$, $g(x) = x^2 + 2$ och $h(x) = \dfrac{6}{x}$ är givna. Beräkna:
+Ett batteri har klämspänningen $U(I) = 12 - 2I$ (i V), ett motstånd utvecklar effekten $P(I) = 5I^2$ (i W) och strömmen genom en last är $I(R) = \dfrac{24}{R}$ (i A). Beräkna:
 
-**a)** $f(4)$
+**a)** $U(1)$
 
-**b)** $f(-2)$
+**b)** $U(4)$
 
-**c)** $g(0)$
+**c)** $P(0)$
 
-**d)** $g(-3)$
+**d)** $P(3)$
 
-**e)** $h(3)$
+**e)** $I(8)$
 
-**f)** $h(-2)$
+**f)** $I(12)$
 
 ---
 
 ### 3.2 – Lös ekvationen $f(x) = c$
 Samma funktioner som i uppgift 3.1.
 
-**a)** Bestäm $x$ så att $f(x) = 10$.
+**a)** Vid vilken ström är klämspänningen $9\thinspace\text{V}$?
 
-**b)** Bestäm nollstället till $f$.
+**b)** Bestäm nollstället till $U(I)$. Vad innebär det för batteriet?
 
-**c)** Bestäm $x$ så att $g(x) = 11$.
+**c)** Vid vilken ström utvecklar motståndet $20\thinspace\text{W}$?
 
-**d)** Har $g$ något nollställe? Motivera.
+**d)** Kan $P(I)$ bli negativ? Motivera.
 
-**e)** Bestäm $x$ så att $h(x) = 0{,}5$.
+**e)** Vilken resistans ger strömmen $0{,}5\thinspace\text{A}$?
 
 ---
 
 ### 3.3 – Definitionsmängd
-Bestäm definitionsmängden $D_f$:
+Bestäm den matematiska definitionsmängden. Ange sedan vilka värden som är fysikaliskt rimliga.
 
-**a)** $f(x) = 5x + 1$
+**a)** $I(R) = \dfrac{10}{R}$
 
-**b)** $f(x) = \dfrac{1}{x + 2}$
+**b)** $I(R) = \dfrac{12}{R + 2}$
 
-**c)** $f(x) = \sqrt{x - 3}$
+**c)** $U(P) = \sqrt{50P}$
 
-**d)** $f(x) = \dfrac{x}{x^2 - 9}$
-
-**e)** $f(x) = \sqrt{9 - x}$
+**d)** $X(f) = \dfrac{1000}{f}$
 
 ---
 
 ### 3.4 – Värdemängd
-Bestäm värdemängden $V_f$:
+Bestäm värdemängden.
 
-**a)** $f(x) = x^2 + 1$, $D_f = \mathbb{R}$
+**a)** $P(I) = 10I^2$ (i W) för $0 \leq I \leq 2$ (i A)
 
-**b)** $f(x) = -x^2$, $D_f = \mathbb{R}$
+**b)** $U(I) = 12 - 2I$ (i V) för $0 \leq I \leq 6$ (i A)
 
-**c)** $f(x) = |x|$, $D_f = \mathbb{R}$
+**c)** En likriktare ger utspänningen $u_{\text{ut}} = |u_{\text{in}}|$ för $-10 \leq u_{\text{in}} \leq 10$ (i V).
 
-**d)** $f(x) = 2x - 3$, $D_f = [0, 5]$
-
-**e)** $f(x) = \sqrt{x}$, $D_f = [0, \infty)$
+**d)** $T(U) = 100U - 50$ (i °C) för $0{,}1 \leq U \leq 1{,}75$ (i V)
 
 ---
 
 ### 3.5 – Linjär funktion ur två punkter
-Bestäm $f(x) = kx + m$ för den linje som går genom punkterna:
+Bestäm den linjära funktionen.
 
-**a)** $(0, 4)$ och $(2, 10)$
+**a)** Ett batteri har klämspänningen $9\thinspace\text{V}$ vid $0\thinspace\text{A}$ och $8\thinspace\text{V}$ vid $2\thinspace\text{A}$. Bestäm $U(I)$.
 
-**b)** $(1, 5)$ och $(4, 14)$
+**b)** En temperatursensor ger $0{,}5\thinspace\text{V}$ vid $0\thinspace°\text{C}$ och $1{,}5\thinspace\text{V}$ vid $100\thinspace°\text{C}$. Bestäm $U(T)$.
 
-**c)** $(-2, 7)$ och $(2, -1)$
+**c)** Ett Pt100-element har resistansen $100\thinspace\Omega$ vid $0\thinspace°\text{C}$ och $138{,}5\thinspace\Omega$ vid $100\thinspace°\text{C}$. Bestäm $R(T)$.
 
-**d)** $(0, -3)$ och $(5, -3)$
+**d)** En laddström är $2\thinspace\text{A}$ vid $t = 0\thinspace\text{s}$ och $2\thinspace\text{A}$ vid $t = 5\thinspace\text{s}$. Bestäm $I(t)$.
 
 ---
 
 ### 3.6 – Tolkning av $k$ och $m$
-**a)** Vad betyder $k$ grafiskt i $f(x) = kx + m$?
+Ett belastat batteri har klämspänningen $U(I) = 12 - 0{,}5I$ (i V), där $I$ är strömmen i A.
+
+**a)** Vad betyder $k$ grafiskt?
 
 **b)** Vad betyder $m$ grafiskt?
 
-**c)** Är $f(x) = -4x + 12$ växande eller avtagande? Motivera.
+**c)** Är $U(I)$ växande eller avtagande? Motivera.
 
-**d)** Bestäm nollstället till $f(x) = -4x + 12$.
+**d)** Bestäm nollstället till $U(I)$.
 
-**e)** Klämspänningen för ett belastat batteri är $U(I) = 12 - 2I$. Vad representerar $k = -2$ respektive $m = 12$ fysikaliskt?
+**e)** Vad representerar $k = -0{,}5$ respektive $m = 12$ fysikaliskt?
 
 ---
 
 ### 3.7 – Potensfunktioner
-Funktionerna $f(x) = x^2$ och $g(x) = x^3$ är givna.
+Effekten i ett $10\thinspace\Omega$-motstånd är $P(I) = 10I^2$ (i W).
 
-**a)** Beräkna $f(-3)$ och $g(-3)$.
+**a)** Beräkna $P(3)$ och $P(-3)$. Varför blir effekten densamma när strömmen byter riktning?
 
-**b)** Varför gäller $f(-x) = f(x)$ men $g(-x) = -g(x)$?
+**b)** Hur många gånger större blir effekten om strömmen tredubblas?
 
-**c)** Bestäm $V_f$ och $V_g$ då $D = \mathbb{R}$.
+**c)** Hur ändras effekten om strömmen halveras?
 
-**d)** Effekten i ett motstånd ges av $P(I) = 10I^2$. Hur många gånger större blir effekten om strömmen tredubblas?
+**d)** Effekten kan också skrivas $P(U) = \dfrac{U^2}{10}$. Beräkna $P(5)$ och $P(10)$. Hur ändras effekten när spänningen fördubblas?
 
 ---
 
 ### 3.8 – Exponentialfunktioner
-**a)** $f(x) = 5 \cdot 2^x$. Beräkna $f(0)$, $f(1)$ och $f(3)$.
+En förstärkarkedja fördubblar signalen i varje steg, så att $u(n) = 5 \cdot 2^n$ (i mV) efter $n$ steg. En dämpare halverar i stället signalen i varje steg, så att $g(n) = 100 \cdot 0{,}5^n$ (i mV).
 
-**b)** $g(x) = 100 \cdot 0{,}5^x$. Beräkna $g(0)$, $g(1)$ och $g(3)$.
+**a)** Beräkna $u(0)$, $u(1)$ och $u(3)$.
+
+**b)** Beräkna $g(0)$, $g(1)$ och $g(3)$.
 
 **c)** Vilken av funktionerna är växande respektive avtagande? Vad är det som avgör?
 
@@ -194,11 +192,11 @@ Funktionerna $f(x) = x^2$ och $g(x) = x^3$ är givna.
 ---
 
 ### 3.9 – Förändringsfaktor
-**a)** En storhet ökar med $5\thinspace\char37$ per år. Vilken är förändringsfaktorn $a$?
+**a)** Elpriset ökar med 5 % per år. Vilken är förändringsfaktorn $a$?
 
-**b)** En storhet minskar med $20\thinspace\char37$ per år. Vilken är $a$?
+**b)** Ett batteris kapacitet minskar med 20 % per år. Vilken är $a$?
 
-**c)** En signal dämpas till $70\thinspace\char37$ av sitt värde för varje steg den passerar. Startamplituden är $2\thinspace\text{V}$. Skriv en funktion för amplituden efter $n$ steg.
+**c)** En signal dämpas till 70 % av sitt värde för varje steg den passerar. Startamplituden är $2\thinspace\text{V}$. Skriv en funktion för amplituden efter $n$ steg.
 
 **d)** Beräkna amplituden efter $3$ steg.
 
@@ -207,7 +205,7 @@ Funktionerna $f(x) = x^2$ och $g(x) = x^3$ är givna.
 ---
 
 ### 3.10 – Linjärt eller exponentiellt?
-Två storheter har mätts upp:
+Två storheter har mätts upp en gång per år: $f(x)$ är antalet laddstolpar i en kommun (i hundratal) och $g(x)$ är antalet uppkopplade sensorer i ett nät (i tusental), där $x$ är antal år.
 
 | $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
 |-----|-----|-----|-----|-----|-----|
@@ -227,17 +225,13 @@ Två storheter har mätts upp:
 ---
 
 ### 3.11 – Nollställen
-Bestäm nollställena:
+Bestäm nollställena och tolka dem.
 
-**a)** $f(x) = 4x - 12$
+**a)** Klämspänningen $U(I) = 12 - 4I$ (i V) för ett batteri, där $I$ är strömmen i A.
 
-**b)** $f(x) = x^2 - 25$
+**b)** Effekten $P(I) = 12I - 2I^2$ (i W) som samma sorts batteri, med inre resistansen $2\thinspace\Omega$, levererar till en last.
 
-**c)** $f(x) = x^2 - 5x + 6$
-
-**d)** $f(x) = x^2 + 4$
-
-**e)** $f(x) = x(x - 4)$
+**c)** Spänningen $U(t) = 6 - 0{,}5t$ (i V) under en urladdning, där $t$ är tiden i s.
 
 ---
 
@@ -280,16 +274,16 @@ där $t$ anges i sekunder.
 ---
 
 ### 3.14 – Sant eller falskt
-Avgör om påståendet är sant eller falskt och motivera kortfattat:
+Avgör om påståendet är sant eller falskt och motivera kortfattat.
 
-**a)** $f(x) = x^2$ har värdemängden $\mathbb{R}$.
+**a)** Effekten $P(I) = RI^2$ blir negativ om strömmen är negativ.
 
-**b)** $f(x) = \dfrac{1}{x}$ är definierad för alla $x$.
+**b)** Strömmen $I(R) = \dfrac{12}{R}$ är definierad för alla $R$.
 
-**c)** Att $f(2) = 5$ betyder att $f$ har ett nollställe vid $x = 2$.
+**c)** Att $U(2) = 5$ betyder att $U$ har ett nollställe vid $I = 2\thinspace\text{A}$.
 
-**d)** Sambandet $x^2 + y^2 = 25$ definierar $y$ som en funktion av $x$.
+**d)** Om samma spänning $U$ har uppmätts med två olika strömmar $I$, är $I$ inte en funktion av $U$.
 
-**e)** Funktionen $f(x) = 3 \cdot 2^x$ har startvärdet $2$.
+**e)** Spänningen $u(t) = 3 \cdot 2^t$ (i V) har startvärdet $3\thinspace\text{V}$.
 
 ---
