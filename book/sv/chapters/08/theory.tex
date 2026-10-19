@@ -55,6 +55,46 @@ där $k$ är lutningen och $m$ är skärningspunkten med $y$-axeln.
   \item $f(0) = C$, startvärdet.
 \end{itemize}
 
+\subsection{Exponentialekvationer}
+\label{c8:sec:expekvationer}
+När det okända $x$ står i exponenten, till exempel $2^x = 8$, löser vi ekvationen med logaritmer.
+Vi använder två logaritmer, som båda finns på miniräknaren:
+\begin{itemize}
+  \item $\log$ är tiologaritmen (basen $10$), så $\log 10 = 1$.
+  \item $\ln$ är den naturliga logaritmen (basen $e \approx 2{,}718$), så $\ln e = 1$.
+\end{itemize}
+Nyckeln är logaritmlagen som flyttar ner exponenten framför logaritmen:
+\[
+  \log(a^x) = x \cdot \log a, \qquad \ln(a^x) = x \cdot \ln a
+\]
+
+\begin{exempel}
+Lös ekvationen $2^x = 8$. Logaritmera båda led med tiologaritmen, flytta ner exponenten och
+dividera båda led med $\log 2$:
+\begin{gather*}
+  \log(2^x) = \log 8 \\
+  x \cdot \log 2 = \log 8 \\
+  x = \frac{\log 8}{\log 2} = 3
+\end{gather*}
+Kontroll: $2^3 = 8$.
+\end{exempel}
+
+Allmänt gäller alltså att
+\[
+  a^x = b \quad \Rightarrow \quad x = \frac{\log b}{\log a}.
+\]
+\textbf{OBS!} Samma logaritm måste användas i båda led. Det spelar ingen roll vilken: med $\ln$
+blir svaret detsamma, $x = \dfrac{\ln 8}{\ln 2} = 3$. Däremot går det inte att blanda, till exempel
+$\dfrac{\log 8}{\ln 2}$.
+
+\textbf{Basen $e$:} När basen är $e$ är $\ln$ enklast att använda, eftersom $\ln e = 1$:
+\[
+  e^x = 5 \quad \Rightarrow \quad \ln(e^x) = \ln 5 \quad \Rightarrow \quad x \cdot \ln e = \ln 5
+  \quad \Rightarrow \quad x = \ln 5 \approx 1{,}61
+\]
+Med $\log$ fungerar det också, $x = \dfrac{\log 5}{\log e} \approx 1{,}61$, men det blir
+krångligare.
+
 \subsection{Polynomfunktion}
 \label{c8:sec:polynom}
 \[

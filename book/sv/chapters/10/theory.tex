@@ -21,6 +21,25 @@ Den \textbf{naturliga logaritmen} $\ln$ har basen $e \approx 2{,}718$:
   \ln(e^x) = x \quad \Leftrightarrow \quad e^{\ln x} = x
 \]
 
+\textbf{Varför just $e$?} Talet $e = 2{,}71828\ldots$ kan verka godtyckligt, men det dyker upp av
+sig självt när något växer i takt med sin egen storlek. Anta att ett belopp växer med $100\,\%$
+per år, men att tillväxten läggs till i $n$ lika delar under året. Då blir tillväxtfaktorn för hela
+året $\left(1 + \frac{1}{n}\right)^n$:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{$n$} & \thead{$\left(1 + \frac{1}{n}\right)^n$} \\
+  \midrule
+  $1$ & $2$ \\
+  $2$ & $2{,}25$ \\
+  $12$ & $\approx 2{,}613$ \\
+  $365$ & $\approx 2{,}715$ \\
+  $n \to \infty$ & $e \approx 2{,}718$ \\
+\end{narrowtable}
+
+Ju oftare tillväxten läggs till, desto närmare $e$ kommer faktorn, men den blir aldrig större. Varför
+$e$ ger de enklaste formlerna, och därför kallas basen för den naturliga logaritmen, visas med
+derivator i \secref{c13:sec:exp}.
+
 \section{Logaritmlagar}
 \label{c10:sec:logaritmlagar}
 För logaritmer gäller följande räknelagar:

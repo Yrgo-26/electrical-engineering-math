@@ -36,6 +36,30 @@
   = e^x.
 \]
 
+\textbf{Why $e$?} Every exponential function has a derivative that is proportional to the function
+itself, $\frac{d}{dx}a^x = a^x \ln a$, but the factor $\ln a$ depends on the base:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Base $a$} & \thead{Factor $\ln a$} \\
+  \midrule
+  $2$ & $\approx 0.69$ \\
+  $e \approx 2.718$ & $1$ \\
+  $10$ & $\approx 2.30$ \\
+\end{narrowtable}
+
+The number $e$ is the only base for which the factor is exactly $1$. That is precisely what the
+limit $\lim_{h \to 0} \frac{e^h - 1}{h} = 1$ in the derivation above says: the graph $y = e^x$ has
+slope $1$ where it crosses the y-axis. This is how the number $e$ is defined.
+
+For the same reason, $\ln$ is called the \emph{natural} logarithm: with base $e$ the derivative is
+the simplest, $\frac{d}{dx}\ln x = \frac{1}{x}$, while every other base adds a constant, for example
+$\frac{d}{dx}\log_{10} x = \frac{1}{x \ln 10}$ (\secref{c13:sec:log}).
+
+In electrical engineering, $e$ appears because many quantities change in step with their own value.
+When a capacitor discharges through a resistor, $\frac{du}{dt} = -\frac{u}{\tau}$, and the function
+that satisfies this is $u(t) = U_0 e^{-t/\tau}$. After the time $\tau$, the voltage has fallen to
+$e^{-1} \approx 37\,\%$ of its initial value.
+
 \section{Derivatives of logarithmic functions}
 \label{c13:sec:log}
 

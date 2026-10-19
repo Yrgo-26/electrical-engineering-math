@@ -36,6 +36,30 @@
   = e^x.
 \]
 
+\textbf{Varför just $e$?} Alla exponentialfunktioner har en derivata som är proportionell mot
+funktionen själv, $\frac{d}{dx}a^x = a^x \ln a$, men faktorn $\ln a$ beror på basen:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{Bas $a$} & \thead{Faktor $\ln a$} \\
+  \midrule
+  $2$ & $\approx 0{,}69$ \\
+  $e \approx 2{,}718$ & $1$ \\
+  $10$ & $\approx 2{,}30$ \\
+\end{narrowtable}
+
+Talet $e$ är den enda bas där faktorn blir exakt $1$. Det är just detta som gränsvärdet
+$\lim_{h \to 0} \frac{e^h - 1}{h} = 1$ i härledningen ovan säger: grafen $y = e^x$ har lutningen
+$1$ där den skär y-axeln. Det är så talet $e$ definieras.
+
+Av samma skäl kallas $\ln$ den \emph{naturliga} logaritmen: med basen $e$ blir derivatan enklast,
+$\frac{d}{dx}\ln x = \frac{1}{x}$, medan varje annan bas ger en extra konstant, till exempel
+$\frac{d}{dx}\log_{10} x = \frac{1}{x \ln 10}$ (\secref{c13:sec:log}).
+
+Inom elektrotekniken dyker $e$ upp eftersom många storheter ändras i takt med sitt eget värde. När
+en kondensator laddas ur genom ett motstånd gäller $\frac{du}{dt} = -\frac{u}{\tau}$, och funktionen
+som uppfyller det är $u(t) = U_0 e^{-t/\tau}$. Efter tiden $\tau$ har spänningen sjunkit till
+$e^{-1} \approx 37\,\%$ av startvärdet.
+
 \section{Derivata för logaritmfunktioner}
 \label{c13:sec:log}
 

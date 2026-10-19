@@ -21,6 +21,25 @@ The \textbf{natural logarithm} $\ln$ has the base $e \approx 2.718$:
   \ln(e^x) = x \quad \Leftrightarrow \quad e^{\ln x} = x
 \]
 
+\textbf{Why $e$?} The number $e = 2.71828\ldots$ may seem arbitrary, but it appears by itself
+whenever something grows in step with its own size. Suppose an amount grows by $100\,\%$ per year,
+but the growth is added in $n$ equal parts during the year. The growth factor for the whole year is
+then $\left(1 + \frac{1}{n}\right)^n$:
+
+\begin{narrowtable}{@{}ll@{}}
+  \thead{$n$} & \thead{$\left(1 + \frac{1}{n}\right)^n$} \\
+  \midrule
+  $1$ & $2$ \\
+  $2$ & $2.25$ \\
+  $12$ & $\approx 2.613$ \\
+  $365$ & $\approx 2.715$ \\
+  $n \to \infty$ & $e \approx 2.718$ \\
+\end{narrowtable}
+
+The more often the growth is added, the closer the factor gets to $e$, but it never exceeds it. Why
+$e$ gives the simplest formulas, and is therefore the base of the natural logarithm, is shown with
+derivatives in \secref{c13:sec:exp}.
+
 \section{The laws of logarithms}
 \label{c10:sec:logaritmlagar}
 Logarithms obey the following laws:

@@ -55,6 +55,45 @@ where $k$ is the slope and $m$ is the $y$-intercept.
   \item $f(0) = C$, the initial value.
 \end{itemize}
 
+\subsection{Exponential equations}
+\label{c8:sec:expekvationer}
+When the unknown $x$ is in the exponent, for example $2^x = 8$, we solve the equation with
+logarithms. We use two logarithms, both of which are on the calculator:
+\begin{itemize}
+  \item $\log$ is the base-10 logarithm, so $\log 10 = 1$.
+  \item $\ln$ is the natural logarithm (base $e \approx 2.718$), so $\ln e = 1$.
+\end{itemize}
+The key is the law of logarithms that moves the exponent down in front of the logarithm:
+\[
+  \log(a^x) = x \cdot \log a, \qquad \ln(a^x) = x \cdot \ln a
+\]
+
+\begin{exempel}
+Solve the equation $2^x = 8$. Take the logarithm of both sides with the base-10 logarithm, move the
+exponent down and divide both sides by $\log 2$:
+\begin{gather*}
+  \log(2^x) = \log 8 \\
+  x \cdot \log 2 = \log 8 \\
+  x = \frac{\log 8}{\log 2} = 3
+\end{gather*}
+Check: $2^3 = 8$.
+\end{exempel}
+
+In general, then,
+\[
+  a^x = b \quad \Rightarrow \quad x = \frac{\log b}{\log a}.
+\]
+\textbf{Note!} The same logarithm must be used on both sides. It does not matter which one: with
+$\ln$ the answer is the same, $x = \dfrac{\ln 8}{\ln 2} = 3$. Mixing them, however, does not work,
+for example $\dfrac{\log 8}{\ln 2}$.
+
+\textbf{Base $e$:} When the base is $e$, $\ln$ is the simplest to use, since $\ln e = 1$:
+\[
+  e^x = 5 \quad \Rightarrow \quad \ln(e^x) = \ln 5 \quad \Rightarrow \quad x \cdot \ln e = \ln 5
+  \quad \Rightarrow \quad x = \ln 5 \approx 1.61
+\]
+With $\log$ it works too, $x = \dfrac{\log 5}{\log e} \approx 1.61$, but it is more cumbersome.
+
 \subsection{Polynomial function}
 \label{c8:sec:polynom}
 \[
