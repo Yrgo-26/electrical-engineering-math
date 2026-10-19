@@ -48,6 +48,53 @@ f(x) = C \cdot a^x, \quad a > 0,\, a \neq 1
 * $0 < a < 1$: avtagande funktion
 * $f(0) = C$ (startvärde)
 
+### Exponentialekvationer
+När det okända $x$ står i exponenten, till exempel $2^x = 8$, löser vi ekvationen med logaritmer. Vi använder två logaritmer, som båda finns på miniräknaren:
+* $\log$ är tiologaritmen (basen $10$), så $\log 10 = 1$.
+* $\ln$ är den naturliga logaritmen (basen $e \approx 2{,}718$), så $\ln e = 1$.
+
+Nyckeln är logaritmlagen som flyttar ner exponenten framför logaritmen:
+
+```math
+\log(a^x) = x \cdot \log a, \qquad \ln(a^x) = x \cdot \ln a
+```
+
+**Exempel:** Lös ekvationen $2^x = 8$.
+
+Logaritmera båda led med tiologaritmen:
+
+```math
+\log(2^x) = \log 8
+```
+
+Flytta ner exponenten:
+
+```math
+x \cdot \log 2 = \log 8
+```
+
+Dividera båda led med $\log 2$:
+
+```math
+x = \frac{\log 8}{\log 2} = 3
+```
+
+Kontroll: $2^3 = 8$. Allmänt gäller alltså att
+
+```math
+a^x = b \quad \Rightarrow \quad x = \frac{\log b}{\log a}
+```
+
+**OBS!** Samma logaritm måste användas i båda led. Det spelar ingen roll vilken: med $\ln$ blir svaret detsamma, $x = \frac{\ln 8}{\ln 2} = 3$. Däremot går det inte att blanda, till exempel $\frac{\log 8}{\ln 2}$.
+
+**Basen $e$:** När basen är $e$ är $\ln$ enklast att använda, eftersom $\ln e = 1$:
+
+```math
+e^x = 5 \quad \Rightarrow \quad \ln(e^x) = \ln 5 \quad \Rightarrow \quad x \cdot \ln e = \ln 5 \quad \Rightarrow \quad x = \ln 5 \approx 1{,}61
+```
+
+Med $\log$ fungerar det också, $x = \frac{\log 5}{\log e} \approx 1{,}61$, men det blir krångligare.
+
 ### Polynomfunktion
 ```math
 f(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_0
@@ -136,5 +183,6 @@ f(5) = 6 \times 10^6 \cdot 1{,}03^5 \approx 6{,}96 \times 10^6
 | Värdemängd | Möjliga $f(x)$-värden |
 | Linjär funktion | $f(x) = kx + m$ |
 | Exponentialfunktion | $f(x) = C \cdot a^x$ |
+| Exponentialekvation | $a^x = b \Rightarrow x = \frac{\log b}{\log a}$ |
 
 ---
