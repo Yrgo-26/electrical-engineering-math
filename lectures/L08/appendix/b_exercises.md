@@ -1,7 +1,27 @@
 # L08 – Lektionsuppgifter
 
-## Del 1 – Funktionsbegrepp, definitions- och värdemängd
-### 1.1 – Är sambandet en funktion?
+## Del 1 – Repetitionsuppgifter
+### 1.1 – Spänning och ström som visare
+En växelspänning $\mathbf{U}$ och en växelström $\mathbf{I}$ representeras av visarna i nedanstående figur. Spänningen anges i V och strömmen i A.
+
+![](./images/1.1_vectors.png)
+
+**a)** Ta reda på visarnas koordinater.
+
+**b)** Beräkna storlekarna (absolutbeloppen) $|\mathbf{U}|$ samt $|\mathbf{I}|$.
+
+**c)** Beräkna fasvinklarna $v_U$ samt $v_I$ mot positiv x-axel.
+
+**d)** Beräkna fasförskjutningen, alltså vinkeln $\alpha$ mellan $\mathbf{U}$ och $\mathbf{I}$.
+
+**e)** Strömmen $\mathbf{I}$ möts i en nod av en andra ström $\mathbf{I}_2 = (7;\thinspace -1)\thinspace\text{A}$. Beräkna den totala strömmen $\mathbf{I}_{\text{tot}} = \mathbf{I} + \mathbf{I}_2$ samt dess storlek.
+
+**f)** Bestäm en ström med storleken $10\thinspace\text{A}$ som är i motfas med $\mathbf{I}$.
+
+---
+
+## Del 2 – Nytt stoff
+### 2.1 – Är sambandet en funktion?
 Avgör om strömmen $I$ är en funktion av spänningen $U$. Motivera ditt svar.
 
 **a)** $I = \dfrac{U}{10}$ (Ohms lag för ett $10\thinspace\Omega$-motstånd)
@@ -12,7 +32,7 @@ Avgör om strömmen $I$ är en funktion av spänningen $U$. Motivera ditt svar.
 
 ---
 
-### 1.2 – Definitions- och värdemängd
+### 2.2 – Definitions- och värdemängd
 Bestäm definitionsmängden och värdemängden.
 
 **a)** Temperatursensorn `TMP36` ger utspänningen $U(T) = 0{,}01T + 0{,}5$ (i V) vid temperaturen $T$ (i °C). Sensorn fungerar för $-40 \leq T \leq 125$.
@@ -23,7 +43,7 @@ Bestäm definitionsmängden och värdemängden.
 
 ---
 
-### 1.3 – Linjär resistans hos en temperaturberoende resistor
+### 2.3 – Linjär resistans hos en temperaturberoende resistor
 Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linjärt på temperaturen $T$ (i °C) enligt $R(T) = kT + m$. Vid $T = 0\thinspace°\text{C}$ är $R = 100\thinspace\Omega$, och vid $T = 50\thinspace°\text{C}$ är $R = 175\thinspace\Omega$.
 
 **a)** Bestäm $k$ och $m$.
@@ -32,8 +52,7 @@ Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linj�
 
 ---
 
-## Del 2 – Funktionstyper och tillämpningar
-### 2.1 – Ett batteri som åldras
+### 2.4 – Ett batteri som åldras
 Ett nytt litiumjonbatteri har kapaciteten $4000\thinspace\text{mAh}$ och förlorar 3 % av kapaciteten per år. Efter $x$ år är kapaciteten
 
 ```math
@@ -46,7 +65,7 @@ C(x) = 4000 \cdot 0{,}97^x\,\text{mAh}
 
 ---
 
-### 2.2 – Effekt som potensfunktion av strömmen
+### 2.5 – Effekt som potensfunktion av strömmen
 Effekten $P$ (i $W$) som utvecklas i ett motstånd $R = 50\thinspace\Omega$ beror på strömmen $I$ (i $A$) enligt:
 
 ```math
@@ -61,7 +80,7 @@ P(I) = R \cdot I^2
 
 ---
 
-### 2.3 – Tolkning av mätvärden
+### 2.6 – Tolkning av mätvärden
 En spänning $U(t)$ mäts vid flera tidpunkter under en urladdning:
 
 | $t$ (s) | 0 | 1 | 2 | 3 | 4 |
