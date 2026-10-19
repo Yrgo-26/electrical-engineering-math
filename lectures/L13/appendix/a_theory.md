@@ -31,6 +31,20 @@ f(x) = 3\sin(2x) \quad \Rightarrow \quad f'(x) = 3 \cdot 2\cos(2x) = 6\cos(2x)
 \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} = e^x \cdot 1 = e^x
 ```
 
+**Varför just $e$?** Alla exponentialfunktioner har en derivata som är proportionell mot funktionen själv, $\frac{d}{dx}a^x = a^x \ln a$, men faktorn $\ln a$ beror på basen:
+
+| Bas $a$ | Faktor $\ln a$ |
+|---------|----------------|
+| $2$ | $\approx 0{,}69$ |
+| $e \approx 2{,}718$ | $1$ |
+| $10$ | $\approx 2{,}30$ |
+
+Talet $e$ är den enda bas där faktorn blir exakt $1$. Det är just detta som gränsvärdet $\lim_{h \to 0} \frac{e^h - 1}{h} = 1$ i härledningen ovan säger: grafen $y = e^x$ har lutningen $1$ där den skär y-axeln. Det är så talet $e$ definieras.
+
+Av samma skäl kallas $\ln$ den *naturliga* logaritmen: med basen $e$ blir derivatan enklast, $\frac{d}{dx}\ln x = \frac{1}{x}$, medan varje annan bas ger en extra konstant, till exempel $\frac{d}{dx}\log_{10} x = \frac{1}{x \ln 10}$ (se avsnitt 3).
+
+Inom elektrotekniken dyker $e$ upp eftersom många storheter ändras i takt med sitt eget värde. När en kondensator laddas ur genom ett motstånd gäller $\frac{du}{dt} = -\frac{u}{\tau}$, och funktionen som uppfyller det är $u(t) = U_0 e^{-t/\tau}$. Efter tiden $\tau$ har spänningen sjunkit till $e^{-1} \approx 37$ % av startvärdet.
+
 ---
 
 ## 3. Derivata för logaritmfunktioner
