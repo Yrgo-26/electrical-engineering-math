@@ -1,4 +1,4 @@
-# L10 – Exponentialfunktioner, logaritmer samt decibel
+# L10 – Exponentialfunktioner, mer logaritmer samt decibel
 
 ## Dagordning
 * Exponentialfunktioner.

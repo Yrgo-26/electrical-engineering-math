@@ -233,7 +233,7 @@ En växelspänning ges av $u(t) = 10\sin(100\pi t)$ volt.
 ---
 
 ### 3.8 – Effektivvärde och effekt
-För en sinusspänning gäller $U_{\text{RMS}} = \dfrac{|U|}{\sqrt{2}}$.
+För en sinusspänning gäller $U_{\text{RMS}} = \dfrac{|U|}{\sqrt{2}}$, och effekten i ett motstånd är $P = \dfrac{U_{\text{RMS}}^2}{R}$.
 
 **a)** Beräkna $U_{\text{RMS}}$ för $u(t) = 12\sin(100\pi t)$.
 

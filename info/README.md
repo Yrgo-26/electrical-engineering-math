@@ -20,7 +20,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 42 | 13/10 | L07 | Vektorer – **Dugga 1**                        |
 | 42 | 15/10 | L08 | Funktioner                                    |
 | 43 | 20/10 | L09 | Trigonometriska funktioner                    |
-| 43 | 22/10 | L10 | Exponentialfunktioner, logaritmer och decibel |
+| 43 | 22/10 | L10 | Exponentialfunktioner, mer logaritmer och decibel |
 | 44 | 27/10 | L11 | Repetition och övningsdugga                   |
 | 44 | 29/10 | L12 | Derivata (del I) – övningsdugga 2             |
 | 45 | 3/11  | L13 | Derivata (del II) – **Dugga 2**               |
@@ -46,7 +46,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 42 | 13/10 | L07 | Vektorer – **Dugga 1**                        |
 | 42 | 15/10 | L08 | Funktioner                                    |
 | 43 | 20/10 | L09 | Trigonometriska funktioner                    |
-| 43 | 22/10 | L10 | Exponentialfunktioner, logaritmer och decibel |
+| 43 | 22/10 | L10 | Exponentialfunktioner, mer logaritmer och decibel |
 | 44 | 27/10 | L11 | Repetition och övningsdugga                   |
 | 44 | 29/10 | L12 | Derivata (del I) – övningsdugga 2             |
 | 45 | 3/11  | L13 | Derivata (del II) – **Dugga 2**               |

@@ -35,7 +35,7 @@
 ---
 
 ## Nästa lektion
-* Exponentialfunktioner och logaritmer.
+* Exponentialfunktioner och mer logaritmer.
 * Decibel.
 
 ---

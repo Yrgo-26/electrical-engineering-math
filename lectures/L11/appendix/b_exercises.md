@@ -157,7 +157,7 @@ Bestäm $u(t)$ på formen $|U|\sin(\omega t + \delta)$ med fasen i radianer.
 ---
 
 ### 3.4 – Momentanvärde, effektivvärde och effekt
-En växelspänning ges av $u(t) = 8\sin(100\pi t)$ volt.
+En växelspänning ges av $u(t) = 8\sin(100\pi t)$ volt. För en sinusspänning gäller $U_{\text{RMS}} = \dfrac{|U|}{\sqrt{2}}$, och effekten i ett motstånd är $P = \dfrac{U_{\text{RMS}}^2}{R}$.
 
 **a)** Beräkna $u(5\thinspace\text{ms})$.
 

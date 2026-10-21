@@ -107,6 +107,8 @@ där
 * $U_{RMS}$ = spänningens effektivvärde i $V$,
 * $U_{dBV}$ = spänningen i $dBV$.
 
+För en sinusspänning gäller dessutom att amplituden är $|U| = U_{RMS} \cdot \sqrt{2}$.
+
 En sinusspänning har nivån $17{,}0$ $dBV$. Bestäm amplituden i $V$.
 
 ---
@@ -231,7 +233,7 @@ En signalkedja består av två förstärkarsteg med $G_1 = 12\thinspace\text{dB}
 ---
 
 ### 3.9 – Nivå i dBV
-Använd $U_{\text{dBV}} = 20\log_{10}\left(\dfrac{U_{\text{RMS}}}{1\thinspace\text{V}}\right)$.
+Använd $U_{\text{dBV}} = 20\log_{10}\left(\dfrac{U_{\text{RMS}}}{1\thinspace\text{V}}\right)$ samt, för en sinusspänning, $|U| = U_{\text{RMS}} \cdot \sqrt{2}$.
 
 **a)** $U_{\text{RMS}} = 1\thinspace\text{V}$. Beräkna nivån i dBV.
 

@@ -1,4 +1,4 @@
-# Bilaga A – Exponentialfunktioner, logaritmer samt decibel
+# Bilaga A – Exponentialfunktioner, mer logaritmer samt decibel
 
 ## 1. Exponentialfunktioner och ekvationer
 En **exponentialfunktion** $f(x) = a^x$ ($a > 0$, $a \neq 1$) kan lösas för $x$ med hjälp av logaritmer.

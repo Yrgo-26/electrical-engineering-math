@@ -11,7 +11,7 @@ Varje lektion L01–L19 motsvaras av kapitlet med samma nummer i boken ([svenska
 * [L07](./L07/README.md): Vektorer.
 * [L08](./L08/README.md): Funktioner.
 * [L09](./L09/README.md): Trigonometriska funktioner.
-* [L10](./L10/README.md): Exponentialfunktioner, logaritmer och decibel.
+* [L10](./L10/README.md): Exponentialfunktioner, mer logaritmer och decibel.
 * [L11](./L11/README.md): Repetition och övningsdugga.
 * [L12](./L12/README.md): Derivata (del I).
 * [L13](./L13/README.md): Derivata (del II).
