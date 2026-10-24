@@ -7,7 +7,7 @@
 * Trigonometriska funktioner samt omvandling mellan grader och radianer.
 * Numerisk derivering och integrering.
 * Komplexa tal och fasorer med `complex.h`.
-* Sampling av en sinussignal – från formel till talföljd.
+* Sampling av en sinussignal: från formel till talföljd.
 
 ---
 
@@ -35,9 +35,9 @@
 ### Mjukvara
 * **OnlineGDB** – en C-kompilator som körs direkt i webbläsaren: <https://www.onlinegdb.com/online_c_compiler>.
 * Ingen installation krävs, och inget konto behövs. Se [`code/`](./code/README.md) för detaljer.
-* **Frivilligt:** den som hellre vill köra koden lokalt kan sätta upp **WSL** med `gcc`, se [`code/`](./code/README.md#kompilering-på-egen-dator-frivilligt). Det behövs inte för lektionen, men miljön används i senare kurser.
+* **Rekommenderat:** sätt upp **WSL** med `gcc` och kör koden lokalt, se [`code/`](./code/README.md#kompilering-på-egen-dator-rekommenderat). Miljön används i senare kurser, så det lönar sig att sätta upp den redan nu. Den krävs för programmeringsuppgifterna i del 6 och 7, men inte för del 1–5, där OnlineGDB räcker.
 
-Ingen hårdvara krävs – all kod skrivs och körs i webbläsaren.
+Ingen hårdvara krävs; all kod skrivs och körs i webbläsaren.
 
 ---
 
@@ -45,7 +45,7 @@ Ingen hårdvara krävs – all kod skrivs och körs i webbläsaren.
 
 ### Innan lektionen
 * Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 18 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
-* **Genomför handberäkningarna för samtliga uppgifter i del 1–3** i [bilaga B](./appendix/b_exercises.md), och ta med dem till lektionen.
+* **Genomför handberäkningarna för samtliga uppgifter i del 1–3, samt uppgift 6.1, 6.4 a, 7.1 och 7.4,** i [bilaga B](./appendix/b_exercises.md), och ta med dem till lektionen.
 * Öppna <https://www.onlinegdb.com/online_c_compiler>, kontrollera att språket är inställt på **C** och tryck på **Run**. Exempelprogrammet ska skriva ut `Hello World`.
 
 > **OBS!** Handberäkningarna ska vara gjorda **före** lektionen. Lektionstiden räcker inte till både beräkning och programmering, och beräkningarna krävs för att bli godkänd. Den som kommer oförberedd hinner inte klara laborationen.
@@ -53,7 +53,7 @@ Ingen hårdvara krävs – all kod skrivs och körs i webbläsaren.
 ### Under lektionen
 * Närvara under genomgången.
 * Genomför uppgifterna i [bilaga B](./appendix/b_exercises.md):
-    * Del 1–3 är obligatoriska. Del 4 och del 5 är frivillig fördjupning.
+    * Del 1–3 är obligatoriska, liksom handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4. Övriga uppgifter i del 4–7 är frivillig fördjupning, där del 6 tränar en linjär regressionsmodell och del 7 tränar ett neuralt nätverk i C++. Programmeringsuppgifterna i del 6 och 7 kräver **WSL**, se [`code/`](./code/README.md#kompilering-på-egen-dator-rekommenderat).
     * Handberäkningarna ska redan vara gjorda. Under lektionen skrivs koden, och resultaten jämförs med era beräkningar.
     * Lösningsförslag finns i [bilaga C](./appendix/c_solutions.md).
 * Samla uppgifterna i ett OnlineGDB-projekt med en fil per uppgift, se [bilaga B](./appendix/b_exercises.md). Kopiera filerna till egen dator innan ni stänger fliken.
@@ -117,10 +117,10 @@ Laborationen bedöms **U/G** och påverkar inte kursens betygspoäng. Den ingår
 
 | Krav | Bedömning |
 |------|-----------|
-| Del 1–3 genomförda och korrekt redovisade | G |
-| Del 1–3 ej genomförda eller ej redovisade | U |
+| Del 1–3 samt handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 genomförda och korrekt redovisade | G |
+| Del 1–3 eller handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 ej genomförda eller ej redovisade | U |
 
-Del 4 och del 5 är frivillig fördjupning och påverkar inte bedömningen.
+Övriga uppgifter i del 4–7 är frivillig fördjupning och påverkar inte bedömningen.
 
 ---
 

@@ -22,8 +22,8 @@ Program som skriver ut sampelvärden som CSV körs i OnlineGDB på vanligt sätt
 
 ---
 
-## Kompilering på egen dator (frivilligt)
-Ingenting under lektionen kräver detta – OnlineGDB räcker hela vägen. **WSL** med `gcc` och `make` används däremot i senare kurser, så den som vill kan sätta upp miljön redan nu.
+## Kompilering på egen dator (rekommenderat)
+**WSL** med `gcc` och `make` används i senare kurser, så det rekommenderas att ni sätter upp miljön redan nu. Programmeringsuppgifterna i del 6 och 7, linjär regression i C och ett neuralt nätverk i C++, kräver WSL. Del 1–5 kräver det inte, där räcker OnlineGDB hela vägen.
 
 ### 1. Installera WSL
 WSL *(Windows Subsystem for Linux)* gör det möjligt att köra en Linux-distribution i en terminalmiljö direkt i Windows, utan att använda en virtuell maskin. Här används distributionen **Ubuntu**.
@@ -55,7 +55,7 @@ wsl --status
 **Om installationen misslyckas:**
 * WSL kräver Windows 11, eller Windows 10 version 2004 (build 19041) och senare.
 * Virtualisering måste vara aktiverat i datorns UEFI/BIOS. Är det avstängt måste det slås på där.
-* Saknas administratörsrättigheter går WSL inte att installera – använd OnlineGDB i stället.
+* Saknas administratörsrättigheter går WSL inte att installera, använd då OnlineGDB i stället.
 
 ### 2. Installera Ubuntu
 Om Ubuntu inte installerades via PowerShell:
@@ -107,6 +107,8 @@ Utskriften kan sparas direkt till en fil genom omdirigering, vilket är smidigar
 Filen kan sedan öppnas i ett kalkylprogram eller läsas in i en simulator som ritar upp signalen.
 
 ### 6. Kompilera med make
+Ett färdigt exempel finns i katalogen [`math/`](./math/), som kan användas som utgångspunkt för lektionsuppgifterna, se [bilaga B](../appendix/b_exercises.md#arbeta-i-wsl-rekommenderat). Nedan beskrivs hur en makefile skrivs från grunden.
+
 För varje program, skapa en ny katalog och en fil som heter `Makefile`:
 
 ```bash
