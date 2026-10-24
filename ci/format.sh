@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
-# Format (or check the formatting of) all C/C++ files using clang-format.
+# Format (or check the formatting of) all C/C++ files using clang-format,
+# and all Python files using black.
 #
 # Usage:
 #   ci/format.sh          Format files in place.
@@ -26,7 +27,23 @@ check_clang_format() {
 }
 
 ################################################################################
-# Find C/C++ files and store them in the given array.
+# Terminate the script if black is not installed.
+# Globals:
+#   None
+# Arguments:
+#   None
+################################################################################
+check_black() {
+    if ! command -v black &> /dev/null
+    then
+        echo "error: black not found. Install it, e.g. 'pip install black'." >&2
+        exit 1
+    fi
+}
+
+################################################################################
+# Find C/C++ files and store them in the given array. The libs directory is skipped, since it
+# holds submodules that carry their own formatting configuration.
 # Globals:
 #   None
 # Arguments:
@@ -34,7 +51,8 @@ check_clang_format() {
 ################################################################################
 select_files() {
     local -n out=$1
-    mapfile -t out < <(find * -path "libs" -prune -o \( -name "*.h" -o -name "*.c" -o -name "*.cpp" \) -print)
+    mapfile -t out < <(find * -path "libs/*" -prune -o \
+        \( -name "*.h" -o -name "*.hpp" -o -name "*.c" -o -name "*.cpp" \) -print)
 }
 
 ################################################################################
