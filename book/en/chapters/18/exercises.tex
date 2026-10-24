@@ -8,14 +8,15 @@
 \textbf{by hand} and write down the intermediate steps; this is done \textbf{before the lesson}.
 Then, during the lesson, you write \textbf{a C program} that does the same calculation, and
 compare the results. Parts~1--3 are compulsory and are assessed U/G, the Swedish fail and pass.
-Parts~4 and~5 are optional further study for those who have time, and do not affect the
-assessment.
+The hand calculations in Exercises~6.1, 6.4~a, 7.1 and~7.4 are compulsory too. The other exercises
+in Parts~4--7 are optional further study for those who have time, and do not affect the assessment.
 
 \facitnotis{L18}
 \end{aside}
 
 \begin{aside}
-\note[Note] The hand calculations for Parts~1--3 must be done before the lesson and brought to it.
+\note[Note] The hand calculations for Parts~1--3, and Exercises~6.1, 6.4~a, 7.1 and~7.4, must be
+done before the lesson and brought to it.
 The lesson time is not enough for both calculating and programming.
 \end{aside}
 
@@ -71,6 +72,33 @@ their results in order.
 close the tab.
 \end{aside}
 
+\subsection*{Working in WSL (recommended)}
+The directory \file{lectures/L18/code/math/} in the course repository is an example of what a
+project can look like in WSL (\secref{c18:sec:egendator}). It holds two files: \file{main.c}, a
+small example program that divides two numbers and prints the quotient, and \file{Makefile},
+which builds and runs the program with \code{make}.
+
+Get the code by cloning the course repository to your Linux home directory. Then go into the
+directory, and build and run the example:
+\begin{shell}
+cd ~
+git clone https://github.com/Yrgo-26/electrical-engineering-math.git
+cd electrical-engineering-math/lectures/L18/code/math
+make
+\end{shell}
+The clone also holds the code for Parts~6 and~7, so it only has to be fetched once.
+
+Then use the directory as the starting point for the exercises. Replace the example in
+\file{main.c} with the declarations and calls of the exercises as above, and add each new file
+under \code{SRC_FILES} in the makefile, one file per line:
+\begin{console}
+SRC_FILES := assignment1_1.c \
+             assignment1_2.c \
+             main.c \
+\end{console}
+A file that is not listed under \code{SRC_FILES} is not compiled, and calling its function then
+gives a linker error.
+
 \subsection*{Presentation and assessment}
 The exercises are presented to the teacher during the lesson:
 \begin{itemize}
@@ -84,14 +112,16 @@ The exercises are presented to the teacher during the lesson:
 The lab is assessed U/G and does not affect the points towards the course grade. It is part of the
 requirement that all the course's learning outcomes are achieved for a pass grade in the course.
 
-\begin{narrowtable}{@{}lc@{}}
+\begin{booktable}{@{}Lc@{}}
   \thead{Requirement} & \thead{Assessment} \\
   \midrule
-  Parts 1--3 completed and correctly presented & G \\
-  Parts 1--3 not completed or not presented & U \\
-\end{narrowtable}
+  Parts 1--3 and the hand calculations in 6.1, 6.4~a, 7.1 and~7.4
+    completed and correctly presented & G \\
+  Parts 1--3 or the hand calculations in 6.1, 6.4~a, 7.1 and~7.4
+    not completed or not presented & U \\
+\end{booktable}
 
-Parts~4 and~5 are optional further study and do not affect the assessment.
+The other exercises in Parts~4--7 are optional further study and do not affect the assessment.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 1}{Basics of \code{math.h}}
@@ -361,4 +391,322 @@ For a sinusoidal voltage $u(t) = \abs{U}\sin(\omega t)$,
     $n = 1000$ subintervals over one period.
   \item Compare with the theoretical value and print the relative error.
   \item What happens to the error if $n$ is reduced to $10$? Explain why.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 6}{Linear regression}
+Here a simple machine learning model, a \textbf{linear regression model}, is trained to find the
+straight line $y = kx + m$ from a number of measured points. In machine learning, $k$ is called
+the model's \textbf{weight} and $m$ its \textbf{bias}.
+
+The Ee class later takes a course of its own in machine learning, and for you Parts~6 and~7 give
+a first taste. For the Eh class this is the only chance to learn how machine learning works, so
+make the most of it! Whichever class you are in, the parts show that the mathematics of the
+course is the foundation there too.
+
+\begin{aside}
+\note[Note] The hand calculations in \uppref{6.1} and \uppref{6.4}~a) are compulsory and are done
+before the lesson, as in Parts~1--3. They need no computer. The other exercises in Part~6 are
+optional.
+\end{aside}
+
+The code is in \file{lectures/L18/code/lin_reg/} and consists of four files:
+
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{11em}L@{}}
+  \thead{File} & \thead{Contents} \\
+  \midrule
+  \file{include/ml/lin_reg.h} & The structs for the model, the training data and the training
+    parameters, and the function declarations. \\
+  \file{source/ml/lin_reg.c} & The implementation of the model. The function
+    \code{lin_reg_optimize()} is empty, and you are to implement it. \\
+  \file{source/main.c} & The main program, where the training data and the training parameters
+    are defined. \\
+  \file{include/ml/utils.h} & Helper macros, among them one that computes the number of elements
+    in an array. \\
+\end{booktable}
+
+\begin{aside}
+\note[Note] The programming exercises in Part~6 require \textbf{WSL} with \code{gcc} and
+\code{make}, and cannot be done in OnlineGDB. The program consists of several files in
+subdirectories and is built with a makefile. Set up WSL as in \secref{c18:sec:egendator} before you
+start.
+\end{aside}
+
+Go into the directory in your clone of the course repository, see \emph{Working in WSL} above,
+and build and run the program with \code{make}:
+\begin{shell}
+cd ~/electrical-engineering-math/lectures/L18/code/lin_reg
+make
+\end{shell}
+Without an implementation in \code{lin_reg_optimize()} the model is not trained at all, so every
+prediction is $0$ until \uppref{6.2} is done.
+
+\subsection*{Structs in C}
+A \textbf{struct} gathers several variables that belong together under one name. The model, for
+example, consists of two floating-point numbers:
+\begin{ccode}
+typedef struct
+{
+    double bias;   // The m value.
+    double weight; // The k value.
+} lin_reg_t;
+\end{ccode}
+A variable of type \code{lin_reg_t} is created and initialised like an ordinary variable, and its
+fields are reached with a dot:
+\begin{ccode}
+lin_reg_t model = {.bias = 0.0, .weight = 0.0};
+printf("k = %.3f, m = %.3f\n", model.weight, model.bias);
+\end{ccode}
+When the struct is instead reached through a \textbf{pointer}, as in the functions in
+\file{lin_reg.c}, an arrow is used: \code{self->bias} and \code{self->weight}.
+
+\subsection*{The training algorithm}
+The model is trained by going through the measured points, the so-called \textbf{training sets}
+$(x, y_{\text{ref}})$, one at a time. One pass through all the training sets is called an
+\textbf{epoch}. Both parameters are zero at the start. For each training set:
+\begin{enumerate}
+  \item Compute the model's prediction $y_p$ for the input $x$:
+    \[
+      y_p = k \cdot x + m.
+    \]
+  \item Compute the deviation $\delta$ between the reference value and the prediction:
+    \[
+      \delta = y_{\text{ref}} - y_p.
+    \]
+    If $\delta > 0$ the prediction is too low, and $k$ and $m$ should be increased. If
+    $\delta < 0$ it is too high, and $k$ and $m$ should be decreased.
+  \item Compute the adjustment $\Delta e$, where $\mathit{LR}$ is the \textbf{learning rate}, a
+    small number that sets how strongly the parameters are adjusted:
+    \[
+      \Delta e = \delta \cdot \mathit{LR}.
+    \]
+  \item Adjust the parameters:
+    \[
+      m = m + \Delta e, \qquad k = k + \Delta e \cdot x.
+    \]
+\end{enumerate}
+Note that $k$ is not adjusted when $x = 0$, since $k$ does not affect the prediction then. The
+larger $x$ is, the more $k$ is adjusted.
+
+\uppgift{6.1}{Training by hand (compulsory)}
+The training data in \file{main.c} follow the line $y = 2x + 2$:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.5em}}@{}}
+  $x$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $y_{\text{ref}}$ & $2$ & $4$ & $6$ & $8$ & $10$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Carry out one epoch by hand with the learning rate $\mathit{LR} = 0.1$, starting from
+    $k = 0$ and $m = 0$. Show $y_p$, $\delta$, $\Delta e$, $k$ and $m$ after each training set.
+    Round to four decimals.
+  \item Have $k$ and $m$ moved towards the correct values $k = 2$ and $m = 2$?
+\end{parts}
+
+\uppgift{6.2}{Implement the optimisation (optional)}
+\begin{parts}
+  \item Implement the function \code{lin_reg_optimize()} in \file{lin_reg.c} according to the
+    training algorithm above. The comments in the function describe the steps.
+  \item Set the number of epochs to $1$ and the learning rate to $0.1$ in \file{main.c}. Print
+    \code{model.weight} and \code{model.bias} after the training and compare with your hand
+    calculation in \uppref{6.1}.
+  \item Restore the number of epochs to $50$ and the learning rate to $0.25$. Does the model now
+    predict $y = 2x + 2$?
+\end{parts}
+
+\uppgift{6.3}{Learning rate and epochs (optional)}
+\begin{parts}
+  \item Train the model with the learning rate $0.01$ for $50$ epochs. How close to the correct
+    values do $k$ and $m$ end up? How many epochs are needed to get as close as in
+    \uppref{6.2}~c)?
+  \item Train the model with the learning rate $0.5$. What happens? Explain why a learning rate
+    that is too high keeps the model from finding the line.
+  \item Multiply all the $x$ values by $10$ and compute the $y$ values from $y = 2x + 2$, that is
+    $x = 0, 10, \ldots, 40$. Train with the learning rate $0.1$. What happens, and why? Hint: see
+    step~4 of the training algorithm.
+\end{parts}
+
+\uppgift{6.4}{Your own training data}
+In Chapter~8, \uppref[8]{2.3}, the voltage $U(t)$ was measured during a discharge:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.5em}}@{}}
+  $t$ (s) & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $U(t)$ (V) & $12$ & $9$ & $6$ & $3$ & $0$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item \emph{(Compulsory.)} Find $k$ and $m$ in $U(t) = kt + m$ by hand, or take them from your
+      solution in Chapter~8.
+  \item \emph{(Optional, as are c)--e).)} Replace the training data in \file{main.c} with the
+    table above. Choose the number of
+    epochs and the learning rate so that the model finds $k$ and $m$ with at least three correct
+    decimals.
+  \item Let the model predict $U(5)$. Does the answer agree with your calculation in Chapter~8?
+  \item Change the measured values slightly, for example to $12.2$, $8.9$, $6.1$, $2.8$ and
+    $0.1$, and retrain the model with the learning rate $0.25$ for $50$ epochs. Why are $k$ and
+    $m$ no longer exactly $-3$ and $12$?
+  \item Retrain the model with the learning rate $0.01$ for $1000$ epochs and compare $k$ and $m$
+    with d). Why does the learning rate matter when the measured values do not lie on a straight
+    line? Hint: the model is adjusted after each training set, not after the whole epoch.
+\end{parts}
+
+\uppgift{6.5}{Precision (optional)}
+How well the model fits the training data can be given by the mean absolute error (MAE), the mean
+of the absolute values of the deviations:
+\[
+  \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \abs{y_{\text{ref},i} - y_{p,i}}.
+\]
+The model's \textbf{precision} is defined here as $1 - \text{MAE}$. A precision close to $1$ means
+that the model predicts very close to the reference values.
+\begin{parts}
+  \item Write a function that computes the precision of a trained model. Use \code{fabs()} from
+    \file{math.h}.
+  \item Print the precision after each epoch. How does it change during the training?
+  \item Stop the training as soon as the precision exceeds $0.9999$. After how many epochs does
+    that happen?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 7}{A neural network in C++}
+The linear regression model of Part~6 is in fact a \textbf{node} with a single input. In a
+\textbf{neural network} each node has several inputs, each with a weight of its own, and the
+nodes are arranged in \textbf{layers}. In a so-called \textbf{dense layer} every node is connected
+to all the inputs.
+
+In Part~7 a neural network is trained to learn a pattern that no straight line can describe. The
+network is written in \textbf{C++}, which the Ee class studies in a later course. You do not need
+to understand all of the code: the aim is that you implement a central part of the network
+yourself and then watch it learn.
+
+\begin{aside}
+\note[Note] The hand calculations in \uppref{7.1} and \uppref{7.4} are compulsory and are done
+before the lesson. They need no computer. The other exercises in Part~7 are optional.
+\end{aside}
+
+\begin{aside}
+\note[Note] The programming exercises in Part~7, like those in Part~6, require \textbf{WSL} with
+\code{g++} and \code{make}. Both are in the package \code{build-essential}, see
+\secref{c18:sec:egendator}.
+\end{aside}
+
+The code is in \file{lectures/L18/code/neural_network/}. Go into the directory in your clone of
+the course repository, and build and run the program with \code{make}:
+\begin{shell}
+cd ~/electrical-engineering-math/lectures/L18/code/neural_network
+make
+\end{shell}
+
+\subsection*{The training data}
+The network has two inputs $x_1$ and $x_2$ and one output $y$. The output is to be $1$ when the
+inputs differ, and $0$ when they are equal:
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{3em}}@{}}
+  \thead{$x_1$} & \thead{$x_2$} & \thead{$y$} \\
+  \midrule
+  $0$ & $0$ & $0$ \\
+  $0$ & $1$ & $1$ \\
+  $1$ & $0$ & $1$ \\
+  $1$ & $1$ & $0$ \\
+\end{narrowtable}
+
+The network consists of two layers:
+\begin{itemize}
+  \item A \textbf{hidden layer} with $15$ nodes, which takes the inputs $x_1$ and $x_2$.
+  \item An \textbf{output layer} with one node, which takes the $15$ outputs of the hidden layer.
+\end{itemize}
+The weights and biases are given random starting values and are then adjusted during the
+training, in the same way as $k$ and $m$ in Part~6.
+
+\subsection*{Feedforward}
+Computing a layer's outputs from its inputs is called \textbf{feedforward}. For node $i$, first
+the weighted sum $z_i$ of the inputs plus the node's bias $b_i$ is computed:
+\[
+  z_i = w_{i1} x_1 + w_{i2} x_2 + \cdots + b_i = \sum_j w_{ij} x_j + b_i,
+\]
+where $w_{ij}$ is the weight between input $j$ and node $i$. With a single input this becomes
+$z = kx + m$, the same thing as in Part~6.
+
+The sum is then passed through an \textbf{activation function} $f$, so that the node's output is
+$y_i = f(z_i)$. The network uses two activation functions:
+\begin{itemize}
+  \item The hidden layer uses \textbf{ReLU}, which sets negative sums to zero:
+    $f(z) = \max(0, z)$.
+  \item The output layer uses the \textbf{hyperbolic tangent}, which squeezes all real numbers
+    into the interval $(-1, 1)$:
+    \[
+      \tanh(z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}}.
+    \]
+\end{itemize}
+
+\subsection*{The code in brief}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{19em}L@{}}
+  \thead{File} & \thead{Contents} \\
+  \midrule
+  \file{source/main.cpp} & The training data, the size of the network, and the training and
+    printing. \\
+  \file{source/ml/dense_layer/dense.cpp} & The dense layer. This is where the method
+    \code{feedforward()} is, which you are to implement. \\
+  \file{source/ml/neural_network/shallow.cpp} & The network, which connects the layers and
+    trains them. \\
+  \file{source/ml/utils.cpp} & The activation functions and random starting values. \\
+\end{booktable}
+
+A few things in C++ that differ from C:
+\begin{itemize}
+  \item \code{ml::Matrix1d} is a \code{std::vector<double>}, an array that keeps track of its own
+    size and can change it. The size is given by \code{.size()}, and the elements are reached
+    with square brackets just as in C, for example \code{input[j]}.
+  \item \code{ml::Matrix2d} is a vector of vectors, that is a two-dimensional array. The weights
+    are reached with \code{myWeights[i][j]}.
+  \item A \textbf{class} works like a struct that also holds its own functions, called
+    \textbf{methods}. The layer's variables, for example \code{myWeights}, \code{myBias} and
+    \code{myOutput}, are therefore reached directly inside the methods, without \code{self->}.
+  \item The size of the layer is given by the methods \code{nodeCount()} and
+    \code{weightCount()}, and the activation function is computed with
+    \code{actFuncOutput(myActFunc, sum)}.
+\end{itemize}
+Feel free to read the rest of the code, but the exercises do not require it.
+
+\uppgift{7.1}{Feedforward by hand (compulsory)}
+A node has the weights $w_1 = 0.5$ and $w_2 = -1$ and the bias $b = 0.2$.
+\begin{parts}
+  \item Compute the sum $z$ for the inputs $(x_1, x_2) = (1, 0)$ and $(x_1, x_2) = (1, 1)$.
+  \item Compute the node's output with ReLU for both cases.
+  \item Compute the node's output with $\tanh$ for the case $(1, 0)$. Round to four decimals.
+\end{parts}
+
+\uppgift{7.2}{Implement feedforward (optional)}
+\begin{parts}
+  \item Implement the method \code{feedforward()} in \file{dense.cpp}. For each node $i$, compute
+    the sum $z_i$ with an inner loop over the inputs, and then store both the sum $z_i$ in
+    \code{myPreActOutput[i]} and the output $f(z_i)$ in \code{myOutput[i]}. The sum is needed
+    later, when the network is trained. The comments in the method describe the steps.
+  \item Build and run the program. It prints the network's predictions before and after the
+    training. Compare them with the table of training data. Has the network learnt the pattern?
+\end{parts}
+
+\begin{aside}
+\note[Note] Without a working feedforward every prediction is $0$, and the training fails after
+several attempts.
+\end{aside}
+
+\uppgift{7.3}{Experiment (optional)}
+\begin{parts}
+  \item Run the program several times. Why does the number of epochs needed vary from run to run?
+  \item Reduce the number of nodes in the hidden layer, \code{hiddenCount} in \file{main.cpp}, to
+    $5$, $2$ and $1$. What happens to the training?
+\end{parts}
+
+\uppgift{7.4}{Why is one straight line not enough? (compulsory)}
+A single node without an activation function gives $z = w_1 x_1 + w_2 x_2 + b$, and the relation
+$z = 0$ is a straight line in the $x_1 x_2$ plane. The node can therefore only separate points on
+different sides of one line.
+\begin{parts}
+  \item Plot the four points $(0, 0)$, $(0, 1)$, $(1, 0)$ and $(1, 1)$ in a coordinate system,
+    and mark the ones that are to give the output $1$.
+  \item Can a single straight line be drawn that separates the points that are to give $1$ from
+    the points that are to give $0$? What does that say about why the network needs a hidden
+    layer?
 \end{parts}

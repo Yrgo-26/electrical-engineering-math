@@ -133,6 +133,65 @@ root $x = 2$;\enspace $(1, 2, 5)$: $D = -16$, $x = -1 \pm 2j$
 \sv{d} Nothing: $n = 10$ also gives $229.810\,\text{V}$. $u(t)^2$ is periodic, and the
 trapezoidal rule with evenly spaced points over a whole period is then exact.
 
+\svar{6.1} \sv{a} $x = 0$: $y_p = 0$, $\delta = 2$, $\Delta e = 0.2$, $k = 0$,
+$m = 0.2$;\enspace $x = 1$: $y_p = 0.2$, $\delta = 3.8$, $\Delta e = 0.38$, $k = 0.38$,
+$m = 0.58$;\enspace $x = 2$: $y_p = 1.34$, $\delta = 4.66$, $\Delta e = 0.466$, $k = 1.312$,
+$m = 1.046$;\enspace $x = 3$: $y_p = 4.982$, $\delta = 3.018$, $\Delta e = 0.3018$,
+$k = 2.2174$, $m = 1.3478$;\enspace $x = 4$: $y_p = 10.2174$, $\delta = -0.2174$,
+$\Delta e = -0.0217$, $k = 2.1304$, $m = 1.3261$
+\sv{b} Yes. $k$ has already gone slightly past $2$, and $m$ has gone from $0$ to $1.33$.
+
+\svar{6.2} \sv{a} See the worked solution. \sv{b} $k \approx 2.1304$ and $m \approx 1.3261$, the
+same as in \uppref[18]{6.1}. \sv{c} Yes: $k = 2.000$ and $m = 2.000$, with an error of about
+$3 \cdot 10^{-6}$.
+
+\svar{6.3} \sv{a} $k \approx 2.18$ and $m \approx 1.46$, still far off. About $840$ epochs are
+needed.
+\sv{b} $k$ and $m$ grow without limit and change sign; after $50$ epochs they are of the order of
+$10^{38}$. Each adjustment is larger than the deviation it is meant to correct, so the prediction
+ends up ever further away on the other side.
+\sv{c} $k$ and $m$ become \code{nan}. The adjustment of $k$ is $\Delta e \cdot x$, and with $x$ up
+to $40$ it is $40$ times larger, so the learning rate $0.1$ is far too high. With $0.001$, for
+example, the model finds the line.
+
+\svar{6.4} \sv{a} $k = -3$, $m = 12$
+\sv{b} For example the learning rate $0.25$ for $50$ epochs, which gives $k = -3.000$ and
+$m = 12.000$. With $0.1$ about $60$ epochs are needed.
+\sv{c} $U(5) \approx -3.000\,\text{V}$, the same as in Chapter~8.
+\sv{d} $k \approx -2.01$ and $m \approx 11.21$. No straight line passes through all the points, so
+the deviation is never zero for all the training sets, and the parameters never stop being
+adjusted.
+\sv{e} $k \approx -3.02$ and $m \approx 12.08$, close to the line that fits the points best,
+$k = -3.03$ and $m = 12.08$. The model is adjusted after each point. With a high learning rate
+each point pulls hard on $k$ and $m$, so the result depends mostly on the last points of the
+epoch. With a low learning rate each point moves the parameters only a little, and the model
+ends up at an average of all the points.
+
+\svar{6.5} \sv{a} See the worked solution.
+\sv{b} With the learning rate $0.25$ the precision is negative for the first epochs, about $-2.4$
+after one epoch, and then approaches $1$: $0.97$ after $10$ epochs and $0.997$ after $20$.
+\sv{c} After $34$ epochs.
+
+\svar{7.1} \sv{a} $(1, 0)$: $z = 0.7$;\enspace $(1, 1)$: $z = -0.3$
+\sv{b} $0.7$ and $0$ \sv{c} $\tanh(0.7) \approx 0.6044$
+
+\svar{7.2} \sv{a} See the worked solution.
+\sv{b} Before the training the predictions are random and do not follow the pattern. After the
+training they are $0.00$, $1.00$, $1.00$ and $0.00$, exactly as in the table.
+
+\svar{7.3} \sv{a} The weights and biases are given random starting values, so the training starts
+from a new place each time. With $15$ nodes, $150\,000$ to $300\,000$ epochs are usually needed.
+\sv{b} With $5$ nodes the training succeeds, sometimes after a retry. With $2$ nodes several
+attempts are often needed, and sometimes all of them fail. With $1$ node the training always
+fails: one node gives only one straight line, see \uppref[18]{7.4}.
+
+\svar{7.4} \sv{a} $(0, 1)$ and $(1, 0)$ are to give $1$. They lie in two opposite corners of the
+square, and $(0, 0)$ and $(1, 1)$ in the other two.
+\sv{b} No. A line that has both the points that are to give $1$ on the same side always takes in
+at least one of the points that are to give $0$. Each node in the hidden layer gives a line of its
+own, and the output layer combines them, so that the network can separate points that no single
+line can.
+
 \svar[Test yourself]{T} \sv{1} $0$, since both operands are integers and integer division
 truncates the decimal part. \code{1.0 / 2.0} gives $0.5$.
 \sv{2} It links in the maths library \code{libm}. Without it, linking fails with

@@ -8,14 +8,16 @@
 \textbf{Så arbetar du med uppgifterna.} Varje uppgift löses i två steg. Först räknar du
 \textbf{för hand} och skriver ned mellanstegen; det görs \textbf{före lektionen}. Sedan skriver
 du under lektionen \textbf{ett program i C} som utför samma beräkning, och jämför resultaten.
-Del~1--3 är obligatoriska och bedöms U/G. Del~4 och~5 är frivillig fördjupning för den som hinner
-och påverkar inte bedömningen.
+Del~1--3 är obligatoriska och bedöms U/G, liksom handberäkningarna i uppgift~6.1, 6.4~a, 7.1
+och~7.4. Övriga uppgifter i del~4--7 är frivillig fördjupning för den som hinner och påverkar inte
+bedömningen.
 
 \facitnotis{L18}
 \end{aside}
 
 \begin{aside}
-\note[Obs] Handberäkningarna för del~1--3 ska vara gjorda före lektionen och tas med dit.
+\note[Obs] Handberäkningarna för del~1--3, samt uppgift~6.1, 6.4~a, 7.1 och~7.4, ska vara gjorda
+före lektionen och tas med dit.
 Lektionstiden räcker inte till både beräkning och programmering.
 \end{aside}
 
@@ -71,6 +73,33 @@ skriver ut sina resultat i ordning.
 stänger fliken.
 \end{aside}
 
+\subsection*{Arbeta i WSL (rekommenderat)}
+Katalogen \file{lectures/L18/code/math/} i kursens repository är ett exempel på hur ett projekt kan
+se ut i WSL (\secref{c18:sec:egendator}). Den består av två filer: \file{main.c}, ett litet
+exempelprogram som dividerar två tal och skriver ut kvoten, och \file{Makefile}, som bygger och
+kör programmet med \code{make}.
+
+Hämta koden genom att klona kursens repository till din Linux-hemkatalog. Gå sedan in i katalogen
+och bygg och kör exemplet:
+\begin{shell}
+cd ~
+git clone https://github.com/Yrgo-26/electrical-engineering-math.git
+cd electrical-engineering-math/lectures/L18/code/math
+make
+\end{shell}
+Klonen innehåller även koden till del~6 och~7, så den behöver bara hämtas en gång.
+
+Använd sedan katalogen som utgångspunkt för uppgifterna. Ersätt exemplet i \file{main.c} med
+deklarationerna och anropen av uppgifterna enligt ovan, och lägg till varje ny fil under
+\code{SRC_FILES} i makefilen, en fil per rad:
+\begin{console}
+SRC_FILES := assignment1_1.c \
+             assignment1_2.c \
+             main.c \
+\end{console}
+En fil som inte står under \code{SRC_FILES} kompileras inte, och anropet av dess funktion ger då
+ett länkfel.
+
 \subsection*{Redovisning och bedömning}
 Uppgifterna redovisas för läraren under lektionen:
 \begin{itemize}
@@ -84,14 +113,16 @@ Uppgifterna redovisas för läraren under lektionen:
 Laborationen bedöms U/G och påverkar inte kursens betygspoäng. Den ingår i kravet att samtliga
 lärandemål ska vara uppnådda för godkänt betyg på kursen.
 
-\begin{narrowtable}{@{}lc@{}}
+\begin{booktable}{@{}Lc@{}}
   \thead{Krav} & \thead{Bedömning} \\
   \midrule
-  Del 1--3 genomförda och korrekt redovisade & G \\
-  Del 1--3 ej genomförda eller ej redovisade & U \\
-\end{narrowtable}
+  Del 1--3 samt handberäkningarna i 6.1, 6.4~a, 7.1 och~7.4
+    genomförda och korrekt redovisade & G \\
+  Del 1--3 eller handberäkningarna i 6.1, 6.4~a, 7.1 och~7.4
+    ej genomförda eller ej redovisade & U \\
+\end{booktable}
 
-Del~4 och~5 är frivillig fördjupning och påverkar inte bedömningen.
+Övriga uppgifter i del~4--7 är frivillig fördjupning och påverkar inte bedömningen.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 1}{Grunder i \code{math.h}}
@@ -359,4 +390,314 @@ För en sinusspänning $u(t) = \abs{U}\sin(\omega t)$ gäller
     delintervall över en period.
   \item Jämför med det teoretiska värdet och skriv ut det relativa felet.
   \item Vad händer med felet om $n$ minskas till $10$? Förklara varför.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 6}{Linjär regression}
+Här tränas en enkel maskininlärningsmodell, en \textbf{linjär regressionsmodell}, att hitta den
+räta linjen $y = kx + m$ utifrån ett antal mätpunkter. Inom maskininlärning kallas $k$ för
+modellens \textbf{vikt} och $m$ för dess \textbf{bias}.
+
+Ee-klassen läser senare en egen kurs i maskininlärning, och för er ger del~6 och~7 en första
+försmak. För Eh-klassen är detta enda tillfället att lära sig hur maskininlärning fungerar, så ta
+tillfället i akt! Oavsett klass visar delarna att matematiken från kursen är grunden även där.
+
+\begin{aside}
+\note[Obs] Handberäkningarna i \uppref{6.1} och \uppref{6.4}~a) är obligatoriska och görs före
+lektionen, precis som i del~1--3. De kräver ingen dator. Övriga uppgifter i del~6 är frivilliga.
+\end{aside}
+
+Koden finns i \file{lectures/L18/code/lin_reg/} och består av fyra filer:
+
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{11em}L@{}}
+  \thead{Fil} & \thead{Innehåll} \\
+  \midrule
+  \file{include/ml/lin_reg.h} & Struktarna för modellen, träningsdatan och
+    träningsparametrarna, samt funktionsdeklarationerna. \\
+  \file{source/ml/lin_reg.c} & Implementationen av modellen. Funktionen
+    \code{lin_reg_optimize()} är tom och ska implementeras av dig. \\
+  \file{source/main.c} & Huvudprogrammet, där träningsdatan och träningsparametrarna
+    definieras. \\
+  \file{include/ml/utils.h} & Hjälpmakron, bland annat för att beräkna antalet element i en
+    array. \\
+\end{booktable}
+
+\begin{aside}
+\note[Obs] Programmeringsuppgifterna i del~6 kräver \textbf{WSL} med \code{gcc} och \code{make},
+och kan inte genomföras i OnlineGDB. Programmet består av flera filer i underkataloger och byggs med
+en makefile. Sätt upp WSL enligt \secref{c18:sec:egendator} innan du börjar.
+\end{aside}
+
+Gå in i katalogen i din klon av kursens repository, se \emph{Arbeta i WSL} ovan, och bygg och
+kör programmet med \code{make}:
+\begin{shell}
+cd ~/electrical-engineering-math/lectures/L18/code/lin_reg
+make
+\end{shell}
+Utan någon implementation i \code{lin_reg_optimize()} tränas modellen inte alls, så samtliga
+prediktioner blir $0$ tills \uppref{6.2} är genomförd.
+
+\subsection*{Struktar i C}
+En \textbf{strukt} (\code{struct}), även kallat struktur, samlar flera variabler som hör ihop
+under ett gemensamt namn. Modellen består till exempel av två flyttal:
+\begin{ccode}
+typedef struct
+{
+    double bias;   // m-värdet.
+    double weight; // k-värdet.
+} lin_reg_t;
+\end{ccode}
+En variabel av typen \code{lin_reg_t} skapas och initieras som en vanlig variabel, och fälten nås
+med punkt:
+\begin{ccode}
+lin_reg_t model = {.bias = 0.0, .weight = 0.0};
+printf("k = %.3f, m = %.3f\n", model.weight, model.bias);
+\end{ccode}
+När strukten i stället nås via en \textbf{pekare}, som i funktionerna i \file{lin_reg.c},
+används pil: \code{self->bias} och \code{self->weight}.
+
+\subsection*{Träningsalgoritmen}
+Modellen tränas genom att gå igenom mätpunkterna, de så kallade
+\textbf{träningsuppsättningarna} $(x, y_{\text{ref}})$, en i taget. En genomgång av samtliga
+träningsuppsättningar kallas en \textbf{epok}. Båda parametrarna är noll vid start. För varje
+träningsuppsättning:
+\begin{enumerate}
+  \item Beräkna modellens prediktion $y_p$ för indatan $x$:
+    \[
+      y_p = k \cdot x + m.
+    \]
+  \item Beräkna avvikelsen $\delta$ mellan referensvärdet och prediktionen:
+    \[
+      \delta = y_{\text{ref}} - y_p.
+    \]
+    Är $\delta > 0$ är prediktionen för låg, och $k$ och $m$ bör ökas. Är $\delta < 0$ är den
+    för hög, och $k$ och $m$ bör minskas.
+  \item Beräkna justeringsmängden $\Delta e$, där $\mathit{LR}$ är \textbf{lärhastigheten}
+    (\emph{learning rate}), ett litet tal som avgör hur kraftigt parametrarna justeras:
+    \[
+      \Delta e = \delta \cdot \mathit{LR}.
+    \]
+  \item Justera parametrarna:
+    \[
+      m = m + \Delta e, \qquad k = k + \Delta e \cdot x.
+    \]
+\end{enumerate}
+Notera att $k$ inte justeras när $x = 0$, eftersom $k$ inte påverkar prediktionen då. Ju större
+$x$ är, desto mer justeras $k$.
+
+\uppgift{6.1}{Träning för hand (obligatorisk)}
+Träningsdatan i \file{main.c} följer linjen $y = 2x + 2$:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.5em}}@{}}
+  $x$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $y_{\text{ref}}$ & $2$ & $4$ & $6$ & $8$ & $10$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item Genomför en epok för hand med lärhastigheten $\mathit{LR} = 0{,}1$, med start i $k = 0$
+    och $m = 0$. Redovisa $y_p$, $\delta$, $\Delta e$, $k$ och $m$ efter varje
+    träningsuppsättning. Avrunda till fyra decimaler.
+  \item Har $k$ och $m$ närmat sig de rätta värdena $k = 2$ och $m = 2$?
+\end{parts}
+
+\uppgift{6.2}{Implementera optimeringen (frivillig)}
+\begin{parts}
+  \item Implementera funktionen \code{lin_reg_optimize()} i \file{lin_reg.c} enligt
+    träningsalgoritmen ovan. Kommentarerna i funktionen beskriver stegen.
+  \item Sätt antalet epoker till $1$ och lärhastigheten till $0{,}1$ i \file{main.c}. Skriv ut
+    \code{model.weight} och \code{model.bias} efter träningen och jämför med din handberäkning i
+    \uppref{6.1}.
+  \item Återställ antalet epoker till $50$ och lärhastigheten till $0{,}25$. Predikterar modellen
+    nu $y = 2x + 2$?
+\end{parts}
+
+\uppgift{6.3}{Lärhastighet och epoker (frivillig)}
+\begin{parts}
+  \item Träna modellen med lärhastigheten $0{,}01$ under $50$ epoker. Hur nära de rätta värdena
+    hamnar $k$ och $m$? Hur många epoker krävs för att komma lika nära som i \uppref{6.2}~c)?
+  \item Träna modellen med lärhastigheten $0{,}5$. Vad händer? Förklara varför en för hög
+    lärhastighet gör att modellen inte hittar linjen.
+  \item Multiplicera samtliga $x$-värden med $10$ och beräkna $y$-värdena enligt $y = 2x + 2$,
+    alltså $x = 0, 10, \ldots, 40$. Träna med lärhastigheten $0{,}1$. Vad händer, och varför?
+    Ledning: se steg~4 i träningsalgoritmen.
+\end{parts}
+
+\uppgift{6.4}{Egen träningsdata}
+I kapitel~8, \uppref[8]{2.3}, mättes spänningen $U(t)$ under en urladdning:
+
+\begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.5em}}@{}}
+  $t$ (s) & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  \midrule
+  $U(t)$ (V) & $12$ & $9$ & $6$ & $3$ & $0$ \\
+\end{narrowtable}
+
+\begin{parts}
+  \item \emph{(Obligatorisk.)} Bestäm $k$ och $m$ i $U(t) = kt + m$ för hand, eller hämta dem från
+      din lösning i kapitel~8.
+  \item \emph{(Frivillig, även c)--e).)} Ersätt träningsdatan i \file{main.c} med tabellen
+    ovan. Välj antal epoker och
+    lärhastighet så att modellen hittar $k$ och $m$ med minst tre korrekta decimaler.
+  \item Låt modellen prediktera $U(5)$. Stämmer svaret med din beräkning i kapitel~8?
+  \item Ändra mätvärdena något, till exempel till $12{,}2$, $8{,}9$, $6{,}1$, $2{,}8$ och
+    $0{,}1$, och träna om modellen med lärhastigheten $0{,}25$ under $50$ epoker. Varför blir $k$
+    och $m$ inte längre exakt $-3$ och $12$?
+  \item Träna om modellen med lärhastigheten $0{,}01$ under $1000$ epoker och jämför $k$ och $m$
+    med d). Varför spelar lärhastigheten roll när mätvärdena inte ligger på en rät linje?
+    Ledning: modellen justeras efter varje träningsuppsättning, inte efter hela epoken.
+\end{parts}
+
+\uppgift{6.5}{Precision (frivillig)}
+Hur väl modellen passar träningsdatan kan anges med medelabsolutfelet (MAE), alltså medelvärdet
+av absolutbeloppen av avvikelserna:
+\[
+  \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \abs{y_{\text{ref},i} - y_{p,i}}.
+\]
+Modellens \textbf{precision} definieras här som $1 - \text{MAE}$. En precision nära $1$ innebär att
+modellen predikterar mycket nära referensvärdena.
+\begin{parts}
+  \item Skriv en funktion som beräknar precisionen för en tränad modell. Använd \code{fabs()} från
+    \file{math.h}.
+  \item Skriv ut precisionen efter varje epok. Hur förändras den under träningen?
+  \item Avbryt träningen så snart precisionen överstiger $0{,}9999$. Efter hur många epoker sker
+    det?
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 7}{Ett neuralt nätverk i C++}
+Den linjära regressionsmodellen i del~6 är i själva verket en \textbf{nod} med en enda insignal.
+I ett \textbf{neuralt nätverk} har varje nod flera insignaler, var och en med en egen vikt, och
+noderna är ordnade i \textbf{lager}. I ett så kallat \textbf{dense-lager} är varje nod kopplad
+till samtliga insignaler.
+
+I del~7 tränas ett neuralt nätverk att lära sig ett mönster som ingen rät linje kan beskriva.
+Nätverket är skrivet i \textbf{C++}, som Ee-klassen läser i en senare kurs. Du behöver inte
+förstå hela koden: målet är att du implementerar en central del av nätverket själv och sedan ser
+det lära sig.
+
+\begin{aside}
+\note[Obs] Handberäkningarna i \uppref{7.1} och \uppref{7.4} är obligatoriska och görs före
+lektionen. De kräver ingen dator. Övriga uppgifter i del~7 är frivilliga.
+\end{aside}
+
+\begin{aside}
+\note[Obs] Programmeringsuppgifterna i del~7 kräver, precis som i del~6, \textbf{WSL} med
+\code{g++} och \code{make}. Båda ingår i paketet \code{build-essential}, se
+\secref{c18:sec:egendator}.
+\end{aside}
+
+Koden finns i \file{lectures/L18/code/neural_network/}. Gå in i katalogen i din klon av kursens
+repository och bygg och kör programmet med \code{make}:
+\begin{shell}
+cd ~/electrical-engineering-math/lectures/L18/code/neural_network
+make
+\end{shell}
+
+\subsection*{Träningsdatan}
+Nätverket har två insignaler $x_1$ och $x_2$ samt en utsignal $y$. Utsignalen ska vara $1$ när
+insignalerna är olika, och $0$ när de är lika:
+
+\begin{narrowtable}{@{}*{3}{>{\centering\arraybackslash}p{3em}}@{}}
+  \thead{$x_1$} & \thead{$x_2$} & \thead{$y$} \\
+  \midrule
+  $0$ & $0$ & $0$ \\
+  $0$ & $1$ & $1$ \\
+  $1$ & $0$ & $1$ \\
+  $1$ & $1$ & $0$ \\
+\end{narrowtable}
+
+Nätverket består av två lager:
+\begin{itemize}
+  \item Ett \textbf{dolt lager} med $15$ noder, som tar emot insignalerna $x_1$ och $x_2$.
+  \item Ett \textbf{utgångslager} med en nod, som tar emot det dolda lagrets $15$ utsignaler.
+\end{itemize}
+Vikterna och biasvärdena får slumpmässiga startvärden och justeras sedan under träningen, på samma
+sätt som $k$ och $m$ i del~6.
+
+\subsection*{Feedforward}
+Att beräkna ett lagers utsignaler från dess insignaler kallas \textbf{feedforward}. För nod $i$
+beräknas först den viktade summan $z_i$ av insignalerna plus nodens bias $b_i$:
+\[
+  z_i = w_{i1} x_1 + w_{i2} x_2 + \cdots + b_i = \sum_j w_{ij} x_j + b_i,
+\]
+där $w_{ij}$ är vikten mellan insignal $j$ och nod $i$. Med en enda insignal blir detta
+$z = kx + m$, alltså samma sak som i del~6.
+
+Summan skickas sedan genom en \textbf{aktiveringsfunktion} $f$, så att nodens utsignal blir
+$y_i = f(z_i)$. Nätverket använder två aktiveringsfunktioner:
+\begin{itemize}
+  \item Det dolda lagret använder \textbf{ReLU}, som nollställer negativa summor:
+    $f(z) = \max(0, z)$.
+  \item Utgångslagret använder \textbf{tangens hyperbolicus}, som pressar ihop alla reella tal
+    till intervallet $(-1, 1)$:
+    \[
+      \tanh(z) = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}}.
+    \]
+\end{itemize}
+
+\subsection*{Koden i korthet}
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{19em}L@{}}
+  \thead{Fil} & \thead{Innehåll} \\
+  \midrule
+  \file{source/main.cpp} & Träningsdatan, nätverkets storlek samt träning och utskrift. \\
+  \file{source/ml/dense_layer/dense.cpp} & Dense-lagret. Här finns metoden
+    \code{feedforward()}, som du ska implementera. \\
+  \file{source/ml/neural_network/shallow.cpp} & Nätverket, som kopplar ihop lagren och tränar
+    dem. \\
+  \file{source/ml/utils.cpp} & Aktiveringsfunktionerna och slumpmässiga startvärden. \\
+\end{booktable}
+
+Några saker i C++ som skiljer sig från C:
+\begin{itemize}
+  \item \code{ml::Matrix1d} är en \code{std::vector<double>}, en array som själv håller reda på
+    sin storlek och kan ändra den. Storleken fås med \code{.size()}, och elementen nås med
+    hakparenteser precis som i C, till exempel \code{input[j]}.
+  \item \code{ml::Matrix2d} är en vektor av vektorer, alltså en tvådimensionell array. Vikterna
+    nås med \code{myWeights[i][j]}.
+  \item En \textbf{klass} fungerar som en strukt som även innehåller sina funktioner, så kallade
+    \textbf{metoder}. Lagrets variabler, till exempel \code{myWeights}, \code{myBias} och
+    \code{myOutput}, nås därför direkt inne i metoderna, utan \code{self->}.
+  \item Lagrets storlek fås med metoderna \code{nodeCount()} och \code{weightCount()}, och
+    aktiveringsfunktionen beräknas med \code{actFuncOutput(myActFunc, sum)}.
+\end{itemize}
+Läs gärna resten av koden, men det krävs inte för uppgifterna.
+
+\uppgift{7.1}{Feedforward för hand (obligatorisk)}
+En nod har vikterna $w_1 = 0{,}5$ och $w_2 = -1$ samt biasvärdet $b = 0{,}2$.
+\begin{parts}
+  \item Beräkna summan $z$ för insignalerna $(x_1, x_2) = (1, 0)$ och $(x_1, x_2) = (1, 1)$.
+  \item Beräkna nodens utsignal med ReLU för båda fallen.
+  \item Beräkna nodens utsignal med $\tanh$ för fallet $(1, 0)$. Avrunda till fyra decimaler.
+\end{parts}
+
+\uppgift{7.2}{Implementera feedforward (frivillig)}
+\begin{parts}
+  \item Implementera metoden \code{feedforward()} i \file{dense.cpp}. Beräkna för varje nod $i$
+    summan $z_i$ med en inre loop över insignalerna, och spara sedan både summan $z_i$ i
+    \code{myPreActOutput[i]} och utsignalen $f(z_i)$ i \code{myOutput[i]}. Summan behövs senare
+    när nätverket tränas. Kommentarerna i metoden beskriver stegen.
+  \item Bygg och kör programmet. Programmet skriver ut nätverkets prediktioner före och efter
+    träningen. Jämför dem med tabellen över träningsdatan. Har nätverket lärt sig mönstret?
+\end{parts}
+
+\begin{aside}
+\note[Obs] Utan en fungerande feedforward blir samtliga prediktioner $0$, och träningen misslyckas
+efter flera försök.
+\end{aside}
+
+\uppgift{7.3}{Experimentera (frivillig)}
+\begin{parts}
+  \item Kör programmet flera gånger. Varför varierar antalet epoker som krävs från gång till gång?
+  \item Minska antalet noder i det dolda lagret, \code{hiddenCount} i \file{main.cpp}, till $5$,
+    $2$ och $1$. Vad händer med träningen?
+\end{parts}
+
+\uppgift{7.4}{Varför räcker inte en rät linje? (obligatorisk)}
+En enda nod utan aktiveringsfunktion ger $z = w_1 x_1 + w_2 x_2 + b$, och sambandet $z = 0$ är en
+rät linje i $x_1 x_2$-planet. Noden kan alltså bara skilja punkter på olika sidor om en linje.
+\begin{parts}
+  \item Rita de fyra punkterna $(0, 0)$, $(0, 1)$, $(1, 0)$ och $(1, 1)$ i ett koordinatsystem, och
+    markera vilka som ska ge utsignalen $1$.
+  \item Går det att dra en enda rät linje som skiljer punkterna som ska ge $1$ från punkterna som
+    ska ge $0$? Vad säger det om varför nätverket behöver ett dolt lager?
 \end{parts}

@@ -1,7 +1,8 @@
 % Answers to Chapter 18. lectures/L18/appendix/c_solutions.md has solutions only for del 5; the
-% answers to del 1-4 were computed for the book, by hand and by running the programs the
-% exercises ask for (gcc, double precision), and printed with three decimals as the exercises
-% ask. The self-test is from lectures/L18/README.md.
+% answers to del 1-4 and 6-7 were computed for the book, by hand and by running the programs the
+% exercises ask for (gcc and g++, double precision), and printed with three decimals as the
+% exercises ask. The answers to 7.2 and 7.3 vary between runs, since the network starts from
+% random values. The self-test is from lectures/L18/README.md.
 
 \facitavsnitt{c18}{Kapitel 18}{Matematik i C}
 \begin{facit}
@@ -133,6 +134,64 @@ $x = 2$;\enspace $(1, 2, 5)$: $D = -16$, $x = -1 \pm 2j$
 \sv{c} Det relativa felet är i praktiken noll, av storleksordningen $10^{-14}\,\%$.
 \sv{d} Ingenting: $n = 10$ ger också $229{,}810\,\text{V}$. $u(t)^2$ är periodisk, och
 trapetsmetoden med jämnt fördelade punkter över en hel period är då exakt.
+
+\svar{6.1} \sv{a} $x = 0$: $y_p = 0$, $\delta = 2$, $\Delta e = 0{,}2$, $k = 0$,
+$m = 0{,}2$;\enspace $x = 1$: $y_p = 0{,}2$, $\delta = 3{,}8$, $\Delta e = 0{,}38$, $k = 0{,}38$,
+$m = 0{,}58$;\enspace $x = 2$: $y_p = 1{,}34$, $\delta = 4{,}66$, $\Delta e = 0{,}466$,
+$k = 1{,}312$, $m = 1{,}046$;\enspace $x = 3$: $y_p = 4{,}982$, $\delta = 3{,}018$,
+$\Delta e = 0{,}3018$, $k = 2{,}2174$, $m = 1{,}3478$;\enspace $x = 4$: $y_p = 10{,}2174$,
+$\delta = -0{,}2174$, $\Delta e = -0{,}0217$, $k = 2{,}1304$, $m = 1{,}3261$
+\sv{b} Ja. $k$ har redan passerat $2$ något, och $m$ har gått från $0$ till $1{,}33$.
+
+\svar{6.2} \sv{a} Se lösningsförslaget. \sv{b} $k \approx 2{,}1304$ och $m \approx 1{,}3261$,
+samma som i \uppref[18]{6.1}. \sv{c} Ja: $k = 2{,}000$ och $m = 2{,}000$, med ett fel omkring
+$3 \cdot 10^{-6}$.
+
+\svar{6.3} \sv{a} $k \approx 2{,}18$ och $m \approx 1{,}46$, alltså fortfarande långt ifrån. Det
+krävs omkring $840$ epoker.
+\sv{b} $k$ och $m$ växer utan gräns och byter tecken, efter $50$ epoker är de av storleksordningen
+$10^{38}$. Varje justering blir större än avvikelsen den ska rätta till, så prediktionen hamnar
+allt längre bort på andra sidan.
+\sv{c} $k$ och $m$ blir \code{nan}. Justeringen av $k$ är $\Delta e \cdot x$, och med $x$ upp till
+$40$ blir den $40$ gånger större, så lärhastigheten $0{,}1$ är alldeles för hög. Med till exempel
+$0{,}001$ hittar modellen linjen.
+
+\svar{6.4} \sv{a} $k = -3$, $m = 12$
+\sv{b} Till exempel lärhastigheten $0{,}25$ under $50$ epoker, som ger $k = -3{,}000$ och
+$m = 12{,}000$. Med $0{,}1$ krävs omkring $60$ epoker.
+\sv{c} $U(5) \approx -3{,}000\,\text{V}$, samma som i kapitel~8.
+\sv{d} $k \approx -2{,}01$ och $m \approx 11{,}21$. Ingen rät linje går genom samtliga punkter, så
+avvikelsen blir aldrig noll för alla träningsuppsättningar, och parametrarna slutar aldrig
+justeras.
+\sv{e} $k \approx -3{,}02$ och $m \approx 12{,}08$, nära den linje som passar punkterna bäst,
+$k = -3{,}03$ och $m = 12{,}08$. Modellen justeras efter varje punkt. Med en hög lärhastighet drar
+varje punkt kraftigt i $k$ och $m$, så resultatet beror mest på de sista punkterna i epoken. Med
+en låg lärhastighet flyttar varje punkt parametrarna bara lite, och modellen hamnar i ett
+medelvärde av samtliga punkter.
+
+\svar{6.5} \sv{a} Se lösningsförslaget.
+\sv{b} Med lärhastigheten $0{,}25$ är precisionen negativ de första epokerna, omkring $-2{,}4$
+efter en epok, och närmar sig sedan $1$: $0{,}97$ efter $10$ epoker och $0{,}997$ efter $20$.
+\sv{c} Efter $34$ epoker.
+
+\svar{7.1} \sv{a} $(1, 0)$: $z = 0{,}7$;\enspace $(1, 1)$: $z = -0{,}3$
+\sv{b} $0{,}7$ respektive $0$ \sv{c} $\tanh(0{,}7) \approx 0{,}6044$
+
+\svar{7.2} \sv{a} Se lösningsförslaget.
+\sv{b} Före träningen är prediktionerna slumpmässiga och följer inte mönstret. Efter träningen
+blir de $0{,}00$, $1{,}00$, $1{,}00$ och $0{,}00$, alltså exakt som i tabellen.
+
+\svar{7.3} \sv{a} Vikterna och biasvärdena får slumpmässiga startvärden, så träningen börjar på
+ett nytt ställe varje gång. Med $15$ noder krävs vanligtvis $150\,000$ till $300\,000$ epoker.
+\sv{b} Med $5$ noder lyckas träningen, ibland efter något nytt försök. Med $2$ noder krävs ofta
+flera försök, och ibland misslyckas samtliga. Med $1$ nod misslyckas träningen alltid: en nod ger
+bara en rät linje, se \uppref[18]{7.4}.
+
+\svar{7.4} \sv{a} $(0, 1)$ och $(1, 0)$ ska ge $1$. De ligger i två motsatta hörn av kvadraten,
+och $(0, 0)$ och $(1, 1)$ i de två andra.
+\sv{b} Nej. En linje som har båda punkterna som ska ge $1$ på samma sida får alltid med minst en av
+punkterna som ska ge $0$. Varje nod i det dolda lagret ger en egen linje, och utgångslagret
+kombinerar dem, så att nätverket kan skilja punkter som ingen enskild linje kan skilja.
 
 \svar[Testa dig själv]{T} \sv{1} $0$, eftersom båda operanderna är heltal och heltalsdivision
 avkortar decimaldelen. \code{1.0 / 2.0} ger $0{,}5$.
