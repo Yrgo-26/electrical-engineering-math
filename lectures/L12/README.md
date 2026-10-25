@@ -5,7 +5,6 @@
 * Derivatans definition.
 * Derivata för potens- och polynomfunktioner.
 * Derivatans nollställe, maximi- och minimipunkter.
-* Genomgång av övningsdugga 2 (del I).
 
 ---
 
@@ -26,7 +25,6 @@
 * Genomför lektionsuppgifterna i Del 1 och Del 2 i [bilaga B](./appendix/b_exercises.md):
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Lösningsförslag laddas upp efter lektionen.
-* Se [övningsduggan](../L11/appendix/practice_test/questions.md) samt [lösningsförslag](../L11/appendix/practice_test/solutions.md).
 
 ### Efter lektionen
 * Extrauppgifterna i Del 3 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
@@ -49,6 +47,6 @@
 
 ## Nästa lektion
 * Derivatan för trigonometriska funktioner, exponentialfunktioner samt logaritmfunktioner.
-* Genomgång av övningsdugga 2 (del II).
+* **Dugga 2** genomförs i samband med L13.
 
 ---

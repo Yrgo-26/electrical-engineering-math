@@ -22,7 +22,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 43 | 20/10 | L09 | Trigonometriska funktioner                    |
 | 43 | 22/10 | L10 | Exponentialfunktioner, mer logaritmer och decibel |
 | 44 | 27/10 | L11 | Repetition och övningsdugga                   |
-| 44 | 29/10 | L12 | Derivata (del I) – övningsdugga 2             |
+| 44 | 29/10 | L12 | Derivata (del I)                              |
 | 45 | 3/11  | L13 | Derivata (del II) – **Dugga 2**               |
 | 45 | 5/11  | L14 | Integraler                                    |
 | 46 | 10/11 | L15 | Komplexa tal (del I)                          |
@@ -48,7 +48,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 | 43 | 20/10 | L09 | Trigonometriska funktioner                    |
 | 43 | 22/10 | L10 | Exponentialfunktioner, mer logaritmer och decibel |
 | 44 | 27/10 | L11 | Repetition och övningsdugga                   |
-| 44 | 29/10 | L12 | Derivata (del I) – övningsdugga 2             |
+| 44 | 29/10 | L12 | Derivata (del I)                              |
 | 45 | 3/11  | L13 | Derivata (del II) – **Dugga 2**               |
 | 45 | 5/11  | L14 | Integraler                                    |
 | 46 | 10/11 | L15 | Komplexa tal (del I)                          |

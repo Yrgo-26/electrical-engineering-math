@@ -2,8 +2,7 @@
 
 ## Dagordning
 * Repetition av L07–L10: vektorer, funktioner, trigonometri, logaritmer och decibel.
-* Genomförande av övningsdugga 2.
-* Genomgång av övningsduggan i helklass.
+* Genomförande och genomgång av övningsdugga 2, uppgift för uppgift.
 
 ---
 
@@ -21,8 +20,9 @@
 
 ### Under lektionen
 * Närvara under genomgången.
-* Genomför [övningsdugga 2](./appendix/practice_test/questions.md) individuellt.
-* Gå igenom [lösningsförslaget](./appendix/practice_test/solutions.md) i helklass och ställ frågor om det som är oklart.
+* Genomför [övningsdugga 2](./appendix/practice_test/questions.md) uppgift för uppgift:
+    * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
+    * Ställ frågor om det som är oklart. Lösningsförslag finns [här](./appendix/practice_test/solutions.md).
 
 ---
 
