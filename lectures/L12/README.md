@@ -37,6 +37,7 @@
 * Härledning av derivatans definition.
 * Derivering av $f(x) = -x^2 + 4x + 1$ samt lokalisering av extrempunkter.
 * Derivering av $f(x) = x^3 - 3x^2 + 2$ samt lokalisering av extrempunkter.
+* Derivatans definition i C: lutningen mellan $x$ och $x + h$ för $f(x) = x^2$ när $h$ minskar, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
 
 ---
 

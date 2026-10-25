@@ -205,3 +205,22 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
   \item $e^{j\pi} + 1 = 0$
   \item Multiplikation av komplexa tal är enklast på rektangulär form.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 4}{Matematik i C}
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och
+körs i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
+på \textbf{C}. Vid felmeddelandet \code{undefined reference to 'sin'} eller liknande saknas
+matematikbiblioteket: lägg då till \code{-lm} under \textbf{Extra Compiler Flags} i inställningarna
+(kugghjulet). Funktionerna i \file{complex.h} beskrivs i \uppref[15]{4.1} i
+kapitel~15.
+
+\uppgift{4.1}{Rotation med $j$ i C}
+Uppgiften bygger vidare på \uppref{3.14}. Talet $z = 3 + j4$ är givet.
+\begin{parts}
+  \item Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
+  \item Skriv ett program som multiplicerar $z$ med $j$ fyra gånger i en loop, med
+    \code{z *= I;}. Skriv ut talet på rektangulär form och dess argument i grader före den första
+    multiplikationen och efter varje multiplikation.
+  \item Hur mycket ändras argumentet vid varje multiplikation? Varför blir $j^4 z = z$?
+\end{parts}

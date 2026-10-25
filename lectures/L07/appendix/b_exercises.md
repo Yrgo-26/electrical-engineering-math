@@ -306,3 +306,23 @@ Varje rad innehåller ett vanligt vektorfel. Förklara felet och ange det korrek
 **e)** $|-2\mathbf{u}| = -2|\mathbf{u}|$
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+
+I uppgiften används **funktioner** i C. En funktion i C fungerar som en matematisk funktion: den tar emot ett eller flera värden, så kallade **parametrar**, och **returnerar** ett resultat med `return`. Funktionen `double magnitude(double x, double y)` tar till exempel emot två flyttal och returnerar ett flyttal. Den skrivs ovanför `main()` och anropas som `magnitude(3.0, 4.0)`, precis som $f(3)$ skrivs i matematiken. Funktionerna `sqrt(x)` och `atan2(y, x)` samt konstanten `M_PI` finns i `math.h`.
+
+### 4.1 – Vektorer i C
+Vektorerna $\mathbf{u} = (3;\ 4)$ och $\mathbf{v} = (-4;\ 3)$ är givna.
+
+**a)** Beräkna $|\mathbf{u}|$, $|\mathbf{v}|$, vinklarna $v_u$ och $v_v$ mot positiv x-axel, summan $\mathbf{u} + \mathbf{v}$ samt vinkeln $\alpha$ mellan vektorerna. Räkna för hand.
+
+**b)** Skriv ett program med två funktioner:
+* `double magnitude(double x, double y)`, som returnerar absolutbeloppet $\sqrt{x^2 + y^2}$.
+* `double angle_deg(double x, double y)`, som returnerar vinkeln mot positiv x-axel i grader. Använd `atan2(y, x)`, som ger vinkeln i radianer, och omvandla till grader.
+
+Låt programmet skriva ut absolutbelopp och vinkel för $\mathbf{u}$, $\mathbf{v}$ och $\mathbf{u} + \mathbf{v}$, samt vinkeln mellan $\mathbf{u}$ och $\mathbf{v}$.
+
+**c)** Jämför med handberäkningen. `atan2()` behöver ingen kvadrantkorrigering. Varför ger `atan(3.0 / -4.0)` fel vinkel för $\mathbf{v}$?
+
+---

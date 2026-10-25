@@ -306,3 +306,17 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
 **e)** Spänningen $u(t) = 3 \cdot 2^t$ (i V) har startvärdet $3\thinspace\text{V}$.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Funktioner i C beskrivs i L07, uppgift 4.1.
+
+### 4.1 – Funktioner i C
+Temperatursensorn i teorins typexempel ger temperaturen $f(x) = 100x - 50$ °C vid inspänningen $x$ V, där $0 \leq x \leq 5$. En matematisk funktion och en funktion i C bygger på samma idé: ett värde in, ett värde ut.
+
+**a)** Beräkna $f(0)$, $f(0{,}8)$ och $f(5)$ för hand.
+
+**b)** Skriv en funktion `double temperature(double voltage)` som returnerar $f(x)$. Skriv sedan en värdetabell med $x = 0;\ 0{,}5;\ 1{,}0;\ \ldots;\ 5{,}0$ V och temperaturen på varje rad. Ledning: låt en heltalsvariabel `i` gå från $0$ till $10$ i en loop och beräkna $x = 0{,}5 \cdot i$.
+
+**c)** Lös ut $x$ ur $f(x) = 100x - 50$ och skriv en funktion `double voltage(double temperature)` som räknar baklänges, från temperatur till spänning. Vilken spänning ger $30$ °C? Kontrollera även att `voltage(temperature(0.8))` ger $0{,}8$.
+
+---

@@ -248,3 +248,28 @@ Each line contains a common error. Explain the error and give the correct answer
   \task $\dfrac{d}{dx}4\cos(x) = 4\sin(x)$
   \task $\dfrac{d}{dx}2^x = x \cdot 2^{x-1}$
 \end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}. The error message \code{undefined reference to 'sin'} or similar
+means that the maths library is missing; add \code{-lm} under \textbf{Extra Compiler Flags} in
+the settings (the gear icon).
+
+\uppgift{4.1}{Why $e$? In C}
+For $f(x) = a^x$, $f'(x) = a^x \ln a$, so the ratio $\dfrac{f'(x)}{f(x)}$ equals $\ln a$. Here it
+is checked numerically.
+\begin{parts}
+  \item Write a program that, for the bases $a = 2$, $2.5$, $e$, $3$ and $10$, computes the
+    derivative of $f(x) = a^x$ at $x = 1$ numerically with
+    \[
+      f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
+    \]
+    and prints $a$, the ratio $\dfrac{f'(x)}{f(x)}$ and $\ln a$ on each line. Use
+    \code{pow(a, x)} for $a^x$, \code{log(a)} for $\ln a$ and the constant \code{M_E} for $e$, all
+    from \file{math.h}. Put the bases in an array and go through it with a loop.
+  \item Compare the ratio with $\ln a$. For which base is the ratio $1$, and what does that mean
+    for the derivative of $e^x$?
+  \item Change $x$ to $0$ and then to $2$. Does the ratio change? Explain why.
+\end{parts}

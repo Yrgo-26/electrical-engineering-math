@@ -202,3 +202,41 @@ Decide whether each statement is true or false, and justify your answer briefly.
   \item The calculator's $\arctan$ always gives the right phase angle directly.
   \item Adding complex numbers is easiest in polar form.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}. The error message \code{undefined reference to 'sin'} or similar
+means that the maths library is missing; add \code{-lm} under \textbf{Extra Compiler Flags} in
+the settings (the gear icon).
+
+In C, complex numbers are in the standard library \file{complex.h}. A complex number has the type
+\code{double complex}, and the imaginary unit is written \code{I}, so the number $3 + j4$ is
+written \code{3.0 + 4.0 * I}. The following functions are used:
+
+\begin{booktable}{@{}>{\raggedright\arraybackslash}p{6em}L@{}}
+  \thead{Function} & \thead{Gives} \\
+  \midrule
+  \code{creal(z)} & The real part of $z$. \\
+  \code{cimag(z)} & The imaginary part of $z$. \\
+  \code{cabs(z)} & The modulus $\abs{z}$. \\
+  \code{carg(z)} & The argument in radians, between $-\pi$ and $\pi$. \\
+  \code{cexp(z)} & $e^z$. The number $r\,\angle\,\theta$ is therefore written
+    \code{r * cexp(I * theta)}, with $\theta$ in radians. \\
+\end{booktable}
+
+The constant \code{M_PI} for $\pi$ is in \file{math.h}.
+
+\uppgift{4.1}{Polar form in C}
+The numbers $z_1 = 3 + j4$ and $z_2 = -2 - j3$ from \secref{c15:sec:typexempel} and
+$z_3 = 10\,\angle\,45^{\circ}$ are given.
+\begin{parts}
+  \item Give $z_1$ and $z_2$ in polar form, with the argument in degrees, and $z_3$ in rectangular
+    form. Calculate by hand.
+  \item Write a program that prints all the numbers in both rectangular and polar form, with the
+    argument in degrees. Write $z_3$ as \code{10.0 * cexp(I * M_PI / 4.0)}. Hint: write a function
+    \code{void print_polar(double complex z)} that does the printing, and call it once per number.
+  \item Also compute \code{atan(cimag(z) / creal(z))} for $z_2$ and convert the answer to degrees.
+    Why is it wrong, and why is no quadrant correction needed with \code{carg()}?
+\end{parts}

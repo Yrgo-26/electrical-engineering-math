@@ -698,3 +698,38 @@ t \approx 1{,}67 + 20n\,\text{ms} \qquad \text{och} \qquad t \approx 8{,}33 + 20
 **f)** **Falskt.** Amplituden mäts från noll till toppvärdet. Avståndet mellan lägsta och högsta värde är topp-till-topp-värdet, alltså $2|U|$.
 
 ---
+
+## Del 4 – Matematik i C
+
+### 4.1 – Sinus i C
+
+**a)** $\sin 30^{\circ} = 0{,}5$ och $30^{\circ} = 30 \cdot \dfrac{\pi}{180} = \dfrac{\pi}{6} \approx 0{,}5236$ rad.
+
+**b)** `sin(30.0)` ger $-0{,}988$ och `sin(deg_to_rad(30.0))` ger $0{,}5$. `sin()` tolkar alltid vinkeln som radianer, så `sin(30.0)` är sinus av $30$ rad, ungefär $1719°$, och inte av $30°$.
+
+**c)** Programmet ska skriva ut ungefär följande:
+
+```text
+t (ms)   u (V)
+ 0       5.000
+ 2       9.135
+ 4       9.781
+ 6       6.691
+ 8       1.045
+10      -5.000
+12      -9.135
+14      -9.781
+16      -6.691
+18      -1.045
+20       5.000
+```
+
+**d)** $\omega = 100\pi$ ger $f = 50$ Hz och $T = 20$ ms, och tabellen syns upprepa sig: $u(20\,\text{ms}) = u(0) = 5$ V, och andra halvperioden är första halvperioden med ombytt tecken. Det största värdet i tabellen är $9{,}781$ V, eftersom toppen inte infaller vid någon av tabellens tidpunkter. $u(t) = 10$ V när
+
+```math
+100\pi t + \frac{\pi}{6} = \frac{\pi}{2} \quad \Rightarrow \quad t = \frac{1}{300}\,\text{s} \approx 3{,}33\,\text{ms},
+```
+
+alltså mellan raderna för $2$ och $4$ ms.
+
+---

@@ -323,3 +323,23 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 **e)** $\dfrac{d}{dx}2^x = x \cdot 2^{x-1}$
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+
+### 4.1 – Varför just $e$? I C
+För $f(x) = a^x$ gäller $f'(x) = a^x \ln a$, så kvoten $\dfrac{f'(x)}{f(x)}$ är lika med $\ln a$. Här kontrolleras det numeriskt.
+
+**a)** Skriv ett program som för baserna $a = 2$, $2{,}5$, $e$, $3$ och $10$ beräknar derivatan av $f(x) = a^x$ i $x = 1$ numeriskt med
+
+```math
+f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
+```
+
+och skriver ut $a$, kvoten $\dfrac{f'(x)}{f(x)}$ och $\ln a$ på varje rad. Använd `pow(a, x)` för $a^x$, `log(a)` för $\ln a$ och konstanten `M_E` för $e$, samtliga från `math.h`. Lägg baserna i en array och gå igenom den med en loop.
+
+**b)** Jämför kvoten med $\ln a$. För vilken bas blir kvoten $1$, och vad innebär det för derivatan av $e^x$?
+
+**c)** Ändra $x$ till $0$ och sedan till $2$. Ändras kvoten? Förklara varför.
+
+---

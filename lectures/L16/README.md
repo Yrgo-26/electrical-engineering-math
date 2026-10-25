@@ -28,6 +28,7 @@
 
 ### Efter lektionen
 * Extrauppgifterna i Del 3 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
+* **Inför laborationen i L18:** installera **WSL** med `gcc` och `make` och klona kursens repository, enligt [`L18/code/README.md`](../L18/code/README.md#kompilering-på-egen-dator-rekommenderat) och avsnittet *Arbeta i WSL* i [L18:s bilaga B](../L18/appendix/b_exercises.md#arbeta-i-wsl-rekommenderat). Gör det i god tid: uppstår problem, till exempel saknade administratörsrättigheter eller avstängd virtualisering, hinner de lösas före laborationen.
 
 ---
 
@@ -35,6 +36,7 @@
 * Vektorer $a = (3, 4)$ samt $b = (-2, 4)$ som komplexa tal.
 * Omskrivning av $u(t) = 3e^{j(100\pi t - \frac{\pi}{4})}\thinspace\text{V}$ till rektangulär form.
 * Omskrivning av fasor $I = 5 - j4\thinspace\text{mA}$ till komplex ström $i(t)$ på Eulers form.
+* Rotation med $j$ i C, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
 
 ---
 

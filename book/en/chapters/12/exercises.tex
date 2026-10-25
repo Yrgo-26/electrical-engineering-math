@@ -222,3 +222,26 @@ Each line contains a common differentiation error. Explain the error and give th
   \task* If $f'(x_0) = 0$, then $x_0$ is always a maximum point.
   \task* $f''(x)$ is found by squaring $f'(x)$.
 \end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}.
+
+\uppgift{4.1}{The definition of the derivative in C}
+The derivative $f'(x)$ is the limit of the slope between the points $x$ and $x + h$ as $h$ tends
+to zero:
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
+\]
+Let $f(x) = x^2$.
+\begin{parts}
+  \item Find $f'(3)$ with the rules of differentiation.
+  \item Write a program that computes the slope $\dfrac{f(3 + h) - f(3)}{h}$ for
+    $h = 1;\ 0.1;\ 0.01;\ \ldots;\ 10^{-6}$ and prints $h$ and the slope on each line. Write $f(x)$
+    as a function of its own, \code{double f(double x)}, and let $h$ start at \code{1.0} and be
+    divided by \code{10.0} in each pass of a loop.
+  \item How does the slope change as $h$ decreases? Show algebraically that the slope is exactly
+    $6 + h$.
+\end{parts}

@@ -28,6 +28,11 @@
 
 ---
 
+## Demonstration
+* Sinus i C: grader och radianer samt en värdetabell för en växelspänning, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
+---
+
 ## Utvärdering
 * Omvandla $150°$ till radianer och $\dfrac{5\pi}{6}$ till grader.
 * En växelspänning har amplituden $5\thinspace\text{V}$, frekvensen $50\thinspace\text{Hz}$ och fasen $\pi/4\thinspace\text{rad}$. Skriv spänningens ekvation $u(t)$.

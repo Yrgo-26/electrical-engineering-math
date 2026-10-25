@@ -300,3 +300,21 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 **f)** $\displaystyle\int \frac{1}{x}\thinspace dx = \ln x + C$ gäller för alla $x \neq 0$.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+
+### 4.1 – Integralen som en summa i C
+Den bestämda integralen är arean under kurvan, och den kan approximeras med en summa av $n$ smala rektanglar. Med bredden $\Delta x = \dfrac{b - a}{n}$ och höjden tagen i varje rektangels vänstra kant blir
+
+```math
+\int_a^b f(x)\,dx \approx \sum_{k=0}^{n-1} f(a + k\,\Delta x) \cdot \Delta x
+```
+
+**a)** Beräkna $\displaystyle\int_0^{\pi} \sin(x)\,dx$ med en primitiv funktion.
+
+**b)** Skriv ett program som beräknar summan för $f(x) = \sin(x)$ på intervallet $[0, \pi]$ med $n = 4$, $10$, $100$ och $1000$ rektanglar, och skriver ut $n$, summan och felet mot svaret i a). Använd `sin()`, `fabs()` och konstanten `M_PI` från `math.h`.
+
+**c)** Hur förändras felet när $n$ tiodubblas?
+
+---

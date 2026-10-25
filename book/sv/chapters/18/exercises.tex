@@ -33,7 +33,7 @@ Samtliga uppgifter samlas i \textbf{ett och samma OnlineGDB-projekt}, med en fil
 assignment1_1.c   assignment2_1.c   assignment3_1.c
 assignment1_2.c   assignment2_2.c   assignment3_2.c
 assignment1_3.c   assignment2_3.c   assignment3_3.c
-                  assignment2_4.c   main.c
+main.c
 \end{console}
 Nya filer skapas med knappen \textbf{New file} i verktygsfältet, eller med \code{Ctrl + M}.
 
@@ -206,13 +206,6 @@ Låt $f(x) = x^2$.
   \item Hur förändras felet när $n$ tiodubblas?
 \end{parts}
 
-\uppgift{2.4}{Laddning genom en ledare}
-Strömmen ges av $i(t) = 3t + 2\,\text{A}$.
-\begin{parts}
-  \item Beräkna laddningen $q = \int_0^4 i(t)\,dt$ analytiskt.
-  \item Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
-  \item Varför blir det numeriska resultatet exakt i detta fall, men inte i \uppref{2.3}?
-\end{parts}
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 3}{Komplexa tal och fasorer}
@@ -390,6 +383,14 @@ För en sinusspänning $u(t) = \abs{U}\sin(\omega t)$ gäller
     delintervall över en period.
   \item Jämför med det teoretiska värdet och skriv ut det relativa felet.
   \item Vad händer med felet om $n$ minskas till $10$? Förklara varför.
+\end{parts}
+
+\uppgift{5.8}{Laddning genom en ledare}
+Strömmen ges av $i(t) = 3t + 2\,\text{A}$.
+\begin{parts}
+  \item Beräkna laddningen $q = \int_0^4 i(t)\,dt$ analytiskt.
+  \item Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
+  \item Varför blir det numeriska resultatet exakt i detta fall, men inte i \uppref{2.3}?
 \end{parts}
 
 % ------------------------------------------------------------------------------------------

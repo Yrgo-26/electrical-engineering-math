@@ -79,6 +79,14 @@ F(b) - F(a)$.
 \sv{f} The absolute value is missing; $\ln x$ is undefined for $x < 0$. The correct form is
 $\ln\abs{x} + C$.
 
+\svar{4.1} \sv{a} $\bigl[-\cos x\bigr]_0^{\pi} = 2$
+\sv{b} $n = 4$: $1.896$, error $0.10$;\enspace $n = 10$: $1.984$, error $0.017$;\enspace
+$n = 100$: $1.99984$, error $1.6 \cdot 10^{-4}$;\enspace $n = 1000$: $1.999998$, error
+$1.6 \cdot 10^{-6}$
+\sv{c} The error becomes about $100$ times smaller. That is unusually good for rectangles: since
+$\sin 0 = \sin \pi = 0$ and the curve is symmetric, the errors on the rising and the falling side
+almost cancel. For most functions the error only becomes about $10$ times smaller.
+
 \svar[Test yourself]{T} \sv{1} $10$ \sv{2} $F(x) = 2x^2 + e^x + C$
 
 \end{facit}

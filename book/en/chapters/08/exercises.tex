@@ -257,3 +257,26 @@ Decide whether the statement is true or false, and justify your answer briefly.
     function of $U$.
   \item The voltage $u(t) = 3 \cdot 2^t$ (in V) has the initial value $3\,\text{V}$.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}.
+Functions in C are described in \uppref[7]{4.1} of Chapter~7.
+
+\uppgift{4.1}{Functions in C}
+The temperature sensor in \secref{c8:sec:typexempel} gives the temperature $f(x) = 100x - 50$
+$^{\circ}$C at the input voltage $x$ V, where $0 \leq x \leq 5$. A mathematical function and a
+function in C rest on the same idea: one value in, one value out.
+\begin{parts}
+  \item Compute $f(0)$, $f(0.8)$ and $f(5)$ by hand.
+  \item Write a function \code{double temperature(double voltage)} that returns $f(x)$. Then print
+    a table of values with $x = 0;\ 0.5;\ 1.0;\ \ldots;\ 5.0$ V and the temperature on each line.
+    Hint: let an integer variable \code{i} go from $0$ to $10$ in a loop and compute
+    $x = 0.5 \cdot i$.
+  \item Solve $f(x) = 100x - 50$ for $x$ and write a function
+    \code{double voltage(double temperature)} that works backwards, from temperature to voltage.
+    Which voltage gives $30\,^{\circ}$C? Also check that \code{voltage(temperature(0.8))} gives
+    $0.8$.
+\end{parts}

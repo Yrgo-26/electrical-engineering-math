@@ -68,6 +68,14 @@ resistiv. \sv{b} Båda är $5\,\Omega$. \sv{c} $25\,\Omega^2$ \sv{d} $3{,}125\,\
 och III läggs $180^{\circ}$ till.
 \sv{f} Falskt: addition är enklast på rektangulär form.
 
+\svar{4.1} \sv{a} $z_1 = 5\,\angle\,53{,}13^{\circ}$,
+$z_2 \approx 3{,}606\,\angle\,{-123{,}69^{\circ}}$ (eller $236{,}31^{\circ}$),
+$z_3 \approx 7{,}071 + j7{,}071$
+\sv{b} Samma värden. \code{carg()} ger argumentet mellan $-180^{\circ}$ och $180^{\circ}$, så $z_2$
+får $-123{,}69^{\circ}$.
+\sv{c} $56{,}31^{\circ}$, vinkeln för $2 + j3$. Kvoten $\frac{-3}{-2}$ har tappat tecknen och därmed
+kvadranten. \code{carg()} får real- och imaginärdelen var för sig och ser deras tecken.
+
 \svar[Testa dig själv]{T} \sv{1} $\abs{z} = 5$ och $\delta \approx 0{,}927\,\text{rad}$, alltså
 $z = 5\angle 0{,}927$. \sv{2} $5 + j$
 

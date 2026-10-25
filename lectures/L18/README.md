@@ -89,7 +89,7 @@ Räkna med cirka fem minuter per steg.
 ### 5. Numerisk integrering
 * **Visas:** Trapetsmetoden på $i(t) = 2t + 4$ över $0 \leq t \leq 2$, som ger exakt $12$ C. Därefter samma metod på $f(x) = x^2$ över $0 \leq x \leq 3$, där resultatet **inte** blir exakt, och där felet minskar när $n$ ökas.
 * **Frågeställning:** Varför blir resultatet exakt för $i(t)$ men inte för $x^2$?
-* **Koppling:** L14 samt bilaga A §7. Förbereder uppgift 2.3–2.4.
+* **Koppling:** L14 samt bilaga A §7. Förbereder uppgift 2.3 och 5.8.
 
 ### 6. Komplexa tal och impedans
 * **Visas:** Impedansen $Z = R + j\omega L$ för $R = 100\ \Omega$ och $L = 50$ mH vid $f = 50$ Hz, samt $|Z|$ och $\arg(Z)$ med `cabs()` och `carg()`, med argumentet omvandlat till grader.

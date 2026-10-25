@@ -276,3 +276,21 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 **f)** $\ln 0 = 1$
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktioner i C beskrivs i L07, uppgift 4.1.
+
+### 4.1 – Decibel i C
+Spänningsförstärkningen i decibel är $G_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)$, och omvänt är $\frac{U_{\text{ut}}}{U_{\text{in}}} = 10^{G_{\text{dB}}/20}$.
+
+**a)** Beräkna förstärkningen i dB för kvoterna $\frac{U_{\text{ut}}}{U_{\text{in}}} = 1$, $10$ och $100$, samt kvoten för $-3$ dB. Räkna för hand.
+
+**b)** Skriv två funktioner:
+* `double gain_db(double ratio)`, som returnerar $20\log_{10}(\text{ratio})$. Använd `log10()`.
+* `double ratio_from_db(double db)`, som returnerar $10^{\text{db}/20}$. Använd `pow()`.
+
+Skriv ut en tabell med kvoterna $0{,}5$, $1$, $2$, $10$, $100$ och $1000$, deras förstärkning i dB, samt kvoten som `ratio_from_db()` ger tillbaka. Lägg kvoterna i en array och gå igenom den med en loop.
+
+**c)** Hur många dB läggs till när kvoten fördubblas, och när den tiodubblas? Vad händer när kvoten är mindre än $1$?
+
+---

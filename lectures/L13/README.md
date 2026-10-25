@@ -32,6 +32,11 @@
 
 ---
 
+## Demonstration
+* Varför just $e$? I C: kvoten $f'(x)/f(x)$ för $f(x) = a^x$ med olika baser, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
+---
+
 ## Utvärdering
 * Derivera $f(x) = e^{2x} + \ln(3x)$.
 * Beräkna $f'(\pi/2)$ för $f(x) = \sin(x)$.

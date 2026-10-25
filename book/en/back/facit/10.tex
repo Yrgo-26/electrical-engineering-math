@@ -65,6 +65,12 @@ simplified.
 \sv{e} A power of ten and the base-10 logarithm cancel each other: $10^{\log x} = x$.
 \sv{f} $\ln 0$ is undefined; it is $\ln 1$ that is $0$.
 
+\svar{4.1} \sv{a} $0$, $20$ and $40$ dB; $10^{-3/20} \approx 0.708$
+\sv{b} $0.5$: $-6.02$ dB;\enspace $1$: $0$;\enspace $2$: $6.02$;\enspace $10$: $20$;\enspace
+$100$: $40$;\enspace $1000$: $60$ dB. \code{ratio_from_db()} gives the same ratios back.
+\sv{c} Doubling adds $6.02$ dB and multiplying by ten adds $20$ dB, wherever you start. A ratio
+less than $1$ gives negative dB, that is attenuation.
+
 \svar[Test yourself]{T} \sv{1} $x = 3$ \sv{2} $G_{\text{lin}} = 100$
 
 \end{facit}

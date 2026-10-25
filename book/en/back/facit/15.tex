@@ -67,6 +67,15 @@ resistive. \sv{b} Both are $5\,\Omega$. \sv{c} $25\,\Omega^2$ \sv{d} $3.125\,\Om
 and III, $180^{\circ}$ is added.
 \sv{f} False: addition is easiest in rectangular form.
 
+\svar{4.1} \sv{a} $z_1 = 5\,\angle\,53.13^{\circ}$,
+$z_2 \approx 3.606\,\angle\,{-123.69^{\circ}}$ (or $236.31^{\circ}$),
+$z_3 \approx 7.071 + j7.071$
+\sv{b} The same values. \code{carg()} gives the argument between $-180^{\circ}$ and $180^{\circ}$,
+so $z_2$ gets $-123.69^{\circ}$.
+\sv{c} $56.31^{\circ}$, the angle of $2 + j3$. The ratio $\frac{-3}{-2}$ has lost the signs and
+with them the quadrant. \code{carg()} gets the real and imaginary parts separately and sees their
+signs.
+
 \svar[Test yourself]{T} \sv{1} $\abs{z} = 5$ and $\delta \approx 0.927\,\text{rad}$, so
 $z = 5\angle 0.927$. \sv{2} $5 + j$
 

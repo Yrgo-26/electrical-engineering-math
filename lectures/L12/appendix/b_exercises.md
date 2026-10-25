@@ -289,3 +289,23 @@ Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det k
 **f)** $f''(x)$ fås genom att kvadrera $f'(x)$.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
+
+### 4.1 – Derivatans definition i C
+Derivatan $f'(x)$ är gränsvärdet av lutningen mellan punkterna $x$ och $x + h$ när $h$ går mot noll:
+
+```math
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+```
+
+Låt $f(x) = x^2$.
+
+**a)** Beräkna $f'(3)$ med deriveringsreglerna.
+
+**b)** Skriv ett program som beräknar lutningen $\dfrac{f(3 + h) - f(3)}{h}$ för $h = 1;\ 0{,}1;\ 0{,}01;\ \ldots;\ 10^{-6}$ och skriver ut $h$ och lutningen på varje rad. Skriv $f(x)$ som en egen funktion, `double f(double x)`, och låt $h$ börja på `1.0` och delas med `10.0` i varje varv av en loop.
+
+**c)** Hur förändras lutningen när $h$ minskar? Visa algebraiskt att lutningen är exakt $6 + h$.
+
+---

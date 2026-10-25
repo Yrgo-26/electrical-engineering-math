@@ -235,3 +235,26 @@ Decide whether the statement is true or false, and justify your answer briefly.
   \item $180^{\circ}$ corresponds to $\pi$ radians.
   \item The amplitude is the distance between the lowest and the highest value of the curve.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}.
+The error message \code{undefined reference to 'sqrt'} or similar means that the maths library is
+missing; add \code{-lm} under \textbf{Extra Compiler Flags} in the settings (the gear icon).
+Functions in C are described in \uppref[7]{4.1} of Chapter~7.
+
+\uppgift{4.1}{Sine in C}
+The functions in \file{math.h} work with angles in \textbf{radians}.
+\begin{parts}
+  \item Give $\sin 30^{\circ}$ and convert $30^{\circ}$ to radians. Calculate by hand.
+  \item Write a function \code{double deg_to_rad(double degrees)} that converts degrees to
+    radians. Print both \code{sin(30.0)} and \code{sin(deg_to_rad(30.0))}. Why do they differ?
+  \item An AC voltage is given by $u(t) = 10\sin\!\left(100\pi t + \frac{\pi}{6}\right)$ V. Write a
+    function \code{double voltage(double t)} that returns $u(t)$, and a table of values with
+    $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms and the voltage on each line. Hint: let an integer variable
+    \code{i} go from $0$ to $10$ and compute $t = 0.002 \cdot i$ s.
+  \item What is the period, and can it be seen in the table? What is the largest value in the
+    table, and why is it smaller than the amplitude $10$ V? At what time is $u(t) = 10$ V?
+\end{parts}

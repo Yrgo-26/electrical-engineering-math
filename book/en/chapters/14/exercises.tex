@@ -238,3 +238,27 @@ Each line contains a common error. Explain the error and give the correct answer
   \task* A definite integral needs a constant of integration.
   \task* $\displaystyle\int \frac{1}{x}\,dx = \ln x + C$ holds for all $x \neq 0$.
 \end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}. The error message \code{undefined reference to 'sin'} or similar
+means that the maths library is missing; add \code{-lm} under \textbf{Extra Compiler Flags} in
+the settings (the gear icon).
+
+\uppgift{4.1}{The integral as a sum in C}
+The definite integral is the area under the curve, and it can be approximated by a sum of $n$
+narrow rectangles. With the width $\Delta x = \dfrac{b - a}{n}$ and the height taken at the left
+edge of each rectangle,
+\[
+  \int_a^b f(x)\,dx \approx \sum_{k=0}^{n-1} f(a + k\,\Delta x) \cdot \Delta x.
+\]
+\begin{parts}
+  \item Evaluate $\displaystyle\int_0^{\pi} \sin(x)\,dx$ with an antiderivative.
+  \item Write a program that computes the sum for $f(x) = \sin(x)$ on the interval $[0, \pi]$ with
+    $n = 4$, $10$, $100$ and $1000$ rectangles, and prints $n$, the sum and the error compared with
+    the answer to a). Use \code{sin()}, \code{fabs()} and the constant \code{M_PI} from
+    \file{math.h}.
+  \item How does the error change when $n$ is multiplied by ten?
+\end{parts}

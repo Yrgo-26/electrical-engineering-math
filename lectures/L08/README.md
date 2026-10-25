@@ -31,6 +31,11 @@
 
 ---
 
+## Demonstration
+* Funktioner i C: temperatursensorn som en C-funktion med värdetabell och invers, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
+---
+
 ## Utvärdering
 * Ge ett exempel på en funktion med begränsad definitionsmängd och förklara varför.
 * Beräkna $f(2)$ och $f(-1)$ för $f(x) = 2x^2 - x + 3$.

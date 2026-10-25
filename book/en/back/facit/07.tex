@@ -82,6 +82,15 @@ lies across the resistor.
 \sv{d} The vector lies in quadrant II, so $180^{\circ}$ must be added: $126.9^{\circ}$.
 \sv{e} A length is never negative: $\abs{-2\mathbf{u}} = 2\abs{\mathbf{u}}$.
 
+\svar{4.1} \sv{a} $\abs{\mathbf{u}} = \abs{\mathbf{v}} = 5$, $v_u \approx 53.13^{\circ}$,
+$v_v \approx 143.13^{\circ}$ (quadrant II), $\mathbf{u} + \mathbf{v} = (-1, 7)$ with magnitude
+$\sqrt{50} \approx 7.071$ and angle $98.13^{\circ}$, $\alpha = 90^{\circ}$: the vectors are
+perpendicular.
+\sv{b} The same values as in a).
+\sv{c} \code{atan(3.0 / -4.0)} gives $-36.87^{\circ}$, the angle of $(4, -3)$ in quadrant IV: the
+ratio does not show which component was negative. \code{atan2(y, x)} gets the components
+separately and sees their signs.
+
 \svar[Test yourself]{T} \sv{1} $\abs{\mathbf{u}} = 5$; the angle is about $-53.1^{\circ}$ (or
 $306.9^{\circ}$), quadrant IV.
 \sv{2} $\mathbf{w} = (5, -1)$

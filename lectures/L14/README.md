@@ -43,6 +43,8 @@ q(t) = \int_0^t i(t)\,dt,
 
 där $q(0) = 0$. Även bestämning av den primitiva funktionen $I(t)$ till $i(t)$ via givet startvillkor.
 
+* Integralen som en summa i C: rektangelsummor under $\sin(x)$ på $[0, \pi]$, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
 ---
 
 ## Utvärdering

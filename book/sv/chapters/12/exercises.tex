@@ -223,3 +223,25 @@ Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det k
   \task* Om $f'(x_0) = 0$ är $x_0$ alltid en maximipunkt.
   \task* $f''(x)$ fås genom att kvadrera $f'(x)$.
 \end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 4}{Matematik i C}
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och
+körs i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
+på \textbf{C}.
+
+\uppgift{4.1}{Derivatans definition i C}
+Derivatan $f'(x)$ är gränsvärdet av lutningen mellan punkterna $x$ och $x + h$ när $h$ går mot
+noll:
+\[
+  f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}.
+\]
+Låt $f(x) = x^2$.
+\begin{parts}
+  \item Beräkna $f'(3)$ med deriveringsreglerna.
+  \item Skriv ett program som beräknar lutningen $\dfrac{f(3 + h) - f(3)}{h}$ för
+    $h = 1;\ 0{,}1;\ 0{,}01;\ \ldots;\ 10^{-6}$ och skriver ut $h$ och lutningen på varje rad. Skriv
+    $f(x)$ som en egen funktion, \code{double f(double x)}, och låt $h$ börja på \code{1.0} och
+    delas med \code{10.0} i varje varv av en loop.
+  \item Hur förändras lutningen när $h$ minskar? Visa algebraiskt att lutningen är exakt $6 + h$.
+\end{parts}

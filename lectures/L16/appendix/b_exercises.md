@@ -273,3 +273,17 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 **f)** Multiplikation av komplexa tal är enklast på rektangulär form.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktionerna i `complex.h` beskrivs i L15, uppgift 4.1.
+
+### 4.1 – Rotation med $j$ i C
+Uppgiften bygger vidare på uppgift 3.14. Talet $z = 3 + j4$ är givet.
+
+**a)** Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
+
+**b)** Skriv ett program som multiplicerar $z$ med $j$ fyra gånger i en loop, med `z *= I;`. Skriv ut talet på rektangulär form och dess argument i grader före den första multiplikationen och efter varje multiplikation.
+
+**c)** Hur mycket ändras argumentet vid varje multiplikation? Varför blir $j^4 z = z$?
+
+---

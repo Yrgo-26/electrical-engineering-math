@@ -25,7 +25,7 @@ Samtliga uppgifter samlas i **ett och samma OnlineGDB-projekt**, med en fil per 
 assignment1_1.c   assignment2_1.c   assignment3_1.c
 assignment1_2.c   assignment2_2.c   assignment3_2.c
 assignment1_3.c   assignment2_3.c   assignment3_3.c
-                  assignment2_4.c   main.c
+main.c
 ```
 
 Nya filer skapas med knappen **New file** i verktygsfältet, eller med `Ctrl + M`.
@@ -180,17 +180,6 @@ Låt $f(x) = x^2$.
 **c)** Beräkna integralen med $n = 10$, $n = 100$ och $n = 1000$. Skriv ut det absoluta felet för varje $n$.
 
 **d)** Hur förändras felet när $n$ tiodubblas?
-
----
-
-### 2.4 – Laddning genom en ledare
-Strömmen ges av $i(t) = 3t + 2$ A.
-
-**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\thinspace dt$ analytiskt.
-
-**b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
-
-**c)** Varför blir det numeriska resultatet exakt i detta fall, men inte i uppgift 2.3?
 
 ---
 
@@ -391,6 +380,17 @@ U_{\text{RMS}} = \sqrt{\frac{1}{T}\int_0^T u(t)^2\,dt}.
 **c)** Jämför med det teoretiska värdet och skriv ut det relativa felet.
 
 **d)** Vad händer med felet om $n$ minskas till $10$? Förklara varför.
+
+---
+
+### 5.8 – Laddning genom en ledare
+Strömmen ges av $i(t) = 3t + 2$ A.
+
+**a)** Beräkna laddningen $q = \displaystyle\int_0^4 i(t)\thinspace dt$ analytiskt.
+
+**b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
+
+**c)** Varför blir det numeriska resultatet exakt i detta fall, men inte i uppgift 2.3?
 
 ---
 

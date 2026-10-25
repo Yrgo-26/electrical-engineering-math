@@ -93,6 +93,13 @@ resistive.
 \sv{e} True: it is Euler's identity, $e^{j\pi} = -1$.
 \sv{f} False: multiplication is easiest in polar form or Euler form.
 
+\svar{4.1} \sv{a} $jz = -4 + j3$, $j^2 z = -3 - j4$, $j^3 z = 4 - j3$, $j^4 z = 3 + j4$
+\sv{b} The argument is $53.13^{\circ}$, $143.13^{\circ}$, $-126.87^{\circ}$, $-36.87^{\circ}$ and
+$53.13^{\circ}$. \code{carg()} gives angles between $-180^{\circ}$ and $180^{\circ}$, so
+$233.13^{\circ}$ is printed as $-126.87^{\circ}$.
+\sv{c} The argument increases by $90^{\circ}$, while the modulus stays $5$. $j^4 = (j^2)^2 = 1$, so
+four quarter turns make a whole turn.
+
 \svar[Test yourself]{T} \sv{1} $Z = 5\sqrt{3} + j5 \approx 8.66 + j5$
 \sv{2} $e^{j\pi} = -1$: the number $1$ is rotated half a turn ($180^{\circ}$) along the unit
 circle and ends up at $-1$.

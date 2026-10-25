@@ -267,3 +267,29 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 **f)** Addition av komplexa tal är enklast på polär form.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+
+I C finns komplexa tal i standardbiblioteket `complex.h`. Ett komplext tal har typen `double complex`, och den imaginära enheten skrivs `I`, så talet $3 + j4$ skrivs `3.0 + 4.0 * I`. Följande funktioner används:
+
+| Funktion | Ger |
+|----------|-----|
+| `creal(z)` | Realdelen av $z$. |
+| `cimag(z)` | Imaginärdelen av $z$. |
+| `cabs(z)` | Beloppet $\|z\|$. |
+| `carg(z)` | Argumentet i radianer, mellan $-\pi$ och $\pi$. |
+| `cexp(z)` | $e^z$. Talet $r\angle\theta$ skrivs därför `r * cexp(I * theta)`, med $\theta$ i radianer. |
+
+Konstanten `M_PI` för $\pi$ finns i `math.h`.
+
+### 4.1 – Polär form i C
+Talen $z_1 = 3 + j4$ och $z_2 = -2 - j3$ från teorin samt $z_3 = 10\angle 45^{\circ}$ är givna.
+
+**a)** Ange $z_1$ och $z_2$ på polär form, med argumentet i grader, och $z_3$ på rektangulär form. Räkna för hand.
+
+**b)** Skriv ett program som skriver ut samtliga tal på både rektangulär och polär form, med argumentet i grader. Skriv $z_3$ som `10.0 * cexp(I * M_PI / 4.0)`. Ledning: skriv en funktion `void print_polar(double complex z)` som gör utskriften, och anropa den en gång per tal.
+
+**c)** Beräkna även `atan(cimag(z) / creal(z))` för $z_2$ och omvandla svaret till grader. Varför blir det fel, och varför behövs ingen kvadrantkorrigering med `carg()`?
+
+---

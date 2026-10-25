@@ -85,6 +85,16 @@ $20$~milliseconds.
 \sv{f} False: the amplitude is measured from zero to the peak value; from the lowest to the
 highest value is $2\abs{U}$.
 
+\svar{4.1} \sv{a} $\sin 30^{\circ} = 0.5$, $30^{\circ} = \frac{\pi}{6} \approx 0.5236$ rad
+\sv{b} \code{sin(30.0)} gives $-0.988$, \code{sin(deg_to_rad(30.0))} gives $0.5$: \code{sin()}
+takes the angle as radians, so \code{sin(30.0)} is the sine of $30$ rad.
+\sv{c} $t = 0$: $5.000$;\enspace $2$: $9.135$;\enspace $4$: $9.781$;\enspace $6$:
+$6.691$;\enspace $8$: $1.045$;\enspace $10$: $-5.000$, and then the same values with the opposite
+sign, until $u(20\,\text{ms}) = 5.000$ V.
+\sv{d} $T = 20$ ms, and the table repeats after $20$ ms. The largest value is $9.781$ V, since the
+peak falls between two times in the table: $u(t) = 10$ V at
+$t = \frac{1}{300}\,\text{s} \approx 3.33$ ms.
+
 \svar[Test yourself]{T} \sv{1} $150^{\circ} = \frac{5\pi}{6}$ and $\frac{5\pi}{6} = 150^{\circ}$
 \sv{2} $u(t) = 5\sin(100\pi t + \frac{\pi}{4})\,\text{V}$
 

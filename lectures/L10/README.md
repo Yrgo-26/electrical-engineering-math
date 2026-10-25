@@ -32,6 +32,11 @@
 
 ---
 
+## Demonstration
+* Decibel i C: funktioner för förstärkning i dB och tillbaka, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
+---
+
 ## Utvärdering
 * Lös $4^x = 64$.
 * En förstärkare har $G_{\text{dB}} = 40\thinspace\text{dB}$. Beräkna den linjära spänningsförstärkningen $G_{\text{lin}}$.

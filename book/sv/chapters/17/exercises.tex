@@ -237,3 +237,29 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
   \item I en kapacitiv krets ligger strömmen efter spänningen.
   \item Vid resonans är kretsens impedans rent resistiv.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 4}{Matematik i C}
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och
+körs i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
+på \textbf{C}. Vid felmeddelandet \code{undefined reference to 'sin'} eller liknande saknas
+matematikbiblioteket: lägg då till \code{-lm} under \textbf{Extra Compiler Flags} i inställningarna
+(kugghjulet). Funktionerna i \file{complex.h} beskrivs i \uppref[15]{4.1} i
+kapitel~15.
+
+\uppgift{4.1}{Fasoraddition i C}
+Uppgiften kontrollerar typexemplet i \secref{c17:sec:typexempel}, där sinusspänningarna
+\[
+  u_1(t) = 2\sin(\omega t + 45^{\circ})\,\text{V}, \qquad
+  u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
+\]
+adderas med fasorer.
+\begin{parts}
+  \item Ange fasorerna $U_1$ och $U_2$ på rektangulär form, och beräkna $U_{tot} = U_1 + U_2$ på
+    både rektangulär och polär form. Räkna för hand.
+  \item Skriv ett program som beräknar $U_{tot}$ med \file{complex.h} och skriver ut summan på
+    rektangulär och polär form, med argumentet i grader. Skriv fasorerna som
+    \code{2.0 * cexp(I * M_PI / 4.0)} och \code{3.0 * cexp(-I * M_PI / 3.0)}.
+  \item Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med \code{sin()}. Jämför med
+    imaginärdelen av $U_{tot}$, och förklara varför de är lika.
+\end{parts}

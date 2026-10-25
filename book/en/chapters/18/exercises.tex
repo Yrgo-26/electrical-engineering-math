@@ -33,7 +33,7 @@ exercise:
 assignment1_1.c   assignment2_1.c   assignment3_1.c
 assignment1_2.c   assignment2_2.c   assignment3_2.c
 assignment1_3.c   assignment2_3.c   assignment3_3.c
-                  assignment2_4.c   main.c
+main.c
 \end{console}
 New files are created with the \textbf{New file} button in the toolbar, or with \code{Ctrl + M}.
 
@@ -206,13 +206,6 @@ Let $f(x) = x^2$.
   \item How does the error change when $n$ is multiplied by ten?
 \end{parts}
 
-\uppgift{2.4}{Charge through a conductor}
-The current is given by $i(t) = 3t + 2\,\text{A}$.
-\begin{parts}
-  \item Calculate the charge $q = \int_0^4 i(t)\,dt$ analytically.
-  \item Calculate the same charge numerically with the trapezoidal rule and $n = 4$.
-  \item Why is the numerical result exact in this case, but not in \uppref{2.3}?
-\end{parts}
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 3}{Complex numbers and phasors}
@@ -391,6 +384,14 @@ For a sinusoidal voltage $u(t) = \abs{U}\sin(\omega t)$,
     $n = 1000$ subintervals over one period.
   \item Compare with the theoretical value and print the relative error.
   \item What happens to the error if $n$ is reduced to $10$? Explain why.
+\end{parts}
+
+\uppgift{5.8}{Charge through a conductor}
+The current is given by $i(t) = 3t + 2\,\text{A}$.
+\begin{parts}
+  \item Calculate the charge $q = \int_0^4 i(t)\,dt$ analytically.
+  \item Calculate the same charge numerically with the trapezoidal rule and $n = 4$.
+  \item Why is the numerical result exact in this case, but not in \uppref{2.3}?
 \end{parts}
 
 % ------------------------------------------------------------------------------------------

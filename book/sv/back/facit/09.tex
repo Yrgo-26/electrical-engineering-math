@@ -85,6 +85,16 @@ $20$:e millisekund.
 \sv{f} Falskt: amplituden mäts från noll till toppvärdet; från lägsta till högsta värde är
 $2\abs{U}$.
 
+\svar{4.1} \sv{a} $\sin 30^{\circ} = 0{,}5$, $30^{\circ} = \frac{\pi}{6} \approx 0{,}5236$ rad
+\sv{b} \code{sin(30.0)} ger $-0{,}988$, \code{sin(deg_to_rad(30.0))} ger $0{,}5$: \code{sin()}
+tolkar vinkeln som radianer, så \code{sin(30.0)} är sinus av $30$ rad.
+\sv{c} $t = 0$: $5{,}000$;\enspace $2$: $9{,}135$;\enspace $4$: $9{,}781$;\enspace $6$:
+$6{,}691$;\enspace $8$: $1{,}045$;\enspace $10$: $-5{,}000$, och sedan samma värden med ombytt
+tecken, tills $u(20\,\text{ms}) = 5{,}000$ V.
+\sv{d} $T = 20$ ms, och tabellen upprepar sig efter $20$ ms. Största värdet är $9{,}781$ V,
+eftersom toppen infaller mellan två tidpunkter i tabellen: $u(t) = 10$ V vid
+$t = \frac{1}{300}\,\text{s} \approx 3{,}33$ ms.
+
 \svar[Testa dig själv]{T} \sv{1} $150^{\circ} = \frac{5\pi}{6}$ och $\frac{5\pi}{6} = 150^{\circ}$
 \sv{2} $u(t) = 5\sin(100\pi t + \frac{\pi}{4})\,\text{V}$
 

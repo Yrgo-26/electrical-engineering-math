@@ -303,3 +303,23 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 **f)** Vid resonans är kretsens impedans rent resistiv.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktionerna i `complex.h` beskrivs i L15, uppgift 4.1.
+
+### 4.1 – Fasoraddition i C
+Uppgiften kontrollerar lektionens demonstration, där sinusspänningarna
+
+```math
+u_1(t) = 2\sin(\omega t + 45^{\circ})\,\text{V}, \qquad u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
+```
+
+adderas med fasorer.
+
+**a)** Ange fasorerna $U_1$ och $U_2$ på rektangulär form, och beräkna $U_{tot} = U_1 + U_2$ på både rektangulär och polär form. Räkna för hand.
+
+**b)** Skriv ett program som beräknar $U_{tot}$ med `complex.h` och skriver ut summan på rektangulär och polär form, med argumentet i grader. Skriv fasorerna som `2.0 * cexp(I * M_PI / 4.0)` och `3.0 * cexp(-I * M_PI / 3.0)`.
+
+**c)** Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med `sin()`. Jämför med imaginärdelen av $U_{tot}$, och förklara varför de är lika.
+
+---

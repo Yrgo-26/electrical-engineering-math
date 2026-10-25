@@ -302,3 +302,19 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 **f)** Amplituden är avståndet mellan kurvans lägsta och högsta värde.
 
 ---
+
+## Del 4 – Matematik i C
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktioner i C beskrivs i L07, uppgift 4.1.
+
+### 4.1 – Sinus i C
+Funktionerna i `math.h` räknar med vinklar i **radianer**.
+
+**a)** Ange $\sin 30^{\circ}$ och omvandla $30^{\circ}$ till radianer. Räkna för hand.
+
+**b)** Skriv en funktion `double deg_to_rad(double degrees)` som omvandlar grader till radianer. Skriv ut både `sin(30.0)` och `sin(deg_to_rad(30.0))`. Varför blir de olika?
+
+**c)** En växelspänning ges av $u(t) = 10\sin\!\left(100\pi t + \frac{\pi}{6}\right)$ V. Skriv en funktion `double voltage(double t)` som returnerar $u(t)$, och en värdetabell med $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms och spänningen på varje rad. Ledning: låt en heltalsvariabel `i` gå från $0$ till $10$ och beräkna $t = 0{,}002 \cdot i$ s.
+
+**d)** Vilken är periodtiden, och syns den i tabellen? Vilket är det största värdet i tabellen, och varför är det mindre än amplituden $10$ V? Vid vilken tidpunkt är $u(t) = 10$ V?
+
+---

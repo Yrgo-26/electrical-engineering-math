@@ -867,3 +867,27 @@ Uttrycket $\log(a + b)$ kan inte förenklas alls.
 **f)** $\ln 0$ är **odefinierat**. Det finns ingen exponent som gör $e$ upphöjt till något lika med noll; $\ln x \to -\infty$ när $x \to 0$. Det är $\ln 1$ som är noll.
 
 ---
+
+## Del 4 – Matematik i C
+
+### 4.1 – Decibel i C
+
+**a)** $20\log_{10} 1 = 0$ dB, $20\log_{10} 10 = 20$ dB och $20\log_{10} 100 = 40$ dB. Kvoten för $-3$ dB är $10^{-3/20} \approx 0{,}708$.
+
+**b)** Programmet ska skriva ut ungefär följande:
+
+```text
+kvot      dB    tillbaka
+   0.5   -6.02      0.500
+     1    0.00      1.000
+     2    6.02      2.000
+    10   20.00     10.000
+   100   40.00    100.000
+  1000   60.00   1000.000
+```
+
+`ratio_from_db()` ger tillbaka samma kvot, eftersom $10^{x}$ och $\log_{10}$ är varandras inverser.
+
+**c)** En fördubbling lägger till $20\log_{10} 2 \approx 6{,}02$ dB och en tiodubbling $20$ dB, oavsett var man börjar, eftersom $\log_{10}(a \cdot b) = \log_{10} a + \log_{10} b$. En kvot mindre än $1$ ger negativa dB, alltså en dämpning: halveringen ger $-6{,}02$ dB.
+
+---

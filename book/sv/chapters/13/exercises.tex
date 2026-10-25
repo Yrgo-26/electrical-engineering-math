@@ -244,3 +244,28 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
   \task $\dfrac{d}{dx}4\cos(x) = 4\sin(x)$
   \task $\dfrac{d}{dx}2^x = x \cdot 2^{x-1}$
 \end{delar}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 4}{Matematik i C}
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och
+körs i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
+på \textbf{C}. Vid felmeddelandet \code{undefined reference to 'sin'} eller liknande saknas
+matematikbiblioteket: lägg då till \code{-lm} under \textbf{Extra Compiler Flags} i inställningarna
+(kugghjulet).
+
+\uppgift{4.1}{Varför just $e$? I C}
+För $f(x) = a^x$ gäller $f'(x) = a^x \ln a$, så kvoten $\dfrac{f'(x)}{f(x)}$ är lika med $\ln a$.
+Här kontrolleras det numeriskt.
+\begin{parts}
+  \item Skriv ett program som för baserna $a = 2$, $2{,}5$, $e$, $3$ och $10$ beräknar derivatan
+    av $f(x) = a^x$ i $x = 1$ numeriskt med
+    \[
+      f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
+    \]
+    och skriver ut $a$, kvoten $\dfrac{f'(x)}{f(x)}$ och $\ln a$ på varje rad. Använd
+    \code{pow(a, x)} för $a^x$, \code{log(a)} för $\ln a$ och konstanten \code{M_E} för $e$,
+    samtliga från \file{math.h}. Lägg baserna i en array och gå igenom den med en loop.
+  \item Jämför kvoten med $\ln a$. För vilken bas blir kvoten $1$, och vad innebär det för
+    derivatan av $e^x$?
+  \item Ändra $x$ till $0$ och sedan till $2$. Ändras kvoten? Förklara varför.
+\end{parts}

@@ -238,3 +238,30 @@ Decide whether each statement is true or false, and justify your answer briefly.
   \item In a capacitive circuit, the current lags the voltage.
   \item At resonance, the impedance of the circuit is purely resistive.
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}. The error message \code{undefined reference to 'sin'} or similar
+means that the maths library is missing; add \code{-lm} under \textbf{Extra Compiler Flags} in
+the settings (the gear icon). The functions in \file{complex.h} are described in \uppref[15]{4.1}
+of Chapter~15.
+
+\uppgift{4.1}{Phasor addition in C}
+The exercise checks the worked example in \secref{c17:sec:typexempel}, where the sinusoidal
+voltages
+\[
+  u_1(t) = 2\sin(\omega t + 45^{\circ})\,\text{V}, \qquad
+  u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
+\]
+are added with phasors.
+\begin{parts}
+  \item Give the phasors $U_1$ and $U_2$ in rectangular form, and compute $U_{tot} = U_1 + U_2$ in
+    both rectangular and polar form. Calculate by hand.
+  \item Write a program that computes $U_{tot}$ with \file{complex.h} and prints the sum in
+    rectangular and polar form, with the argument in degrees. Write the phasors as
+    \code{2.0 * cexp(I * M_PI / 4.0)} and \code{3.0 * cexp(-I * M_PI / 3.0)}.
+  \item Extend the program so that it also computes $u_1(0) + u_2(0)$ with \code{sin()}. Compare
+    with the imaginary part of $U_{tot}$, and explain why they are equal.
+\end{parts}

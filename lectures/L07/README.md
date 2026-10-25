@@ -32,6 +32,11 @@
 
 ---
 
+## Demonstration
+* Vektorer i C: funktioner för absolutbelopp och vinkel, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+
+---
+
 ## Utvärdering
 * En vektor $\mathbf{u} = (3, -4)$. Beräkna absolutbeloppet $|\mathbf{u}|$ och vinkeln mot x-axeln.
 * Beräkna $\mathbf{w} = 2\mathbf{u} - \mathbf{v}$ för $\mathbf{u} = (2, 1)$ och $\mathbf{v} = (-1, 3)$.

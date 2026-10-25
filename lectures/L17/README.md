@@ -14,6 +14,7 @@
 
 ### Innan lektionen
 * Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 17 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
+* Kontrollera att WSL fungerar inför laborationen i L18: gå in i `~/electrical-engineering-math/lectures/L18/code/math` och kör `make`, som ska skriva ut `3.4 / 2 = 1.7`. Fungerar det inte, ta upp det med läraren under lektionen. Se L16 för installationen.
 
 ### Under lektionen
 * Närvara under genomgången.
@@ -42,6 +43,7 @@ u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
     * Summering av fasorerna i komplex form: $U_{tot} = U_1 + U_2$.
     * Ritande av fasorerna i det komplexa talplanet.
     * Omvandling tillbaka till tidsdomänen: $U_{tot} \rightarrow u_{tot}(t)$.
+* Fasoradditionen ovan kontrollerad i C, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
 
 ---
 

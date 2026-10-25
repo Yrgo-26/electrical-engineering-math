@@ -267,3 +267,38 @@ Each line contains a common vector error. Explain the error and give the correct
     -53.1^{\circ}$ with the positive $x$-axis.
   \item $\abs{-2\mathbf{u}} = -2\abs{\mathbf{u}}$
 \end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 4}{Mathematics in C}
+The exercise below is shown during the lesson, and you can also do it yourself. The program is
+written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
+language set to \textbf{C}.
+The error message \code{undefined reference to 'sqrt'} or similar means that the maths library is
+missing; add \code{-lm} under \textbf{Extra Compiler Flags} in the settings (the gear icon).
+
+The exercise uses \textbf{functions} in C. A function in C works like a mathematical function: it
+takes one or more values, called \textbf{parameters}, and \textbf{returns} a result with
+\code{return}. The function \code{double magnitude(double x, double y)}, for example, takes two
+floating-point numbers and returns one. It is written above \code{main()} and called as
+\code{magnitude(3.0, 4.0)}, just as $f(3)$ is written in mathematics. The functions \code{sqrt(x)}
+and \code{atan2(y, x)} and the constant \code{M_PI} are in \file{math.h}.
+
+\uppgift{4.1}{Vectors in C}
+The vectors $\mathbf{u} = (3, 4)$ and $\mathbf{v} = (-4, 3)$ are given.
+\begin{parts}
+  \item Find $\abs{\mathbf{u}}$, $\abs{\mathbf{v}}$, the angles $v_u$ and $v_v$ to the positive
+    x-axis, the sum $\mathbf{u} + \mathbf{v}$ and the angle $\alpha$ between the vectors.
+    Calculate by hand.
+  \item Write a program with two functions:
+    \begin{itemize}
+      \item \code{double magnitude(double x, double y)}, which returns the magnitude
+        $\sqrt{x^2 + y^2}$.
+      \item \code{double angle_deg(double x, double y)}, which returns the angle to the positive
+        x-axis in degrees. Use \code{atan2(y, x)}, which gives the angle in radians, and convert
+        to degrees.
+    \end{itemize}
+    Let the program print the magnitude and angle of $\mathbf{u}$, $\mathbf{v}$ and
+    $\mathbf{u} + \mathbf{v}$, and the angle between $\mathbf{u}$ and $\mathbf{v}$.
+  \item Compare with the hand calculation. \code{atan2()} needs no quadrant correction. Why does
+    \code{atan(3.0 / -4.0)} give the wrong angle for $\mathbf{v}$?
+\end{parts}
