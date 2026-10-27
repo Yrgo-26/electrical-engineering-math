@@ -19,7 +19,6 @@
 * Träna gärna på repetitionsuppgifterna i [bilaga B](./appendix/b_exercises.md) eller avsnitt 11.2 i boken. Lösningsförslag finns [här](./appendix/c_solutions.md).
 
 ### Under lektionen
-* Närvara under genomgången.
 * Genomför [övningsdugga 2](./appendix/practice_test/questions.md) uppgift för uppgift:
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Ställ frågor om det som är oklart. Lösningsförslag finns [här](./appendix/practice_test/solutions.md).
