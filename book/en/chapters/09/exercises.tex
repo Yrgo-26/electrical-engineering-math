@@ -158,8 +158,8 @@ Fill in the empty cells using $T = \dfrac{1}{f}$ and $\omega = 2\pi f$.
 Give the amplitude, angular frequency, frequency, period and phase of
 \begin{delar}(2)
   \task $u(t) = 5\sin(100\pi t)$
-  \task $u(t) = 12\sin\!\left(200\pi t + \dfrac{\pi}{2}\right)$
-  \task $u(t) = 3\sin\!\left(50\pi t - \dfrac{\pi}{6}\right)$
+  \task $u(t) = 12\sin\left(200\pi t + \dfrac{\pi}{2}\right)$
+  \task $u(t) = 3\sin\left(50\pi t - \dfrac{\pi}{6}\right)$
   \task $u(t) = 8\sin(2000\pi t)$
 \end{delar}
 
@@ -207,7 +207,7 @@ An AC voltage has the period $T = 20\,\text{ms}$.
 Two AC voltages are given by
 \[
   u_1(t) = 4\sin(100\pi t) \qquad \text{and} \qquad
-  u_2(t) = 4\sin\!\left(100\pi t + \frac{\pi}{3}\right).
+  u_2(t) = 4\sin\left(100\pi t + \frac{\pi}{3}\right).
 \]
 \begin{parts}
   \item Which voltage leads the other, and by how many degrees?
@@ -251,7 +251,7 @@ The functions in \file{math.h} work with angles in \textbf{radians}.
   \item Give $\sin 30^{\circ}$ and convert $30^{\circ}$ to radians. Calculate by hand.
   \item Write a function \code{double deg_to_rad(double degrees)} that converts degrees to
     radians. Print both \code{sin(30.0)} and \code{sin(deg_to_rad(30.0))}. Why do they differ?
-  \item An AC voltage is given by $u(t) = 10\sin\!\left(100\pi t + \frac{\pi}{6}\right)$ V. Write a
+  \item An AC voltage is given by $u(t) = 10\sin\left(100\pi t + \frac{\pi}{6}\right)$ V. Write a
     function \code{double voltage(double t)} that returns $u(t)$, and a table of values with
     $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms and the voltage on each line. Hint: let an integer variable
     \code{i} go from $0$ to $10$ and compute $t = 0.002 \cdot i$ s.

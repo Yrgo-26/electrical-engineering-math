@@ -98,7 +98,7 @@ f = \frac{1}{T} = \frac{1}{0{,}04} = 25\,\text{Hz}, \quad \omega = 2\pi \cdot 25
 **Ekvationen:**
 
 ```math
-u(t) = 4\sin\!\left(50\pi t - \frac{\pi}{4}\right)\,\text{V}
+u(t) = 4\sin\left(50\pi t - \frac{\pi}{4}\right)\,\text{V}
 ```
 
 ---
@@ -113,7 +113,7 @@ En växelspänning har amplituden $4\thinspace\text{V}$, frekvensen $50\thinspac
 ```
 
 ```math
-u(t) = 4\sin\!\left(100\pi t - \frac{\pi}{6}\right)\,\text{V}
+u(t) = 4\sin\left(100\pi t - \frac{\pi}{6}\right)\,\text{V}
 ```
 
 ---

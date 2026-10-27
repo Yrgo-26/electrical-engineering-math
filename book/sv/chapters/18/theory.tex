@@ -225,8 +225,8 @@ rektangulär till polär form (\kapref{15}).
 \label{c18:sec:decibel}
 Från \kapref{10} gäller för spänning respektive effekt:
 \[
-  A_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right), \qquad
-  A_{\text{dB}} = 10\log_{10}\!\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
+  A_{\text{dB}} = 20\log_{10}\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right), \qquad
+  A_{\text{dB}} = 10\log_{10}\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
 \]
 \begin{ccode}
 const double gain_db = 20.0 * log10(u_out / u_in);
@@ -396,7 +396,7 @@ samplingsfrekvensen $f_s$ blir antalet sampel per period
 \]
 och det $k$:te sampelvärdet ($k = 0, 1, \ldots, N-1$) ges av
 \[
-  u_k = \abs{U} \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+  u_k = \abs{U} \sin\left(\frac{2\pi k}{N} + \delta\right).
 \]
 För att signalen ska gå att återskapa ur sina sampel måste \textbf{samplingsteoremet} vara
 uppfyllt:
@@ -459,7 +459,7 @@ Filen kan sedan öppnas i ett kalkylprogram, eller matas in i en simulator som r
 En förstärkare har inspänningen $U_{\text{in}} = 0{,}5\,\text{V}$ och utspänningen
 $U_{\text{ut}} = 8{,}0\,\text{V}$. Beräkna förstärkningen i dB.
 \[
-  A_{\text{dB}} = 20\log_{10}\!\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) \approx
+  A_{\text{dB}} = 20\log_{10}\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) \approx
   24{,}1\,\text{dB}
 \]
 I kod:
@@ -501,7 +501,7 @@ impedans vid $f = 50\,\text{Hz}$.
   \omega = 2\pi \cdot 50 \approx 314{,}16\,\text{rad/s} \\
   Z = R + j\omega L = 100 + j15{,}71\,\Omega \\
   \abs{Z} = \sqrt{100^2 + 15{,}71^2} \approx 101{,}23\,\Omega, \qquad
-  \arg(Z) = \arctan\!\left(\frac{15{,}71}{100}\right) \approx 0{,}156\,\text{rad} \approx
+  \arg(Z) = \arctan\left(\frac{15{,}71}{100}\right) \approx 0{,}156\,\text{rad} \approx
   8{,}93^{\circ}
 \end{gather*}
 I kod beräknas beloppet och argumentet med \code{cabs(z)} respektive \code{carg(z)}.
@@ -513,9 +513,9 @@ tre första sampelvärdena.
 \begin{gather*}
   N = \frac{400}{50} = 8 \text{ sampel per period} \\
   u_0 = 5\sin(0) = 0\,\text{V} \\
-  u_1 = 5\sin\!\left(\frac{2\pi}{8}\right) = 5\sin\!\left(\frac{\pi}{4}\right) \approx
+  u_1 = 5\sin\left(\frac{2\pi}{8}\right) = 5\sin\left(\frac{\pi}{4}\right) \approx
   3{,}54\,\text{V} \\
-  u_2 = 5\sin\!\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\!\left(\frac{\pi}{2}\right) =
+  u_2 = 5\sin\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\left(\frac{\pi}{2}\right) =
   5{,}00\,\text{V}
 \end{gather*}
 Samplingsteoremet är uppfyllt, eftersom $400 > 2 \cdot 50$.

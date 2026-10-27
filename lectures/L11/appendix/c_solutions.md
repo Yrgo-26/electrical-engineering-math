@@ -55,13 +55,13 @@ Vektorer adderas och multipliceras komponentvis.
 **c)** Kvadrant I, ingen korrigering:
 
 ```math
-v = \arctan\!\left(\frac{6}{8}\right) \approx 36{,}9°
+v = \arctan\left(\frac{6}{8}\right) \approx 36{,}9°
 ```
 
 **d)** Båda komponenterna är negativa, alltså kvadrant III – lägg till $180°$:
 
 ```math
-v = \arctan\!\left(\frac{-12}{-5}\right) + 180° \approx 67{,}4° + 180° = 247{,}4°
+v = \arctan\left(\frac{-12}{-5}\right) + 180° \approx 67{,}4° + 180° = 247{,}4°
 ```
 
 ---
@@ -140,7 +140,7 @@ $\mathbf{U}_R = (9;\thinspace 0)\thinspace\text{V}$, $\mathbf{U}_C = (0;\thinspa
 **c)** Kvadrant IV, ingen korrigering:
 
 ```math
-v = \arctan\!\left(\frac{-12}{9}\right) \approx -53{,}1°
+v = \arctan\left(\frac{-12}{9}\right) \approx -53{,}1°
 ```
 
 Den negativa vinkeln visar att den totala spänningen ligger efter motståndets spänning – kretsen är kapacitiv.
@@ -358,7 +358,7 @@ f = \frac{1}{2 \times 10^{-3}} = 500\,\text{Hz}, \qquad \omega = 2\pi \cdot 500 
 ```
 
 ```math
-u(t) = 12\sin\!\left(1000\pi t + \frac{\pi}{6}\right)\,\text{V}
+u(t) = 12\sin\left(1000\pi t + \frac{\pi}{6}\right)\,\text{V}
 ```
 
 ---

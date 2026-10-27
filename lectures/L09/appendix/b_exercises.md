@@ -260,7 +260,7 @@ En växelspänning har periodtiden $T = 20\thinspace\text{ms}$.
 Två växelspänningar ges av:
 
 ```math
-u_1(t) = 4\sin(100\pi t) \qquad \text{och} \qquad u_2(t) = 4\sin\!\left(100\pi t + \frac{\pi}{3}\right)
+u_1(t) = 4\sin(100\pi t) \qquad \text{och} \qquad u_2(t) = 4\sin\left(100\pi t + \frac{\pi}{3}\right)
 ```
 
 **a)** Vilken spänning ligger före den andra, och med hur många grader?
@@ -313,7 +313,7 @@ Funktionerna i `math.h` räknar med vinklar i **radianer**.
 
 **b)** Skriv en funktion `double deg_to_rad(double degrees)` som omvandlar grader till radianer. Skriv ut både `sin(30.0)` och `sin(deg_to_rad(30.0))`. Varför blir de olika?
 
-**c)** En växelspänning ges av $u(t) = 10\sin\!\left(100\pi t + \frac{\pi}{6}\right)$ V. Skriv en funktion `double voltage(double t)` som returnerar $u(t)$, och en värdetabell med $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms och spänningen på varje rad. Ledning: låt en heltalsvariabel `i` gå från $0$ till $10$ och beräkna $t = 0{,}002 \cdot i$ s.
+**c)** En växelspänning ges av $u(t) = 10\sin\left(100\pi t + \frac{\pi}{6}\right)$ V. Skriv en funktion `double voltage(double t)` som returnerar $u(t)$, och en värdetabell med $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms och spänningen på varje rad. Ledning: låt en heltalsvariabel `i` gå från $0$ till $10$ och beräkna $t = 0{,}002 \cdot i$ s.
 
 **d)** Vilken är periodtiden, och syns den i tabellen? Vilket är det största värdet i tabellen, och varför är det mindre än amplituden $10$ V? Vid vilken tidpunkt är $u(t) = 10$ V?
 

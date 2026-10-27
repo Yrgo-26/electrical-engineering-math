@@ -35,7 +35,7 @@ Komplexa tal ritas i det **komplexa talplanet** med Re-axeln horisontellt och Im
 **Fasvinkeln** (vinkel mot positiv Re-axel):
 
 ```math
-\delta = \arctan\!\left(\frac{y}{x}\right) + \text{kvadrantkorrigering}
+\delta = \arctan\left(\frac{y}{x}\right) + \text{kvadrantkorrigering}
 ```
 
 **Korrigeringstabell:**
@@ -96,7 +96,7 @@ Markera $z_1 = 3 + j4$ och $z_2 = -2 - j3$ i det komplexa talplanet och beräkna
 **Lösning $z_1 = 3 + j4$** (kvadrant I):
 
 ```math
-|z_1| = \sqrt{9 + 16} = 5, \quad \delta_1 = \arctan\!\left(\frac{4}{3}\right) \approx 53{,}1°
+|z_1| = \sqrt{9 + 16} = 5, \quad \delta_1 = \arctan\left(\frac{4}{3}\right) \approx 53{,}1°
 ```
 
 Polär form: $z_1 = 5\thinspace\angle\thinspace 53{,}1°$
@@ -104,7 +104,7 @@ Polär form: $z_1 = 5\thinspace\angle\thinspace 53{,}1°$
 **Lösning $z_2 = -2 - j3$** (kvadrant III, lägg till 180°):
 
 ```math
-|z_2| = \sqrt{4 + 9} = \sqrt{13} \approx 3{,}61, \quad \delta_2 = \arctan\!\left(\frac{-3}{-2}\right) + 180° \approx 56{,}3° + 180° = 236{,}3°
+|z_2| = \sqrt{4 + 9} = \sqrt{13} \approx 3{,}61, \quad \delta_2 = \arctan\left(\frac{-3}{-2}\right) + 180° \approx 56{,}3° + 180° = 236{,}3°
 ```
 
 ---
@@ -115,7 +115,7 @@ Spänning $U = 3 + j4\thinspace\text{V}$. Bestäm absolutbelopp och fasvinkel.
 **Lösning:**
 
 ```math
-|U| = \sqrt{3^2 + 4^2} = 5\,\text{V}, \quad \delta = \arctan\!\left(\frac{4}{3}\right) \approx 0{,}927\,\text{rad} \approx 53{,}1°
+|U| = \sqrt{3^2 + 4^2} = 5\,\text{V}, \quad \delta = \arctan\left(\frac{4}{3}\right) \approx 0{,}927\,\text{rad} \approx 53{,}1°
 ```
 
 Polär form: $U = 5\thinspace\angle\thinspace 0{,}927\thinspace\text{rad}$
@@ -128,11 +128,11 @@ Ström $I = 10\thinspace\angle\thinspace\pi/4\thinspace\text{mA}$. Bestäm rekta
 **Lösning:**
 
 ```math
-x = 10\cos\!\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA}
+x = 10\cos\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA}
 ```
 
 ```math
-y = 10\sin\!\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA}
+y = 10\sin\left(\frac{\pi}{4}\right) = \frac{10}{\sqrt{2}} \approx 7{,}07\,\text{mA}
 ```
 
 ```math

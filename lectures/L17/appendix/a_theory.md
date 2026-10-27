@@ -96,7 +96,7 @@ U_{\text{tot}} = (1{,}414 + 1{,}5) + j(1{,}414 - 2{,}598) = 2{,}914 - j1{,}184
 ```
 
 ```math
-\delta_{\text{tot}} = \arctan\!\left(\frac{-1{,}184}{2{,}914}\right) \approx -22{,}1°
+\delta_{\text{tot}} = \arctan\left(\frac{-1{,}184}{2{,}914}\right) \approx -22{,}1°
 ```
 
 **Steg 5:** Tidsdomänen:

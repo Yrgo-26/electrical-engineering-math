@@ -156,8 +156,8 @@ printf("sin(30 grader) = %.3f\n", sin(rad)); // 0.500
 Från L10 gäller för spänning respektive effekt:
 
 ```math
-A_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right), \qquad
-A_{\text{dB}} = 10\log_{10}\!\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
+A_{\text{dB}} = 20\log_{10}\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right), \qquad
+A_{\text{dB}} = 10\log_{10}\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
 ```
 
 ```c
@@ -340,7 +340,7 @@ N = \frac{f_s}{f},
 och det $k$:te sampelvärdet ($k = 0, 1, \ldots, N-1$) ges av
 
 ```math
-u_k = |U| \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+u_k = |U| \sin\left(\frac{2\pi k}{N} + \delta\right).
 ```
 
 För att signalen ska gå att återskapa ur sina sampel måste **samplingsteoremet** vara uppfyllt:
@@ -401,7 +401,7 @@ En förstärkare har inspänningen $U_{\text{in}} = 0{,}5$ V och utspänningen $
 **Lösning:**
 
 ```math
-A_{\text{dB}} = 20\log_{10}\!\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) \approx 24{,}1\ \text{dB}
+A_{\text{dB}} = 20\log_{10}\left(\frac{8{,}0}{0{,}5}\right) = 20\log_{10}(16) \approx 24{,}1\ \text{dB}
 ```
 
 I kod:
@@ -465,7 +465,7 @@ Z = R + j\omega L = 100 + j15{,}71\ \Omega
 
 ```math
 |Z| = \sqrt{100^2 + 15{,}71^2} \approx 101{,}23\ \Omega, \qquad
-\arg(Z) = \arctan\!\left(\frac{15{,}71}{100}\right) \approx 0{,}156\ \text{rad} \approx 8{,}93^\circ
+\arg(Z) = \arctan\left(\frac{15{,}71}{100}\right) \approx 0{,}156\ \text{rad} \approx 8{,}93^\circ
 ```
 
 I kod beräknas beloppet och argumentet med `cabs(z)` respektive `carg(z)`.
@@ -486,11 +486,11 @@ u_0 = 5\sin(0) = 0\ \text{V}
 ```
 
 ```math
-u_1 = 5\sin\!\left(\frac{2\pi}{8}\right) = 5\sin\!\left(\frac{\pi}{4}\right) \approx 3{,}54\ \text{V}
+u_1 = 5\sin\left(\frac{2\pi}{8}\right) = 5\sin\left(\frac{\pi}{4}\right) \approx 3{,}54\ \text{V}
 ```
 
 ```math
-u_2 = 5\sin\!\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\!\left(\frac{\pi}{2}\right) = 5{,}00\ \text{V}
+u_2 = 5\sin\left(\frac{2\pi \cdot 2}{8}\right) = 5\sin\left(\frac{\pi}{2}\right) = 5{,}00\ \text{V}
 ```
 
 Samplingsteoremet är uppfyllt, eftersom $400 > 2 \cdot 50$.

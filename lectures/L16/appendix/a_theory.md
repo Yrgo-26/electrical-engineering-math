@@ -101,7 +101,7 @@ Skriv $u(t) = 3e^{j(100\pi t - \pi/4)}\thinspace\text{V}$ på rektangulär form 
 **Lösning:**
 
 ```math
-u(0) = 3e^{-j\pi/4} = 3\!\left(\cos\!\left(-\frac{\pi}{4}\right) + j\sin\!\left(-\frac{\pi}{4}\right)\right) = 3\!\left(\frac{\sqrt{2}}{2} - j\frac{\sqrt{2}}{2}\right) \approx 2{,}12 - j2{,}12\,\text{V}
+u(0) = 3e^{-j\pi/4} = 3\left(\cos\left(-\frac{\pi}{4}\right) + j\sin\left(-\frac{\pi}{4}\right)\right) = 3\left(\frac{\sqrt{2}}{2} - j\frac{\sqrt{2}}{2}\right) \approx 2{,}12 - j2{,}12\,\text{V}
 ```
 
 ---
@@ -116,7 +116,7 @@ Fasorn $I = 5 - j4\thinspace\text{mA}$, $\omega = 100\pi\thinspace\text{rad/s}$.
 ```
 
 ```math
-\delta = \arctan\!\left(\frac{-4}{5}\right) \approx -38{,}7° \approx -0{,}675\,\text{rad}
+\delta = \arctan\left(\frac{-4}{5}\right) \approx -38{,}7° \approx -0{,}675\,\text{rad}
 ```
 
 ```math

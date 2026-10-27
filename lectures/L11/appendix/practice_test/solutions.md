@@ -20,13 +20,13 @@ $\mathbf{u} = (1;\thinspace 2)$, $\mathbf{v} = (-3;\thinspace 4)$.
 **c)** Vinklarna beräknas med $v = \arctan(y/x) \pm 180°$:
 
 ```math
-v_u = \arctan\!\left(\frac{2}{1}\right) \approx 63{,}4°
+v_u = \arctan\left(\frac{2}{1}\right) \approx 63{,}4°
 ```
 
 $\mathbf{v}$ ligger i kvadrant II – lägg till $180°$:
 
 ```math
-v_v = \arctan\!\left(\frac{4}{-3}\right) + 180° \approx -53{,}1° + 180° = 126{,}9°
+v_v = \arctan\left(\frac{4}{-3}\right) + 180° \approx -53{,}1° + 180° = 126{,}9°
 ```
 
 **d)**
@@ -104,7 +104,7 @@ Amplitud $5\thinspace\text{V}$, frekvens $100\thinspace\text{Hz}$, fas $90°$.
 Vinkelhastigheten: $\omega = 2\pi f = 2\pi \cdot 100 = 200\pi\thinspace\text{rad/s}$
 
 ```math
-u(t) = 5\sin\!\left(200\pi t + \frac{\pi}{2}\right)\,\text{V}
+u(t) = 5\sin\left(200\pi t + \frac{\pi}{2}\right)\,\text{V}
 ```
 
 **b)** Periodtiden: $T = 1/f = 10\thinspace\text{ms}$. Fasen $\pi/2$ innebär att kurvan är $T/4 = 2{,}5\thinspace\text{ms}$ förskjuten till vänster (tidigt). Rita sinuskurvan med amplituden $5\thinspace\text{V}$ och perioden $10\thinspace\text{ms}$, med toppvärdet vid $t = 0$.

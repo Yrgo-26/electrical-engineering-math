@@ -267,7 +267,7 @@ Utan fasförskjutning hade toppvärdet nåtts efter en fjärdedel av perioden, d
 Spänningens ekvation är därmed:
 
 ```math
-u(t) = 8\sin\!\left(20\pi t + \frac{\pi}{3}\right)\,\text{V}
+u(t) = 8\sin\left(20\pi t + \frac{\pi}{3}\right)\,\text{V}
 ```
 
 ---
@@ -296,7 +296,7 @@ Vinkelhastigheten:
 Spänningens ekvation blir därmed:
 
 ```math
-u(t) = 3\sin\!\left(50\pi t + \frac{\pi}{4}\right)\,\text{V}
+u(t) = 3\sin\left(50\pi t + \frac{\pi}{4}\right)\,\text{V}
 ```
 
 Periodtiden är $T = 1/f = 1/25 = 0{,}04\thinspace\text{s} = 40\thinspace\text{ms}$. Kurvan ritas som en sinuskurva med amplitud $3\thinspace\text{V}$ och period $40\thinspace\text{ms}$, förskjuten $T/8 = 5\thinspace\text{ms}$ tidigare än en ofasad sinuskurva (eftersom fasen $\pi/4$ motsvarar $1/8$ av en period).
@@ -477,7 +477,7 @@ u(t) = 10\sin(100\pi t)\,\text{V}
 **b)** $\omega = 2\pi \cdot 100 = 200\pi$ och $90° = \dfrac{\pi}{2}$:
 
 ```math
-u(t) = 6\sin\!\left(200\pi t + \frac{\pi}{2}\right)\,\text{V}
+u(t) = 6\sin\left(200\pi t + \frac{\pi}{2}\right)\,\text{V}
 ```
 
 **c)** Först frekvensen ur periodtiden, sedan fasen i radianer:
@@ -487,13 +487,13 @@ f = \frac{1}{5 \times 10^{-3}} = 200\,\text{Hz}, \qquad \omega = 400\pi, \qquad 
 ```
 
 ```math
-u(t) = 2\sin\!\left(400\pi t - \frac{\pi}{3}\right)\,\text{V}
+u(t) = 2\sin\left(400\pi t - \frac{\pi}{3}\right)\,\text{V}
 ```
 
 **d)**
 
 ```math
-u(t) = 325\sin\!\left(100\pi t + \frac{\pi}{4}\right)\,\text{V}
+u(t) = 325\sin\left(100\pi t + \frac{\pi}{4}\right)\,\text{V}
 ```
 
 Detta är ungefär det svenska elnätet: $230\thinspace\text{V}$ RMS motsvarar amplituden $325\thinspace\text{V}$.
@@ -631,7 +631,7 @@ u_1 = 4\sin\frac{\pi}{2} = 4\,\text{V}
 ```
 
 ```math
-u_2 = 4\sin\!\left(\frac{\pi}{2} + \frac{\pi}{3}\right) = 4\sin\frac{5\pi}{6} = 4 \cdot \frac{1}{2} = 2\,\text{V}
+u_2 = 4\sin\left(\frac{\pi}{2} + \frac{\pi}{3}\right) = 4\sin\frac{5\pi}{6} = 4 \cdot \frac{1}{2} = 2\,\text{V}
 ```
 
 $u_2$ har alltså redan passerat sitt toppvärde när $u_1$ når sitt.

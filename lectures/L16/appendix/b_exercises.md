@@ -169,9 +169,9 @@ Talet $z = 2\thinspace\angle\thinspace 30°$ är givet.
 ### 3.8 – Fasor ur tidsfunktion
 Ange fasorn på polär form:
 
-**a)** $u(t) = 10\sin\!\left(100\pi t + \dfrac{\pi}{6}\right)$
+**a)** $u(t) = 10\sin\left(100\pi t + \dfrac{\pi}{6}\right)$
 
-**b)** $u(t) = 4\sin\!\left(200\pi t - \dfrac{\pi}{2}\right)$
+**b)** $u(t) = 4\sin\left(200\pi t - \dfrac{\pi}{2}\right)$
 
 **c)** $i(t) = 6\sin(50t)$
 

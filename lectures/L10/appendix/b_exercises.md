@@ -281,7 +281,7 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktioner i C beskrivs i L07, uppgift 4.1.
 
 ### 4.1 – Decibel i C
-Spänningsförstärkningen i decibel är $G_{\text{dB}} = 20\log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)$, och omvänt är $\frac{U_{\text{ut}}}{U_{\text{in}}} = 10^{G_{\text{dB}}/20}$.
+Spänningsförstärkningen i decibel är $G_{\text{dB}} = 20\log_{10}\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)$, och omvänt är $\frac{U_{\text{ut}}}{U_{\text{in}}} = 10^{G_{\text{dB}}/20}$.
 
 **a)** Beräkna förstärkningen i dB för kvoterna $\frac{U_{\text{ut}}}{U_{\text{in}}} = 1$, $10$ och $100$, samt kvoten för $-3$ dB. Räkna för hand.
 

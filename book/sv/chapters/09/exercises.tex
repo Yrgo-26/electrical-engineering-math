@@ -158,8 +158,8 @@ Fyll i de tomma rutorna med hjälp av $T = \dfrac{1}{f}$ och $\omega = 2\pi f$.
 Ange amplitud, vinkelhastighet, frekvens, periodtid och fas för
 \begin{delar}(2)
   \task $u(t) = 5\sin(100\pi t)$
-  \task $u(t) = 12\sin\!\left(200\pi t + \dfrac{\pi}{2}\right)$
-  \task $u(t) = 3\sin\!\left(50\pi t - \dfrac{\pi}{6}\right)$
+  \task $u(t) = 12\sin\left(200\pi t + \dfrac{\pi}{2}\right)$
+  \task $u(t) = 3\sin\left(50\pi t - \dfrac{\pi}{6}\right)$
   \task $u(t) = 8\sin(2000\pi t)$
 \end{delar}
 
@@ -207,7 +207,7 @@ En växelspänning har periodtiden $T = 20\,\text{ms}$.
 Två växelspänningar ges av
 \[
   u_1(t) = 4\sin(100\pi t) \qquad \text{och} \qquad
-  u_2(t) = 4\sin\!\left(100\pi t + \frac{\pi}{3}\right).
+  u_2(t) = 4\sin\left(100\pi t + \frac{\pi}{3}\right).
 \]
 \begin{parts}
   \item Vilken spänning ligger före den andra, och med hur många grader?
@@ -253,7 +253,7 @@ Funktionerna i \file{math.h} räknar med vinklar i \textbf{radianer}.
   \item Skriv en funktion \code{double deg_to_rad(double degrees)} som omvandlar grader till
     radianer. Skriv ut både \code{sin(30.0)} och \code{sin(deg_to_rad(30.0))}. Varför blir de
     olika?
-  \item En växelspänning ges av $u(t) = 10\sin\!\left(100\pi t + \frac{\pi}{6}\right)$ V. Skriv en
+  \item En växelspänning ges av $u(t) = 10\sin\left(100\pi t + \frac{\pi}{6}\right)$ V. Skriv en
     funktion \code{double voltage(double t)} som returnerar $u(t)$, och en värdetabell med
     $t = 0;\ 2;\ 4;\ \ldots;\ 20$ ms och spänningen på varje rad. Ledning: låt en heltalsvariabel
     \code{i} gå från $0$ till $10$ och beräkna $t = 0{,}002 \cdot i$ s.

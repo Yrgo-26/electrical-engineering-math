@@ -301,7 +301,7 @@ Varje rad innehåller ett vanligt vektorfel. Förklara felet och ange det korrek
 
 **c)** Två visare har vinklarna $30°$ och $100°$ mot positiv x-axel, så vinkeln mellan dem är $130°$.
 
-**d)** Vektorn $(-3;\thinspace 4)$ bildar vinkeln $\arctan\!\left(\dfrac{4}{-3}\right) \approx -53{,}1°$ mot positiv x-axel.
+**d)** Vektorn $(-3;\thinspace 4)$ bildar vinkeln $\arctan\left(\dfrac{4}{-3}\right) \approx -53{,}1°$ mot positiv x-axel.
 
 **e)** $|-2\mathbf{u}| = -2|\mathbf{u}|$
 

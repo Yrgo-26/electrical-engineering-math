@@ -12,7 +12,7 @@ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
 Vinkeln som sträckan bildar med positiv x-axel:
 
 ```math
-\theta = \arctan\!\left(\frac{y_2 - y_1}{x_2 - x_1}\right)
+\theta = \arctan\left(\frac{y_2 - y_1}{x_2 - x_1}\right)
 ```
 
 **OBS!** Kontrollera alltid vilken kvadrant punkten befinner sig i och korrigera vinkeln vid behov (+180° för kvadrant II och III).
@@ -40,7 +40,7 @@ Till skillnad från ett skalärt tal bär vektorn information om riktning. Vekto
 **Vinkeln** $v_u$ mot positiv x-axel:
 
 ```math
-v_u = \arctan\!\left(\frac{u_y}{u_x}\right) + \text{kvadrantkorrigering}
+v_u = \arctan\left(\frac{u_y}{u_x}\right) + \text{kvadrantkorrigering}
 ```
 
 | Kvadrant | $u_x$ | $u_y$ | Korrigering |

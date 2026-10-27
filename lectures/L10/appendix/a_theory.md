@@ -44,7 +44,7 @@ Ju oftare tillväxten läggs till, desto närmare $e$ kommer faktorn, men den bl
 ```
 
 ```math
-\log\!\left(\frac{a}{b}\right) = \log a - \log b
+\log\left(\frac{a}{b}\right) = \log a - \log b
 ```
 
 ```math
@@ -65,7 +65,7 @@ Decibel används inom elektroteknik för att ange förstärkning och dämpning p
 **Spänningsförstärkning:**
 
 ```math
-G_{\text{dB}} = 20 \log_{10}\!\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)
+G_{\text{dB}} = 20 \log_{10}\left(\frac{U_{\text{ut}}}{U_{\text{in}}}\right)
 ```
 
 Omvänt:
@@ -77,13 +77,13 @@ Omvänt:
 **Effektförstärkning:**
 
 ```math
-G_{\text{dB}} = 10 \log_{10}\!\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
+G_{\text{dB}} = 10 \log_{10}\left(\frac{P_{\text{ut}}}{P_{\text{in}}}\right)
 ```
 
 **Nivå i dBV** (decibel relativt $1\thinspace\text{V}$):
 
 ```math
-U_{\text{dBV}} = 20 \log_{10}\!\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right)
+U_{\text{dBV}} = 20 \log_{10}\left(\frac{U_{\text{RMS}}}{1\,\text{V}}\right)
 ```
 
 ---

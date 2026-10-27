@@ -234,7 +234,7 @@ En signal ges av $u(t) = 5\sin(2\pi \cdot 50t + \dfrac{\pi}{4})$ V och samplas m
 **c)** Beräkna sampelvärdena $u_0$, $u_1$ och $u_2$ för hand enligt
 
 ```math
-u_k = |U| \sin\!\left(\frac{2\pi k}{N} + \delta\right).
+u_k = |U| \sin\left(\frac{2\pi k}{N} + \delta\right).
 ```
 
 **d)** Skriv ett program som beräknar och skriver ut samtliga $N$ sampelvärden för en period, som CSV med en rad per sampel:
