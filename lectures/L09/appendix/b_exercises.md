@@ -196,9 +196,9 @@ Ange amplitud, vinkelhastighet, frekvens, periodtid och fas för:
 
 **a)** $u(t) = 5\sin(100\pi t)$
 
-**b)** $u(t) = 12\sin\!\left(200\pi t + \dfrac{\pi}{2}\right)$
+**b)** $u(t) = 12\sin\left(200\pi t + \dfrac{\pi}{2}\right)$
 
-**c)** $u(t) = 3\sin\!\left(50\pi t - \dfrac{\pi}{6}\right)$
+**c)** $u(t) = 3\sin\left(50\pi t - \dfrac{\pi}{6}\right)$
 
 **d)** $u(t) = 8\sin(2000\pi t)$
 
