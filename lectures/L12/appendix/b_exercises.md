@@ -1,50 +1,8 @@
 # L12 – Lektionsuppgifter
 
-## Del 1 - Repetitionsuppgifter
+## Del 1 - Lektionsuppgifter
 
-### 1.1 - Linjär förstärkning
-Sambandet mellan den linjära förstärkningen samt förstärkningen mätt i dB visas nedan:
-
-```math
-G_{dB}=20*log_{10}G_{lin} 
-```
-
-där
-* $G_{dB}$ = förstärkningen i $dB$,
-* $G_{lin}$ = den linjära förstärkningen.
-
-En ljudförstärkare har en förstärkning på $26$ $dB$. Beräkna den motsvarande linjära spänningsförstärkningen.
-
-### 1.2 - Uteffekt i dBm samt mW
-Sambandet mellan en given effekt i $W$ samt motsvarande effekt i $dBm$ ($dB$ i förhållande till $1$ $mW$) visas nedan:
-
-```math
-P_{dBm}=10*log_{10}⁡\frac{P}{1 mW},
-```
-
-där 
-* $P$ = effekten i $mW$,
-* $P_{dBm}$ = motsvarande effekt i $dBm$.
-
-En radiosändare har en uteffekt på $17$ $dBm$. Ange uteffekten i $mW$.
-
-### 1.3 - Ljudnivå från multipla ljudkällor
-För ett godtyckligt antal lika starka ljudkällor gäller att den totala ljudnivån kan beräknas enligt nedan:
-
-```math
-L_{tot}=L_{enkel}+10*log_{10}n,
-```
-
-där
-* $L_{tot}$ = den totala ljudnivån,  
-* $L_{enkel}$ = ljudnivån orsakad av en ljudkälla,
-* $n$ = antalet ljudkällor.
-
-Beräkna antalet lika starka ljudkällor om ljudet från en ljudkälla är $68$ $dB$ och den totala ljudnivån uppgår till $72,8$ dB.
-
-## Del 2 - Nytt stoff
-
-### 2.1 - Derivering av funktioner
+### 1.1 - Derivering av funktioner
 Derivera följande funktioner:
 
 **a)** $f(x) = -3x^2 + 5x + 2$
@@ -53,7 +11,7 @@ Derivera följande funktioner:
 
 **c)** $f(x) = 2x^4 - x^3 + \frac{3x^2}{5} + 4x - 1$
 
-### 2.2 – Analys av en parabel
+### 1.2 – Analys av en parabel
 
 Betrakta följande funktion:
 
@@ -72,7 +30,7 @@ f(x) = -x^2 + 8x - 7
 **e)** Rita upp grafen till $f(x)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att
 dina svar stämmer.
 
-### 2.3 – Analys av strömförlopp i en RC-krets
+### 1.3 – Analys av strömförlopp i en RC-krets
 
 Strömmen genom en viss RC-krets kan approximeras med följande polynomfunktion:
 
@@ -97,10 +55,10 @@ dina svar stämmer.
 
 ---
 
-## Del 3 – Extrauppgifter
+## Del 2 – Extrauppgifter
 Uppgifterna nedan är extra träning och görs med fördel på egen hand efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
 
-### 3.1 – Derivera polynom
+### 2.1 – Derivera polynom
 Derivera följande funktioner:
 
 **a)** $f(x) = x^5$
@@ -117,7 +75,7 @@ Derivera följande funktioner:
 
 ---
 
-### 3.2 – Ändringskvot och derivatans definition
+### 2.2 – Ändringskvot och derivatans definition
 Funktionen $f(x) = x^2$ är given.
 
 **a)** Ställ upp ändringskvoten över intervallet $[2,\thinspace 2+h]$ och förenkla den.
@@ -130,7 +88,7 @@ Funktionen $f(x) = x^2$ är given.
 
 ---
 
-### 3.3 – Derivatan i en punkt
+### 2.3 – Derivatan i en punkt
 Funktionen $f(x) = x^3 - 3x$ är given.
 
 **a)** Bestäm $f'(x)$.
@@ -143,7 +101,7 @@ Funktionen $f(x) = x^3 - 3x$ är given.
 
 ---
 
-### 3.4 – Tangentens ekvation
+### 2.4 – Tangentens ekvation
 Funktionen $f(x) = x^2 - 4x + 5$ är given. Betrakta punkten där $x_0 = 3$.
 
 **a)** Beräkna $f(3)$.
@@ -156,7 +114,7 @@ Funktionen $f(x) = x^2 - 4x + 5$ är given. Betrakta punkten där $x_0 = 3$.
 
 ---
 
-### 3.5 – Stationär punkt hos en parabel
+### 2.5 – Stationär punkt hos en parabel
 Funktionen $f(x) = x^2 - 6x + 8$ är given.
 
 **a)** Bestäm $f'(x)$.
@@ -169,7 +127,7 @@ Funktionen $f(x) = x^2 - 6x + 8$ är given.
 
 ---
 
-### 3.6 – Stationära punkter hos en tredjegradsfunktion
+### 2.6 – Stationära punkter hos en tredjegradsfunktion
 Funktionen $f(x) = x^3 - 3x^2 - 9x + 5$ är given.
 
 **a)** Bestäm $f'(x)$ och faktorisera uttrycket.
@@ -182,7 +140,7 @@ Funktionen $f(x) = x^3 - 3x^2 - 9x + 5$ är given.
 
 ---
 
-### 3.7 – Växande och avtagande
+### 2.7 – Växande och avtagande
 Funktionen $f(x) = x^2 - 4x$ är given.
 
 **a)** Bestäm $f'(x)$.
@@ -195,7 +153,7 @@ Funktionen $f(x) = x^2 - 4x$ är given.
 
 ---
 
-### 3.8 – Andra derivatan
+### 2.8 – Andra derivatan
 Bestäm $f'(x)$ och $f''(x)$:
 
 **a)** $f(x) = x^4 - 2x^2$
@@ -208,7 +166,7 @@ Bestäm $f'(x)$ och $f''(x)$:
 
 ---
 
-### 3.9 – Ström genom en kondensator
+### 2.9 – Ström genom en kondensator
 Strömmen genom en kondensator ges av $i_C(t) = C\dfrac{du}{dt}$. En kondensator med $C = 100\thinspace\mu\text{F}$ har spänningen $u(t) = 4t^2 + 2t$ volt.
 
 **a)** Bestäm $u'(t)$.
@@ -221,7 +179,7 @@ Strömmen genom en kondensator ges av $i_C(t) = C\dfrac{du}{dt}$. En kondensator
 
 ---
 
-### 3.10 – Spänning över en spole
+### 2.10 – Spänning över en spole
 Spänningen över en spole ges av $u_L(t) = L\dfrac{di}{dt}$. En spole med $L = 0{,}5\thinspace\text{H}$ genomflyts av strömmen $i(t) = 2t^2 - 4t + 3$ ampere.
 
 **a)** Bestäm $i'(t)$.
@@ -234,7 +192,7 @@ Spänningen över en spole ges av $u_L(t) = L\dfrac{di}{dt}$. En spole med $L = 
 
 ---
 
-### 3.11 – Maximal effekt
+### 2.11 – Maximal effekt
 Effekten som en generator levererar till en last varierar med strömmen enligt $P(I) = 24I - 3I^2$ watt.
 
 **a)** Bestäm $P'(I)$.
@@ -247,7 +205,7 @@ Effekten som en generator levererar till en last varierar med strömmen enligt $
 
 ---
 
-### 3.12 – Förändringshastighet i en signal
+### 2.12 – Förändringshastighet i en signal
 En spänning ges av $u(t) = -2t^2 + 12t$ volt för $0 \leq t \leq 6\thinspace\text{s}$.
 
 **a)** Bestäm $u'(t)$.
@@ -260,7 +218,7 @@ En spänning ges av $u(t) = -2t^2 + 12t$ volt för $0 \leq t \leq 6\thinspace\te
 
 ---
 
-### 3.13 – Tolkning av derivatans tecken
+### 2.13 – Tolkning av derivatans tecken
 För en funktion $f$ gäller följande: $f'(1) = 3$, $f'(2) = 0$, $f'(3) = -2$ och $f''(2) = -5$.
 
 **a)** Är $f$ växande eller avtagande vid $x = 1$?
@@ -273,7 +231,7 @@ För en funktion $f$ gäller följande: $f'(1) = 3$, $f'(2) = 0$, $f'(3) = -2$ o
 
 ---
 
-### 3.14 – Hitta felet
+### 2.14 – Hitta felet
 Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det korrekta svaret.
 
 **a)** $f(x) = x^3 \quad \Rightarrow \quad f'(x) = 3x^2 \cdot x$
@@ -290,10 +248,10 @@ Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det k
 
 ---
 
-## Del 4 – Matematik i C
+## Del 3 – Matematik i C
 Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
-### 4.1 – Derivatans definition i C
+### 3.1 – Derivatans definition i C
 Derivatan $f'(x)$ är gränsvärdet av lutningen mellan punkterna $x$ och $x + h$ när $h$ går mot noll:
 
 ```math

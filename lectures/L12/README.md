@@ -22,12 +22,12 @@
 
 ### Under lektionen
 * Närvara under genomgången.
-* Genomför lektionsuppgifterna i Del 1 och Del 2 i [bilaga B](./appendix/b_exercises.md):
+* Genomför lektionsuppgifterna i Del 1 i [bilaga B](./appendix/b_exercises.md):
     * Ni får några minuter på er att genomföra respektive uppgift, därefter sker genomgång i helklass.
     * Lösningsförslag laddas upp efter lektionen.
 
 ### Efter lektionen
-* Extrauppgifterna i Del 3 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
+* Extrauppgifterna i Del 2 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
 
 ---
 
@@ -35,7 +35,7 @@
 * Härledning av derivatans definition.
 * Derivering av $f(x) = -x^2 + 4x + 1$ samt lokalisering av extrempunkter.
 * Derivering av $f(x) = x^3 - 3x^2 + 2$ samt lokalisering av extrempunkter.
-* Derivatans definition i C: lutningen mellan $x$ och $x + h$ för $f(x) = x^2$ när $h$ minskar, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+* Derivatans definition i C: lutningen mellan $x$ och $x + h$ för $f(x) = x^2$ när $h$ minskar, se uppgift 3.1 i [bilaga B](./appendix/b_exercises.md).
 
 ---
 
