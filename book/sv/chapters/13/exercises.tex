@@ -247,25 +247,40 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 4}{Matematik i C}
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och
-körs i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
-på \textbf{C}. Vid felmeddelandet \code{undefined reference to 'sin'} eller liknande saknas
-matematikbiblioteket: lägg då till \code{-lm} under \textbf{Extra Compiler Flags} i inställningarna
-(kugghjulet).
+Läraren visar uppgiften nedan under lektionen, i VS Code och med \code{make}. Du kan också göra den
+själv i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
+på \textbf{C}.
 
-\uppgift{4.1}{Varför just $e$? I C}
-För $f(x) = a^x$ gäller $f'(x) = a^x \ln a$, så kvoten $\dfrac{f'(x)}{f(x)}$ är lika med $\ln a$.
-Här kontrolleras det numeriskt.
+\uppgift{4.1}{Derivatan av $e^x$ och $\sin v$ i C}
+Derivatan kan beräknas numeriskt med
+\[
+  f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6}.
+\]
+Här skrivs en enda derivatafunktion som fungerar för vilken funktion som helst. Det går eftersom
+en funktion kan skickas som argument till en annan funktion, med hjälp av en
+\textbf{funktionspekare}.
 \begin{parts}
-  \item Skriv ett program som för baserna $a = 2$, $2{,}5$, $e$, $3$ och $10$ beräknar derivatan
-    av $f(x) = a^x$ i $x = 1$ numeriskt med
-    \[
-      f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
-    \]
-    och skriver ut $a$, kvoten $\dfrac{f'(x)}{f(x)}$ och $\ln a$ på varje rad. Använd
-    \code{pow(a, x)} för $a^x$, \code{log(a)} för $\ln a$ och konstanten \code{M_E} för $e$,
-    samtliga från \file{math.h}. Lägg baserna i en array och gå igenom den med en loop.
-  \item Jämför kvoten med $\ln a$. För vilken bas blir kvoten $1$, och vad innebär det för
-    derivatan av $e^x$?
-  \item Ändra $x$ till $0$ och sedan till $2$. Ändras kvoten? Förklara varför.
+  \item Inkludera \file{math.h} och \file{stdio.h} och definiera makrot \code{DERIVATIVE_H} med
+    värdet \code{1e-6}. Definiera sedan typen \code{math_func_t}, en pekare till en funktion som
+    tar en \code{double} och returnerar en \code{double}, med
+    \code{typedef double (*math_func_t)(double);}. Skriv funktionen
+    \code{double derive(math_func_t f, double x)}, som returnerar närmevärdet ovan för funktionen
+    \code{f()} i punkten \code{x}.
+  \item Skriv funktionen \code{double e_x(double x)}, som returnerar $e^x$ med
+    \code{pow(M_E, x)}. Låt sedan $x$ gå från $0$ till $4$ i en loop, anropa
+    \code{derive(e_x, x)} och skriv ut $x$, lutningen och $e^x$ på varje rad. Vad säger
+    utskriften om derivatan av $e^x$?
+  \item \code{sin()} i \file{math.h} tar också en \code{double} och returnerar en \code{double}, så
+    den kan skickas direkt till \code{derive()}, utan någon egen funktion:
+    \code{derive(sin, v)}. Låt $v$ gå från $-1$ till $1$ radian i steg om $0{,}2$, och skriv ut
+    $v$, lutningen, $\sin v$ och $\cos v$ med två decimaler på varje rad. Låt en heltalsvariabel
+    \code{i} gå från $-5$ till $5$ och beräkna \code{v = 0.2 * i}, så att avrundningsfel inte
+    byggs upp i loopen. Vilken av $\sin v$ och $\cos v$ stämmer med lutningen?
+  \item \code{pow()} tar två argument och stämmer därför inte med \code{math_func_t}, så den kan
+    inte skickas direkt till \code{derive()}. Skriv funktionen \code{double two_x(double x)}, som
+    returnerar $2^x$ med \code{pow(2.0, x)}. Låt $x$ gå från $0$ till $4$, anropa
+    \code{derive(two_x, x)} och skriv ut $x$, lutningen, $2^x$, kvoten mellan lutningen och $2^x$
+    samt $\ln 2$ med \code{log(2.0)} på varje rad. Vad händer med kvoten när $x$ ändras, och vad
+    skiljer $2^x$ från $e^x$? Vad behövde ändras i \code{derive()} för att derivera den här
+    funktionen?
 \end{parts}

@@ -302,7 +302,7 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 ---
 
 ## Del 4 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
 ### 4.1 – Integralen som en summa i C
 Den bestämda integralen är arean under kurvan, och den kan approximeras med en summa av $n$ smala rektanglar. Med bredden $\Delta x = \dfrac{b - a}{n}$ och höjden tagen i varje rektangels vänstra kant blir

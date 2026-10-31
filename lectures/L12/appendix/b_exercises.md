@@ -249,7 +249,7 @@ Varje rad innehåller ett vanligt deriveringsfel. Förklara felet och ange det k
 ---
 
 ## Del 3 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
 ### 3.1 – Derivatans definition i C
 Derivatan $f'(x)$ är gränsvärdet av lutningen mellan punkterna $x$ och $x + h$ när $h$ går mot noll:

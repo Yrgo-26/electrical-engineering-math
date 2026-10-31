@@ -27,7 +27,7 @@ gcc main.c -o main -lm
 ./main
 ```
 
-Utan `-lm` kompilerar programmet, men länkningen misslyckas med felmeddelanden av typen `undefined reference to 'sqrt'`. Får ni det felet i OnlineGDB, lägg till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Utan `-lm` kompilerar programmet, men länkningen misslyckas med felmeddelanden av typen `undefined reference to 'sqrt'`. I OnlineGDB länkas biblioteket in automatiskt, så där behövs ingen inställning.
 
 ### Konstanter
 `M_PI` ($\pi$) och `M_E` ($e$) finns i `math.h` på de flesta system, men de ingår inte i C-standarden och saknas därför i strikt standardläge (`-std=c11`). OnlineGDB använder `gcc`:s standardläge, så `M_PI` fungerar där. För att koden ska fungera överallt kan konstanten definieras direkt i programmet:
@@ -383,7 +383,7 @@ Filen kan sedan öppnas i ett kalkylprogram, eller matas in i en simulator som r
 
 | Fallgrop | Konsekvens | Åtgärd |
 |----------|------------|--------|
-| Glömd `-lm` | `undefined reference to 'sqrt'` | Lägg flaggan sist vid kompilering, eller under *Extra Compiler Flags* i OnlineGDB |
+| Glömd `-lm` | `undefined reference to 'sqrt'` | Lägg flaggan sist vid kompilering |
 | Grader i stället för radianer | Helt fel värde från `sin()`, `cos()`, `tan()` | Multiplicera med $\pi/180$ |
 | Heltalsdivision, t.ex. `1 / 2` | Ger `0`, inte `0.5` | Skriv `1.0 / 2.0` |
 | `atan(y / x)` vid polär form | Fel kvadrant | Använd `atan2(y, x)` |

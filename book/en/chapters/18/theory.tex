@@ -72,8 +72,8 @@ gcc main.c -o main -lm
 ./main
 \end{shell}
 Without \code{-lm} the program compiles, but linking fails with error messages such as
-\code{undefined reference to 'sqrt'}. If you get that error in OnlineGDB, add \code{-lm} under
-\textbf{Extra Compiler Flags} in the settings (the gear icon).
+\code{undefined reference to 'sqrt'}. In OnlineGDB the library is linked automatically, so no
+setting is needed there.
 
 \subsection{Constants}
 \label{c18:sec:konstanter}
@@ -214,7 +214,7 @@ const double rad = deg * PI / 180.0;
 printf("sin(30 degrees) = %.3f\n", sin(rad)); // 0.500
 \end{ccode}
 
-\subsection{\code{atan2} instead of \code{atan}}
+\subsection{\code{atan2()} instead of \code{atan()}}
 \label{c18:sec:atan2}
 \code{atan(y / x)} cannot tell quadrant 1 from quadrant 3, or quadrant 2 from quadrant 4, because
 the signs disappear in the division. \code{atan2(y, x)} takes $y$ and $x$ separately and therefore
@@ -442,8 +442,7 @@ signal.
     >{\raggedright\arraybackslash}p{10em}L@{}}
   \thead{Pitfall} & \thead{Consequence} & \thead{Remedy} \\
   \midrule
-  Forgotten \code{-lm} & \code{undefined reference to 'sqrt'} & Put the flag last when compiling,
-    or under \emph{Extra Compiler Flags} in OnlineGDB \\
+  Forgotten \code{-lm} & \code{undefined reference to 'sqrt'} & Put the flag last when compiling \\
   Degrees instead of radians & Completely wrong value from \code{sin()}, \code{cos()},
     \code{tan()} & Multiply by $\pi/180$ \\
   Integer division, e.g.\ \mbox{\code{1 / 2}} & Gives \code{0}, not \code{0.5} &

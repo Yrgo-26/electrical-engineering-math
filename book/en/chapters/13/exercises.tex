@@ -251,25 +251,40 @@ Each line contains a common error. Explain the error and give the correct answer
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 4}{Mathematics in C}
-The exercise below is shown during the lesson, and you can also do it yourself. The program is
-written and run in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with the
-language set to \textbf{C}. The error message \code{undefined reference to 'sin'} or similar
-means that the maths library is missing; add \code{-lm} under \textbf{Extra Compiler Flags} in
-the settings (the gear icon).
+The teacher shows the exercise below during the lesson, in VS Code and with \code{make}. You can
+also do it yourself in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with
+the language set to \textbf{C}.
 
-\uppgift{4.1}{Why $e$? In C}
-For $f(x) = a^x$, $f'(x) = a^x \ln a$, so the ratio $\dfrac{f'(x)}{f(x)}$ equals $\ln a$. Here it
-is checked numerically.
+\uppgift{4.1}{The derivative of $e^x$ and $\sin v$ in C}
+The derivative can be computed numerically with
+\[
+  f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6}.
+\]
+Here a single derivative function is written that works for any function. This is possible
+because a function can be passed as an argument to another function, using a
+\textbf{function pointer}.
 \begin{parts}
-  \item Write a program that, for the bases $a = 2$, $2.5$, $e$, $3$ and $10$, computes the
-    derivative of $f(x) = a^x$ at $x = 1$ numerically with
-    \[
-      f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
-    \]
-    and prints $a$, the ratio $\dfrac{f'(x)}{f(x)}$ and $\ln a$ on each line. Use
-    \code{pow(a, x)} for $a^x$, \code{log(a)} for $\ln a$ and the constant \code{M_E} for $e$, all
-    from \file{math.h}. Put the bases in an array and go through it with a loop.
-  \item Compare the ratio with $\ln a$. For which base is the ratio $1$, and what does that mean
-    for the derivative of $e^x$?
-  \item Change $x$ to $0$ and then to $2$. Does the ratio change? Explain why.
+  \item Include \file{math.h} and \file{stdio.h} and define the macro \code{DERIVATIVE_H} with the
+    value \code{1e-6}. Then define the type \code{math_func_t}, a pointer to a function that takes
+    a \code{double} and returns a \code{double}, with
+    \code{typedef double (*math_func_t)(double);}. Write the function
+    \code{double derive(math_func_t f, double x)}, which returns the approximation above for the
+    function \code{f()} at the point \code{x}.
+  \item Write the function \code{double e_x(double x)}, which returns $e^x$ using
+    \code{pow(M_E, x)}. Then let $x$ run from $0$ to $4$ in a loop, call \code{derive(e_x, x)} and
+    print $x$, the slope and $e^x$ on each line. What does the output say about the derivative of
+    $e^x$?
+  \item \code{sin()} in \file{math.h} also takes a \code{double} and returns a \code{double}, so it
+    can be passed directly to \code{derive()}, without a function of your own:
+    \code{derive(sin, v)}. Let $v$ run from $-1$ to $1$ radian in steps of $0.2$, and print $v$,
+    the slope, $\sin v$ and $\cos v$ with two decimals on each line. Let an integer variable
+    \code{i} run from $-5$ to $5$ and compute \code{v = 0.2 * i}, so that rounding errors do not
+    build up in the loop. Which of $\sin v$ and $\cos v$ matches the slope?
+  \item \code{pow()} takes two arguments and therefore does not match \code{math_func_t}, so it
+    cannot be passed directly to \code{derive()}. Write the function \code{double two_x(double x)},
+    which returns $2^x$ using \code{pow(2.0, x)}. Let $x$ run from $0$ to $4$, call
+    \code{derive(two_x, x)} and print $x$, the slope, $2^x$, the ratio of the slope to $2^x$ and
+    $\ln 2$ using \code{log(2.0)} on each line. What happens to the ratio when $x$ changes, and
+    what separates $2^x$ from $e^x$? What had to change in \code{derive()} to differentiate this
+    function?
 \end{parts}

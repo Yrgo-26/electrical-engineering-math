@@ -8,8 +8,6 @@ Uppgifterna löses i två steg:
 
 Koden skrivs och körs i **OnlineGDB**: <https://www.onlinegdb.com/online_c_compiler>. Kontrollera att språket är inställt på **C** och tryck på **Run**. Ingen installation krävs.
 
-Vid felmeddelandet `undefined reference to 'sqrt'` saknas matematikbiblioteket. Lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
-
 Skriv ut flyttal med tre decimaler, exempelvis `printf("R = %.3f ohm\n", r);`.
 
 **OBS!** Koden sparas inte automatiskt. Kopiera den till en egen fil innan ni stänger fliken.

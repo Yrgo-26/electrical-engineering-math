@@ -15,7 +15,7 @@ Ingen installation krävs, och inget konto behövs.
 **OBS!** Koden sparas inte automatiskt. Kopiera den till en egen fil innan ni stänger fliken.
 
 ### Matematikbiblioteket
-Funktionerna i `math.h` och `complex.h` ligger i ett separat matematikbibliotek, `libm`. Vid felmeddelandet `undefined reference to 'sqrt'` länkas det inte in – lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Funktionerna i `math.h` och `complex.h` ligger i ett separat matematikbibliotek, `libm`. OnlineGDB länkar in det automatiskt, så där behövs ingen inställning.
 
 ### Sampelvärden till diagram
 Program som skriver ut sampelvärden som CSV körs i OnlineGDB på vanligt sätt. Markera utskriften i utdatarutan, kopiera den och klistra in den i ett kalkylprogram för att rita upp signalen.

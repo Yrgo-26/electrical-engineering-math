@@ -304,7 +304,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet). Funktioner i C beskrivs i L07, uppgift 4.1.
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Funktioner i C beskrivs i L07, uppgift 4.1.
 
 ### 4.1 – Sinus i C
 Funktionerna i `math.h` räknar med vinklar i **radianer**.

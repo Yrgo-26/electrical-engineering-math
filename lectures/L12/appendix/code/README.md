@@ -28,7 +28,7 @@ En dator kan inte låta $h$ gå ända till noll, eftersom det skulle innebära d
 
 `H_MAX` är det första värdet på $h$ och `H_MIN` det minsta. `H_STEP` är talet som $h$ delas med i varje varv. `1e-6` betyder $10^{-6}$.
 
-### Funktionen `f`
+### Funktionen `f()`
 
 ```c
 static inline double f(const double x) { return x * x; }
@@ -36,15 +36,15 @@ static inline double f(const double x) { return x * x; }
 
 Detta är den matematiska funktionen $f(x) = x^2$ skriven i C. För att undersöka en annan funktion räcker det att ändra den här raden.
 
-### Funktionen `derive`
+### Funktionen `derive()`
 
 ```c
 static inline double derive(const double x, const double h) { return (f(x + h) - f(x)) / h; }
 ```
 
-Här står kvoten från definitionen, nästan tecken för tecken. Funktionen ger ett närmevärde till $f'(x)$, och den anropar `f` två gånger: en gång i $x + h$ och en gång i $x$.
+Här står kvoten från definitionen, nästan tecken för tecken. Funktionen ger ett närmevärde till $f'(x)$, och den anropar `f()` två gånger: en gång i $x + h$ och en gång i $x$.
 
-### Funktionen `main`
+### Funktionen `main()`
 
 ```c
 const double x = 3.0;

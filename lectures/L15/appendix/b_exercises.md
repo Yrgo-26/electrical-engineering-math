@@ -269,7 +269,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
 I C finns komplexa tal i standardbiblioteket `complex.h`. Ett komplext tal har typen `double complex`, och den imaginära enheten skrivs `I`, så talet $3 + j4$ skrivs `3.0 + 4.0 * I`. Följande funktioner används:
 

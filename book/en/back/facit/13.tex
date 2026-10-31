@@ -93,12 +93,14 @@ slowly it falls.
 \sv{d} The derivative of cosine is minus sine: $-4\sin(x)$.
 \sv{e} The power rule does not apply when $x$ is in the exponent: $2^x \ln 2$.
 
-\svar{4.1} \sv{a} $a = 2$: $0.693147$;\enspace $2.5$: $0.916291$;\enspace $e$:
-$1.000000$;\enspace $3$: $1.098613$;\enspace $10$: $2.302588$, in each case almost exactly
-$\ln a$.
-\sv{b} The ratio is $\ln a$, to five or six decimals. For $a = e$ it is $1$, so
-$\frac{d}{dx}e^x = e^x$.
-\sv{c} No. $\dfrac{f'(x)}{f(x)} = \dfrac{a^x \ln a}{a^x} = \ln a$ does not depend on $x$.
+\svar{4.1} \sv{a} \code{derive()} returns \code{(f(x + DERIVATIVE_H) - f(x)) / DERIVATIVE_H}.
+\sv{b} The slope equals $e^x$ at every point, for example $2.71828$ for $x = 1$ and $54.5982$ for
+$x = 4$, so $\frac{d}{dx}e^x = e^x$.
+\sv{c} The slope matches $\cos v$, for example $0.54$ for $v = \pm 1$ and $1.00$ for $v = 0$, so
+$\frac{d}{dv}\sin v = \cos v$.
+\sv{d} The ratio is $0.693147 = \ln 2$ for all $x$, since $\frac{d}{dx}2^x = 2^x \ln 2$. For
+$e^x$ the factor is $\ln e = 1$, so $e^x$ is its own derivative. Nothing had to change in
+\code{derive()}, only the argument in the call.
 
 \svar[Test yourself]{T} \sv{1} $f'(x) = 2e^{2x} + \frac{1}{x}$
 \sv{2} $f'(\pi/2) = \cos(\pi/2) = 0$

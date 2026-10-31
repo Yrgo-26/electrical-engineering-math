@@ -308,7 +308,7 @@ Varje rad innehåller ett vanligt vektorfel. Förklara felet och ange det korrek
 ---
 
 ## Del 4 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sqrt'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
 I uppgiften används **funktioner** i C. En funktion i C fungerar som en matematisk funktion: den tar emot ett eller flera värden, så kallade **parametrar**, och **returnerar** ett resultat med `return`. Funktionen `double magnitude(double x, double y)` tar till exempel emot två flyttal och returnerar ett flyttal. Den skrivs ovanför `main()` och anropas som `magnitude(3.0, 4.0)`, precis som $f(3)$ skrivs i matematiken. Funktionerna `sqrt(x)` och `atan2(y, x)` samt konstanten `M_PI` finns i `math.h`.
 
