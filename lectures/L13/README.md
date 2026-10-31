@@ -32,7 +32,7 @@
 ---
 
 ## Demonstration
-* Varför just $e$? I C: kvoten $f'(x)/f(x)$ för $f(x) = a^x$ med olika baser, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+* Derivatan av $e^x$ och $\sin v$ i C: en derivatafunktion som tar funktionen som argument via en funktionspekare, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md) och [startkoden](./appendix/code/).
 
 ---
 

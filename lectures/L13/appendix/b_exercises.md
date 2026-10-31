@@ -325,21 +325,29 @@ Varje rad innehåller ett vanligt fel. Förklara felet och ange det korrekta sva
 ---
 
 ## Del 4 – Matematik i C
-Uppgiften nedan visas under lektionen, och du kan också göra den själv. Programmet skrivs och körs i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Vid felmeddelandet `undefined reference to 'sin'` eller liknande saknas matematikbiblioteket: lägg då till `-lm` under **Extra Compiler Flags** i inställningarna (kugghjulet).
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
-### 4.1 – Varför just $e$? I C
-För $f(x) = a^x$ gäller $f'(x) = a^x \ln a$, så kvoten $\dfrac{f'(x)}{f(x)}$ är lika med $\ln a$. Här kontrolleras det numeriskt.
-
-**a)** Skriv ett program som för baserna $a = 2$, $2{,}5$, $e$, $3$ och $10$ beräknar derivatan av $f(x) = a^x$ i $x = 1$ numeriskt med
+### 4.1 – Derivatan av $e^x$ och $\sin v$ i C
+Derivatan kan beräknas numeriskt med
 
 ```math
-f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6},
+f'(x) \approx \frac{f(x + h) - f(x)}{h}, \qquad h = 10^{-6}.
 ```
 
-och skriver ut $a$, kvoten $\dfrac{f'(x)}{f(x)}$ och $\ln a$ på varje rad. Använd `pow(a, x)` för $a^x$, `log(a)` för $\ln a$ och konstanten `M_E` för $e$, samtliga från `math.h`. Lägg baserna i en array och gå igenom den med en loop.
+Här skrivs en enda derivatafunktion som fungerar för vilken funktion som helst. Det går eftersom en funktion kan skickas som argument till en annan funktion, med hjälp av en **funktionspekare**.
 
-**b)** Jämför kvoten med $\ln a$. För vilken bas blir kvoten $1$, och vad innebär det för derivatan av $e^x$?
+**a)** Inkludera `math.h` och `stdio.h` och definiera makrot `DERIVATIVE_H` med värdet `1e-6`. Definiera sedan typen `math_func_t` enligt nedan, en pekare till en funktion som tar en `double` och returnerar en `double`:
 
-**c)** Ändra $x$ till $0$ och sedan till $2$. Ändras kvoten? Förklara varför.
+```c
+typedef double (*math_func_t)(double);
+```
+
+Skriv funktionen `double derive(math_func_t f, double x)`, som returnerar närmevärdet ovan för funktionen `f()` i punkten `x`.
+
+**b)** Skriv funktionen `double e_x(double x)`, som returnerar $e^x$ med `pow(M_E, x)`. Låt sedan $x$ gå från $0$ till $4$ i en loop, anropa `derive(e_x, x)` och skriv ut $x$, lutningen och $e^x$ på varje rad. Vad säger utskriften om derivatan av $e^x$?
+
+**c)** `sin()` i `math.h` tar också en `double` och returnerar en `double`, så den kan skickas direkt till `derive()`, utan någon egen funktion: `derive(sin, v)`. Låt $v$ gå från $-1$ till $1$ radian i steg om $0{,}2$, och skriv ut $v$, lutningen, $\sin v$ och $\cos v$ med två decimaler på varje rad. Låt en heltalsvariabel `i` gå från $-5$ till $5$ och beräkna `v = 0.2 * i`, så att avrundningsfel inte byggs upp i loopen. Vilken av $\sin v$ och $\cos v$ stämmer med lutningen?
+
+**d)** `pow()` tar två argument och stämmer därför inte med `math_func_t`, så den kan inte skickas direkt till `derive()`. Skriv funktionen `double two_x(double x)`, som returnerar $2^x$ med `pow(2.0, x)`. Låt $x$ gå från $0$ till $4$, anropa `derive(two_x, x)` och skriv ut $x$, lutningen, $2^x$, kvoten mellan lutningen och $2^x$ samt $\ln 2$ med `log(2.0)` på varje rad. Vad händer med kvoten när $x$ ändras, och vad skiljer $2^x$ från $e^x$? Vad behövde ändras i `derive()` för att derivera den här funktionen?
 
 ---
