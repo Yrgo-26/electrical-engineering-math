@@ -313,8 +313,16 @@ Den bestämda integralen är arean under kurvan, och den kan approximeras med en
 
 **a)** Beräkna $\displaystyle\int_0^{\pi} \sin(x)\,dx$ med en primitiv funktion.
 
-**b)** Skriv ett program som beräknar summan för $f(x) = \sin(x)$ på intervallet $[0, \pi]$ med $n = 4$, $10$, $100$ och $1000$ rektanglar, och skriver ut $n$, summan och felet mot svaret i a). Använd `sin()`, `fabs()` och konstanten `M_PI` från `math.h`.
+**b)** Definiera typen `math_func_t` som i L13, uppgift 4.1:
+
+```c
+typedef double (*math_func_t)(double);
+```
+
+Skriv funktionen `double integrate(math_func_t f, double a, double b, size_t n)`, som returnerar summan ovan. Typen `size_t` finns i `stddef.h`. Anropa sedan `integrate(sin, 0.0, M_PI, n)` för $f(x) = \sin(x)$ på intervallet $[0, \pi]$ med $n = 4$, $10$, $100$ och $1000$ rektanglar, och skriv ut $n$, summan och felet mot svaret i a). Felet är avståndet mellan summan och det förväntade svaret $2{,}0$ från a). Om summan lagras i variabeln `area` beräknas felet med `fabs(area - 2.0)`, där `fabs()` ger absolutbeloppet, så att felet aldrig blir negativt. Använd `sin()`, `fabs()` och konstanten `M_PI` från `math.h`.
 
 **c)** Hur förändras felet när $n$ tiodubblas?
+
+**d)** Beräkna $\displaystyle\int_0^{1} e^{2x}\,dx$ med en primitiv funktion. Skriv sedan funktionen `double e_2x(double x)`, som returnerar $e^{2x}$ med `pow(M_E, 2.0 * x)`, och anropa `integrate(e_2x, 0.0, 1.0, n)` med samma värden på $n$. Skriv ut $n$, summan och felet, som nu beräknas med `fabs(area - exact)`, där `exact` är svaret du räknade ut. Hur förändras felet när $n$ tiodubblas, jämfört med $\sin(x)$ i c)?
 
 ---
