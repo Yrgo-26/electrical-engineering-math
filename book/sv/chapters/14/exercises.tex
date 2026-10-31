@@ -252,8 +252,21 @@ kant blir
 \]
 \begin{parts}
   \item Beräkna $\displaystyle\int_0^{\pi} \sin(x)\,dx$ med en primitiv funktion.
-  \item Skriv ett program som beräknar summan för $f(x) = \sin(x)$ på intervallet $[0, \pi]$ med
-    $n = 4$, $10$, $100$ och $1000$ rektanglar, och skriver ut $n$, summan och felet mot svaret i
-    a). Använd \code{sin()}, \code{fabs()} och konstanten \code{M_PI} från \file{math.h}.
+  \item Definiera typen \code{math_func_t} som i kapitel~13, \uppref[13]{4.1}, med
+    \code{typedef double (*math_func_t)(double);}. Skriv funktionen
+    \code{double integrate(math_func_t f, double a, double b, size_t n)}, som returnerar summan
+    ovan. Typen \code{size_t} finns i \file{stddef.h}. Anropa sedan
+    \code{integrate(sin, 0.0, M_PI, n)} för $f(x) = \sin(x)$ på intervallet $[0, \pi]$ med
+    $n = 4$, $10$, $100$ och $1000$ rektanglar, och skriv ut $n$, summan och felet mot svaret i
+    a). Felet är avståndet mellan summan och det förväntade svaret $2{,}0$ från a). Om summan
+    lagras i variabeln \code{area} beräknas felet med \code{fabs(area - 2.0)}, där \code{fabs()}
+    ger absolutbeloppet, så att felet aldrig blir negativt. Använd \code{sin()}, \code{fabs()}
+    och konstanten \code{M_PI} från \file{math.h}.
   \item Hur förändras felet när $n$ tiodubblas?
+  \item Beräkna $\displaystyle\int_0^{1} e^{2x}\,dx$ med en primitiv funktion. Skriv sedan
+    funktionen \code{double e_2x(double x)}, som returnerar $e^{2x}$ med
+    \code{pow(M_E, 2.0 * x)}, och anropa \code{integrate(e_2x, 0.0, 1.0, n)} med samma värden på
+    $n$. Skriv ut $n$, summan och felet, som nu beräknas med \code{fabs(area - exact)}, där
+    \code{exact} är svaret du räknade ut. Hur förändras felet när $n$ tiodubblas, jämfört med
+    $\sin(x)$ i c)?
 \end{parts}
