@@ -306,8 +306,9 @@ is then a straight line. For other functions there is an error, which decreases 
 
 \section{Complex numbers with \code{complex.h}}
 \label{c18:sec:complex}
-Complex numbers (Chapters~\ref{c15:ch}--\ref{c17:ch}) are handled by \file{complex.h}, which is
-used together with \file{math.h}:
+In Chapters~\ref{c15:ch}--\ref{c17:ch}, complex numbers were written as a struct of their own,
+\code{complex_t}. The standard library \file{complex.h} instead has a ready-made type and is used
+together with \file{math.h}:
 \begin{ccode}
 #include <complex.h>
 #include <math.h>

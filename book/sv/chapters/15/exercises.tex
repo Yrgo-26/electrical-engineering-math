@@ -207,22 +207,46 @@ Läraren visar uppgiften nedan under lektionen, i VS Code och med \code{make}. D
 själv i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
 på \textbf{C}.
 
-I C finns komplexa tal i standardbiblioteket \file{complex.h}. Ett komplext tal har typen
-\code{double complex}, och den imaginära enheten skrivs \code{I}, så talet $3 + j4$ skrivs
-\code{3.0 + 4.0 * I}. Följande funktioner används:
+\needspace{16\baselineskip}
+I uppgiften nedan skrivs ett komplext tal som en egen \textbf{strukt} (\code{struct}), även kallat
+struktur. En strukt samlar flera variabler som hör ihop under ett gemensamt namn, här realdelen och
+imaginärdelen. Typen \code{complex_t} definieras med \code{typedef struct} och har fälten \code{re}
+och \code{im}, båda av typen \code{double}:
+\begin{ccode}
+/**
+ * @brief Complex number structure.
+ */
+typedef struct
+{
+    /** Real part (3 in z = 3 + j4). */
+    double re;
 
-\begin{booktable}{@{}>{\raggedright\arraybackslash}p{6em}L@{}}
-  \thead{Funktion} & \thead{Ger} \\
-  \midrule
-  \code{creal(z)} & Realdelen av $z$. \\
-  \code{cimag(z)} & Imaginärdelen av $z$. \\
-  \code{cabs(z)} & Beloppet $\abs{z}$. \\
-  \code{carg(z)} & Argumentet i radianer, mellan $-\pi$ och $\pi$. \\
-  \code{cexp(z)} & $e^z$. Talet $r\,\angle\,\theta$ skrivs därför \code{r * cexp(I * theta)}, med
-    $\theta$ i radianer. \\
-\end{booktable}
+    /** Imaginary part (4 in z = 3 + j4). */
+    double im;
+} complex_t;
+\end{ccode}
+\begin{itemize}
+  \item \code{typedef} ger strukten aliaset \code{complex_t}, så att vi slipper skriva \code{struct}
+    varje gång vi använder den. Suffixet \code{_t} visar att namnet är ett alias, precis som i
+    \code{uint8_t} från \file{stdint.h}.
+  \item Talet $3 + j4$ skapas med \code{const complex_t z = \{3.0, 4.0\};}, eller tydligare med
+    \code{const complex_t z = \{.re = 3.0, .im = 4.0\};}. Fälten nås med punkt: \code{z.re} och
+    \code{z.im}.
+  \item Struktar skickas till funktioner via en \textbf{pekare} (\code{complex_t*}), det vill säga
+    struktens minnesadress, så att hela strukten inte behöver kopieras vid varje anrop. Huvudskälet
+    är effektivitet. Här spelar det knappt någon roll, eftersom två \code{double} tar $2 \cdot 64$
+    bitar medan en pekare tar $64$ bitar, men för större struktar blir skillnaden betydande.
+  \item Parametertypen \code{const complex_t*} anger att funktionen inte ändrar talet.
+  \item I anropet ges adressen med \code{&}, till exempel \code{complex_magnitude(&z)}. Inne i
+    funktionen nås fälten med pil: \code{z->re} och \code{z->im}.
+  \item En \code{complex_t} kan däremot returneras direkt, som i \code{complex_from_polar()}. Ett
+    nytt tal måste ändå skapas, så det är enklare att göra det inuti funktionen än att låta
+    anroparen skapa en variabel och skicka in dess adress.
+\end{itemize}
 
-Konstanten \code{M_PI} för $\pi$ finns i \file{math.h}.
+Funktionerna \code{sqrt()}, \code{sin()}, \code{cos()}, \code{atan()} och \code{atan2()} samt
+konstanten \code{M_PI} för $\pi$ finns i \file{math.h}. De trigonometriska funktionerna räknar i
+radianer.
 
 \uppgift{4.1}{Polär form i C}
 Talen $z_1 = 3 + j4$ och $z_2 = -2 - j3$ från \secref{c15:sec:typexempel} samt
@@ -230,10 +254,13 @@ $z_3 = 10\,\angle\,45^{\circ}$ är givna.
 \begin{parts}
   \item Ange $z_1$ och $z_2$ på polär form, med argumentet i grader, och $z_3$ på rektangulär
     form. Räkna för hand.
-  \item Skriv ett program som skriver ut samtliga tal på både rektangulär och polär form, med
-    argumentet i grader. Skriv $z_3$ som \code{10.0 * cexp(I * M_PI / 4.0)}. Ledning: skriv en
-    funktion \code{void print_polar(double complex z)} som gör utskriften, och anropa den en gång
-    per tal.
-  \item Beräkna även \code{atan(cimag(z) / creal(z))} för $z_2$ och omvandla svaret till grader.
-    Varför blir det fel, och varför behövs ingen kvadrantkorrigering med \code{carg()}?
+  \item Definiera \code{complex_t} och skriv funktionerna \code{double complex_magnitude(const
+    complex_t* z)}, som returnerar beloppet $\abs{z}$, \code{double complex_angle_deg(const
+    complex_t* z)}, som returnerar argumentet i grader, beräknat med \code{atan2(z->im, z->re)},
+    \code{complex_t complex_from_polar(double r, double deg)}, som returnerar talet
+    $r\,\angle\,\theta$ på rektangulär form, och \code{void complex_print(const complex_t* z)}, som
+    skriver ut talet på både rektangulär och polär form, med argumentet i grader. Skriv $z_3$ som
+    \code{complex_from_polar(10.0, 45.0)} och anropa \code{complex_print()} en gång per tal.
+  \item Beräkna även \code{atan(z2.im / z2.re)} för $z_2$ och omvandla svaret till grader. Varför
+    blir det fel, och varför ger \code{atan2()} rätt kvadrant?
 \end{parts}

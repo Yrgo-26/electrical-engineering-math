@@ -271,25 +271,45 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ## Del 4 – Matematik i C
 Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
-I C finns komplexa tal i standardbiblioteket `complex.h`. Ett komplext tal har typen `double complex`, och den imaginära enheten skrivs `I`, så talet $3 + j4$ skrivs `3.0 + 4.0 * I`. Följande funktioner används:
+I uppgiften nedan skrivs ett komplext tal som en egen **strukt** (`struct`), även kallat struktur. En strukt samlar flera variabler som hör ihop under ett gemensamt namn, här realdelen och imaginärdelen. Typen `complex_t` definieras med `typedef struct` och har fälten `re` och `im`, båda av typen `double`:
 
-| Funktion | Ger |
-|----------|-----|
-| `creal(z)` | Realdelen av $z$. |
-| `cimag(z)` | Imaginärdelen av $z$. |
-| `cabs(z)` | Beloppet $\|z\|$. |
-| `carg(z)` | Argumentet i radianer, mellan $-\pi$ och $\pi$. |
-| `cexp(z)` | $e^z$. Talet $r\angle\theta$ skrivs därför `r * cexp(I * theta)`, med $\theta$ i radianer. |
+```c
+/**
+ * @brief Complex number structure.
+ */
+typedef struct
+{
+    /** Real part (3 in z = 3 + j4). */
+    double re;
 
-Konstanten `M_PI` för $\pi$ finns i `math.h`.
+    /** Imaginary part (4 in z = 3 + j4). */
+    double im;
+} complex_t;
+```
+
+* `typedef` ger strukten aliaset `complex_t`, så att vi slipper skriva `struct` varje gång vi använder den. Suffixet `_t` visar att namnet är ett alias, precis som i `uint8_t` från `stdint.h`.
+* Talet $3 + j4$ skapas med `const complex_t z = {3.0, 4.0};`, eller tydligare med `const complex_t z = {.re = 3.0, .im = 4.0};`. Fälten nås med punkt: `z.re` och `z.im`.
+* Struktar skickas till funktioner via en **pekare** (`complex_t*`), det vill säga struktens minnesadress, så att hela strukten inte behöver kopieras vid varje anrop. Huvudskälet är effektivitet. Här spelar det knappt någon roll, eftersom två `double` tar $2 \cdot 64$ bitar medan en pekare tar $64$ bitar, men för större struktar blir skillnaden betydande.
+* Parametertypen `const complex_t*` anger att funktionen inte ändrar talet.
+* I anropet ges adressen med `&`, till exempel `complex_magnitude(&z)`. Inne i funktionen nås fälten med pil: `z->re` och `z->im`.
+* En `complex_t` kan däremot returneras direkt, som i `complex_from_polar()`. Ett nytt tal måste ändå skapas, så det är enklare att göra det inuti funktionen än att låta anroparen skapa en variabel och skicka in dess adress.
+
+Funktionerna `sqrt()`, `sin()`, `cos()`, `atan()` och `atan2()` samt konstanten `M_PI` för $\pi$ finns i `math.h`. De trigonometriska funktionerna räknar i radianer.
 
 ### 4.1 – Polär form i C
 Talen $z_1 = 3 + j4$ och $z_2 = -2 - j3$ från teorin samt $z_3 = 10\angle 45^{\circ}$ är givna.
 
 **a)** Ange $z_1$ och $z_2$ på polär form, med argumentet i grader, och $z_3$ på rektangulär form. Räkna för hand.
 
-**b)** Skriv ett program som skriver ut samtliga tal på både rektangulär och polär form, med argumentet i grader. Skriv $z_3$ som `10.0 * cexp(I * M_PI / 4.0)`. Ledning: skriv en funktion `void print_polar(double complex z)` som gör utskriften, och anropa den en gång per tal.
+**b)** Definiera `complex_t` enligt ovan och skriv följande funktioner:
 
-**c)** Beräkna även `atan(cimag(z) / creal(z))` för $z_2$ och omvandla svaret till grader. Varför blir det fel, och varför behövs ingen kvadrantkorrigering med `carg()`?
+* `double complex_magnitude(const complex_t* z)`, som returnerar beloppet $|z|$.
+* `double complex_angle_deg(const complex_t* z)`, som returnerar argumentet i grader, beräknat med `atan2(z->im, z->re)`.
+* `complex_t complex_from_polar(double r, double deg)`, som returnerar talet $r\angle\theta$ på rektangulär form.
+* `void complex_print(const complex_t* z)`, som skriver ut talet på både rektangulär och polär form, med argumentet i grader.
+
+Skriv $z_3$ som `complex_from_polar(10.0, 45.0)` och anropa `complex_print()` en gång per tal.
+
+**c)** Beräkna även `atan(z2.im / z2.re)` för $z_2$ och omvandla svaret till grader. Varför blir det fel, och varför ger `atan2()` rätt kvadrant?
 
 ---

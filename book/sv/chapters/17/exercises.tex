@@ -242,7 +242,8 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
 \uppgiftsdel{Del 4}{Matematik i C}
 Läraren visar uppgiften nedan under lektionen, i VS Code och med \code{make}. Du kan också göra den
 själv i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
-på \textbf{C}. Funktionerna i \file{complex.h} beskrivs i \uppref[15]{4.1} i kapitel~15.
+på \textbf{C}. Strukten \code{complex_t} och funktionerna från \uppref[15]{4.1} i kapitel~15 används
+även här.
 
 \uppgift{4.1}{Fasoraddition i C}
 Uppgiften kontrollerar typexemplet i \secref{c17:sec:typexempel}, där sinusspänningarna
@@ -254,9 +255,10 @@ adderas med fasorer.
 \begin{parts}
   \item Ange fasorerna $U_1$ och $U_2$ på rektangulär form, och beräkna $U_{tot} = U_1 + U_2$ på
     både rektangulär och polär form. Räkna för hand.
-  \item Skriv ett program som beräknar $U_{tot}$ med \file{complex.h} och skriver ut summan på
-    rektangulär och polär form, med argumentet i grader. Skriv fasorerna som
-    \code{2.0 * cexp(I * M_PI / 4.0)} och \code{3.0 * cexp(-I * M_PI / 3.0)}.
+  \item Skriv funktionen \code{complex_t complex_add(const complex_t* a, const complex_t* b)}, som
+    returnerar summan av två komplexa tal. Skapa fasorerna med \code{complex_from_polar(2.0, 45.0)}
+    och \code{complex_from_polar(3.0, -60.0)}, lagra dem i varsin variabel och beräkna $U_{tot}$.
+    Skriv ut summan på rektangulär och polär form, med argumentet i grader.
   \item Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med \code{sin()}. Jämför med
     imaginärdelen av $U_{tot}$, och förklara varför de är lika.
 \end{parts}

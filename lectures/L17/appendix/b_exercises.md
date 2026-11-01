@@ -305,7 +305,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Funktionerna i `complex.h` beskrivs i L15, uppgift 4.1.
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Strukten `complex_t` och funktionerna från L15, uppgift 4.1, används även här.
 
 ### 4.1 – Fasoraddition i C
 Uppgiften kontrollerar lektionens demonstration, där sinusspänningarna
@@ -318,7 +318,7 @@ adderas med fasorer.
 
 **a)** Ange fasorerna $U_1$ och $U_2$ på rektangulär form, och beräkna $U_{tot} = U_1 + U_2$ på både rektangulär och polär form. Räkna för hand.
 
-**b)** Skriv ett program som beräknar $U_{tot}$ med `complex.h` och skriver ut summan på rektangulär och polär form, med argumentet i grader. Skriv fasorerna som `2.0 * cexp(I * M_PI / 4.0)` och `3.0 * cexp(-I * M_PI / 3.0)`.
+**b)** Skriv funktionen `complex_t complex_add(const complex_t* a, const complex_t* b)`, som returnerar summan av två komplexa tal. Skapa fasorerna med `complex_from_polar(2.0, 45.0)` och `complex_from_polar(3.0, -60.0)`, lagra dem i varsin variabel och beräkna $U_{tot}$. Skriv ut summan på rektangulär och polär form, med argumentet i grader.
 
 **c)** Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med `sin()`. Jämför med imaginärdelen av $U_{tot}$, och förklara varför de är lika.
 

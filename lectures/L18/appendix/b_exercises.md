@@ -420,7 +420,7 @@ make
 Utan någon implementation i `lin_reg_optimize()` tränas modellen inte alls, så samtliga prediktioner blir $0$ tills uppgift 6.2 är genomförd.
 
 ### Struktar i C
-En **strukt** (`struct`), även kallat struktur, samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två flyttal:
+En **strukt** (`struct`), som `complex_t` i L15–L17, samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två flyttal:
 
 ```c
 typedef struct

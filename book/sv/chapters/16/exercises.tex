@@ -210,14 +210,18 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
 \uppgiftsdel{Del 4}{Matematik i C}
 Läraren visar uppgiften nedan under lektionen, i VS Code och med \code{make}. Du kan också göra den
 själv i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
-på \textbf{C}. Funktionerna i \file{complex.h} beskrivs i \uppref[15]{4.1} i kapitel~15.
+på \textbf{C}. Strukten \code{complex_t} och funktionerna från \uppref[15]{4.1} i kapitel~15 används
+även här.
 
 \uppgift{4.1}{Rotation med $j$ i C}
 Uppgiften bygger vidare på \uppref{3.14}. Talet $z = 3 + j4$ är givet.
 \begin{parts}
   \item Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
-  \item Skriv ett program som multiplicerar $z$ med $j$ fyra gånger i en loop, med
-    \code{z *= I;}. Skriv ut talet på rektangulär form och dess argument i grader före den första
-    multiplikationen och efter varje multiplikation.
+  \item Visa att $j(a + jb) = -b + ja$. Skriv sedan funktionen \code{complex_t
+    complex_rotate_j(const complex_t* z)}, som returnerar $jz$. Multiplicera $z$ med $j$ fyra gånger
+    i en loop, med \code{z = complex_rotate_j(&z);}. Skriv ut talet på rektangulär form och dess
+    argument i grader före den första multiplikationen och efter varje multiplikation.
   \item Hur mycket ändras argumentet vid varje multiplikation? Varför blir $j^4 z = z$?
+  \item Ändra anropet till \code{complex_rotate_j(&z);}, utan \code{z =}. Vad skrivs ut nu? Förklara
+    varför, utifrån att parametern är \code{const complex_t*}.
 \end{parts}

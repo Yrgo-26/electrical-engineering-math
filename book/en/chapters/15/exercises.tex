@@ -209,22 +209,47 @@ The teacher shows the exercise below during the lesson, in VS Code and with \cod
 also do it yourself in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with
 the language set to \textbf{C}.
 
-In C, complex numbers are in the standard library \file{complex.h}. A complex number has the type
-\code{double complex}, and the imaginary unit is written \code{I}, so the number $3 + j4$ is
-written \code{3.0 + 4.0 * I}. The following functions are used:
+\needspace{16\baselineskip}
+In the exercise below, a complex number is written as a \textbf{struct} of its own. A struct gathers
+several variables that belong together under one name, here the real part and the imaginary part.
+The type \code{complex_t} is defined with \code{typedef struct} and has the fields \code{re} and
+\code{im}, both of type \code{double}:
+\begin{ccode}
+/**
+ * @brief Complex number structure.
+ */
+typedef struct
+{
+    /** Real part (3 in z = 3 + j4). */
+    double re;
 
-\begin{booktable}{@{}>{\raggedright\arraybackslash}p{6em}L@{}}
-  \thead{Function} & \thead{Gives} \\
-  \midrule
-  \code{creal(z)} & The real part of $z$. \\
-  \code{cimag(z)} & The imaginary part of $z$. \\
-  \code{cabs(z)} & The modulus $\abs{z}$. \\
-  \code{carg(z)} & The argument in radians, between $-\pi$ and $\pi$. \\
-  \code{cexp(z)} & $e^z$. The number $r\,\angle\,\theta$ is therefore written
-    \code{r * cexp(I * theta)}, with $\theta$ in radians. \\
-\end{booktable}
+    /** Imaginary part (4 in z = 3 + j4). */
+    double im;
+} complex_t;
+\end{ccode}
+\begin{itemize}
+  \item \code{typedef} gives the struct the alias \code{complex_t}, so that we do not have to write
+    \code{struct} every time we use it. The suffix \code{_t} shows that the name is an alias, just
+    as in \code{uint8_t} from \file{stdint.h}.
+  \item The number $3 + j4$ is created with \code{const complex_t z = \{3.0, 4.0\};}, or more
+    clearly with \code{const complex_t z = \{.re = 3.0, .im = 4.0\};}. The fields are reached with a
+    dot: \code{z.re} and \code{z.im}.
+  \item Structs are passed to functions through a \textbf{pointer} (\code{complex_t*}), that is, the
+    memory address of the struct, so that the whole struct does not have to be copied on every call.
+    The main reason is efficiency. Here it hardly matters, since two \code{double}s take $2 \cdot
+    64$ bits while a pointer takes $64$ bits, but for larger structs the difference becomes
+    significant.
+  \item The parameter type \code{const complex_t*} says that the function does not change the
+    number.
+  \item In the call, the address is given with \code{&}, for example \code{complex_magnitude(&z)}.
+    Inside the function, the fields are reached with an arrow: \code{z->re} and \code{z->im}.
+  \item A \code{complex_t} can, however, be returned directly, as in \code{complex_from_polar()}. A
+    new number has to be created anyway, so it is simpler to do that inside the function than to
+    have the caller create a variable and pass its address.
+\end{itemize}
 
-The constant \code{M_PI} for $\pi$ is in \file{math.h}.
+The functions \code{sqrt()}, \code{sin()}, \code{cos()}, \code{atan()} and \code{atan2()} and the
+constant \code{M_PI} for $\pi$ are in \file{math.h}. The trigonometric functions work in radians.
 
 \uppgift{4.1}{Polar form in C}
 The numbers $z_1 = 3 + j4$ and $z_2 = -2 - j3$ from \secref{c15:sec:typexempel} and
@@ -232,9 +257,13 @@ $z_3 = 10\,\angle\,45^{\circ}$ are given.
 \begin{parts}
   \item Give $z_1$ and $z_2$ in polar form, with the argument in degrees, and $z_3$ in rectangular
     form. Calculate by hand.
-  \item Write a program that prints all the numbers in both rectangular and polar form, with the
-    argument in degrees. Write $z_3$ as \code{10.0 * cexp(I * M_PI / 4.0)}. Hint: write a function
-    \code{void print_polar(double complex z)} that does the printing, and call it once per number.
-  \item Also compute \code{atan(cimag(z) / creal(z))} for $z_2$ and convert the answer to degrees.
-    Why is it wrong, and why is no quadrant correction needed with \code{carg()}?
+  \item Define \code{complex_t} and write the functions \code{double complex_magnitude(const
+    complex_t* z)}, which returns the modulus $\abs{z}$, \code{double complex_angle_deg(const
+    complex_t* z)}, which returns the argument in degrees, computed with \code{atan2(z->im, z->re)},
+    \code{complex_t complex_from_polar(double r, double deg)}, which returns the number
+    $r\,\angle\,\theta$ in rectangular form, and \code{void complex_print(const complex_t* z)},
+    which prints the number in both rectangular and polar form, with the argument in degrees. Write
+    $z_3$ as \code{complex_from_polar(10.0, 45.0)} and call \code{complex_print()} once per number.
+  \item Also compute \code{atan(z2.im / z2.re)} for $z_2$ and convert the answer to degrees. Why is
+    it wrong, and why does \code{atan2()} give the right quadrant?
 \end{parts}

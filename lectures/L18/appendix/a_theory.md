@@ -244,7 +244,7 @@ För ett förstagradspolynom ger trapetsmetoden ett **exakt** resultat, eftersom
 ---
 
 ## 8. Komplexa tal med complex.h
-Komplexa tal (L15–L17) hanteras av `complex.h`, som används tillsammans med `math.h`:
+I L15–L17 skrevs komplexa tal som en egen strukt, `complex_t`. Standardbiblioteket `complex.h` har i stället en färdig typ och används tillsammans med `math.h`:
 
 ```c
 #include <complex.h>

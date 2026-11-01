@@ -212,15 +212,18 @@ Decide whether each statement is true or false, and justify your answer briefly.
 \uppgiftsdel{Part 4}{Mathematics in C}
 The teacher shows the exercise below during the lesson, in VS Code and with \code{make}. You can
 also do it yourself in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with
-the language set to \textbf{C}. The functions in \file{complex.h} are described in \uppref[15]{4.1}
-of Chapter~15.
+the language set to \textbf{C}. The struct \code{complex_t} and the functions from \uppref[15]{4.1}
+of Chapter~15 are also used here.
 
 \uppgift{4.1}{Rotation by $j$ in C}
 The exercise builds on \uppref{3.14}. The number $z = 3 + j4$ is given.
 \begin{parts}
   \item Compute $jz$, $j^2 z$, $j^3 z$ and $j^4 z$ by hand.
-  \item Write a program that multiplies $z$ by $j$ four times in a loop, with \code{z *= I;}. Print
-    the number in rectangular form and its argument in degrees before the first multiplication
-    and after each multiplication.
+  \item Show that $j(a + jb) = -b + ja$. Then write the function \code{complex_t
+    complex_rotate_j(const complex_t* z)}, which returns $jz$. Multiply $z$ by $j$ four times in a
+    loop, with \code{z = complex_rotate_j(&z);}. Print the number in rectangular form and its
+    argument in degrees before the first multiplication and after each multiplication.
   \item How much does the argument change with each multiplication? Why is $j^4 z = z$?
+  \item Change the call to \code{complex_rotate_j(&z);}, without \code{z =}. What is printed now?
+    Explain why, given that the parameter is \code{const complex_t*}.
 \end{parts}

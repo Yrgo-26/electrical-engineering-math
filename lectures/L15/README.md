@@ -33,7 +33,7 @@
 ## Demonstration
 * Omvandling av spänning från rektangulär till polär form: $U = 3 + j4\thinspace\text{V}$.
 * Omvandling från ström polär till rektangulär form: $I = 10\thinspace\angle\thinspace\dfrac{\pi}{4}\thinspace\text{mA}$.
-* Polär form i C med `complex.h`, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+* Polär form i C med en egen strukt, `complex_t`, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
 
 ---
 

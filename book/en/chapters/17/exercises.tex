@@ -243,8 +243,8 @@ Decide whether each statement is true or false, and justify your answer briefly.
 \uppgiftsdel{Part 4}{Mathematics in C}
 The teacher shows the exercise below during the lesson, in VS Code and with \code{make}. You can
 also do it yourself in \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, with
-the language set to \textbf{C}. The functions in \file{complex.h} are described in \uppref[15]{4.1}
-of Chapter~15.
+the language set to \textbf{C}. The struct \code{complex_t} and the functions from \uppref[15]{4.1}
+of Chapter~15 are also used here.
 
 \uppgift{4.1}{Phasor addition in C}
 The exercise checks the worked example in \secref{c17:sec:typexempel}, where the sinusoidal
@@ -257,9 +257,11 @@ are added with phasors.
 \begin{parts}
   \item Give the phasors $U_1$ and $U_2$ in rectangular form, and compute $U_{tot} = U_1 + U_2$ in
     both rectangular and polar form. Calculate by hand.
-  \item Write a program that computes $U_{tot}$ with \file{complex.h} and prints the sum in
-    rectangular and polar form, with the argument in degrees. Write the phasors as
-    \code{2.0 * cexp(I * M_PI / 4.0)} and \code{3.0 * cexp(-I * M_PI / 3.0)}.
+  \item Write the function \code{complex_t complex_add(const complex_t* a, const complex_t* b)},
+    which returns the sum of two complex numbers. Create the phasors with
+    \code{complex_from_polar(2.0, 45.0)} and \code{complex_from_polar(3.0, -60.0)}, store them in a
+    variable each and compute $U_{tot}$. Print the sum in rectangular and polar form, with the
+    argument in degrees.
   \item Extend the program so that it also computes $u_1(0) + u_2(0)$ with \code{sin()}. Compare
     with the imaginary part of $U_{tot}$, and explain why they are equal.
 \end{parts}

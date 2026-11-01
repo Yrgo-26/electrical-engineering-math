@@ -275,15 +275,17 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Funktionerna i `complex.h` beskrivs i L15, uppgift 4.1.
+Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Strukten `complex_t` och funktionerna från L15, uppgift 4.1, används även här.
 
 ### 4.1 – Rotation med $j$ i C
 Uppgiften bygger vidare på uppgift 3.14. Talet $z = 3 + j4$ är givet.
 
 **a)** Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
 
-**b)** Skriv ett program som multiplicerar $z$ med $j$ fyra gånger i en loop, med `z *= I;`. Skriv ut talet på rektangulär form och dess argument i grader före den första multiplikationen och efter varje multiplikation.
+**b)** Visa att $j(a + jb) = -b + ja$. Skriv sedan funktionen `complex_t complex_rotate_j(const complex_t* z)`, som returnerar $jz$. Multiplicera $z$ med $j$ fyra gånger i en loop, med `z = complex_rotate_j(&z);`. Skriv ut talet på rektangulär form och dess argument i grader före den första multiplikationen och efter varje multiplikation.
 
 **c)** Hur mycket ändras argumentet vid varje multiplikation? Varför blir $j^4 z = z$?
+
+**d)** Ändra anropet till `complex_rotate_j(&z);`, utan `z =`. Vad skrivs ut nu? Förklara varför, utifrån att parametern är `const complex_t*`.
 
 ---
