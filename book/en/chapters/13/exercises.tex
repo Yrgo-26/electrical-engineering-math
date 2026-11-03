@@ -287,4 +287,11 @@ because a function can be passed as an argument to another function, using a
     $\ln 2$ using \code{log(2.0)} on each line. What happens to the ratio when $x$ changes, and
     what separates $2^x$ from $e^x$? What had to change in \code{derive()} to differentiate this
     function?
+  \item \code{log10()} in \file{math.h} gives the common logarithm $\log_{10} x$ and matches
+    \code{math_func_t}, so it can be passed directly to \code{derive()}, like \code{sin()}. Note
+    that \code{log()} gives the natural logarithm $\ln x$. Let $x$ run from $1$ to $5$, call
+    \code{derive(log10, x)} and print $x$, the slope and $\dfrac{1}{x \ln 10}$, computed with
+    \code{1.0 / (x * log(10.0))}, on each line. Does the slope match $f'(x) = \dfrac{1}{x \ln 10}$?
+    Explain the factor $\ln 10$ using $\log_{10} x = \dfrac{\ln x}{\ln 10}$. Why can $x$ not start
+    at $0$?
 \end{parts}

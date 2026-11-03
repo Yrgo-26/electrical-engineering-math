@@ -102,6 +102,9 @@ $v = 0$, så $\frac{d}{dv}\sin v = \cos v$.
 \sv{d} Kvoten är $0{,}693147 = \ln 2$ för alla $x$, eftersom $\frac{d}{dx}2^x = 2^x \ln 2$. För
 $e^x$ är faktorn $\ln e = 1$, så $e^x$ är sin egen derivata. Ingenting behövde ändras i
 \code{derive()}, bara argumentet i anropet.
+\sv{e} Lutningen stämmer med $\frac{1}{x \ln 10}$, till exempel $0{,}434294$ för $x = 1$ och
+$0{,}0868589$ för $x = 5$. Eftersom $\log_{10} x = \frac{\ln x}{\ln 10}$ blir derivatan
+$\frac{1}{\ln 10} \cdot \frac{1}{x}$. För $x = 0$ är $\log_{10} x$ inte definierad.
 
 \svar[Testa dig själv]{T} \sv{1} $f'(x) = 2e^{2x} + \frac{1}{x}$
 \sv{2} $f'(\pi/2) = \cos(\pi/2) = 0$

@@ -350,4 +350,6 @@ Skriv funktionen `double derive(math_func_t f, double x)`, som returnerar närme
 
 **d)** `pow()` tar två argument och stämmer därför inte med `math_func_t`, så den kan inte skickas direkt till `derive()`. Skriv funktionen `double two_x(double x)`, som returnerar $2^x$ med `pow(2.0, x)`. Låt $x$ gå från $0$ till $4$, anropa `derive(two_x, x)` och skriv ut $x$, lutningen, $2^x$, kvoten mellan lutningen och $2^x$ samt $\ln 2$ med `log(2.0)` på varje rad. Vad händer med kvoten när $x$ ändras, och vad skiljer $2^x$ från $e^x$? Vad behövde ändras i `derive()` för att derivera den här funktionen?
 
+**e)** `log10()` i `math.h` ger tiologaritmen $\log_{10} x$ och stämmer med `math_func_t`, så den kan skickas direkt till `derive()`, som `sin()`. Observera att `log()` ger den naturliga logaritmen $\ln x$. Låt $x$ gå från $1$ till $5$, anropa `derive(log10, x)` och skriv ut $x$, lutningen och $\dfrac{1}{x \ln 10}$, beräknat med `1.0 / (x * log(10.0))`, på varje rad. Stämmer lutningen med $f'(x) = \dfrac{1}{x \ln 10}$? Förklara faktorn $\ln 10$ med hjälp av att $\log_{10} x = \dfrac{\ln x}{\ln 10}$. Varför kan $x$ inte börja på $0$?
+
 ---

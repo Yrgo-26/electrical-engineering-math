@@ -283,4 +283,11 @@ en funktion kan skickas som argument till en annan funktion, med hjälp av en
     samt $\ln 2$ med \code{log(2.0)} på varje rad. Vad händer med kvoten när $x$ ändras, och vad
     skiljer $2^x$ från $e^x$? Vad behövde ändras i \code{derive()} för att derivera den här
     funktionen?
+  \item \code{log10()} i \file{math.h} ger tiologaritmen $\log_{10} x$ och stämmer med
+    \code{math_func_t}, så den kan skickas direkt till \code{derive()}, som \code{sin()}. Observera
+    att \code{log()} ger den naturliga logaritmen $\ln x$. Låt $x$ gå från $1$ till $5$, anropa
+    \code{derive(log10, x)} och skriv ut $x$, lutningen och $\dfrac{1}{x \ln 10}$, beräknat med
+    \code{1.0 / (x * log(10.0))}, på varje rad. Stämmer lutningen med $f'(x) = \dfrac{1}{x \ln 10}$?
+    Förklara faktorn $\ln 10$ med hjälp av att $\log_{10} x = \dfrac{\ln x}{\ln 10}$. Varför kan $x$
+    inte börja på $0$?
 \end{parts}

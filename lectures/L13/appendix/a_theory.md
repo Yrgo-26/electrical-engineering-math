@@ -31,7 +31,7 @@ f(x) = 3\sin(2x) \quad \Rightarrow \quad f'(x) = 3 \cdot 2\cos(2x) = 6\cos(2x)
 \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} = e^x \cdot 1 = e^x
 ```
 
-**Varför just $e$?** Alla exponentialfunktioner har en derivata som är proportionell mot funktionen själv, $\frac{d}{dx}a^x = a^x \ln a$, men faktorn $\ln a$ beror på basen:
+**Varför just $e$?** Alla exponentialfunktioner har en derivata som är proportionell mot funktionen själv, $\frac{d}{dx}a^x = a^x \ln a$ (härleds i avsnitt 4), men faktorn $\ln a$ beror på basen:
 
 | Bas $a$ | Faktor $\ln a$ |
 |---------|----------------|
@@ -56,6 +56,14 @@ Inom elektrotekniken dyker $e$ upp eftersom många storheter ändras i takt med 
 | $\log_{10}(x)$ | $\dfrac{1}{x \ln 10}$ |
 
 **OBS!** $\ln(kx) = \ln k + \ln x$, vars derivata $= 1/x$ (konstanten $\ln k$ försvinner).
+
+**Varför $\ln 10$?** Varje logaritm kan skrivas om med den naturliga logaritmen: $\log_{10} x = \dfrac{\ln x}{\ln 10}$. Eftersom $\ln 10 \approx 2{,}303$ är en konstant blir
+
+```math
+\frac{d}{dx}\log_{10} x = \frac{1}{\ln 10} \cdot \frac{d}{dx}\ln x = \frac{1}{\ln 10} \cdot \frac{1}{x} = \frac{1}{x \ln 10}
+```
+
+På samma sätt gäller $\dfrac{d}{dx}\log_a x = \dfrac{1}{x \ln a}$ för varje bas $a > 0$, $a \neq 1$.
 
 ---
 
@@ -94,6 +102,32 @@ Tabellraderna för $\sin(kx)$, $\cos(kx)$, $e^{kx}$ och $\ln(kx)$ ovan är speci
 
 ```math
 \frac{d}{dx}\sin(kx) = \cos(kx) \cdot k = k\cos(kx), \qquad \frac{d}{dx}\ln(kx) = \frac{1}{kx} \cdot k = \frac{1}{x}
+```
+
+**Exempel: derivatan av $a^x$.** Eftersom $a = e^{\ln a}$ kan $a^x$ skrivas som $a^x = e^{x \ln a}$. Den yttre funktionen är $e^u$ och den inre funktionen $u = x \ln a$, med $u' = \ln a$ eftersom $\ln a$ är en konstant:
+
+```math
+\frac{d}{dx}a^x = e^{x \ln a} \cdot \ln a = a^x \ln a
+```
+
+Faktorn $\ln a$ i avsnitt 2 kommer alltså från kedjeregeln. För $a = e$ blir den $\ln e = 1$.
+
+**Exempel: produktregeln och kedjeregeln tillsammans.** En kvot som $f(x) = \dfrac{2x}{x + 5}$ kan skrivas som en produkt:
+
+```math
+f(x) = 2x \cdot (x + 5)^{-1}
+```
+
+Faktorn $(x + 5)^{-1}$ deriveras med kedjeregeln, med den yttre funktionen $u^{-1}$ och den inre funktionen $u = x + 5$, där $u' = 1$:
+
+```math
+\frac{d}{dx}(x + 5)^{-1} = -(x + 5)^{-2} \cdot 1 = -\frac{1}{(x + 5)^2}
+```
+
+Produktregeln ger sedan
+
+```math
+f'(x) = 2 \cdot \frac{1}{x + 5} + 2x \cdot \left(-\frac{1}{(x + 5)^2}\right) = \frac{2(x + 5) - 2x}{(x + 5)^2} = \frac{10}{(x + 5)^2}
 ```
 
 ---

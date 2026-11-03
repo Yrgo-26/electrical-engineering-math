@@ -101,6 +101,9 @@ $\frac{d}{dv}\sin v = \cos v$.
 \sv{d} The ratio is $0.693147 = \ln 2$ for all $x$, since $\frac{d}{dx}2^x = 2^x \ln 2$. For
 $e^x$ the factor is $\ln e = 1$, so $e^x$ is its own derivative. Nothing had to change in
 \code{derive()}, only the argument in the call.
+\sv{e} The slope matches $\frac{1}{x \ln 10}$, for example $0.434294$ for $x = 1$ and $0.0868589$
+for $x = 5$. Since $\log_{10} x = \frac{\ln x}{\ln 10}$, the derivative is $\frac{1}{\ln 10} \cdot
+\frac{1}{x}$. At $x = 0$, $\log_{10} x$ is not defined.
 
 \svar[Test yourself]{T} \sv{1} $f'(x) = 2e^{2x} + \frac{1}{x}$
 \sv{2} $f'(\pi/2) = \cos(\pi/2) = 0$
