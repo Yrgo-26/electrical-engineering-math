@@ -32,7 +32,7 @@
 ---
 
 ## Demonstration
-* Derivatan av $e^x$ och $\sin v$ i C: en derivatafunktion som tar funktionen som argument via en funktionspekare, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md) och [startkoden](./appendix/code/).
+* Derivatan av $e^x$ och $\sin v$ i C: en derivatafunktion som tar funktionen som argument via en funktionspekare, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md) och [kodexemplet](./appendix/code/).
 
 ---
 
