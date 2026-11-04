@@ -14,13 +14,24 @@ efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 1}{Repetitionsuppgifter}
 
-\uppgift{1.1}{Deriveringsregler}
-Derivera följande funktioner.
-\begin{delar}(3)
-  \task $f_1(x) = x^2 \cdot e^{4x}$
-  \task $f_2(x) = x^3 \cdot \ln 2x$
-  \task $f_3(x) = \dfrac{x^3}{\ln x^2}$
-\end{delar}
+\uppgift{1.1}{Urladdning av kondensator}
+Spänningen över en kondensator som laddas ur ges av funktionen
+\[
+  u(t) = 24e^{-0{,}25t},
+\]
+där $u(t)$ är spänningen över kondensatorn i V och $t$ tiden i sekunder. Funktionen är sammansatt,
+så den deriveras med \textbf{kedjeregeln}: om $f(t) = g(u(t))$ är
+\[
+  f'(t) = g'(u(t)) \cdot u'(t),
+\]
+alltså den yttre funktionens derivata, beräknad i den inre funktionen, gånger den inre
+funktionens derivata. Här är den yttre funktionen $24e^{u}$ och den inre funktionen $-0{,}25t$.
+\begin{parts}
+  \item Derivera funktionen och bestäm uttrycket för $u'(t)$.
+  \item Beräkna spänningens förändringshastighet vid $t = 4\,\text{s}$.
+  \item Bestäm $u''(4)$. Ökar eller minskar förändringshastigheten i denna punkt, och vad innebär
+    det för urladdningen?
+\end{parts}
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 2}{Nytt stoff}

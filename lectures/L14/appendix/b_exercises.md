@@ -2,12 +2,22 @@
 
 ## Del 1 - Repetitionsuppgifter
 
-### 1.1 - Deriveringsregler
+### 1.1 - Urladdning av kondensator
+Spänningen över en kondensator som laddas ur ges av funktionen
 
-Derivera följande funktioner:
-* **a)** $f_1(x) = x^2 * e^{4x}$
-* **b)** $f_2(x) = x^3 * \ln 2x$
-* **c)** $f_3(x) = \frac{x^3}{\ln x^2}$
+```math
+u(t) = 24e^{-0{,}25t},
+```
+
+där
+* $u(t)$ = spänningen över kondensatorn i $V$,
+* $t$ = tiden i sekunder.
+
+**a)** Derivera funktionen och bestäm uttrycket för $u'(t)$.
+
+**b)** Beräkna spänningens förändringshastighet vid $t = 4$ $s$.
+
+**c)** Bestäm $u''(4)$. Ökar eller minskar förändringshastigheten i denna punkt, och vad innebär det för urladdningen?
 
 ## Del 2 - Nytt stoff
 
