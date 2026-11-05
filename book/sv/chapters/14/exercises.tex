@@ -19,15 +19,13 @@ Spänningen över en kondensator som laddas ur ges av funktionen
 \[
   u(t) = 24e^{-0{,}25t},
 \]
-där $u(t)$ är spänningen över kondensatorn i V och $t$ tiden i sekunder. Funktionen är sammansatt,
-så den deriveras med \textbf{kedjeregeln}: om $f(t) = g(u(t))$ är
+där $u(t)$ är spänningen över kondensatorn i V och $t$ tiden i sekunder. Derivatans definition
+lyder
 \[
-  f'(t) = g'(u(t)) \cdot u'(t),
+  u'(t) = \lim_{h \to 0} \frac{u(t + h) - u(t)}{h}.
 \]
-alltså den yttre funktionens derivata, beräknad i den inre funktionen, gånger den inre
-funktionens derivata. Här är den yttre funktionen $24e^{u}$ och den inre funktionen $-0{,}25t$.
 \begin{parts}
-  \item Derivera funktionen och bestäm uttrycket för $u'(t)$.
+  \item Bestäm derivatan $u'(t)$ med derivatans definition.
   \item Beräkna spänningens förändringshastighet vid $t = 4\,\text{s}$.
   \item Bestäm $u''(4)$. Ökar eller minskar förändringshastigheten i denna punkt, och vad innebär
     det för urladdningen?

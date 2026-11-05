@@ -13,7 +13,13 @@ där
 * $u(t)$ = spänningen över kondensatorn i $V$,
 * $t$ = tiden i sekunder.
 
-**a)** Derivera funktionen och bestäm uttrycket för $u'(t)$.
+Derivatans definition lyder
+
+```math
+u'(t) = \lim_{h \to 0} \frac{u(t + h) - u(t)}{h}
+```
+
+**a)** Bestäm derivatan $u'(t)$ med derivatans definition.
 
 **b)** Beräkna spänningens förändringshastighet vid $t = 4$ $s$.
 

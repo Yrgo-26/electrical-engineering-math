@@ -3,10 +3,12 @@
 \facitavsnitt{c14}{Chapter 14}{Integrals}
 \begin{facit}
 
-\svar{1.1} \sv{a} $u'(t) = 24e^{-0.25t} \cdot (-0.25) = -6e^{-0.25t}$
+\svar{1.1} \sv{a} $\dfrac{24e^{-0.25t - 0.25h} - 24e^{-0.25t}}{h}
+= 24e^{-0.25t} \cdot \dfrac{e^{-0.25h} - 1}{h} \to 24e^{-0.25t} \cdot (-0.25)$, so
+$u'(t) = -6e^{-0.25t}$
 \sv{b} $u'(4) = -6e^{-1} \approx -2.21\,\text{V/s}$
-\sv{c} $u''(t) = 1.5e^{-0.25t}$, so $u''(4) \approx 0.552\,\text{V/s}^2 > 0$. The rate of change is
-increasing, that is, the voltage falls more and more slowly.
+\sv{c} $u''(t) = 1.5e^{-0.25t}$, so $u''(4) \approx 0.552\,\text{V/s}^2 > 0$. The rate of change
+is increasing, that is, the voltage falls more and more slowly.
 
 \svar{2.1} \sv{a} $p(t) = 5t\,\text{W}$ \sv{b} $P(t) = \frac{5t^2}{2} + C$
 \sv{c} $w(t) = \frac{5t^2}{2} + C$, the same expression as $P(t)$.

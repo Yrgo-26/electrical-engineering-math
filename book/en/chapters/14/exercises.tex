@@ -19,16 +19,13 @@ The voltage across a discharging capacitor is given by the function
 \[
   u(t) = 24e^{-0.25t},
 \]
-where $u(t)$ is the voltage across the capacitor in V and $t$ the time in seconds. The function is
-composite, so it is differentiated with the \textbf{chain rule}: if $f(t) = g(u(t))$, then
+where $u(t)$ is the voltage across the capacitor in V and $t$ the time in seconds. The definition
+of the derivative is
 \[
-  f'(t) = g'(u(t)) \cdot u'(t),
+  u'(t) = \lim_{h \to 0} \frac{u(t + h) - u(t)}{h}.
 \]
-that is, the derivative of the outer function, evaluated at the inner function, times the
-derivative of the inner function. Here the outer function is $24e^{u}$ and the inner function
-$-0.25t$.
 \begin{parts}
-  \item Differentiate the function and find the expression for $u'(t)$.
+  \item Find the derivative $u'(t)$ using the definition of the derivative.
   \item Calculate the rate of change of the voltage at $t = 4\,\text{s}$.
   \item Find $u''(4)$. Is the rate of change increasing or decreasing at this point, and what does
     that mean for the discharge?
