@@ -12,9 +12,28 @@ after the lesson. Most of them can be done in your head or with pencil and paper
 \end{aside}
 
 % ------------------------------------------------------------------------------------------
-\uppgiftsdel{Part 1}{The concept of a function, domain and range}
+\uppgiftsdel{Part 1}{Review exercises}
 
-\uppgift{1.1}{Is the relation a function?}
+\uppgift{1.1}{Voltage and current as phasors}
+An alternating voltage $\mathbf{U}$ and an alternating current $\mathbf{I}$ are represented by the
+phasors in the figure below. The voltage is given in V and the current in A.
+\bild[0.45\linewidth]{lectures/L08/appendix/images/1.1_vectors.png}
+\begin{parts}
+  \item Find the coordinates of the phasors.
+  \item Calculate the magnitudes (absolute values) $\abs{\mathbf{U}}$ and $\abs{\mathbf{I}}$.
+  \item Calculate the phase angles $v_U$ and $v_I$ with the positive $x$-axis.
+  \item Calculate the phase shift, that is, the angle $\alpha$ between $\mathbf{U}$ and
+    $\mathbf{I}$.
+  \item The current $\mathbf{I}$ meets a second current $\mathbf{I}_2 = (7, -1)\,\text{A}$ at a
+    node. Calculate the total current $\mathbf{I}_{\text{tot}} = \mathbf{I} + \mathbf{I}_2$ and its
+    magnitude.
+  \item Find a current with the magnitude $10\,\text{A}$ that is in antiphase with $\mathbf{I}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Part 2}{New material}
+
+\uppgift{2.1}{Is the relation a function?}
 Decide whether the current $I$ is a function of the voltage $U$. Justify your answer.
 \begin{parts}
   \item $I = \dfrac{U}{10}$ (Ohm's law for a $10\,\Omega$ resistor)
@@ -24,7 +43,7 @@ Decide whether the current $I$ is a function of the voltage $U$. Justify your an
     3)\rbrace$
 \end{parts}
 
-\uppgift{1.2}{Domain and range}
+\uppgift{2.2}{Domain and range}
 Find the domain and the range.
 \begin{parts}
   \item The temperature sensor \code{TMP36} gives the output voltage $U(T) = 0.01T + 0.5$ (in V) at
@@ -35,7 +54,7 @@ Find the domain and the range.
     $-20 \leq U \leq 20$ (in V).
 \end{parts}
 
-\uppgift{1.3}{Linear resistance of a temperature-dependent resistor}
+\uppgift{2.3}{Linear resistance of a temperature-dependent resistor}
 The resistance $R$ (in $\Omega$) of a certain temperature-dependent resistor depends linearly on
 the temperature $T$ (in $^{\circ}$C) as $R(T) = kT + m$. At $T = 0\,^{\circ}\text{C}$,
 $R = 100\,\Omega$, and at $T = 50\,^{\circ}\text{C}$, $R = 175\,\Omega$.
@@ -44,10 +63,7 @@ $R = 100\,\Omega$, and at $T = 50\,^{\circ}\text{C}$, $R = 175\,\Omega$.
   \item Calculate the resistance at $T = 25\,^{\circ}\text{C}$.
 \end{parts}
 
-% ------------------------------------------------------------------------------------------
-\uppgiftsdel{Part 2}{Types of function and applications}
-
-\uppgift{2.1}{An ageing battery}
+\uppgift{2.4}{An ageing battery}
 A new lithium-ion battery has the capacity $4000\,\text{mAh}$ and loses $3\,\%$ of its capacity a
 year. After $x$ years the capacity is
 \[
@@ -59,7 +75,7 @@ year. After $x$ years the capacity is
     many years does that happen?
 \end{parts}
 
-\uppgift{2.2}{Power as a power function of the current}
+\uppgift{2.5}{Power as a power function of the current}
 The power $P$ (in W) developed in a resistor $R = 50\,\Omega$ depends on the current $I$ (in A)
 as
 \[
@@ -72,7 +88,7 @@ as
     and range of $P(I)$ in this interval.
 \end{parts}
 
-\uppgift{2.3}{Interpreting measurements}
+\uppgift{2.6}{Interpreting measurements}
 A voltage $U(t)$ is measured at several times during a discharge:
 
 \begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}

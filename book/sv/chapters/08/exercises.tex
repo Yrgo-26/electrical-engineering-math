@@ -12,9 +12,27 @@ efter lektionen. De flesta går att räkna i huvudet eller med papper och penna.
 \end{aside}
 
 % ------------------------------------------------------------------------------------------
-\uppgiftsdel{Del 1}{Funktionsbegrepp, definitions- och värdemängd}
+\uppgiftsdel{Del 1}{Repetitionsuppgifter}
 
-\uppgift{1.1}{Är sambandet en funktion?}
+\uppgift{1.1}{Spänning och ström som visare}
+En växelspänning $\mathbf{U}$ och en växelström $\mathbf{I}$ representeras av visarna i figuren
+nedan. Spänningen anges i V och strömmen i A.
+\bild[0.45\linewidth]{lectures/L08/appendix/images/1.1_vectors.png}
+\begin{parts}
+  \item Ta reda på visarnas koordinater.
+  \item Beräkna storlekarna (absolutbeloppen) $\abs{\mathbf{U}}$ och $\abs{\mathbf{I}}$.
+  \item Beräkna fasvinklarna $v_U$ och $v_I$ mot den positiva $x$-axeln.
+  \item Beräkna fasförskjutningen, alltså vinkeln $\alpha$ mellan $\mathbf{U}$ och $\mathbf{I}$.
+  \item Strömmen $\mathbf{I}$ möts i en nod av en andra ström
+    $\mathbf{I}_2 = (7;\, -1)\,\text{A}$. Beräkna den totala strömmen
+    $\mathbf{I}_{\text{tot}} = \mathbf{I} + \mathbf{I}_2$ och dess storlek.
+  \item Bestäm en ström med storleken $10\,\text{A}$ som är i motfas med $\mathbf{I}$.
+\end{parts}
+
+% ------------------------------------------------------------------------------------------
+\uppgiftsdel{Del 2}{Nytt stoff}
+
+\uppgift{2.1}{Är sambandet en funktion?}
 Avgör om strömmen $I$ är en funktion av spänningen $U$. Motivera ditt svar.
 \begin{parts}
   \item $I = \dfrac{U}{10}$ (Ohms lag för ett $10\,\Omega$-motstånd)
@@ -23,7 +41,7 @@ Avgör om strömmen $I$ är en funktion av spänningen $U$. Motivera ditt svar.
   \item Mätparen $(U, I)$ med $U$ i V och $I$ i mA: $\lbrace(1, 2),\ (1, 5),\ (2, 3)\rbrace$
 \end{parts}
 
-\uppgift{1.2}{Definitions- och värdemängd}
+\uppgift{2.2}{Definitions- och värdemängd}
 Bestäm definitionsmängden och värdemängden.
 \begin{parts}
   \item Temperatursensorn \code{TMP36} ger utspänningen $U(T) = 0{,}01T + 0{,}5$ (i V) vid
@@ -34,7 +52,7 @@ Bestäm definitionsmängden och värdemängden.
     \leq U \leq 20$ (i V).
 \end{parts}
 
-\uppgift{1.3}{Linjär resistans hos en temperaturberoende resistor}
+\uppgift{2.3}{Linjär resistans hos en temperaturberoende resistor}
 Resistansen $R$ (i $\Omega$) hos en viss temperaturberoende resistor beror linjärt på temperaturen
 $T$ (i $^{\circ}$C) enligt $R(T) = kT + m$. Vid $T = 0\,^{\circ}\text{C}$ är $R = 100\,\Omega$, och
 vid $T = 50\,^{\circ}\text{C}$ är $R = 175\,\Omega$.
@@ -43,10 +61,7 @@ vid $T = 50\,^{\circ}\text{C}$ är $R = 175\,\Omega$.
   \item Beräkna resistansen vid $T = 25\,^{\circ}\text{C}$.
 \end{parts}
 
-% ------------------------------------------------------------------------------------------
-\uppgiftsdel{Del 2}{Funktionstyper och tillämpningar}
-
-\uppgift{2.1}{Ett batteri som åldras}
+\uppgift{2.4}{Ett batteri som åldras}
 Ett nytt litiumjonbatteri har kapaciteten $4000\,\text{mAh}$ och förlorar $3\,\%$ av kapaciteten
 per år. Efter $x$ år är kapaciteten
 \[
@@ -58,7 +73,7 @@ per år. Efter $x$ år är kapaciteten
     många år händer det?
 \end{parts}
 
-\uppgift{2.2}{Effekt som potensfunktion av strömmen}
+\uppgift{2.5}{Effekt som potensfunktion av strömmen}
 Effekten $P$ (i W) som utvecklas i ett motstånd $R = 50\,\Omega$ beror på strömmen $I$ (i A)
 enligt
 \[
@@ -71,7 +86,7 @@ enligt
     definitions- och värdemängd för $P(I)$ inom detta intervall.
 \end{parts}
 
-\uppgift{2.3}{Tolkning av mätvärden}
+\uppgift{2.6}{Tolkning av mätvärden}
 En spänning $U(t)$ mäts vid flera tidpunkter under en urladdning:
 
 \begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.2em}}@{}}
