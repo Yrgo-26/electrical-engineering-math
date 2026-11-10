@@ -7,21 +7,20 @@ Skriftlig salstentamen. Alla uppgifter kräver redovisade lösningar och motiver
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
-* En hand- eller datorskriven formelsamling på ett A4-ark (båda sidor).
-* Ett handskrivet A4-ark (båda sidor) med valfria egna anteckningar.
+* Ett hand- eller datorskrivet A4-ark (båda sidor) med valfria formler, exempel och egna anteckningar.
 
 > **OBS!** Mobiltelefoner får inte användas under tentamen och ska placeras på angiven plats.
 
 ---
 
 ## Poäng och betygsgränser
-Tentamen ger totalt **25 poäng**. Därtill kan upp till **1,0 bonuspoäng** erhållas från dugga 1–2.
+Tentamen ger totalt **16 poäng**. Därtill kan upp till **1,0 bonuspoäng** erhållas från dugga 1–2.
 
 | Betyg | Gräns |
 |-------|-------|
-| IG | < 10,0 p |
-| G | ≥ 10,0 p |
-| VG | ≥ 17,5 p |
+| IG | < 6,5 p |
+| G | ≥ 6,5 p |
+| VG | ≥ 11,0 p |
 
 ---
 
@@ -35,6 +34,7 @@ Tentamen är uppdelad i två delar:
 ## Förberedelse
 * Gå igenom [övningstentamen](./practice_exam.md) och försök lösa uppgifterna på egen hand.
 * Jämför sedan med [lösningsförslaget](./practice_exam_solutions.md).
+* Övningstentamen och lösningsförslaget finns också på engelska: [practice exam](./en/practice_exam.md) och [worked solutions](./en/practice_exam_solutions.md).
 * Repetera kursens centrala moment under L19.
 
 ---

@@ -2,7 +2,7 @@
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
-* Formelsamling som använts i kursen – relevanta formler kommer skrivas upp på tavlan.
+* Ett hand- eller datorskrivet A4-ark (båda sidor) med valfria formler, exempel och egna anteckningar.
 
 ## Övrigt
 Duggan påverkar inte betyg och examinationen i kursen, men den kan ge 0,5 bonuspoäng på ordinarie tentamen. För att få bonus krävs minst 3,5 poäng av maxpoängen 5,0 poäng.

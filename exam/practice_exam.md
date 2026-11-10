@@ -2,130 +2,62 @@
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
-* En hand- eller datorskriven formelsamling på ett A4-ark (båda sidor).
-* Ett handskrivet A4-ark (båda sidor) med valfria anteckningar.
+* Ett hand- eller datorskrivet A4-ark (båda sidor) med valfria formler, exempel och egna anteckningar.
 
 > **OBS!** Mobiltelefoner får inte användas under den tid som tentamen pågår och ska placeras på angiven plats.
 
 ## Poäng
-Totalt 25 poäng. Därtill kan upp till 1,0 bonuspoäng erhållas från dugga 1–2.
+Totalt 16 poäng. Därtill kan upp till 1,0 bonuspoäng erhållas från dugga 1–2.
 
 ## Betygsgränser
-* IG < 10 poäng
-* G >= 10 poäng
-* VG >= 17,5 poäng
+* IG < 6,5 poäng
+* G >= 6,5 poäng
+* VG >= 11 poäng
 
 ## Övrigt
 Alla uppgifter kräver lösningar/motiveringar med redovisat svar (inklusive enhet där det är aktuellt). Du måste alltså förklara hur du kom fram till dina resultat! Lycka till!
 
 ---
 
-## Del I – Aritmetik, algebra, ekvationer, trigonometri och logaritmer (L01–L10)
-
 ### Uppgift 1 (1,0 poäng)
-Resistansen för fyra parallellkopplade resistorer $R_1$, $R_2$, $R_3$ och $R_4$ kan beräknas med följande formel:
-
-```math
-\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_4}
-```
-
-Beräkna parallellresistansen $R$ om $R_1 = R_2 = 2{,}2\thinspace\text{k}\Omega$ och $R_3 = R_4 = 10\thinspace\text{k}\Omega$. Ange svaret i $\text{k}\Omega$ med en värdesiffra.
-
----
-
-### Uppgift 2 (1,0 poäng)
-Förenkla följande uttryck så långt det går utan att ta hänsyn till ogiltiga värden på $c$:
-
-```math
-\dfrac{\dfrac{c^8 - 16c^4}{c^2}}{c(c^2 - 4)}
-```
-
----
-
-### Uppgift 3 (1,0 poäng)
-Lös nedanstående ekvationssystem.
+Lös ekvationssystemet nedan för att beräkna strömmarna $I_1$ och $I_2$, angivna i $mA$:
 
 ```math
 \begin{cases}
-4y = -6x - 6 \\
-3y + 6x + 9 = 0
+3I_1 - I_2 = 7 \\
+3I_2 = I_1 + 3
 \end{cases}
 ```
 
 ---
 
-### Uppgift 4 (1,0 poäng)
-**a)** Ekvationerna i Uppgift 3 är exempel på räta linjens ekvation. Ange den första ekvationens lutning $k$ samt m-värdet $m$.
-
-**b)** Ekvationen
+### Uppgift 2 (2,0 poäng)
+Ett batteri med tomgångsspänningen $E = 24\thinspace V$ och den inre resistansen $R_i = 6\thinspace\Omega$ är anslutet till en last med resistansen $R$. Effekten $P$ som utvecklas i lasten ges av
 
 ```math
-\sin(v) = -\frac{\sqrt{3}}{2}
+P = \frac{E^2 R}{(R + R_i)^2}
 ```
 
-har en lösning i intervallet mellan 180° och 270°. Hitta denna lösning och ange den i grader.
+**a)** Bestäm lastresistansen $R$ så att effekten i lasten blir $P = 18\thinspace W$. Ekvationen har två lösningar.
+
+**b)** Beräkna strömmen $I = \frac{E}{R + R_i}$ för respektive lösning. Vilken lösning är att föredra om batteriet ska räcka så länge som möjligt? Motivera svaret.
 
 ---
 
-### Uppgift 5 (2,0 poäng)
-Lös följande ekvation:
+### Uppgift 3 (1,5 poäng)
+Spänningen $U$ i volt över en komponent beror av strömmen $I$ i ampere enligt
 
 ```math
-(x + 2)^2 + 2(x - 2)^2 = 45 - 6x
+U(I) = \frac{4I^2 - 36}{I^2 - I - 6}
 ```
+
+**a)** Förenkla uttrycket och ange vilka värden på $I$ som uttrycket inte får anta.
+
+**b)** Beräkna spänningen $U$ när strömmen är $I = 2\thinspace A$.
 
 ---
 
-### Uppgift 6 (1,0 poäng)
-Du har två vektorer $u = (3; 5)$ samt $v = (2; -4)$.
-
-**a)** Rita upp vektorerna i ett koordinatsystem.
-
-**b)** Beräkna vektorernas absolutbelopp $|u|$ samt $|v|$.
-
-**c)** Beräkna vektorernas vinklar $v_u$ samt $v_v$.
-
-**d)** Beräkna en tredje vektor $w = u - 2v$.
-
----
-
-### Uppgift 7 (1,0 poäng)
-Bostadspriserna ökar över tid på grund av inflation och marknadstillväxt. Priset $f(x)$ för en bostad kan beskrivas med följande exponentialfunktion:
-
-```math
-f(x) = C \cdot a^x,
-```
-
-där $C$ är ursprungspriset, $a$ är den årliga förändringsfaktorn och $x$ är antalet år som passerat sedan ursprungspriset fastställdes.
-
-Som exempel, under en given tidsperiod är den årliga prisökningen 5 % varje år, vilket innebär att en bostad som kostar $3\thinspace 000\thinspace 000\thinspace\text{kr}$ idag efter $x$ år är värd $f(x)$ kr, där
-
-```math
-f(x) = 3 \cdot 10^6 \cdot 1{,}05^x
-```
-
-Anta att ursprungspriset för en bostad är $7\thinspace 500\thinspace 000\thinspace\text{kr}$ samt att den årliga prisökningen är 2,5 %.
-
-**a)** Ange en funktion som beskriver bostadens pris $f(x)$ efter $x$ år.
-
-**b)** Beräkna bostadens värde efter 5 år.
-
-**c)** Bestäm funktionens definitionsmängd och värdemängd för en tidsperiod på $0 - 30$ år.
-
-**d)** Efter hur många år har bostadens värde fördubblats?
-
----
-
-### Uppgift 8 (1,0 poäng)
-Förenkla följande rationella uttryck och ange vilka x-värden som uttrycket inte får anta:
-
-```math
-f(x) = \frac{3(x^2 - x - 12)}{x^2 - 9}
-```
-
----
-
-### Uppgift 9 (1,0 poäng)
+### Uppgift 4 (1,5 poäng)
 När en kondensator urladdas genom ett motstånd minskar spänningen över kondensatorn exponentiellt med tiden. Spänningen $u(t)$ kan beskrivas med följande funktion:
 
 ```math
@@ -149,7 +81,7 @@ En kondensator med kapacitansen $680\thinspace\mu F$ är ansluten till ett motst
 
 ---
 
-### Uppgift 10 (1,5 poäng)
+### Uppgift 5 (1,0 poäng)
 En växelspänning har amplituden $5\thinspace V$, frekvensen $100\thinspace Hz$ samt fasen 90°.
 
 **a)** Bestäm växelspänningens ekvation $u(t)$. Ange fasen i radianer.
@@ -158,70 +90,28 @@ En växelspänning har amplituden $5\thinspace V$, frekvensen $100\thinspace Hz$
 
 ---
 
-### Uppgift 11 (1,0 poäng)
-En ljudförstärkare har en förstärkning på $54\thinspace dB$. Hur många gångers spänningsförstärkning motsvarar det?
+### Uppgift 6 (2,0 poäng)
+Batteriet i uppgift 2, med tomgångsspänningen $E = 24\thinspace V$ och den inre resistansen $R_i = 6\thinspace\Omega$, levererar strömmen $I$ till en last. Klämspänningen är $U = E - R_i I$, så effekten i lasten som funktion av strömmen blir
+
+```math
+P(I) = U \cdot I = (24 - 6I) \cdot I = 24I - 6I^2
+```
+
+**a)** Derivera funktionen $P(I)$ och bestäm uttrycket för $P'(I)$.
+
+**b)** Bestäm var funktionen är stationär, dvs. lös $P'(I) = 0$.
+
+**c)** Avgör med hjälp av andraderivatan om punkten är ett maximum eller ett minimum.
+
+**d)** Beräkna funktionens största eller minsta värde, dvs. bestäm $P(I)$ i den punkt där funktionen är stationär.
+
+**e)** Rita grafen till $P(I)$ för intervallet $0 \leq I \leq 4\thinspace A$. Markera extrempunkten och skärningarna med axlarna.
+
+**f)** Beräkna lastresistansen $R = \frac{U}{I}$ i den stationära punkten och jämför den med $R_i$.
 
 ---
 
-## Del II – Derivata, integraler och komplexa tal (L12–L17)
-
-### Uppgift 12 (1,0 poäng)
-Betrakta följande funktion:
-
-```math
-f(x) = x^2 - 4x + 3
-```
-
-**a)** Derivera funktionen $f(x)$ och bestäm uttrycket för $f'(x)$.
-
-**b)** Bestäm var funktionen är stationär, dvs. lös $f'(x) = 0$.
-
-**c)** Avgör med hjälp av den andra derivatan om punkten är ett maximum eller minimum.
-
-**d)** Beräkna funktionens minsta/största värde, dvs. bestäm $f(x)$ i punkten då funktionen är stationär.
-
-**e)** Rita grafen till $f(x)$ för intervallet $0 \leq x \leq 5$. Markera extrempunkten och eventuella skärningar med axlarna.
-
----
-
-### Uppgift 13 (1,0 poäng)
-Laddningen av en kondensator kan beskrivas med följande formel:
-
-```math
-u(t) = 10(1 - e^{-0{,}5t}),
-```
-
-där
-
-* $u(t)$ = spänningsfallet över kondensatorn vid tiden $t$,
-* $t$ = tiden i sekunder.
-
-**a)** Derivera funktionen och bestäm uttrycket för $u'(t)$.
-
-**b)** Beräkna $u'(t)$ vid tiden $t = 2\thinspace s$, dvs. beräkna $u'(2)$.
-
-**c)** Beräkna om spänningsökningen/spänningsminskningen ökar eller minskar vid tiden $t = 2\thinspace s$, dvs. beräkna $u''(2)$.
-
----
-
-### Uppgift 14 (1,5 poäng)
-Derivera följande funktioner:
-
-**a)** $f(x) = e^{2x} \cdot \ln x^2$
-
-**b)**
-```math
-f(x) = \frac{3x^2}{\ln x}
-```
-
-**c)**
-```math
-u(t) = 5\cos\left(100\pi t + \frac{\pi}{4}\right)\,V
-```
-
----
-
-### Uppgift 15 (1,0 poäng)
+### Uppgift 7 (1,5 poäng)
 Laddningen $q(t)$ som passerar genom en ledare inom ett tidsintervall $(0, t)$ kan beräknas via följande funktion:
 
 ```math
@@ -237,7 +127,7 @@ där
 Strömmen $i(t)$ i en kondensator ges av följande funktion:
 
 ```math
-i(t) = 0{,}5 e^{-0{,}1t}
+i(t) = 0{,}03t^2 + 0{,}1t + 0{,}5
 ```
 
 där $t$ är tiden i sekunder. Kondensatorn har redan laddningen $q_0 = 1\thinspace C$ vid start.
@@ -252,18 +142,22 @@ där $t$ är tiden i sekunder. Kondensatorn har redan laddningen $q_0 = 1\thinsp
 
 ---
 
-### Uppgift 16 (2,0 poäng)
-En krets matas med spänningen $U = 3 - j4\thinspace V$. Kretsen har impedansen $Z = 2 + j2\thinspace\Omega$. Beräkna strömmen $I$ som flödar genom kretsen med "Ohms lag", dvs. Ohms lag anpassad för komplexa tal:
+### Uppgift 8 (2,0 poäng)
+En krets matas med spänningen $U = 3 - j4\thinspace V$. Kretsen har impedansen $Z = 2 + j2\thinspace\Omega$. Strömmen $I$ genom kretsen kan beräknas med "Ohms lag", dvs. Ohms lag anpassad för komplexa tal:
 
 ```math
 I = \frac{U}{Z}
 ```
 
-Ange strömmen både på rektangulär samt polär form.
+**a)** Beräkna strömmen $I$ och ange den både på rektangulär och polär form.
+
+**b)** Impedansen kan skrivas $Z = R + jX$. Ange resistansen $R$ och reaktansen $X$, och avgör om kretsen är induktiv eller kapacitiv.
+
+**c)** Frekvensen är $f = 50\thinspace Hz$. Beräkna den induktans eller kapacitans som ger kretsens reaktans.
 
 ---
 
-### Uppgift 17 (2,0 poäng)
+### Uppgift 9 (1,5 poäng)
 En ström $i(t)$ i en växelströmskrets kan representeras av en fasor $I$, som på rektangulär form skrivs enligt nedan:
 
 ```math
@@ -280,24 +174,7 @@ I = 10 - j5\,mA
 
 ---
 
-### Uppgift 18 (2,0 poäng)
-Du har följande vektorer: $a = (2; 1)$, $b = (3; -4)$ samt $c = (-1; 3)$. I uppgifterna nedan ska varje vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
-
-**a)** Skriv vektorerna på komplex rektangulär form.
-
-**b)** Rita ut vektorerna i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
-
-**c)** Bestäm vektorernas längder, dvs. absolutbeloppet av respektive tal.
-
-**d)** Bestäm längden (absolutbeloppet) av $2a - 3c$, dvs. $|2a - 3c|$.
-
-**e)** Bestäm vektorernas vinklar.
-
-**f)** Bestäm en vektor $d$ med längden 7 som är motsatt riktad $a$.
-
----
-
-### Uppgift 19 (2,0 poäng)
+### Uppgift 10 (2,0 poäng)
 I en seriekoppling med tre komponenter mäts växelspänningen över respektive komponent till:
 
 ```math

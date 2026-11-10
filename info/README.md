@@ -69,15 +69,15 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 
 ### Poängfördelning
 * Dugga 1–2 ger upp till **1,0 bonuspoäng** totalt (0,5 p per dugga, kräver minst 3,5/5 p).
-* Den skriftliga tentamen ger upp till **25 poäng**.
+* Den skriftliga tentamen ger upp till **16 poäng**.
 
 ### Betygsgränser
 
 | Betyg | Gräns |
 |-------|-------|
-| IG | < 10,0 p |
-| G | ≥ 10,0 p |
-| VG | ≥ 17,5 p |
+| IG | < 6,5 p |
+| G | ≥ 6,5 p |
+| VG | ≥ 11,0 p |
 
 För godkänt betyg krävs att alla kursens lärandemål är uppnådda.
 
@@ -93,6 +93,6 @@ Kursmaterialet finns samlat i detta repo under [lectures/](../lectures/). Varje 
 
 ### Hjälpmedel
 * Valfri miniräknare (används under hela kursen).
-* På tentamen tillåts dessutom ett eget A4-ark med formler och ett A4-ark med egna anteckningar (båda sidor).
+* På tentamen tillåts dessutom ett eget A4-ark (båda sidor) med formler, exempel och egna anteckningar.
 
 ---

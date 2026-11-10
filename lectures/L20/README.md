@@ -16,10 +16,10 @@
 ### Innan tentamen
 * Läs igenom [tentamensinformationen](../../exam/README.md) eller avsnitt 19.1 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
 * Repetera kursens centrala moment enligt [L19](../L19/README.md).
-* Förbered en formelsamling på ett A4-ark (båda sidor) samt ett handskrivet A4-ark (båda sidor) med egna anteckningar.
+* Förbered ett hand- eller datorskrivet A4-ark (båda sidor) med formler, exempel och egna anteckningar.
 
 ### Under tentamen
-* Använd endast tillåtna hjälpmedel: skrivmaterial, valfri miniräknare samt de två A4-arken.
+* Använd endast tillåtna hjälpmedel: skrivmaterial, valfri miniräknare samt ditt A4-ark.
 * Mobiltelefoner får inte användas och ska placeras på angiven plats.
 * Tentamen är uppdelad i två delar:
     * **Del I** – Aritmetik, algebra, ekvationer, trigonometri och logaritmer (L01–L10).
@@ -28,7 +28,7 @@
 ---
 
 ## Poäng
-* Tentamen ger totalt **25 poäng**.
+* Tentamen ger totalt **16 poäng**.
 * Därtill kan upp till **1,0 bonuspoäng** erhållas från dugga 1–2.
 * Betygsgränser finns i [tentamensinformationen](../../exam/README.md).
 

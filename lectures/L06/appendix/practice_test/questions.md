@@ -2,7 +2,7 @@
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.
-* Formelsamling som använts i kursen – relevanta formler kommer skrivas upp på tavlan.
+* Ett hand- eller datorskrivet A4-ark (båda sidor) med valfria formler, exempel och egna anteckningar.
 
 > **OBS!** Mobiltelefoner får inte användas under den tid som duggan pågår och ska placeras på angiven plats.
 
