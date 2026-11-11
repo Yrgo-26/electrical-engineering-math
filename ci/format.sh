@@ -11,19 +11,42 @@ set -euo pipefail
 # Root directory.
 ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")/.."
 
+# Required clang-format major version. Different versions can format the same code differently,
+# so CI and local runs must use the same one.
+CLANG_FORMAT_VERSION=18
+
+# clang-format executable, can be overridden with the CLANG_FORMAT environment variable.
+CLANG_FORMAT="${CLANG_FORMAT:-clang-format-${CLANG_FORMAT_VERSION}}"
+
 ################################################################################
-# Terminate the script if clang-format is not installed.
+# Select the clang-format executable and terminate the script if the required version is not
+# installed. Falls back to plain clang-format if it has the required version.
 # Globals:
-#   None
+#   CLANG_FORMAT, CLANG_FORMAT_VERSION
 # Arguments:
 #   None
 ################################################################################
 check_clang_format() {
-    if ! command -v clang-format &> /dev/null
+    if ! command -v "$CLANG_FORMAT" &> /dev/null
     then
-        echo "error: clang-format not found. Install it, e.g. 'sudo apt -y install clang-format'." >&2
+        CLANG_FORMAT=clang-format
+    fi
+    if ! command -v "$CLANG_FORMAT" &> /dev/null
+    then
+        echo "error: clang-format ${CLANG_FORMAT_VERSION} not found. Install it, e.g." \
+            "'sudo apt -y install clang-format-${CLANG_FORMAT_VERSION}'." >&2
         exit 1
     fi
+    local version
+    version="$("$CLANG_FORMAT" --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n 1)"
+    if [[ "${version%%.*}" != "$CLANG_FORMAT_VERSION" ]]
+    then
+        echo "error: clang-format ${CLANG_FORMAT_VERSION} is required, but '${CLANG_FORMAT}' is" \
+            "version ${version}. Install it, e.g." \
+            "'sudo apt -y install clang-format-${CLANG_FORMAT_VERSION}'." >&2
+        exit 1
+    fi
+    echo "Using ${CLANG_FORMAT} (version ${version})."
 }
 
 ################################################################################
@@ -70,13 +93,13 @@ format_files() {
     # Format selected files.
     if [[ "${arg:-}" == "--check" ]]
     then
-        clang-format --dry-run --Werror "${files[@]}"
+        "$CLANG_FORMAT" --dry-run --Werror "${files[@]}"
     else
         local count=0
         for file in "${files[@]}"
         do
             before=$(md5sum "$file")
-            clang-format -i "$file"
+            "$CLANG_FORMAT" -i "$file"
             after=$(md5sum "$file")
             if [[ "$before" != "$after" ]]
             then
