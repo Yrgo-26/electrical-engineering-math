@@ -2,30 +2,35 @@
 
 ## Del 1 - Repetitionsuppgifter
 
-### 1.1 - Rektangulär => polär form
-Omvandla strömmen $I = 3 + j4$ $mA$ till polär form.
-
----
-
-### 1.2 - Polär => rektangulär form
-Omvandla spänningen $U = 2$ $∠$ $\frac{\pi}{4}$ $V$ till rektangulär form.
-
----
-
-### 1.3 - Beräkning av impedans
-En krets matas med spänningen från uppgift *1.2*. Strömmen från uppgift *1.1* flödar genom kretsen.
-Beräkna kretsens impedans $Z$ med "Ohms lag":
+### 1.1 – Ström i en RL-krets
+En resistor $R = 100\thinspace\Omega$ och en spole $L = 1\thinspace mH$ är seriekopplade och matas med spänningen $U = 10\angle 0°\thinspace V$, med frekvensen $f = 50\thinspace kHz$. Spolens impedans ges av
 
 ```math
-Z = \frac{U}{I},
+Z_L = j\omega L = j2\pi f L
 ```
 
-där
-* $Z$ = kretsens impedans i $\Omega$,
-* $U$ = matningsspänningen i $V$,
-* $I$ = strömmen genom kretsen i $mA$.
+**a)** Beräkna spolens impedans $Z_L$. Behåll $\pi$ i svaret och avrunda först på slutet.
 
-Svara både i polär samt rektangulär form.
+**b)** Beräkna kretsens totala impedans $Z = R + Z_L$ på både rektangulär och polär form.
+
+**c)** Beräkna strömmen $I = \frac{U}{Z}$ på både polär och rektangulär form.
+
+---
+
+### 1.2 – Ström i en RC-krets
+Spolen i uppgift 1.1 byts mot en kondensator $C = 10\thinspace nF$. Spänningen $U = 10\angle 0°\thinspace V$, frekvensen $f = 50\thinspace kHz$ och resistorn $R = 100\thinspace\Omega$ är desamma. Kondensatorns impedans ges av
+
+```math
+Z_C = \frac{1}{j\omega C} = -\frac{j}{2\pi f C}
+```
+
+**a)** Beräkna kondensatorns impedans $Z_C$. Behåll $\pi$ i svaret och avrunda först på slutet.
+
+**b)** Beräkna kretsens totala impedans $Z = R + Z_C$ på både rektangulär och polär form.
+
+**c)** Beräkna strömmen $I = \frac{U}{Z}$ på både polär och rektangulär form.
+
+**d)** Jämför strömmen med strömmen i uppgift 1.1. Vad är nästan lika, och vad skiljer sig?
 
 ---
 
@@ -275,7 +280,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Strukten `complex_t` och funktionerna från L15, uppgift 4.1, används även här.
+Läraren visar uppgiften nedan under lektionen om tiden räcker, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Strukten `complex_t` och funktionerna från L15, uppgift 4.1, används även här.
 
 ### 4.1 – Rotation med $j$ i C
 Uppgiften bygger vidare på uppgift 3.14. Talet $z = 3 + j4$ är givet.

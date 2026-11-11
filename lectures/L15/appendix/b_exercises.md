@@ -16,6 +16,16 @@ Det är också känt att startspänningen $u(0)$ = $2$ $V$.
 
 **b)** Bestäm spänningen efter $3$ sekunder.
 
+**c)** Beräkna den bestämda integralen $\int_0^3 u'(t)\,dt$. Jämför värdet med $u(3)$ från b) och förklara en eventuell skillnad.
+
+**d)** Beräkna den tidpunkt då spänningen är stationär, dvs. när $u'(t) = 0$.
+
+**e)** Bestäm med hjälp av den andra derivatan om den stationära punkten är ett maximum eller minimum.
+
+**f)** Beräkna den stationära punktens koordinater, dvs. tidpunkten $t$ och spänningen $u(t)$ i punkten.
+
+**g)** Rita grafen till $u(t)$ via [Geogebra](https://www.geogebra.org/graphing?lang=en), kontrollera att dina svar stämmer.
+
 ---
 
 ## Del 2 - Nytt stoff
@@ -269,7 +279,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 ---
 
 ## Del 4 – Matematik i C
-Läraren visar uppgiften nedan under lektionen, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
+Läraren visar uppgiften nedan under lektionen om tiden räcker, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**.
 
 I uppgiften nedan skrivs ett komplext tal som en egen **strukt** (`struct`), även kallat struktur. En strukt samlar flera variabler som hör ihop under ett gemensamt namn, här realdelen och imaginärdelen. Typen `complex_t` definieras med `typedef struct` och har fälten `re` och `im`, båda av typen `double`:
 

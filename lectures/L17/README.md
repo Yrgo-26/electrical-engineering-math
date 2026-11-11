@@ -24,6 +24,7 @@
 
 ### Efter lektionen
 * Extrauppgifterna i Del 3 i [bilaga B](./appendix/b_exercises.md) är frivillig träning på egen hand.
+* Hinns uppgiften i Del 4 (matematik i C) inte med under lektionen kan du göra den på egen hand, se [bilaga B](./appendix/b_exercises.md).
 
 ---
 
@@ -43,7 +44,7 @@ u_2(t) = 3\sin(\omega t - 60^{\circ})\,\text{V}
     * Summering av fasorerna i komplex form: $U_{tot} = U_1 + U_2$.
     * Ritande av fasorerna i det komplexa talplanet.
     * Omvandling tillbaka till tidsdomänen: $U_{tot} \rightarrow u_{tot}(t)$.
-* Fasoradditionen ovan kontrollerad i C, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md).
+* Fasoradditionen ovan kontrollerad i C, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md) (om tiden räcker).
 
 ---
 

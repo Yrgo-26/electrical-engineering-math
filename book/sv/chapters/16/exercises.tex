@@ -14,20 +14,34 @@ efter lektionen.
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 1}{Repetitionsuppgifter}
 
-\uppgift{1.1}{Rektangulär form till polär form}
-Omvandla strömmen $I = 3 + j4\,\text{mA}$ till polär form.
-
-\uppgift{1.2}{Polär form till rektangulär form}
-Omvandla spänningen $U = 2\,\angle\,\frac{\pi}{4}\,\text{V}$ till rektangulär form.
-
-\uppgift{1.3}{Beräkning av impedans}
-En krets matas med spänningen från \uppref{1.2}, och strömmen från \uppref{1.1} flyter genom
-kretsen. Beräkna kretsens impedans $Z$ med ”Ohms lag”
+\uppgift{1.1}{Ström i en RL-krets}
+En resistor $R = 100\,\Omega$ och en spole $L = 1\,\text{mH}$ är seriekopplade och matas med
+spänningen $U = 10\angle 0^{\circ}\,\text{V}$, med frekvensen $f = 50\,\text{kHz}$. Spolens
+impedans ges av
 \[
-  Z = \frac{U}{I},
+  Z_L = j\omega L = j2\pi f L.
 \]
-där $Z$ är kretsens impedans i $\Omega$, $U$ matningsspänningen i V och $I$ strömmen genom kretsen
-i mA. Svara både på polär och på rektangulär form.
+\begin{parts}
+  \item Beräkna spolens impedans $Z_L$. Behåll $\pi$ i svaret och avrunda först på slutet.
+  \item Beräkna kretsens totala impedans $Z = R + Z_L$ på både rektangulär och polär form.
+  \item Beräkna strömmen $I = \dfrac{U}{Z}$ på både polär och rektangulär form.
+\end{parts}
+
+\uppgift{1.2}{Ström i en RC-krets}
+Spolen i \uppref{1.1} byts mot en kondensator $C = 10\,\text{nF}$. Spänningen
+$U = 10\angle 0^{\circ}\,\text{V}$, frekvensen $f = 50\,\text{kHz}$ och resistorn
+$R = 100\,\Omega$ är desamma. Kondensatorns impedans ges av
+\[
+  Z_C = \frac{1}{j\omega C} = -\frac{j}{2\pi f C}.
+\]
+\begin{parts}
+  \item Beräkna kondensatorns impedans $Z_C$. Behåll $\pi$ i svaret och avrunda först på
+    slutet.
+  \item Beräkna kretsens totala impedans $Z = R + Z_C$ på både rektangulär och polär form.
+  \item Beräkna strömmen $I = \dfrac{U}{Z}$ på både polär och rektangulär form.
+  \item Jämför strömmen med strömmen i \uppref{1.1}. Vad är nästan lika, och vad skiljer
+    sig?
+\end{parts}
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 2}{Nytt stoff}
@@ -208,7 +222,8 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 4}{Matematik i C}
-Läraren visar uppgiften nedan under lektionen, i VS Code och med \code{make}. Du kan också göra den
+Läraren visar uppgiften nedan under lektionen om tiden räcker, i VS Code och med \code{make}.
+Du kan också göra den
 själv i \textbf{OnlineGDB}, \url{https://www.onlinegdb.com/online_c_compiler}, med språket inställt
 på \textbf{C}. Strukten \code{complex_t} och funktionerna från \uppref[15]{4.1} i kapitel~15 används
 även här.
