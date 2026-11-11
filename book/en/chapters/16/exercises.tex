@@ -49,20 +49,7 @@ $R = 100\,\Omega$ are the same. The impedance of the capacitor is
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 2}{New material}
 
-\uppgift{2.1}{Vectors in the complex plane}
-You have the vectors $a = (4, 3)$, $b = (-3, 6)$ and $c = (-1, 10)$. In the exercises below, each
-vector $(x, y)$ is to be read as a complex number $z = x + jy$.
-\begin{parts}
-  \item Write the vectors in complex rectangular form.
-  \item Draw the vectors in the complex plane (the $x$-axis is the real part, the $y$-axis the
-    imaginary part).
-  \item Find the lengths of the vectors, that is, the magnitude of each number.
-  \item Find the length (magnitude) of $b + 2c$, that is, $\abs{b + 2c}$.
-  \item Find the angles of the vectors.
-  \item Find a vector $d$ of length $10$ that points in the opposite direction to $a$.
-\end{parts}
-
-\uppgift{2.2}{Rectangular form to Euler form}
+\uppgift{2.1}{Rectangular form to Euler form}
 A voltage $u(t)$ in an AC circuit can be represented by a phasor $U$, which in rectangular form
 is written
 \[
@@ -77,8 +64,28 @@ is written
     frequency $\omega$.
   \item Write the corresponding complex function of time for the voltage in Euler form, that is,
     $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+  \item Draw the sine wave of the voltage $u(t) = \abs{U}\sin(\omega t + \delta)$ over one period
+    $T$.
 \end{parts}
 \note[Note] The phasor $U$ is the complex voltage $u(t)$ without its time dependence.
+
+\uppgift{2.2}{Euler form to rectangular form}
+A current $i(t)$ in an AC circuit is described by the complex function of time
+\[
+  i(t) = 10e^{j(100\pi t - 3\pi/4)}\,\text{mA}.
+\]
+\begin{parts}
+  \item State the magnitude $\abs{I}$, the phase angle $\delta$ (in degrees) and the angular
+    frequency $\omega$ of the current.
+  \item Find the frequency $f$ of the current.
+  \item Write the phasor $I = \abs{I}e^{j\delta}$ in rectangular form.
+  \item Draw the phasor $I$ in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Draw the sine wave of the current $i(t) = \abs{I}\sin(\omega t + \delta)$ over one period
+    $T$.
+\end{parts}
+\note[Note] The exercise goes the opposite way to \uppref{2.1}, from Euler form to rectangular
+form.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Part 3}{Extra exercises}
@@ -88,17 +95,17 @@ be done in your head or with pencil and paper.
 \uppgift{3.1}{Euler's formula}
 Write in rectangular form.
 \begin{delar}(5)
-  \task $e^{j\pi/2}$
-  \task $e^{j\pi}$
-  \task $e^{j0}$
-  \task $e^{-j\pi/2}$
-  \task $e^{j2\pi}$
+  \task $e^{j\pi/6}$
+  \task $e^{j\pi/4}$
+  \task $e^{j2\pi/3}$
+  \task $e^{-j\pi/3}$
+  \task $e^{-j3\pi/4}$
 \end{delar}
 
 \uppgift{3.2}{Euler form to rectangular form}
 Write in rectangular form.
 \begin{delar}(4)
-  \task $z = 4e^{j0}$
+  \task $z = 4e^{j\pi/6}$
   \task $z = 5e^{j\pi/3}$
   \task $z = 2e^{-j\pi/4}$
   \task $z = 10e^{j2\pi/3}$
@@ -109,8 +116,8 @@ Write in Euler form $\abs{z}e^{j\delta}$.
 \begin{delar}(4)
   \task $z = 3 + j3$
   \task $z = -2 + j2$
-  \task $z = -j6$
-  \task $z = -5$
+  \task $z = 1 - j\sqrt{3}$
+  \task $z = -4 - j3$
 \end{delar}
 
 \uppgift{3.4}{Multiplication and division in polar form}
@@ -196,16 +203,7 @@ At $\omega = 1000\,\text{rad/s}$, $L = 20\,\text{mH}$ and $C = 50\,\mu\text{F}$.
   \item What is this condition called?
 \end{parts}
 
-\uppgift{3.13}{Vectors as complex numbers}
-The vectors $\mathbf{a} = (5, 12)$ and $\mathbf{b} = (-8, 6)$ are given.
-\begin{parts}
-  \item Write them as complex numbers.
-  \item Calculate $\abs{a}$ and $\abs{b}$.
-  \item Calculate $a + b$ and its magnitude.
-  \item Calculate the angles of the vectors.
-\end{parts}
-
-\uppgift{3.14}{Rotation by $j$}
+\uppgift{3.13}{Rotation by $j$}
 The number $z = 3 + j4$ is given.
 \begin{parts}
   \item Calculate $jz$.
@@ -214,14 +212,14 @@ The number $z = 3 + j4$ is given.
   \item What does multiplication by $j$ do geometrically?
 \end{parts}
 
-\uppgift{3.15}{True or false}
+\uppgift{3.14}{True or false}
 Decide whether each statement is true or false, and justify your answer briefly.
 \begin{parts}
-  \item $e^{j\delta}$ always has the magnitude $1$.
+  \item Two complex numbers with the same magnitude are always equal.
   \item $\abs{z_1z_2} = \abs{z_1} + \abs{z_2}$
   \item In division, the phase angles are subtracted.
   \item A phasor contains information about the frequency of the signal.
-  \item $e^{j\pi} + 1 = 0$
+  \item The phase angle of $z = a + jb$ is always $\tan^{-1}\frac{b}{a}$.
   \item Multiplying complex numbers is easiest in rectangular form.
 \end{parts}
 
@@ -234,7 +232,7 @@ the language set to \textbf{C}. The struct \code{complex_t} and the functions fr
 of Chapter~15 are also used here.
 
 \uppgift{4.1}{Rotation by $j$ in C}
-The exercise builds on \uppref{3.14}. The number $z = 3 + j4$ is given.
+The exercise builds on \uppref{3.13}. The number $z = 3 + j4$ is given.
 \begin{parts}
   \item Compute $jz$, $j^2 z$, $j^3 z$ and $j^4 z$ by hand.
   \item Show that $j(a + jb) = -b + ja$. Then write the function \code{complex_t

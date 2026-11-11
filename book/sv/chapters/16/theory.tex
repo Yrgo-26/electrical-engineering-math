@@ -10,11 +10,6 @@ Det innebär att varje komplext tal kan skrivas på \textbf{Eulerform}:
 \[
   z = \abs{z} \cdot e^{j\delta}
 \]
-Några viktiga specialfall är
-\begin{gather*}
-  e^{j\pi} = -1 \quad \text{(Eulers identitet)}, \\
-  e^{j\pi/2} = j, \qquad e^{j0} = 1, \qquad e^{-j\delta} = \cos\delta - j\sin\delta.
-\end{gather*}
 
 \section{Tre former av komplexa tal}
 \label{c16:sec:former}
@@ -58,17 +53,87 @@ Från tidsdomän till fasor:
   u(t) = \abs{U}\sin(\omega t + \delta) \quad \Rightarrow \quad U = \abs{U}\,\angle\,\delta
 \]
 
+\section{Varför Eulerform?}
+\label{c16:sec:varfor}
+Vid beräkningar är polär form, $\abs{U}\,\angle\,\delta$, oftast enklast att skriva. Eulerformen
+förklarar varför den fungerar.
+
+\paragraph{Multiplikation och division följer av potenslagarna} Exponenterna adderas vid
+multiplikation och subtraheras vid division:
+\[
+  \abs{z_1}e^{j\delta_1} \cdot \abs{z_2}e^{j\delta_2} = \abs{z_1}\abs{z_2}\,e^{j(\delta_1 + \delta_2)}
+\]
+Det är därför vinklarna adderas när två tal multipliceras på polär form.
+
+\paragraph{Frekvensen kan utelämnas} Alla spänningar och strömmar i en krets har samma frekvens. Det
+enda som skiljer dem åt är amplituden och fasen, och de ryms i fasorn $U = \abs{U}e^{j\delta}$.
+Därför räknar vi med fasorer och lägger tillbaka $\omega t$ först när svaret ska skrivas som
+$u(t) = \abs{U}\sin(\omega t + \delta)$.
+
+\subsection{Derivering med Eulers formel}
+Det här ligger utanför kursen, men visar
+varför Eulers formel förenklar derivering och integrering så mycket. Vi skriver den komplexa
+spänningen på rektangulär form med hjälp av Eulers formel:
+\[
+  u(t) = \abs{U}\cos(\omega t + \delta) + j\abs{U}\sin(\omega t + \delta)
+\]
+Vi deriverar med kedjeregeln, där den inre derivatan är $(\omega t + \delta)' = \omega$:
+\begin{align*}
+  u'(t) &= -\abs{U}\sin(\omega t + \delta) \cdot (\omega t + \delta)'
+           + j\abs{U}\cos(\omega t + \delta) \cdot (\omega t + \delta)' \\
+        &= -\omega\abs{U}\sin(\omega t + \delta) + j\omega\abs{U}\cos(\omega t + \delta)
+\end{align*}
+Eftersom $j^2 = -1$ kan $-\omega\abs{U}\sin(\omega t + \delta)$ skrivas som
+$j\omega \cdot j\abs{U}\sin(\omega t + \delta)$, så $j\omega$ kan brytas ut:
+\[
+  u'(t) = j\omega\bigl(\abs{U}\cos(\omega t + \delta) + j\abs{U}\sin(\omega t + \delta)\bigr)
+        = j\omega \cdot u(t)
+\]
+På Eulerform blir samma derivering ett enda steg. Med $u(t) = \abs{U}e^{j(\omega t + \delta)}$ är
+den inre derivatan $\bigl(j(\omega t + \delta)\bigr)' = j\omega$:
+\[
+  u'(t) = \bigl(j(\omega t + \delta)\bigr)' \cdot \abs{U}e^{j(\omega t + \delta)}
+        = j\omega \cdot \abs{U}e^{j(\omega t + \delta)} = j\omega \cdot u(t)
+\]
+Resultatet blir detsamma, men på Eulerform räcker det att multiplicera med $j\omega$. Integrering
+fungerar på samma sätt fast tvärtom: att integrera motsvarar att dividera med $j\omega$.
+
+\subsection{Impedans för spole och kondensator}
+Med resultatet ovan blir impedanserna enkla att
+härleda. Spänningen över en spole är $u = L\frac{di}{dt}$. Med strömmen
+$i(t) = \abs{I}e^{j(\omega t + \delta)}$ ger deriveringen ovan $\frac{di}{dt} = j\omega \cdot i(t)$,
+så
+\[
+  u(t) = L\frac{di}{dt} = L \cdot j\omega \cdot i(t) \quad \Rightarrow \quad
+  Z_L = \frac{u(t)}{i(t)} = j\omega L
+\]
+Strömmen genom en kondensator är $i = C\frac{du}{dt}$, och på samma sätt gäller
+$\frac{du}{dt} = j\omega \cdot u(t)$, så
+\[
+  i(t) = C\frac{du}{dt} = C \cdot j\omega \cdot u(t) \quad \Rightarrow \quad
+  Z_C = \frac{u(t)}{i(t)} = \frac{1}{j\omega C}
+\]
+Spolens och kondensatorns impedanser följer alltså direkt av att derivering motsvarar
+multiplikation med $j\omega$. Impedanserna behandlas vidare i kapitel~\ref{c17:ch}.
+
 \needspace{12\baselineskip}
 \section{Typexempel}
 \label{c16:sec:typexempel}
 
-\begin{exempel}[Vektorer som komplexa tal]
-Vektorerna $\mathbf{a} = (3, 4)$ och $\mathbf{b} = (-2, 4)$ skrivs som komplexa tal och adderas:
-\begin{gather*}
-  a = 3 + j4, \qquad b = -2 + j4, \\
-  a + b = (3 - 2) + j(4 + 4) = 1 + j8, \\
-  \abs{a + b} = \sqrt{1 + 64} = \sqrt{65} \approx 8{,}06.
-\end{gather*}
+\begin{exempel}[Multiplikation på Eulerform]
+Beräkna $z_1 \cdot z_2$ då $z_1 = 2e^{j\pi/6}$ och $z_2 = 3e^{j\pi/4}$. Svara på både Eulerform
+och rektangulär form.
+
+Beloppen multipliceras och exponenterna adderas:
+\[
+  z_1 \cdot z_2 = 2 \cdot 3 \cdot e^{j(\pi/6 + \pi/4)} = 6e^{j5\pi/12}
+\]
+Vinkeln är $\frac{\pi}{6} + \frac{\pi}{4} = \frac{2\pi}{12} + \frac{3\pi}{12} = \frac{5\pi}{12}$,
+alltså $75^{\circ}$. Eulers formel ger rektangulär form:
+\[
+  6e^{j5\pi/12} = 6\left(\cos 75^{\circ} + j\sin 75^{\circ}\right)
+    \approx 6(0{,}259 + j0{,}966) \approx 1{,}55 + j5{,}80
+\]
 \end{exempel}
 
 \begin{exempel}[Eulerform till rektangulär form]

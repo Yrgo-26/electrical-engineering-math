@@ -36,26 +36,7 @@ Z_C = \frac{1}{j\omega C} = -\frac{j}{2\pi f C}
 
 ## Del 2 - Nytt stoff
 
-### 2.1 - Vektorer i det komplexa talplanet
-
-Du har följande vektorer: $a = (4;3)$, $b = (-3;6)$ samt $c = (-1;10)$. \
-I uppgifterna nedan ska varje vektor $(x;y)$ tolkas som ett komplext tal $z = x + jy$.
-
-**a)** Skriv vektorerna på komplex rektangulär form.
-
-**b)** Rita ut vektorerna i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
-
-**c)** Bestäm vektorernas längder, dvs. absolutbeloppet av respektive tal.
-
-**d)** Bestäm längden (absolutbeloppet) av $b + 2c$, dvs. $|b + 2c|$.
-
-**e)** Bestäm vektorernas vinklar.
-
-**f)** Bestäm en vektor $d$ med längden $10$ som är motsatt riktad $a$.
-
----
-
-### 2.2 - Rektangulär form => Eulers form
+### 2.1 - Rektangulär form => Eulers form
 
 En spänning $u(t)$  i en växelströmskrets kan representeras av en fasor U, som på rektangulär form skrivs enligt nedan:
 
@@ -71,7 +52,29 @@ U = -12 + j4 V
 
 **d)** Skriv motsvarande komplexa tidsfunktion för spänningen på Eulers form, dvs $u(t)=|U|*e^{j(wt+δ)}$.
 
+**e)** Rita spänningens sinuskurva $u(t) = |U|\sin(wt + δ)$ över en period $T$.
+
 **Notering**: Fasorn $U$ utgör den komplexa spänningen $u(t)$ utan tidsberoendet.
+
+---
+
+### 2.2 - Eulers form => rektangulär form
+
+En ström $i(t)$ i en växelströmskrets beskrivs av följande komplexa tidsfunktion på Eulers form:
+
+```math
+i(t) = 10e^{j(100\pi t - 3\pi/4)}\,mA
+```
+
+**a)** Ange strömmens absolutbelopp $|I|$, fasvinkel $\delta$ (i grader) samt vinkelhastighet $\omega$.
+
+**b)** Bestäm strömmens frekvens $f$.
+
+**c)** Skriv fasorn $I = |I|e^{j\delta}$ på rektangulär form.
+
+**d)** Rita ut fasorn $I$ i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
+
+**e)** Rita strömmens sinuskurva $i(t) = |I|\sin(\omega t + \delta)$ över en period $T$.
 
 ---
 
@@ -81,22 +84,22 @@ Uppgifterna nedan är extra träning och görs med fördel på egen hand efter l
 ### 3.1 – Eulers formel
 Skriv på rektangulär form:
 
-**a)** $e^{j\pi/2}$
+**a)** $e^{j\pi/6}$
 
-**b)** $e^{j\pi}$
+**b)** $e^{j\pi/4}$
 
-**c)** $e^{j0}$
+**c)** $e^{j2\pi/3}$
 
-**d)** $e^{-j\pi/2}$
+**d)** $e^{-j\pi/3}$
 
-**e)** $e^{j2\pi}$
+**e)** $e^{-j3\pi/4}$
 
 ---
 
 ### 3.2 – Eulerform till rektangulär form
 Skriv på rektangulär form:
 
-**a)** $z = 4e^{j0}$
+**a)** $z = 4e^{j\pi/6}$
 
 **b)** $z = 5e^{j\pi/3}$
 
@@ -113,9 +116,9 @@ Skriv på Eulerform $|z|e^{j\delta}$:
 
 **b)** $z = -2 + j2$
 
-**c)** $z = -j6$
+**c)** $z = 1 - j\sqrt{3}$
 
-**d)** $z = -5$
+**d)** $z = -4 - j3$
 
 ---
 
@@ -236,20 +239,7 @@ Vid $\omega = 1000\thinspace\text{rad/s}$ gäller $L = 20\thinspace\text{mH}$ oc
 
 ---
 
-### 3.13 – Vektorer som komplexa tal
-Vektorerna $\mathbf{a} = (5;\thinspace 12)$ och $\mathbf{b} = (-8;\thinspace 6)$ är givna.
-
-**a)** Skriv dem som komplexa tal.
-
-**b)** Beräkna $|a|$ och $|b|$.
-
-**c)** Beräkna $a + b$ och dess absolutbelopp.
-
-**d)** Beräkna vektorernas vinklar.
-
----
-
-### 3.14 – Rotation med $j$
+### 3.13 – Rotation med $j$
 Talet $z = 3 + j4$ är givet.
 
 **a)** Beräkna $jz$.
@@ -262,10 +252,10 @@ Talet $z = 3 + j4$ är givet.
 
 ---
 
-### 3.15 – Sant eller falskt
+### 3.14 – Sant eller falskt
 Avgör om påståendet är sant eller falskt och motivera kortfattat:
 
-**a)** $e^{j\delta}$ har alltid absolutbeloppet $1$.
+**a)** Två komplexa tal med samma absolutbelopp är alltid lika.
 
 **b)** $|z_1z_2| = |z_1| + |z_2|$
 
@@ -273,7 +263,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 
 **d)** En fasor innehåller information om signalens frekvens.
 
-**e)** $e^{j\pi} + 1 = 0$
+**e)** Fasvinkeln för $z = a + jb$ är alltid $\tan^{-1}\frac{b}{a}$.
 
 **f)** Multiplikation av komplexa tal är enklast på rektangulär form.
 
@@ -283,7 +273,7 @@ Avgör om påståendet är sant eller falskt och motivera kortfattat:
 Läraren visar uppgiften nedan under lektionen om tiden räcker, i VS Code och med `make`. Du kan också göra den själv i **OnlineGDB**, <https://www.onlinegdb.com/online_c_compiler>, med språket inställt på **C**. Strukten `complex_t` och funktionerna från L15, uppgift 4.1, används även här.
 
 ### 4.1 – Rotation med $j$ i C
-Uppgiften bygger vidare på uppgift 3.14. Talet $z = 3 + j4$ är givet.
+Uppgiften bygger vidare på uppgift 3.13. Talet $z = 3 + j4$ är givet.
 
 **a)** Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
 

@@ -10,11 +10,6 @@ This means that every complex number can be written in \textbf{Euler form}:
 \[
   z = \abs{z} \cdot e^{j\delta}
 \]
-Some important special cases are
-\begin{gather*}
-  e^{j\pi} = -1 \quad \text{(Euler's identity)}, \\
-  e^{j\pi/2} = j, \qquad e^{j0} = 1, \qquad e^{-j\delta} = \cos\delta - j\sin\delta.
-\end{gather*}
 
 \section{Three forms of complex numbers}
 \label{c16:sec:former}
@@ -58,18 +53,89 @@ From time domain to phasor:
   u(t) = \abs{U}\sin(\omega t + \delta) \quad \Rightarrow \quad U = \abs{U}\,\angle\,\delta
 \]
 
+\section{Why Euler form?}
+\label{c16:sec:varfor}
+In calculations, the polar form $\abs{U}\,\angle\,\delta$ is usually the simplest to write. Euler
+form explains why it works.
+
+\paragraph{Multiplication and division follow from the laws of exponents} The exponents are added
+in multiplication and subtracted in division:
+\[
+  \abs{z_1}e^{j\delta_1} \cdot \abs{z_2}e^{j\delta_2} = \abs{z_1}\abs{z_2}\,e^{j(\delta_1 + \delta_2)}
+\]
+This is why the angles are added when two numbers are multiplied in polar form.
+
+\paragraph{The frequency can be left out} All voltages and currents in a circuit have the same
+frequency. The only things that differ between them are the amplitude and the phase, and these are
+contained in the phasor $U = \abs{U}e^{j\delta}$. We therefore calculate with phasors and put
+$\omega t$ back only when the answer is to be written as $u(t) = \abs{U}\sin(\omega t + \delta)$.
+
+\subsection{Differentiation with Euler's formula}
+This is beyond the course, but it
+shows why Euler's formula makes differentiation and integration so much simpler. We write the
+complex voltage in rectangular form using Euler's formula:
+\[
+  u(t) = \abs{U}\cos(\omega t + \delta) + j\abs{U}\sin(\omega t + \delta)
+\]
+We differentiate with the chain rule, where the inner derivative is $(\omega t + \delta)' = \omega$:
+\begin{align*}
+  u'(t) &= -\abs{U}\sin(\omega t + \delta) \cdot (\omega t + \delta)'
+           + j\abs{U}\cos(\omega t + \delta) \cdot (\omega t + \delta)' \\
+        &= -\omega\abs{U}\sin(\omega t + \delta) + j\omega\abs{U}\cos(\omega t + \delta)
+\end{align*}
+Since $j^2 = -1$, $-\omega\abs{U}\sin(\omega t + \delta)$ can be written as
+$j\omega \cdot j\abs{U}\sin(\omega t + \delta)$, so $j\omega$ can be factored out:
+\[
+  u'(t) = j\omega\bigl(\abs{U}\cos(\omega t + \delta) + j\abs{U}\sin(\omega t + \delta)\bigr)
+        = j\omega \cdot u(t)
+\]
+In Euler form, the same differentiation takes a single step. With
+$u(t) = \abs{U}e^{j(\omega t + \delta)}$, the inner derivative is
+$\bigl(j(\omega t + \delta)\bigr)' = j\omega$:
+\[
+  u'(t) = \bigl(j(\omega t + \delta)\bigr)' \cdot \abs{U}e^{j(\omega t + \delta)}
+        = j\omega \cdot \abs{U}e^{j(\omega t + \delta)} = j\omega \cdot u(t)
+\]
+The result is the same, but in Euler form it is enough to multiply by $j\omega$. Integration works
+the same way in reverse: integrating corresponds to dividing by $j\omega$.
+
+\subsection{Impedance of an inductor and a capacitor}
+With the result above, the impedances are easy
+to derive. The voltage across an inductor is $u = L\frac{di}{dt}$. With the current
+$i(t) = \abs{I}e^{j(\omega t + \delta)}$, the differentiation above gives
+$\frac{di}{dt} = j\omega \cdot i(t)$, so
+\[
+  u(t) = L\frac{di}{dt} = L \cdot j\omega \cdot i(t) \quad \Rightarrow \quad
+  Z_L = \frac{u(t)}{i(t)} = j\omega L
+\]
+The current through a capacitor is $i = C\frac{du}{dt}$, and in the same way
+$\frac{du}{dt} = j\omega \cdot u(t)$, so
+\[
+  i(t) = C\frac{du}{dt} = C \cdot j\omega \cdot u(t) \quad \Rightarrow \quad
+  Z_C = \frac{u(t)}{i(t)} = \frac{1}{j\omega C}
+\]
+The impedances of the inductor and the capacitor thus follow directly from differentiation
+corresponding to multiplication by $j\omega$. Impedances are covered further in
+Chapter~\ref{c17:ch}.
+
 \needspace{12\baselineskip}
 \section{Worked examples}
 \label{c16:sec:typexempel}
 
-\begin{exempel}[Vectors as complex numbers]
-The vectors $\mathbf{a} = (3, 4)$ and $\mathbf{b} = (-2, 4)$ are written as complex numbers and
-added:
-\begin{gather*}
-  a = 3 + j4, \qquad b = -2 + j4, \\
-  a + b = (3 - 2) + j(4 + 4) = 1 + j8, \\
-  \abs{a + b} = \sqrt{1 + 64} = \sqrt{65} \approx 8.06.
-\end{gather*}
+\begin{exempel}[Multiplication in Euler form]
+Calculate $z_1 \cdot z_2$ when $z_1 = 2e^{j\pi/6}$ and $z_2 = 3e^{j\pi/4}$. Give the answer in both
+Euler form and rectangular form.
+
+The magnitudes are multiplied and the exponents added:
+\[
+  z_1 \cdot z_2 = 2 \cdot 3 \cdot e^{j(\pi/6 + \pi/4)} = 6e^{j5\pi/12}
+\]
+The angle is $\frac{\pi}{6} + \frac{\pi}{4} = \frac{2\pi}{12} + \frac{3\pi}{12} = \frac{5\pi}{12}$,
+that is, $75^{\circ}$. Euler's formula gives the rectangular form:
+\[
+  6e^{j5\pi/12} = 6\left(\cos 75^{\circ} + j\sin 75^{\circ}\right)
+    \approx 6(0.259 + j0.966) \approx 1.55 + j5.80
+\]
 \end{exempel}
 
 \begin{exempel}[Euler form to rectangular form]

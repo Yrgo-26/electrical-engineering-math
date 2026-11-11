@@ -46,20 +46,7 @@ $R = 100\,\Omega$ är desamma. Kondensatorns impedans ges av
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 2}{Nytt stoff}
 
-\uppgift{2.1}{Vektorer i det komplexa talplanet}
-Du har vektorerna $a = (4; 3)$, $b = (-3; 6)$ och $c = (-1; 10)$. I uppgifterna nedan ska varje
-vektor $(x; y)$ tolkas som ett komplext tal $z = x + jy$.
-\begin{parts}
-  \item Skriv vektorerna på komplex rektangulär form.
-  \item Rita ut vektorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
-    imaginära).
-  \item Bestäm vektorernas längder, dvs.\ absolutbeloppet av respektive tal.
-  \item Bestäm längden (absolutbeloppet) av $b + 2c$, dvs.\ $\abs{b + 2c}$.
-  \item Bestäm vektorernas vinklar.
-  \item Bestäm en vektor $d$ med längden $10$ som är motsatt riktad mot $a$.
-\end{parts}
-
-\uppgift{2.2}{Rektangulär form till Eulers form}
+\uppgift{2.1}{Rektangulär form till Eulers form}
 En spänning $u(t)$ i en växelströmskrets kan representeras av en fasor $U$, som på rektangulär
 form skrivs
 \[
@@ -73,8 +60,26 @@ form skrivs
   \item Anta att spänningens frekvens är $f = 100\,\text{Hz}$. Bestäm vinkelhastigheten $\omega$.
   \item Skriv motsvarande komplexa tidsfunktion för spänningen på Eulers form, dvs.\
     $u(t) = \abs{U}e^{j(\omega t + \delta)}$.
+  \item Rita spänningens sinuskurva $u(t) = \abs{U}\sin(\omega t + \delta)$ över en period $T$.
 \end{parts}
 \note[Notering] Fasorn $U$ utgör den komplexa spänningen $u(t)$ utan tidsberoendet.
+
+\uppgift{2.2}{Eulers form till rektangulär form}
+En ström $i(t)$ i en växelströmskrets beskrivs av den komplexa tidsfunktionen
+\[
+  i(t) = 10e^{j(100\pi t - 3\pi/4)}\,\text{mA}.
+\]
+\begin{parts}
+  \item Ange strömmens absolutbelopp $\abs{I}$, fasvinkel $\delta$ (i grader) och vinkelhastighet
+    $\omega$.
+  \item Bestäm strömmens frekvens $f$.
+  \item Skriv fasorn $I = \abs{I}e^{j\delta}$ på rektangulär form.
+  \item Rita ut fasorn $I$ i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Rita strömmens sinuskurva $i(t) = \abs{I}\sin(\omega t + \delta)$ över en period $T$.
+\end{parts}
+\note[Notering] Uppgiften går åt motsatt håll mot \uppref{2.1}, från Eulers form till rektangulär
+form.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 3}{Extrauppgifter}
@@ -84,17 +89,17 @@ att räkna i huvudet eller med papper och penna.
 \uppgift{3.1}{Eulers formel}
 Skriv på rektangulär form.
 \begin{delar}(5)
-  \task $e^{j\pi/2}$
-  \task $e^{j\pi}$
-  \task $e^{j0}$
-  \task $e^{-j\pi/2}$
-  \task $e^{j2\pi}$
+  \task $e^{j\pi/6}$
+  \task $e^{j\pi/4}$
+  \task $e^{j2\pi/3}$
+  \task $e^{-j\pi/3}$
+  \task $e^{-j3\pi/4}$
 \end{delar}
 
 \uppgift{3.2}{Eulerform till rektangulär form}
 Skriv på rektangulär form.
 \begin{delar}(4)
-  \task $z = 4e^{j0}$
+  \task $z = 4e^{j\pi/6}$
   \task $z = 5e^{j\pi/3}$
   \task $z = 2e^{-j\pi/4}$
   \task $z = 10e^{j2\pi/3}$
@@ -105,8 +110,8 @@ Skriv på Eulerform $\abs{z}e^{j\delta}$.
 \begin{delar}(4)
   \task $z = 3 + j3$
   \task $z = -2 + j2$
-  \task $z = -j6$
-  \task $z = -5$
+  \task $z = 1 - j\sqrt{3}$
+  \task $z = -4 - j3$
 \end{delar}
 
 \uppgift{3.4}{Multiplikation och division i polär form}
@@ -191,16 +196,7 @@ Vid $\omega = 1000\,\text{rad/s}$ gäller $L = 20\,\text{mH}$ och $C = 50\,\mu\t
   \item Vad kallas detta tillstånd?
 \end{parts}
 
-\uppgift{3.13}{Vektorer som komplexa tal}
-Vektorerna $\mathbf{a} = (5; 12)$ och $\mathbf{b} = (-8; 6)$ är givna.
-\begin{parts}
-  \item Skriv dem som komplexa tal.
-  \item Beräkna $\abs{a}$ och $\abs{b}$.
-  \item Beräkna $a + b$ och dess absolutbelopp.
-  \item Beräkna vektorernas vinklar.
-\end{parts}
-
-\uppgift{3.14}{Rotation med $j$}
+\uppgift{3.13}{Rotation med $j$}
 Talet $z = 3 + j4$ är givet.
 \begin{parts}
   \item Beräkna $jz$.
@@ -209,14 +205,14 @@ Talet $z = 3 + j4$ är givet.
   \item Vad gör multiplikation med $j$ geometriskt?
 \end{parts}
 
-\uppgift{3.15}{Sant eller falskt}
+\uppgift{3.14}{Sant eller falskt}
 Avgör om påståendet är sant eller falskt och motivera kortfattat.
 \begin{parts}
-  \item $e^{j\delta}$ har alltid absolutbeloppet $1$.
+  \item Två komplexa tal med samma absolutbelopp är alltid lika.
   \item $\abs{z_1z_2} = \abs{z_1} + \abs{z_2}$
   \item Vid division subtraheras fasvinklarna.
   \item En fasor innehåller information om signalens frekvens.
-  \item $e^{j\pi} + 1 = 0$
+  \item Fasvinkeln för $z = a + jb$ är alltid $\tan^{-1}\frac{b}{a}$.
   \item Multiplikation av komplexa tal är enklast på rektangulär form.
 \end{parts}
 
@@ -229,7 +225,7 @@ på \textbf{C}. Strukten \code{complex_t} och funktionerna från \uppref[15]{4.1
 även här.
 
 \uppgift{4.1}{Rotation med $j$ i C}
-Uppgiften bygger vidare på \uppref{3.14}. Talet $z = 3 + j4$ är givet.
+Uppgiften bygger vidare på \uppref{3.13}. Talet $z = 3 + j4$ är givet.
 \begin{parts}
   \item Beräkna $jz$, $j^2 z$, $j^3 z$ och $j^4 z$ för hand.
   \item Visa att $j(a + jb) = -b + ja$. Skriv sedan funktionen \code{complex_t

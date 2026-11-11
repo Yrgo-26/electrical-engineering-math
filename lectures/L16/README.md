@@ -2,14 +2,14 @@
 
 ## Dagordning
 * Eulers formel.
-* Komplexa tal för vektorberäkningar.
+* Fasorer: sinusformade signaler som komplexa tal.
 
 ---
 
 ## Mål med lektionen
 * Förstå Eulers formel.
 * Känna till skillnaden mellan en komplex storhet och en fasor.
-* Förstå hur komplexa tal kan användas vid vektorberäkningar.
+* Kunna multiplicera och dividera komplexa tal på Eulerform.
 
 ---
 
@@ -34,7 +34,7 @@
 ---
 
 ## Demonstration
-* Vektorer $a = (3, 4)$ samt $b = (-2, 4)$ som komplexa tal.
+* Multiplikation på Eulerform: $2e^{j\pi/6} \cdot 3e^{j\pi/4}$, och omskrivning av svaret till rektangulär form.
 * Omskrivning av $u(t) = 3e^{j(100\pi t - \frac{\pi}{4})}\thinspace\text{V}$ till rektangulär form.
 * Omskrivning av fasor $I = 5 - j4\thinspace\text{mA}$ till komplex ström $i(t)$ på Eulers form.
 * Rotation med $j$ i C, se uppgift 4.1 i [bilaga B](./appendix/b_exercises.md) (om tiden räcker).
@@ -43,7 +43,7 @@
 
 ## Utvärdering
 * Skriv $Z = 10\thinspace\angle\thinspace\pi/6$ på rektangulär form.
-* Vad är värdet av $e^{j\pi}$? Vad innebär detta geometriskt?
+* Vad händer geometriskt med ett komplext tal när det multipliceras med $2e^{j\pi/6}$?
 
 ---
 

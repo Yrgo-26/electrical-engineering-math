@@ -53,6 +53,16 @@ För de tre grundkomponenterna gäller:
   \item Kapacitans: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$
     (fasvinkel $-90^{\circ}$).
 \end{itemize}
+\medskip\noindent\textbf{Varför $j\omega L$ och $\frac{1}{j\omega C}$?} Spänningen över en spole är
+$u = L\frac{di}{dt}$, och strömmen genom en kondensator är $i = C\frac{du}{dt}$. Derivering
+motsvarar att fasorn multipliceras med $j\omega$, eftersom
+$\frac{d}{dt}e^{j\omega t} = j\omega\,e^{j\omega t}$. Därmed gäller för fasorerna att
+\begin{gather*}
+  U = L \cdot j\omega I \quad \Rightarrow \quad Z_L = \frac{U}{I} = j\omega L, \\
+  I = C \cdot j\omega U \quad \Rightarrow \quad Z_C = \frac{U}{I} = \frac{1}{j\omega C}.
+\end{gather*}
+Derivatorna i kretsens ekvationer blir alltså multiplikationer, och kretsen kan räknas med Ohms lag
+för komplexa tal.
 
 \needspace{12\baselineskip}
 \section{Typexempel}
