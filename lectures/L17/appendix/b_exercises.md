@@ -2,22 +2,15 @@
 
 ## Del 1 - Repetitionsuppgifter
 
-### 1.1 - Vektorer i det komplexa talplanet
+### 1.1 - Impedans i en RC-krets
 
-Du har följande vektorer: $a = (2;1)$, $b = (2;-1)$ samt $c = (-3; 4)$. \
-I uppgifterna nedan ska varje vektor $(x;y)$ tolkas som ett komplext tal $z = x + jy$.
+En resistor $R$ och en kondensator $C$ är seriekopplade och matas med spänningen $U = 10\angle 0°\thinspace V$. Strömmen genom kretsen mäts till $I = 50\angle 30°\thinspace mA$, och frekvensen är $f = 1\thinspace kHz$.
 
-**a)** Skriv vektorerna på komplex rektangulär form.
+**a)** Beräkna kretsens impedans $Z = \frac{U}{I}$ på polär form.
 
-**b)** Rita ut vektorerna i det komplexa talplanet (x-axeln = reell del, y-axeln = imaginär del).
+**b)** Omvandla $Z$ till rektangulär form, $Z = R - jX_C$, och bestäm resistansen $R$ samt kondensatorns reaktans $X_C$.
 
-**c)** Bestäm vektorernas längder, dvs. absolutbeloppet av respektive tal.
-
-**d)** Bestäm längden (absolutbeloppet) av $a + b + c$, dvs. $|a + b + c|$.
-
-**e)** Bestäm vektorernas vinklar.
-
-**f)** Bestäm en vektor $d$ med längden $8$ som är motsatt riktad $c$.
+**c)** Beräkna kapacitansen $C$ som ger den beräknade reaktansen, där $X_C = \frac{1}{\omega C}$.
 
 ---
 

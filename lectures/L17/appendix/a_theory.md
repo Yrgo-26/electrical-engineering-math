@@ -60,17 +60,7 @@ Induktans: $Z_L = j\omega L$ (fasvinkel +90°)
 
 Kapacitans: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$ (fasvinkel −90°)
 
-**Varför $j\omega L$ och $\dfrac{1}{j\omega C}$?** Spänningen över en spole är $u = L\dfrac{di}{dt}$, och strömmen genom en kondensator är $i = C\dfrac{du}{dt}$. Derivering motsvarar att fasorn multipliceras med $j\omega$, eftersom $\frac{d}{dt}e^{j\omega t} = j\omega\thinspace e^{j\omega t}$. Därmed gäller för fasorerna att
-
-```math
-U = L \cdot j\omega I \quad \Rightarrow \quad Z_L = \frac{U}{I} = j\omega L
-```
-
-```math
-I = C \cdot j\omega U \quad \Rightarrow \quad Z_C = \frac{U}{I} = \frac{1}{j\omega C}
-```
-
-Derivatorna i kretsens ekvationer blir alltså multiplikationer, och kretsen kan räknas med Ohms lag för komplexa tal.
+Härledningen av $Z_L$ och $Z_C$ finns i avsnittet [Impedans för spole och kondensator](../../L16/appendix/a_theory.md#impedans-för-spole-och-kondensator) i L16.
 
 ---
 

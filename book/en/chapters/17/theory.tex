@@ -54,16 +54,7 @@ For the three basic components:
   \item Capacitance: $Z_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C}$
     (phase angle $-90^{\circ}$).
 \end{itemize}
-\medskip\noindent\textbf{Why $j\omega L$ and $\frac{1}{j\omega C}$?} The voltage across an inductor is
-$u = L\frac{di}{dt}$, and the current through a capacitor is $i = C\frac{du}{dt}$. Differentiation
-corresponds to multiplying the phasor by $j\omega$, since
-$\frac{d}{dt}e^{j\omega t} = j\omega\,e^{j\omega t}$. For the phasors this gives
-\begin{gather*}
-  U = L \cdot j\omega I \quad \Rightarrow \quad Z_L = \frac{U}{I} = j\omega L, \\
-  I = C \cdot j\omega U \quad \Rightarrow \quad Z_C = \frac{U}{I} = \frac{1}{j\omega C}.
-\end{gather*}
-The derivatives in the circuit's equations thus become multiplications, and the circuit can be
-solved with Ohm's law for complex numbers.
+The derivation of $Z_L$ and $Z_C$ is in \secref{c16:sec:impedans}.
 
 \needspace{12\baselineskip}
 \section{Worked examples}
