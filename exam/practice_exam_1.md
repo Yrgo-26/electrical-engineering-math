@@ -1,4 +1,4 @@
-# Övningstentamen
+# Övningstentamen 1
 
 ## Tillåtna hjälpmedel
 * Skrivmaterial och valfri miniräknare.

@@ -32,9 +32,9 @@ Tentamen är uppdelad i två delar:
 ---
 
 ## Förberedelse
-* Gå igenom [övningstentamen](./practice_exam.md) och försök lösa uppgifterna på egen hand.
-* Jämför sedan med [lösningsförslaget](./practice_exam_solutions.md).
-* Övningstentamen och lösningsförslaget finns också på engelska: [practice exam](./en/practice_exam.md) och [worked solutions](./en/practice_exam_solutions.md).
+* Lös [övningstentamen 1](./practice_exam_1.md) på egen hand och jämför sedan med [lösningsförslaget](./practice_exam_1_solutions.md). Övningstentamen 1 gås igenom under L19.
+* Lös [övningstentamen 2](./practice_exam_2.md) som extra träning och jämför med [lösningsförslaget](./practice_exam_2_solutions.md).
+* Båda övningstentamina och lösningsförslagen finns också på engelska: [practice exam 1](./en/practice_exam_1.md) ([worked solutions](./en/practice_exam_1_solutions.md)) och [practice exam 2](./en/practice_exam_2.md) ([worked solutions](./en/practice_exam_2_solutions.md)).
 * Repetera kursens centrala moment under L19.
 
 ---

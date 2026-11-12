@@ -1,0 +1,166 @@
+% Section 19.3, translated from sv/chapters/19/practice_exam_2.tex. The answers are in
+% en/back/facit/19.tex.
+
+\section{Practice exam 2}
+\label{c19:sec:ovningstentamen2}
+Practice exam 2 has the same layout, aids, points and grade thresholds as
+\hyperref[c19:sec:ovningstentamen]{practice exam~1}, but new numbers and partly different
+questions. Use it as extra practice once you have worked through and marked practice exam~1. The
+answers are in the answer key, and full worked solutions in \file{exam/en/practice_exam_2_solutions.md}.
+
+\prov{ot2}
+
+\provuppgift{1}{1.0}
+Solve the system of equations below to calculate the currents $I_1$ and $I_2$, in mA:
+\[
+  \begin{cases}
+    2I_1 + 3I_2 = 16 \\
+    4I_1 = I_2 + 4
+  \end{cases}
+\]
+
+\provuppgift{2}{2.0}
+A battery with the open-circuit voltage $E = 20\,\text{V}$ and the internal resistance
+$R_{\text{i}} = 4\,\Omega$ is connected to a load. The current is
+$I = \dfrac{E - U}{R_{\text{i}}}$, where $U$ is the terminal voltage, so the power in the load is
+given by
+\[
+  P(U) = U \cdot I = \frac{U(20 - U)}{4}.
+\]
+\begin{parts}
+  \item Find the terminal voltage $U$ such that the power in the load is $P = 16\,\text{W}$. The
+    equation has two solutions.
+  \item Calculate the current $I$ and the load resistance $R = \dfrac{U}{I}$ for each solution.
+    Which solution is preferable if the battery is to last as long as possible? Justify your
+    answer.
+\end{parts}
+
+\provuppgift{3}{1.5}
+The voltage $U$ in volts across a component depends on the current $I$ in amperes as
+\[
+  U(I) = \frac{3I^2 - 3I - 18}{I^2 - 9}.
+\]
+\begin{parts}
+  \item Simplify the expression and state which values of $I$ it is not defined for.
+  \item Find the current $I$ when the voltage is $U = 2.7\,\text{V}$.
+\end{parts}
+
+\provuppgift{4}{1.5}
+When a capacitor discharges through a resistor, the voltage across the capacitor decreases
+exponentially with time. The voltage $u(t)$ can be described by the function
+\[
+  u(t) = U_0 e^{-t/(RC)},
+\]
+where $u(t)$ is the voltage across the capacitor at time $t$, $U_0$ the initial voltage in volts,
+$RC$ the circuit's time constant in seconds and $t$ the time in seconds. A capacitor with the
+capacitance $100\,\upmu\text{F}$ discharges through a $100\,\text{k}\Omega$ resistor from time
+$t = 0$. After $5$ seconds the voltage is measured as $6.0\,\text{V}$.
+\begin{parts}
+  \item Calculate the time constant $RC$ of the circuit.
+  \item Find the initial voltage $U_0$.
+  \item Calculate how long it takes for the voltage to fall to half of $U_0$. Does the answer
+    depend on $U_0$?
+\end{parts}
+
+\provuppgift{5}{1.0}
+An AC voltage is described by the function
+\[
+  u(t) = 325\sin\left(100\pi t + \frac{\pi}{6}\right)\,\text{V}.
+\]
+\begin{parts}
+  \item State the voltage's amplitude, RMS value, frequency, period and phase. The RMS value is
+    given by $U_{\text{RMS}} = \dfrac{\abs{U}}{\sqrt{2}}$. Give the phase in degrees.
+  \item Draw the sine wave of the AC voltage over one period $T$.
+\end{parts}
+
+\provuppgift{6}{2.0}
+The current through an inductor varies during a measurement as
+\[
+  i(t) = t^3 - 9t^2 + 24t\,\text{mA},
+\]
+where $t$ is the time in seconds and $0 \leq t \leq 5$.
+\begin{parts}
+  \item Differentiate the function $i(t)$ and find the expression for $i'(t)$.
+  \item Find the times at which the function is stationary, i.e.\ solve $i'(t) = 0$.
+  \item Use the second derivative to decide whether each point is a maximum or a minimum.
+  \item Calculate the current at the stationary points.
+  \item Draw the graph of $i(t)$ for the interval $0 \leq t \leq 5\,\text{s}$. Mark the turning
+    points.
+  \item The voltage across the inductor is $u(t) = L \cdot i'(t)$. Calculate the voltage at time
+    $t = 1\,\text{s}$ if the inductance is $L = 0.5\,\text{H}$.
+\end{parts}
+
+\provuppgift{7}{1.5}
+The charge $q(t)$ that passes through a conductor during the time interval $(0, t)$ can be
+calculated with
+\[
+  q(t) = \int_0^t i(t)\,dt = \bigl[I(t)\bigr]_0^t,
+\]
+where $q(t)$ is the charge in coulombs (C), $i(t)$ the current in amperes (A) and $I(t)$ the
+antiderivative of $i(t)$. The current into a battery that is being charged is given by
+\[
+  i(t) = 0.06t^2 + 0.4t + 1,
+\]
+where $t$ is the time in seconds.
+\begin{parts}
+  \item Find an expression for the antiderivative $I(t) = \int i(t)\,dt$, i.e.\ integrate
+    without any limits.
+  \item Find an expression for the charge $q(t)$ by integrating over the interval $[0, t]$.
+  \item Calculate the charge that flows into the battery between $t = 2\,\text{s}$ and
+    $t = 5\,\text{s}$.
+  \item Calculate the average current over the same interval, i.e.\ the charge divided by the
+    length of the interval.
+\end{parts}
+
+\provuppgift{8}{2.0}
+A resistor $R = 30\,\Omega$ and an inductor with the reactance $X_L = 40\,\Omega$ are connected
+in series and supplied with the voltage $U = 100\angle 0^{\circ}\,\text{V}$. The current $I$
+through the circuit can be calculated with “Ohm's law”, that is, Ohm's law adapted to complex
+numbers:
+\[
+  I = \frac{U}{Z}
+\]
+\begin{parts}
+  \item Find the impedance $Z = R + jX_L$ of the circuit and give it in both rectangular and polar
+    form.
+  \item Calculate the current $I$ and give it in both polar and rectangular form.
+  \item The frequency is $f = 50\,\text{Hz}$. Calculate the inductance $L$ of the inductor, where
+    $X_L = \omega L$.
+\end{parts}
+
+\provuppgift{9}{1.5}
+A current $i(t)$ in an AC circuit can be represented by a phasor $I$, which in rectangular form is
+written
+\[
+  I = -8 - j6\,\text{mA}.
+\]
+\begin{parts}
+  \item Draw the phasor $I$ in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Express the phasor $I$ in Euler form, i.e.\ find the magnitude $\abs{I}$ and the phase
+    angle $\delta$ such that $I = \abs{I}e^{j\delta}$.
+  \item Assume that the frequency of the current is $f = 50\,\text{Hz}$. Find the angular
+    frequency $\omega$.
+  \item Write the current as a sinusoidal function of time, $i(t) = \abs{I}\sin(\omega t + \delta)$.
+\end{parts}
+
+\provuppgift{10}{2.0}
+In a series connection of three components, the AC voltage across each component is measured as
+\begin{align*}
+  u_1(t) &= 4\sin(wt + 60^{\circ})\,\text{V}, \\
+  u_2(t) &= 3\sin(wt - 30^{\circ})\,\text{V}, \\
+  u_3(t) &= 2\sin(wt + 150^{\circ})\,\text{V}.
+\end{align*}
+The total voltage in the circuit is
+\[
+  u_{\text{tot}}(t) = u_1(t) + u_2(t) + u_3(t).
+\]
+\begin{parts}
+  \item Rewrite the voltages $u_1(t)$, $u_2(t)$ and $u_3(t)$ as phasors $U_1$, $U_2$ and $U_3$ in
+    complex rectangular form.
+  \item Calculate the phasor sum $U_{\text{tot}} = U_1 + U_2 + U_3$.
+  \item Draw the phasors in the complex plane (the $x$-axis is the real part, the $y$-axis the
+    imaginary part).
+  \item Convert the result back to a sinusoidal voltage in the time domain, in the form
+    $u_{\text{tot}}(t) = \abs{U_{\text{tot}}} \sin(wt + \delta_{\text{tot}})$.
+\end{parts}

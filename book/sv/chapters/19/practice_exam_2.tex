@@ -1,0 +1,158 @@
+% Section 19.3, from exam/practice_exam_2.md. The answers are in sv/back/facit/19.tex.
+
+\section{Övningstentamen 2}
+\label{c19:sec:ovningstentamen2}
+Övningstentamen 2 har samma upplägg, hjälpmedel, poäng och betygsgränser som
+\hyperref[c19:sec:ovningstentamen]{övningstentamen~1}, men nya tal och delvis andra frågeställningar.
+Använd den som extra träning när du har räknat och rättat övningstentamen~1. Svaren finns i facit,
+och fullständiga lösningsförslag i \file{exam/practice_exam_2_solutions.md}.
+
+\prov{ot2}
+
+\provuppgift{1}{1,0}
+Lös ekvationssystemet nedan för att beräkna strömmarna $I_1$ och $I_2$, angivna i mA:
+\[
+  \begin{cases}
+    2I_1 + 3I_2 = 16 \\
+    4I_1 = I_2 + 4
+  \end{cases}
+\]
+
+\provuppgift{2}{2,0}
+Ett batteri med tomgångsspänningen $E = 20\,\text{V}$ och den inre resistansen
+$R_{\text{i}} = 4\,\Omega$ är anslutet till en last. Strömmen är
+$I = \dfrac{E - U}{R_{\text{i}}}$, där $U$ är klämspänningen, så effekten i lasten ges av
+\[
+  P(U) = U \cdot I = \frac{U(20 - U)}{4}.
+\]
+\begin{parts}
+  \item Bestäm klämspänningen $U$ så att effekten i lasten blir $P = 16\,\text{W}$. Ekvationen har
+    två lösningar.
+  \item Beräkna strömmen $I$ och lastresistansen $R = \dfrac{U}{I}$ för respektive lösning. Vilken
+    lösning är att föredra om batteriet ska räcka så länge som möjligt? Motivera svaret.
+\end{parts}
+
+\provuppgift{3}{1,5}
+Spänningen $U$ i volt över en komponent beror av strömmen $I$ i ampere enligt
+\[
+  U(I) = \frac{3I^2 - 3I - 18}{I^2 - 9}.
+\]
+\begin{parts}
+  \item Förenkla uttrycket och ange vilka värden på $I$ som uttrycket inte får anta.
+  \item Bestäm strömmen $I$ då spänningen är $U = 2{,}7\,\text{V}$.
+\end{parts}
+
+\provuppgift{4}{1,5}
+När en kondensator urladdas genom ett motstånd minskar spänningen över kondensatorn exponentiellt
+med tiden. Spänningen $u(t)$ kan beskrivas med funktionen
+\[
+  u(t) = U_0 e^{-t/(RC)},
+\]
+där $u(t)$ är spänningen över kondensatorn vid tiden $t$, $U_0$ begynnelsespänningen i volt, $RC$
+kretsens tidskonstant i sekunder och $t$ tiden i sekunder. En kondensator med kapacitansen
+$100\,\upmu\text{F}$ urladdas genom ett motstånd på $100\,\text{k}\Omega$ från tiden $t = 0$.
+Efter $5$ sekunder mäts spänningen till $6{,}0\,\text{V}$.
+\begin{parts}
+  \item Beräkna kretsens tidskonstant $RC$.
+  \item Bestäm begynnelsespänningen $U_0$.
+  \item Beräkna efter hur lång tid spänningen har sjunkit till hälften av $U_0$. Beror svaret på
+    $U_0$?
+\end{parts}
+
+\provuppgift{5}{1,0}
+En växelspänning beskrivs av funktionen
+\[
+  u(t) = 325\sin\left(100\pi t + \frac{\pi}{6}\right)\,\text{V}.
+\]
+\begin{parts}
+  \item Ange spänningens amplitud, effektivvärde, frekvens, periodtid och fas. Effektivvärdet ges
+    av $U_{\text{RMS}} = \dfrac{\abs{U}}{\sqrt{2}}$. Ange fasen i grader.
+  \item Rita växelspänningens sinuskurva över en period $T$.
+\end{parts}
+
+\provuppgift{6}{2,0}
+Strömmen genom en spole varierar under en mätning enligt
+\[
+  i(t) = t^3 - 9t^2 + 24t\,\text{mA},
+\]
+där $t$ är tiden i sekunder och $0 \leq t \leq 5$.
+\begin{parts}
+  \item Derivera funktionen $i(t)$ och bestäm uttrycket för $i'(t)$.
+  \item Bestäm de tidpunkter då funktionen är stationär, dvs.\ lös $i'(t) = 0$.
+  \item Avgör med hjälp av andraderivatan om respektive punkt är ett maximum eller ett minimum.
+  \item Beräkna strömmen i de stationära punkterna.
+  \item Rita grafen till $i(t)$ för intervallet $0 \leq t \leq 5\,\text{s}$. Markera
+    extrempunkterna.
+  \item Spänningen över spolen är $u(t) = L \cdot i'(t)$. Beräkna spänningen vid tiden
+    $t = 1\,\text{s}$ om induktansen är $L = 0{,}5\,\text{H}$.
+\end{parts}
+
+\provuppgift{7}{1,5}
+Laddningen $q(t)$ som passerar genom en ledare under tidsintervallet $(0, t)$ kan beräknas med
+\[
+  q(t) = \int_0^t i(t)\,dt = \bigl[I(t)\bigr]_0^t,
+\]
+där $q(t)$ är laddningen i coulomb (C), $i(t)$ strömmen i ampere (A) och $I(t)$ den primitiva
+funktionen av $i(t)$. Strömmen in i ett batteri som laddas ges av
+\[
+  i(t) = 0{,}06t^2 + 0{,}4t + 1,
+\]
+där $t$ är tiden i sekunder.
+\begin{parts}
+  \item Bestäm ett uttryck för den primitiva funktionen $I(t) = \int i(t)\,dt$, dvs.\ integrera
+    utan att ange några gränser.
+  \item Bestäm ett uttryck för laddningen $q(t)$ genom att integrera över intervallet $[0, t]$.
+  \item Beräkna laddningen som flödar in i batteriet mellan $t = 2\,\text{s}$ och
+    $t = 5\,\text{s}$.
+  \item Beräkna medelströmmen under samma intervall, dvs.\ laddningen delat med intervallets
+    längd.
+\end{parts}
+
+\provuppgift{8}{2,0}
+En resistor $R = 30\,\Omega$ och en spole med reaktansen $X_L = 40\,\Omega$ är seriekopplade och
+matas med spänningen $U = 100\angle 0^{\circ}\,\text{V}$. Strömmen $I$ genom kretsen kan beräknas
+med ”Ohms lag”, det vill säga Ohms lag anpassad för komplexa tal:
+\[
+  I = \frac{U}{Z}
+\]
+\begin{parts}
+  \item Bestäm kretsens impedans $Z = R + jX_L$ och ange den både på rektangulär och polär form.
+  \item Beräkna strömmen $I$ och ange den både på polär och rektangulär form.
+  \item Frekvensen är $f = 50\,\text{Hz}$. Beräkna spolens induktans $L$, där $X_L = \omega L$.
+\end{parts}
+
+\provuppgift{9}{1,5}
+En ström $i(t)$ i en växelströmskrets kan representeras av en fasor $I$, som på rektangulär form
+skrivs
+\[
+  I = -8 - j6\,\text{mA}.
+\]
+\begin{parts}
+  \item Rita ut fasorn $I$ i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Uttryck fasorn $I$ på Eulers form, dvs.\ bestäm absolutbeloppet $\abs{I}$ och fasvinkeln
+    $\delta$ så att $I = \abs{I}e^{j\delta}$.
+  \item Anta att strömmens frekvens är $f = 50\,\text{Hz}$. Bestäm vinkelhastigheten $\omega$.
+  \item Skriv strömmen som en sinusformad funktion av tiden, $i(t) = \abs{I}\sin(\omega t + \delta)$.
+\end{parts}
+
+\provuppgift{10}{2,0}
+I en seriekoppling med tre komponenter mäts växelspänningen över respektive komponent till
+\begin{align*}
+  u_1(t) &= 4\sin(wt + 60^{\circ})\,\text{V}, \\
+  u_2(t) &= 3\sin(wt - 30^{\circ})\,\text{V}, \\
+  u_3(t) &= 2\sin(wt + 150^{\circ})\,\text{V}.
+\end{align*}
+Den totala spänningen i kretsen är
+\[
+  u_{\text{tot}}(t) = u_1(t) + u_2(t) + u_3(t).
+\]
+\begin{parts}
+  \item Skriv om spänningarna $u_1(t)$, $u_2(t)$ och $u_3(t)$ till fasorer $U_1$, $U_2$ och
+    $U_3$ på komplex rektangulär form.
+  \item Beräkna fasorsumman $U_{\text{tot}} = U_1 + U_2 + U_3$.
+  \item Rita ut fasorerna i det komplexa talplanet ($x$-axeln är den reella delen, $y$-axeln den
+    imaginära).
+  \item Omvandla tillbaka resultatet till en sinusformad spänning i tidsdomänen på formen
+    $u_{\text{tot}}(t) = \abs{U_{\text{tot}}} \sin(wt + \delta_{\text{tot}})$.
+\end{parts}

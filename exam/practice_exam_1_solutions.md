@@ -1,4 +1,4 @@
-# Lösningsförslag till övningstentamen
+# Lösningsförslag till övningstentamen 1
 
 ### Uppgift 1 (1,0 poäng)
 Lös ekvationssystemet nedan för att beräkna strömmarna $I_1$ och $I_2$, angivna i $mA$:

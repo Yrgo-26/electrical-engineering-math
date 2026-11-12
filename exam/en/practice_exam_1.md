@@ -1,4 +1,4 @@
-# Practice exam
+# Practice exam 1
 
 ## Permitted aids
 * Writing materials and a calculator of any kind.

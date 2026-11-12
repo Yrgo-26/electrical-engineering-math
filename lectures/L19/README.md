@@ -15,19 +15,22 @@
 ## Instruktioner
 
 ### Innan lektionen
-* Gå igenom [övningstentamen](../../exam/practice_exam.md), eller avsnitt 19.2 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)), och försök lösa uppgifterna på egen hand.
+* Lös [övningstentamen 1](../../exam/practice_exam_1.md), eller avsnitt 19.2 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)), på egen hand. Det är den som gås igenom under lektionen.
 
 ### Under lektionen
 * Närvara under genomgången.
-* Gå igenom [lösningsförslaget](../../exam/practice_exam_solutions.md) och jämför med dina egna svar.
+* Genomgång av övningstentamen 1. Jämför med dina egna svar och med [lösningsförslaget](../../exam/practice_exam_1_solutions.md).
 * Möjlighet till komplettering av tidigare duggor.
+
+### Efter lektionen
+* Lös [övningstentamen 2](../../exam/practice_exam_2.md) på egen hand som extra träning inför tentamen och jämför sedan med [lösningsförslaget](../../exam/practice_exam_2_solutions.md).
 
 ---
 
 ## Utvärdering
 * Vilket område i kursen känner du dig minst säker på? Skriv ned en specifik fråga att ta upp under genomgången.
-* Lös en uppgift ur övningstentamen utan hjälpmedel och jämför sedan med lösningsförslaget.
-* Gå igenom en uppgift du hade svårast med på övningstentamen och förklara lösningsmetoden för en studiekamrat.
+* Lös en uppgift ur övningstentamen 2 utan hjälpmedel och jämför sedan med lösningsförslaget.
+* Gå igenom en uppgift du hade svårast med på övningstentamen 1 och förklara lösningsmetoden för en studiekamrat.
 
 ---
 

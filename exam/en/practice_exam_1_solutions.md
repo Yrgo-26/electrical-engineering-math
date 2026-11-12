@@ -1,4 +1,4 @@
-# Worked solutions to the practice exam
+# Worked solutions to practice exam 1
 
 ### Question 1 (1.0 points)
 Solve the system of equations below to calculate the currents $I_1$ and $I_2$, in $mA$:
