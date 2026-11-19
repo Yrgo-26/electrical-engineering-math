@@ -6,7 +6,7 @@
 
 \begin{aside}
 \textbf{Så arbetar du med uppgifterna.} Varje uppgift löses i två steg. Först räknar du
-\textbf{för hand} och skriver ned mellanstegen; det görs \textbf{före lektionen}. Sedan skriver
+\textbf{för hand} och skriver ned mellanstegen; det görs helst \textbf{före lektionen}. Sedan skriver
 du under lektionen \textbf{ett program i C} som utför samma beräkning, och jämför resultaten.
 Del~1--3 är obligatoriska och bedöms U/G, liksom handberäkningarna i uppgift~6.1, 6.4~a, 7.1
 och~7.4. Övriga uppgifter i del~4--7 är frivillig fördjupning för den som hinner och påverkar inte
@@ -16,9 +16,24 @@ bedömningen.
 \end{aside}
 
 \begin{aside}
-\note[Obs] Handberäkningarna för del~1--3, samt uppgift~6.1, 6.4~a, 7.1 och~7.4, ska vara gjorda
-före lektionen och tas med dit.
-Lektionstiden räcker inte till både beräkning och programmering.
+\note[Obs] Det rekommenderas starkt, men är inget krav, att handberäkningarna nedan görs före
+lektionen och tas med dit. Görs de under lektionen ska både beräkning och programmering hinnas
+med, vilket kan bli stressigt.
+\begin{itemize}
+  \item \textbf{1.1~a--b:} parallellresistansen $R_p$, strömmen $I$ och effekten $P$.
+  \item \textbf{1.2~a--b:} förstärkningen i dB och spänningskvoten vid $-3$ dB.
+  \item \textbf{1.3~a--b:} $u(t)$ vid $t = 2{,}0$ ms samt vinkeln i radianer och grader.
+  \item \textbf{2.1~a:} $f'(x)$ och $f'(2)$.
+  \item \textbf{2.2~a--b:} $i'(t)$, $u(t)$ och $u(3)$.
+  \item \textbf{2.3~a:} $\int_0^3 x^2\,dx$.
+  \item \textbf{3.1~a--b:} $z_1 + z_2$, $z_1 \cdot z_2$, $\frac{z_1}{z_2}$ samt $\abs{z_1}$ och $\arg(z_1)$.
+  \item \textbf{3.2~a:} $z$ på rektangulär form.
+  \item \textbf{3.3~a--d:} $\omega$, $X_L$, $X_C$, $Z$, $\abs{Z}$, $\arg(Z)$ och $\abs{I}$.
+  \item \textbf{6.1~a--b:} en epok av träningen för hand.
+  \item \textbf{6.4~a:} $k$ och $m$ i $U(t) = kt + m$.
+  \item \textbf{7.1~a--c:} nodens summa $z$ och utsignal med ReLU och $\tanh$.
+  \item \textbf{7.4~a--b:} rita de fyra punkterna och förklara varför en rät linje inte räcker.
+\end{itemize}
 \end{aside}
 
 Koden skrivs och körs i OnlineGDB, \url{https://www.onlinegdb.com/online_c_compiler}, som i
@@ -100,15 +115,20 @@ En fil som inte står under \code{SRC_FILES} kompileras inte, och anropet av des
 ett länkfel.
 
 \subsection*{Redovisning och bedömning}
-Uppgifterna redovisas för läraren under lektionen:
+Uppgifterna redovisas för läraren under lektionen. Hinns redovisningen inte med kan den göras under
+repetitionslektionen. Redovisningen omfattar:
 \begin{itemize}
-  \item \textbf{Handberäkningarna} för respektive uppgift, gjorda före lektionen och medtagna till
-    den, handskrivna eller digitala och med tydliga steg.
+  \item \textbf{Handberäkningarna} för respektive uppgift, helst gjorda före lektionen,
+    handskrivna eller digitala och med tydliga steg.
   \item \textbf{Koden}: OnlineGDB-projektet med en fil per uppgift, som ska vara körbart och
     kommenterat. Samtliga uppgifter ska köras med en enda tryckning på \textbf{Run}.
   \item En \textbf{jämförelse} mellan handberäknat och beräknat resultat, med motivering av
     eventuella avvikelser.
 \end{itemize}
+\textbf{Grupparbete och AI.} Ni får arbeta i grupper om två. AI-verktyg får användas som
+hjälpmedel, men koden ska ni skriva själva, inte klistra in, och båda i gruppen ska kunna förklara
+koden för läraren vid redovisningen.
+
 Laborationen bedöms U/G och påverkar inte kursens betygspoäng. Den ingår i kravet att samtliga
 lärandemål ska vara uppnådda för godkänt betyg på kursen.
 
@@ -194,12 +214,9 @@ $L = 0{,}20\,\text{H}$. Spänningen över spolen ges av
 Låt $f(x) = x^2$.
 \begin{parts}
   \item Beräkna $\int_0^3 x^2\,dx$ analytiskt.
-  \item Skriv en funktion \code{integral()} som beräknar den bestämda integralen med
-    trapetsmetoden:
-    \[
-      \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right],
-      \qquad h = \frac{b - a}{n}.
-    \]
+  \item Använd funktionen \code{integrate()} från L14, i
+    \file{lectures/L14/appendix/code/main.c}. Den beräknar integralen som en summa av $n$ smala
+    rektanglar, där varje rektangel har höjden $f(x)$ i sin vänstra kant.
   \item Beräkna integralen med $n = 10$, $n = 100$ och $n = 1000$. Skriv ut det absoluta felet
     för varje $n$.
   \item Hur förändras felet när $n$ tiodubblas?
@@ -214,16 +231,17 @@ Låt $z_1 = 4 + 3j$ och $z_2 = 2 - 5j$.
 \begin{parts}
   \item Beräkna $z_1 + z_2$, $z_1 \cdot z_2$ och $\dfrac{z_1}{z_2}$ för hand.
   \item Beräkna $\abs{z_1}$ och $\arg(z_1)$ i radianer och grader.
-  \item Skriv ett program som utför samtliga beräkningar med \file{complex.h}. Skriv ut varje
-    resultat på formen \code{a + bj} med hjälp av \code{creal()} och \code{cimag()}.
+  \item Skriv ett program som utför samtliga beräkningar med real- och imaginärdelen som två
+    variabler av typen \code{double}, se \secref{c18:sec:complex}. Skriv ut varje resultat på
+    formen \code{a + bj}.
 \end{parts}
 
 \uppgift{3.2}{Polär och rektangulär form}
 Ett komplext tal ges på polär form som $z = 10\angle\frac{\pi}{6}$.
 \begin{parts}
   \item Omvandla $z$ till rektangulär form för hand.
-  \item Skriv ett program som utför omvandlingen med \code{cexp()}, och omvandlar tillbaka med
-    \code{cabs()} och \code{carg()}.
+  \item Skriv ett program som utför omvandlingen med \code{cos()} och \code{sin()}, och omvandlar
+    tillbaka med \code{sqrt()} och \code{atan2()}.
   \item Kontrollera att du får tillbaka det ursprungliga talet. Varför bör resultaten jämföras med
     \code{fabs(a - b) < 1e-9} i stället för med \code{==}?
 \end{parts}
@@ -236,8 +254,8 @@ Kretsen matas med $U = 230\,\text{V}$ vid $f = 50\,\text{Hz}$.
   \item Ange den totala impedansen $Z = R + j(X_L - X_C)$ på rektangulär form.
   \item Beräkna $\abs{Z}$ och $\arg(Z)$ i grader. Är kretsen induktiv eller kapacitiv?
   \item Beräkna strömmens belopp $\abs{I} = \dfrac{\abs{U}}{\abs{Z}}$.
-  \item Skriv ett program som beräknar allt ovanstående med \file{complex.h}. Låt $f$ vara en
-    variabel, och kör programmet även för $f = 500\,\text{Hz}$. Vad händer med kretsens karaktär?
+  \item Skriv ett program som beräknar allt ovanstående, med impedansens real- och imaginärdel
+    som två variabler av typen \code{double}. Låt $f$ vara en variabel, och kör programmet även för $f = 500\,\text{Hz}$. Vad händer med kretsens karaktär?
 \end{parts}
 
 % ------------------------------------------------------------------------------------------
@@ -389,7 +407,7 @@ Strömmen ges av $i(t) = 3t + 2\,\text{A}$.
 \begin{parts}
   \item Beräkna laddningen $q = \int_0^4 i(t)\,dt$ analytiskt.
   \item Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
-  \item Varför blir det numeriska resultatet exakt i detta fall, men inte i \uppref{2.3}?
+  \item Varför blir det numeriska resultatet exakt i detta fall, men inte för $f(x) = x^2$?
 \end{parts}
 
 % ------------------------------------------------------------------------------------------
@@ -403,8 +421,8 @@ försmak. För Eh-klassen är detta enda tillfället att lära sig hur maskininl
 tillfället i akt! Oavsett klass visar delarna att matematiken från kursen är grunden även där.
 
 \begin{aside}
-\note[Obs] Handberäkningarna i \uppref{6.1} och \uppref{6.4}~a) är obligatoriska och görs före
-lektionen, precis som i del~1--3. De kräver ingen dator. Övriga uppgifter i del~6 är frivilliga.
+\note[Obs] Handberäkningarna i \uppref{6.1} och \uppref{6.4}~a) är obligatoriska och görs helst
+före lektionen, precis som i del~1--3. De kräver ingen dator. Övriga uppgifter i del~6 är frivilliga.
 \end{aside}
 
 Koden finns i \file{lectures/L18/code/lin_reg/} och består av fyra filer:
@@ -438,8 +456,10 @@ Utan någon implementation i \code{lin_reg_optimize()} tränas modellen inte all
 prediktioner blir $0$ tills \uppref{6.2} är genomförd.
 
 \subsection*{Struktar i C}
-En \textbf{strukt} (\code{struct}), som \code{complex_t} i kapitel~\ref{c15:ch}--\ref{c17:ch},
-samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två
+Struktar behövs bara för de frivilliga programmeringsuppgifterna i del~6. Gör du bara
+handberäkningarna kan avsnittet hoppas över.
+
+En \textbf{strukt} (\code{struct}) samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två
 flyttal:
 \begin{ccode}
 typedef struct
@@ -577,7 +597,7 @@ förstå hela koden: målet är att du implementerar en central del av nätverke
 det lära sig.
 
 \begin{aside}
-\note[Obs] Handberäkningarna i \uppref{7.1} och \uppref{7.4} är obligatoriska och görs före
+\note[Obs] Handberäkningarna i \uppref{7.1} och \uppref{7.4} är obligatoriska och görs helst före
 lektionen. De kräver ingen dator. Övriga uppgifter i del~7 är frivilliga.
 \end{aside}
 

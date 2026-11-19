@@ -243,23 +243,62 @@ För ett förstagradspolynom ger trapetsmetoden ett **exakt** resultat, eftersom
 
 ---
 
-## 8. Komplexa tal med complex.h
-I L15–L17 skrevs komplexa tal som en egen strukt, `complex_t`. Standardbiblioteket `complex.h` har i stället en färdig typ och används tillsammans med `math.h`:
+## 8. Komplexa tal i C
+I L15–L17 räknades komplexa tal för hand på rektangulär och polär form. I C lagras ett komplext tal $z = a + jb$ enklast som två vanliga flyttal, realdelen och imaginärdelen:
+
+```c
+const double re = 3.0; // Re(z), alltså a.
+const double im = 4.0; // Im(z), alltså b.
+```
+
+### Räknesätten
+Räknesätten följer formlerna från L15–L17. Med $z_1 = a + jb$ och $z_2 = c + jd$ gäller:
+
+| Räknesätt | Realdel | Imaginärdel |
+|-----------|---------|-------------|
+| $z_1 + z_2$ | $a + c$ | $b + d$ |
+| $z_1 \cdot z_2$ | $ac - bd$ | $ad + bc$ |
+| $\dfrac{z_1}{z_2}$ | $\dfrac{ac + bd}{c^2 + d^2}$ | $\dfrac{bc - ad}{c^2 + d^2}$ |
+
+Produkten beräknas till exempel som
+
+```c
+const double prod_re = a * c - b * d;
+const double prod_im = a * d + b * c;
+```
+
+### Rektangulär och polär form
+Från rektangulär till polär form används Pythagoras sats och `atan2()`, som ger vinkeln i rätt kvadrant:
+
+```c
+const double magnitude = sqrt(re * re + im * im); // |z|
+const double angle     = atan2(im, re);           // arg(z) i radianer
+```
+
+Från polär till rektangulär form används cosinus och sinus:
+
+```c
+const double re = r * cos(theta);
+const double im = r * sin(theta);
+```
+
+Talet skrivs ut med real- och imaginärdelen var för sig:
+
+```c
+printf("z = %.2f + %.2fj\n", re, im);
+```
+
+### Fördjupning: complex.h
+Standardbiblioteket `complex.h` har en färdig typ för komplexa tal. Den behövs inte i de obligatoriska uppgifterna, men kan användas i fördjupningsuppgiften 4.2. Typen heter `double complex` och den imaginära enheten heter `I`:
 
 ```c
 #include <complex.h>
 #include <math.h>
-```
 
-Typen heter `double complex` och den imaginära enheten heter `I`:
-
-```c
 const double complex z = 3.0 + 4.0 * I;
 ```
 
 **OBS!** Inom elektrotekniken skrivs den imaginära enheten $j$ för att inte förväxlas med strömmen $i$. I C heter den alltid `I`.
-
-### Funktioner
 
 | Matematik | C-funktion | Beskrivning |
 |-----------|------------|-------------|
@@ -269,56 +308,38 @@ const double complex z = 3.0 + 4.0 * I;
 | $\arg(z)$ | `carg(z)` | Argumentet i radianer, $(-\pi,\ \pi]$ |
 | $\bar{z}$ | `conj(z)` | Konjugatet |
 | $e^z$ | `cexp(z)` | Exponentialfunktionen |
-| $\sqrt{z}$ | `csqrt(z)` | Kvadratroten |
 
-De fyra räknesätten skrivs som vanligt med `+`, `-`, `*` och `/`.
-
-### Rektangulär och polär form
-Från rektangulär till polär form:
-
-```c
-const double magnitude = cabs(z);        // |z|
-const double angle     = carg(z);        // arg(z) i radianer
-```
-
-Från polär till rektangulär form används Eulers formel $z = r e^{j\theta}$:
-
-```c
-const double complex z = r * cexp(I * theta);
-```
-
-**OBS!** `printf()` kan inte skriva ut ett komplext tal direkt. Real- och imaginärdel skrivs ut var för sig:
-
-```c
-printf("z = %.2f + %.2fj\n", creal(z), cimag(z));
-```
+De fyra räknesätten skrivs som vanligt med `+`, `-`, `*` och `/`, och ett tal på polär form skapas med `r * cexp(I * theta)`. `printf()` kan inte skriva ut ett komplext tal direkt, utan real- och imaginärdelen skrivs ut med `creal()` och `cimag()`.
 
 ---
 
 ## 9. Impedans och fasorer
-Med komplexa tal beräknas impedanser direkt i kod (L16–L17). Med vinkelfrekvensen $\omega = 2\pi f$ gäller:
+Med vinkelfrekvensen $\omega = 2\pi f$ gäller för impedanserna (L16–L17):
 
 ```math
 Z_R = R, \qquad Z_L = j\omega L, \qquad Z_C = \frac{1}{j\omega C} = -\frac{j}{\omega C}
 ```
 
-```c
-const double omega          = 2.0 * PI * f;
-const double complex z_r    = r;
-const double complex z_l    = I * omega * l;
-const double complex z_c    = -I / (omega * c);
-const double complex z_tot  = z_r + z_l; // Seriekoppling.
-```
-
-En fasor $U = |U| \angle \delta$ skrivs som ett komplext tal på polär form. Addition av fasorer sker då med vanlig addition:
+I en seriekrets med $R$, $L$ och $C$ blir den totala impedansen $Z = R + j(X_L - X_C)$, där $X_L = \omega L$ och $X_C = \frac{1}{\omega C}$. Impedansen lagras därför som två flyttal:
 
 ```c
-const double complex u1 = a1 * cexp(I * d1);
-const double complex u2 = a2 * cexp(I * d2);
-const double complex u  = u1 + u2;
+const double omega = 2.0 * PI * f;
+const double x_l   = omega * l;
+const double x_c   = 1.0 / (omega * c);
+const double z_re  = r;         // Resistansen.
+const double z_im  = x_l - x_c; // Reaktansen.
+const double z_abs = sqrt(z_re * z_re + z_im * z_im);
+const double z_arg = atan2(z_im, z_re);
 ```
 
-Resultatets amplitud och fasvinkel fås sedan med `cabs()` respektive `carg()`.
+En fasor $U = |U| \angle \delta$ omvandlas till rektangulär form med cosinus och sinus. Addition av fasorer sker sedan genom att real- och imaginärdelarna adderas var för sig:
+
+```c
+const double u_re = a1 * cos(d1) + a2 * cos(d2);
+const double u_im = a1 * sin(d1) + a2 * sin(d2);
+```
+
+Resultatets amplitud och fasvinkel fås sedan med `sqrt()` respektive `atan2()`.
 
 ---
 
@@ -468,7 +489,7 @@ Z = R + j\omega L = 100 + j15{,}71\ \Omega
 \arg(Z) = \arctan\left(\frac{15{,}71}{100}\right) \approx 0{,}156\ \text{rad} \approx 8{,}93^\circ
 ```
 
-I kod beräknas beloppet och argumentet med `cabs(z)` respektive `carg(z)`.
+I kod beräknas beloppet och argumentet med `sqrt(re * re + im * im)` respektive `atan2(im, re)`.
 
 ---
 

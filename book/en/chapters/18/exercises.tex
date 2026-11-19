@@ -5,7 +5,7 @@
 
 \begin{aside}
 \textbf{How to work with the exercises.} Each exercise is solved in two steps. First you calculate
-\textbf{by hand} and write down the intermediate steps; this is done \textbf{before the lesson}.
+\textbf{by hand} and write down the intermediate steps; this is preferably done \textbf{before the lesson}.
 Then, during the lesson, you write \textbf{a C program} that does the same calculation, and
 compare the results. Parts~1--3 are compulsory and are assessed U/G, the Swedish fail and pass.
 The hand calculations in Exercises~6.1, 6.4~a, 7.1 and~7.4 are compulsory too. The other exercises
@@ -15,9 +15,24 @@ in Parts~4--7 are optional further study for those who have time, and do not aff
 \end{aside}
 
 \begin{aside}
-\note[Note] The hand calculations for Parts~1--3, and Exercises~6.1, 6.4~a, 7.1 and~7.4, must be
-done before the lesson and brought to it.
-The lesson time is not enough for both calculating and programming.
+\note[Note] It is strongly recommended, but not required, that the hand calculations below are done
+before the lesson and brought to it. If they are done during the lesson, there is both calculating
+and programming to fit in, which can be stressful.
+\begin{itemize}
+  \item \textbf{1.1~a--b:} the parallel resistance $R_p$, the current $I$ and the power $P$.
+  \item \textbf{1.2~a--b:} the gain in dB and the voltage ratio at $-3$ dB.
+  \item \textbf{1.3~a--b:} $u(t)$ at $t = 2.0$ ms and the angle in radians and degrees.
+  \item \textbf{2.1~a:} $f'(x)$ and $f'(2)$.
+  \item \textbf{2.2~a--b:} $i'(t)$, $u(t)$ and $u(3)$.
+  \item \textbf{2.3~a:} $\int_0^3 x^2\,dx$.
+  \item \textbf{3.1~a--b:} $z_1 + z_2$, $z_1 \cdot z_2$, $\frac{z_1}{z_2}$, and $\abs{z_1}$ and $\arg(z_1)$.
+  \item \textbf{3.2~a:} $z$ in rectangular form.
+  \item \textbf{3.3~a--d:} $\omega$, $X_L$, $X_C$, $Z$, $\abs{Z}$, $\arg(Z)$ and $\abs{I}$.
+  \item \textbf{6.1~a--b:} one epoch of the training by hand.
+  \item \textbf{6.4~a:} $k$ and $m$ in $U(t) = kt + m$.
+  \item \textbf{7.1~a--c:} the node's sum $z$ and output with ReLU and $\tanh$.
+  \item \textbf{7.4~a--b:} plot the four points and explain why a straight line is not enough.
+\end{itemize}
 \end{aside}
 
 The code is written and run in OnlineGDB, \url{https://www.onlinegdb.com/online_c_compiler}, as in
@@ -98,15 +113,20 @@ A file that is not listed under \code{SRC_FILES} is not compiled, and calling it
 gives a linker error.
 
 \subsection*{Presentation and assessment}
-The exercises are presented to the teacher during the lesson:
+The exercises are presented to the teacher during the lesson. If there is not time, they can be
+presented during the review lesson instead. The presentation covers:
 \begin{itemize}
-  \item \textbf{The hand calculations} for each exercise, done before the lesson and brought to
-    it, handwritten or digital and with clear steps.
+  \item \textbf{The hand calculations} for each exercise, preferably done before the lesson,
+    handwritten or digital and with clear steps.
   \item \textbf{The code}: the OnlineGDB project with one file per exercise, which must be
     runnable and commented. All the exercises must run with a single press of \textbf{Run}.
   \item A \textbf{comparison} between the hand-calculated and the computed result, with an
     explanation of any discrepancies.
 \end{itemize}
+\textbf{Group work and AI.} You may work in groups of two. AI tools may be used as an aid, but you
+must write the code yourselves, not paste it in, and both members of the group must be able to
+explain the code to the teacher at the presentation.
+
 The lab is assessed U/G and does not affect the points towards the course grade. It is part of the
 requirement that all the course's learning outcomes are achieved for a pass grade in the course.
 
@@ -193,12 +213,9 @@ $L = 0.20\,\text{H}$. The voltage across the inductor is given by
 Let $f(x) = x^2$.
 \begin{parts}
   \item Calculate $\int_0^3 x^2\,dx$ analytically.
-  \item Write a function \code{integral()} that calculates the definite integral with the
-    trapezoidal rule:
-    \[
-      \int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right],
-      \qquad h = \frac{b - a}{n}.
-    \]
+  \item Use the function \code{integrate()} from L14, in
+    \file{lectures/L14/appendix/code/main.c}. It calculates the integral as a sum of $n$ narrow
+    rectangles, where each rectangle has the height $f(x)$ at its left edge.
   \item Calculate the integral with $n = 10$, $n = 100$ and $n = 1000$. Print the absolute error
     for each $n$.
   \item How does the error change when $n$ is multiplied by ten?
@@ -213,16 +230,17 @@ Let $z_1 = 4 + 3j$ and $z_2 = 2 - 5j$.
 \begin{parts}
   \item Calculate $z_1 + z_2$, $z_1 \cdot z_2$ and $\dfrac{z_1}{z_2}$ by hand.
   \item Calculate $\abs{z_1}$ and $\arg(z_1)$ in radians and degrees.
-  \item Write a program that does all the calculations with \file{complex.h}. Print each result in
-    the form \code{a + bj} using \code{creal()} and \code{cimag()}.
+  \item Write a program that does all the calculations with the real and imaginary parts as two
+    variables of type \code{double}; see \secref{c18:sec:complex}. Print each result in the form
+    \code{a + bj}.
 \end{parts}
 
 \uppgift{3.2}{Polar and rectangular form}
 A complex number is given in polar form as $z = 10\angle\frac{\pi}{6}$.
 \begin{parts}
   \item Convert $z$ to rectangular form by hand.
-  \item Write a program that does the conversion with \code{cexp()}, and converts back with
-    \code{cabs()} and \code{carg()}.
+  \item Write a program that does the conversion with \code{cos()} and \code{sin()}, and converts
+    back with \code{sqrt()} and \code{atan2()}.
   \item Check that you get the original number back. Why should the results be compared with
     \code{fabs(a - b) < 1e-9} rather than with \code{==}?
 \end{parts}
@@ -235,8 +253,8 @@ The circuit is supplied with $U = 230\,\text{V}$ at $f = 50\,\text{Hz}$.
   \item Give the total impedance $Z = R + j(X_L - X_C)$ in rectangular form.
   \item Calculate $\abs{Z}$ and $\arg(Z)$ in degrees. Is the circuit inductive or capacitive?
   \item Calculate the magnitude of the current, $\abs{I} = \dfrac{\abs{U}}{\abs{Z}}$.
-  \item Write a program that calculates all of the above with \file{complex.h}. Let $f$ be a
-    variable, and run the program for $f = 500\,\text{Hz}$ as well. What happens to the character
+  \item Write a program that calculates all of the above, with the real and imaginary parts of the
+    impedance as two variables of type \code{double}. Let $f$ be a variable, and run the program for $f = 500\,\text{Hz}$ as well. What happens to the character
     of the circuit?
 \end{parts}
 
@@ -389,7 +407,7 @@ The current is given by $i(t) = 3t + 2\,\text{A}$.
 \begin{parts}
   \item Calculate the charge $q = \int_0^4 i(t)\,dt$ analytically.
   \item Calculate the same charge numerically with the trapezoidal rule and $n = 4$.
-  \item Why is the numerical result exact in this case, but not in \uppref{2.3}?
+  \item Why is the numerical result exact in this case, but not for $f(x) = x^2$?
 \end{parts}
 
 % ------------------------------------------------------------------------------------------
@@ -404,8 +422,8 @@ make the most of it! Whichever class you are in, the parts show that the mathema
 course is the foundation there too.
 
 \begin{aside}
-\note[Note] The hand calculations in \uppref{6.1} and \uppref{6.4}~a) are compulsory and are done
-before the lesson, as in Parts~1--3. They need no computer. The other exercises in Part~6 are
+\note[Note] The hand calculations in \uppref{6.1} and \uppref{6.4}~a) are compulsory and are preferably
+done before the lesson, as in Parts~1--3. They need no computer. The other exercises in Part~6 are
 optional.
 \end{aside}
 
@@ -441,7 +459,10 @@ Without an implementation in \code{lin_reg_optimize()} the model is not trained 
 prediction is $0$ until \uppref{6.2} is done.
 
 \subsection*{Structs in C}
-A \textbf{struct}, like \code{complex_t} in Chapters~\ref{c15:ch}--\ref{c17:ch}, gathers several
+Structs are only needed for the optional programming exercises in Part~6. If you only do the
+hand calculations, you can skip this section.
+
+A \textbf{struct} gathers several
 variables that belong together under one name. The model, for example, consists of two
 floating-point numbers:
 \begin{ccode}
@@ -581,8 +602,8 @@ to understand all of the code: the aim is that you implement a central part of t
 yourself and then watch it learn.
 
 \begin{aside}
-\note[Note] The hand calculations in \uppref{7.1} and \uppref{7.4} are compulsory and are done
-before the lesson. They need no computer. The other exercises in Part~7 are optional.
+\note[Note] The hand calculations in \uppref{7.1} and \uppref{7.4} are compulsory and are preferably
+done before the lesson. They need no computer. The other exercises in Part~7 are optional.
 \end{aside}
 
 \begin{aside}

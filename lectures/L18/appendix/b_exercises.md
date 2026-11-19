@@ -1,10 +1,27 @@
 # L18 – Lektionsuppgifter
 
 Uppgifterna löses i två steg:
-1. **Räkna för hand** och skriv ned mellanstegen. Detta görs **före lektionen**.
+1. **Räkna för hand** och skriv ned mellanstegen. Detta görs helst **före lektionen**, se nedan.
 2. **Skriv ett program i C** som utför samma beräkning och jämför resultaten. Detta görs under lektionen.
 
-> **OBS!** Handberäkningarna för del 1–3, samt uppgift 6.1, 6.4 a, 7.1 och 7.4, ska vara gjorda före lektionen och tas med dit. Lektionstiden räcker inte till både beräkning och programmering.
+> **OBS!** Det rekommenderas starkt, men är inget krav, att handberäkningarna nedan görs före lektionen och tas med dit. Görs de under lektionen ska både beräkning och programmering hinnas med, vilket kan bli stressigt.
+
+### Handberäkningar före lektionen
+Samtliga uppgifter nedan finns även samlade i [`hand_calculations.md`](./hand_calculations.md).
+
+* **1.1 a–b:** parallellresistansen $R_p$, strömmen $I$ och effekten $P$.
+* **1.2 a–b:** förstärkningen i dB och spänningskvoten vid $-3$ dB.
+* **1.3 a–b:** $u(t)$ vid $t = 2{,}0$ ms samt vinkeln i radianer och grader.
+* **2.1 a:** $f'(x)$ och $f'(2)$.
+* **2.2 a–b:** $i'(t)$, $u(t)$ och $u(3)$.
+* **2.3 a:** $\int_0^3 x^2\,dx$.
+* **3.1 a–b:** $z_1 + z_2$, $z_1 \cdot z_2$, $\frac{z_1}{z_2}$ samt $|z_1|$ och $\arg(z_1)$.
+* **3.2 a:** $z$ på rektangulär form.
+* **3.3 a–d:** $\omega$, $X_L$, $X_C$, $Z$, $|Z|$, $\arg(Z)$ och $|I|$.
+* **6.1 a–b:** en epok av träningen för hand.
+* **6.4 a:** $k$ och $m$ i $U(t) = kt + m$.
+* **7.1 a–c:** nodens summa $z$ och utsignal med ReLU och $\tanh$.
+* **7.4 a–b:** rita de fyra punkterna och förklara varför en rät linje inte räcker.
 
 Koden skrivs och körs i **OnlineGDB**: <https://www.onlinegdb.com/online_c_compiler>. Kontrollera att språket är inställt på **C** och tryck på **Run**. Ingen installation krävs.
 
@@ -169,11 +186,7 @@ Låt $f(x) = x^2$.
 
 **a)** Beräkna $\displaystyle\int_0^3 x^2\thinspace dx$ analytiskt.
 
-**b)** Skriv en funktion `integral()` som beräknar den bestämda integralen med trapetsmetoden:
-
-```math
-\int_a^b f(x)\,dx \approx h\left[\frac{f(a) + f(b)}{2} + \sum_{k=1}^{n-1} f(a + kh)\right], \qquad h = \frac{b - a}{n}.
-```
+**b)** Använd funktionen `integrate()` från L14, se [`L14/appendix/code/main.c`](../../L14/appendix/code/main.c). Den beräknar integralen som en summa av $n$ smala rektanglar, där varje rektangel har höjden $f(x)$ i sin vänstra kant. Hur den fungerar förklaras i [L14:s kod-README](../../L14/appendix/code/README.md).
 
 **c)** Beräkna integralen med $n = 10$, $n = 100$ och $n = 1000$. Skriv ut det absoluta felet för varje $n$.
 
@@ -190,7 +203,7 @@ Låt $z_1 = 4 + 3j$ och $z_2 = 2 - 5j$.
 
 **b)** Beräkna $|z_1|$ och $\arg(z_1)$ i radianer och grader.
 
-**c)** Skriv ett program som utför samtliga beräkningar med `complex.h`. Skriv ut varje resultat på formen `a + bj` med hjälp av `creal()` och `cimag()`.
+**c)** Skriv ett program som utför samtliga beräkningar med real- och imaginärdelen som två variabler av typen `double`, se bilaga A §8. Skriv ut varje resultat på formen `a + bj`.
 
 ---
 
@@ -199,7 +212,7 @@ Ett komplext tal ges på polär form som $z = 10\thinspace\angle\thinspace\dfrac
 
 **a)** Omvandla $z$ till rektangulär form för hand.
 
-**b)** Skriv ett program som utför omvandlingen med `cexp()`, och omvandlar tillbaka med `cabs()` och `carg()`.
+**b)** Skriv ett program som utför omvandlingen med `cos()` och `sin()`, och omvandlar tillbaka med `sqrt()` och `atan2()`.
 
 **c)** Kontrollera att du får tillbaka det ursprungliga talet. Varför bör resultaten jämföras med `fabs(a - b) < 1e-9` i stället för med `==`?
 
@@ -216,7 +229,7 @@ En seriekrets består av $R = 47\thinspace\Omega$, $L = 100\thinspace\text{mH}$ 
 
 **d)** Beräkna strömmens belopp $|I| = \dfrac{|U|}{|Z|}$.
 
-**e)** Skriv ett program som beräknar allt ovanstående med `complex.h`. Låt $f$ vara en variabel, och kör programmet även för $f = 500$ Hz. Vad händer med kretsens karaktär?
+**e)** Skriv ett program som beräknar allt ovanstående, med impedansens real- och imaginärdel som två variabler av typen `double`. Låt $f$ vara en variabel, och kör programmet även för $f = 500$ Hz. Vad händer med kretsens karaktär?
 
 ---
 
@@ -388,7 +401,7 @@ Strömmen ges av $i(t) = 3t + 2$ A.
 
 **b)** Beräkna samma laddning numeriskt med trapetsmetoden och $n = 4$.
 
-**c)** Varför blir det numeriska resultatet exakt i detta fall, men inte i uppgift 2.3?
+**c)** Varför blir det numeriska resultatet exakt i detta fall, men inte för $f(x) = x^2$?
 
 ---
 
@@ -397,7 +410,7 @@ Här tränas en enkel maskininlärningsmodell, en **linjär regressionsmodell**,
 
 Ee-klassen läser senare en egen kurs i maskininlärning, och för er ger del 6 och 7 en första försmak. För Eh-klassen är detta enda tillfället att lära sig hur maskininlärning fungerar, så ta tillfället i akt! Oavsett klass visar delarna att matematiken från kursen är grunden även där.
 
-> **OBS!** Handberäkningarna i uppgift 6.1 och 6.4 a är obligatoriska och görs före lektionen, precis som i del 1–3. De kräver ingen dator. Övriga uppgifter i del 6 är frivilliga.
+> **OBS!** Handberäkningarna i uppgift 6.1 och 6.4 a är obligatoriska och görs helst före lektionen, precis som i del 1–3. De kräver ingen dator. Övriga uppgifter i del 6 är frivilliga.
 
 Koden finns i [`code/lin_reg/`](../code/lin_reg/) och består av fyra filer:
 
@@ -420,7 +433,9 @@ make
 Utan någon implementation i `lin_reg_optimize()` tränas modellen inte alls, så samtliga prediktioner blir $0$ tills uppgift 6.2 är genomförd.
 
 ### Struktar i C
-En **strukt** (`struct`), som `complex_t` i L15–L17, samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två flyttal:
+Struktar behövs bara för de frivilliga programmeringsuppgifterna i del 6. Gör ni bara handberäkningarna kan avsnittet hoppas över.
+
+En **strukt** (`struct`) samlar flera variabler som hör ihop under ett gemensamt namn. Modellen består till exempel av två flyttal:
 
 ```c
 typedef struct
@@ -550,7 +565,7 @@ Den linjära regressionsmodellen i del 6 är i själva verket en **nod** med en 
 
 I del 7 tränas ett neuralt nätverk att lära sig ett mönster som ingen rät linje kan beskriva. Nätverket är skrivet i **C++**, som Ee-klassen läser i en senare kurs. Ni behöver inte förstå hela koden: målet är att ni implementerar en central del av nätverket själva och sedan ser det lära sig.
 
-> **OBS!** Handberäkningarna i uppgift 7.1 och 7.4 är obligatoriska och görs före lektionen. De kräver ingen dator. Övriga uppgifter i del 7 är frivilliga.
+> **OBS!** Handberäkningarna i uppgift 7.1 och 7.4 är obligatoriska och görs helst före lektionen. De kräver ingen dator. Övriga uppgifter i del 7 är frivilliga.
 
 > **OBS!** Programmeringsuppgifterna i del 7 kräver, precis som i del 6, **WSL** med `g++` och `make`. Båda ingår i paketet `build-essential`, se [`code/README.md`](../code/README.md#kompilering-på-egen-dator-rekommenderat).
 

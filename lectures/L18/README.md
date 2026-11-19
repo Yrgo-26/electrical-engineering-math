@@ -1,12 +1,12 @@
 # L18 – Matematik i C med math.h
 
 ## Dagordning
-* Standardbiblioteket `math.h`: funktioner, konstanter och länkning med `-lm`.
+* Standardbiblioteket `math.h`: funktioner och konstanter.
 * Flyttal i C: `float` och `double`, samt skillnaden mot heltalstyperna från Tillämpad Elektronik.
 * Potenser, rötter, logaritmer och decibel i kod.
 * Trigonometriska funktioner samt omvandling mellan grader och radianer.
 * Numerisk derivering och integrering.
-* Komplexa tal och fasorer med `complex.h`.
+* Komplexa tal och fasorer i C, med real- och imaginärdelen som två variabler.
 * Sampling av en sinussignal: från formel till talföljd.
 
 ---
@@ -17,7 +17,7 @@
 * Kunna räkna med vinklar i radianer och omvandla till och från grader.
 * Kunna beräkna en derivata numeriskt och jämföra med den analytiska derivatan.
 * Kunna beräkna en bestämd integral numeriskt med trapetsmetoden.
-* Kunna representera komplexa tal och fasorer med `complex.h` samt beräkna belopp och argument.
+* Kunna räkna med komplexa tal och fasorer i C samt beräkna belopp och argument med `sqrt()` och `atan2()`.
 * Kunna beräkna sampelvärden för en sinussignal och skriva ut dem för vidare analys.
 
 ---
@@ -45,70 +45,51 @@ Ingen hårdvara krävs; all kod skrivs och körs i webbläsaren.
 
 ### Innan lektionen
 * Läs igenom kursmaterialet i [bilaga A](./appendix/a_theory.md) eller kapitel 18 i boken ([svenska](../../book/elteknisk-matematik.pdf) eller [engelska](../../book/electrical-engineering-mathematics.pdf)).
-* **Genomför handberäkningarna för samtliga uppgifter i del 1–3, samt uppgift 6.1, 6.4 a, 7.1 och 7.4,** i [bilaga B](./appendix/b_exercises.md), och ta med dem till lektionen.
+* **Gör gärna handberäkningarna nedan före lektionen** och ta med dem dit. Det rekommenderas starkt, men är inget krav. Samtliga uppgifter finns samlade i [`hand_calculations.md`](./appendix/hand_calculations.md):
+    * **1.1 a–b:** parallellresistansen $R_p$, strömmen $I$ och effekten $P$.
+    * **1.2 a–b:** förstärkningen i dB och spänningskvoten vid $-3$ dB.
+    * **1.3 a–b:** $u(t)$ vid $t = 2{,}0$ ms samt vinkeln i radianer och grader.
+    * **2.1 a:** $f'(x)$ och $f'(2)$.
+    * **2.2 a–b:** $i'(t)$, $u(t)$ och $u(3)$.
+    * **2.3 a:** $\int_0^3 x^2\,dx$.
+    * **3.1 a–b:** $z_1 + z_2$, $z_1 \cdot z_2$, $\frac{z_1}{z_2}$ samt $|z_1|$ och $\arg(z_1)$.
+    * **3.2 a:** $z$ på rektangulär form.
+    * **3.3 a–d:** $\omega$, $X_L$, $X_C$, $Z$, $|Z|$, $\arg(Z)$ och $|I|$.
+    * **6.1 a–b:** en epok av träningen för hand.
+    * **6.4 a:** $k$ och $m$ i $U(t) = kt + m$.
+    * **7.1 a–c:** nodens summa $z$ och utsignal med ReLU och $\tanh$.
+    * **7.4 a–b:** rita de fyra punkterna och förklara varför en rät linje inte räcker.
 * Öppna <https://www.onlinegdb.com/online_c_compiler>, kontrollera att språket är inställt på **C** och tryck på **Run**. Exempelprogrammet ska skriva ut `Hello World`.
 
-> **OBS!** Handberäkningarna ska vara gjorda **före** lektionen. Lektionstiden räcker inte till både beräkning och programmering, och beräkningarna krävs för att bli godkänd. Den som kommer oförberedd hinner inte klara laborationen.
+> **OBS!** Handberäkningarna krävs för att bli godkänd, men de behöver inte vara gjorda före lektionen. Det rekommenderas ändå starkt: görs de under lektionen ska både beräkning och programmering hinnas med, vilket kan bli stressigt.
 
 ### Under lektionen
 * Närvara under genomgången.
 * Genomför uppgifterna i [bilaga B](./appendix/b_exercises.md):
     * Del 1–3 är obligatoriska, liksom handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4. Övriga uppgifter i del 4–7 är frivillig fördjupning, där del 6 tränar en linjär regressionsmodell och del 7 tränar ett neuralt nätverk i C++. Programmeringsuppgifterna i del 6 och 7 kräver **WSL**, se [`code/`](./code/README.md#kompilering-på-egen-dator-rekommenderat).
-    * Handberäkningarna ska redan vara gjorda. Under lektionen skrivs koden, och resultaten jämförs med era beräkningar.
+    * Har ni gjort handberäkningarna i förväg kan lektionen läggas på koden, och resultaten jämförs med era beräkningar. Annars görs handberäkningarna först.
     * Lösningsförslag finns i [bilaga C](./appendix/c_solutions.md).
 * Samla uppgifterna i ett OnlineGDB-projekt med en fil per uppgift, se [bilaga B](./appendix/b_exercises.md). Kopiera filerna till egen dator innan ni stänger fliken.
 
 ---
 
 ## Demonstration
-Genomgången sker som **live-kodning** i OnlineGDB. Programmet byggs ut stegvis i samma fil, där varje steg läggs till som en egen funktion som anropas från `main()`. Stegen följer typexemplen i [bilaga A](./appendix/a_theory.md); lektionsuppgifterna använder andra värden.
+Genomgången är kort, högst cirka fem minuter, så att lektionstiden kan läggas på uppgifterna. Den visar i OnlineGDB bara de vanligaste fallgroparna:
+* `1 / 2` jämfört med `1.0 / 2.0`: heltalsdivision ger `0`.
+* `%d` i stället för `%f` vid utskrift av en `double`.
+* `sin(30)` jämfört med `sin(30.0 * PI / 180.0)`: de trigonometriska funktionerna räknar i radianer.
 
-Räkna med cirka fem minuter per steg.
-
-### 1. Grundfunktioner och felsökning
-* **Visas:** Skillnaden mellan `int` och `double`, följt av parallellresistansen för $R_1 = 100\ \Omega$ och $R_2 = 400\ \Omega$ samt effekten $P = \dfrac{U^2}{R_p}$ vid $U = 10$ V, med `pow()` och `sqrt()`.
-* **Felsökning:** `undefined reference to 'sqrt'`, `%d` i stället för `%f`, samt heltalsdivisionen `1 / 2`.
-* **Frågeställning:** Vad skiljer `1 / 2` från `1.0 / 2.0`, och varför spelar det roll här?
-* **Koppling:** L01 samt bilaga A §1–3 och §11.
-
-### 2. Grader och radianer
-* **Visas:** `sin(30)` jämfört med `sin(30.0 * PI / 180.0)`.
-* **Frågeställning:** Varför ger `sin(30)` inte $0{,}5$? Vilken vinkel räknar funktionen egentligen med?
-* **Koppling:** L09 samt bilaga A §4.
-
-### 3. Decibel
-* **Visas:** Förstärkningen för $U_{\text{in}} = 0{,}5$ V och $U_{\text{ut}} = 8{,}0$ V med `log10()`, samt vägen tillbaka från dB till spänningskvot med `pow()`.
-* **Frågeställning:** Hur många dB motsvarar en fördubbling av spänningen?
-* **Koppling:** L10 samt bilaga A §5.
-
-### 4. Numerisk derivering
-* **Visas:** Centraldifferensen för $f(x) = x^2$ i $x = 3$, jämförd med den analytiska derivatan $f'(x) = 2x$. Beräkningen körs med $h = 10^{-2}$, $h = 10^{-6}$ och $h = 10^{-12}$, och felet skrivs ut för varje $h$.
-* **Frågeställning:** Varför blir resultatet sämre både när $h$ är för stort och när det är för litet?
-* **Koppling:** L12–L13 samt bilaga A §6. Förbereder uppgift 2.1.
-
-### 5. Numerisk integrering
-* **Visas:** Trapetsmetoden på $i(t) = 2t + 4$ över $0 \leq t \leq 2$, som ger exakt $12$ C. Därefter samma metod på $f(x) = x^2$ över $0 \leq x \leq 3$, där resultatet **inte** blir exakt, och där felet minskar när $n$ ökas.
-* **Frågeställning:** Varför blir resultatet exakt för $i(t)$ men inte för $x^2$?
-* **Koppling:** L14 samt bilaga A §7. Förbereder uppgift 2.3 och 5.8.
-
-### 6. Komplexa tal och impedans
-* **Visas:** Impedansen $Z = R + j\omega L$ för $R = 100\ \Omega$ och $L = 50$ mH vid $f = 50$ Hz, samt $|Z|$ och $\arg(Z)$ med `cabs()` och `carg()`, med argumentet omvandlat till grader.
-* **Felsökning:** `printf()` kan inte skriva ut ett komplext tal direkt – real- och imaginärdel måste skrivas ut var för sig.
-* **Frågeställning:** Vad innebär det att argumentet är positivt? Vad hade hänt om spolen byttes mot en kondensator?
-* **Koppling:** L15–L17 samt bilaga A §8–9. Förbereder uppgift 3.3.
-
-### 7. Sampling av en sinussignal
-* **Visas:** Signalen $u(t) = 5\sin(2\pi \cdot 50t)$ samplas med $f_s = 400$ Hz. Loopen skriver ut de $N = 8$ sampelvärdena som CSV, varefter utskriften kopieras till ett kalkylprogram och ritas upp som ett diagram.
-* **Frågeställning:** Vad händer med kurvan om $f_s$ sänks mot $2f$?
-* **Koppling:** L09 samt bilaga A §10. Förbereder uppgift 4.1.
+Övrigt stoff, med typexempel för grader och radianer, decibel, numerisk derivering och integrering, komplexa tal och sampling, finns i [bilaga A](./appendix/a_theory.md).
 
 ---
 
 ## Redovisning
-Uppgifterna redovisas för läraren i klassrummet under lektionen:
-* **Handberäkningarna** för respektive uppgift, gjorda före lektionen och medtagna till den (handskrivna eller digitala, med tydliga steg).
+Uppgifterna redovisas för läraren i klassrummet under lektionen. Hinns redovisningen inte med kan den göras under L19. Redovisningen omfattar:
+* **Handberäkningarna** för respektive uppgift, helst gjorda före lektionen (handskrivna eller digitala, med tydliga steg).
 * **Koden**: OnlineGDB-projektet med en fil per uppgift, som ska vara körbart och kommenterat. Samtliga uppgifter ska köras med en enda tryckning på **Run**.
 * En jämförelse mellan handberäknat och beräknat resultat, med motivering av eventuella avvikelser.
+
+**Grupparbete och AI.** Ni får arbeta i grupper om två. AI-verktyg får användas som hjälpmedel, men koden ska ni skriva själva, inte klistra in, och båda i gruppen ska kunna förklara koden för läraren vid redovisningen.
 
 ---
 
@@ -126,7 +107,6 @@ Laborationen bedöms **U/G** och påverkar inte kursens betygspoäng. Den ingår
 
 ## Utvärdering
 * Vad blir resultatet av `1 / 2` i C, och varför?
-* Vad gör flaggan `-lm`, och vilket felmeddelande får man om matematikbiblioteket inte länkas?
 * Varför ger `sin(30)` inte $0{,}5$?
 * Hur beräknas derivatan av $f(x)$ i punkten $x$ numeriskt, och vad styr noggrannheten?
 * Hur beräknas beloppet och argumentet för ett komplext tal i C?

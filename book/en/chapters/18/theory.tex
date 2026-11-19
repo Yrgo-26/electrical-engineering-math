@@ -304,28 +304,64 @@ double integral(double (*f)(double), const double a, const double b, const int n
 For a first-degree polynomial the trapezoidal rule gives an \textbf{exact} result, since the curve
 is then a straight line. For other functions there is an error, which decreases as $n$ increases.
 
-\section{Complex numbers with \code{complex.h}}
+\section{Complex numbers in C}
 \label{c18:sec:complex}
-In Chapters~\ref{c15:ch}--\ref{c17:ch}, complex numbers were written as a struct of their own,
-\code{complex_t}. The standard library \file{complex.h} instead has a ready-made type and is used
-together with \file{math.h}:
+In Chapters~\ref{c15:ch}--\ref{c17:ch}, complex numbers were calculated by hand in rectangular and
+polar form. In C, a complex number $z = a + jb$ is most simply stored as two ordinary
+floating-point numbers, the real part and the imaginary part:
+\begin{ccode}
+const double re = 3.0; // Re(z), that is, a.
+const double im = 4.0; // Im(z), that is, b.
+\end{ccode}
+
+\subsection{The arithmetic operations}
+\label{c18:sec:cfunktioner}
+The arithmetic follows the formulas from Chapters~\ref{c15:ch}--\ref{c17:ch}. With
+$z_1 = a + jb$ and $z_2 = c + jd$:
+\begin{booktable}{@{}lll@{}}
+  \thead{Operation} & \thead{Real part} & \thead{Imaginary part} \\
+  \midrule
+  $z_1 + z_2$ & $a + c$ & $b + d$ \\
+  $z_1 \cdot z_2$ & $ac - bd$ & $ad + bc$ \\
+  $\dfrac{z_1}{z_2}$ & $\dfrac{ac + bd}{c^2 + d^2}$ & $\dfrac{bc - ad}{c^2 + d^2}$ \\
+\end{booktable}
+The product, for example, is calculated as
+\begin{ccode}
+const double prod_re = a * c - b * d;
+const double prod_im = a * d + b * c;
+\end{ccode}
+
+\subsection{Rectangular and polar form}
+\label{c18:sec:polar}
+From rectangular to polar form, Pythagoras' theorem and \code{atan2()} are used, which gives the
+angle in the right quadrant:
+\begin{ccode}
+const double magnitude = sqrt(re * re + im * im); // |z|
+const double angle     = atan2(im, re);           // arg(z) in radians
+\end{ccode}
+From polar to rectangular form, cosine and sine are used:
+\begin{ccode}
+const double re = r * cos(theta);
+const double im = r * sin(theta);
+\end{ccode}
+The number is printed with the real and imaginary parts separately:
+\begin{ccode}
+printf("z = %.2f + %.2fj\n", re, im);
+\end{ccode}
+
+\subsection{Going further: \code{complex.h}}
+The standard library \file{complex.h} has a ready-made type for complex numbers. It is not needed
+in the compulsory exercises, but can be used in the extension exercise 4.2. The type is called
+\code{double complex} and the imaginary unit is called \code{I}:
 \begin{ccode}
 #include <complex.h>
 #include <math.h>
-\end{ccode}
-The type is called \code{double complex} and the imaginary unit is called \code{I}:
-\begin{ccode}
+
 const double complex z = 3.0 + 4.0 * I;
 \end{ccode}
-
-\begin{aside}
-\note[Note] In electrical engineering the imaginary unit is written $j$, so that it is not
-confused with the current $i$. In C it is always called \code{I}.
-\end{aside}
-
-\subsection{Functions}
-\label{c18:sec:cfunktioner}
-\begin{booktable}{@{}p{7em}p{7.5em}L@{}}
+In electrical engineering the imaginary unit is written $j$ so that it is not confused with the
+current $i$. In C it is always called \code{I}.
+\begin{booktable}{@{}llL@{}}
   \thead{Mathematics} & \thead{C function} & \thead{Description} \\
   \midrule
   $\text{Re}(z)$ & \code{creal(z)} & The real part \\
@@ -334,56 +370,37 @@ confused with the current $i$. In C it is always called \code{I}.
   $\arg(z)$ & \code{carg(z)} & The argument in radians, $(-\pi,\ \pi]$ \\
   $\bar{z}$ & \code{conj(z)} & The conjugate \\
   $e^z$ & \code{cexp(z)} & The exponential function \\
-  $\sqrt{z}$ & \code{csqrt(z)} & The square root \\
 \end{booktable}
-
-The four arithmetic operations are written as usual, with \code{+}, \code{-}, \code{*} and
-\code{/}.
-
-\subsection{Rectangular and polar form}
-\label{c18:sec:polar}
-From rectangular to polar form:
-\begin{ccode}
-const double magnitude = cabs(z);        // |z|
-const double angle     = carg(z);        // arg(z) in radians
-\end{ccode}
-From polar to rectangular form, Euler's formula $z = r e^{j\theta}$ is used:
-\begin{ccode}
-const double complex z = r * cexp(I * theta);
-\end{ccode}
-
-\begin{aside}
-\note[Note] \code{printf()} cannot print a complex number directly. The real and imaginary parts
-are printed separately:
-\begin{ccode}
-printf("z = %.2f + %.2fj\n", creal(z), cimag(z));
-\end{ccode}
-\end{aside}
+The four operations are written as usual with \code{+}, \code{-}, \code{*} and \code{/}, and a
+number in polar form is created with \code{r * cexp(I * theta)}. \code{printf()} cannot print a
+complex number directly; the real and imaginary parts are printed with \code{creal()} and
+\code{cimag()}.
 
 \section{Impedance and phasors}
 \label{c18:sec:impedans}
-With complex numbers, impedances are calculated directly in code
-(Chapters~\ref{c16:ch}--\ref{c17:ch}). With the angular frequency $\omega = 2\pi f$:
+With the angular frequency $\omega = 2\pi f$, the impedances are (Chapters~\ref{c16:ch}--\ref{c17:ch}):
 \[
   Z_R = R, \qquad Z_L = j\omega L, \qquad Z_C = \frac{1}{j\omega C} = -\frac{j}{\omega C}
 \]
-\needspace{7\baselineskip}
+In a series circuit with $R$, $L$ and $C$ the total impedance is $Z = R + j(X_L - X_C)$, where
+$X_L = \omega L$ and $X_C = \frac{1}{\omega C}$. The impedance is therefore stored as two
+floating-point numbers:
 \begin{ccode}
-const double omega          = 2.0 * PI * f;
-const double complex z_r    = r;
-const double complex z_l    = I * omega * l;
-const double complex z_c    = -I / (omega * c);
-const double complex z_tot  = z_r + z_l; // Series connection.
+const double omega = 2.0 * PI * f;
+const double x_l   = omega * l;
+const double x_c   = 1.0 / (omega * c);
+const double z_re  = r;         // The resistance.
+const double z_im  = x_l - x_c; // The reactance.
+const double z_abs = sqrt(z_re * z_re + z_im * z_im);
+const double z_arg = atan2(z_im, z_re);
 \end{ccode}
-A phasor $U = \abs{U} \angle \delta$ is written as a complex number in polar form. Phasors are
-then added with ordinary addition:
+A phasor $U = \abs{U} \angle \delta$ is converted to rectangular form with cosine and sine. Phasors
+are then added by adding the real and imaginary parts separately:
 \begin{ccode}
-const double complex u1 = a1 * cexp(I * d1);
-const double complex u2 = a2 * cexp(I * d2);
-const double complex u  = u1 + u2;
+const double u_re = a1 * cos(d1) + a2 * cos(d2);
+const double u_im = a1 * sin(d1) + a2 * sin(d2);
 \end{ccode}
-The amplitude and phase angle of the result are then given by \code{cabs()} and \code{carg()}
-respectively.
+The amplitude and phase angle of the result are then given by \code{sqrt()} and \code{atan2()}.
 
 \section{Sampling a sinusoidal signal}
 \label{c18:sec:sampling}
@@ -510,8 +527,8 @@ Calculate the circuit's impedance at $f = 50\,\text{Hz}$.
   \arg(Z) = \arctan\left(\frac{15.71}{100}\right) \approx 0.156\,\text{rad} \approx
   8.93^{\circ}
 \end{gather*}
-In code, the magnitude and the argument are calculated with \code{cabs(z)} and \code{carg(z)}
-respectively.
+In code, the magnitude and the argument are calculated with \code{sqrt(re * re + im * im)} and
+\code{atan2(im, re)} respectively.
 \end{exempel}
 
 \begin{exempel}[Sample values]

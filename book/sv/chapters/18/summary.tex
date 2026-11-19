@@ -15,9 +15,9 @@
   Vinkel i rätt kvadrant & $\arg(x + jy)$ & \code{atan2(y, x)} \\
   Centraldifferens & $\bigl(f(x + h) - f(x - h)\bigr)/2h$ & \code{derivative(f, x, 1e-6)} \\
   Trapetsmetoden & $\int_a^b f(x)\,dx$, $n$ delintervall & \code{integral(f, a, b, n)} \\
-  Komplext tal & $3 + 4j$ & \code{3.0 + 4.0 * I} \\
-  Belopp, argument & $\abs{z}$, $\arg(z)$ & \code{cabs(z)}, \code{carg(z)} \\
-  Polär form & $r e^{j\theta}$ & \code{r * cexp(I * theta)} \\
+  Komplext tal & $3 + 4j$ & \code{re = 3.0}, \code{im = 4.0} \\
+  Belopp, argument & $\abs{z}$, $\arg(z)$ & \code{sqrt(re * re + im * im)}, \code{atan2(im, re)} \\
+  Polär form & $r \angle \theta$ & \code{r * cos(theta)}, \code{r * sin(theta)} \\
   Sampel & $\abs{U}\sin(2\pi k/N + \delta)$, $N = f_s/f$ &
     \code{amplitude * sin(2.0 * PI * k / n + delta)} \\
 \end{booktable}
@@ -32,16 +32,14 @@ Efter det här kapitlet ska du:
   \item Kunna räkna med vinklar i radianer och omvandla till och från grader.
   \item Kunna beräkna en derivata numeriskt och jämföra med den analytiska derivatan.
   \item Kunna beräkna en bestämd integral numeriskt med trapetsmetoden.
-  \item Kunna representera komplexa tal och fasorer med \file{complex.h} samt beräkna belopp och
-    argument.
+  \item Kunna räkna med komplexa tal och fasorer i C samt beräkna belopp och argument med
+    \code{sqrt()} och \code{atan2()}.
   \item Kunna beräkna sampelvärden för en sinussignal och skriva ut dem för vidare analys.
 \end{itemize}
 
 \testadigsjalv
 \begin{enumerate}
   \item Vad blir resultatet av \code{1 / 2} i C, och varför?
-  \item Vad gör flaggan \code{-lm}, och vilket felmeddelande får man om matematikbiblioteket inte
-    länkas?
   \item Varför ger \code{sin(30)} inte $0{,}5$?
   \item Hur beräknas derivatan av $f(x)$ i punkten $x$ numeriskt, och vad styr noggrannheten?
   \item Hur beräknas beloppet och argumentet för ett komplext tal i C?
