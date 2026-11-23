@@ -262,6 +262,16 @@ are added with phasors.
     \code{complex_from_polar(2.0, 45.0)} and \code{complex_from_polar(3.0, -60.0)}, store them in a
     variable each and compute $U_{tot}$. Print the sum in rectangular and polar form, with the
     argument in degrees.
-  \item Extend the program so that it also computes $u_1(0) + u_2(0)$ with \code{sin()}. Compare
-    with the imaginary part of $U_{tot}$, and explain why they are equal.
+  \item A sinusoidal signal $u(t) = \abs{U}\sin(\omega t + \delta)$ can be described by the struct
+\begin{ccode}
+typedef struct
+{
+    double amplitude; // The amplitude |U|.
+    double omega;     // The angular frequency in rad/s.
+    double deg;       // The phase in degrees.
+} sine_t;
+\end{ccode}
+    Write the function \code{double sine_value(const sine_t* s, const double t)}, which returns the
+    value of the signal at time $t$. Use it to calculate $u_1(0) + u_2(0)$, and compare with the
+    imaginary part of $U_{tot}$. Explain why they are equal. Does the value of $\omega$ matter here?
 \end{parts}

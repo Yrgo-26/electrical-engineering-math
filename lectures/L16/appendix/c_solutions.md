@@ -721,8 +721,6 @@ Skillnaden är $143{,}1° - 53{,}1° = 90°$.
 
 ### 4.1 – Rotation med $j$ i C
 
-**Notering:** Programkoden till uppgiften, med en README som förklarar den, publiceras senare i `code/`. Lösningarna nedan täcker de delar som kan räknas och förklaras utan programmet.
-
 **a)** Med $j^2 = -1$:
 
 ```math
@@ -739,7 +737,7 @@ j^3 z = -jz = 4 - j3, \qquad j^4 z = z = 3 + j4
 j(a + jb) = ja + j^2 b = -b + ja
 ```
 
-Realdelen i $jz$ är alltså $-b$ och imaginärdelen $a$, vilket är vad `complex_rotate_j()` ska returnera. Själva programmet publiceras senare. Det ska skriva ut talen från a) och deras argument:
+Realdelen i $jz$ är alltså $-b$ och imaginärdelen $a$, vilket är vad `complex_rotate_j()` ska returnera. Se lösningen i [`code/main.c`](./code/main.c). Koden förklaras i [`code/README.md`](./code/README.md). Programmet skriver ut talen från a) och deras argument:
 
 | Tal | Rektangulär form | Argument |
 |-----|------------------|----------|
@@ -753,6 +751,6 @@ Realdelen i $jz$ är alltså $-b$ och imaginärdelen $a$, vilket är vad `comple
 
 **c)** Argumentet ökar med $90^{\circ}$ vid varje multiplikation, medan beloppet är $5$ hela tiden: multiplikation med $j$ vrider talet ett kvarts varv moturs. Efter fyra kvarts varv är talet tillbaka, vilket stämmer med att $j^4 = (j^2)^2 = (-1)^2 = 1$.
 
-**d)** Talet ändras inte, utan $3 + j4$ skrivs ut varje gång. Parametern är `const complex_t*`, så `complex_rotate_j()` kan inte ändra $z$ utan returnerar resultatet som ett nytt tal, och utan `z =` tas returvärdet aldrig om hand.
+**d)** Talet ändras inte, utan $3 + j4$ skrivs ut varje gång (se avsnittet om uppgift 4.1 d i [`code/README.md`](./code/README.md)). Parametern är `const complex_t*`, så `complex_rotate_j()` kan inte ändra $z$ utan returnerar resultatet som ett nytt tal, och utan `z =` tas returvärdet aldrig om hand.
 
 ---

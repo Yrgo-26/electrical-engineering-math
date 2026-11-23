@@ -258,6 +258,16 @@ adderas med fasorer.
     returnerar summan av två komplexa tal. Skapa fasorerna med \code{complex_from_polar(2.0, 45.0)}
     och \code{complex_from_polar(3.0, -60.0)}, lagra dem i varsin variabel och beräkna $U_{tot}$.
     Skriv ut summan på rektangulär och polär form, med argumentet i grader.
-  \item Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med \code{sin()}. Jämför med
-    imaginärdelen av $U_{tot}$, och förklara varför de är lika.
+  \item En sinussignal $u(t) = \abs{U}\sin(\omega t + \delta)$ kan beskrivas med strukten
+\begin{ccode}
+typedef struct
+{
+    double amplitude; // Amplituden |U|.
+    double omega;     // Vinkelfrekvensen i rad/s.
+    double deg;       // Fasen i grader.
+} sine_t;
+\end{ccode}
+    Skriv funktionen \code{double sine_value(const sine_t* s, const double t)}, som returnerar
+    signalens värde vid tiden $t$. Använd den för att beräkna $u_1(0) + u_2(0)$, och jämför med
+    imaginärdelen av $U_{tot}$. Förklara varför de är lika. Spelar värdet på $\omega$ någon roll här?
 \end{parts}

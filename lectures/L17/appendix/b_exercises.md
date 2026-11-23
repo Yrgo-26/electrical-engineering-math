@@ -313,6 +313,17 @@ adderas med fasorer.
 
 **b)** Skriv funktionen `complex_t complex_add(const complex_t* a, const complex_t* b)`, som returnerar summan av två komplexa tal. Skapa fasorerna med `complex_from_polar(2.0, 45.0)` och `complex_from_polar(3.0, -60.0)`, lagra dem i varsin variabel och beräkna $U_{tot}$. Skriv ut summan på rektangulär och polär form, med argumentet i grader.
 
-**c)** Utöka programmet så att det även beräknar $u_1(0) + u_2(0)$ med `sin()`. Jämför med imaginärdelen av $U_{tot}$, och förklara varför de är lika.
+**c)** En sinussignal $u(t) = |U|\sin(\omega t + \delta)$ kan beskrivas med strukten
+
+```c
+typedef struct
+{
+    double amplitude; // Amplituden |U|.
+    double omega;     // Vinkelfrekvensen i rad/s.
+    double deg;       // Fasen i grader.
+} sine_t;
+```
+
+Skriv funktionen `double sine_value(const sine_t* s, const double t)`, som returnerar signalens värde vid tiden $t$. Använd den för att beräkna $u_1(0) + u_2(0)$, och jämför med imaginärdelen av $U_{tot}$. Förklara varför de är lika. Spelar värdet på $\omega$ någon roll här?
 
 ---
