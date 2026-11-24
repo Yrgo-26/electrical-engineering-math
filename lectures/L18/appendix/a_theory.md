@@ -289,7 +289,7 @@ printf("z = %.2f + %.2fj\n", re, im);
 ```
 
 ### Fördjupning: complex.h
-Standardbiblioteket `complex.h` har en färdig typ för komplexa tal. Den behövs inte i de obligatoriska uppgifterna, men kan användas i fördjupningsuppgiften 4.2. Typen heter `double complex` och den imaginära enheten heter `I`:
+Standardbiblioteket `complex.h` har en färdig typ för komplexa tal. Den behövs inte i de grunduppgifterna, men kan användas i fördjupningsuppgiften 4.2. Typen heter `double complex` och den imaginära enheten heter `I`:
 
 ```c
 #include <complex.h>

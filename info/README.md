@@ -64,7 +64,7 @@ Erik Pihl ([erik.axel.pihl@gmail.com](mailto:erik.axel.pihl@gmail.com))
 
 ### Upplägg
 * Två duggor (**Dugga 1–2**) under kursens gång.
-* En laboration (**L18**), som bedöms **U/G** och redovisas i klassrummet med kod och beräkningar.
+* En laboration (**L18**), som inte bedöms utan är ett tillfälle att öva på kursens matematik i kod.
 * En skriftlig tentamen som kursavslut (**L20**).
 
 ### Poängfördelning

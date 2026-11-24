@@ -3,7 +3,6 @@
 ## Dagordning
 * Repetition av kursinnehåll inför tentamen.
 * Möjlighet till komplettering av tidigare duggor.
-* Möjlighet att redovisa laborationen från L18, för den som inte hann under L18.
 
 ---
 
@@ -22,7 +21,6 @@
 * Närvara under genomgången.
 * Genomgång av övningstentamen 1. Jämför med dina egna svar och med [lösningsförslaget](../../exam/practice_exam_1_solutions.md).
 * Möjlighet till komplettering av tidigare duggor.
-* Möjlighet att redovisa laborationen från L18, för den som inte hann under L18.
 
 ### Efter lektionen
 * Lös [övningstentamen 2](../../exam/practice_exam_2.md) på egen hand som extra träning inför tentamen och jämför sedan med [lösningsförslaget](../../exam/practice_exam_2_solutions.md).

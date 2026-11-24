@@ -1,7 +1,7 @@
 # L18 – Handberäkningar
 Uppgifterna nedan räknas **för hand**. Det rekommenderas starkt, men är inget krav, att de är klara **före** laborationen i L18. Ta med beräkningarna till lektionen, handskrivna eller digitala och med tydliga mellansteg. Under lektionen skrivs programmen, och resultaten jämförs med era handberäkningar.
 
-> **OBS!** Handberäkningarna är obligatoriska och krävs för att bli godkänd på laborationen. De kan göras under lektionen, men då ska både beräkning och programmering hinnas med, vilket kan bli stressigt. Gör dem därför gärna i förväg.
+> **OBS!** Handberäkningarna kan göras under lektionen, men då ska både beräkning och programmering hinnas med, vilket kan bli stressigt. Gör dem därför gärna i förväg.
 
 Ni får arbeta i grupper om två. Uppgifterna har samma nummer som i [bilaga B](./b_exercises.md), där även programmeringsdelarna finns.
 

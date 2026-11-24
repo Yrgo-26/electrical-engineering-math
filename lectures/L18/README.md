@@ -61,12 +61,12 @@ Ingen hårdvara krävs; all kod skrivs och körs i webbläsaren.
     * **7.4 a–b:** rita de fyra punkterna och förklara varför en rät linje inte räcker.
 * Öppna <https://www.onlinegdb.com/online_c_compiler>, kontrollera att språket är inställt på **C** och tryck på **Run**. Exempelprogrammet ska skriva ut `Hello World`.
 
-> **OBS!** Handberäkningarna krävs för att bli godkänd, men de behöver inte vara gjorda före lektionen. Det rekommenderas ändå starkt: görs de under lektionen ska både beräkning och programmering hinnas med, vilket kan bli stressigt.
+> **OBS!** Det rekommenderas starkt att handberäkningarna görs före lektionen: görs de under lektionen ska både beräkning och programmering hinnas med, vilket kan bli stressigt.
 
 ### Under lektionen
 * Närvara under genomgången.
 * Genomför uppgifterna i [bilaga B](./appendix/b_exercises.md):
-    * Del 1–3 är obligatoriska, liksom handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4. Övriga uppgifter i del 4–7 är frivillig fördjupning, där del 6 tränar en linjär regressionsmodell och del 7 tränar ett neuralt nätverk i C++. Programmeringsuppgifterna i del 6 och 7 kräver **WSL**, se [`code/`](./code/README.md#kompilering-på-egen-dator-rekommenderat).
+    * Del 1–3 samt handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 är laborationens grunduppgifter. Övriga uppgifter i del 4–7 är frivillig fördjupning, där del 6 tränar en linjär regressionsmodell och del 7 tränar ett neuralt nätverk i C++. Programmeringsuppgifterna i del 6 och 7 kräver **WSL**, se [`code/`](./code/README.md#kompilering-på-egen-dator-rekommenderat).
     * Har ni gjort handberäkningarna i förväg kan lektionen läggas på koden, och resultaten jämförs med era beräkningar. Annars görs handberäkningarna först.
     * Lösningsförslag finns i [bilaga C](./appendix/c_solutions.md).
 * Samla uppgifterna i ett OnlineGDB-projekt med en fil per uppgift, se [bilaga B](./appendix/b_exercises.md). Kopiera filerna till egen dator innan ni stänger fliken.
@@ -83,25 +83,10 @@ Genomgången är kort, högst cirka fem minuter, så att lektionstiden kan lägg
 
 ---
 
-## Redovisning
-Uppgifterna redovisas för läraren i klassrummet under lektionen. Hinns redovisningen inte med kan den göras under L19. Redovisningen omfattar:
-* **Handberäkningarna** för respektive uppgift, helst gjorda före lektionen (handskrivna eller digitala, med tydliga steg).
-* **Koden**: OnlineGDB-projektet med en fil per uppgift, som ska vara körbart och kommenterat. Samtliga uppgifter ska köras med en enda tryckning på **Run**.
-* En jämförelse mellan handberäknat och beräknat resultat, med motivering av eventuella avvikelser.
-
-**Grupparbete och AI.** Ni får arbeta i grupper om två. AI-verktyg får användas som hjälpmedel, men koden ska ni skriva själva, inte klistra in, och båda i gruppen ska kunna förklara koden för läraren vid redovisningen.
-
----
-
 ## Bedömning
-Laborationen bedöms **U/G** och påverkar inte kursens betygspoäng. Den ingår i kravet att samtliga lärandemål ska vara uppnådda för godkänt betyg på kursen.
+Laborationen bedöms inte och ingår inte i kraven för kursbetyget, som avgörs av tentamen. Den är ett tillfälle att se hur matematiken från kursen används i kod, med stöd av läraren. Visa gärna läraren vad ni har gjort och ställ frågor under lektionen.
 
-| Krav | Bedömning |
-|------|-----------|
-| Del 1–3 samt handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 genomförda och korrekt redovisade | G |
-| Del 1–3 eller handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 ej genomförda eller ej redovisade | U |
-
-Övriga uppgifter i del 4–7 är frivillig fördjupning och påverkar inte bedömningen.
+**Grupparbete och AI.** Ni får gärna arbeta i grupper om två. AI-verktyg får användas som hjälpmedel, men skriv koden själva i stället för att klistra in den: det är så ni lär er.
 
 ---
 

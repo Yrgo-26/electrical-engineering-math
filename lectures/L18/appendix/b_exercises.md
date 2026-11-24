@@ -29,7 +29,7 @@ Skriv ut flyttal med tre decimaler, exempelvis `printf("R = %.3f ohm\n", r);`.
 
 **OBS!** Koden sparas inte automatiskt. Kopiera den till en egen fil innan ni stänger fliken.
 
-Del 1–3 är obligatoriska och bedöms **U/G**, liksom handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4. Övriga uppgifter i del 4–7 är frivillig fördjupning för den som hinner, och påverkar inte bedömningen.
+Del 1–3 samt handberäkningarna i uppgift 6.1, 6.4 a, 7.1 och 7.4 är laborationens grunduppgifter. Övriga uppgifter i del 4–7 är frivillig fördjupning för den som hinner. Laborationen bedöms inte.
 
 ---
 
@@ -73,7 +73,7 @@ int main(void)
 }
 ```
 
-Vid redovisningen räcker det då att trycka på **Run** en gång: samtliga uppgifter körs och skriver ut sina resultat i ordning.
+Då räcker det att trycka på **Run** en gång: samtliga uppgifter körs och skriver ut sina resultat i ordning.
 
 **OBS!** Projektet sparas inte automatiskt. Kopiera filerna till egen dator innan ni stänger fliken.
 
@@ -295,7 +295,7 @@ där varje delsignal ges av motsvarande fasor i uppgift 4.2 och samtliga har fre
 ---
 
 ## Del 5 – Extrauppgifter (frivillig)
-Uppgifterna nedan är extra träning för den som vill fördjupa sig ytterligare. De påverkar inte bedömningen. Precis som i del 1–3 görs handberäkningen först och programmet därefter.
+Uppgifterna nedan är extra träning för den som vill fördjupa sig ytterligare. Precis som i del 1–3 görs handberäkningen först och programmet därefter.
 
 ### 5.1 – Avrundning och absolutbelopp
 Betrakta talen $-2{,}7$, $3{,}2$ och $5{,}5$.
@@ -410,7 +410,7 @@ Här tränas en enkel maskininlärningsmodell, en **linjär regressionsmodell**,
 
 Ee-klassen läser senare en egen kurs i maskininlärning, och för er ger del 6 och 7 en första försmak. För Eh-klassen är detta enda tillfället att lära sig hur maskininlärning fungerar, så ta tillfället i akt! Oavsett klass visar delarna att matematiken från kursen är grunden även där.
 
-> **OBS!** Handberäkningarna i uppgift 6.1 och 6.4 a är obligatoriska och görs helst före lektionen, precis som i del 1–3. De kräver ingen dator. Övriga uppgifter i del 6 är frivilliga.
+> **OBS!** Handberäkningarna i uppgift 6.1 och 6.4 a hör till grunduppgifterna och görs helst före lektionen, precis som i del 1–3. De kräver ingen dator. Övriga uppgifter i del 6 är frivilliga.
 
 Koden finns i [`code/lin_reg/`](../code/lin_reg/) och består av fyra filer:
 
@@ -493,7 +493,7 @@ Notera att $k$ inte justeras när $x = 0$, eftersom $k$ inte påverkar prediktio
 
 ---
 
-### 6.1 – Träning för hand (obligatorisk)
+### 6.1 – Träning för hand (grunduppgift)
 Träningsdatan i `main.c` följer linjen $y = 2x + 2$:
 
 | $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
@@ -531,7 +531,7 @@ I L08, uppgift 2.6, mättes spänningen $U(t)$ under en urladdning:
 |---------|-----|-----|-----|-----|-----|
 | $U(t)$ (V) | $12$ | $9$ | $6$ | $3$ | $0$ |
 
-**a)** *(Obligatorisk.)* Bestäm $k$ och $m$ i $U(t) = kt + m$ för hand, eller hämta dem från er lösning i L08.
+**a)** *(Grunduppgift.)* Bestäm $k$ och $m$ i $U(t) = kt + m$ för hand, eller hämta dem från er lösning i L08.
 
 **b)** *(Frivillig, även c–e.)* Ersätt träningsdatan i `main.c` med tabellen ovan. Välj antal epoker och lärhastighet så att modellen hittar $k$ och $m$ med minst tre korrekta decimaler.
 
@@ -565,7 +565,7 @@ Den linjära regressionsmodellen i del 6 är i själva verket en **nod** med en 
 
 I del 7 tränas ett neuralt nätverk att lära sig ett mönster som ingen rät linje kan beskriva. Nätverket är skrivet i **C++**, som Ee-klassen läser i en senare kurs. Ni behöver inte förstå hela koden: målet är att ni implementerar en central del av nätverket själva och sedan ser det lära sig.
 
-> **OBS!** Handberäkningarna i uppgift 7.1 och 7.4 är obligatoriska och görs helst före lektionen. De kräver ingen dator. Övriga uppgifter i del 7 är frivilliga.
+> **OBS!** Handberäkningarna i uppgift 7.1 och 7.4 hör till grunduppgifterna och görs helst före lektionen. De kräver ingen dator. Övriga uppgifter i del 7 är frivilliga.
 
 > **OBS!** Programmeringsuppgifterna i del 7 kräver, precis som i del 6, **WSL** med `g++` och `make`. Båda ingår i paketet `build-essential`, se [`code/README.md`](../code/README.md#kompilering-på-egen-dator-rekommenderat).
 
@@ -627,7 +627,7 @@ Läs gärna resten av koden, men det krävs inte för uppgifterna.
 
 ---
 
-### 7.1 – Feedforward för hand (obligatorisk)
+### 7.1 – Feedforward för hand (grunduppgift)
 En nod har vikterna $w_1 = 0{,}5$ och $w_2 = -1$ samt biasvärdet $b = 0{,}2$.
 
 **a)** Beräkna summan $z$ för insignalerna $(x_1, x_2) = (1, 0)$ och $(x_1, x_2) = (1, 1)$.
@@ -654,7 +654,7 @@ En nod har vikterna $w_1 = 0{,}5$ och $w_2 = -1$ samt biasvärdet $b = 0{,}2$.
 
 ---
 
-### 7.4 – Varför räcker inte en rät linje? (obligatorisk)
+### 7.4 – Varför räcker inte en rät linje? (grunduppgift)
 En enda nod utan aktiveringsfunktion ger $z = w_1 x_1 + w_2 x_2 + b$, och sambandet $z = 0$ är en rät linje i $x_1 x_2$-planet. Noden kan alltså bara skilja punkter på olika sidor om en linje.
 
 **a)** Rita de fyra punkterna $(0, 0)$, $(0, 1)$, $(1, 0)$ och $(1, 1)$ i ett koordinatsystem, och markera vilka som ska ge utsignalen $1$.

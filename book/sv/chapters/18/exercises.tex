@@ -1,5 +1,5 @@
-% Section 18.14, from lectures/L18/appendix/b_exercises.md; the requirements (Redovisning and
-% Bedömning) from lectures/L18/README.md.
+% Section 18.14, from lectures/L18/appendix/b_exercises.md; the note on assessment (Bedömning) from
+% lectures/L18/README.md.
 
 \section{Uppgifter}
 \label{c18:sec:uppgifter}
@@ -8,9 +8,8 @@
 \textbf{Så arbetar du med uppgifterna.} Varje uppgift löses i två steg. Först räknar du
 \textbf{för hand} och skriver ned mellanstegen; det görs helst \textbf{före lektionen}. Sedan skriver
 du under lektionen \textbf{ett program i C} som utför samma beräkning, och jämför resultaten.
-Del~1--3 är obligatoriska och bedöms U/G, liksom handberäkningarna i uppgift~6.1, 6.4~a, 7.1
-och~7.4. Övriga uppgifter i del~4--7 är frivillig fördjupning för den som hinner och påverkar inte
-bedömningen.
+Del~1--3 samt handberäkningarna i uppgift~6.1, 6.4~a, 7.1 och~7.4 är laborationens grunduppgifter.
+Övriga uppgifter i del~4--7 är frivillig fördjupning för den som hinner. Laborationen bedöms inte.
 
 \facitnotis{L18}
 \end{aside}
@@ -79,7 +78,7 @@ int main(void)
     return 0;
 }
 \end{ccode}
-Vid redovisningen räcker det då att trycka på \textbf{Run} en gång: samtliga uppgifter körs och
+Då räcker det att trycka på \textbf{Run} en gång: samtliga uppgifter körs och
 skriver ut sina resultat i ordning.
 
 \begin{aside}
@@ -114,34 +113,13 @@ SRC_FILES := assignment1_1.c \
 En fil som inte står under \code{SRC_FILES} kompileras inte, och anropet av dess funktion ger då
 ett länkfel.
 
-\subsection*{Redovisning och bedömning}
-Uppgifterna redovisas för läraren under lektionen. Hinns redovisningen inte med kan den göras under
-repetitionslektionen. Redovisningen omfattar:
-\begin{itemize}
-  \item \textbf{Handberäkningarna} för respektive uppgift, helst gjorda före lektionen,
-    handskrivna eller digitala och med tydliga steg.
-  \item \textbf{Koden}: OnlineGDB-projektet med en fil per uppgift, som ska vara körbart och
-    kommenterat. Samtliga uppgifter ska köras med en enda tryckning på \textbf{Run}.
-  \item En \textbf{jämförelse} mellan handberäknat och beräknat resultat, med motivering av
-    eventuella avvikelser.
-\end{itemize}
-\textbf{Grupparbete och AI.} Ni får arbeta i grupper om två. AI-verktyg får användas som
-hjälpmedel, men koden ska ni skriva själva, inte klistra in, och båda i gruppen ska kunna förklara
-koden för läraren vid redovisningen.
+\subsection*{Bedömning}
+Laborationen bedöms inte och ingår inte i kraven för kursbetyget, som avgörs av tentamen. Den är
+ett tillfälle att se hur matematiken från kursen används i kod, med stöd av läraren. Visa gärna
+läraren vad ni har gjort och ställ frågor under lektionen.
 
-Laborationen bedöms U/G och påverkar inte kursens betygspoäng. Den ingår i kravet att samtliga
-lärandemål ska vara uppnådda för godkänt betyg på kursen.
-
-\begin{booktable}{@{}Lc@{}}
-  \thead{Krav} & \thead{Bedömning} \\
-  \midrule
-  Del 1--3 samt handberäkningarna i 6.1, 6.4~a, 7.1 och~7.4
-    genomförda och korrekt redovisade & G \\
-  Del 1--3 eller handberäkningarna i 6.1, 6.4~a, 7.1 och~7.4
-    ej genomförda eller ej redovisade & U \\
-\end{booktable}
-
-Övriga uppgifter i del~4--7 är frivillig fördjupning och påverkar inte bedömningen.
+\textbf{Grupparbete och AI.} Ni får gärna arbeta i grupper om två. AI-verktyg får användas som
+hjälpmedel, men skriv koden själva i stället för att klistra in den: det är så ni lär er.
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 1}{Grunder i \code{math.h}}
@@ -312,8 +290,8 @@ Tre spänningar med samma frekvens ges av fasorerna
 
 % ------------------------------------------------------------------------------------------
 \uppgiftsdel{Del 5}{Extrauppgifter (frivillig)}
-Uppgifterna nedan är extra träning för den som vill fördjupa sig ytterligare. De påverkar inte
-bedömningen. Precis som i del~1--3 görs handberäkningen först och programmet därefter.
+Uppgifterna nedan är extra träning för den som vill fördjupa sig ytterligare. Precis som i
+del~1--3 görs handberäkningen först och programmet därefter.
 
 \uppgift{5.1}{Avrundning och absolutbelopp}
 Betrakta talen $-2{,}7$, $3{,}2$ och $5{,}5$.
@@ -421,8 +399,8 @@ försmak. För Eh-klassen är detta enda tillfället att lära sig hur maskininl
 tillfället i akt! Oavsett klass visar delarna att matematiken från kursen är grunden även där.
 
 \begin{aside}
-\note[Obs] Handberäkningarna i \uppref{6.1} och \uppref{6.4}~a) är obligatoriska och görs helst
-före lektionen, precis som i del~1--3. De kräver ingen dator. Övriga uppgifter i del~6 är frivilliga.
+\note[Obs] Handberäkningarna i \uppref{6.1} och \uppref{6.4}~a) hör till grunduppgifterna och
+görs helst före lektionen, precis som i del~1--3. De kräver ingen dator. Övriga uppgifter i del~6 är frivilliga.
 \end{aside}
 
 Koden finns i \file{lectures/L18/code/lin_reg/} och består av fyra filer:
@@ -506,7 +484,7 @@ träningsuppsättning:
 Notera att $k$ inte justeras när $x = 0$, eftersom $k$ inte påverkar prediktionen då. Ju större
 $x$ är, desto mer justeras $k$.
 
-\uppgift{6.1}{Träning för hand (obligatorisk)}
+\uppgift{6.1}{Träning för hand (grunduppgift)}
 Träningsdatan i \file{main.c} följer linjen $y = 2x + 2$:
 
 \begin{narrowtable}{@{}l*{5}{>{\centering\arraybackslash}p{2.5em}}@{}}
@@ -554,7 +532,7 @@ I kapitel~8, \uppref[8]{2.6}, mättes spänningen $U(t)$ under en urladdning:
 \end{narrowtable}
 
 \begin{parts}
-  \item \emph{(Obligatorisk.)} Bestäm $k$ och $m$ i $U(t) = kt + m$ för hand, eller hämta dem från
+  \item \emph{(Grunduppgift.)} Bestäm $k$ och $m$ i $U(t) = kt + m$ för hand, eller hämta dem från
       din lösning i kapitel~8.
   \item \emph{(Frivillig, även c)--e).)} Ersätt träningsdatan i \file{main.c} med tabellen
     ovan. Välj antal epoker och
@@ -597,8 +575,8 @@ förstå hela koden: målet är att du implementerar en central del av nätverke
 det lära sig.
 
 \begin{aside}
-\note[Obs] Handberäkningarna i \uppref{7.1} och \uppref{7.4} är obligatoriska och görs helst före
-lektionen. De kräver ingen dator. Övriga uppgifter i del~7 är frivilliga.
+\note[Obs] Handberäkningarna i \uppref{7.1} och \uppref{7.4} hör till grunduppgifterna och görs
+helst före lektionen. De kräver ingen dator. Övriga uppgifter i del~7 är frivilliga.
 \end{aside}
 
 \begin{aside}
@@ -683,7 +661,7 @@ Några saker i C++ som skiljer sig från C:
 \end{itemize}
 Läs gärna resten av koden, men det krävs inte för uppgifterna.
 
-\uppgift{7.1}{Feedforward för hand (obligatorisk)}
+\uppgift{7.1}{Feedforward för hand (grunduppgift)}
 En nod har vikterna $w_1 = 0{,}5$ och $w_2 = -1$ samt biasvärdet $b = 0{,}2$.
 \begin{parts}
   \item Beräkna summan $z$ för insignalerna $(x_1, x_2) = (1, 0)$ och $(x_1, x_2) = (1, 1)$.
@@ -713,7 +691,7 @@ efter flera försök.
     $2$ och $1$. Vad händer med träningen?
 \end{parts}
 
-\uppgift{7.4}{Varför räcker inte en rät linje? (obligatorisk)}
+\uppgift{7.4}{Varför räcker inte en rät linje? (grunduppgift)}
 En enda nod utan aktiveringsfunktion ger $z = w_1 x_1 + w_2 x_2 + b$, och sambandet $z = 0$ är en
 rät linje i $x_1 x_2$-planet. Noden kan alltså bara skilja punkter på olika sidor om en linje.
 \begin{parts}
